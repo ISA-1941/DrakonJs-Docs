@@ -1,0 +1,341 @@
+:imagesdir: images/images_1_section
+
+
+== SECTION 1. Abstract Data Types
+
+[abstract]
+This section introduces the concept of Abstract Data Types (ADTs) and explores both linear and non-linear data structures. We will examine how these mathematical models help programmers work with real-world entities efficiently and provide a foundation for algorithm development.
+
+=== 1.1. ADT Concept
+
+Before describing data structures, we must first define the concepts of 'data', 'data type', and 'data structure'. In the most general sense, **data** is an unstructured set of symbols that are collected and processed to extract meaningful information. To efficiently manage and manipulate data, the concept of **data types** was introduced. A **data type** defines a set of values and operations applicable to them, forming a structured way to handle real-world objects.
+
+Generalizing the experience of applying different types of data in various domains led to the emergence of **abstract data types (ADT)**. An ADT is a **mathematical model** that defines a set of possible values and a set of operations that can be performed on them.
+
+The concept of ADT was first described by Donald Knuth in his classical work *“The Art of Programming”*, where he outlined **data structures** as a way of organizing data efficiently. Along with data structures, he introduced **processing algorithms** that define actions such as adding and removing elements, retrieving values, and sorting data.
+
+Some common examples of ADTs include:
+
+* **Boolean** - A logical ADT with values {true, false}. Operations include logical conjunction (&&), disjunction (||), and negation (!).
+
+* **Integer** - A numeric ADT that represents whole numbers {…, -2, -1, 0, 1, 2, …}. Operations include addition, subtraction, multiplication, and division.
+
+* **String** - An ADT representing finite sequences of characters, including empty strings. Operations include concatenation, substring extraction, length determination, and character indexing.
+
+* **Bit String** - A set of bit sequences that support operations like bitwise AND, OR, XOR, complement, and shifts.
+
+According to Steve McConnell, the author of *“Code Complete”*, abstract data types allow programmers to work with **real-world entities** rather than low-level implementation details. Data structures are one such example of ADTs designed to organize and manage data efficiently.
+
+A simplified classification of data structures can be presented as follows:
+
+
+image::Fig1_1_class.jpg[width=75%, height=34%, align=center]
+
+[.text-center]
+Figure 1.1. Classification of Data Structures
+
+
+Each data structure has its own advantages and disadvantages, making it necessary to analyze them in terms of **memory efficiency** and **data access time**.
+
+Data structures can be broadly classified into **linear and non-linear structures**:
+
+1. **Linear Data Structures** - Elements are stored sequentially in contiguous memory locations, making them easy to implement but sometimes inefficient in memory utilization.
+2. **Non-Linear Data Structures** - Elements are stored in a way that allows multiple relationships between them, making them suitable for more complex operations but harder to traverse in a single pass.
+
+Moreover, data structures can be classified as **homogeneous** (containing elements of the same type) or **heterogeneous** (containing mixed types). Typical heterogeneous structures include dictionaries, maps, and hash tables.
+
+
+=== 1.2. Linear Abstract Data Types
+
+==== 1.2.1. Arrays
+
+An **array** is a fundamental data structure that stores a fixed-size collection of elements of the same type. Arrays are a direct representation of memory, allowing fast indexed access to elements.
+
+image::Fig1_2_Array.jpg[width=50%, height=30%, align=center]
+
+[.text-center]
+Figure 1.2. Representation of an Array
+
+
+##### **Characteristics of Arrays:**
+
+- Homogeneous (all elements have the same type).
+- Fixed size (predefined and cannot change dynamically).
+- Random access (elements are accessed using an index).
+- Contiguously stored in memory.
+
+##### **Main Operations on Arrays:**
+
+- Retrieve an element at index N.
+- Insert an element at a specific index.
+- Determine the array’s length.
+
+##### **Advantages of Arrays:**
+
+- Fast element retrieval using an index.
+- Efficient use of memory in contiguous allocation.
+- Suitable for fixed-size data storage.
+
+##### **Limitations of Arrays:**
+
+- Size must be defined at initialization.
+- Insertion and deletion operations can be costly.
+- Inefficient use of memory when dealing with dynamic data.
+
+To overcome these limitations, **dynamic data structures** such as **slices** were introduced.
+
+🔹 Applications of Arrays:
+
+*  Storing fixed-size collections of elements of the same type: Example: list of days of the week, months of the year, tabular data.
+
+*  Fast indexed access: Ideal for situations where you need to quickly access an element by its position.
+
+* Implementation of other data structures: Arrays are often used to implement other data structures like stacks and queues.
+
+* Image and sound processing: Image pixels or sound samples can be represented as arrays.
+
+* Sorting and searching algorithms: Many algorithms, like binary search, work efficiently with arrays.
+
+
+==== 1.2.2. Linked Lists
+
+A **linked list** is an ordered collection of elements where each element (node) contains **a value and a reference to the next element**.
+
+
+image::Fig1_4_List.jpg[width=50%, height=30%, align=center]
+
+[.text-center]
+Figure 1.4. Representation of a Linked List
+
+
+##### **Types of Linked Lists:**
+
+1. **Singly Linked List** - Each node points to the next node.
+2. **Doubly Linked List** - Each node has references to both the next and previous nodes.
+3. **Circular Linked List** - The last node points back to the first node, forming a circular structure.
+
+##### **Main Operations on Linked Lists:**
+
+- Insert a new node at the beginning, middle, or end.
+- Remove a node based on value or position.
+- Traverse the list to find elements.
+
+🔹 Applications of Linked Lists:
+
+* Dynamic data storage: When the size of the data is unknown or changes frequently.
+
+* mplementation of stacks and queues: Linked lists can be used to implement these data structures.
+
+* Memory management: Used in operating systems to manage lists of free memory.
+
+* Implementation of playlists: In music or video players.
+
+* Implementation of polynomial operations: Representing polynomials and performing mathematical operations on them.
+
+==== 1.2.3. Stacks and Queues
+
+A **stack** is a **Last-In-First-Out (LIFO)** structure where elements are added and removed from the same end.
+
+image::Fig1_7_Stack.jpg[width=30%, height=30%, align=center]
+
+[.text-center]
+Figure 1.7. Stack Structure
+
+
+A **queue** is a **First-In-First-Out (FIFO)** structure where elements are added at the back and removed from the front.
+
+image::Fig1_8_Queue.jpg[width=50%, height=30%, align=center]
+
+[.text-center]
+Figure 1.8. Queue Structure
+
+##### **Common Variations:**
+
+- **Circular Queue** - The last element connects back to the first.
+- **Priority Queue** - Elements are dequeued based on priority rather than order.
+
+🔹 Applications of Stacks:
+
+* Function call processing: The stack is used to store information about function calls.
+
+* Implementation of Depth-First Search (DFS) algorithms: In graphs and trees.
+
+* Expression processing: For example, converting infix notation to postfix notation.
+
+* Undo/redo functionality: In text editors and graphics programs.
+
+* Checking for balanced parentheses: In compilers and interpreters.
+
+🔹 Applications of Queues:
+
+* Processing tasks in the order they arrive: Example: print queue, server request queue.
+
+* Implementation of Breadth-First Search (BFS) algorithms: In graphs and trees.
+
+* Modeling real-world queues: In supermarkets, banks, etc.
+
+* Message processing: In messaging systems.
+
+* Task scheduling in operating systems: For managing processes.
+
+
+
+(Due to technical issues, the search service is temporarily unavailable.)
+
+Here's the refined subsection 1.3 following the established structure and academic tone:
+
+---
+
+=== 1.3. Nonlinear Abstract Data Types
+
+[abstract]
+Nonlinear abstract data types model complex relationships where elements may have multiple predecessors and successors. This section examines hierarchical and graph-based structures through their abstract properties and mathematical foundations.
+
+=== 1.3.1. Trees
+
+==== Hierarchical Model
+
+A tree is an acyclic connected graph with a designated root node, formally defined as:
+```
+Tree = (V, E) where:
+V = {v₁, v₂, ..., vₙ} (set of vertices)
+E ⊂ V×V (directed edges)
+∃! root ∈ V ∀v ∈ V ∃ unique path from root to v
+```
+
+image::Fig1_9_Tree.jpg[width=75%, height=34%, align=center]
+
+[.text-center]
+Figure 1.9. Tree Structure Taxonomy
+
+===== Fundamental Properties
+
+[cols="1,3", options="header"]
+|===
+|Property | Description
+|Acyclicity | No path forms a cycle
+|Connectedness | Single root-to-leaf paths
+|Hierarchy | Parent-child relationships
+|Arity | Maximum children per node
+|===
+
+===== Structural Classification
+
+[cols="1,2,2", options="header"]
+|===
+|Type | Defining Feature | Order Constraints
+|Binary Tree | Max 2 children | Unordered
+|BST | Search invariant | Left < Parent < Right
+|AVL Tree | Height-balanced | | Height difference ≤1
+|B-Tree | Multi-way nodes | Sorted subtrees
+|===
+
+==== Historical Context
+
+Developed from graph theory (Leonhard Euler, 1736) and first applied to computer science by John McCarthy in 1960 for LISP processing. Donald Knuth formalized tree traversal algorithms in *The Art of Computer Programming* (1968).
+
+🔹 **Theoretical Applications**:
+- Representation of partial orders
+- Syntax analysis in formal languages
+- Hierarchical clustering models
+- Recursive problem decomposition
+
+=== 1.3.2. Graphs
+
+==== Relational Model
+
+A graph is a pair G = (V, E) where:
+- V = set of vertices
+- E ⊆ V×V (edges) with optional:
+  - Directionality
+  - Weight values
+  - Labels
+
+image::Fig1_11_Graph.jpg[width=75%, height=34%, align=center]
+
+[.text-center]
+Figure 1.11. Graph Variant Visualization
+
+===== Typological Spectrum
+
+[cols="1,2,2", options="header"]
+|===
+|Category | Distinguishing Feature | Connectivity
+|Simple | Undirected, unweighted | Any
+|Digraph | Directed edges | Strong/weak
+|Multigraph | Multiple edges | -
+|Hypergraph | N-ary edges | -
+|===
+
+==== Mathematical Foundations
+
+Originating from Euler's Seven Bridges of Königsberg problem (1736). Modern formalization by Paul Erdős in graph theory (1940s). First computational applications in network flow problems (Lester Ford & Delbert Fulkerson, 1956).
+
+===== Abstract Operations
+
+[cols="1,2", options="header"]
+|===
+|Operation | Mathematical Basis
+|Traversal | Path existence proofs
+|Coloring | Chromatic number theory
+|Matching | Hall's marriage theorem
+|Flow | Max-flow min-cut theorem
+|===
+
+🔹 **Conceptual Applications**:
+- Modeling relational databases
+- Representing state machines
+- Analyzing semantic networks
+- Simulating physical systems
+- Encoding constraint satisfaction problems
+
+---
+
+**Key Enhancements**:
+1. **Formal Mathematical Definitions**: Added set theory notation for precise specifications
+2. **Structural Taxonomy Tables**: Clear classification of variants
+3. **Historical Lineage**: Key milestones in theoretical development
+4. **Abstract Operation Mapping**: Connection to mathematical principles
+5. **Visual Consistency**: Standardized figure dimensions and alignment
+
+**Omitted per Requirements**:
+- Implementation-specific details
+- Algorithm complexity analysis
+- JavaScript-related content
+- Concrete code examples
+
+This structure maintains theoretical focus while preparing ground for later implementation discussions in Section 3 and algorithmic analysis in Section 5.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

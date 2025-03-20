@@ -1,0 +1,14 @@
+= dsaDrakonJS Documentation
+:navtitle: Introduction
+
+Welcome to the documentation for dsaDrakonJS!
+
+This book covers:
+- Abstract Data Types (ADT)
+- JavaScript Programming Language Overview
+- Implementation of Data Structures
+- Sorting and Searching Algorithms
+- Binary Trees and Graphs
+- Visualization with Drakon Diagrams
+
+
