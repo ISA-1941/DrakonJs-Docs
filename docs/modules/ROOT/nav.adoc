@@ -1,5 +1,10 @@
-* xref:Introduction.adoc[Introduction]
-* xref:section-1.adoc[Abstract Data Types]
-* xref:section-2.adoc[JavaScript Programming Language Overview]
-* xref:section-3.adoc[Implementation of Basic Abstract Data Types in JavaScript]
-* xref:section-4.adoc[DRAKON - Visual Algorithmic Language]
+* Introduction
+** xref:Introduction[Introduction]
+* ADT
+** xref:section-1.adoc[ADT]
+* JavaScript View
+** xref:section-2.adoc[JavaScript]
+* Implemention base types
+** xref:section-3.adoc[Implemention base types]
+* Language Drakon
+** xref:section-4.adoc[Visual Language Drakon]

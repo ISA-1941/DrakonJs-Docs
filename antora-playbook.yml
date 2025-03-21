@@ -1,12 +1,12 @@
 site:
   title: DSA Drakon JS
-  start_page: drakon-js-docs::ROOT/index.adoc 
+  start_page: drakon-js-docs::ROOT/index.html # Изменено здесь
 
 content:
   sources:
-    - url: https://github.com/ISA-1941/DrakonJs-Docs.git  
+    - url: https://github.com/ISA-1941/DrakonJs-Docs.git
       branches: [main]
-      start_path: docs  
+      start_path: docs
 
 ui:
   bundle:
