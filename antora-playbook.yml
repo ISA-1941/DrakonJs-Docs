@@ -6,7 +6,7 @@ content:
   sources:
     - url: https://github.com/ISA-1941/DrakonJs-Docs.git
       branches: [main]
-      start_path: docs/modules
+      start_path: docs
 
 ui:
   bundle:
