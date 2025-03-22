@@ -1,6 +1,6 @@
 site:
   title: DSA Drakon JS
-  start_page: drakon-js-docs::ROOT/index.adoc
+  start_page: drakon-js-docs::ROOT/pages/index.adoc
 
 content:
   sources:
