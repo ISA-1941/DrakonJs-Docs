@@ -1,5 +1,5 @@
 * Introduction
-** xref:Introduction.adoc[Introduction]
+** xref:index.adoc[Introduction]
 * ADT
 ** xref:section-1.adoc[ADT]
 * JavaScript View
