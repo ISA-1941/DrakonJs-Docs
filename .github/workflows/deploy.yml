@@ -13,16 +13,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name:  Set up Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
-      - name:  Install Antora (Local)
-        run: npm install @antora/cli @antora/site-generator-default
+      - name:  Install dependencies from package.json
+        run: npm install
 
       - name:  Build site with Antora
-        run: npx antora antora-playbook.yml
+        run: npm run build
 
       - name:  Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
