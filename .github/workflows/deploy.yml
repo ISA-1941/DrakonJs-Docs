@@ -10,19 +10,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name:  Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name:  Set up Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
-      - name:  Install Antora
-        run: npm install -g @antora/cli @antora/site-generator-default
+      - name: 📦 Install Antora
+        run: npm install @antora/cli @antora/site-generator-default
 
-      - name:  Build site with Antora
-        run: npx antora --fetch --clean antora-playbook.yml
+      - name: Build site with Antora
+        run: npx antora antora-playbook.yml
 
       - name:  Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
