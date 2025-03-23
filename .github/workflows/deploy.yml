@@ -13,12 +13,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Generate Antora site
-        uses: kameshsampath/antora-site-action@v0.3.0
+      - name: 📦 Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          antora_playbook: antora-playbook.yml
+          node-version: '18'
 
-      - name: Deploy to GitHub Pages
+      - name:  Install dependencies from package.json
+        run: npm install
+
+      - name:  Build site with Antora
+        run: npx antora antora-playbook.yml
+
+      - name:  Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
