@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "private": true,
     "scripts": {
-      "build": "antora antora-playbook.yml"
+      "build": "npx antora --fetch --clean antora-playbook.yml"
     },
     "dependencies": {
       "@antora/cli": "3.1.10",
