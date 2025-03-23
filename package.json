@@ -1,14 +1,12 @@
 {
-    "name": "antora-site",
-    "version": "1.0.0",
-    "private": true,
-    "scripts": {
-      "build": "npx antora --fetch --clean antora-playbook.yml"
-    },
-    "dependencies": {
-      "@antora/cli": "3.1.10",
-      "@antora/site-generator-default": "3.1.10"
-    }
+  "name": "antora-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npx antora --fetch --clean antora-playbook.yml"
+  },
+  "dependencies": {
+    "@antora/cli": "3.1.10",
+    "@antora/site-generator-default": "3.1.10"
   }
-  
-  
+}
