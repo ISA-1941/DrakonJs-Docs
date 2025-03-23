@@ -18,8 +18,8 @@ jobs:
         with:
           node-version: '18'
 
-      - name: 📦 Install Antora
-        run: npm install @antora/cli @antora/site-generator-default
+      - name:  Install Antora
+        run: npm install @antora/cli @antora/site-generator
 
       - name: Build site with Antora
         run: npx antora antora-playbook.yml
