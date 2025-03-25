@@ -4,10 +4,9 @@ site:
 
 content:
   sources:
-    - url: https://github.com/ISA-1941/DrakonJs-Docs.git
-      branches: [main]
-      start_path: docs
-
+    - url: .
+      branches: HEAD
+      start_path: modules/ROOT
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
