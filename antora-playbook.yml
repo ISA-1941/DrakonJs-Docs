@@ -1,11 +1,13 @@
 site:
   title: DSA Drakon JS
+  start_page: drakon-js-docs::index.adoc
 
 content:
   sources:
     - url: .
       branches: HEAD
-      start_path: modules
+      start_path: .
+
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
@@ -13,3 +15,5 @@ ui:
 
 output:
   dir: ./public
+
+
