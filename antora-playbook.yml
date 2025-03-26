@@ -1,12 +1,12 @@
 site:
-  title: DSA Drakon JS
-  start_page: drakon-js-docs::index.adoc
+  title: DrakonJsLocal Project Book
+  url: /docs
 
 content:
   sources:
     - url: .
-      branches: HEAD
-      start_path: .
+      branches: main
+      start_path: docs
 
 ui:
   bundle:
