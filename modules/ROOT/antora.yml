@@ -1,6 +1,0 @@
-name: drakon-js-docs
-title: "DSA Drakon JS"
-version: latest
-nav:
-  - nav.adoc
-start_page: index.adoc
