@@ -785,7 +785,7 @@ Factory functions provide a flexible and powerful way to implement OOP principle
 Using factory functions, helps to prevent the problems of classical prototypical inheritance.
 With the help of factory functions, you can use object composition, which in many cases is a more flexible solution than inheritance.
 
-1. Encapsulation with factory functions: 
+. Encapsulation with factory functions: 
 
 In this book, the specified OOP principles are implemented based on the use of factory functions.
 
@@ -817,7 +817,7 @@ console.log(person.getAge()); // Output: 31
 // console.log(person._age); // Error: _age is not accessible from outside
 ----
 
-2. Composition (alternative to inheritance) with factory functions:
+. Composition (alternative to inheritance) with factory functions:
 
 [source,javascript]
 ----
@@ -846,7 +846,7 @@ dog.bark(); // Output: Woof!
 dog.walk(); // Output: Walking...
 ----
 
-3. Polymorphism with factory functions:
+. Polymorphism with factory functions:
 
 [source,javascript]
 ----

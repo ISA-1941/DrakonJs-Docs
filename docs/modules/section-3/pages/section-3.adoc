@@ -557,7 +557,7 @@ the most important of which is classification based on node values:
 * AVL-Tree;
 * Red-Black tree.
 
-1. Binary search Tree
+. Binary search Tree
 
 **Node Structure:**
 
@@ -571,7 +571,7 @@ New nodes are placed based on their value relative to the current node.
 
 Smaller values go left, larger values go right.
 
-2. AVL-Tree
+. AVL-Tree
 
 **Self-Balancing:**
 
@@ -585,7 +585,7 @@ Uses rotations (single and double) to restore balance after insertions or deleti
 
 Requires tracking node heights and implementing rotation functions.
 
-3) Red-Black Tree
+. Red-Black Tree
 
 **Self-Balancing:**
 
@@ -676,5 +676,6 @@ function createGraph(isDirected = false) {
 
     return { addVertex, addEdge, getAdjacencyList };
 }
+----
 
 Algorithms implementing the basic tree manipulation functions are presented in Section 9.
