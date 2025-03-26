@@ -21,3 +21,4 @@ Thumbs.db
 # Antora UI (если скачивается вручную)
 ui-bundle.zip
 .antora/
+public/

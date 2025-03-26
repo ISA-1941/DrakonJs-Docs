@@ -1,16 +1,13 @@
 site:
   title: Drakon.js Documentation
-  url: https://ISA-1941.github.io/DrakonJs-Docs/  # Ваш будущий URL
-
+  url: https://ISA-1941.github.io/DrakonJs-Docs/  # Адрес вашего сайта
 content:
   sources:
-    - url: ./docs-src      # Путь к исходникам
-      branches: main
-
+    - url: ./docs-src            # Путь к исходникам
+      branches: [HEAD]           # Используем текущий коммит
 ui:
   bundle:
-    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/main/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
-
 output:
-  dir: ./docs              # Генерировать сайт сюда!
+  dir: ./docs                    # Сайт генерируется прямо в docs/
