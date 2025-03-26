@@ -221,11 +221,11 @@ Figure 1.9. Tree Structure Taxonomy
 
 [cols="1,2,2", options="header"]
 |===
-|Type | Defining Feature | Order Constraints
-|Binary Tree | Max 2 children | Unordered
-|BST | Search invariant | Left < Parent < Right
-|AVL Tree | Height-balanced | | Height difference ≤1
-|B-Tree | Multi-way nodes | Sorted subtrees
+| Type             | Defining Feature      | Order Constraints          
+| Binary Tree      | Max 2 children        | Unordered                  
+| BST              | Search invariant      | Left < Parent < Right      
+| AVL Tree         | Height-balanced       | Height difference ≤1       
+| B-Tree           | Multi-way nodes       | Sorted subtrees            
 |===
 
 ==== Historical Context
