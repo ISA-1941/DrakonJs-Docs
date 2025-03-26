@@ -1,6 +1,7 @@
 site:
   title: Drakon.js Docs
   url: https://ISA-1941.github.io/DrakonJs-Docs/
+  start_page: drakonjs-docs::index.adoc
 content:
   sources:
     - url: ./docs-src
