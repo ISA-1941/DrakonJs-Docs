@@ -264,7 +264,7 @@ Loops for repeating actions: `for, while, do-while`.
 Control flow statements:`break, continue, return`.
 
 
-===== 2.5.1. Conditional Statement if-else
+==== 2.5.1. Conditional Statement if-else
 
 The `if-else` statement allows executing different blocks of code depending on a condition.
 
@@ -307,7 +307,7 @@ The `else` block executes if none of the conditions are met.
 A representation of this design in Drakon-technology is shown in the next section.
 
 
-===== 2.5.2. `switch` Statement
+==== 2.5.2. `switch` Statement
 
 The switch statement provides a simpler way to compare a variable with multiple values.
 
@@ -356,7 +356,7 @@ The break statement ensures only one case executes.
 The default block runs if none of the cases match.
 
 
-===== 2.5.3. Loops in JavaScript
+==== 2.5.3. Loops in JavaScript
 
 JavaScript supports multiple loop types for repeating actions.
 
@@ -411,7 +411,7 @@ To summarize:
 
 In JavaScript, loops allow iterating over collections such as arrays, objects, and maps. JavaScript provides several ways to loop through a range of values or iterate over arrays, objects, and maps.
 
-===== 2.6.1. Iterating Over Arrays Using `for-of`
+==== 2.6.1. Iterating Over Arrays Using `for-of`
 
 JavaScript provides the `for-of` loop to iterate over arrays and other iterable objects.
 
@@ -438,7 +438,7 @@ for (let num of nums) {
 console.log("Sum:", sum);
 ----
 
-===== 2.6.2. Iterating Over an Array with Indexes (forEach)
+==== 2.6.2. Iterating Over an Array with Indexes (forEach)
 
 If we need both the index and value, we can use `forEach`:
 
@@ -453,7 +453,7 @@ nums.forEach((num, index) => {
 });
 ----
 
-===== 2.6.3. Iterating Over Objects Using `for-in`
+==== 2.6.3. Iterating Over Objects Using `for-in`
 
 JavaScript does not have a built-in range keyword, but it provides for-in to iterate over object properties (similar to key-value pairs).
 
@@ -471,7 +471,7 @@ for (let key in capitals) {
 }
 ----
 
-===== 2.6.4. Iterating Over Maps Using `forEach()` and `for-of`
+==== 2.6.4. Iterating Over Maps Using `forEach()` and `for-of`
 
 For Map objects, we use `forEach()` or `for-of` with `.entries()`.
 
@@ -488,7 +488,7 @@ for (let [key, value] of capitals.entries()) {
 }
 ----
 
-===== 2.6.5. Iterating Over Keys Only
+==== 2.6.5. Iterating Over Keys Only
 If we only need the keys:
 [source,javascript]
 ----
@@ -596,7 +596,7 @@ for (let i = 0; i < greeting.length; i++) {
 The length property returns the number of characters in a string.
 `charCodeAt(i)` provides the Unicode value of a character.
 
-===== c) Boolean Variables and Constants
+==== c) Boolean Variables and Constants
 Boolean values are either true or false. They are commonly used in comparisons and conditional logic.
 
 🔹 Declaring Boolean Variables
@@ -647,7 +647,7 @@ JavaScript provides composite data types to store and manipulate collections of 
     * Objects – Key-value pairs that represent complex data structures.
     * Maps – Key-value storage with enhanced capabilities.
 
-=====  2.8.1. Arrays
+====  2.8.1. Arrays
 
 An array is an ordered collection of elements, where each element is indexed numerically, starting from 0. Arrays in JavaScript are dynamic, meaning they can grow and shrink in size.
 
@@ -683,7 +683,7 @@ console.log(fruits);
 
 📌 JavaScript arrays are flexible – they can grow, shrink, and store mixed data types.
 
-===== 2.8.2. Objects
+==== 2.8.2. Objects
 
 An object is a collection of key-value pairs, where each key is a property that stores a value.
 
@@ -717,7 +717,7 @@ employee.department = "IT";  // Adding a new property
 console.log(employee);
 ----
 
-===== 2.8.3. Map
+==== 2.8.3. Map
 
 [source,javascript]
 ----
