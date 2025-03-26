@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Drakon.js Docs</title>
+    <link rel="canonical" href="https://ISA-1941.github.io/DrakonJs-Docs/drakonjs-docs/1/section-1/section-1.html">
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://ISA-1941.github.io/DrakonJs-Docs">Drakon.js Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="drakonjs-docs" data-version="1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">drakonjs-docs</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Introduction</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">ADT</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="section-1.html">ADT</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript View</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-2/section-2.html">JavaScript</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Implementation base types</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-3/section-3.html">Implementation base types</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Language Drakon</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-4/section-4.html">Visual Language Drakon</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">drakonjs-docs</span>
+    <span class="version">1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">drakonjs-docs</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">drakonjs-docs</a></li>
+    <li>ADT</li>
+    <li><a href="section-1.html">ADT</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="file:///D:/GitWorks/DrakonJsLocal/Project_Book/docs-src/modules/section-1/pages/section-1.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_section_1_abstract_data_types"><a class="anchor" href="#_section_1_abstract_data_types"></a>SECTION 1. Abstract Data Types</h2>
+<div class="sectionbody">
+<div class="quoteblock abstract">
+<blockquote>
+This section introduces the concept of Abstract Data Types (ADTs) and explores both linear and non-linear data structures. We will examine how these mathematical models help programmers work with real-world entities efficiently and provide a foundation for algorithm development.
+</blockquote>
+</div>
+<div class="sect2">
+<h3 id="_1_1_adt_concept"><a class="anchor" href="#_1_1_adt_concept"></a>1.1. ADT Concept</h3>
+<div class="paragraph">
+<p>Before describing data structures, we must first define the concepts of 'data', 'data type', and 'data structure'. In the most general sense, <strong>data</strong> is an unstructured set of symbols that are collected and processed to extract meaningful information. To efficiently manage and manipulate data, the concept of <strong>data types</strong> was introduced. A <strong>data type</strong> defines a set of values and operations applicable to them, forming a structured way to handle real-world objects.</p>
+</div>
+<div class="paragraph">
+<p>Generalizing the experience of applying different types of data in various domains led to the emergence of <strong>abstract data types (ADT)</strong>. An ADT is a <strong>mathematical model</strong> that defines a set of possible values and a set of operations that can be performed on them.</p>
+</div>
+<div class="paragraph">
+<p>The concept of ADT was first described by Donald Knuth in his classical work <strong>“The Art of Programming”</strong>, where he outlined <strong>data structures</strong> as a way of organizing data efficiently. Along with data structures, he introduced <strong>processing algorithms</strong> that define actions such as adding and removing elements, retrieving values, and sorting data.</p>
+</div>
+<div class="paragraph">
+<p>Some common examples of ADTs include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Boolean</strong> - A logical ADT with values {true, false}. Operations include logical conjunction (&amp;&amp;), disjunction (||), and negation (!).</p>
+</li>
+<li>
+<p><strong>Integer</strong> - A numeric ADT that represents whole numbers {…, -2, -1, 0, 1, 2, …}. Operations include addition, subtraction, multiplication, and division.</p>
+</li>
+<li>
+<p><strong>String</strong> - An ADT representing finite sequences of characters, including empty strings. Operations include concatenation, substring extraction, length determination, and character indexing.</p>
+</li>
+<li>
+<p><strong>Bit String</strong> - A set of bit sequences that support operations like bitwise AND, OR, XOR, complement, and shifts.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>According to Steve McConnell, the author of <strong>“Code Complete”</strong>, abstract data types allow programmers to work with <strong>real-world entities</strong> rather than low-level implementation details. Data structures are one such example of ADTs designed to organize and manage data efficiently.</p>
+</div>
+<div class="paragraph">
+<p>A simplified classification of data structures can be presented as follows:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/Fig1_1_class.jpg" alt="Fig1 1 class" width="75%" height="34%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 1.1. Classification of Data Structures</p>
+</div>
+<div class="paragraph">
+<p>Each data structure has its own advantages and disadvantages, making it necessary to analyze them in terms of <strong>memory efficiency</strong> and <strong>data access time</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Data structures can be broadly classified into <strong>linear and non-linear structures</strong>:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Linear Data Structures</strong> - Elements are stored sequentially in contiguous memory locations, making them easy to implement but sometimes inefficient in memory utilization.</p>
+</li>
+<li>
+<p><strong>Non-Linear Data Structures</strong> - Elements are stored in a way that allows multiple relationships between them, making them suitable for more complex operations but harder to traverse in a single pass.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Moreover, data structures can be classified as <strong>homogeneous</strong> (containing elements of the same type) or <strong>heterogeneous</strong> (containing mixed types). Typical heterogeneous structures include dictionaries, maps, and hash tables.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_2_linear_abstract_data_types"><a class="anchor" href="#_1_2_linear_abstract_data_types"></a>1.2. Linear Abstract Data Types</h3>
+<div class="sect3">
+<h4 id="_1_2_1_arrays"><a class="anchor" href="#_1_2_1_arrays"></a>1.2.1. Arrays</h4>
+<div class="paragraph">
+<p>An <strong>array</strong> is a fundamental data structure that stores a fixed-size collection of elements of the same type. Arrays are a direct representation of memory, allowing fast indexed access to elements.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/Fig1_2_Array.jpg" alt="Fig1 2 Array" width="50%" height="30%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 1.2. Representation of an Array</p>
+</div>
+<div class="sect4">
+<h5 id="_characteristics_of_arrays"><a class="anchor" href="#_characteristics_of_arrays"></a><strong>Characteristics of Arrays:</strong></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Homogeneous (all elements have the same type).</p>
+</li>
+<li>
+<p>Fixed size (predefined and cannot change dynamically).</p>
+</li>
+<li>
+<p>Random access (elements are accessed using an index).</p>
+</li>
+<li>
+<p>Contiguously stored in memory.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_main_operations_on_arrays"><a class="anchor" href="#_main_operations_on_arrays"></a><strong>Main Operations on Arrays:</strong></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Retrieve an element at index N.</p>
+</li>
+<li>
+<p>Insert an element at a specific index.</p>
+</li>
+<li>
+<p>Determine the array’s length.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_advantages_of_arrays"><a class="anchor" href="#_advantages_of_arrays"></a><strong>Advantages of Arrays:</strong></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Fast element retrieval using an index.</p>
+</li>
+<li>
+<p>Efficient use of memory in contiguous allocation.</p>
+</li>
+<li>
+<p>Suitable for fixed-size data storage.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_limitations_of_arrays"><a class="anchor" href="#_limitations_of_arrays"></a><strong>Limitations of Arrays:</strong></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Size must be defined at initialization.</p>
+</li>
+<li>
+<p>Insertion and deletion operations can be costly.</p>
+</li>
+<li>
+<p>Inefficient use of memory when dealing with dynamic data.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To overcome these limitations, <strong>dynamic data structures</strong> such as <strong>slices</strong> were introduced.</p>
+</div>
+<div class="paragraph">
+<p>🔹 Applications of Arrays:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Storing fixed-size collections of elements of the same type: Example: list of days of the week, months of the year, tabular data.</p>
+</li>
+<li>
+<p>Fast indexed access: Ideal for situations where you need to quickly access an element by its position.</p>
+</li>
+<li>
+<p>Implementation of other data structures: Arrays are often used to implement other data structures like stacks and queues.</p>
+</li>
+<li>
+<p>Image and sound processing: Image pixels or sound samples can be represented as arrays.</p>
+</li>
+<li>
+<p>Sorting and searching algorithms: Many algorithms, like binary search, work efficiently with arrays.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_1_2_2_linked_lists"><a class="anchor" href="#_1_2_2_linked_lists"></a>1.2.2. Linked Lists</h4>
+<div class="paragraph">
+<p>A <strong>linked list</strong> is an ordered collection of elements where each element (node) contains <strong>a value and a reference to the next element</strong>.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/Fig1_4_List.jpg" alt="Fig1 4 List" width="50%" height="30%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 1.4. Representation of a Linked List</p>
+</div>
+<div class="sect4">
+<h5 id="_types_of_linked_lists"><a class="anchor" href="#_types_of_linked_lists"></a><strong>Types of Linked Lists:</strong></h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Singly Linked List</strong> - Each node points to the next node.</p>
+</li>
+<li>
+<p><strong>Doubly Linked List</strong> - Each node has references to both the next and previous nodes.</p>
+</li>
+<li>
+<p><strong>Circular Linked List</strong> - The last node points back to the first node, forming a circular structure.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_main_operations_on_linked_lists"><a class="anchor" href="#_main_operations_on_linked_lists"></a><strong>Main Operations on Linked Lists:</strong></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Insert a new node at the beginning, middle, or end.</p>
+</li>
+<li>
+<p>Remove a node based on value or position.</p>
+</li>
+<li>
+<p>Traverse the list to find elements.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>🔹 Applications of Linked Lists:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Dynamic data storage: When the size of the data is unknown or changes frequently.</p>
+</li>
+<li>
+<p>mplementation of stacks and queues: Linked lists can be used to implement these data structures.</p>
+</li>
+<li>
+<p>Memory management: Used in operating systems to manage lists of free memory.</p>
+</li>
+<li>
+<p>Implementation of playlists: In music or video players.</p>
+</li>
+<li>
+<p>Implementation of polynomial operations: Representing polynomials and performing mathematical operations on them.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_1_2_3_stacks_and_queues"><a class="anchor" href="#_1_2_3_stacks_and_queues"></a>1.2.3. Stacks and Queues</h4>
+<div class="paragraph">
+<p>A <strong>stack</strong> is a <strong>Last-In-First-Out (LIFO)</strong> structure where elements are added and removed from the same end.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/Fig1_7_Stack.jpg" alt="Fig1 7 Stack" width="30%" height="30%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 1.7. Stack Structure</p>
+</div>
+<div class="paragraph">
+<p>A <strong>queue</strong> is a <strong>First-In-First-Out (FIFO)</strong> structure where elements are added at the back and removed from the front.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/Fig1_8_Queue.jpg" alt="Fig1 8 Queue" width="50%" height="30%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 1.8. Queue Structure</p>
+</div>
+<div class="sect4">
+<h5 id="_common_variations"><a class="anchor" href="#_common_variations"></a><strong>Common Variations:</strong></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Circular Queue</strong> - The last element connects back to the first.</p>
+</li>
+<li>
+<p><strong>Priority Queue</strong> - Elements are dequeued based on priority rather than order.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>🔹 Applications of Stacks:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Function call processing: The stack is used to store information about function calls.</p>
+</li>
+<li>
+<p>Implementation of Depth-First Search (DFS) algorithms: In graphs and trees.</p>
+</li>
+<li>
+<p>Expression processing: For example, converting infix notation to postfix notation.</p>
+</li>
+<li>
+<p>Undo/redo functionality: In text editors and graphics programs.</p>
+</li>
+<li>
+<p>Checking for balanced parentheses: In compilers and interpreters.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>🔹 Applications of Queues:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Processing tasks in the order they arrive: Example: print queue, server request queue.</p>
+</li>
+<li>
+<p>Implementation of Breadth-First Search (BFS) algorithms: In graphs and trees.</p>
+</li>
+<li>
+<p>Modeling real-world queues: In supermarkets, banks, etc.</p>
+</li>
+<li>
+<p>Message processing: In messaging systems.</p>
+</li>
+<li>
+<p>Task scheduling in operating systems: For managing processes.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>(Due to technical issues, the search service is temporarily unavailable.)</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s the refined subsection 1.3 following the established structure and academic tone:</p>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_3_nonlinear_abstract_data_types"><a class="anchor" href="#_1_3_nonlinear_abstract_data_types"></a>1.3. Nonlinear Abstract Data Types</h3>
+<div class="quoteblock abstract">
+<blockquote>
+Nonlinear abstract data types model complex relationships where elements may have multiple predecessors and successors. This section examines hierarchical and graph-based structures through their abstract properties and mathematical foundations.
+</blockquote>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_3_1_trees"><a class="anchor" href="#_1_3_1_trees"></a>1.3.1. Trees</h3>
+<div class="sect3">
+<h4 id="_hierarchical_model"><a class="anchor" href="#_hierarchical_model"></a>Hierarchical Model</h4>
+<div class="paragraph">
+<p>A tree is an acyclic connected graph with a designated root node, formally defined as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">Tree = (V, E) where:
+V = {v₁, v₂, ..., vₙ} (set of vertices)
+E ⊂ V×V (directed edges)
+∃! root ∈ V ∀v ∈ V ∃ unique path from root to v</code></pre>
+</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/Fig1_9_Tree.jpg" alt="Fig1 9 Tree" width="75%" height="34%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 1.9. Tree Structure Taxonomy</p>
+</div>
+<div class="sect4">
+<h5 id="_fundamental_properties"><a class="anchor" href="#_fundamental_properties"></a>Fundamental Properties</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Acyclicity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No path forms a cycle</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Connectedness</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Single root-to-leaf paths</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hierarchy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parent-child relationships</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Arity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum children per node</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_structural_classification"><a class="anchor" href="#_structural_classification"></a>Structural Classification</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 40%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Defining Feature</th>
+<th class="tableblock halign-left valign-top">Order Constraints</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Binary Tree</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Max 2 children</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unordered</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BST</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Search invariant</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Left &lt; Parent &lt; Right</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AVL Tree</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Height-balanced</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Height difference ≤1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B-Tree</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multi-way nodes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sorted subtrees</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_historical_context"><a class="anchor" href="#_historical_context"></a>Historical Context</h4>
+<div class="paragraph">
+<p>Developed from graph theory (Leonhard Euler, 1736) and first applied to computer science by John McCarthy in 1960 for LISP processing. Donald Knuth formalized tree traversal algorithms in <strong>The Art of Computer Programming</strong> (1968).</p>
+</div>
+<div class="paragraph">
+<p>🔹 <strong>Theoretical Applications</strong>:
+- Representation of partial orders
+- Syntax analysis in formal languages
+- Hierarchical clustering models
+- Recursive problem decomposition</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_3_2_graphs"><a class="anchor" href="#_1_3_2_graphs"></a>1.3.2. Graphs</h3>
+<div class="sect3">
+<h4 id="_relational_model"><a class="anchor" href="#_relational_model"></a>Relational Model</h4>
+<div class="paragraph">
+<p>A graph is a pair G = (V, E) where:
+- V = set of vertices
+- E ⊆ V×V (edges) with optional:
+  - Directionality
+  - Weight values
+  - Labels</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/Fig1_11_Graph.jpg" alt="Fig1 11 Graph" width="75%" height="34%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 1.11. Graph Variant Visualization</p>
+</div>
+<div class="sect4">
+<h5 id="_typological_spectrum"><a class="anchor" href="#_typological_spectrum"></a>Typological Spectrum</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 40%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Category</th>
+<th class="tableblock halign-left valign-top">Distinguishing Feature</th>
+<th class="tableblock halign-left valign-top">Connectivity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Simple</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Undirected, unweighted</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Any</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Digraph</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Directed edges</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Strong/weak</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multigraph</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiple edges</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hypergraph</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N-ary edges</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mathematical_foundations"><a class="anchor" href="#_mathematical_foundations"></a>Mathematical Foundations</h4>
+<div class="paragraph">
+<p>Originating from Euler&#8217;s Seven Bridges of Königsberg problem (1736). Modern formalization by Paul Erdős in graph theory (1940s). First computational applications in network flow problems (Lester Ford &amp; Delbert Fulkerson, 1956).</p>
+</div>
+<div class="sect4">
+<h5 id="_abstract_operations"><a class="anchor" href="#_abstract_operations"></a>Abstract Operations</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Operation</th>
+<th class="tableblock halign-left valign-top">Mathematical Basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Traversal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path existence proofs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Coloring</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Chromatic number theory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Matching</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hall&#8217;s marriage theorem</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flow</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Max-flow min-cut theorem</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>🔹 <strong>Conceptual Applications</strong>:
+- Modeling relational databases
+- Representing state machines
+- Analyzing semantic networks
+- Simulating physical systems
+- Encoding constraint satisfaction problems</p>
+</div>
+<hr>
+<div class="paragraph">
+<p><strong>Key Enhancements</strong>:
+1. <strong>Formal Mathematical Definitions</strong>: Added set theory notation for precise specifications
+2. <strong>Structural Taxonomy Tables</strong>: Clear classification of variants
+3. <strong>Historical Lineage</strong>: Key milestones in theoretical development
+4. <strong>Abstract Operation Mapping</strong>: Connection to mathematical principles
+5. <strong>Visual Consistency</strong>: Standardized figure dimensions and alignment</p>
+</div>
+<div class="paragraph">
+<p><strong>Omitted per Requirements</strong>:
+- Implementation-specific details
+- Algorithm complexity analysis
+- JavaScript-related content
+- Concrete code examples</p>
+</div>
+<div class="paragraph">
+<p>This structure maintains theoretical focus while preparing ground for later implementation discussions in Section 3 and algorithmic analysis in Section 5.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
