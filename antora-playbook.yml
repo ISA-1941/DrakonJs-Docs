@@ -1,12 +1,11 @@
 site:
-  title: DrakonJsLocal Project Book
-  url: /docs
+  title: Drakon.js Documentation
+  url: https://ISA-1941.github.io/DrakonJs-Docs/  # Ваш будущий URL
 
 content:
   sources:
-    - url: .
+    - url: ./docs-src      # Путь к исходникам
       branches: main
-      start_path: docs
 
 ui:
   bundle:
@@ -14,6 +13,4 @@ ui:
     snapshot: true
 
 output:
-  dir: ./public
-
-
+  dir: ./docs              # Генерировать сайт сюда!
