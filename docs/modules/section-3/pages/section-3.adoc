@@ -92,7 +92,7 @@ arranged in sequence. Linear structures can be distinguished by the way
 the individual elements of a data collection are accessed and by the
 homogeneity of the data (homogeneous and heterogeneous).
 
-===== 3.2.1. Arrays in JavaScript
+==== 3.2.1. Arrays in JavaScript
 
 An array is a collection of data, where each element is stored at a specific index. Arrays allow efficient storage and manipulation of multiple values in a single variable.
 
@@ -144,7 +144,7 @@ To summarize
 |===
 
 
-===== 3.2.2. Slices
+==== 3.2.2. Slices
 
 A slice is a variable-length data collection that stores elements of a homogeneous type. A slice can be thought of as a "slice" of an array. Slice syntax in JavaScript (T - data type): **[]** or **[value1, value2, value3, ..., valueN]**.
 
@@ -176,7 +176,7 @@ The following functions and methods are used to work with slices (arrays) in Jav
 . **length**: Property that returns the number of elements in the array.
 . **slice()**: Creates a new array containing a "slice" of the original array.
 
-===== 3.2.3. Objects in JavaScript
+==== 3.2.3. Objects in JavaScript
 
 In JavaScript, objects serve the same purpose as structures in other programming languages. They allow us to store multiple related values (properties) in a single entity. Objects in JavaScript are flexible and support various ways of creation and manipulation.
 
@@ -273,7 +273,7 @@ Bob Anderson
 30000
 35000
 
-===== 3.2.3. Map in JavaScript
+==== 3.2.3. Map in JavaScript
 
 In JavaScript, Maps are collections that store unordered key-value pairs, where each key is unique and maps to a corresponding value. Maps are particularly useful in data retrieval algorithms because they offer efficient lookups.
 
@@ -323,7 +323,7 @@ console.log(studentScores.get("Bob"));   // Output: 88
 
 If the key does not exist, **.get()** returns undefined.
 
-===== 3.3.1. Linked List
+==== 3.3.1. Linked List
 
 A linked list is a dynamic data structure where each element, called a node, consists of two parts (Figure 3.3.):
 
@@ -375,7 +375,7 @@ function createLinkedList() {
 ----
 Here _head_ points to the first node, _size_ stores the length of the list.
 
-===== 3.2.4. Stack and Queue as data structures
+==== 3.2.4. Stack and Queue as data structures
 
 a) Stack
 
@@ -467,7 +467,7 @@ Queues are widely used in:
 ✅ Message processing systems.
 
 
-===== 3.2.5. Representation of binary trees in JavaScript
+==== 3.2.5. Representation of binary trees in JavaScript
 
 Binary trees as an abstract data type were discussed in the first
 section, here we will talk about the computer implementation of this
@@ -612,7 +612,7 @@ Requires tracking node colors and implementing recoloring and rotation functions
 
 Algorithms implementing the basic tree manipulation functions are presented in Section 8.
 
-===== 3.2.6. Representation of Graphes in JavaScript
+==== 3.2.6. Representation of Graphes in JavaScript
 
 Recall that a graph G is given by a set of vertices \{V} and a set of
 edges \{E} connecting all or part of these vertices. Thus, a graph G is
