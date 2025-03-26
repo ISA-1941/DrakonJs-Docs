@@ -7,6 +7,6 @@ content:
       branches: [HEAD]
 ui:
   bundle:
-    url: https://gitlab.com/antora/antora-ui-default/-/archive/3.1.0/antora-ui-default-3.1.0.zip
+    url: ./ui/ui-bundle.zip
 output:
   dir: ./docs
