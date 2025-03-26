@@ -7,7 +7,6 @@ content:
       branches: [HEAD]           # Используем текущий коммит
 ui:
   bundle:
-    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/main/raw/build/ui-bundle.zip?job=bundle-stable
-    snapshot: true
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/v3.1/raw/build/ui-bundle.zip?job=bundle-stable
 output:
   dir: ./docs                    # Сайт генерируется прямо в docs/
