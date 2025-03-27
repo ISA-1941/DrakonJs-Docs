@@ -8,6 +8,6 @@ content:
       branches: [HEAD]
 ui:
   bundle:
-    url: ./.ui/ui-bundle.zip
+    url: ./ui/ui-bundle.zip
 output:
-  dir: ./docs
+  dir: ./public
