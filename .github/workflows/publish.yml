@@ -17,8 +17,8 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install Antora CLI and site generator
-        run: npm install -g @antora/cli @antora/site-generator-default
+      - name: Install Antora (local)
+        run: npm install @antora/cli @antora/site-generator-default
 
       - name: Copy UI bundle from .ui/
         run: mkdir -p antora-ui && cp ./ui/ui-bundle.zip ./antora-ui/ui-bundle.zip
@@ -28,12 +28,11 @@ jobs:
 
       - name: Generate site with Antora
         run: >
-          antora
+          npx antora
           --cache-dir .antora-cache
           --stacktrace
           --to-dir public
           antora-playbook.yml
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
