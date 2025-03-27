@@ -4,8 +4,8 @@ site:
   start_page: drakonjs-docs::index.adoc
 content:
   sources:
-    - url: ./docs-src
-      branches: [HEAD]
+    - url: .
+      start_path: docs-src
 ui:
   bundle:
     url: ./ui/ui-bundle.zip
