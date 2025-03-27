@@ -21,8 +21,8 @@ jobs:
         run: npm install -g @antora/cli @antora/site-generator-default
 
       - name: Copy UI bundle from .ui/
-        run: mkdir -p antora-ui && cp ./.ui/ui-bundle.zip ./antora-ui/ui-bundle.zip
-
+        run: mkdir -p antora-ui && cp ./ui/ui-bundle.zip ./antora-ui/ui-bundle.zip
+        
       - name: Unzip UI bundle
         run: unzip antora-ui/ui-bundle.zip -d antora-ui/ui
 
