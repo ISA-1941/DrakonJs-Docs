@@ -1,0 +1,4 @@
+name: drakonjs-docs
+version: 1.0  # Обязательно!
+nav:
+  - modules/ROOT/nav.adoc
