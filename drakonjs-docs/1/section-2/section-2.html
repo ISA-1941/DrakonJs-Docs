@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Drakon.js Docs</title>
+    <link rel="canonical" href="https://ISA-1941.github.io/DrakonJs-Docs/drakonjs-docs/1/section-2/section-2.html">
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://ISA-1941.github.io/DrakonJs-Docs">Drakon.js Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="drakonjs-docs" data-version="1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">drakonjs-docs</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Introduction</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">ADT</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-1/section-1.html">ADT</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript View</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="section-2.html">JavaScript</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Implementation base types</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-3/section-3.html">Implementation base types</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Language Drakon</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-4/section-4.html">Visual Language Drakon</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">drakonjs-docs</span>
+    <span class="version">1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">drakonjs-docs</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">drakonjs-docs</a></li>
+    <li>JavaScript View</li>
+    <li><a href="section-2.html">JavaScript</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/ISA-1941/DrakonJs-Docs/edit/main/docs-src/modules/section-2/pages/section-2.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_section_2_javascript_programming_language_overview"><a class="anchor" href="#_section_2_javascript_programming_language_overview"></a>SECTION 2.JavaScript Programming Language Overview</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_2_1_what_is_the_javascript_programming_language"><a class="anchor" href="#_2_1_what_is_the_javascript_programming_language"></a>2.1. What is the JavaScript Programming Language?</h3>
+<div class="quoteblock abstract">
+<blockquote>
+This section provides a foundational overview of the JavaScript programming language, tailored for its application in the context of data structures and algorithms. We will explore the core syntax, data types, and control flow mechanisms essential for implementing and understanding various data structures and algorithmic concepts. Special attention will be given to JavaScript&#8217;s dynamic nature and object-oriented capabilities, which play a crucial role in efficient algorithm design and data manipulation. This overview aims to equip readers with the necessary JavaScript skills to effectively follow the subsequent chapters on advanced data structures and algorithms.
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Since this book takes a hybrid approach to the software implementation of algorithms, it is essential to briefly describe the fundamental concepts and constructs of its components: the visual algorithmic language DRAKON and the JavaScript programming language. This approach is particularly promising in the field of education, as it fosters the formation and development of algorithmic and computational thinking. It is also highly applicable in computer science, particularly in the study of data structures and algorithms.</p>
+</div>
+<div class="paragraph">
+<p>However, it is assumed that the reader is already familiar with at least one modern programming language. At the same time, the description of JavaScript in this book is limited to the constructs necessary for understanding data structure algorithms.</p>
+</div>
+<div class="paragraph">
+<p>This section focuses on the core programming constructs in JavaScript, such as variables, arrays, objects, maps, logical operators, loops, functions, recursion, and more. Special emphasis is placed on data types, both primitive and complex. JavaScript prototypes and closures are also briefly discussed, as they play a key role in the language.</p>
+</div>
+<div class="paragraph">
+<p>JavaScript (JS) is a high-level, dynamically typed programming language that was originally created by Brendan Eich in 1995 while working at Netscape Communications. Unlike Go, JavaScript is an interpreted language with automatic memory management (garbage collection) and is primarily used for web development, although its use has expanded significantly in recent years.</p>
+</div>
+<div class="paragraph">
+<p>Below are the most important features of JavaScript:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Lightweight and flexible – JavaScript is dynamically typed, meaning there is no need to explicitly define variable types. This makes it a flexible and beginner-friendly language.</p>
+</li>
+<li>
+<p>Interpreted language JavaScript code is executed line by line by an engine (V8, SpiderMonkey, or Chakra). This makes development more interactive but can also impact performance.</p>
+</li>
+<li>
+<p>Prototype-based object model – JavaScript does not use classical OOP (like in Java or C++). Instead, it relies on prototypes and constructor functions. With the introduction of ES6 classes, JavaScript provides syntactic sugar for working with objects in an OOP-like style.</p>
+</li>
+<li>
+<p>Asynchronous programming – JavaScript has non-blocking execution using callbacks, promises, and async/await. This makes it well-suited for handling asynchronous operations such as network requests.</p>
+</li>
+<li>
+<p>Functional programming features – JavaScript supports higher-order functions, closures, and anonymous functions. Functions in JavaScript are first-class citizens, meaning they can be passed as arguments, returned from other functions, and stored in variables.</p>
+</li>
+<li>
+<p>Event-driven and single-threaded JavaScript relies on an event loop and asynchronous callbacks to manage concurrent operations.</p>
+</li>
+<li>
+<p>Extensive ecosystem – JavaScript has a massive standard library and an even larger third-party ecosystem through npm (Node Package Manager). This makes it one of the most versatile languages in modern development.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>While JavaScript was originally designed for client-side web development, it has grown into a general-purpose language thanks to Node.js, which allows JavaScript to run on servers, IoT devices, and even embedded systems.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_2_program_structure_in_javascript"><a class="anchor" href="#_2_2_program_structure_in_javascript"></a>2.2. Program structure in JavaScript</h3>
+<div class="paragraph">
+<p>JavaScript is a dynamically typed, interpreted programming language that is widely used for web development, backend services, and even desktop and mobile applications. A JavaScript program consists of a series of statements, functions, and modules that define its behavior.</p>
+</div>
+<div class="paragraph">
+<p>Unlike some other programming languages, JavaScript does not require a package declaration or an explicit <code>main()</code> function. Instead, execution starts from the top of the script and proceeds line by line.</p>
+</div>
+<div class="paragraph">
+<p>Unlike some other programming languages, JavaScript does not require a package declaration or an explicit <code>main()</code> function. Instead, execution starts from the top of the script and proceeds line by line.</p>
+</div>
+<div class="paragraph">
+<p>Basic structure of a JavaScript program can be structured as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">import fs from 'fs';
+
+function main() {
+    console.log("Hello, World!");
+}
+
+main();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here  <code>import fs from 'fs'</code>; - JavaScript allows importing external libraries or built-in modules.</p>
+</div>
+<div class="paragraph">
+<p>Function definition (<code>function main()</code>) – Functions encapsulate logic and can be reused.</p>
+</div>
+<div class="paragraph">
+<p>Execution order – The script runs from top to bottom, and functions are called explicitly.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>JavaScript supports two types of comments:</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript"> // This is a single-line comment
+/*
+   This is a multi-line comment.
+   It can span multiple lines.
+*/</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The specifics of organizing the structure of a JavaScript program in the DRAKON environment are presented in Section 3. We will only note that in the DRAKON technology, the program is structured through the <code>module()</code> function, which is a container for the main logic of the program. Inside module()<code>, the `main()</code> function is usually called, which controls the main process of code execution.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">function module() {
+    function main() {
+        console.log("Hello, World!");
+    }
+
+    main(); // Вызов основной функции
+}
+
+// Вызов модуля
+module();</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_3_variables_and_constants_in_javascript"><a class="anchor" href="#_2_3_variables_and_constants_in_javascript"></a>2.3. Variables and Constants in JavaScript</h3>
+<div class="paragraph">
+<p>In JavaScript, variables are used to store data values, similar to other programming languages. However, JavaScript is dynamically typed, meaning you do not need to explicitly declare the type of a variable — it is determined automatically based on the assigned value.</p>
+</div>
+<div class="paragraph">
+<p>JavaScript provides three ways to declare variables:</p>
+</div>
+<div class="paragraph">
+<p><code>var</code> – the traditional way (not recommended for modern code).</p>
+</div>
+<div class="paragraph">
+<p><code>let</code> – for block-scoped variables that can be reassigned.</p>
+</div>
+<div class="paragraph">
+<p><code>const</code> – for variables that cannot be reassigned after initialization.</p>
+</div>
+<div class="paragraph">
+<p>A variable in JavaScript is declared using the <code>let</code> or <code>const</code> keyword, followed by an identifier (variable name).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let i = 10;      // Integer
+let s = "Hello"; // String
+let f = true;    // Boolean</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Variables in JavaScript do not require type definitions, as types are inferred automatically.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let a = 25;                 // Number (integer)
+let x = 32.5;               // Number (floating point)
+let z = "Enter a new value"; // String</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If no initial value is assigned, JavaScript sets variables to undefined, unlike Go, which initializes them with default values.</p>
+</div>
+<div class="paragraph">
+<p>In JavaScript, multiple variables can be declared and initialized in one line, separated by commas:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let a = 100, b = 200, c = 300;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>JavaScript allows reassigning variables to different types:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let value = 10;    // Initially a number
+value = "text";    // Now a string
+value = true;      // Now a boolean</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>JavaScript allows implicit variable declaration (not recommended):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">x = 2.5; // Automatically declared as a global variable (avoid this!)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Variable names in JavaScript must follow certain rules:</p>
+</div>
+<div class="paragraph">
+<p>✅ Can contain letters, digits, $, and _ (but no spaces).</p>
+</div>
+<div class="paragraph">
+<p>✅ Cannot start with a digit.</p>
+</div>
+<div class="paragraph">
+<p>✅ Are case-sensitive (myVar and myvar are different).</p>
+</div>
+<div class="paragraph">
+<p>✅ Use camelCase naming convention (userName, totalPrice).</p>
+</div>
+<div class="paragraph">
+<p>Constants are declared using const, meaning their values cannot be changed after initialization:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const item = "name";
+const n = 25;
+const y = 45.5;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_4_input_and_output"><a class="anchor" href="#_2_4_input_and_output"></a>2.4. Input and output</h3>
+<div class="paragraph">
+<p>In JavaScript, input and output operations differ significantly from those in compiled languages. Since JavaScript was initially designed for the web, it does not have built-in functions for reading user input from the terminal. Similarly, JavaScript outputs data using <code>console.log()</code>, which prints values to the console.</p>
+</div>
+<div class="sect3">
+<h4 id="_2_4_1_output_in_javascript"><a class="anchor" href="#_2_4_1_output_in_javascript"></a>2.4.1. Output in JavaScript</h4>
+<div class="paragraph">
+<p>JavaScript provides several ways to display information:</p>
+</div>
+<div class="paragraph">
+<p>a) Basic Output to Console</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">console.log("Hello"); // Output without a newline
+console.log("Hello", 23); // Output multiple values with spaces
+console.log(`The salary is $${32000}`); // Using template literals</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It should be noted, that `console.log()`automatically adds a newline unless specified otherwise.</p>
+</div>
+<div class="paragraph">
+<p>b) Formatted output using <code>console.log()</code></p>
+</div>
+<div class="paragraph">
+<p>JavaScript provides formatted output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">onsole.log("Hello %d", 23); // Equivalent to Go's fmt.Printf("Hello %d", 23)
+console.log("Name: %s, Salary: %d", "Smith", 32000);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>c) Using template literals (Recommended)</p>
+</div>
+<div class="paragraph">
+<p>Template String provide an easy way to interpolate variables and expressions into strings.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let name = "Smith";
+let salary = 32000;
+console.log(`The salary of ${name} is $${salary}`);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Template literals (``) automatically replace variables inside ${}.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_4_2_input_in_javascript"><a class="anchor" href="#_2_4_2_input_in_javascript"></a>2.4.2. Input in JavaScript</h4>
+<div class="paragraph">
+<p>JavaScript does not have built-in input functions for reading user data from the terminal. Instead, input depends on the execution environment:</p>
+</div>
+<div class="paragraph">
+<p>a) Input in the Browser (Using prompt())</p>
+</div>
+<div class="paragraph">
+<p>In client-side JavaScript, <code>prompt()</code> can be used to get user input:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let name = prompt("Enter last name:");
+let salary = prompt("Enter salary:");
+console.log(`Salary of ${name} is $${salary}`);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Function <code>prompt()</code> always returns a string, so numbers must be converted using <code>parseInt()</code> or <code>parseFloat()</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let salary = parseInt(prompt("Enter salary:"));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>let salary = parseInt(prompt("Enter salary:"));</p>
+</div>
+<div class="paragraph">
+<p>b) Input in Node.js (Using readline)</p>
+</div>
+<div class="paragraph">
+<p>If running JavaScript in Node.js, we use the readline module to handle user input:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const readline = require("readline");
+
+const q = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+q.question("Enter last name: ", function(name) {
+    q.question("Enter salary: ", function(salary) {
+        console.log(`Salary of ${name} is $${salary}`);
+        q.close();
+    });
+});</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To summarize:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Feature</th>
+<th class="tableblock halign-left valign-top">JavaScript (Browser)</th>
+<th class="tableblock halign-left valign-top">JavaScript (Node.js)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Output (Console)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>console.log()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>console.log()</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Formatted Output</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Template literals (` `` `)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Template literals (` `` `)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Basic Input</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>prompt()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readline</code> module</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number Input</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>parseInt(prompt())</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>parseInt(input)</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_5_decision_making_operators_in_javascript"><a class="anchor" href="#_2_5_decision_making_operators_in_javascript"></a>2.5. Decision-Making Operators in JavaScript</h3>
+<div class="paragraph">
+<p>In programming, decision-making operators allow a program to choose different execution paths based on conditions. JavaScript provides several control structures for decision-making:</p>
+</div>
+<div class="paragraph">
+<p>Conditional branching: <code>if-else, switch-case</code>.</p>
+</div>
+<div class="paragraph">
+<p>Loops for repeating actions: <code>for, while, do-while</code>.</p>
+</div>
+<div class="paragraph">
+<p>Control flow statements:`break, continue, return`.</p>
+</div>
+<div class="sect3">
+<h4 id="_2_5_1_conditional_statement_if_else"><a class="anchor" href="#_2_5_1_conditional_statement_if_else"></a>2.5.1. Conditional Statement if-else</h4>
+<div class="paragraph">
+<p>The <code>if-else</code> statement allows executing different blocks of code depending on a condition.</p>
+</div>
+<div class="paragraph">
+<p>Syntax of <code>if-else</code> in JavaScript:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">if (condition) {
+    // Code executes if the condition is true
+} else {
+    // Code executes if the condition is false
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For single-line conditions, curly braces {} can be omitted.</p>
+</div>
+<div class="paragraph">
+<p>Example of if-else Usage:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let ID = "Apple";
+
+if (ID === "Apple") {
+    console.log("Enter your login and password");
+} else if (ID === "Google") {
+    console.log("Your operating system is not supported");
+} else {
+    console.log("Input error");
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Key points:</p>
+</div>
+<div class="paragraph">
+<p>Use <code>===</code> instead of <code>==</code> to check for equality (strict comparison).</p>
+</div>
+<div class="paragraph">
+<p>The <code>else if</code> block allows multiple conditions.</p>
+</div>
+<div class="paragraph">
+<p>The <code>else</code> block executes if none of the conditions are met.</p>
+</div>
+<div class="paragraph">
+<p>A representation of this design in Drakon-technology is shown in the next section.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_5_2_switch_statement"><a class="anchor" href="#_2_5_2_switch_statement"></a>2.5.2. <code>switch</code> Statement</h4>
+<div class="paragraph">
+<p>The switch statement provides a simpler way to compare a variable with multiple values.</p>
+</div>
+<div class="paragraph">
+<p>Syntax of <code>switch-case</code> in JavaScript:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">switch (expression) {
+    case value1:
+        // Code for case 1
+        break;
+    case value2:
+        // Code for case 2
+        break;
+    default:
+        // Code if no cases match
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>break</code> statement prevents fall-through execution.</p>
+</div>
+<div class="paragraph">
+<p>Example of <code>switch-case</code> Usage:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let ID = "Apple";
+
+switch (ID) {
+    case "Apple":
+        console.log("Enter your username and password");
+        break;
+    case "Google":
+        console.log("Your operating system is not supported");
+        break;
+    default:
+        console.log("Input error");
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Key points:</p>
+</div>
+<div class="paragraph">
+<p>The switch statement checks the ID variable.</p>
+</div>
+<div class="paragraph">
+<p>The break statement ensures only one case executes.</p>
+</div>
+<div class="paragraph">
+<p>The default block runs if none of the cases match.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_5_3_loops_in_javascript"><a class="anchor" href="#_2_5_3_loops_in_javascript"></a>2.5.3. Loops in JavaScript</h4>
+<div class="paragraph">
+<p>JavaScript supports multiple loop types for repeating actions.</p>
+</div>
+<div class="paragraph">
+<p>1️⃣ Classic <code>for</code> Loop</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">for (let i = 0; i &lt; 8; i++) {
+    console.log(i);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>2️⃣ <code>while</code> Loop (Preconditioned Loop)</p>
+</div>
+<div class="paragraph">
+<p>Executes as long as the condition is true:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let count = 10;
+
+while (count &gt; 0) {
+    console.log(count);
+    count--;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>3️⃣ <code>do-while</code> Loop</p>
+</div>
+<div class="paragraph">
+<p>Ensures the loop executes at least once, even if the condition is false.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let num = 5;
+
+do {
+    console.log(num);
+    num--;
+} while (num &gt; 0);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To summarize:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Feature</th>
+<th class="tableblock halign-left valign-top">JavaScript Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conditional statement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">if-else</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiple condition checking</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">switch-case</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loop with counter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for loop</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loop with condition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">while loop</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Guaranteed execution loop</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">do-while loop</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_6_looping_through_ranges_in_javascript"><a class="anchor" href="#_2_6_looping_through_ranges_in_javascript"></a>2.6. Looping Through Ranges in JavaScript</h3>
+<div class="paragraph">
+<p>In JavaScript, loops allow iterating over collections such as arrays, objects, and maps. JavaScript provides several ways to loop through a range of values or iterate over arrays, objects, and maps.</p>
+</div>
+<div class="sect3">
+<h4 id="_2_6_1_iterating_over_arrays_using_for_of"><a class="anchor" href="#_2_6_1_iterating_over_arrays_using_for_of"></a>2.6.1. Iterating Over Arrays Using <code>for-of</code></h4>
+<div class="paragraph">
+<p>JavaScript provides the <code>for-of</code> loop to iterate over arrays and other iterable objects.</p>
+</div>
+<div class="paragraph">
+<p>Syntax of <code>for-of</code> in JavaScript:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">for (let element of iterable) {
+    // Code to execute for each element
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example: Summing an Array:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let nums = [2, 3, 4];
+let sum = 0;
+
+for (let num of nums) {
+    sum += num;
+}
+
+console.log("Sum:", sum);</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_6_2_iterating_over_an_array_with_indexes_foreach"><a class="anchor" href="#_2_6_2_iterating_over_an_array_with_indexes_foreach"></a>2.6.2. Iterating Over an Array with Indexes (forEach)</h4>
+<div class="paragraph">
+<p>If we need both the index and value, we can use <code>forEach</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let nums = [2, 3, 4];
+
+nums.forEach((num, index) =&gt; {
+    if (num === 3) {
+        console.log("Index:", index);
+    }
+});</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_6_3_iterating_over_objects_using_for_in"><a class="anchor" href="#_2_6_3_iterating_over_objects_using_for_in"></a>2.6.3. Iterating Over Objects Using <code>for-in</code></h4>
+<div class="paragraph">
+<p>JavaScript does not have a built-in range keyword, but it provides for-in to iterate over object properties (similar to key-value pairs).</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Example: Iterating Over an Object:</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript"> let capitals = {
+    ca: "Paris",
+    co: "France"
+};
+
+for (let key in capitals) {
+    console.log(`${key} -&gt; ${capitals[key]}`);
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_6_4_iterating_over_maps_using_foreach_and_for_of"><a class="anchor" href="#_2_6_4_iterating_over_maps_using_foreach_and_for_of"></a>2.6.4. Iterating Over Maps Using <code>forEach()</code> and <code>for-of</code></h4>
+<div class="paragraph">
+<p>For Map objects, we use <code>forEach()</code> or <code>for-of</code> with <code>.entries()</code>.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Example: Iterating Over a Map:</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript"> let capitals = new Map([
+    ["ca", "Paris"],
+    ["co", "France"]
+]);
+
+for (let [key, value] of capitals.entries()) {
+    console.log(`${key} -&gt; ${value}`);
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_6_5_iterating_over_keys_only"><a class="anchor" href="#_2_6_5_iterating_over_keys_only"></a>2.6.5. Iterating Over Keys Only</h4>
+<div class="paragraph">
+<p>If we only need the keys:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">for (let key of capitals.keys()) {
+    console.log("Key:", key);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To summarize:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">JavaScript Equivalent</th>
+<th class="tableblock halign-left valign-top">Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for-of</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Iterating over arrays (values only)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">forEach()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Iterating over arrays with index &amp; value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for-in</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Iterating over object keys</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.entries() with for-of</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Iterating over maps (key-value pairs)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.keys() with for-of</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Iterating over map keys only</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_7_data_types_in_javascript"><a class="anchor" href="#_2_7_data_types_in_javascript"></a>2.7. Data Types in JavaScript</h3>
+<div class="paragraph">
+<p>Data types define the kind of values that variables can store in a program. They also determine the operations that can be performed on the data.</p>
+</div>
+<div class="paragraph">
+<p>JavaScript has dynamic typing, meaning that variables do not have a fixed type but are assigned a type based on their value.</p>
+</div>
+<div class="paragraph">
+<p>The main categories of data types in JavaScript include:</p>
+</div>
+<div class="paragraph">
+<p>Primitive Types: Numbers, strings, booleans, null, undefined, Symbol, and BigInt.
+Reference Types: Objects, arrays, functions, and maps.</p>
+</div>
+<div class="sect3">
+<h4 id="_2_7_1_primitive_data_types"><a class="anchor" href="#_2_7_1_primitive_data_types"></a>2.7.1. Primitive Data Types</h4>
+<div class="paragraph">
+<p>a) Numeric Data Types
+JavaScript uses a single number type (Number) for both integers and floating-point values.</p>
+</div>
+<div class="paragraph">
+<p>Example: Declaring Numeric Variables</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let integerNumber = 42;     // Integer
+let floatingPoint = 3.14;   // Floating-point number</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>JavaScript also supports <code>BigInt</code>, a special type for working with very large integers.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let bigNumber = 9007199254740991n; // BigInt type (suffix 'n' is required)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Numeric Limits
+The maximum and minimum values for numbers are stored in constants:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">console.log(Number.MAX_SAFE_INTEGER); // 9007199254740991
+console.log(Number.MIN_SAFE_INTEGER); // -9007199254740991
+console.log(Number.MAX_VALUE); // 1.7976931348623157e+308
+console.log(Number.MIN_VALUE); // 5e-324</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Key Points:</p>
+</div>
+<div class="paragraph">
+<p>Number type covers both integers and floating-point values.
+BigInt allows working with very large integers beyond Number.MAX_SAFE_INTEGER.
+JavaScript automatically converts between integer and floating-point when needed.</p>
+</div>
+<div class="paragraph">
+<p>b) String Variables and Constants
+A string in JavaScript is a sequence of characters enclosed in single quotes ('), double quotes ("), or backticks (`` for template literals).</p>
+</div>
+<div class="paragraph">
+<p>🔹 Declaring String Variables</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let greeting = "Hello, World";   // Double quotes
+let name = 'John';               // Single quotes
+let message = `Hello, ${name}`;  // Template literals (ES6+)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>📌 Key features</p>
+</div>
+<div class="paragraph">
+<p>Strings are immutable (modifying a string creates a new string).
+Template literals allow embedding variables using ${} inside backticks (``).</p>
+</div>
+<div class="paragraph">
+<p>🔹 String Length and Character Access</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">console.log(greeting.length); // 12
+console.log(greeting[0]); // 'H'
+console.log(greeting.charCodeAt(0)); // Unicode code of 'H' (72)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>🔹 Unicode Representation (Hex Output)
+To get the hexadecimal representation of characters:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">for (let i = 0; i &lt; greeting.length; i++) {
+    console.log(greeting.charCodeAt(i).toString(16));
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>📌 Key features:</p>
+</div>
+<div class="paragraph">
+<p>The length property returns the number of characters in a string.
+<code>charCodeAt(i)</code> provides the Unicode value of a character.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_c_boolean_variables_and_constants"><a class="anchor" href="#_c_boolean_variables_and_constants"></a>c) Boolean Variables and Constants</h4>
+<div class="paragraph">
+<p>Boolean values are either true or false. They are commonly used in comparisons and conditional logic.</p>
+</div>
+<div class="paragraph">
+<p>🔹 Declaring Boolean Variables</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let isJavaScriptFun = true;
+let isWeekend = false;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>🔹 Boolean Expressions</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let x = 5, y = 8;
+console.log("x == y:", x == y);   // false
+console.log("x != y:", x != y);   // true
+console.log("x &lt; y:", x &lt; y);     // true
+console.log("x &gt; y:", x &gt; y);     // false
+console.log("x &lt;= y:", x &lt;= y);   // true
+console.log("x &gt;= y:", x &gt;= y);   // false</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>📌 Key features:</p>
+</div>
+<div class="paragraph">
+<p>Booleans are mainly used for conditional logic (if statements, loops, etc.).</p>
+</div>
+<div class="paragraph">
+<p>The comparison operators (==, !=, &lt;, &gt;, &#8656;, &gt;=) return boolean values.</p>
+</div>
+<div class="paragraph">
+<p>To summarize:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Data Type</th>
+<th class="tableblock halign-left valign-top">Example</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">let x = 10;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Holds integer or floating-point values.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BigInt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">let y = 12345678901234567890n;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used for extremely large integers.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">let s = "Hello";</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sequence of characters.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">let isTrue = true;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Holds true or false.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Undefined</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">let x;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Variable is declared but not assigned a value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Null</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">let y = null;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents an intentional absence of value.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_8_composite_data_types_in_javascript"><a class="anchor" href="#_2_8_composite_data_types_in_javascript"></a>2.8. Composite Data Types in JavaScript</h3>
+<div class="paragraph">
+<p>JavaScript provides composite data types to store and manipulate collections of data and complex structures. The most commonly used composite types are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Arrays – Ordered collections of elements.</p>
+</li>
+<li>
+<p>Objects – Key-value pairs that represent complex data structures.</p>
+</li>
+<li>
+<p>Maps – Key-value storage with enhanced capabilities.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_2_8_1_arrays"><a class="anchor" href="#_2_8_1_arrays"></a>2.8.1. Arrays</h4>
+<div class="paragraph">
+<p>An array is an ordered collection of elements, where each element is indexed numerically, starting from 0. Arrays in JavaScript are dynamic, meaning they can grow and shrink in size.</p>
+</div>
+<div class="paragraph">
+<p>🔹 Declaring and Initializing Arrays</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let numbers = [10, 20, 30, 40];  // Array with 4 elements
+console.log(numbers[0]);  // Access first element (10)
+console.log(numbers.length); // Array length (4)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>📌 Key features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Arrays are zero-indexed (array[0] is the first element).</p>
+</li>
+<li>
+<p>The .length property returns the number of elements.</p>
+</li>
+<li>
+<p>Arrays can store multiple types of values:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>let mixedArray = [42, "text", true, null];</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>🔹 Adding and Removing Elements</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let fruits = ["Apple", "Banana"];
+fruits.push("Orange");  // Add element to the end
+fruits.pop();  // Remove last element
+fruits.unshift("Grapes"); // Add to the beginning
+fruits.shift();  // Remove first element
+console.log(fruits);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>📌 JavaScript arrays are flexible – they can grow, shrink, and store mixed data types.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_8_2_objects"><a class="anchor" href="#_2_8_2_objects"></a>2.8.2. Objects</h4>
+<div class="paragraph">
+<p>An object is a collection of key-value pairs, where each key is a property that stores a value.</p>
+</div>
+<div class="paragraph">
+<p>🔹 Declaring an Object</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let employee = {
+    firstName: "Max",
+    lastName: "Smith",
+    age: 42,
+    phone: 123456789,
+    salary: 34000,
+    address: "Amarillo"
+};
+
+console.log(`Employee: ${employee.firstName} ${employee.lastName}`);
+console.log(`Salary: $${employee.salary}`);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>📌 Key features:</p>
+</div>
+<div class="paragraph">
+<p>Properties are accessed using dot notation (object.property) or bracket notation (object["property"]).
+Objects store heterogeneous data (unlike arrays).</p>
+</div>
+<div class="paragraph">
+<p>🔹 Updating and Adding Properties</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">employee.age = 43;  // Updating a property
+employee.department = "IT";  // Adding a new property
+console.log(employee);</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_8_3_map"><a class="anchor" href="#_2_8_3_map"></a>2.8.3. Map</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let capitals = new Map([
+    ["France", "Paris"],
+    ["Germany", "Berlin"]
+]);
+
+console.log(capitals.get("France"));  // Access value by key
+capitals.set("Spain", "Madrid");  // Add new key-value pair
+console.log(capitals);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>📌 Maps vs. Objects</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Objects use only strings as keys, while Maps can use any type of key.</p>
+</li>
+<li>
+<p>Maps maintain key order, whereas objects do not guarantee order.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To summarize:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Data</th>
+<th class="tableblock halign-left valign-top">Example</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Array</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>let arr = [1, 2, 3];</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ordered collection of elements.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>let obj = { name: "Max" };</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Collection of key-value pairs.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Map</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>let map = new Map();</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Advanced key-value storage.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_9_inheritance_encapsulation_and_polymorphism_in_javascript"><a class="anchor" href="#_2_9_inheritance_encapsulation_and_polymorphism_in_javascript"></a>2.9. Inheritance, encapsulation and polymorphism in JavaScript</h3>
+<div class="sect3">
+<h4 id="_2_9_1_general_features_of_oop"><a class="anchor" href="#_2_9_1_general_features_of_oop"></a>2.9.1. General features of OOP</h4>
+<div class="paragraph">
+<p>Inheritance, encapsulation and polymorphism are the three pillars of object-oriented programming (OOP) that play a key role in modern programming languages. They help create more modular, flexible and supported code.</p>
+</div>
+<div class="paragraph">
+<p>Core OOP principles and their roles:</p>
+</div>
+<div class="paragraph">
+<p>🔹 Inheritance:</p>
+</div>
+<div class="paragraph">
+<p>✅ Allows creating new classes (subclasses) based on existing ones (superclasses), inheriting their properties and methods.</p>
+</div>
+<div class="paragraph">
+<p>✅ Promotes code reuse and the creation of class hierarchies.</p>
+</div>
+<div class="paragraph">
+<p>✅ In JavaScript, inheritance is implemented through prototypes or using classes (ES6).</p>
+</div>
+<div class="paragraph">
+<p>🔹 Encapsulation:</p>
+</div>
+<div class="paragraph">
+<p>✅ Hides internal implementation details of a class and provides access to them only through public methods.</p>
+</div>
+<div class="paragraph">
+<p>✅ Protects data from unauthorized access and enhances code reliability.</p>
+</div>
+<div class="paragraph">
+<p>✅ In JavaScript, encapsulation is achieved through closures or modules.</p>
+</div>
+<div class="paragraph">
+<p>🔹 Polymorphism:</p>
+</div>
+<div class="paragraph">
+<p>✅ Enables objects of different classes with a common interface to behave differently.</p>
+</div>
+<div class="paragraph">
+<p>✅ Makes code more flexible and adaptable to changes.</p>
+</div>
+<div class="paragraph">
+<p>✅ In JavaScript, polymorphism is implemented through dynamic typing and method overriding.
+JavaScript examples with factory functions:</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_9_2_implementing_oop_principles_using_factory_functions"><a class="anchor" href="#_2_9_2_implementing_oop_principles_using_factory_functions"></a>2.9.2. Implementing OOP principles using factory functions</h4>
+<div class="paragraph">
+<p>Factory functions provide a flexible and powerful way to implement OOP principles in JavaScript.
+Using factory functions, helps to prevent the problems of classical prototypical inheritance.
+With the help of factory functions, you can use object composition, which in many cases is a more flexible solution than inheritance.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Encapsulation with factory functions:</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In this book, the specified OOP principles are implemented based on the use of factory functions.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">function createPerson(name, age) {
+  let _name = name; // private variable
+  let _age = age; // private variable
+
+  return {
+    getName: function() {
+      return _name;
+    },
+    getAge: function() {
+      return _age;
+    },
+    setAge: function(newAge) {
+      if (newAge &gt; 0 &amp;&amp; newAge &lt; 150) {
+        _age = newAge;
+      }
+    }
+  };
+}
+
+const person = createPerson("Ivan", 30);
+console.log(person.getName()); // Output: Ivan
+person.setAge(31);
+console.log(person.getAge()); // Output: 31
+// console.log(person._age); // Error: _age is not accessible from outside</code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Composition (alternative to inheritance) with factory functions:</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const canBark = (state) =&gt; ({
+  bark: () =&gt; console.log("Woof!")
+});
+
+const canWalk = (state) =&gt; ({
+  walk: () =&gt; console.log("Walking...")
+});
+
+const createDog = (name) =&gt; {
+  let state = {
+    name: name
+  };
+  return Object.assign(
+    {},
+    state,
+    canBark(state),
+    canWalk(state)
+  );
+};
+
+const dog = createDog("Bobik");
+dog.bark(); // Output: Woof!
+dog.walk(); // Output: Walking...</code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Polymorphism with factory functions:</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const createCircle = (radius) =&gt; ({
+  calculateArea: () =&gt; Math.PI * radius * radius
+});
+
+const createSquare = (side) =&gt; ({
+  calculateArea: () =&gt; side * side
+});
+
+function printArea(shape) {
+  console.log("Area:", shape.calculateArea());
+}
+
+const circle = createCircle(5);
+const square = createSquare(4);
+
+printArea(circle); // Output: Area: 78.53981633974483
+printArea(square); // Output: Area: 16</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
