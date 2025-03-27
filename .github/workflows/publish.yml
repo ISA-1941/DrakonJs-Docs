@@ -1,0 +1,40 @@
+name: Publish Antora site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-site:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Antora (local)
+        run: npm install @antora/cli @antora/site-generator-default
+
+      - name: Copy UI bundle from .ui/
+        run: mkdir -p antora-ui && cp ./ui/ui-bundle.zip ./antora-ui/ui-bundle.zip
+        
+      - name: Unzip UI bundle
+        run: unzip antora-ui/ui-bundle.zip -d antora-ui/ui
+
+      - name: Generate site with Antora
+        run: >
+          npx antora
+          --cache-dir .antora-cache
+          --stacktrace
+          --to-dir public
+          antora-playbook.yml
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
