@@ -1,0 +1,102 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "25",
+            "content": "Branch1"
+        },
+        "5": {
+            "type": "question",
+            "one": "12",
+            "two": "7",
+            "flag1": 0,
+            "content": "node !== null"
+        },
+        "6": {
+            "type": "arrow-loop",
+            "one": "22"
+        },
+        "7": {
+            "type": "question",
+            "one": "16",
+            "two": "6",
+            "flag1": 1,
+            "content": "node.data === val"
+        },
+        "11": {
+            "type": "branch",
+            "one": "1",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "12": {
+            "type": "branch",
+            "one": "13",
+            "branchId": 2,
+            "content": "Branch2"
+        },
+        "13": {
+            "type": "question",
+            "one": "14",
+            "two": "15",
+            "flag1": 1,
+            "content": "list.n !== 0"
+        },
+        "14": {
+            "type": "action",
+            "one": "11",
+            "content": "console.log(\n    \"The desired value\",\n    val,\n    \"occurs\",\n    list.n,\n    \"times\"\n)"
+        },
+        "15": {
+            "type": "action",
+            "one": "11",
+            "content": "console.log(\n    \"The desired value\",\n    val,\n    \"does not exist\"\n)"
+        },
+        "16": {
+            "type": "action",
+            "one": "6",
+            "content": "list.n++"
+        },
+        "22": {
+            "type": "action",
+            "one": "5",
+            "content": "node = node.nextNode"
+        },
+        "23": {
+            "type": "question",
+            "one": "26",
+            "two": "6",
+            "flag1": 1,
+            "content": "node.data === val"
+        },
+        "24": {
+            "type": "action",
+            "one": "23",
+            "content": "node = list.headNode"
+        },
+        "25": {
+            "type": "action",
+            "one": "24",
+            "content": "list.n = 0"
+        },
+        "26": {
+            "type": "action",
+            "one": "6",
+            "content": "list.n++"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "list, val"
+}

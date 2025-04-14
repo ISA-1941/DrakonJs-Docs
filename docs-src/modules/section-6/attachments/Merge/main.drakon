@@ -1,0 +1,33 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "array = [\n    11,\n    32,\n    23,\n    74,\n    85,\n    90,\n    62,\n    48,\n    53,\n    10\n];"
+        },
+        "4": {
+            "type": "action",
+            "one": "5",
+            "content": "console.log(\"Input array:\", array)"
+        },
+        "5": {
+            "type": "action",
+            "one": "6",
+            "content": "sorted = mergeSort(array)"
+        },
+        "6": {
+            "type": "action",
+            "one": "1",
+            "content": "console.log(\"Sorted array:\", sorted)"
+        }
+    }
+}

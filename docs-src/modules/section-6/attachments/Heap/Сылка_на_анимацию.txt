@@ -1,0 +1,82 @@
+heap https://chatgpt.com/canvas/shared/67ee6d3727fc81918913a4329256a538
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Heap Sort Visualization</title>
+  <style>
+    canvas {
+      background: #fff;
+      display: block;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+    }
+    body {
+      font-family: sans-serif;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Heap Sort Visualization</h1>
+  <canvas id="canvas" width="600" height="300"></canvas>
+  <script>
+    const array = [11, 32, 23, 74, 85, 90, 62, 48, 53, 10];
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    const barWidth = 40;
+    const barSpacing = 10;
+
+    function drawArray(arr, highlight = []) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      arr.forEach((val, i) => {
+        const x = i * (barWidth + barSpacing) + 20;
+        const y = canvas.height - val * 2;
+        ctx.fillStyle = highlight.includes(i) ? "tomato" : "skyblue";
+        ctx.fillRect(x, y, barWidth, val * 2);
+        ctx.fillStyle = "black";
+        ctx.fillText(val, x + 10, y - 5);
+      });
+    }
+
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function heapify(arr, n, i) {
+      let largest = i;
+      let left = 2 * i + 1;
+      let right = 2 * i + 2;
+
+      if (left < n && arr[left] > arr[largest]) largest = left;
+      if (right < n && arr[right] > arr[largest]) largest = right;
+
+      if (largest !== i) {
+        [arr[i], arr[largest]] = [arr[largest], arr[i]];
+        drawArray(arr, [i, largest]);
+        await sleep(1500);
+        await heapify(arr, n, largest);
+      }
+    }
+
+    async function heapSort(arr) {
+      const n = arr.length;
+
+      for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
+        await heapify(arr, n, i);
+      }
+
+      for (let i = n - 1; i > 0; i--) {
+        [arr[0], arr[i]] = [arr[i], arr[0]];
+        drawArray(arr, [0, i]);
+        await sleep(500);
+        await heapify(arr, i, 0);
+      }
+    }
+
+    drawArray(array);
+    heapSort(array);
+  </script>
+</body>
+</html>

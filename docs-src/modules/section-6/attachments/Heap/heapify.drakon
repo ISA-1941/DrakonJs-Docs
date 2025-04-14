@@ -1,0 +1,109 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "Left and right child indices"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "largest = i"
+        },
+        "4": {
+            "type": "action",
+            "one": "5",
+            "content": "left = 2 * i + 1"
+        },
+        "5": {
+            "type": "action",
+            "one": "18",
+            "content": "right = 2 * i + 2"
+        },
+        "11": {
+            "type": "branch",
+            "one": "1",
+            "branchId": 4,
+            "content": "Exit"
+        },
+        "12": {
+            "type": "branch",
+            "one": "13",
+            "branchId": 3,
+            "content": "If largest is not the current node,\nswap and recurse"
+        },
+        "13": {
+            "type": "question",
+            "one": "14",
+            "two": "11",
+            "flag1": 1,
+            "content": "largest !== i"
+        },
+        "14": {
+            "type": "action",
+            "one": "15",
+            "content": "temp = arr[i]"
+        },
+        "15": {
+            "type": "action",
+            "one": "16",
+            "content": "arr[i] = arr[largest]"
+        },
+        "16": {
+            "type": "action",
+            "one": "17",
+            "content": "arr[largest] = temp"
+        },
+        "17": {
+            "type": "action",
+            "one": "11",
+            "content": "heapify(arr, size, largest)"
+        },
+        "18": {
+            "type": "branch",
+            "branchId": 2,
+            "one": "19",
+            "content": "Comparisons with left and right  child"
+        },
+        "19": {
+            "type": "question",
+            "one": "20",
+            "two": "21",
+            "flag1": 1,
+            "content": "left < size && arr[left] > arr[largest]"
+        },
+        "20": {
+            "type": "action",
+            "one": "21",
+            "two": "",
+            "content": "largest = left"
+        },
+        "21": {
+            "type": "question",
+            "one": "22",
+            "two": "12",
+            "flag1": 1,
+            "content": "right < size && arr[right] > arr[largest]"
+        },
+        "22": {
+            "type": "action",
+            "one": "12",
+            "two": "",
+            "content": "largest = right"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "arr, size, i"
+}

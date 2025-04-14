@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Insertion Sort Animation</title>
+  <style>
+    canvas {
+      border: 1px solid #ccc;
+      display: block;
+      margin: 20px auto;
+      background: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="canvas" width="600" height="300"></canvas>
+
+<script>
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
+
+  let array = [90, 11, 81, 21, 71, 31, 61, 41, 51, 10];
+  let bars = [...array];
+  const barWidth = 40;
+  const spacing = 10;
+  const barColor = "#3498db";
+  const sortedColor = "#2ecc71";
+  const currentColor = "#e74c3c";
+
+  function drawBars(currentIndex = -1, sorted = []) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    bars.forEach((value, index) => {
+      ctx.fillStyle =
+        index === currentIndex
+          ? currentColor
+          : sorted.includes(index)
+          ? sortedColor
+          : barColor;
+      ctx.fillRect(
+        index * (barWidth + spacing),
+        canvas.height - value * 2,
+        barWidth,
+        value * 2
+      );
+      ctx.fillStyle = "#000";
+      ctx.fillText(
+        value,
+        index * (barWidth + spacing) + barWidth / 4,
+        canvas.height - value * 2 - 5
+      );
+    });
+  }
+
+  async function insertionSort() {
+    let sortedIndices = [];
+    for (let i = 1; i < bars.length; i++) {
+      let key = bars[i];
+      let j = i - 1;
+
+      while (j >= 0 && bars[j] > key) {
+        bars[j + 1] = bars[j];
+        j--;
+
+        drawBars(j + 1, sortedIndices);
+        await new Promise((resolve) => setTimeout(resolve, 600));
+      }
+      bars[j + 1] = key;
+
+      sortedIndices = [...Array(i + 1).keys()];
+      drawBars(i, sortedIndices);
+      await new Promise((resolve) => setTimeout(resolve, 300));
+    }
+    drawBars(-1, [...Array(bars.length).keys()]);
+  }
+
+  drawBars();
+  insertionSort();
+</script>
+
+</body>
+</html>
