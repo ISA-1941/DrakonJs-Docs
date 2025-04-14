@@ -1,5 +1,5 @@
 :imagesdir: ../images
-:toc:
+:toc:[]
 :toclevels: 2
 
 == SECTION 6. BASIC SORTING ALGORITHMS
