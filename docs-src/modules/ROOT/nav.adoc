@@ -11,5 +11,5 @@
 * Complexity of algorithms
 ** xref:section-5:section-5.adoc[Complexity problems]
 * Base algorithms sorting
-** xref:section-6:section-6.adoc[Sorting Algorithms]
+** xref:section-6:section-6.adoc[Base Sorting Algorithms]
 
