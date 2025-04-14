@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sorting Algorithms Visualization</title>
+  <style>
+    canvas {
+      background: #fff;
+      display: block;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+    }
+    body {
+      font-family: sans-serif;
+      text-align: center;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .active-button {
+      background-color: #4CAF50;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sorting Visualizations</h1>
+  <canvas id="canvas" width="800" height="300"></canvas>
+  <div>
+    <button id="bubble" onclick="startBubbleSort()">Start Bubble Sort</button>
+    <button id="insertion" onclick="startInsertionSort()">Start Insertion Sort</button>
+    <button id="selection" onclick="startSelectionSort()">Start Selection Sort</button>
+    <button id="shell" onclick="startShellSort()">Start Shell Sort</button>
+    <button id="quick" onclick="startQuickSort()">Start Quick Sort</button>
+    <button id="merge" onclick="startMergeSort()">Start Merge Sort</button>
+    <button id="heap" onclick="startHeapSort()">Start Heap Sort</button>
+    <button onclick="stopSorting()" style="background-color: crimson; color: white;">Stop</button>
+  </div>
+  <script>
+    const originalArray = [11, 32, 23, 74, 85, 90, 62, 48, 53, 10];
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    const barWidth = 40;
+    const barSpacing = 10;
+    let stopFlag = false;
+
+    function stopSorting() {
+      stopFlag = true;
+    }
+
+    function setActive(id) {
+      document.querySelectorAll("button").forEach(btn => btn.classList.remove("active-button"));
+      if (id) document.getElementById(id).classList.add("active-button");
+    }
+
+    function drawArray(arr, highlight = [], pivotIndex = null) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      arr.forEach((val, i) => {
+        const x = i * (barWidth + barSpacing) + 20;
+        const y = canvas.height - val * 2;
+        if (i === pivotIndex) {
+          ctx.fillStyle = "orange";
+        } else {
+          ctx.fillStyle = highlight.includes(i) ? "tomato" : "skyblue";
+        }
+        ctx.fillRect(x, y, barWidth, val * 2);
+        ctx.fillStyle = "black";
+        ctx.fillText(val, x + 10, y - 5);
+      });
+    }
+
+    async function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function conditionalSleep(ms) {
+      for (let t = 0; t < ms; t += 20) {
+        if (stopFlag) throw new Error("Stopped");
+        await sleep(20);
+      }
+    }
+
+    async function bubbleSortVisual(arr) {
+      const n = arr.length;
+      for (let i = 0; i < n - 1; i++) {
+        for (let j = 0; j < n - i - 1; j++) {
+          drawArray(arr, [j, j + 1]);
+          await conditionalSleep(300);
+          if (arr[j] > arr[j + 1]) {
+            [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+            drawArray(arr, [j, j + 1]);
+            await conditionalSleep(300);
+          }
+        }
+      }
+    }
+
+    async function insertionSortVisual(arr) {
+      const n = arr.length;
+      for (let i = 1; i < n; i++) {
+        let key = arr[i];
+        let j = i - 1;
+        while (j >= 0 && arr[j] > key) {
+          arr[j + 1] = arr[j];
+          drawArray(arr, [j, j + 1]);
+          await conditionalSleep(300);
+          j--;
+        }
+        arr[j + 1] = key;
+        drawArray(arr, [j + 1]);
+        await conditionalSleep(300);
+      }
+    }
+
+    async function selectionSortVisual(arr) {
+      const n = arr.length;
+      for (let i = 0; i < n - 1; i++) {
+        let minIndex = i;
+        drawArray(arr, [i], minIndex);
+        await conditionalSleep(300);
+        for (let j = i + 1; j < n; j++) {
+          drawArray(arr, [i, j], minIndex);
+          await conditionalSleep(300);
+          if (arr[j] < arr[minIndex]) {
+            minIndex = j;
+            drawArray(arr, [i, j], minIndex);
+            await conditionalSleep(300);
+          }
+        }
+        if (minIndex !== i) {
+          [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+          drawArray(arr, [i, minIndex]);
+          await conditionalSleep(500);
+        }
+      }
+    }
+
+    async function shellSortVisual(arr) {
+      const n = arr.length;
+      let gap = Math.floor(n / 2);
+      while (gap > 0) {
+        for (let i = gap; i < n; i++) {
+          let temp = arr[i];
+          let j = i;
+          while (j >= gap && arr[j - gap] > temp) {
+            arr[j] = arr[j - gap];
+            drawArray(arr, [j, j - gap]);
+            await conditionalSleep(300);
+            j -= gap;
+          }
+          arr[j] = temp;
+          drawArray(arr, [j]);
+          await conditionalSleep(300);
+        }
+        gap = Math.floor(gap / 2);
+      }
+    }
+
+    async function quickSortVisual(arr, left = 0, right = arr.length - 1) {
+      if (left >= right) return;
+      let pivotIndex = right;
+      let pivot = arr[pivotIndex];
+      let i = left;
+      drawArray(arr, [], pivotIndex);
+      await conditionalSleep(500);
+      for (let j = left; j < right; j++) {
+        drawArray(arr, [i, j], pivotIndex);
+        await conditionalSleep(300);
+        if (arr[j] < pivot) {
+          [arr[i], arr[j]] = [arr[j], arr[i]];
+          drawArray(arr, [i, j], pivotIndex);
+          await conditionalSleep(300);
+          i++;
+        }
+      }
+      [arr[i], arr[pivotIndex]] = [arr[pivotIndex], arr[i]];
+      drawArray(arr, [i], i);
+      await conditionalSleep(500);
+      await quickSortVisual(arr, left, i - 1);
+      await quickSortVisual(arr, i + 1, right);
+    }
+
+    async function mergeSortVisual(arr, startIndex = 0) {
+      if (arr.length < 2) return arr;
+      const mid = Math.floor(arr.length / 2);
+      const left = await mergeSortVisual(arr.slice(0, mid), startIndex);
+      const right = await mergeSortVisual(arr.slice(mid), startIndex + mid);
+      const result = [];
+      let i = 0, j = 0;
+      while (i < left.length || j < right.length) {
+        if (i === left.length) {
+          result.push(right[j++]);
+        } else if (j === right.length) {
+          result.push(left[i++]);
+        } else if (left[i] <= right[j]) {
+          result.push(left[i++]);
+        } else {
+          result.push(right[j++]);
+        }
+        drawArray(result.concat(left.slice(i)).concat(right.slice(j)), [], startIndex + result.length - 1);
+        await conditionalSleep(500);
+      }
+      return result;
+    }
+
+    async function heapify(arr, n, i) {
+      let largest = i;
+      let left = 2 * i + 1;
+      let right = 2 * i + 2;
+      if (left < n && arr[left] > arr[largest]) largest = left;
+      if (right < n && arr[right] > arr[largest]) largest = right;
+      if (largest !== i) {
+        [arr[i], arr[largest]] = [arr[largest], arr[i]];
+        drawArray(arr, [i, largest]);
+        await conditionalSleep(500);
+        await heapify(arr, n, largest);
+      }
+    }
+
+    async function heapSort(arr) {
+      const n = arr.length;
+      for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
+        await heapify(arr, n, i);
+      }
+      for (let i = n - 1; i > 0; i--) {
+        [arr[0], arr[i]] = [arr[i], arr[0]];
+        drawArray(arr, [0, i]);
+        await conditionalSleep(500);
+        await heapify(arr, i, 0);
+      }
+    }
+
+    async function startBubbleSort() {
+      setActive("bubble");
+      stopFlag = false;
+      const arr = [...originalArray];
+      drawArray(arr);
+      try {
+        await bubbleSortVisual(arr);
+      } catch {}
+    }
+
+    async function startInsertionSort() {
+      setActive("insertion");
+      stopFlag = false;
+      const arr = [...originalArray];
+      drawArray(arr);
+      try {
+        await insertionSortVisual(arr);
+      } catch {}
+    }
+
+    async function startSelectionSort() {
+      setActive("selection");
+      stopFlag = false;
+      const arr = [...originalArray];
+      drawArray(arr);
+      try {
+        await selectionSortVisual(arr);
+      } catch {}
+    }
+
+    async function startShellSort() {
+      setActive("shell");
+      stopFlag = false;
+      const arr = [...originalArray];
+      drawArray(arr);
+      try {
+        await shellSortVisual(arr);
+      } catch {}
+    }
+
+    async function startQuickSort() {
+      setActive("quick");
+      stopFlag = false;
+      const arr = [...originalArray];
+      drawArray(arr);
+      try {
+        await quickSortVisual(arr);
+      } catch {}
+    }
+
+    async function startMergeSort() {
+      setActive("merge");
+      stopFlag = false;
+      const arr = [...originalArray];
+      drawArray(arr);
+      try {
+        const sorted = await mergeSortVisual(arr);
+        drawArray(sorted);
+      } catch {}
+    }
+
+    async function startHeapSort() {
+      setActive("heap");
+      stopFlag = false;
+      const arr = [...originalArray];
+      drawArray(arr);
+      try {
+        await heapSort(arr);
+        drawArray(arr);
+      } catch {}
+    }
+
+    drawArray(originalArray);
+  </script>
+</body>
+</html>

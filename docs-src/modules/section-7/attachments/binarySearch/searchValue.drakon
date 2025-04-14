@@ -1,0 +1,82 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "low = 0"
+        },
+        "4": {
+            "type": "action",
+            "one": "26",
+            "content": "high = arr.length - 1;"
+        },
+        "18": {
+            "type": "question",
+            "one": "27",
+            "two": "26",
+            "flag1": 0,
+            "content": "low <= high"
+        },
+        "19": {
+            "type": "action",
+            "one": "20",
+            "content": "mid = Math.floor((low + high) / 2)"
+        },
+        "20": {
+            "type": "question",
+            "one": "23",
+            "two": "21",
+            "flag1": 1,
+            "content": "arr[mid] === value"
+        },
+        "21": {
+            "type": "question",
+            "one": "24",
+            "two": "22",
+            "flag1": 1,
+            "content": "arr[mid] < value"
+        },
+        "22": {
+            "type": "action",
+            "one": "18",
+            "content": "high = mid - 1"
+        },
+        "23": {
+            "type": "action",
+            "one": "18",
+            "content": "return mid"
+        },
+        "24": {
+            "type": "action",
+            "one": "18",
+            "content": "low = mid + 1"
+        },
+        "26": {
+            "type": "arrow-loop",
+            "one": "19"
+        },
+        "27": {
+            "type": "action",
+            "one": "1",
+            "content": "return -1"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "arr, value"
+}

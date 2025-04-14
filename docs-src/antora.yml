@@ -1,4 +1,6 @@
 name: drakonjs-docs
-version: 1.0  # Обязательно!
+version: 1.0  # Necessarily!
 nav:
   - modules/ROOT/nav.adoc
+start_page: drakonjs-docs::index.adoc
+ 
