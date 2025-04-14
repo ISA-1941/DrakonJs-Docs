@@ -1,0 +1,34 @@
+Quick sorting is one of the most effective sorting algorithms, which is based 
+on the "divide and conquer" principle. It allows you to organize the array of elements by breaking it down into smaller subarrays, sorting them and combining them into the final sorted array. 
+The principle of Quick sorting is to choose a support element from the array and dividing the remaining elements into two groups: smaller supporting elements and larger. Then recursively apply the same algorithm to each of the groups until The basic case is reached when the size of the subarray becomes one. The base element is selected randomly or as the middle element of an array. This allows you to achieve the best performance on average, but in the worst case fast sorting can have quadratic complexity. 
+When recursive calls and subsets are merged, the result is complete 
+sorted array. Fast sorting is an in-place algorithm, which means that it 
+runs directly over the sorted array without having to select 
+extra memory.
+
+[cols="1,3,1,2,2,2,3,4", options="header"]
+|===
+|Уровень |Вызов quickSort(arr)        |pivot |left         |equal       |right             |Результат вызова           |Сборка результата
+
+|0       |[78,11,81,21,71,31,61,41,51,24] |31    |[11,21,24]   |[31]        |[78,81,71,61,41,51] |[11,21,24,31,41,51,61,71,78,81] |← [11,21,24] + [31] + [41,51,61,71,78,81]
+
+|1       |  [11,21,24]               |21    |[11]         |[21]        |[24]               |[11,21,24]                 |← [11] + [21] + [24]
+
+|2       |    [11]                  |-      |-            |-           |-                  |[11]                       |базовый случай
+
+|2       |    [24]                  |-      |-            |-           |-                  |[24]                       |базовый случай
+
+|1       |  [78,81,71,61,41,51]     |61    |[41,51]      |[61]        |[78,81,71]          |[41,51,61,71,78,81]        |← [41,51] + [61] + [71,78,81]
+
+|2       |    [41,51]              |51    |[41]         |[51]        |[]                 |[41,51]                    |← [41] + [51] + []
+
+|3       |      [41]              |-      |-            |-           |-                  |[41]                       |базовый случай
+
+|2       |    [78,81,71]           |81    |[78,71]      |[81]        |[]                 |[71,78,81]                 |← [71,78] + [81] + []
+
+|3       |      [78,71]           |71    |[]           |[71]        |[78]               |[71,78]                    |← [] + [71] + [78]
+
+|4       |        [78]           |-      |-            |-           |-                  |[78]                       |базовый случай
+|===
+
+

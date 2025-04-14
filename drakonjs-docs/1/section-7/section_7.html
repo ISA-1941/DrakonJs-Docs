@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Drakon.js Docs</title>
+    <link rel="canonical" href="https://ISA-1941.github.io/DrakonJs-Docs/drakonjs-docs/1/section-7/section_7.html">
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://ISA-1941.github.io/DrakonJs-Docs">Drakon.js Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="drakonjs-docs" data-version="1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">drakonjs-docs</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Introduction</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">ADT</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-1/section-1.html">ADT</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript View</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-2/section-2.html">JavaScript</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Implementation base types</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-3/section-3.html">Implementation base types</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Language Drakon</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-4/section-4.html">Visual Language Drakon</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">drakonjs-docs</span>
+    <span class="version">1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">drakonjs-docs</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="edit-this-page"><a href="https://github.com/ISA-1941/DrakonJs-Docs/edit/main/docs-src/modules/section-7/pages/section_7.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_section_7_basic_search_algorithms"><a class="anchor" href="#_section_7_basic_search_algorithms"></a>SECTION 7. BASIC SEARCH ALGORITHMS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Searching is one of the most important algorithms for processing data
+structures. Search algorithms are designed to check the presence of an
+element or extract an element from any data structure in which it is
+stored. More strictly, the search problem can be formulated as follows:
+find one or more elements in the set, and the elements sought must have
+a certain property. This property can be absolute or relative. A
+relative property characterizes an element with respect to other
+elements: for example, a minimum element in a set of numbers.</p>
+</div>
+<div class="paragraph">
+<p>There are a lot of search algorithms. Their complexity varies from
+simple sequential search algorithms, in extremely efficient but limited
+binary search algorithms. Of particular note are algorithms based on the
+presentation of a core set of data in a different, more searchable form,
+which are used in real-world applications for processing data sets in
+huge databases.</p>
+</div>
+<div class="paragraph">
+<p>There is no single algorithm to solve the search problem, nor is there a
+single algorithm for sorting problems that is better suited for all
+cases. Some of the algorithms run faster than others, but require
+additional RAM to run. Others run very quickly, but can only be used for
+pre-sorted arrays. At the same time, the analysis of search algorithms
+is somewhat different from sorting algorithms. In particular, there is
+no sustainability problem for them. In this case there may be situations
+that require introduction of new criteria of complexity and its
+assessment. In general, all algorithms are reduced to
+following steps :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>establishing the property of the elements of the source set; in most
+cases, these are the values of the elements;</p>
+</li>
+<li>
+<p>match the value of the element with the reference property (for
+absolute properties) or compare the properties of the two elements (for
+relative properties);</p>
+</li>
+<li>
+<p>traversing the elements of the set.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In principle, search algorithms differ between search methods and search
+strategies. Based on the type of search operation, these algorithms are
+usually classified in two categories:</p>
+</div>
+<div class="paragraph">
+<p><em>Sequential Search:</em> The list or array is performed sequentially and
+each element is checked.</p>
+</div>
+<div class="paragraph">
+<p><em>Interval search:</em> These algorithms are specifically designed to search
+in sorted data structures. These types of search algorithms are much
+more efficient than linear search because they repeatedly target the
+center of the search structure and divide the search space in half.</p>
+</div>
+<div class="paragraph">
+<p>This section examines the primary algorithms used for searching data structures.
+To enhance the understanding of the practical applications of these algorithms,
+DRAKON-diagrams are provided along with assessments of their time and space complexity.</p>
+</div>
+<div class="sect2">
+<h3 id="_7_1_linear_data_searching"><a class="anchor" href="#_7_1_linear_data_searching"></a>7.1. Linear data searching</h3>
+<div class="paragraph">
+<p>a). Linear searching of raw data</p>
+</div>
+<div class="paragraph">
+<p>In the case of a linear search of an element in an unordered dataset,
+for example, in an array or in a slice, the simplest algorithm is to
+view all elements until the desired value is found (Figure 7.1).</p>
+</div>
+<div class="imageblock text-center unresolved">
+<div class="content">
+<img src="Engl_image7/Fig7_1_LineSearch.jpg" alt="Fig7 1 LineSearch" width="50%" height="30%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 7.1. DRAKON-diagrams of linear search algorithm</p>
+</div>
+<div class="paragraph">
+<p>This algorithm is not very effective, but it works on arbitrary
+collections. <em>Time complexity:</em> O(n). In the worst case (the desired
+element is in the last position) to find the element you need to pass
+all the elements cut. Here "n" is the size of the cut. additional
+memory. In principle, another worst case is the absence of the necessary
+element. <em>Space complexity:</em> O(1). No additional memory is required to
+accommodate the slice.</p>
+</div>
+<div class="paragraph">
+<p>b). Linear search of sorted data in slice</p>
+</div>
+<div class="paragraph">
+<p>If the elements of the dataset are sorted by ascending or descending,
+finding the desired element is much more efficient than in an unordered
+linear search. Because in many cases, you don’t have to go through the
+whole list. For example, when an item with a higher value is discovered
+as a result of passing through an increasing sorted list, the search is
+stopped. This approach saves time and increases productivity. Figure
+7.2. shows the DRAKON-diagram of this algorithm.</p>
+</div>
+<div class="imageblock text-center unresolved">
+<div class="content">
+<img src="Engl_image7/Fig7_2_SortedSlice.jpg" alt="Fig7 2 SortedSlice" width="50%" height="30%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 7.2. DRAKON-diagram of searching sorted slice algorithm</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_7_2_binary_search_for_data_in_a_sorted_slice"><a class="anchor" href="#_7_2_binary_search_for_data_in_a_sorted_slice"></a>7.2. Binary search for data in a sorted slice</h3>
+<div class="paragraph">
+<p>Binary search is performed as follows:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Specifies the value of the element in the middle of the data
+structure. The resulting value is compared to the value you are looking
+for.</p>
+</li>
+<li>
+<p>If the search value is less than the value of the means, the search is
+carried out in the first half of the elements, otherwise - in the
+second.3. The search is simply that the value of the middle element in
+the selected half is again determined and compared to the key.</p>
+</li>
+<li>
+<p>The process continues until an item with the search value is found or
+the search interval is empty.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The DRAKON-diagram of the binary search algorithm is represented in
+Figure 7.3. (main() module is similar to the previous algorithm):</p>
+</div>
+<div class="imageblock text-center unresolved">
+<div class="content">
+<img src="Engl_image7/Fig7_3_BinarySearch.jpg" alt="Fig7 3 BinarySearch" width="50%" height="30%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 7.3. DRAKON-diagram of Binary Search algorithm</p>
+</div>
+<div class="paragraph">
+<p><em>Time complexity</em> of binary search algorithm belongs to class O(log n).
+The way to interpret this is that the asymptotic increase in the time
+taken by a function to perform a given input set of size n will not
+exceed log n. <em>Space complexity</em>: O(1). That is, no extra space
+required.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_7_3_searching_in_single_linked_list"><a class="anchor" href="#_7_3_searching_in_single_linked_list"></a>7.3. Searching in Single-Linked List</h3>
+<div class="paragraph">
+<p>There are three possibilities for a single-linked list. First, the
+desired value is missing from the list, second, the desired value is
+encountered once and, third, the desired value is encountered
+repeatedly. You can also set the task of removing duplicates, i.e.,
+nodes that are redundant. To solve these problems it is necessary to
+create a Single-Linked List, the items of which contain values "Smith
+A.", "Shafler B.”, "Wiley D.", "Brown G.", "Black H.". In this list you
+should delete the entry " Brown G." and then add a new entry "Singer B."
+placing it after the entry "Wiley D.". After that, you should delete the
+duplicates of the entry " Shafler B." leaving only one. The
+corresponding dragon diagrams are presented in Figure 7.4 a,b,c,d:</p>
+</div>
+<div class="imageblock text-center unresolved">
+<div class="content">
+<img src="Engl_image7/Fig7_4a_Main.jpg" alt="Fig7 4a Main" width="50%" height="30%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>a). Function <em>main()</em></p>
+</div>
+<div class="imageblock text-center unresolved">
+<div class="content">
+<img src="Engl_image7/Fig7_4b_Remove.jpg" alt="Fig7 4b Remove" width="80%" height="30%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>b). function of deletion <em>RemoveVal(val)</em></p>
+</div>
+<div class="imageblock text-center unresolved">
+<div class="content">
+<img src="Engl_image7/Fig7_4c_SearchData.jpg" alt="Fig7 4c SearchData" width="50%" height="30%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>c). function of searching <em>SearchData(val)</em></p>
+</div>
+<div class="paragraph">
+<p>+</p>
+</div>
+<div class="imageblock text-center unresolved">
+<div class="content">
+<img src="Engl_image7/Fig7_4d_PushVal.jpg" alt="Fig7 4d PushVal" width="50%" height="30%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>d). function of inserting by value <em>PushVal + NodeWithVal</em></p>
+</div>
+<div class="imageblock text-center unresolved">
+<div class="content">
+<img src="Engl_image7/Fig7_4e_RemoveDupli.jpg" alt="Fig7 4e RemoveDupli" width="70%" height="30%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>e). function of removing duplicates <em>RemoveDupli</em></p>
+</div>
+<div class="paragraph text-center">
+<p>Figure 7.4. DRAKON diagram of algorithms deletion, search, insertion by
+value and dublicate deletion</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_7_4_hashing"><a class="anchor" href="#_7_4_hashing"></a>7.4. Hashing</h3>
+<div class="paragraph">
+<p>The search time of an item in a data set depends on the number of
+element value comparisons. In order to reduce search times and thus
+improve computational efficiency, fewer comparisons are needed. This can
+be achieved by converting a larger data set into a smaller range called
+hashing, resulting in hash tables.</p>
+</div>
+<div class="paragraph">
+<p>From the perspective of the theory of abstract data types (ADT), a
+hash-table is a data structure that implements the interface of an
+associative array that allows you to store key-value pairs and perform
+three basic operations: the operation of adding a new pair, search
+operation and operation to delete the key-value pair.
+From a programming position, a hash table is a collection of items
+containing a key-value pair, where the key is computed by a special
+function called a <em>hash function</em>. A hash-table, in turn,
+consists of buckets, a set of elements with matching or close hash values
+of the function.
+There are different methods of constructing a hash function, the simplest
+of which is the residual method, where the hash function is defined
+as the remainder of the division of two numbers (<em>x, m</em>), where <em>x</em>
+is the item of the set, <em>m</em> is the number of buckets. In Golang,
+the hash function for this method is: <em>h = x % m</em>.</p>
+</div>
+<div class="paragraph">
+<p>We will conduct a detailed analysis of the hash table creation process
+utilizing the Go programming language within the DRAKON WEB Editor.
+First, a variable of the <em>Node</em> type is created, defined as a structure
+consisting of two fields: the element value is <em>Value int</em> and the next
+element address is <em>Next *Node</em>. In fact, it is a single linked list (see Sect. 1).</p>
+</div>
+<div class="paragraph">
+<p>type Node struct \{ Value int Next *Node }</p>
+</div>
+<div class="paragraph">
+<p>Then, a hash-table is created through a structure that has two fields:
+the first field (<em>Table</em>) is a map that relates the integer (<em>hash
+index</em>) to the associated list (<em><em>Node</em>), and the second - </em>Size* of
+type <em>int</em>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-go hljs" data-lang="go">type HashTable struct {
+Table map[int] *Node
+Size int
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As a result, this hash table would have to have as many single linked
+lists (buckets) as was specified by the Size constant. In the above case
+the number of slots is 15. Note that the <em>Node</em> and <em>HashTable</em> type
+advertisement, as well as the Size constant, are included in the
+File/File description option (Figure 7.5.).</p>
+</div>
+<div class="imageblock text-center unresolved">
+<div class="content">
+<img src="Engl_image7/Fig7_5a_Description.jpg" alt="Fig7 5a Description" height="30%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 7.5. Type declaration <em>Node</em>, <em>HashTable</em> and constant <em>Size</em></p>
+</div>
+<div class="paragraph">
+<p>As an example, consider constructing a hash-table of size <em>m</em> = 15 for a
+collection of integers from 0 to 120. The hash table slots are
+originally empty:</p>
+</div>
+<div class="imageblock text-center unresolved">
+<div class="content">
+<img src="Engl_image7/Fig7_HashEmpty.jpg" alt="Fig7 HashEmpty" height="30%">
+</div>
+</div>
+<div class="paragraph">
+<p>A hash function that establishes a relationship between an element and its
+corresponding slot must accept any element from the dataset, specifically
+ranging from 0 to 120, and return an integer that corresponds to a slot
+number between 0 and 14. The algorithm implementing the remainder method
+sequentially processes each element from the original set, dividing it by 15
+and returning the remainder as the hash value. This can be expressed as
+\( h(item) = item \mod 15 \). For instance, the hash code for the element 119
+is calculated as \( 119 \mod 15 = 14 \) (where \( 119 - 15 \times 7 = 14 \)),
+thus placing the value 119 into the corresponding slot.</p>
+</div>
+<div class="imageblock text-center unresolved">
+<div class="content">
+<img src="Engl_image7/Fig7_Hash119.jpg" alt="Fig7 Hash119" height="30%">
+</div>
+</div>
+<div class="paragraph">
+<p>The algorithm then identifies slots for other elements, gradually
+filling them. When the algorithm encounters element 104 in the loop,
+then the remainder of the division is 104%15 = 14, so this element will
+also be included in the 14th slot. In this way, each slot will
+accumulate corresponding elements with one index hash. For example, for
+an index hash of 8, the slot will consist of these elements: 113 : 98 :
+83 : 68 : 53 : 38 : 23 : 8. And the entire hash table will be as follows
+(Table 7.1.):</p>
+</div>
+<div class="paragraph">
+<p>Table 7.1. Hash-table of 15 slots</p>
+</div>
+<div class="imageblock text-center unresolved">
+<div class="content">
+<img src="Engl_image7/Fig7_HashTable.jpg" alt="Fig7 HashTable" height="30%">
+</div>
+</div>
+<div class="paragraph">
+<p>Thus, the remainder method converts a collection of 120 integers into a
+hash table of 15 slots. The search for an element is now greatly
+accelerated as it takes two steps: first, the hash function h =(x % m)
+computes the hash index, and then the search is done in a 7-element
+slot. The algorithm based on the residual method is represented by the
+following dragon diagrams (Figure 7.6.). Here <em>hinsert</em> - module of
+filling with elements of slots on hash-function, <em>hLookup</em>-module of
+search of element in hash-table, <em>hTravers</em> - module of passage on
+hash-table.</p>
+</div>
+<div class="paragraph">
+<p>The implementation of the main hash table functions using the hash
+function is as follows: 1.Create a <em>HashTable</em> structure list of the
+size m to store objects. 2. Compute the object’s hash code by passing it
+through the hash function. 3. Get the bucket hash indices where the
+objects will be saved. 4. Save these objects in the designated bucket.</p>
+</div>
+<div class="paragraph">
+<p>DRAKON-diagrams of algorithms for implementing the main functions of
+working with hash-tables are shown in Figure 7.6.</p>
+</div>
+<div class="imageblock text-center unresolved">
+<div class="content">
+<img src="Engl_image7/Fig7_6_HDia_ab.jpg" alt="Fig7 6 HDia ab" height="30%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>a). Hash-table creating function b). Item searching function</p>
+</div>
+<div class="imageblock text-center unresolved">
+<div class="content">
+<img src="Engl_image7/Fig7_6_HDia_cd.jpg" alt="Fig7 6 HDia cd" height="30%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>c). Hash-table travers function d) Deletion item function</p>
+</div>
+<div class="paragraph text-center">
+<p>Figure 7.6. DRAKON-diagrams of hash-table algorithms</p>
+</div>
+<div class="paragraph">
+<p>Consider the algorithm for removing an element from the hash-table.
+Suppose we delete element 74. First, the bucket containing the item to
+be removed is determined. It then passes through the elements of this
+bucket, where after each <em>node.Value == value</em> check, the current
+element is stored in the <em>nodePrev</em> variable. If the above condition is
+met, the <em>nodePrev.nextNode</em> field (<em>0xc0000386d0</em>) is changed to
+(<em>0xc00384f0</em>), that is, the deleted element is skipped (Figure 7.7.):</p>
+</div>
+<div class="imageblock text-center unresolved">
+<div class="content">
+<img src="Engl_image7/Fig7_7_DeletionItem.jpg" alt="Fig7 7 DeletionItem" height="30%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>igure 7.7. Deletion item from hash-table</p>
+</div>
+<div class="paragraph">
+<p>Another example of a "good" hash function is for use with integer key
+values, the mean square method. The mean square method squares the key
+value and then extracts the average digits of the result, giving a value
+in the range from 0 to M. Software implementation of hash function
+algorithm creation in Golang language is reduced to the use of built-in
+functions of conversion of integers into string (strconv.Atoi(i)) and
+vice versa (strc<em>onv.Itoa(i))).</em> For example, for any four-digit
+number, the hash function is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-go hljs" data-lang="go">func  hFunc(i,) int {
+    var j int
+    var s string
+    i = i*i
+    s = strconv.Itoa(i)
+    s = s[3:5]
+    j,_ = strconv.Atoi(s)
+    return j
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A more realistic scenario in hash table construction involves the phenomenon
+known as collision, where multiple keys hash to the same bucket or index.
+In many cases, two or more keys are hashed identically, resulting in their
+mapping to the same slot in the hash table. To handle this situation, there are
+two primary strategies: either locate an alternative entry for the new key or
+maintain a separate list at each index in the hash table to accommodate all keys
+that hash to that index. These approaches represent two classic hashing schemes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>оpen addressing hashing with linear testing;</p>
+</li>
+<li>
+<p>сhain hashing or so-called multidimensional hashing.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>However, this topic is outside the scope of this manual.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

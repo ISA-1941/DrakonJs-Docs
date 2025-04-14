@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Drakon.js Docs</title>
+    <link rel="canonical" href="https://ISA-1941.github.io/DrakonJs-Docs/drakonjs-docs/1/section-5/section-5.html">
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://ISA-1941.github.io/DrakonJs-Docs">Drakon.js Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="drakonjs-docs" data-version="1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">drakonjs-docs</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Introduction</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">ADT</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-1/section-1.html">ADT</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript View</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-2/section-2.html">JavaScript</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Implementation base types</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-3/section-3.html">Implementation base types</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Language Drakon</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-4/section-4.html">Visual Language Drakon</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">drakonjs-docs</span>
+    <span class="version">1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">drakonjs-docs</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="edit-this-page"><a href="https://github.com/ISA-1941/DrakonJs-Docs/edit/main/docs-src/modules/section-5/pages/section-5.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_section_5_complexity_and_stability_analysis_of_algorithm"><a class="anchor" href="#_section_5_complexity_and_stability_analysis_of_algorithm"></a>SECTION 5. COMPLEXITY AND STABILITY ANALYSIS OF ALGORITHM</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_5_1_requirements_for_algorithms"><a class="anchor" href="#_5_1_requirements_for_algorithms"></a>5.1 Requirements for algorithms</h3>
+<div class="paragraph">
+<p>The previous sections focused on the description of the most common data
+structures, on the one hand as abstract entities, and on the other -
+their concrete implementation in the programming language JavaScript. This
+section will deal with the theoretical analysis of algorithms for
+processing data structures from the perspective of estimating the time
+spent on program code execution and computer memory usage.</p>
+</div>
+<div class="paragraph">
+<p>In theory and in practice, data structure processing algorithms are
+defined as a set of sequentially performed, stable procedures that
+provide a final computational result based on a fixed and limited set of
+source data. Most data processing algorithms include basic data
+processing procedures such as searching, sorting, adding, updating,
+deleting, etc.</p>
+</div>
+<div class="paragraph">
+<p>Foremost, it should be noted that a &#8220;good algorithm&#8221; must have two
+characteristics: a) correctness and b) finality. <em>Correctness</em> means
+that if an algorithm is designed to solve a particular problem, it must
+always produce the correct result for all the source data and no input
+data will get the wrong result. The <em>finiteness</em> of the algorithm means
+that a finite number of computational operations must be performed to
+obtain the result, i.e. the execution of the program code must stop at
+some point in time.</p>
+</div>
+<div class="paragraph">
+<p>Once the algorithm is correct and finite, the most important
+characteristic of the algorithm is efficiency, which is achieved by
+meeting the following requirements:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The algorithm should effectively use the resources available to the
+system;</p>
+</li>
+<li>
+<p>The computational time (time taken to generate an output data
+corresponding to a particular input ones) should be minimal;</p>
+</li>
+<li>
+<p>The memory used by the algorithm should also be as small as possible.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In most computational tasks, it is necessary to strive for a compromise
+between computation time and occupied memory. In other words, when
+choosing a method for solving a computational problem, you need to
+decide on priorities: what is more important - the computation time or
+the amount of memory occupied. It may seem that this is not so important
+for modern computers. However, when solving complex problems associated
+with the processing of huge amounts of data, for example, for artificial
+intelligence problems or for bioinformatics problems (for example,
+genome decoding), the search for the optimal combination of computing
+time and computer memory becomes decisive. In this regard, we will
+define the term &#8220;algorithm complexity&#8221; as a measure of the amount of
+time and/or space required to solve a problem, depending on the size of
+the data.</p>
+</div>
+<div class="paragraph">
+<p>Such analysis involves determining a function that links the length of
+the input data of the algorithm to the time it takes (its <em>time
+complexity</em>) or the number of storage locations it uses (<em>the complexity
+of the space</em>). The algorithm is considered effective when the values of
+this function are either negligible or slowly increasing relative to the
+size of the input data.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_5_2_theoretical_analysis_of_algorithm_complexity"><a class="anchor" href="#_5_2_theoretical_analysis_of_algorithm_complexity"></a>5.2. Theoretical analysis of algorithm complexity</h3>
+<div class="paragraph">
+<p>Ultimately, the created algorithms must be implemented on some computing
+device using the generated program code. Therefore, one should
+distinguish between the complexity of the algorithm itself and the
+complexity of its computer implementation. The fastest algorithm
+implemented on a slow computing device may be less efficient than a less
+successful algorithm implemented on a computer with more processing
+power or a programming language capable of parallel computing.</p>
+</div>
+<div class="paragraph">
+<p>Thus, when assessing the complexity of the algorithms, they are carried
+out on an abstract machine with random access to memory, which makes it
+possible not to take into account the low-level parameters of the
+computing device (processor memory size, multitasking, etc.). The model
+of such a machine consists of memory and a processor, which work as
+follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>memory consists of cells, each of which has an address and can store
+one data element;</p>
+</li>
+<li>
+<p>each memory call takes one unit of time, regardless of the number of
+the addressable cell.</p>
+</li>
+<li>
+<p>the amount of memory is sufficient to execute any algorithm;</p>
+</li>
+<li>
+<p>the processor performs any elementary operation in one time step;</p>
+</li>
+<li>
+<p>loops and functions are not considered elementary operations.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The complexity of the <em>Tn</em> algorithm associated with estimates of
+its complexity is determined by counting the number of operations
+performed. For example, consider the algorithm for finding the maximum
+element of an array.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const array = [11, 9, 17, 45, 411];
+let maxNumber = array[0];
+
+for (let index = 1; index &lt; array.length; index++) {
+    if (array[index] &gt; maxNumber) {
+        maxNumber = array[index];
+    }
+}
+
+console.log("The largest value of an array element =", maxNumber);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When implementing this algorithm, the following will be performed:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>(N - 1) the operation of assigning a new value to the loop counter i;</p>
+</li>
+<li>
+<p>(N - 1) the operation of comparing the counter with the value N;</p>
+</li>
+<li>
+<p>(N - 1) the operation of comparing an array element with the value of maxNumber;</p>
+</li>
+<li>
+<p>from 1 to N operations of assigning a value to the variable maxNumber.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>It is obvious that such a calculation for determining the complexity of
+the algorithm and estimating its complexity is individual and depends on
+the size of the input data. Therefore, it was quite natural to propose a
+qualitative assessment of complexity: depending on the &#8220;quality&#8221; of
+the initial data: the best option, the worst and the average.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_5_3_complexity_qualitative_assessment"><a class="anchor" href="#_5_3_complexity_qualitative_assessment"></a>5.3. Complexity qualitative assessment</h3>
+<div class="paragraph">
+<p>Asymptotic notations such as omega-notation, theta-notation, and Big-O
+notation that reflect the three time bounds of the algorithm (lower,
+middle, and upper) are used to quantify the complexity of algorithms.
+Omega notation is the lower bound of the algorithm’s running time, which
+characterizes the best algorithm complexity in terms of achieving
+efficiency. For any value of n of the source data, the minimum time
+required by the algorithm is set to Ω(f(n)).</p>
+</div>
+<div class="paragraph">
+<p>The Big-O notation represents the upper bound on the execution time of
+the algorithm, which characterizes the worst complexity of the algorithm
+in terms of efficiency. In most practical cases, this notation is used
+to evaluate the effectiveness of algorithms, since it is the worst-case
+scenario of the computational process that the software developer must
+evaluate. Finally, theta notation (Θ-notation) is an upper and lower
+bound on the execution time of algorithms and is used to analyze their
+average complexity. Consider in more detail the Big O notation that
+determines the upper bound of any algorithm, that is, the algorithm
+cannot take longer than the upper bound.</p>
+</div>
+<div class="paragraph">
+<p>To begin with the simplest time-constant algorithm is an algorithm that
+requires the same amount of time, regardless of its input data, whose
+complexity is denoted as O(1). For example, given two numbers, you need
+to calculate the sum. This is followed by the logarithmic time
+complexity O(log n). When the time taken by the algorithm is
+proportional to the logarithm of input size n, it is said to have
+logarithmic time complexity. An example is the simple calculation of the
+number of print operations of the index cycle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let n = 16;
+for (let i = 1; i &lt; n; i *= 2) {
+    console.log("i = ", i);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Recall that log₂ 16  = log₂ 2^4 = 4 log₂ 2 = 4, since
+log₂ 2 = 1. Algorithms with logarithmic complexity are
+considered highly efficient because the ratio of execution time of one
+operation to the size of the data array decreases with its increasing
+size. Algorithms that work in logarithmic time are usually found in
+binary tree operations or binary search operations. Such algorithms will
+be discussed in the next section.</p>
+</div>
+<div class="paragraph">
+<p>Linear time complexity (O) characterizes algorithms whose execution time
+linearly depends on the size of the input data (n). The simplest example
+is the problem of computing the sum of n numbers:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let n = 16;
+let sum = 0;
+
+for (let i = 0; i &lt; n; i++) {
+    sum += i;
+}
+
+console.log("sum =", sum);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Typical examples of linear time complexity are algorithms associated
+with arrays sorting, which will be shown in the next section. It is
+important to note that linear complexity algorithms do not require
+additional memory. This is followed by the quadratic complexity of O(n2)
+algorithms, the number of operations in which is quadratic depending on
+the size of the input data. As an example we can give the algorithm of
+multiplication of two numbers in the interval <em>[1:n;1:m]:</em></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let n = 3;
+let m = 5;
+let pow = 1;
+
+for (let i = 1; i &lt; n; i++) {
+    for (let j = 1; j &lt; m; j++) {
+        pow = pow * i * j;
+    }
+}
+
+console.log("pow =", pow);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The comparison of the discussed copmlexities is presented in the form of
+a table.</p>
+</div>
+<div class="paragraph">
+<p>Table. Comparison of general copmlexities</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 94%;">
+<colgroup>
+<col style="width: 9%;">
+<col style="width: 12%;">
+<col style="width: 22%;">
+<col style="width: 21%;">
+<col style="width: 18%;">
+<col style="width: 18%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">n</th>
+<th class="tableblock halign-left valign-top">Сonstant
+
+О(1)</th>
+<th class="tableblock halign-left valign-top">Logarithmic
+
+O(log n)</th>
+<th class="tableblock halign-left valign-top">Linary
+
+O(n)</th>
+<th class="tableblock halign-left valign-top">Linear logarithmic O(n log n)</th>
+<th class="tableblock halign-left valign-top">Quadratic
+
+O(n<sup>2</sup><sub>)</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">64</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">64</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">256</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Or in graphic form (Figure.5.1.).</p>
+</div>
+<div class="imageblock text-center unresolved">
+<div class="content">
+<img src="Fig5_1_Comparison..jpg" alt="Fig5 1 Comparison." width="60%" height="30%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 5.1. Comparison of general copmlexities</p>
+</div>
+<div class="paragraph">
+<p>As shown in this table and graph, as the complexity of the function
+increases, the number of computations or the time required to perform
+the function can increase significantly. Next, the algorithms will be
+described with estimates of their complexity. Another characteristic of
+the computational complexity of algorithms is the spatial complexity,
+estimated by the amount of memory required by the algorithm in its life
+cycle. This space consists of fixed and variable parts. A
+fixed part is the space required to store simple variables and
+constants, as well as the program size, which is independent of the
+complexity of the task. A part variable is the space required by
+variables, the size of which depends entirely on the size of the task.
+For example, recursion stack space, dynamic memory allocation, etc.</p>
+</div>
+<div class="paragraph">
+<p>Spatial complexity is evaluated as O(1) if only the input data set is
+used. If the problem requires an auxiliary memory of the same size as
+the input memory (the memory to store the original array), then the
+spatial complexity is evaluated as O(n2).</p>
+</div>
+<div class="paragraph">
+<p>Asymptotic notations such as omega-notation, theta-notation, and Big-O
+notation that reflect the three time bounds of the algorithm (lower,
+middle, and upper) are used to quantify the complexity of algorithms.
+Omega notation is the lower bound of the algorithm’s running time, which
+characterizes the best algorithm complexity in terms of achieving
+efficiency. For any value of n of the source data, the minimum time
+required by the algorithm is set to Ω(f(n)). The Big-O notation
+represents the upper bound on the execution time of the algorithm, which
+characterizes the worst complexity of the algorithm in terms of
+efficiency. In most practical cases, this notation is used to evaluate
+the effectiveness of algorithms, since it is the worst-case scenario of
+the computational process that the software developer must evaluate.
+Finally, theta-notation (Θ-notation) Finally, theta notation
+(Θ-notation) is an upper and lower bound on the execution time of
+algorithms and is used to analyze their average complexity.</p>
+</div>
+<div class="paragraph">
+<p>Consider in more detail the Big O notation that determines the upper
+bound of any algorithm, that is, the algorithm cannot take longer than
+the upper bound. To begin with the simplest time-constant algorithm is
+an algorithm that requires the same amount of time, regardless of its
+input data, whose complexity is denoted as O(1). For example, given two
+numbers, you need to calculate the sum. Then follows the logarithmic
+time complexity O(log n). When the time taken by an algorithm to execute
+is proportional to the logarithm of the input size n, it is said to have
+logarithmic time complexity. As an example, we can take a simple count
+of the number of print operations of the loop index:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let n = 16;
+
+for (let i = 1; i &lt; n; i *= 2) {
+    console.log("i =", i);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It is especially important to know whether the variety used is stable. Especially in
+situations where your data already has some order that you
+would like to support when you sort them with a different key
+Sort. For example, a spreadsheet has rows that contain
+Student data, which is sorted by name by default. You also
+would like to sort it into classes while maintaining an orderly order
+Names.</p>
+</div>
+<div class="paragraph">
+<p>On the other hand, the stability of the sorting does not matter,
+when the sorting keys of objects in a collection are the objects themselves - the array
+integers or strings, for example, because we cannot determine
+the difference between duplicate keys.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

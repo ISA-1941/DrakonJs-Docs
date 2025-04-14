@@ -1,0 +1,33 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "list = createLinkedList()"
+        },
+        "4": {
+            "type": "action",
+            "one": "5",
+            "content": "pushFront(list, \"Smith A.\")"
+        },
+        "5": {
+            "type": "action",
+            "one": "6",
+            "content": "pushBack(list, \"Shafler B.\")\npushBack(list, \"Shafler B.\")\npushBack(list, \"Shafler B.\")\npushBack(list, \"Wiley D.\")\npushBack(list, \"Brown G.\")\npushBack(list, \"Black H.\")"
+        },
+        "6": {
+            "type": "action",
+            "one": "1",
+            "content": "iterateList(list)\nconsole.log(\"-------------------\")\nremoveVal(list, \"Brown G.\")\nconsole.log(\"Record Brown G is deleted\")\niterateList(list)\nconsole.log(\"-------------------\")\npushVal(list, \"Wiley D.\", \"Singer L.\")\niterateList(list)\nconsole.log(\"-------------------\")\nsearchData(list, \"Shafler B.\")\nconsole.log(\"-------------------\")\nremoveDupli(list, \"Shafler B.\")\nconsole.log(\"-------------------\")\niterateList(list)"
+        }
+    }
+}

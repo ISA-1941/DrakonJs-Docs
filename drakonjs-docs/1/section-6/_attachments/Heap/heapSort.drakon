@@ -1,0 +1,91 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "Building max-heap from input array"
+        },
+        "3": {
+            "type": "action",
+            "one": "5",
+            "content": "size = arr.length"
+        },
+        "4": {
+            "type": "loopend",
+            "one": "14",
+            "content": ""
+        },
+        "5": {
+            "type": "loopbegin",
+            "one": "6",
+            "content": "i = Math.floor(size / 2) - 1; i >= 0; i--"
+        },
+        "6": {
+            "type": "action",
+            "one": "4",
+            "content": "heapify(arr, size, i)"
+        },
+        "13": {
+            "type": "branch",
+            "one": "1",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "14": {
+            "type": "branch",
+            "one": "16",
+            "branchId": 2,
+            "content": "Extract elements one by one"
+        },
+        "15": {
+            "type": "loopend",
+            "one": "13",
+            "two": "",
+            "content": ""
+        },
+        "16": {
+            "type": "loopbegin",
+            "one": "17",
+            "two": "",
+            "content": "i = size - 1; i > 0; i--"
+        },
+        "17": {
+            "type": "action",
+            "one": "18",
+            "two": "",
+            "content": "temp = arr[0]"
+        },
+        "18": {
+            "type": "action",
+            "one": "19",
+            "two": "",
+            "content": "arr[0] = arr[i]"
+        },
+        "19": {
+            "type": "action",
+            "one": "20",
+            "two": "",
+            "content": "arr[i] = temp"
+        },
+        "20": {
+            "type": "action",
+            "one": "15",
+            "two": "",
+            "content": "heapify(arr, i, 0)\n// Heapify the reduced heap"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "arr"
+}

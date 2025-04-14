@@ -1,0 +1,88 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "8"
+        },
+        "3": {
+            "type": "action",
+            "one": "7",
+            "content": "pivot = arr[Math.floor(arr.length / 2)]"
+        },
+        "7": {
+            "type": "action",
+            "one": "11",
+            "content": "const left = []\nconst right = []\nconst equal = []"
+        },
+        "8": {
+            "type": "question",
+            "one": "9",
+            "two": "3",
+            "flag1": 1,
+            "content": "arr.length <= 1"
+        },
+        "9": {
+            "type": "action",
+            "one": "3",
+            "content": "return arr"
+        },
+        "10": {
+            "type": "loopend",
+            "one": "33",
+            "content": ""
+        },
+        "11": {
+            "type": "loopbegin",
+            "one": "27",
+            "content": "num; arr"
+        },
+        "27": {
+            "type": "question",
+            "one": "28",
+            "two": "29",
+            "flag1": 1,
+            "content": "num < pivot"
+        },
+        "28": {
+            "type": "action",
+            "one": "10",
+            "content": "left.push(num)"
+        },
+        "29": {
+            "type": "question",
+            "one": "30",
+            "two": "32",
+            "flag1": 1,
+            "content": "num > pivot"
+        },
+        "30": {
+            "type": "action",
+            "one": "10",
+            "content": "right.push(num)"
+        },
+        "32": {
+            "type": "action",
+            "one": "10",
+            "content": "equal.push(num)"
+        },
+        "33": {
+            "type": "action",
+            "one": "1",
+            "content": "return [\n     ... quickSort(left),\n     ... equal,\n     ... quickSort(right)\n];"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "arr"
+}

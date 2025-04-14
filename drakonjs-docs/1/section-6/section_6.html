@@ -1,0 +1,2119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Drakon.js Docs</title>
+    <link rel="canonical" href="https://ISA-1941.github.io/DrakonJs-Docs/drakonjs-docs/1/section-6/section_6.html">
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://ISA-1941.github.io/DrakonJs-Docs">Drakon.js Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="drakonjs-docs" data-version="1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">drakonjs-docs</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Introduction</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">ADT</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-1/section-1.html">ADT</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript View</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-2/section-2.html">JavaScript</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Implementation base types</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-3/section-3.html">Implementation base types</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Language Drakon</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-4/section-4.html">Visual Language Drakon</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">drakonjs-docs</span>
+    <span class="version">1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">drakonjs-docs</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="edit-this-page"><a href="https://github.com/ISA-1941/DrakonJs-Docs/edit/main/docs-src/modules/section-6/pages/section_6.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_section_6_basic_sorting_algorithms"><a class="anchor" href="#_section_6_basic_sorting_algorithms"></a>SECTION 6. BASIC SORTING ALGORITHMS</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_6_1_general_characteristics_of_sorting_algorithms"><a class="anchor" href="#_6_1_general_characteristics_of_sorting_algorithms"></a>6.1. General Characteristics of Sorting Algorithms</h3>
+<div class="paragraph">
+<p>Sorting is one of the most common operations in data processing — not only in computer science, but in many areas of human activity. In computing, sorting algorithms are used everywhere: in databases, search engines, operating systems, and beyond.</p>
+</div>
+<div class="paragraph">
+<p>At its core, the goal of sorting is simple: given a list of records (each with a key value), we want to reorder the list so that the keys are arranged in increasing or decreasing order. This makes it easier to work with the data — especially when we need to search or analyze it later.</p>
+</div>
+<div class="paragraph">
+<p>Over time, many sorting algorithms have been developed. Some are easy to implement and work well for small datasets, but become inefficient as the dataset grows. Others are designed for large collections and offer better performance, though they may be more complex to understand or implement.</p>
+</div>
+<div class="paragraph">
+<p>To help understand how these algorithms work, especially the more complex ones, we’ll use visual explanations. In this book, we include DRAKON-diagrams and illustrations to make the logic clear and accessible.</p>
+</div>
+<div class="paragraph">
+<p>Since most sorting tasks in programming involve arrays or similar structures, this section focuses on sorting slices (contiguous segments of arrays).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_6_2_bubble_sort"><a class="anchor" href="#_6_2_bubble_sort"></a>6.2. Bubble Sort</h3>
+<div class="paragraph">
+<p>Bubble Sort is one of the simplest sorting algorithms, especially suitable for small datasets. The algorithm gets its name from the way larger values "bubble up" to the end of the array with each pass. The DRAKON-diagram of the algorithm is shown in Figure 6.1. The implementation consists of two modules: <code>main()</code> and <code>bubbleSort(arr)</code>.</p>
+</div>
+<object type="image/svg+xml" data="images/Fig6_1_bubbleSort" width="100%"></object>
+<div class="paragraph text-center">
+<p>Figure 6.1. DRAKON-diagram of the Bubble Sort algorithm</p>
+</div>
+<div class="paragraph">
+<p>The algorithm uses two nested loops. For each index <code>i</code>, it iterates over the remaining elements with index <code>j</code>. At each step, the values <code>ar[i]</code> and <code>ar[j]</code> are compared. If <code>ar[j]</code> is smaller than <code>ar[i]</code>, the two elements are swapped. This process pushes the largest unsorted value toward the end of the array during each outer loop iteration.</p>
+</div>
+<div class="paragraph">
+<p>The following table shows the results of sorting a series of values for each external cycle parameter (i).</p>
+</div>
+<table class="tableblock frame-all grid-all stretch text-center">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">j=0</th>
+<th class="tableblock halign-center valign-top">j=1</th>
+<th class="tableblock halign-center valign-top">j=2</th>
+<th class="tableblock halign-center valign-top">j=3</th>
+<th class="tableblock halign-center valign-top">j=4</th>
+<th class="tableblock halign-center valign-top">j=5</th>
+<th class="tableblock halign-center valign-top">j=6</th>
+<th class="tableblock halign-center valign-top">j=7</th>
+<th class="tableblock halign-center valign-top">j=8</th>
+<th class="tableblock halign-center valign-top">j=9</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">90</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The time complexity of Bubble Sort is quite high — O(n²). This is due to the large number of comparisons (<code>ar[i] &lt; ar[j]</code>) and possible swaps. However, the space complexity is O(1), since no additional memory is needed beyond the original array.</p>
+</div>
+<div class="paragraph">
+<p>The algorithm is stable, meaning that equal elements retain their original order after sorting.</p>
+</div>
+<div class="paragraph">
+<p>Because of its simplicity, Bubble Sort is still used in some applications — for example, in computer graphics. There, it is helpful for correcting small errors in nearly sorted arrays, often completing in linear time (about 2n steps). However, it is highly inefficient for large datasets.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_6_3_selection_sort"><a class="anchor" href="#_6_3_selection_sort"></a>6.3. Selection Sort</h3>
+<div class="paragraph">
+<p>The Selection Sort algorithm is based on comparison operations. It works by dividing the dataset into two parts: the sorted portion on the left and the unsorted portion on the right. The DRAKON-diagram of this algorithm is shown in Figure 6.2.</p>
+</div>
+<object type="image/svg+xml" data="images/Fig6_2_selectSort" width="100%"></object>
+<div class="paragraph text-center">
+<p>Figure 6.2. DRAKON-diagram of the Selection Sort algorithm</p>
+</div>
+<div class="paragraph">
+<p>The idea is simple: in each iteration, the algorithm finds the smallest value in the unsorted part and swaps it with the first unsorted element. Initially, the sorted part is empty, and the unsorted part is the entire array.</p>
+</div>
+<div class="paragraph">
+<p>For example, given the set <code>[90, 12, 83, 24, 75, 38, 62, 41, 59, 10]</code>, the algorithm scans the array and finds the smallest element — <code>10</code>. It then swaps <code>10</code> with the element at the first position (<code>90</code>). The sorted part now contains <code>10</code>, and the process repeats with the remaining elements. Table below illustrates this process of selection and replacement.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>90</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>12</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">83</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">75</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">38</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">62</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">59</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">10</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">83</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">75</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">38</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">62</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">59</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>90</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">10</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>12</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">83</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">75</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">38</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">62</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">59</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">90</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">10</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">12</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">83</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>24</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">75</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">38</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">62</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">59</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">90</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">10</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">12</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">24</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">83</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">75</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>38</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">62</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">59</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">90</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">10</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">12</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">24</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">38</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">75</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">83</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">62</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>41</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">59</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">90</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">10</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">12</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">24</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">38</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">41</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">83</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">62</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">75</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>59</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">90</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">10</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">12</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">24</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">38</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">41</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">59</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">62</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>75</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">83</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">90</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">10</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">12</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">24</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">38</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">41</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">59</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">62</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">75</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>83</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">90</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">10</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">12</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">24</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">38</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">41</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">59</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">62</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">75</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">83</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="line-through">90</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Note to the table. Crossed-out items are already sorted, selected items are minimal in the current pass.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The time and space complexity of the Selection Sort algorithm are summarized in the table below:</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 40%;">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Case</th>
+<th class="tableblock halign-left valign-top">Time Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Worst case</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n<sup>2</sup>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average case</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n<sup>2</sup>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Best case</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n<sup>2</sup>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Space complexity</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(1)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The time complexity is the same in all cases because the algorithm uses two nested loops:
+– The outer loop runs <code>n</code> times (once per element);
+– The inner loop runs <code>(n - 1)</code> times per outer iteration.</p>
+</div>
+<div class="paragraph">
+<p>This results in a total of <code>n * (n - 1)</code> comparisons, which gives the time complexity of O(n²) regardless of the input order.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_6_4_insertion_sort"><a class="anchor" href="#_6_4_insertion_sort"></a>6.4. Insertion Sort</h3>
+<div class="paragraph">
+<p>Insertion Sort works by repeatedly taking an item from the unsorted part of the array and inserting it into its correct position in the sorted part. This process continues until all items are sorted.</p>
+</div>
+<div class="paragraph">
+<p>This algorithm is similar to how people naturally sort playing cards or paper documents: taking one item at a time and inserting it into the correct place. The DRAKON-diagram for the Insertion Sort algorithm is shown in Figure 6.3.</p>
+</div>
+<object type="image/svg+xml" data="images/Fig6_3_insertSort" width="100%"></object>
+<div class="paragraph text-center">
+<p>Figure 6.3. DRAKON-diagram of the Insert Sort algorithm</p>
+</div>
+<div class="paragraph">
+<p>In this algorithm, larger values are pushed to the right. The algorithm compares adjacent elements and swaps them if needed. This process is shown in table below, where underscores mark the positions where swaps occurred.</p>
+</div>
+<div class="paragraph text-center">
+<p>Input array</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph text-center">
+<p>I = 1</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph text-center">
+<p>I = 2</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph text-center">
+<p>I = 3</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph text-center">
+<p>I = 4</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph text-center">
+<p>I = 5</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph text-center">
+<p>I = 6</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph text-center">
+<p>I = 7</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph text-center">
+<p>I = 8</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph text-center">
+<p>I = 9</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">90</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The time complexity of Insertion Sort depends on how the elements are arranged in the input array:</p>
+</div>
+<div class="paragraph">
+<p><strong>Worst case:</strong> when the array is sorted in reverse order.
+Each element must be compared with all previous elements and moved to the beginning of the array.
+The number of operations is:</p>
+</div>
+<div class="paragraph text-center">
+<p>n(n - 1) / 2 → O(n²)</p>
+</div>
+<div class="paragraph">
+<p><strong>Average case:</strong> when the array is partially sorted.
+Each element is compared, on average, with half of the previous elements:</p>
+</div>
+<div class="paragraph text-center">
+<p>(n²) / 4 → O(n²)</p>
+</div>
+<div class="paragraph">
+<p><strong>Best case:</strong> when the array is already sorted.
+Each element is compared with only the one before it:</p>
+</div>
+<div class="paragraph text-center">
+<p>(n - 1) → O(n)</p>
+</div>
+<div class="paragraph">
+<p>The complexity summary is given in the table below:</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 40%;">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Time complexity</th>
+<th class="tableblock halign-left valign-top"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Worst case</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n<sup>2</sup>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average case</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n<sup>2</sup>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Best case</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n<sup>2</sup>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Space complexity</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">О(1)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_6_5_quick_sort"><a class="anchor" href="#_6_5_quick_sort"></a>6.5. Quick Sort</h3>
+<div class="paragraph">
+<p>Quick Sort is a highly efficient sorting algorithm based on the divide-and-conquer strategy. Its general scheme includes the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select a pivot (reference) element from the array slice.</p>
+</li>
+<li>
+<p>Partition the array so that all elements smaller than the pivot are placed before it, and all greater or equal — after it.</p>
+</li>
+<li>
+<p>Recursively apply this procedure to the left and right partitions.</p>
+</li>
+<li>
+<p>As a result, the array becomes fully sorted.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The DRAKON-diagram of the Quick Sort algorithm is shown in Figure 6.4.</p>
+</div>
+<object type="image/svg+xml" data="images/Fig6_4_quicktSort" width="100%"></object>
+<div class="paragraph text-center">
+<p>Figure 6.4. DRAKON-diagram of the Quick Sort algorithm</p>
+</div>
+<div class="paragraph">
+<p>Let’s look at an example in detail. Suppose we are sorting the array <code>[78, 11, 81, 21, 71, 31, 61, 41, 51, 24]</code>, and we choose <code>31</code> as the pivot.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">78</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>31</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>We create three temporary arrays:
+– <strong>left[]</strong> for elements less than the pivot,
+– <strong>equal[]</strong> for elements equal to the pivot,
+– <strong>right[]</strong> for elements greater than the pivot.</p>
+</div>
+<div class="paragraph">
+<p>During execution, if an element from the left side is greater than the pivot, and one from the right side is smaller, the two elements are swapped. In our example, <code>78 &gt; 31</code> and <code>24 &lt; 31</code>, so they are exchanged. This process continues until the subarrays is partitioned correctly. Then, Quick Sort is applied recursively to the left and right partitions.</p>
+</div>
+<div class="paragraph">
+<p>To better understand how recursive sorting builds the final result, the table below shows how the <code>quickSort</code> function combines the <code>left</code>, <code>equal</code>, and <code>right</code> parts at each step:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 18.75%;">
+<col style="width: 6.25%;">
+<col style="width: 18.75%;">
+<col style="width: 31.25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Step</th>
+<th class="tableblock halign-left valign-top">Left</th>
+<th class="tableblock halign-left valign-top">Pivot</th>
+<th class="tableblock halign-left valign-top">Right</th>
+<th class="tableblock halign-left valign-top">Result = left + equal + right</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[78, 11, 81, 21, 71, <strong>31</strong>, 61, 41, 51, 24]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11, 21, 24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>31</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">78, 81, 71, 61, 41, 51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">–</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[11, 21, 24]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>21</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11, 21, 24</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[78, 81, 71, 61, <strong>41</strong>, 51]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41, 51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>61</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">78, 81, 71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11, 21, 24</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[41, 51]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>51</strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11, 21, 24, 41, 51</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[78, 81, 71]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">78, 71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>81</strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11, 21, 24, 41, 51, 61</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[78, 71]</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>71</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">78</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11, 21, 24, 41, 51, 61, 71, 78</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[81]</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>81</strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11, 21, 24, 41, 51, 61, 71, 78, 81</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The time complexity of Quick Sort depends on how well the pivot is chosen:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Best case</strong>: the pivot is the median → O(n log n)</p>
+</li>
+<li>
+<p><strong>Average case</strong>: still O(n log n), due to recursive halving</p>
+</li>
+<li>
+<p><strong>Worst case</strong>: when the pivot is the smallest or largest item, resulting in unbalanced partitions → O(n²)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Quick Sort uses recursion. In each step, it partitions the array and performs O(n) work. This leads to the recurrence relation:
+<code>T(n) = 2T(n/2) + O(n)</code>
+which solves to <code>O(n log n)</code>.</p>
+</div>
+<div class="paragraph">
+<p>The complexity summary is shown below. Quick Sort is <strong>not stable</strong> by default.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 40%;">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Time complexity</th>
+<th class="tableblock halign-left valign-top"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Worst case</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n<sup>2</sup>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average case</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n log n)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Best case</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n log n)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Space complexity</strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Worst case</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average case</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(log n)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_6_6_merge_sort"><a class="anchor" href="#_6_6_merge_sort"></a>6.6. Merge Sort</h3>
+<div class="paragraph">
+<p>Merge Sort is a classic divide-and-conquer algorithm. It works by recursively splitting the array into smaller parts until each part contains only two elements, which are then compared and sorted. After the splitting phase, the algorithm merges the sorted parts back together.</p>
+</div>
+<div class="paragraph">
+<p>During merging, one element from each fragment is selected and compared. The smaller (or larger, depending on the desired order) element is added to the result array. The remaining element is compared again with the next element from the other fragment. This process continues until all elements are merged. Figure 6.5 illustrates this process:</p>
+</div>
+<div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+  <object type="image/svg+xml" data="images/Fig6_5_merge.svg" width="48%"></object>
+  <object type="image/svg+xml" data="images/Fig6_5_mergeSort.svg" width="48%"></object>
+</div>
+<div class="paragraph text-center">
+<p>Figure 6.5. DRAKON-diagrams of Merge Sort algorithm: a) <code>mergeSort()</code> function  b) <code>merge()</code> function</p>
+</div>
+<div class="paragraph">
+<p>Visual representation of Merge Sort (splitting phase) is shown on Figure 6.6.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>            [11, 32, 23, 85, 74, 90, 62, 48, 53, 10]
+                      /                           \
+       [11, 32, 23, 85, 74]                [90, 62, 48, 53, 10]
+           /         \                          /         \
+      [11, 32]     [23, 85, 74]            [90, 62]     [48, 53, 10]
+       /   \         /     \               /    \         /     \
+   [11]   [32]     [23]   [85, 74]       [90]  [62]     [48]  [53, 10]
+                             / \                             / \
+                          [85] [74]                      [53] [10]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>=&#8658; Final merge: [11, 23, 32, 74, 85] + [10, 48, 53, 62, 90]
+&#8658; [10, 11, 23, 32, 48, 53, 62, 74, 85, 90]</p>
+</div>
+<div class="paragraph text-center">
+<p>Figure 6.6.Visual representation of Merge Sort</p>
+</div>
+<div class="paragraph">
+<p>Merge Sort has a time complexity of O(n log n), where <code>n</code> is the number of elements in the array. The algorithm splits the array into two halves until only single elements remain. The number of split operations is O(log n), and each merge operation compares <code>n</code> elements, which gives the overall complexity of O(nlog n).</p>
+</div>
+<div class="paragraph">
+<p>The summary of time and space complexity is shown below:</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 40%;">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Time complexity</th>
+<th class="tableblock halign-left valign-top"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Worst case</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n log n)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average case</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n log n)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Best case</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n log n)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Space complexity</strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Worst case</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average case</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Best case</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Merge Sort is a <strong>stable</strong> sorting algorithm, which means it preserves the relative order of equal elements in the input array. This stability is achieved because, during the merge phase, if two elements are equal, the one from the left subarray is placed before the one from the right subarray.</p>
+</div>
+<div class="paragraph">
+<p>This consistent behavior ensures that equal elements remain in the same order as they appeared in the original input.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_6_7_shell_sort"><a class="anchor" href="#_6_7_shell_sort"></a>6.7. Shell Sort</h3>
+<div class="paragraph">
+<p>Shell Sort is a variation of Insertion Sort. It begins by comparing and sorting elements that are separated by a certain distance <em>d</em>. Then, the process is repeated for smaller values of <em>d</em> until <em>d = 1</em>, which is equivalent to a standard insertion sort.</p>
+</div>
+<div class="paragraph">
+<p>The DRAKON-diagram of the Shell Sort algorithm is shown in Figure 6.7.</p>
+</div>
+<object type="image/svg+xml" data="images/Fig6_7_shelltSort" width="100%"></object>
+<div class="paragraph text-center">
+<p>Figure 6.7. DRAKON-diagram of the Shell Sort algorithm</p>
+</div>
+<div class="paragraph">
+<p>Shell Sort uses a three-step process common to many sorting algorithms:
+– segmenting the array,
+– sorting within the segments,
+– merging the results into a sorted array.</p>
+</div>
+<div class="paragraph">
+<p>The array is partitioned in such a way that each item in a segment is a fixed number of positions apart from the others. This introduces a challenge: choosing the best distance <em>d</em>. A simple example of such a sequence is:
+<em>d = n / 2</em>, then <em>d = d / 2</em>, and so on, until <em>d = 1</em>.</p>
+</div>
+<div class="paragraph">
+<p>The table illustrates how elements are swapped when a smaller value is found at position <em>arr[j]</em> compared to <em>arr[j - inc]</em>.</p>
+</div>
+<div class="paragraph text-center">
+<p><strong>inc = 5</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.091%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">j</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">7</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">9</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>90</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-80</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">70</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-60</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">50</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>-40</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-20</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-40</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-80</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>-20</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-60</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">50</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>70</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-40</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-80</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-20</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-60</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>0</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">70</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>50</strong></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph text-center">
+<p><strong>inc = 2</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.091%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">j</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">7</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">9</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-40</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-80</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-20</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-60</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>70</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>90</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">50</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-40</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-80</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-20</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-60</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">70</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>10</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">90</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>30</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">50</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-40</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-80</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-20</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-60</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">70</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>90</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>50</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-40</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-80</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-20</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-60</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>50</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>70</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">90</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph text-center">
+<p><strong>inc = 1</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.0909%;">
+<col style="width: 9.091%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">j</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">7</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">9</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>-40</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>-80</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-20</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-60</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">50</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">70</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">90</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-80</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>-40</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>-60</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-20</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">50</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">70</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">90</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-80</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-60</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-40</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-20</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>50</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>10</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">70</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">90</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-80</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-40</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-60</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-20</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">50</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>70</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>30</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">90</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-80</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-40</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-60</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-20</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>50</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>30</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">70</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">90</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-80</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-40</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-60</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-20</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>50</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>70</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">90</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The average time complexity of Shell Sort is estimated as <em>O(n * log² n)</em>, though this depends on multiple factors.</p>
+</div>
+<div class="paragraph">
+<p>First, Shell Sort is essentially a generalization of Insertion Sort that uses gap-based comparisons. Second, the performance depends on the choice of gap sequence — that is, the values of <em>d</em> used during sorting. Different sequences can yield significantly different results.</p>
+</div>
+<div class="paragraph">
+<p>Because Shell Sort works by refining the array through a series of passes with decreasing gaps, its time complexity is sensitive to these gap values. The optimal gap sequence is still a subject of research, and no single sequence is universally optimal.</p>
+</div>
+<div class="paragraph">
+<p>As a result, although the average-case complexity is commonly cited as <em>O(n * log² n)</em>, the exact performance may vary depending on the input and the sequence used.</p>
+</div>
+<div class="paragraph">
+<p>Shell Sort is <strong>not stable</strong> in its original form, but it can be modified to preserve stability if needed.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_6_8_heapsort"><a class="anchor" href="#_6_8_heapsort"></a>6.8. Heapsort</h3>
+<div class="paragraph">
+<p>The pyramid sorting algorithm can be seen as an improved version of the
+choice sorting algorithm (Select Sort): it divides the input data into
+sorted and unreported areas, and then successively reduces the
+unreported area, removing the largest item and moving it to the sorted
+area. An improvement is that the binary pile is used to find the highest
+value, not the linear search algorithm. This algorithm is executed using
+the notion of heap, which is a complete binary tree (<span class="mark">see
+sub-section 1.3</span>.). All nodes of a heap are either larger than its child
+items or smaller than its child items. A heap binary tree can be of two
+types: a minimum heap (MinHeap), in which the parent node is always
+smaller than the child nodes, and a maximum heap (MaxHeap), in which the
+parent node is always greater than or equal to the child nodes (Figure
+6.8).</p>
+</div>
+<object type="image/svg+xml" data="images/Fig6_8_Tree" width="100%"></object>
+<div class="paragraph text-center">
+<p>Figure 6.8. Binary tree examples (a - MinHeap; b - MaxHeap)</p>
+</div>
+<div class="paragraph">
+<p>The tree node sequence, starting with the root node, is performed by the
+formula:</p>
+</div>
+<div class="paragraph text-center">
+<p>i_n = \frac{array\ size}{2} - 1</p>
+</div>
+<div class="paragraph">
+<p>First, the algorithm swaps the nodes (20) and (41), then the nodes (5)
+and (52), then we present this process in the table:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">23</th>
+<th class="tableblock halign-left valign-top">5</th>
+<th class="tableblock halign-left valign-top">20</th>
+<th class="tableblock halign-left valign-top">52</th>
+<th class="tableblock halign-left valign-top">11</th>
+<th class="tableblock halign-left valign-top">41</th>
+<th class="tableblock halign-left valign-top">14</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>41</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">52</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>20</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>52</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>5</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>52</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>23</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>14</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>52</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>41</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">52</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>20</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>41</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">52</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>23</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>20</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">52</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>11</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>23</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">52</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>20</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>11</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">52</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>5</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>20</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">52</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>11</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>5</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">52</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>5</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>11</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">52</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The heap sorting algorithm uses three functions: <em>heap_Sort</em>, which
+performs node overwriting, <em>heapify</em>, which compares adjacent nodes, and
+<em>swap</em>, which swap two nodes. The sequence of the nodes in the heap is
+shown in Figure 6.9:</p>
+</div>
+<div class="paragraph text-center">
+<p>Figure 6.9. Sequence of node movement in heap</p>
+</div>
+<div class="paragraph">
+<p>DRAKON-diagram of heap algorithm is presented in Figure 6.10:</p>
+</div>
+<div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+  <object type="image/svg+xml" data="images/Fig6_10a_heapSort.svg" width="48%"></object>
+  <object type="image/svg+xml" data="images/Fig6_5b_heapify.svg" width="48%"></object>
+</div>
+<div class="paragraph text-center">
+<p>Figure 6.10. DRAKON-diagram heap sorting algorithm a) heapSort(arr); b) heapify(arr,size,i)</p>
+</div>
+<div class="paragraph">
+<p>The evaluation of the complexity of the heap sorting algorithm presented
+in the table</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_6_9_sorting_comparison"><a class="anchor" href="#_6_9_sorting_comparison"></a>6.9. Sorting comparison</h3>
+<div class="paragraph">
+<p>Choosing a sorting algorithm is determined by the following factors: 1</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Time complexity;</p>
+</li>
+<li>
+<p>Space complexity;</p>
+</li>
+<li>
+<p>Stability/instability.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Knowing the strengths and weaknesses of each of the algorithms
+considered allows you to make a choice in favor of a particular sort.
+Each algorithm is unique and works best under certain conditions.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 60%;">
+<colgroup>
+<col style="width: 26%;">
+<col style="width: 25%;">
+<col style="width: 24%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Аlgorithm</th>
+<th class="tableblock halign-left valign-top">Worst</th>
+<th class="tableblock halign-left valign-top">Average</th>
+<th class="tableblock halign-left valign-top">Best</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bubble</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n2)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n2)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selection</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n2)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n2)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n2)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Insertion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n2)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n2)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Quick Sort</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n2)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(nlog(n))</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(nlog(n))</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Merge Sort</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(nlog(n))</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(nlog(n))</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(nlog(n))</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shell Sort</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n(log(n)2)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n(log(n)2)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Heap Sort</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n.log(n))</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n.log(n))</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n.log(n))</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all" style="width: 60%;">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Аlgorithm</th>
+<th class="tableblock halign-left valign-top">Space comlexity</th>
+<th class="tableblock halign-left valign-top">Stable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bubble</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selection</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Insertion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Quick Sort</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Merge Sort</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shell Sort</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Heap Sort</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Some common sorting algorithms are inherently stable, such as MergeSort, InsertSort, and BubbleSort. Others, such as QuickSort, HeapSort, and SelectSort, are unstable. For example, we can use the extra space to maintain stability in QuickSort.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
