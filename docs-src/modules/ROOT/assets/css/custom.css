@@ -1,0 +1,12 @@
+/* Центрирование изображений */
+.imageblock.text-center {
+    text-align: center;
+    margin: 1rem auto;
+  }
+  
+  /* images centering */
+  .imageblock.text-center .title {
+    text-align: center;
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
