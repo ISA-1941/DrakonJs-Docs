@@ -49,7 +49,7 @@ Moreover, data structures can be classified as **homogeneous** (containing eleme
 
 An **array** is a fundamental data structure that stores a fixed-size collection of elements of the same type. Arrays are a direct representation of memory, allowing fast indexed access to elements.
 
-image::section-1:Fig1_2_Array.jpg[width=50%, height=30%, align=center]
+image::../section-1:Fig1_2_Array.jpg[width=50%, height=30%, align=center]
 
 [.text-center]
 Figure 1.2. Representation of an Array
@@ -100,7 +100,7 @@ To overcome these limitations, **dynamic data structures** such as **slices** we
 A **linked list** is an ordered collection of elements where each element (node) contains **a value and a reference to the next element**.
 
 
-image::section-1:Fig1_4_List.jpg[width=50%, height=30%, align=center]
+image::../section-1:Fig1_4_List.jpg[width=50%, height=30%, align=center]
 
 [.text-center]
 Figure 1.4. Representation of a Linked List
@@ -142,7 +142,7 @@ Figure 1.7. Stack Structure
 
 A **queue** is a **First-In-First-Out (FIFO)** structure where elements are added at the back and removed from the front.
 
-image::section-1:Fig1_8_Queue.jpg[width=50%, height=30%, align=center]
+image::../section-1:Fig1_8_Queue.jpg[width=50%, height=30%, align=center]
 
 [.text-center]
 Figure 1.8. Queue Structure
@@ -201,7 +201,7 @@ E ⊂ V×V (directed edges)
 ∃! root ∈ V ∀v ∈ V ∃ unique path from root to v
 ```
 
-image::section-1:Fig1_9_Tree.jpg[width=75%, height=34%, align=center]
+image::../section-1:Fig1_9_Tree.jpg[width=75%, height=34%, align=center]
 
 [.text-center]
 Figure 1.9. Tree Structure Taxonomy
@@ -249,7 +249,7 @@ A graph is a pair G = (V, E) where:
   - Weight values
   - Labels
 
-image::section-1:Fig1_11_Graph.jpg[width=75%, height=34%, align=center]
+image::../section-1:Fig1_11_Graph.jpg[width=75%, height=34%, align=center]
 
 [.text-center]
 Figure 1.11. Graph Variant Visualization
