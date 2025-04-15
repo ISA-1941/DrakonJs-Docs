@@ -1,13 +1,6 @@
 name: drakonjs-docs
-version: 1.0  # Necessarily!
+version: 3.1.10  # Necessarily!
 nav:
   - modules/ROOT/nav.adoc
 start_page: drakonjs-docs::index.adoc
-asciidoc:
-  attributes:
-    experimental: ""
-    icons: font
-    sectanchors: ""
-    image-align: center
-    figure-caption!:
  
