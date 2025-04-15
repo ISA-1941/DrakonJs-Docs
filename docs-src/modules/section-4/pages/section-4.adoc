@@ -180,7 +180,7 @@ purpose of the (function) algorithm and be located at the top.
 . The diagram should have only one beginning and one end. The "`end`"
 graph is placed at the bottom of the diagram (Figure 4.5):
 
-image::../images/Fig4_5_BeginEnd.jpg[width=150,height=100,align=center]
+image::../images/Fig4_5_BeginEnd.jpg[width=75%]
 
 [.text-center]
 Figure 4.5. Diagram start/end
