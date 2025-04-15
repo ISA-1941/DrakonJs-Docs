@@ -1,12 +1,12 @@
-/* Центрирование изображений */
-.imageblock.text-center {
-    text-align: center;
-    margin: 1rem auto;
-  }
-  
-  /* images centering */
-  .imageblock.text-center .title {
-    text-align: center;
-    font-style: italic;
-    margin-top: 0.5rem;
-  }
+/* Centring all images inside imageblock */
+.imageblock {
+  text-align: center;
+  margin: 1rem auto;
+}
+
+/* Signature centering */
+.imageblock .title {
+  text-align: center;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
