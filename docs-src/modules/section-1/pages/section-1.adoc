@@ -132,7 +132,7 @@ Figure 1.4. Representation of a Linked List
 
 A **stack** is a **Last-In-First-Out (LIFO)** structure where elements are added and removed from the same end.
 
-image::../images/Fig1_7_Stack.jpg[width=30%, height=30%, align=center]
+image::../images/Fig1_7_Stack.jpg[width=30%]
 
 [.text-center]
 Figure 1.7. Stack Structure
