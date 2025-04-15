@@ -3,4 +3,11 @@ version: 1.0  # Necessarily!
 nav:
   - modules/ROOT/nav.adoc
 start_page: drakonjs-docs::index.adoc
+asciidoc:
+  attributes:
+    experimental: ""
+    icons: font
+    sectanchors: ""
+    image-align: center
+    figure-caption!:
  
