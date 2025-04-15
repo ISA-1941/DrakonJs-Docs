@@ -201,7 +201,7 @@ E ⊂ V×V (directed edges)
 ∃! root ∈ V ∀v ∈ V ∃ unique path from root to v
 ```
 
-image::../images/Fig1_9_Tree.jpg[width=75%, height=34%, align=center]
+image::../images/Fig1_9_Tree.jpg[width=50%, height=34%, align=center]
 
 [.text-center]
 Figure 1.9. Tree Structure Taxonomy
