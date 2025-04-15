@@ -101,7 +101,7 @@ A **linked list** is an ordered collection of elements where each element (node)
 image::../images/Fig1_3_ll.jpg[width=50%, height=30%, align=center]
 
 [.text-center]
-Figure 1.4. Representation of a Linked List
+Figure 1.3. Representation of a Linked List
 
 
 ##### **Types of Linked Lists:**
@@ -120,7 +120,7 @@ Figure 1.4. Representation of a Linked List
 
 * Dynamic data storage: When the size of the data is unknown or changes frequently.
 
-* mplementation of stacks and queues: Linked lists can be used to implement these data structures.
+* implementation of stacks and queues: Linked lists can be used to implement these data structures.
 
 * Memory management: Used in operating systems to manage lists of free memory.
 
@@ -132,18 +132,18 @@ Figure 1.4. Representation of a Linked List
 
 A **stack** is a **Last-In-First-Out (LIFO)** structure where elements are added and removed from the same end.
 
-image::../images/Fig1_7_Stack.jpg[width=30%]
+image::../images/Fig1_4_Stack.jpg[width=30%]
 
 [.text-center]
-Figure 1.7. Stack Structure
+Figure 1.4. Stack Structure
 
 
 A **queue** is a **First-In-First-Out (FIFO)** structure where elements are added at the back and removed from the front.
 
-image::../images/Fig1_8_Queue.jpg[width=50%, height=30%, align=center]
+image::../images/Fig1_5_Queue.jpg[width=50%, height=30%, align=center]
 
 [.text-center]
-Figure 1.8. Queue Structure
+Figure 1.5. Queue Structure
 
 ##### **Common Variations:**
 
@@ -199,10 +199,10 @@ E ⊂ V×V (directed edges)
 ∃! root ∈ V ∀v ∈ V ∃ unique path from root to v
 ```
 
-image::../images/Fig1_9_Tree.jpg[width=50%, height=34%, align=center]
+image::../images/Fig1_6_Tree.jpg[width=50%, height=34%, align=center]
 
 [.text-center]
-Figure 1.9. Tree Structure Taxonomy
+Figure 1.6. Tree Structure Taxonomy
 
 ===== Fundamental Properties
 
@@ -247,10 +247,10 @@ A graph is a pair G = (V, E) where:
   - Weight values
   - Labels
 
-image::../images/Fig1_11_Graph.jpg[width=75%, height=34%, align=center]
+image::../images/Fig1_7_Graph.jpg[width=75%, height=34%, align=center]
 
 [.text-center]
-Figure 1.11. Graph Variant Visualization
+Figure 1.7. Graph Variant Visualization
 
 ===== Typological Spectrum
 
