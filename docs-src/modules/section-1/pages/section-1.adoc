@@ -26,7 +26,7 @@ According to Steve McConnell, the author of *“Code Complete”*, abstract data
 
 A simplified classification of data structures can be presented as follows:
 
-image::../images/Fig1_1_class.jpg[width=75%, height=34%]
+image::../images/Fig1_1_class.jpg[width=75%]
 
 Figure 1.1. Classification of Data Structures
 
@@ -47,7 +47,7 @@ Moreover, data structures can be classified as **homogeneous** (containing eleme
 
 An **array** is a fundamental data structure that stores a fixed-size collection of elements of the same type. Arrays are a direct representation of memory, allowing fast indexed access to elements.
 
-image::../images/Fig1_2_Array.jpg[width=50%, height=30%, align=center]
+image::../images/Fig1_2_Array.jpg[width=50%]
 
 [.text-center]
 Figure 1.2. Representation of an Array
@@ -98,7 +98,7 @@ To overcome these limitations, **dynamic data structures** such as **slices** we
 A **linked list** is an ordered collection of elements where each element (node) contains **a value and a reference to the next element**.
 
 
-image::../images/Fig1_4_List.jpg[width=50%, height=30%, align=center]
+image::../images/Fig1_3_ll.jpg[width=50%, height=30%, align=center]
 
 [.text-center]
 Figure 1.4. Representation of a Linked List
