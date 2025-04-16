@@ -1,5 +1,3 @@
-:imagesdir: ../images
-
 == SECTION 5. COMPLEXITY AND STABILITY ANALYSIS OF ALGORITHM
 
 === 5.1 Requirements for algorithms
@@ -247,7 +245,7 @@ O(n^2^~)~
 
 Or in graphic form (Figure.5.1.).
 
-image::Fig5_1_Comparison..jpg[width=60%, height=30%, align=center]
+image::_images/Fig5_1_Comparison.jpg[width=75%]
 
 [.text-center]
 Figure 5.1. Comparison of general copmlexities

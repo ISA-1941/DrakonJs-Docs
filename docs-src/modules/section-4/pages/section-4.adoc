@@ -18,7 +18,7 @@ Visual representations of algorithms were the most effective and common in terms
 
 An alternative to flowchart imaging is Drakon-based algorithm engineering, which results in Drakon-diagrams. Drakon-diagrams are suitable for formalized recording, automatic code retrieval and execution on the computer. However, a more important aspect of Drakon technology is its cognitive difference from flowchart technology. While flowcharts do improve programm clarity, this is not always the case, and improvements are limited. In addition, there are many cases when unsuccessful flowcharts confuse the case and make understanding difficult. In contrast, Drakon-diagrams are much better understood (Figure 4.1.).
 
-image::../images/Fig4_1_Drakon-diagram.jpg[width=400,height=200,align=center]
+image::_images/Fig4_1_Drakon-diagram.jpg[width=400,height=200,align=center]
 
 [.text-center]
 Figure 4.1.  Comparison of a visual representation of an algorithm in the form of a flowchart and a Drakon-diagram 
@@ -89,7 +89,7 @@ DrakonTech’s code generator supports:
  
  Interface of Drakon.Tech is designed with a focus on visual clarity and ease of use. Here's a general overview (Figure 4.2.): 
 
-image::../images/Fig4_2_InterfaceDrakonTech.jpg[width=600,height=300,align=center]
+image::_images/Fig4_2_InterfaceDrakonTech.jpg[width=600,height=300,align=center]
 [.text-center]
 Figure 4.2. DrakonTech Interface
 
@@ -152,11 +152,13 @@ In summary, the Drakon.Tech interface prioritizes visual communication and struc
 Web application _DrakonTech_ provides for the creation of two types of Drakon-diagrams, the choice of ones is determined by the complexity of the algorithm (Figure4.3.): 
 
 
-image::../images/Fig4_3_primitive.jpg[width=200,height=150,align=center]
+image::_images/Fig4_3_primitive.jpg[width=200,height=150,align=center]
+
 [.text-center]
 a) Primitive
 
-image::../images/Fig4_3_siluet.jpg[width=600,height=300,align=center]
+image::_images/Fig4_3_siluet.jpg[width=600,height=300,align=center]
+
 [.text-center]
 b) Silhuette
 
@@ -165,7 +167,8 @@ Figure 4.3. Two types of Drakon-diagrams
 
 To create a Drakon-diagram, the user chooses the necessary icons, filling them with the corresponding operators of the JavaScript programming language (Figure 4.4).
 
-image::../images/Fig4_4_icons.jpg[width=500,height=200,align=center]
+image::_images/Fig4_4_icons.jpg[width=500,height=200,align=center]
+
 [.text-center]
 Figure 4.4.  Set of DrakonTech icons
 
@@ -180,7 +183,7 @@ purpose of the (function) algorithm and be located at the top.
 . The diagram should have only one beginning and one end. The "`end`"
 graph is placed at the bottom of the diagram (Figure 4.5):
 
-image::../images/Fig4_5_BeginEnd.jpg[width=75%]
+image::_images/Fig4_5_BeginEnd.jpg[width=15%]
 
 [.text-center]
 Figure 4.5. Diagram start/end
@@ -200,7 +203,7 @@ editor will give an error.
 . A top-down action prevents the use of arrows. The only exception is a
 loop of type while (Figure 4.6.):
 
-image::../images/Fig4_6_While.jpg[width=200,height=100,align=center]
+image::_images/Fig4_6_While.jpg[width=50%]
 
 [.text-center]
 Figure 4.6. While loop type
@@ -238,7 +241,7 @@ c) output result.
 
 The graphical representation of the basic element of the linear structure in JavaScript is in the form of simple rectangles (Figure 4.7.).
 
-image::../images/Fig4_7_Linear.jpg[width=200,height=100,align=center]
+image::_images/Fig4_7_Linear.jpg[width=75%]
 
 [.text-center]
 Figure 4.7. Linear structure of Drakon-diagram
@@ -257,7 +260,7 @@ statement _if...else_. An example of an _if-else_ construction in a
 Drakon-diagram in an algorithm for finding minimum and maximum array
 values (Figure 4.8):
 
-image::../images/Fig4_8_ifelse.jpg[width=200,height=100,align=center]
+image::_images/Fig4_8_ifelse.jpg[width=75%]
 
 [.text-center]
 Figure 4.8. Diagram-snippet with if-else
@@ -269,7 +272,7 @@ compared are covered in the "`Option`" graphs. If there is no text in
 the extreme right, it means "`all other values`". Below is an example of
 how to branch a sorting algorithm (merge sort) (4.9).
 
-image::../images/Fig4_9_Select.jpg[width=800,height=400,align=center]
+image::_images/Fig4_9_Select.jpg[width=75%]
 
 [.text-center]
 Figure 4.9. Branch selection snippet (Select statement)
@@ -290,7 +293,7 @@ ends and the control is passed to the next operator. In the third part,
 the loop parameter increases. The snippet of the Drakon-diagram with the
 "Loop-For" design has the appearance (Figure 4.10):
 
-image::../images/Fig4_10_forCycle.jpg[width=300,height=200,align=center]
+image::_images/Fig4_10_forCycle.jpg[width=75%]
 
 [.text-center]
 Figure 4.10. Drakon-construction "`Loop-For`"
@@ -298,14 +301,14 @@ Figure 4.10. Drakon-construction "`Loop-For`"
 b). Loop "`foreach`" executes the operator or block of operators for
 each array element or data list (4.11):
 
-image::../images/Fig4_11_foreach.jpg[width=300,height=200,align=center]
+image::_images/Fig4_11_foreach.jpg[width=75%]
 
 [.text-center]
 Figure 4.11. Drakon-construction "`Loop for each`"
 
 c). Example of composite construction "`Loop With Arrow`" (Figure 4.12).
 
-image::../images/Fig4_12_While.jpg[width=400,height=200,align=center]
+image::_images/Fig4_12_While.jpg[width=75%]
 
 [.text-center]
 Figure. 4.12. Drakon-construction "`Do-Chek loop`"
@@ -326,28 +329,28 @@ Therefore, the digital root of 12345 is 6.
 
 To solve the problem of finding the digital root of an integer, we will create four Drakon- diagrams: _module, main, digRoot and sumDigits_ (Figure 4.13.). 
 
-image::../images/Fig4_13_fourFunctions.jpg[width=400,height=200,align=center]
+image::_images/Fig4_13_fourFunctions.jpg[width=75%]
 
 [.text-center]
 Figure 4.13. _module, main, digRoot and sumDigits_
 
 The function _module_ contains a call to the _main()_ function. The _main()_ function contains a call to the _digroot_ function with an integer specified (Figure 4.14.):
 
-image::../images/Fig4_14_moduleMain.jpg[width=400,height=200,align=center]
+image::_images/Fig4_14_moduleMain.jpg[width=75%]
 
 [.text-center]
 Figure 4.14.Functions _module_ and _main_
 
 The purpose of the function _digRoot(n)_ is to organize a call to a function _sumDigits(n)_ that calculates the sum of the digits of a given number. In turn, the _sumDigits(n)_ function splits the string "_12345_" into individual characters, after which the sum of the corresponding integers converted by the _parseInt(digit, 10)_ function is calculated in a loop. (Figure 3.15.).
 
-image::../images/Fig4_15_digSum.jpg[width=600,height=300,align=center]
+image::_images/Fig4_15_digSum.jpg[width=75%]
 
 [.text-center]
 Figure 4.15.Functions _digRoot_ and _sumDigits_
 
 After creating the dragon diagrams, the program code for determining the digital root in the language () is automatically generated by activating the "wrench" icon (Figure 4.16.)
 
-image::../images/Fig4_16_wrench.jpg[width=500,height=200,align=center]
+image::_images/Fig4_16_wrench.jpg[width=75%]
 
 [.text-center]
 Figure 4.16."Wrench icon" for generating code program 
