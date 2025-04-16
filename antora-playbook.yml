@@ -9,7 +9,5 @@ content:
 ui:
   bundle:
     url: ./ui/ui-bundle.zip
-supplemental_files:
-    - path: assets/css/custom.css
 output:
   dir: ./public

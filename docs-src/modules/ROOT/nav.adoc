@@ -12,13 +12,4 @@
 ** xref:section-5:section-5.adoc[Complexity problems]
 * * Base algorithms sorting
 ** xref:section-6:section-6.adoc[Base Sorting Algorithms]
-*** xref:section-6:section-6.adoc#_6_1_general_characteristics_of_sorting_algorithms[6.1. General Characteristics]
-*** xref:section-6:section-6.adoc#_6_2_bubble_sort[6.2. Bubble Sort]
-*** xref:section-6:section-6.adoc#_6_3_selection_sort[6.3. Selection Sort]
-*** xref:section-6:section-6.adoc#_6_4_insertion_sort[6.4. Insertion Sort]
-*** xref:section-6:section-6.adoc#_6_5_quick_sort[6.5. Quick Sort]
-*** xref:section-6:section-6.adoc#_6_6_merge_sort[6.6. Merge Sort]
-*** xref:section-6:section-6.adoc#_6_7_shell_sort[6.7. Shell Sort]
-*** xref:section-6:section-6.adoc#_6_8_heapsort[6.8. Heapsort]
-*** xref:section-6:section-6.adoc#_6_9_sorting_comparison[6.9. Sorting Comparison]
 
