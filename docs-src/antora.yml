@@ -1,6 +1,7 @@
 name: drakonjs-docs
-version: 3.1.10  # Necessarily!
+version: 3.1.10
 nav:
   - modules/ROOT/nav.adoc
-start_page: drakonjs-docs::index.adoc
+start_page: ROOT::index.adoc
+
  
