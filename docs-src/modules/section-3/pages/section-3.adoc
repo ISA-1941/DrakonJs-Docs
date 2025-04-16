@@ -1,4 +1,3 @@
-
 == SECTION 3. Implementation of Basic Abstract Data Types in JavaScript
 
 === 3.1. Data Structuring Features
@@ -98,7 +97,7 @@ An array is a collection of data, where each element is stored at a specific ind
 
 For example, the collection of integers [24, 12, 36, 6, 47, 11] forms an array (Figure 3.1.).
 
-image::section-3:Fig3_1_Array.jpg[width=400,height=200,align=center]
+image::_images/Fig3_1_Array.jpg[width=400,height=200,align=center]
 
 [.text-center]
 Figure 3.1. One-dimensional array
@@ -155,7 +154,7 @@ In JavaScript, slices are implemented dynamically. To create a slice (array) in 
 let parentSlice = new Array(20).fill(0); // Creating an array of 20 elements, filled with zeros
 ----
 
-image::section-3:Fig3_2_Slice.jpg[width=600,height=200,align=center]
+image::_images/Fig3_2_Slice.jpg[width=600,height=200,align=center]
 
 [.text-center]
 Figure 3.2. Create different slices **sliceA** and **sliceB**
@@ -279,7 +278,7 @@ In JavaScript, Maps are collections that store unordered key-value pairs, where 
 
 Unlike arrays, which use numeric indexes, Maps allow keys of any data type, making them more flexible (Figure 3.3.). 
 
-image::section-3:Fig3_3_Map.jpg[width=400,height=200,align=center]
+image::_images/Fig3_3_Map.jpg[width=400,height=200,align=center]
 
 [.text-center]
 Figure 3.1. Map
@@ -327,7 +326,7 @@ If the key does not exist, **.get()** returns undefined.
 
 A linked list is a dynamic data structure where each element, called a node, consists of two parts (Figure 3.3.):
 
-image::section-3:Fig3_4_LL.jpg[width=70%, height=30%, align=center]
+image::_images/Fig3_4_LL.jpg[width=70%, height=30%, align=center]
 
 [.text-center]
 Figure 3.3. Simply linked list structure
@@ -387,7 +386,7 @@ according to the _"**last in - first out**" (LIFO - Last-In-First-Out)_
 strategy. Data enters the stack from only one side, called the top of
 the stack (Figure 3.5.).
 
-image::section-3:Fig3_5_Stack.jpg[width=70%, height=40%, align=center]
+image::_images/Fig3_5_Stack.jpg[width=70%, height=40%, align=center]
 
 [.text-center]
 Figure 3.5. _Last-in, first-out_ stack work
@@ -446,7 +445,7 @@ b) Queue
 
 A queue is a linear data structure that follows the _First-In-First-Out_ (FIFO) principle. This means that the first element added to the queue is the first one to be removed (Figure 3.6.).
 
-image::section-3:Fig3_6_Queue.jpg[width=70%, height=40%, align=center]
+image::_images/Fig3_6_Queue.jpg[width=70%, height=40%, align=center]
 
 [.text-center]
 Figure 3.6. _First-In-First-Out_ queue work 
@@ -475,7 +474,7 @@ type of data structures using the visual algorithmic language DRAKON and
 the programming language Golang. Before we continue, let's review the key 
 terms associated with binary trees (Figure 3.7.).
 
-image::section-3:Fig3_7_Term.jpg[width=70%, height=40%, align=center]
+image::_images/Fig3_7_Term.jpg[width=70%, height=40%, align=center]
 
 [.text-center]
 Figure 3.7. Basic terminology of the tree
@@ -502,7 +501,7 @@ root node of this node.
 The binary tree’s information structure is set up as follows: (Figure
 3.8.):
 
-image::section-3:Fig3_8_BST.jpg[width=50%, height=30%, align=center]
+image::_images/Fig3_8_BST.jpg[width=50%, height=30%, align=center]
 
 [.text-center]
 Figure 3.8 Binary tree structure (_info_ - value (key), (N - NULL))
@@ -625,7 +624,7 @@ Types of Graphs (Figure 3.9):
 2️⃣ Directed Graph (Digraph) – Edges have direction (e.g., roads, dependencies).
 
 
-image::section-3:Fig3_9_Graphes.jpg[width=70%, height=40%, align=center]
+image::_images/Fig3_9_Graphes.jpg[width=70%, height=40%, align=center]
 
 [.text-center]
 Figure 9.1. The view of a) -undirected; b) - directed graph
