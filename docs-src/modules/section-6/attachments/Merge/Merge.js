@@ -5,8 +5,8 @@ function main() {
         11,
         32,
         23,
-        85,
         74,
+        85,
         90,
         62,
         48,
@@ -51,16 +51,11 @@ function merge(left, right) {
 }
 function mergeSort(arr) {
     var left, middle, right;
-    console.log("arr --> ",arr);
-    console.log("");
     if (arr.length < 2) {
-        console.log("arrIn --> ",arr);
         return arr;
     }
     middle = Math.floor(arr.length / 2);
-    console.log("arr.length = ", arr.length," middle = ", middle); 
     left = mergeSort(arr.slice(0, middle));
     right = mergeSort(arr.slice(middle));
-    console.log("left --> ", left, "right --> ", right)
     return merge(left, right);
 }

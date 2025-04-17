@@ -350,8 +350,16 @@ Merge Sort is a classic divide-and-conquer algorithm. It works by recursively sp
 
 During merging, one element from each fragment is selected and compared. The smaller (or larger, depending on the desired order) element is added to the result array. The remaining element is compared again with the next element from the other fragment. This process continues until all elements are merged. Figure 6.5 illustrates this process:
 
+.Figure 6.5 — Merge Sort: merging two sorted arrays
+++++
+<object 
+    type="image/svg+xml" 
+    data="images/Fig6_5_merge_v2_FINAL.svg" 
+    width="100%" 
+    style="display:block; margin:auto;">
+</object>
+++++
 
-image::_images/Fig6_5_merge.svg[width=300%]
 
 
 image::_images/Fig6_5_mergeSorting.svg[width=75%]

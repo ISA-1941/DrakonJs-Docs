@@ -1,0 +1,7 @@
+img.image-full {
+  width: 100vw;
+  height: auto;
+  max-width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  display: block;
+}
