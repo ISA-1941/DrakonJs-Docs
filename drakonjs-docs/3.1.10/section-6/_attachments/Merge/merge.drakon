@@ -8,7 +8,7 @@
             "type": "branch",
             "branchId": 1,
             "one": "4",
-            "content": "Compare left[i] and right[j]Branch1\nAppend the smaller element to result"
+            "content": "Compare left[i] and right[j]\nAppend the smaller element to result"
         },
         "4": {
             "type": "action",
