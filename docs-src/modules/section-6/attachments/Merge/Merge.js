@@ -23,6 +23,7 @@ function merge(left, right) {
     i = 0;
     j = 0;
     while (true) {
+        console.log('            left.length = ', left.length, 'right.length = ', right.length,'i =', i, 'j =', j, 'result = ', result);
         if (i < left.length && j < right.length) {
             if (left[i] <= right[j]) {
                 result.push(left[i++]);
@@ -55,7 +56,10 @@ function mergeSort(arr) {
         return arr;
     }
     middle = Math.floor(arr.length / 2);
+    console.log('middle:', middle);
     left = mergeSort(arr.slice(0, middle));
+    console.log('left:', left);
     right = mergeSort(arr.slice(middle));
+    console.log('right:', right);
     return merge(left, right);
 }
