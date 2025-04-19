@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bubble Sort Canvas Visualization</title>
+  <style>
+    body { display: flex; flex-direction: column; align-items: center; }
+    canvas { border: 1px solid #ccc; margin-top: 20px; }
+    .controls { margin: 20px; }
+  </style>
+</head>
+<body>
+  <div class="controls">
+    <button id="startBtn">Start Sorting</button>
+    <label>Speed: <input type="range" id="speed" min="10" max="500" value="100"></label>
+  </div>
+  <canvas id="sortCanvas" width="800" height="400"></canvas>
+
+  <script>
+    // Исходный массив
+    const initialArray = [90, 11, 81, 21, 71, 31, 61, 41, 51, 10];
+    let array = [...initialArray];
+    let animationId = null;
+    let delay = 100;
+
+    // Инициализация Canvas
+    const canvas = document.getElementById('sortCanvas');
+    const ctx = canvas.getContext('2d');
+    const startBtn = document.getElementById('startBtn');
+    const speedControl = document.getElementById('speed');
+
+    // Настройки визуализации
+    const barWidth = 60;
+    const maxBarHeight = 350;
+    const colors = {
+      default: '#48dbfb',
+      comparing: '#ff6b6b',
+      sorted: '#58d68d'
+    };
+
+    // Отрисовка массива
+    function drawArray(arr, comparingIndices = [], sortedStart = -1) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      arr.forEach((value, index) => {
+        // Выбор цвета
+        let color = colors.default;
+        if (comparingIndices.includes(index)) color = colors.comparing;
+        if (index >= sortedStart) color = colors.sorted;
+        
+        // Расчет координат
+        const x = index * (barWidth + 10) + 20;
+        const height = (value / Math.max(...initialArray)) * maxBarHeight;
+        const y = canvas.height - height - 20;
+        
+        // Отрисовка столбца
+        ctx.fillStyle = color;
+        ctx.fillRect(x, y, barWidth, height);
+        
+        // Подпись значения
+        ctx.fillStyle = '#000';
+        ctx.font = '16px Arial';
+        ctx.textAlign = 'center';
+        ctx.fillText(value, x + barWidth/2, y - 10);
+      });
+    }
+
+    // Анимация сортировки
+    async function bubbleSort(arr) {
+      let n = arr.length;
+      let sortedStart = n;
+      
+      for (let i = 0; i < n - 1; i++) {
+        for (let j = 0; j < n - i - 1; j++) {
+          // Визуализация сравнения
+          drawArray(arr, [j, j+1], sortedStart);
+          await new Promise(resolve => setTimeout(resolve, delay));
+          
+          if (arr[j] > arr[j+1]) {
+            // Обмен элементов
+            [arr[j], arr[j+1]] = [arr[j+1], arr[j]];
+            drawArray(arr, [j, j+1], sortedStart);
+            await new Promise(resolve => setTimeout(resolve, delay));
+          }
+        }
+        sortedStart = n - i - 1;
+      }
+      drawArray(arr, [], 0); // Финальная отрисовка
+    }
+
+    // Управление анимацией
+    startBtn.addEventListener('click', () => {
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+        array = [...initialArray];
+      }
+      bubbleSort(array);
+    });
+
+    speedControl.addEventListener('input', (e) => {
+      delay = 510 - e.target.value; // Инвертируем значение для удобства
+    });
+
+    // Первоначальная отрисовка
+    drawArray(array);
+  </script>
+</body>
+</html>
