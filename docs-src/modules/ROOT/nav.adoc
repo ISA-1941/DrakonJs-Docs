@@ -10,6 +10,9 @@
 ** xref:section-4:section-4.adoc[Visual Language Drakon]
 * Complexity of algorithms
 ** xref:section-5:section-5.adoc[Complexity problems]
-* * Base algorithms sorting
-** xref:section-6:section-6.adoc[Base Sorting Algorithms]
+* Basic search  algorithms
+** xref:section-6:section-6.adoc[Base Search Algorithms]
+* Base algorithms sorting
+** xref:section-7:section-7.adoc[Base Sorting Algorithms]
+
 
