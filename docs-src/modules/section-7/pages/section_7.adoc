@@ -1,329 +1,588 @@
-== SECTION 7. BASIC SEARCH ALGORITHMS
+== SECTION 7. BASIC SORTING ALGORITHMS
 
-Searching is one of the most important algorithms for processing data
-structures. Search algorithms are designed to check the presence of an
-element or extract an element from any data structure in which it is
-stored. More strictly, the search problem can be formulated as follows:
-find one or more elements in the set, and the elements sought must have
-a certain property. This property can be absolute or relative. A
-relative property characterizes an element with respect to other
-elements: for example, a minimum element in a set of numbers.
+=== 7.1. General Characteristics of Sorting Algorithms
 
-There are a lot of search algorithms. Their complexity varies from
-simple sequential search algorithms, in extremely efficient but limited
-binary search algorithms. Of particular note are algorithms based on the
-presentation of a core set of data in a different, more searchable form,
-which are used in real-world applications for processing data sets in
-huge databases.
+Sorting is one of the most common operations in data processing — not only in computer science, but in many areas of human activity. In computing, sorting algorithms are used everywhere: in databases, search engines, operating systems, and beyond.
 
-There is no single algorithm to solve the search problem, nor is there a
-single algorithm for sorting problems that is better suited for all
-cases. Some of the algorithms run faster than others, but require
-additional RAM to run. Others run very quickly, but can only be used for
-pre-sorted arrays. At the same time, the analysis of search algorithms
-is somewhat different from sorting algorithms. In particular, there is
-no sustainability problem for them. In this case there may be situations
-that require introduction of new criteria of complexity and its
-assessment. In general, all algorithms are reduced to
-following steps :
+At its core, the goal of sorting is simple: given a list of records (each with a key value), we want to reorder the list so that the keys ares arranged in increasing or decreasing order. This makes it easier to work with the data — especially when we need to search or analyze it later.
+
+Over time, many sorting algorithms have been developed. Some are easy to implement and work well for small datasets, but become inefficient as the dataset grows. Others are designed for large collections and offer better performance, though they may be more complex to understand or implement.
+
+To help understand how these algorithms work, especially the more complex ones, we’ll use visual explanations. In this book, we include DRAKON-diagrams and illustrations to make the logic clear and accessible.
+
+Since most sorting tasks in programming involve arrays or similar structures, this section focuses on sorting slices (contiguous segments of arrays).
+
+=== 7.2. Bubble Sort
+
+Bubble Sort is one of the simplest sorting algorithms, especially suitable for small datasets. The algorithm gets its name from the way larger values "bubble up" to the end of the array with each pass. The DRAKON-diagram of the algorithm is shown in Figure 7.1. The implementation consists of two modules: `main()` and `bubbleSort(arr)`.
+
+image::_images/Fig7_1_bubbleSort.svg[width=50%]
+
+[.text-center]
+Figure 7.1. DRAKON-diagram of the Bubble Sort algorithm
+
+The algorithm uses two nested loops. For each index `i`, it iterates over the remaining elements with index `j`. At each step, the values `ar[i]` and `ar[j]` are compared. If `ar[j]` is smaller than `ar[i]`, the two elements are swapped. This process pushes the largest unsorted value toward the end of the array during each outer loop iteration.
+
+The following table shows the results of sorting a series of values for each external cycle parameter (i).
+
+++++
+<div style="display: flex; justify-content: center; font-size: 22px;">
+  <div>
+    <table style="border-collapse: collapse;">
+++++
+
+[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", options="header", width="50%",]
+|===
+|j=0 |j=1 |j=2 |j=3 |j=4 |j=5 |j=6 |j=7 |j=8| j=9 
+| 90 | 11 | 81 | 21 | 71 | 31 | 61 | 41 | 51 | 10  
+| 11 | 90 | 81 | 21 | 71 | 31 | 61 | 41 | 51 | 10 
+| 11 | 81 | 90 | 21 | 71 | 31 | 61 | 41 | 51 | 10 
+| 11 | 21 | 81 | 90 | 71 | 31 | 61 | 41 | 51 | 10 
+| 11 | 21 | 71 | 81 | 90 | 31 | 61 | 41 | 51 | 10 
+| 11 | 21 | 31 | 71 | 81 | 90 | 61 | 41 | 51 | 10 
+| 11 | 21 | 31 | 61 | 71 | 81 | 90 | 41 | 51 | 10  
+| 11 | 21 | 31 | 51 | 61 | 71 | 81 | 90 | 51 | 10 
+| 11 | 21 | 31 | 41 | 51 | 61 | 71 | 81 | 90 | 10 
+| 10 | 11 | 21 | 31 | 41 | 51 | 61 | 71 | 81 | 90 
+|===
+
+++++
+    </table>
+  </div>
+</div>
+++++
+
+The time complexity of Bubble Sort is quite high — O(n²). This is due to the large number of comparisons (`ar[i] < ar[j]`) and possible swaps. However, the space complexity is O(1), since no additional memory is needed beyond the original array.
+
+The algorithm is stable, meaning that equal elements retain their original order after sorting.
+
+Because of its simplicity, Bubble Sort is still used in some applications — for example, in computer graphics. There, it is helpful for correcting small errors in nearly sorted arrays, often completing in linear time (about 2n steps). However, it is highly inefficient for large datasets.
+
+=== 7.3. Selection Sort
+
+The Selection Sort algorithm is based on comparison operations. It works by dividing the dataset into two parts: the sorted portion on the left and the unsorted portion on the right. The DRAKON-diagram of this algorithm is shown in Figure 7.2.
+
+image::_images/Fig7_2_selectSort.svg[width=75%]
+
+[.text-center]
+Figure 7.2. DRAKON-diagram of the Selection Sort algorithm
+
+The idea is simple: in each iteration, the algorithm finds the smallest value in the unsorted part and swaps it with the first unsorted element. Initially, the sorted part is empty, and the unsorted part is the entire array.
+
+For example, given the set `[90, 12, 83, 24, 75, 38, 62, 41, 59, 10]`, the algorithm scans the array and finds the smallest element — `10`. It then swaps `10` with the element at the first position (`90`). The sorted part now contains `10`, and the process repeats with the remaining elements. Table below illustrates this process of selection and replacement.
+
+
+[cols="10"]
+|===
+| *90*  | *12* | 83   | 24   | 75   | 38   | 62   | 41   | 59   | 10  
+| [.line-through]#10# | 12   | 83   | 24   | 75   | 38   | 62   | 41   | 59   | *90*  
+| [.line-through]#10# | *12* | 83   | 24   | 75   | 38   | 62   | 41   | 59   | [.line-through]#90#  
+| [.line-through]#10# | [.line-through]#12# | 83   | *24* | 75   | 38   | 62   | 41   | 59   | [.line-through]#90#  
+| [.line-through]#10# | [.line-through]#12# | [.line-through]#24# | 83   | 75   | *38* | 62   | 41   | 59   | [.line-through]#90#  
+| [.line-through]#10# | [.line-through]#12# | [.line-through]#24# | [.line-through]#38# | 75   | 83   | 62   | *41* | 59   | [.line-through]#90#  
+| [.line-through]#10# | [.line-through]#12# | [.line-through]#24# | [.line-through]#38# | [.line-through]#41# | 83   | 62   | 75   | *59* | [.line-through]#90#  
+| [.line-through]#10# | [.line-through]#12# | [.line-through]#24# | [.line-through]#38# | [.line-through]#41# | [.line-through]#59# | 62   | *75* | 83   | [.line-through]#90#  
+| [.line-through]#10# | [.line-through]#12# | [.line-through]#24# | [.line-through]#38# | [.line-through]#41# | [.line-through]#59# | [.line-through]#62# | 75   | *83* | [.line-through]#90#  
+| [.line-through]#10# | [.line-through]#12# | [.line-through]#24# | [.line-through]#38# | [.line-through]#41# | [.line-through]#59# | [.line-through]#62# | [.line-through]#75# | [.line-through]#83# | [.line-through]#90#  
+|===  
+
+* Note to the table. Crossed-out items are already sorted, selected items are minimal in the current pass.
+
+The time and space complexity of the Selection Sort algorithm are summarized in the table below:
+
+[cols="2*", width="40%", options="header"]
+|===
+| Case               | Time Complexity
+| Worst case         | O(n^2^)
+| Average case       | O(n^2^)
+| Best case          | O(n^2^)
+| *Space complexity* | O(1)
+|===
+
+The time complexity is the same in all cases because the algorithm uses two nested loops:  
+– The outer loop runs `n` times (once per element);  
+– The inner loop runs `(n - 1)` times per outer iteration.  
+
+This results in a total of `n * (n - 1)` comparisons, which gives the time complexity of O(n²) regardless of the input order.
+
+=== 7.4. Insertion Sort
+
+Insertion Sort works by repeatedly taking an item from the unsorted part of the array and inserting it into its correct position in the sorted part. This process continues until all items are sorted.
+
+This algorithm is similar to how people naturally sort playing cards or paper documents: taking one item at a time and inserting it into the correct place. The DRAKON-diagram for the Insertion Sort algorithm is shown in Figure 7.3.
+
+image::_images/Fig7_3_insertSort.svg[width="50%"] 
+
+[.text-center]
+Figure 7.3. DRAKON-diagram of the Insert Sort algorithm
+
+In this algorithm, larger values are pushed to the right. The algorithm compares adjacent elements and swaps them if needed. This process is shown in table below, where underscores mark the positions where swaps occurred.
+
+[.text-center]
+Input array
+
+[cols="10"]
+|===
+|90 |11 |81 |21 |71 |31 |61 |41 |51 |10
+|===
+
+[.text-center]
+I = 1
+
+[cols="10"]
+|===
+|11 |90 |81 |21 |71 |31 |61 |41 |51 |10
+|===
+
+[.text-center]
+I = 2
+
+[cols="10]
+|===
+|11 |81 |90 |21 |71 |31 |61 |41 |51 |10
+|===
+
+[.text-center]
+I = 3
+
+[cols="10"]
+|===
+|11 |81 |21 |90 |71 |31 |61 |41 |51 |10
+|11 |21 |81 |90 |71 |31 |61 |41 |51 |10
+|===
+
+[.text-center]
+I = 4
+
+[cols="10"]
+|===
+|11 |21 |81 |71 |90 |31 |61 |41 |51 |10
+|11 |21 |71 |81 |90 |31 |61 |41 |51 |10
+|===
+
+[.text-center]
+I = 5
+
+[cols="10"]
+|===
+|11 |21 |71 |81 |31 |90 |61 |41 |51 |10
+|11 |21 |71 |31 |81 |90 |61 |41 |51 |10
+|11 |21 |31 |71 |81 |90 |61 |41 |51 |10
+|===
+
+[.text-center]
+I = 6
+
+[cols="10"]
+|===
+|11 |21 |31 |71 |81 |61 |90 |41 |51 |10
+|11 |21 |31 |71 |61 |81 |90 |41 |51 |10
+|11 |21 |31 |61 |71 |81 |90 |41 |51 |10
+|===
+
+[.text-center]
+I = 7
+
+[cols="10"]
+|===
+|11 |21 |31 |61 |71 |81 |41 |90 |51 |10
+|11 |21 |31 |61 |71 |81 |41 |51 |90 |10
+|11 |21 |31 |61 |41 |71 |81 |90 |51 |10
+|11 |21 |31 |41 |61 |71 |81 |90 |51 |10
+|===
+
+[.text-center]
+I = 8
+
+[cols="10"]
+|===
+|11 |21 |31 |41 |61 |71 |81 |51 |90 |10
+|11 |21 |31 |41 |61 |71 |51 |81 |90 |10
+|11 |21 |31 |41 |61 |51 |71 |81 |90 |10
+|11 |21 |31 |41 |51 |61 |71 |81 |90 |10
+|===
+
+[.text-center]
+I = 9
+
+[cols="10"]
+|===
+|11 |21 |31 |41 |51 |61 |71 |81 |10 |90
+|11 |21 |31 |41 |61 |51 |71 |10 |81 |90
+|11 |21 |31 |41 |51 |61 |71 |10 |81 |90
+|11 |21 |31 |41 |51 |61 |10 |71 |81 |90
+|11 |21 |31 |41 |51 |10 |61 |71 |81 |90
+|11 |21 |31 |41 |10 |51 |61 |71 |81 |90
+|11 |21 |31 |10 |41 |51 |61 |71 |81 |90
+|11 |21 |10 |31 |41 |51 |61 |71 |81 |90
+|11 |10 |21 |31 |41 |51 |61 |71 |81 |90
+|10 |11 |21 |31 |41 |51 |61 |71 |81 |90
+|===
+
+The time complexity of Insertion Sort depends on how the elements are arranged in the input array:
+
+*Worst case:* when the array is sorted in reverse order.  
+Each element must be compared with all previous elements and moved to the beginning of the array.  
+The number of operations is:
+
+[.text-center]
+n(n - 1) / 2 → O(n²)
+
+*Average case:* when the array is partially sorted.  
+Each element is compared, on average, with half of the previous elements:
+
+[.text-center]
+(n²) / 4 → O(n²)
+
+*Best case:* when the array is already sorted.  
+Each element is compared with only the one before it:
+
+[.text-center]
+(n - 1) → O(n)
+
+The complexity summary is given in the table below:
+
+[cols="2*", width="40%", options="header"]
+|===
+  | Time complexity      |                  
+  |    Worst case        |  O(n^2^)    
+  |   Average case       |  O(n^2^)    
+  |      Best case       |  O(n^2^)
+  |  *Space complexity*  |  О(1)   
+|===
+
+=== 7.5. Quick Sort
+
+Quick Sort is a highly efficient sorting algorithm based on the divide-and-conquer strategy. Its general scheme includes the following steps:
 
 [arabic]
-. establishing the property of the elements of the source set; in most
-cases, these are the values of the elements;
-. match the value of the element with the reference property (for
-absolute properties) or compare the properties of the two elements (for
-relative properties);
-. traversing the elements of the set.
+. Select a pivot (reference) element from the array slice.
+. Partition the array so that all elements smaller than the pivot are placed before it, and all greater or equal — after it.
+. Recursively apply this procedure to the left and right partitions.
+. As a result, the array becomes fully sorted.
 
-In principle, search algorithms differ between search methods and search
-strategies. Based on the type of search operation, these algorithms are
-usually classified in two categories:
+The DRAKON-diagram of the Quick Sort algorithm is shown in Figure 7.4.
 
-_Sequential Search:_ The list or array is performed sequentially and
-each element is checked.
-
-_Interval search:_ These algorithms are specifically designed to search
-in sorted data structures. These types of search algorithms are much
-more efficient than linear search because they repeatedly target the
-center of the search structure and divide the search space in half.
-
-This section examines the primary algorithms used for searching data structures. 
-To enhance the understanding of the practical applications of these algorithms, 
-DRAKON-diagrams are provided along with assessments of their time and space complexity.
-
-=== 7.1. Linear data searching
-
-a). Linear searching of raw data
-
-In the case of a linear search of an element in an unordered dataset,
-for example, in an array or in a slice, the simplest algorithm is to
-view all elements until the desired value is found (Figure 7.1).
-
-image::Engl_image7/Fig7_1_LineSearch.jpg[width=50%, height=30%, align=center]
+image::_images/Fig7_4_quicktSort.svg[width=50%]
 
 [.text-center]
-Figure 7.1. DRAKON-diagrams of linear search algorithm
+Figure 7.4. DRAKON-diagram of the Quick Sort algorithm
 
-This algorithm is not very effective, but it works on arbitrary
-collections. _Time complexity:_ O(n). In the worst case (the desired
-element is in the last position) to find the element you need to pass
-all the elements cut. Here "n" is the size of the cut. additional
-memory. In principle, another worst case is the absence of the necessary
-element. _Space complexity:_ O(1). No additional memory is required to
-accommodate the slice.
+Let’s look at an example in detail. Suppose we are sorting the array `[78, 11, 81, 21, 71, 31, 61, 41, 51, 24]`, and we choose `31` as the pivot.
 
-b). Linear search of sorted data in slice
+|===
+| 78 | 11 | 81 | 21 | 71 | **31** | 61 | 41 | 51 | 24
+|===
 
-If the elements of the dataset are sorted by ascending or descending,
-finding the desired element is much more efficient than in an unordered
-linear search. Because in many cases, you don’t have to go through the
-whole list. For example, when an item with a higher value is discovered
-as a result of passing through an increasing sorted list, the search is
-stopped. This approach saves time and increases productivity. Figure
-7.2. shows the DRAKON-diagram of this algorithm.
+We create three temporary arrays:  
+– **left[]** for elements less than the pivot,  
+– **equal[]** for elements equal to the pivot,  
+– **right[]** for elements greater than the pivot.
 
-image::Engl_image7/Fig7_2_SortedSlice.jpg[width=50%, height=30%, align=center]
+During execution, if an element from the left side is greater than the pivot, and one from the right side is smaller, the two elements are swapped. In our example, `78 > 31` and `24 < 31`, so they are exchanged. This process continues until the subarrays is partitioned correctly. Then, Quick Sort is applied recursively to the left and right partitions. 
 
-[.text-center]
-Figure 7.2. DRAKON-diagram of searching sorted slice algorithm
+To better understand how recursive sorting builds the final result, the table below shows how the `quickSort` function combines the `left`, `equal`, and `right` parts at each step:
 
-=== 7.2. Binary search for data in a sorted slice
+[cols="4,3,1,3,5", options="header"]
+|===
+| Step | Left | Pivot | Right | Result = left + equal + right
 
-Binary search is performed as follows:
+| [78, 11, 81, 21, 71, *31*, 61, 41, 51, 24] 
+| 11, 21, 24 
+| *31* 
+| 78, 81, 71, 61, 41, 51 
+| –
 
-[arabic]
-. Specifies the value of the element in the middle of the data
-structure. The resulting value is compared to the value you are looking
-for.
-. If the search value is less than the value of the means, the search is
-carried out in the first half of the elements, otherwise - in the
-second.3. The search is simply that the value of the middle element in
-the selected half is again determined and compared to the key.
-. The process continues until an item with the search value is found or
-the search interval is empty.
+| [11, 21, 24] 
+| 11 
+| *21* 
+| 24 
+| 11, 21, 24
 
-The DRAKON-diagram of the binary search algorithm is represented in
-Figure 7.3. (main() module is similar to the previous algorithm):
+| [78, 81, 71, 61, *41*, 51] 
+| 41, 51 
+| *61* 
+| 78, 81, 71 
+| 11, 21, 24
 
-image::Engl_image7/Fig7_3_BinarySearch.jpg[width=50%, height=30%, align=center]
+| [41, 51] 
+| 41 
+| *51* 
+| 
+| 11, 21, 24, 41, 51
 
-[.text-center]
-Figure 7.3. DRAKON-diagram of Binary Search algorithm
+| [78, 81, 71] 
+| 78, 71 
+| *81* 
+| 
+| 11, 21, 24, 41, 51, 61
 
-_Time complexity_ of binary search algorithm belongs to class O(log n).
-The way to interpret this is that the asymptotic increase in the time
-taken by a function to perform a given input set of size n will not
-exceed log n. _Space complexity_: O(1). That is, no extra space
-required.
+| [78, 71] 
+| 
+| *71* 
+| 78 
+| 11, 21, 24, 41, 51, 61, 71, 78
 
-=== 7.3. Searching in Single-Linked List
+| [81] 
+| 
+| *81* 
+| 
+| 11, 21, 24, 41, 51, 61, 71, 78, 81
+|===
 
-There are three possibilities for a single-linked list. First, the
-desired value is missing from the list, second, the desired value is
-encountered once and, third, the desired value is encountered
-repeatedly. You can also set the task of removing duplicates, i.e.,
-nodes that are redundant. To solve these problems it is necessary to
-create a Single-Linked List, the items of which contain values "Smith
-A.", "Shafler B.”, "Wiley D.", "Brown G.", "Black H.". In this list you
-should delete the entry " Brown G." and then add a new entry "Singer B."
-placing it after the entry "Wiley D.". After that, you should delete the
-duplicates of the entry " Shafler B." leaving only one. The
-corresponding dragon diagrams are presented in Figure 7.4 a,b,c,d:
 
-image::Engl_image7/Fig7_4a_Main.jpg[width=50%, height=30%, align=center]
+The time complexity of Quick Sort depends on how well the pivot is chosen:
 
-[.text-center]
-a). Function _main()_
+- **Best case**: the pivot is the median → O(n log n)
+- **Average case**: still O(n log n), due to recursive halving
+- **Worst case**: when the pivot is the smallest or largest item, resulting in unbalanced partitions → O(n²)
 
-image::Engl_image7/Fig7_4b_Remove.jpg[width=80%, height=30%, align=center]
+Quick Sort uses recursion. In each step, it partitions the array and performs O(n) work. This leads to the recurrence relation:  
+`T(n) = 2T(n/2) + O(n)`  
+which solves to `O(n log n)`.
 
-[.text-center]
-b). function of deletion _RemoveVal(val)_
+The complexity summary is shown below. Quick Sort is **not stable** by default.
 
-image::Engl_image7/Fig7_4c_SearchData.jpg[width=50%, height=30%, align=center]
+[cols="2*", width="40%", options="header"]
+|===
+| Time complexity        |                   
+| Worst case             | O(n^2^)     
+| Average case           | O(n log n)   
+| Best case              | O(n log n)
+| *Space complexity*     | 
+| Worst case             | O(n)
+| Average case           | O(log n) 
+|===
 
-[.text-center]
-c). function of searching _SearchData(val)_
-+
+=== 7.7. Merge Sort
 
-image::Engl_image7/Fig7_4d_PushVal.jpg[width=50%, height=30%, align=center]
+Merge Sort is a classic divide-and-conquer algorithm. It works by recursively splitting the array into smaller parts until each part contains only two elements, which are then compared and sorted. After the splitting phase, the algorithm merges the sorted parts back together.
 
-[.text-center]
-d). function of inserting by value _PushVal + NodeWithVal_
+During merging, one element from each fragment is selected and compared. The smaller (or larger, depending on the desired order) element is added to the result array. The remaining element is compared again with the next element from the other fragment. This process continues until all elements are merged. Figure 7.5 illustrates this process:
 
-image::Engl_image7/Fig7_4e_RemoveDupli.jpg[width=70%, height=30%, align=center]
 
-[.text-center]
-e). function of removing duplicates _RemoveDupli_
+image::_images/Fig7_5_merge.svg[width=75%]
 
-[.text-center]
-Figure 7.4. DRAKON diagram of algorithms deletion, search, insertion by
-value and dublicate deletion
-
-=== 7.4. Hashing
-
-The search time of an item in a data set depends on the number of
-element value comparisons. In order to reduce search times and thus
-improve computational efficiency, fewer comparisons are needed. This can
-be achieved by converting a larger data set into a smaller range called
-hashing, resulting in hash tables.
-
-From the perspective of the theory of abstract data types (ADT), a
-hash-table is a data structure that implements the interface of an
-associative array that allows you to store key-value pairs and perform
-three basic operations: the operation of adding a new pair, search
-operation and operation to delete the key-value pair. 
-From a programming position, a hash table is a collection of items 
-containing a key-value pair, where the key is computed by a special 
-function called a _hash function_. A hash-table, in turn, 
-consists of buckets, a set of elements with matching or close hash values
-of the function. 
-There are different methods of constructing a hash function, the simplest 
-of which is the residual method, where the hash function is defined 
-as the remainder of the division of two numbers (_x, m_), where _x_ 
-is the item of the set, _m_ is the number of buckets. In Golang, 
-the hash function for this method is: _h = x % m_.
-
-We will conduct a detailed analysis of the hash table creation process 
-utilizing the Go programming language within the DRAKON WEB Editor.  
-First, a variable of the _Node_ type is created, defined as a structure 
-consisting of two fields: the element value is _Value int_ and the next 
-element address is _Next *Node_. In fact, it is a single linked list (see Sect. 1).
-
-type Node struct \{ Value int Next *Node }
-
-Then, a hash-table is created through a structure that has two fields:
-the first field (_Table_) is a map that relates the integer (_hash
-index_) to the associated list (___Node_), and the second - __Size* of
-type _int_:
-
-[source,go]
-----
-type HashTable struct {
-Table map[int] *Node
-Size int
-}
-----
-
-As a result, this hash table would have to have as many single linked
-lists (buckets) as was specified by the Size constant. In the above case
-the number of slots is 15. Note that the _Node_ and _HashTable_ type
-advertisement, as well as the Size constant, are included in the
-File/File description option (Figure 7.5.).
-
-image::Engl_image7/Fig7_5a_Description.jpg[idth=50%, height=30%, align=center]
+image::_images/Fig7_5_mergeSorting.svg[width=75%]
 
 [.text-center]
-Figure 7.5. Type declaration _Node_, _HashTable_ and constant _Size_
+Figure 7.5. DRAKON-diagrams of Merge Sort algorithm: a) `merge()` function; b) `mergeSort()` function  
 
-As an example, consider constructing a hash-table of size _m_ = 15 for a
-collection of integers from 0 to 120. The hash table slots are
-originally empty:
-
-image::Engl_image7/Fig7_HashEmpty.jpg[idth=50%, height=30%, align=center]
-
-A hash function that establishes a relationship between an element and its 
-corresponding slot must accept any element from the dataset, specifically 
-ranging from 0 to 120, and return an integer that corresponds to a slot 
-number between 0 and 14. The algorithm implementing the remainder method 
-sequentially processes each element from the original set, dividing it by 15 
-and returning the remainder as the hash value. This can be expressed as 
-\( h(item) = item \mod 15 \). For instance, the hash code for the element 119 
-is calculated as \( 119 \mod 15 = 14 \) (where \( 119 - 15 \times 7 = 14 \)), 
-thus placing the value 119 into the corresponding slot.
-
-image::Engl_image7/Fig7_Hash119.jpg[idth=50%, height=30%, align=center]
-
-The algorithm then identifies slots for other elements, gradually
-filling them. When the algorithm encounters element 104 in the loop,
-then the remainder of the division is 104%15 = 14, so this element will
-also be included in the 14th slot. In this way, each slot will
-accumulate corresponding elements with one index hash. For example, for
-an index hash of 8, the slot will consist of these elements: 113 : 98 :
-83 : 68 : 53 : 38 : 23 : 8. And the entire hash table will be as follows
-(Table 7.1.):
-
-Table 7.1. Hash-table of 15 slots
-
-image::Engl_image7/Fig7_HashTable.jpg[idth=50%, height=30%, align=center]
-
-Thus, the remainder method converts a collection of 120 integers into a
-hash table of 15 slots. The search for an element is now greatly
-accelerated as it takes two steps: first, the hash function h =(x % m)
-computes the hash index, and then the search is done in a 7-element
-slot. The algorithm based on the residual method is represented by the
-following dragon diagrams (Figure 7.6.). Here _hinsert_ - module of
-filling with elements of slots on hash-function, _hLookup_-module of
-search of element in hash-table, _hTravers_ - module of passage on
-hash-table.
-
-The implementation of the main hash table functions using the hash
-function is as follows: 1.Create a _HashTable_ structure list of the
-size m to store objects. 2. Compute the object’s hash code by passing it
-through the hash function. 3. Get the bucket hash indices where the
-objects will be saved. 4. Save these objects in the designated bucket.
-
-DRAKON-diagrams of algorithms for implementing the main functions of
-working with hash-tables are shown in Figure 7.6.
-
-image::Engl_image7/Fig7_6_HDia_ab.jpg[idth=50%, height=30%, align=center]
+Visual representation of Merge Sort (splitting phase) is shown on Figure 7.7.
+[listing]
+....
+            [11, 32, 23, 85, 74, 90, 62, 48, 53, 10]
+                      /                           \
+       [11, 32, 23, 85, 74]                [90, 62, 48, 53, 10]
+           /         \                          /         \
+      [11, 32]     [23, 85, 74]            [90, 62]     [48, 53, 10]
+       /   \         /     \               /    \         /     \
+   [11]   [32]     [23]   [85, 74]       [90]  [62]     [48]  [53, 10]
+                             / \                             / \
+                          [85] [74]                      [53] [10]
+....
+==> Final merge: [11, 23, 32, 74, 85] + [10, 48, 53, 62, 90]  
+=> [10, 11, 23, 32, 48, 53, 62, 74, 85, 90]
 
 [.text-center]
-a). Hash-table creating function b). Item searching function
+Figure 7.7.Visual representation of Merge Sort
 
-image::Engl_image7/Fig7_6_HDia_cd.jpg[idth=50%, height=30%, align=center]
+Merge Sort has a time complexity of O(n log n), where `n` is the number of elements in the array. The algorithm splits the array into two halves until only single elements remain. The number of split operations is O(log n), and each merge operation compares `n` elements, which gives the overall complexity of O(nlog n).
+
+The summary of time and space complexity is shown below:
+
+[cols="2*", width="40%", options="header"]
+|===
+| Time complexity        |                   
+| Worst case             | O(n log n)     
+| Average case           | O(n log n)   
+| Best case              | O(n log n)
+| *Space complexity*     |                   
+| Worst case             | O(n)
+| Average case           | O(n)
+| Best case              | O(n)
+|===
+
+Merge Sort is a **stable** sorting algorithm, which means it preserves the relative order of equal elements in the input array. This stability is achieved because, during the merge phase, if two elements are equal, the one from the left subarray is placed before the one from the right subarray.
+
+This consistent behavior ensures that equal elements remain in the same order as they appeared in the original input.
+
+=== 7.7. Shell Sort
+
+Shell Sort is a variation of Insertion Sort. It begins by comparing and sorting elements that are separated by a certain distance _d_. Then, the process is repeated for smaller values of _d_ until _d = 1_, which is equivalent to a standard insertion sort.
+
+The DRAKON-diagram of the Shell Sort algorithm is shown in Figure 7.7.
+
+image::_images/Fig7_7_shellSort.svg[width=50%]
 
 [.text-center]
-c). Hash-table travers function d) Deletion item function
+Figure 7.7. DRAKON-diagram of the Shell Sort algorithm
+
+Shell Sort uses a three-step process common to many sorting algorithms:  
+– segmenting the array,  
+– sorting within the segments,  
+– merging the results into a sorted array.
+
+The array is partitioned in such a way that each item in a segment is a fixed number of positions apart from the others. This introduces a challenge: choosing the best distance _d_. A simple example of such a sequence is:  
+_d = n / 2_, then _d = d / 2_, and so on, until _d = 1_.
+
+The table illustrates how elements are swapped when a smaller value is found at position _arr[j]_ compared to _arr[j - inc]_.
 
 [.text-center]
-Figure 7.6. DRAKON-diagrams of hash-table algorithms
+*inc = 5*
 
-Consider the algorithm for removing an element from the hash-table.
-Suppose we delete element 74. First, the bucket containing the item to
-be removed is determined. It then passes through the elements of this
-bucket, where after each _node.Value == value_ check, the current
-element is stored in the _nodePrev_ variable. If the above condition is
-met, the _nodePrev.nextNode_ field (_0xc0000386d0_) is changed to
-(_0xc00384f0_), that is, the deleted element is skipped (Figure 7.7.):
-
-image::Engl_image7/Fig7_7_DeletionItem.jpg[idth=50%, height=30%, align=center]
+[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1,^1"]
+|===
+| j | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+|   | **90** | -80 | 70 | -60 | 50 | **-40** | 30 | -20 | 10 | 0
+|   | -40 | -80 | **-20** | -60 | 50 | 90 | 30 | **70** | 10 | 0
+|   | -40 | -80 | -20 | -60 | **0** | 90 | 30 | 70 | 10 | **50**
+|===
 
 [.text-center]
-igure 7.7. Deletion item from hash-table
+*inc = 2*
 
-Another example of a "good" hash function is for use with integer key
-values, the mean square method. The mean square method squares the key
-value and then extracts the average digits of the result, giving a value
-in the range from 0 to M. Software implementation of hash function
-algorithm creation in Golang language is reduced to the use of built-in
-functions of conversion of integers into string (strconv.Atoi(i)) and
-vice versa (strc__onv.Itoa(i))).__ For example, for any four-digit
-number, the hash function is:
+[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1,^1"]
+|===
+| j | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+|   | -40 | -80 | -20 | -60 | 0 | **70** | 30 | **90** | 10 | 50
+|   | -40 | -80 | -20 | -60 | 0 | 70 | **10** | 90 | **30** | 50
+|   | -40 | -80 | -20 | -60 | 0 | 70 | 10 | **90** | 30 | **50**
+|   | -40 | -80 | -20 | -60 | 0 | **50** | 10 | **70** | 30 | 90
+|===
 
-[source,go]
-----
-func  hFunc(i,) int {
-    var j int
-    var s string
-    i = i*i
-    s = strconv.Itoa(i)
-    s = s[3:5]
-    j,_ = strconv.Atoi(s)
-    return j
-}
-----
+[.text-center]
+*inc = 1*
 
-A more realistic scenario in hash table construction involves the phenomenon
-known as collision, where multiple keys hash to the same bucket or index. 
-In many cases, two or more keys are hashed identically, resulting in their 
-mapping to the same slot in the hash table. To handle this situation, there are 
-two primary strategies: either locate an alternative entry for the new key or 
-maintain a separate list at each index in the hash table to accommodate all keys 
-that hash to that index. These approaches represent two classic hashing schemes:
+[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1,^1"]
+|===
+| j | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+|   | **-40** | **-80** | -20 | -60 | 0 | 50 | 10 | 70 | 30 | 90
+|   | -80 | **-40** | **-60** | -20 | 0 | 50 | 10 | 70 | 30 | 90
+|   | -80 | -60 | -40 | -20 | 0 | **50** | **10** | 70 | 30 | 90
+|   | -80 | -40 | -60 | -20 | 0 | 10 | 50 | **70** | **30** | 90
+|   | -80 | -40 | -60 | -20 | 0 | 10 | **50** | **30** | 70 | 90
+|   | -80 | -40 | -60 | -20 | 0 | 10 | 30 | **50** | **70** | 90
+|===
 
 
-* оpen addressing hashing with linear testing;
-* сhain hashing or so-called multidimensional hashing.
+The average time complexity of Shell Sort is estimated as _O(n * log² n)_, though this depends on multiple factors.
 
-However, this topic is outside the scope of this manual.
+First, Shell Sort is essentially a generalization of Insertion Sort that uses gap-based comparisons. Second, the performance depends on the choice of gap sequence — that is, the values of _d_ used during sorting. Different sequences can yield significantly different results.
+
+Because Shell Sort works by refining the array through a series of passes with decreasing gaps, its time complexity is sensitive to these gap values. The optimal gap sequence is still a subject of research, and no single sequence is universally optimal.
+
+As a result, although the average-case complexity is commonly cited as _O(n * log² n)_, the exact performance may vary depending on the input and the sequence used.
+
+Shell Sort is **not stable** in its original form, but it can be modified to preserve stability if needed.
+
+=== 7.8. Heapsort
+
+The pyramid sorting algorithm can be seen as an improved version of the
+choice sorting algorithm (Select Sort): it divides the input data into
+sorted and unreported areas, and then successively reduces the
+unreported area, removing the largest item and moving it to the sorted
+area. An improvement is that the binary pile is used to find the highest
+value, not the linear search algorithm. This algorithm is executed using
+the notion of heap, which is a complete binary tree ([.mark]#see
+sub-section 1.3#.). All nodes of a heap are either larger than its child
+items or smaller than its child items. A heap binary tree can be of two
+types: a minimum heap (MinHeap), in which the parent node is always
+smaller than the child nodes, and a maximum heap (MaxHeap), in which the
+parent node is always greater than or equal to the child nodes (Figure
+7.8).
+
+image::_images/Fig7_8_Tree.jpg[width=100%]
+
+[.text-center]
+Figure 7.8. Binary tree examples (a - MinHeap; b - MaxHeap)
+
+The tree node sequence, starting with the root node, is performed by the
+formula:
+
+[.text-center]
+i_n = \frac{array\ size}{2} - 1
+
+
+First, the algorithm swaps the nodes (20) and (41), then the nodes (5)
+and (52), then we present this process in the table:
+
+[cols=",,,,,,",options="header",]
+|===
+|23 |5 |20 |52 |11 |41 |14
+|23 |5 |*41* |52 |11 |*20* |14
+|23 |*52* |41 |*5* |11 |20 |14
+|*52* |*23* |41 |5 |11 |20 |14
+|*14* |23 |41 |5 |11 |20 |*52*
+|*41* |23 |14 |5 |11 |20 |52
+|*20* |23 |14 |5 |11 |*41* |52
+|*23* |*20* |14 |5 |11 |41 |52
+|*11* |20 |14 |5 |*23* |41 |52
+|*20* |*11* |14 |5 |23 |41 |52
+|*5* |11 |14 |*20* |23 |41 |52
+|*11* |*5* |14 |20 |23 |41 |52
+|*5* |*11* |14 |20 |23 |41 |52
+|===
+
+The heap sorting algorithm uses three functions: _heap_Sort_, which
+performs node overwriting, _heapify_, which compares adjacent nodes, and
+_swap_, which swap two nodes. The sequence of the nodes in the heap is
+shown in Figure 7.9:
+
+image::_images/Fig7_9_All.jpg[width=150%]
+
+[.text-center]
+Figure 7.9. Sequence of node movement in heap
+
+DRAKON-diagram of heap algorithm is presented in Figure 7.10:
+
+image::_images/Fig7_10a_heapSort.svg[width=200%]
+
+image::_images/Fig7_10b_heapify.svg[width=200%]
+
+[.text-center]
+Figure 7.10. DRAKON-diagram heap sorting algorithm a) heapSort(arr); b) heapify(arr,size,i)
+
+
+The evaluation of the complexity of the heap sorting algorithm presented
+in the table
+
+=== 7.9. Sorting comparison
+
+Choosing a sorting algorithm is determined by the following factors: 1
+
+• Time complexity;
+
+• Space complexity;
+
+• Stability/instability.
+
+Knowing the strengths and weaknesses of each of the algorithms
+considered allows you to make a choice in favor of a particular sort.
+Each algorithm is unique and works best under certain conditions.
+
+[width="100%",cols="26%,25%,24%,25%",options="header", width = 60%]
+|===
+|Аlgorithm |Worst |Average |Best
+|Bubble |O(n2) |O(n2) |O(n)
+|Selection |O(n2) |O(n2) |O(n2)
+|Insertion |O(n2) |O(n2) |O(n)
+|Quick Sort |O(n2) |O(nlog(n)) |O(nlog(n))
+|Merge Sort |O(nlog(n)) |O(nlog(n)) |O(nlog(n))
+|Shell Sort |O(n(log(n)2) |O(n(log(n)2) |O(n)
+|Heap Sort |O(n.log(n)) |O(n.log(n)) |O(n.log(n))
+|===
+
+[cols="1,1,1",options="header", width = 60%]
+|===
+|Аlgorithm |Space comlexity |Stable
+|Bubble |O(1) |Stable
+|Selection |O(1) |Stable
+|Insertion |O(1) |Stable
+|Quick Sort |O(1) |Stable
+|Merge Sort |O(1) |Stable
+|Shell Sort |O(1) |Stable
+|Heap Sort |O(1) |Stable
+|===
+
+Some common sorting algorithms are inherently stable, such as MergeSort, InsertSort, and BubbleSort. Others, such as QuickSort, HeapSort, and SelectSort, are unstable. For example, we can use the extra space to maintain stability in QuickSort.
