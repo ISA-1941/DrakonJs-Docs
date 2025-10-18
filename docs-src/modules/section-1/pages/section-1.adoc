@@ -25,11 +25,7 @@ According to Steve McConnell, the author of *“Code Complete”*, abstract data
 
 A simplified classification of data structures can be presented as follows:
 
-image::_images/Fig1_1_class.jpg[width=75%]
-
-[.text-center]
-Figure 1.1. Classification of Data Structures
-
+image::image$Fig1_1_class.jpg[Figure 1.1. Classification of Data Structures, width=75%, opts=caption]
 
 Each data structure has its own advantages and disadvantages, making it necessary to analyze them in terms of **memory efficiency** and **data access time**.
 
