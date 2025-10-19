@@ -1,3 +1,6 @@
+:imagesdir: docs-src/modules/section-3/assets/images
+[.text-justify]
+:figure-caption!
 == SECTION 3. Implementation of Basic Abstract Data Types in JavaScript
 
 === 3.1. Data Structuring Features
