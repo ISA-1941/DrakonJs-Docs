@@ -100,11 +100,9 @@ An array is a collection of data, where each element is stored at a specific ind
 
 For example, the collection of integers [24, 12, 36, 6, 47, 11] forms an array (.Figure 3.1.).
 
-image::{imagesdir}/Fig3_1_Array.jpg[width=400,height=200,align=center]
-
 [.text-center]
 .Figure 3.1. One-dimensional array
-
+image::{imagesdir}/Fig3_1_Array.jpg[width=400,height=200,align=center]
 Declaring Arrays in JavaScript
 
 JavaScript arrays are dynamic, meaning they can grow and shrink as needed. Unlike some other languages, JavaScript allows mixing different types within an array, but best practice is to keep arrays homogeneous (storing values of the same type).
@@ -157,7 +155,7 @@ In JavaScript, slices are implemented dynamically. To create a slice (array) in 
 let parentSlice = new Array(20).fill(0); // Creating an array of 20 elements, filled with zeros
 ----
 [.text-center]
-..Figure 3.2. Create different slices **sliceA** and **sliceB**
+.Figure 3.2. Create different slices **sliceA** and **sliceB**
 image::{imagesdir}/Fig3_2_Slice.jpg[width=600,height=200,align=center]
 
 The **length** property indicates the number of elements in the slice (array). In JavaScript there is no explicit concept of "capacity". Multiple "slices" can be created from a single array using the **slice()** method or destructuring. For example, to create **sliceA** and **sliceB** from **parentSlice**:
@@ -280,7 +278,7 @@ In JavaScript, Maps are collections that store unordered key-value pairs, where 
 Unlike arrays, which use numeric indexes, Maps allow keys of any data type, making them more flexible (.Figure 3.3.). 
 
 [.text-center]
-.Figure 3.1. Map
+.Figure 3.3. Map
 image::_images/Fig3_3_Map.jpg[width=400,height=200,align=center]
 
 In JavaScript, we use the Map object to create a map. The syntax is:
@@ -326,10 +324,9 @@ If the key does not exist, **.get()** returns undefined.
 
 A linked list is a dynamic data structure where each element, called a node, consists of two parts (.Figure 3.3.):
 
-image::_images/Fig3_4_LL.jpg[width=70%, height=30%, align=center]
-
 [.text-center]
-.Figure 3.3. Simply linked list structure
+.Figure 3.4. Simply linked list structure
+image::_images/Fig3_4_LL.jpg[width=70%, height=30%, align=center]
 
 1️⃣ Data (which can be any primitive or complex data type).
 
@@ -386,11 +383,9 @@ according to the _"**last in - first out**" (LIFO - Last-In-First-Out)_
 strategy. Data enters the stack from only one side, called the top of
 the stack (.Figure 3.5.).
 
-image::_images/Fig3_5_Stack.jpg[width=70%, height=40%, align=center]
-
 [.text-center]
 .Figure 3.5. _Last-in, first-out_ stack work
-
+image::_images/Fig3_5_Stack.jpg[width=70%, height=40%, align=center]
 A stack supports two primary operations:
 
 **Push(item)** – adds an element to the top of the stack.
@@ -445,11 +440,9 @@ b) Queue
 
 A queue is a linear data structure that follows the _First-In-First-Out_ (FIFO) principle. This means that the first element added to the queue is the first one to be removed (.Figure 3.6.).
 
-image::_images/Fig3_6_Queue.jpg[width=70%, height=40%, align=center]
-
 [.text-center]
 .Figure 3.6. _First-In-First-Out_ queue work 
-
+image::_images/Fig3_6_Queue.jpg[width=70%, height=40%, align=center]
 
 A queue supports two primary operations:
 
@@ -474,10 +467,9 @@ type of data structures using the visual algorithmic language DRAKON and
 the programming language Golang. Before we continue, let's review the key 
 terms associated with binary trees (.Figure 3.7.).
 
-image::_images/Fig3_7_Term.jpg[width=70%, height=40%, align=center]
-
 [.text-center]
 .Figure 3.7. Basic terminology of the tree
+image::_images/Fig3_7_Term.jpg[width=70%, height=40%, align=center]
 
 _Root:_ The root of the tree is the only node with no incoming edges. It
 is the top node in the tree;
@@ -501,10 +493,9 @@ root node of this node.
 The binary tree’s information structure is set up as follows: (Figure
 3.8.):
 
-image::_images/Fig3_8_BST.jpg[width=50%, height=30%, align=center]
-
 [.text-center]
 .Figure 3.8 Binary tree structure (_info_ - value (key), (N - NULL))
+image::_images/Fig3_8_BST.jpg[width=50%, height=30%, align=center]
 
 The declaration of the basic elements of binary trees in the JavaScript language is conveniently performed using the **factory function**:
 
@@ -623,11 +614,9 @@ Types of Graphs (.Figure 3.9):
 
 2️⃣ Directed Graph (Digraph) – Edges have direction (e.g., roads, dependencies).
 
-
-image::_images/Fig3_9_Graphes.jpg[width=70%, height=40%, align=center]
-
 [.text-center]
-Figure 9.1. The view of a) -undirected; b) - directed graph
+.Figure 3.9. The view of a) -undirected; b) - directed graph
+image::_images/Fig3_9_Graphes.jpg[width=70%, height=40%, align=center]
 
 🔹 Graph Representation in JavaScript
 
