@@ -132,10 +132,9 @@ image::{imagesdir}/Fig1_4_Stack.jpg[width=40%]
 
 A **queue** is a **First-In-First-Out (FIFO)** structure where elements are added at the back and removed from the front.
 
-image::_images/Fig1_5_Queue.jpg[width=50%, height=30%, align=center]
+.Figure 1.5. Queue Structure
+image::{imagesdir}/Fig1_5_Queue.jpg[width=50%]
 
-[.text-center]
-Figure 1.5. Queue Structure
 
 ##### **Common Variations:**
 
@@ -190,11 +189,8 @@ V = {v₁, v₂, ..., vₙ} (set of vertices)
 E ⊂ V×V (directed edges)
 ∃! root ∈ V ∀v ∈ V ∃ unique path from root to v
 ```
-
-image::_images/Fig1_6_Tree.jpg[width=50%, height=34%, align=center]
-
-[.text-center]
-Figure 1.6. Tree Structure Taxonomy
+.Figure 1.6. Tree Structure Taxonomy
+image::{imagesdir}/Fig1_6_Tree.jpg[width=50%]
 
 ===== Fundamental Properties
 
@@ -239,10 +235,8 @@ A graph is a pair G = (V, E) where:
   - Weight values
   - Labels
 
-image::_images/Fig1_7_Graph.jpg[width=75%, height=34%, align=center]
-
-[.text-center]
-Figure 1.7. Graph Variant Visualization
+.Figure 1.7. Graph Variant Visualization
+image::{imagesdir}/Fig1_6_Tree.jpg[width=50%]Fig1_7_Graph.jpg[width=75%]
 
 ===== Typological Spectrum
 
