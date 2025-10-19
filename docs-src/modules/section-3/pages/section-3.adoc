@@ -1,4 +1,4 @@
-вввввввввввввввввввввввввввввввууууууууууукккккккккккеееееееаааааааааааааамммммммаа:imagesdir: docs-src/modules/section-3/assets/images
+:imagesdir: docs-src/modules/section-3/assets/images
 [.text-justify]
 :figure-caption!:
 == SECTION 3. Implementation of Basic Abstract Data Types in JavaScript
@@ -212,6 +212,7 @@ console.log("Employee 2:", employee2);
 Key Differences:
 
 ✅ The first approach (object literal {}) is more common and recommended.
+
 ✅ The second approach (new Object()) is used when objects need to be created dynamically.
 
 🔹 Creating an object with a _factory function_
@@ -279,7 +280,7 @@ Unlike arrays, which use numeric indexes, Maps allow keys of any data type, maki
 
 [.text-center]
 .Figure 3.3. Map
-image::_images/Fig3_3_Map.jpg[width=400,height=200,align=center]
+image::{imagesdir}/Fig3_3_Map.jpg[width=400,height=200,align=center]
 
 In JavaScript, we use the Map object to create a map. The syntax is:
 
@@ -326,7 +327,7 @@ A linked list is a dynamic data structure where each element, called a node, con
 
 [.text-center]
 .Figure 3.4. Simply linked list structure
-image::_images/Fig3_4_LL.jpg[width=100%]
+image::{imagesdir}/Fig3_4_LL.jpg[width=100%]
 
 1️⃣ Data (which can be any primitive or complex data type).
 
@@ -352,6 +353,7 @@ function createNode(data) {
 ----
 
 Each node has:
+
 ✅ data – stores the value.
 
 ✅ next – stores the reference to the next node (initially null).
@@ -387,7 +389,7 @@ the stack (.Figure 3.5.).
 
 [.text-center]
 .Figure 3.5. _Last-in, first-out_ stack work
-image::_images/Fig3_5_Stack.jpg[width=100%]
+image::{imagesdir}/Fig3_5_Stack.jpg[width=100%]
 
 A stack supports two primary operations:
 
@@ -445,7 +447,7 @@ A queue is a linear data structure that follows the _First-In-First-Out_ (FIFO) 
 
 [.text-center]
 .Figure 3.6. _First-In-First-Out_ queue work 
-image::_images/Fig3_6_Queue.jpg[width=100%]
+image::{imagesdir}/Fig3_6_Queue.jpg[width=100%]
 
 A queue supports two primary operations:
 
@@ -472,7 +474,7 @@ terms associated with binary trees (.Figure 3.7.).
 
 [.text-center]
 .Figure 3.7. Basic terminology of the tree
-image::_images/Fig3_7_Term.jpg[width=70%, height=40%, align=center]
+image::{imagesdir}/Fig3_7_Term.jpg[width=70%, height=40%, align=center]
 
 _Root:_ The root of the tree is the only node with no incoming edges. It
 is the top node in the tree;
@@ -498,7 +500,7 @@ The binary tree’s information structure is set up as follows: (Figure
 
 [.text-center]
 .Figure 3.8 Binary tree structure (_info_ - value (key), (N - NULL))
-image::_images/Fig3_8_BST.jpg[width=50%, height=30%, align=center]
+image::{imagesdir}/Fig3_8_BST.jpg[width=50%, height=30%, align=center]
 
 The declaration of the basic elements of binary trees in the JavaScript language is conveniently performed using the **factory function**:
 
