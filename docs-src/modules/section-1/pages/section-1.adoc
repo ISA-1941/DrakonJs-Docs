@@ -1,3 +1,4 @@
+:figure-caption!:
 == SECTION 1. Abstract Data Types
 
 [abstract]
