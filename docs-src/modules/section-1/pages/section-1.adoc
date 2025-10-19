@@ -1,4 +1,5 @@
 :imagesdir: docs-src/modules/section-1/assets/images
+[.text-justify]
 :figure-caption!:
 == SECTION 1. Abstract Data Types
 
