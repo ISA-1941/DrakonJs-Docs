@@ -100,7 +100,7 @@ An array is a collection of data, where each element is stored at a specific ind
 
 For example, the collection of integers [24, 12, 36, 6, 47, 11] forms an array (Figure 3.1.).
 
-image::_images/Fig3_1_Array.jpg[width=400,height=200,align=center]
+image::{imagesdir}/Fig3_1_Array.jpg[width=400,height=200,align=center]
 
 [.text-center]
 Figure 3.1. One-dimensional array
@@ -157,7 +157,7 @@ In JavaScript, slices are implemented dynamically. To create a slice (array) in 
 let parentSlice = new Array(20).fill(0); // Creating an array of 20 elements, filled with zeros
 ----
 
-image::_images/Fig3_2_Slice.jpg[width=600,height=200,align=center]
+image::{imagesdir}/Fig3_2_Slice.jpg[width=600,height=200,align=center]
 
 [.text-center]
 Figure 3.2. Create different slices **sliceA** and **sliceB**
@@ -281,10 +281,9 @@ In JavaScript, Maps are collections that store unordered key-value pairs, where 
 
 Unlike arrays, which use numeric indexes, Maps allow keys of any data type, making them more flexible (Figure 3.3.). 
 
-image::_images/Fig3_3_Map.jpg[width=400,height=200,align=center]
-
 [.text-center]
-Figure 3.1. Map
+.Figure 3.1. Map
+image::_images/Fig3_3_Map.jpg[width=400,height=200,align=center]
 
 In JavaScript, we use the Map object to create a map. The syntax is:
 
