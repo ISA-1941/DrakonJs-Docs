@@ -1,4 +1,4 @@
-:imagesdir: docs-src/modules/section-3/assets/images
+вввввввввввввввввввввввввввввввууууууууууукккккккккккеееееееаааааааааааааамммммммаа:imagesdir: docs-src/modules/section-3/assets/images
 [.text-justify]
 :figure-caption!:
 == SECTION 3. Implementation of Basic Abstract Data Types in JavaScript
@@ -387,7 +387,7 @@ the stack (.Figure 3.5.).
 
 [.text-center]
 .Figure 3.5. _Last-in, first-out_ stack work
-image::_images/Fig3_5_Stack.jpg[width=70%]
+image::_images/Fig3_5_Stack.jpg[width=100%]
 
 A stack supports two primary operations:
 
@@ -445,7 +445,7 @@ A queue is a linear data structure that follows the _First-In-First-Out_ (FIFO) 
 
 [.text-center]
 .Figure 3.6. _First-In-First-Out_ queue work 
-image::_images/Fig3_6_Queue.jpg[width=75%]
+image::_images/Fig3_6_Queue.jpg[width=100%]
 
 A queue supports two primary operations:
 
