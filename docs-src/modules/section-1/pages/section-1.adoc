@@ -1,5 +1,6 @@
 :imagesdir: docs-src/modules/section-1/assets/images
 :figure-caption!:
+[.text-center]
 == SECTION 1. Abstract Data Types
 
 [abstract]
@@ -28,7 +29,6 @@ According to Steve McConnell, the author of *“Code Complete”*, abstract data
 A simplified classification of data structures can be presented as follows:
 
 .Figure 1.1. Classification of Data Structures
-[.text-center]
 image::{imagesdir}/Fig1_1_class.jpg[width=100%]
 
 Each data structure has its own advantages and disadvantages, making it necessary to analyze them in terms of **memory efficiency** and **data access time**.
