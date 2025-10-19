@@ -133,7 +133,7 @@ image::{imagesdir}/Fig1_4_Stack.jpg[width=40%]
 A **queue** is a **First-In-First-Out (FIFO)** structure where elements are added at the back and removed from the front.
 
 .Figure 1.5. Queue Structure
-image::{imagesdir}/Fig1_5_Queue.jpg[width=50%]
+image::{imagesdir}/Fig1_5_Queue.jpg[width=75%]
 
 
 ##### **Common Variations:**
@@ -190,7 +190,7 @@ E ⊂ V×V (directed edges)
 ∃! root ∈ V ∀v ∈ V ∃ unique path from root to v
 ```
 .Figure 1.6. Tree Structure Taxonomy
-image::{imagesdir}/Fig1_6_Tree.jpg[width=50%]
+image::{imagesdir}/Fig1_6_Tree.jpg[width=75%]
 
 ===== Fundamental Properties
 
