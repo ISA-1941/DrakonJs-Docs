@@ -48,8 +48,7 @@ Moreover, data structures can be classified as **homogeneous** (containing eleme
 An **array** is a fundamental data structure that stores a fixed-size collection of elements of the same type. Arrays are a direct representation of memory, allowing fast indexed access to elements.
 
 .Figure 1.2. Representation of an Array
-[.text-center]
-image::image$Fig1_2_Array.jpg[width=75%]
+image::{imagesdir}/Fig1_2_Array.jpg[width=75%]
 
 ##### **Characteristics of Arrays:**
 
