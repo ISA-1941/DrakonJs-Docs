@@ -271,7 +271,7 @@ Quick Sort is a highly efficient sorting algorithm based on the divide-and-conqu
 The DRAKON-diagram of the Quick Sort algorithm is shown in Figure 7.4.
 
 //image::{imagesdir}/Fig7_4_quicktSort.svg[width=50%]
-mage::{imagesdir}/Fig7_4_quicktSort.svg[width=50%, link="{imagesdir}/Fig7_4_quicktSort.svg", window="_blank"]
+image::{imagesdir}/Fig7_4_quicktSort.svg[width=50%, link="{imagesdir}/Fig7_4_quicktSort.svg", window="_blank"]
 
 [.text-center]
 Figure 7.4. DRAKON-diagram of the Quick Sort algorithm
@@ -373,7 +373,7 @@ During merging, one element from each fragment is selected and compared. The sma
 image::{imagesdir}/Fig7_5_merge.svg[width=50%, link="{imagesdir}/Fig7_5_merge.svg", window="_blank"]
 
 //image::{imagesdir}/Fig7_5_mergeSorting.svg[width=75%]
-mage::{imagesdir}/Fig7_5_mergeSorting.svg[width=50%, link="{imagesdir}/Fig7_5_mergeSorting.svg", window="_blank"]
+image::{imagesdir}/Fig7_5_mergeSorting.svg[width=50%, link="{imagesdir}/Fig7_5_mergeSorting.svg", window="_blank"]
 
 [.text-center]
 Figure 7.5. DRAKON-diagrams of Merge Sort algorithm: a) `merge()` function; b) `mergeSort()` function  
@@ -395,7 +395,7 @@ Visual representation of Merge Sort (splitting phase) is shown on Figure 7.7.
 => [10, 11, 23, 32, 48, 53, 62, 74, 85, 90]
 
 [.text-center]
-Figure 7.7.Visual representation of Merge Sort
+Figure 7.6.Visual representation of Merge Sort
 
 Merge Sort has a time complexity of O(n log n), where `n` is the number of elements in the array. The algorithm splits the array into two halves until only single elements remain. The number of split operations is O(log n), and each merge operation compares `n` elements, which gives the overall complexity of O(nlog n).
 
@@ -502,10 +502,10 @@ smaller than the child nodes, and a maximum heap (MaxHeap), in which the
 parent node is always greater than or equal to the child nodes (Figure
 7.8).
 
-image::{imagesdir}/Fig7_8_Tree.jpg[width=100%]
+image::{imagesdir}/Fig7_7_Tree.jpg[width=100%]
 
 [.text-center]
-Figure 7.8. Binary tree examples (a - MinHeap; b - MaxHeap)
+Figure 7.7. Binary tree examples (a - MinHeap; b - MaxHeap)
 
 The tree node sequence, starting with the root node, is performed by the
 formula:
