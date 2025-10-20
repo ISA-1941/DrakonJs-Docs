@@ -370,7 +370,8 @@ During merging, one element from each fragment is selected and compared. The sma
 
 
 //image::{imagesdir}/Fig7_5_merge.svg[width=75%]
-mage::{imagesdir}/Fig7_5_merge.svg[width=50%, link="{imagesdir}/Fig7_5_merge.svg", window="_blank"]
+image::{imagesdir}/Fig7_5_merge.svg[width=50%, link="{imagesdir}/Fig7_5_merge.svg", window="_blank"]
+
 //image::{imagesdir}/Fig7_5_mergeSorting.svg[width=75%]
 mage::{imagesdir}/Fig7_5_mergeSorting.svg[width=50%, link="{imagesdir}/Fig7_5_mergeSorting.svg", window="_blank"]
 
