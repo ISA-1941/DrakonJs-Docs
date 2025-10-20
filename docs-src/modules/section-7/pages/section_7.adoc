@@ -20,7 +20,7 @@ Since most sorting tasks in programming involve arrays or similar structures, th
 
 Bubble Sort is one of the simplest sorting algorithms, especially suitable for small datasets. The algorithm gets its name from the way larger values "bubble up" to the end of the array with each pass. The DRAKON-diagram of the algorithm is shown in Figure 7.1. The implementation consists of two modules: `main()` and `bubbleSort(arr)`.
 
-image::_images/Fig7_1_bubbleSort.svg[width=50%]
+image::{imagesdir}/Fig7_1_bubbleSort.svg[width=50%]
 
 [.text-center]
 Figure 7.1. DRAKON-diagram of the Bubble Sort algorithm
@@ -66,7 +66,7 @@ Because of its simplicity, Bubble Sort is still used in some applications — fo
 
 The Selection Sort algorithm is based on comparison operations. It works by dividing the dataset into two parts: the sorted portion on the left and the unsorted portion on the right. The DRAKON-diagram of this algorithm is shown in Figure 7.2.
 
-image::_images/Fig7_2_selectSort.svg[width=75%]
+image::{imagesdir}/Fig7_2_selectSort.svg[width=75%]
 
 [.text-center]
 Figure 7.2. DRAKON-diagram of the Selection Sort algorithm
@@ -115,7 +115,7 @@ Insertion Sort works by repeatedly taking an item from the unsorted part of the 
 
 This algorithm is similar to how people naturally sort playing cards or paper documents: taking one item at a time and inserting it into the correct place. The DRAKON-diagram for the Insertion Sort algorithm is shown in Figure 7.3.
 
-image::_images/Fig7_3_insertSort.svg[width="50%"] 
+image::{imagesdir}/Fig7_3_insertSort.svg[width="50%"] 
 
 [.text-center]
 Figure 7.3. DRAKON-diagram of the Insert Sort algorithm
@@ -267,7 +267,7 @@ Quick Sort is a highly efficient sorting algorithm based on the divide-and-conqu
 
 The DRAKON-diagram of the Quick Sort algorithm is shown in Figure 7.4.
 
-image::_images/Fig7_4_quicktSort.svg[width=50%]
+image::{imagesdir}/Fig7_4_quicktSort.svg[width=50%]
 
 [.text-center]
 Figure 7.4. DRAKON-diagram of the Quick Sort algorithm
@@ -365,9 +365,9 @@ Merge Sort is a classic divide-and-conquer algorithm. It works by recursively sp
 During merging, one element from each fragment is selected and compared. The smaller (or larger, depending on the desired order) element is added to the result array. The remaining element is compared again with the next element from the other fragment. This process continues until all elements are merged. Figure 7.5 illustrates this process:
 
 
-image::_images/Fig7_5_merge.svg[width=75%]
+image::{imagesdir}/Fig7_5_merge.svg[width=75%]
 
-image::_images/Fig7_5_mergeSorting.svg[width=75%]
+image::{imagesdir}/Fig7_5_mergeSorting.svg[width=75%]
 
 [.text-center]
 Figure 7.5. DRAKON-diagrams of Merge Sort algorithm: a) `merge()` function; b) `mergeSort()` function  
@@ -417,7 +417,7 @@ Shell Sort is a variation of Insertion Sort. It begins by comparing and sorting 
 
 The DRAKON-diagram of the Shell Sort algorithm is shown in Figure 7.7.
 
-image::_images/Fig7_7_shellSort.svg[width=50%]
+image::{imagesdir}/Fig7_7_shellSort.svg[width=50%]
 
 [.text-center]
 Figure 7.7. DRAKON-diagram of the Shell Sort algorithm
@@ -496,7 +496,7 @@ smaller than the child nodes, and a maximum heap (MaxHeap), in which the
 parent node is always greater than or equal to the child nodes (Figure
 7.8).
 
-image::_images/Fig7_8_Tree.jpg[width=100%]
+image::{imagesdir}/Fig7_8_Tree.jpg[width=100%]
 
 [.text-center]
 Figure 7.8. Binary tree examples (a - MinHeap; b - MaxHeap)
@@ -533,16 +533,16 @@ performs node overwriting, _heapify_, which compares adjacent nodes, and
 _swap_, which swap two nodes. The sequence of the nodes in the heap is
 shown in Figure 7.9:
 
-image::_images/Fig7_9_All.jpg[width=150%]
+image::{imagesdir}/Fig7_9_All.jpg[width=150%]
 
 [.text-center]
 Figure 7.9. Sequence of node movement in heap
 
 DRAKON-diagram of heap algorithm is presented in Figure 7.10:
 
-image::_images/Fig7_10a_heapSort.svg[width=200%]
+image::{imagesdir}/Fig7_10a_heapSort.svg[width=200%]
 
-image::_images/Fig7_10b_heapify.svg[width=200%]
+image::{imagesdir}/Fig7_10b_heapify.svg[width=200%]
 
 [.text-center]
 Figure 7.10. DRAKON-diagram heap sorting algorithm a) heapSort(arr); b) heapify(arr,size,i)
