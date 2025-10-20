@@ -117,7 +117,7 @@ Insertion Sort works by repeatedly taking an item from the unsorted part of the 
 
 This algorithm is similar to how people naturally sort playing cards or paper documents: taking one item at a time and inserting it into the correct place. The DRAKON-diagram for the Insertion Sort algorithm is shown in Figure 7.3.
 
-image::{imagesdir}/Fig7_3_insertSort.svg[width="50%"] 
+//image::{imagesdir}/Fig7_3_insertSort.svg[width="50%"] 
 image::{imagesdir}/Fig7_3_insertSort.svg[width=50%, link="{imagesdir}/Fig7_3_insertSort.svg", window="_blank"]
 
 [.text-center]
