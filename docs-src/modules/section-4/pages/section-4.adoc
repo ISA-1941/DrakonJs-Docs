@@ -245,7 +245,7 @@ c) output result.
 
 The graphical representation of the basic element of the linear structure in JavaScript is in the form of simple rectangles (Figure 4.7.).
 
-image::{imagesdir}/Fig4_7_Linear.jpg[width=75%]
+image::{imagesdir}/Fig4_7_Linear.jpg[width=50%]
 
 [.text-center]
 Figure 4.7. Linear structure of Drakon-diagram
