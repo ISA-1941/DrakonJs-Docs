@@ -249,7 +249,7 @@ O(n^2^~)~
 
 Or in graphic form (Figure..).
 
-image::{imagesdir}/Fig5_1_Comparison.jpg[width=75%]
+image::{imagesdir}/Fig5_1_Comparison.jpg[width=100%]
 
 [.text-center]
 Figure 5.1. Comparison of general copmlexities
