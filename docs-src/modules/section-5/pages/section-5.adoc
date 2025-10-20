@@ -1,3 +1,6 @@
+:imagesdir: docs-src/modules/section-5/assets/images
+[.text-justify]
+:figure-caption!:
 
 == SECTION 5. COMPLEXITY AND STABILITY ANALYSIS OF ALGORITHM
 
