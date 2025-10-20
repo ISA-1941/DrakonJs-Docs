@@ -270,8 +270,8 @@ Quick Sort is a highly efficient sorting algorithm based on the divide-and-conqu
 
 The DRAKON-diagram of the Quick Sort algorithm is shown in Figure 7.4.
 
-//image::{imagesdir}/Fig7_4_quicktSort.svg[width=50%]
-image::{imagesdir}/Fig7_4_quicktSort.svg[width=50%, link="{imagesdir}/Fig7_4_quicktSort.svg", window="_blank"]
+//image::{imagesdir}/Fig7_4_quickSort.svg[width=50%]
+image::{imagesdir}/Fig7_4_quickSort.svg[width=50%, link="{imagesdir}/Fig7_4_quicktSort.svg", window="_blank"]
 
 [.text-center]
 Figure 7.4. DRAKON-diagram of the Quick Sort algorithm
