@@ -1,3 +1,7 @@
+:imagesdir: docs-src/modules/section-6/assets/images
+[.text-justify]
+:figure-caption!:
+
 == SECTION 6. BASIC SEARCH ALGORITHMS
 
 Searching is one of the most important algorithms for processing data
@@ -59,7 +63,7 @@ In the case of a linear search of an element in an unordered dataset,
 for example, in an array or in a slice, the simplest algorithm is to
 view all elements until the desired value is found (Figure 6.1).
 
-image::_images/Fig6_1_searchValue.svg[width=100%]
+image::{imagesdir}/Fig6_1_searchValue.svg[width=100%]
 
 [.text-center]
 Figure 6.1. DRAKON-diagrams of linear search algorithm
@@ -82,7 +86,7 @@ as a result of passing through an increasing sorted list, the search is
 stopped. This approach saves time and increases productivity. Figure
 6.2. shows the DRAKON-diagram of this algorithm.
 
-image::_images/Fig6_2_SortedSlice.jpg[width=50%]
+image::{imagesdir}/Fig6_2_SortedSlice.jpg[width=50%]
 
 [.text-center]
 Figure 6.2. DRAKON-diagram of searching sorted slice algorithm
@@ -105,7 +109,7 @@ the search interval is empty.
 The DRAKON-diagram of the binary search algorithm is represented in
 Figure 6.3. (main() module is similar to the previous algorithm):
 
-image::Engl_image7/Fig6_3_BinarySearch.jpg[width=50%, height=30%, align=center]
+image::{imagesdir}/Fig6_3_BinarySearch.jpg[width=50%, height=30%, align=center]
 
 [.text-center]
 Figure 6.3. DRAKON-diagram of Binary Search algorithm
@@ -130,28 +134,28 @@ placing it after the entry "Wiley D.". After that, you should delete the
 duplicates of the entry " Shafler B." leaving only one. The
 corresponding dragon diagrams are presented in Figure 6.4 a,b,c,d:
 
-image::Engl_image7/Fig6_4a_Main.jpg[width=50%, height=30%, align=center]
+image::{imagesdir}/Fig6_4a_Main.jpg[width=50%, height=30%, align=center]
 
 [.text-center]
 a). Function _main()_
 
-image::Engl_image7/Fig6_4b_Remove.jpg[width=80%, height=30%, align=center]
+image::{imagesdir}/Fig6_4b_Remove.jpg[width=80%, height=30%, align=center]
 
 [.text-center]
 b). function of deletion _RemoveVal(val)_
 
-image::Engl_image7/Fig6_4c_SearchData.jpg[width=50%, height=30%, align=center]
+image::{imagesdir}/Fig6_4c_SearchData.jpg[width=50%, height=30%, align=center]
 
 [.text-center]
 c). function of searching _SearchData(val)_
 +
 
-image::Engl_image7/Fig6_4d_PushVal.jpg[width=50%, height=30%, align=center]
+image::{imagesdir}/Fig6_4d_PushVal.jpg[width=50%, height=30%, align=center]
 
 [.text-center]
 d). function of inserting by value _PushVal + NodeWithVal_
 
-image::Engl_image7/Fig6_4e_RemoveDupli.jpg[width=70%, height=30%, align=center]
+image::{imagesdir}/Fig6_4e_RemoveDupli.jpg[width=70%, height=30%, align=center]
 
 [.text-center]
 e). function of removing duplicates _RemoveDupli_
@@ -211,7 +215,7 @@ the number of slots is 15. Note that the _Node_ and _HashTable_ type
 advertisement, as well as the Size constant, are included in the
 File/File description option (Figure 6.5.).
 
-image::Engl_image7/Fig6_5a_Description.jpg[idth=50%, height=30%, align=center]
+image::{imagesdir}/Fig6_5a_Description.jpg[idth=50%, height=30%, align=center]
 
 [.text-center]
 Figure 6.5. Type declaration _Node_, _HashTable_ and constant _Size_
@@ -220,7 +224,7 @@ As an example, consider constructing a hash-table of size _m_ = 15 for a
 collection of integers from 0 to 120. The hash table slots are
 originally empty:
 
-image::Engl_image7/Fig6_HashEmpty.jpg[idth=50%, height=30%, align=center]
+image::{imagesdir}/Fig6_HashEmpty.jpg[idth=50%, height=30%, align=center]
 
 A hash function that establishes a relationship between an element and its 
 corresponding slot must accept any element from the dataset, specifically 
@@ -232,7 +236,7 @@ and returning the remainder as the hash value. This can be expressed as
 is calculated as \( 119 \mod 15 = 14 \) (where \( 119 - 15 \times 7 = 14 \)), 
 thus placing the value 119 into the corresponding slot.
 
-image::Engl_image7/Fig6_Hash119.jpg[idth=50%, height=30%, align=center]
+image::{imagesdir}/Fig6_Hash119.jpg[idth=50%, height=30%, align=center]
 
 The algorithm then identifies slots for other elements, gradually
 filling them. When the algorithm encounters element 104 in the loop,
@@ -245,7 +249,7 @@ an index hash of 8, the slot will consist of these elements: 113 : 98 :
 
 Table 6.1. Hash-table of 15 slots
 
-image::Engl_image7/Fig6_HashTable.jpg[idth=50%, height=30%, align=center]
+image::{imagesdir}/Fig6_HashTable.jpg[idth=50%, height=30%, align=center]
 
 Thus, the remainder method converts a collection of 120 integers into a
 hash table of 15 slots. The search for an element is now greatly
@@ -266,12 +270,12 @@ objects will be saved. 4. Save these objects in the designated bucket.
 DRAKON-diagrams of algorithms for implementing the main functions of
 working with hash-tables are shown in Figure 6.6.
 
-image::Engl_image7/Fig6_6_HDia_ab.jpg[idth=50%, height=30%, align=center]
+image::{imagesdir}/Fig6_6_HDia_ab.jpg[idth=50%, height=30%, align=center]
 
 [.text-center]
 a). Hash-table creating function b). Item searching function
 
-image::Engl_image7/Fig6_6_HDia_cd.jpg[idth=50%, height=30%, align=center]
+image::{imagesdir}/Fig6_6_HDia_cd.jpg[idth=50%, height=30%, align=center]
 
 [.text-center]
 c). Hash-table travers function d) Deletion item function
@@ -287,7 +291,7 @@ element is stored in the _nodePrev_ variable. If the above condition is
 met, the _nodePrev.nextNode_ field (_0xc0000386d0_) is changed to
 (_0xc00384f0_), that is, the deleted element is skipped (Figure 6.6.):
 
-image::Engl_image7/Fig6_6_DeletionItem.jpg[idth=50%, height=30%, align=center]
+image::{imagesdir}/Fig6_6_DeletionItem.jpg[idth=50%, height=30%, align=center]
 
 [.text-center]
 Figure 6.6. Deletion item from hash-table
