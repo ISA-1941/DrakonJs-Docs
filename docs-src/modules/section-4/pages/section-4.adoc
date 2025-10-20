@@ -161,7 +161,7 @@ image::{imagesdir}/Fig4_3_primitive.jpg[width=200,height=150,align=center]
 [.text-center]
 a) Primitive
 
-image::{imagesdir}/Fig4_3_siluet.jpg[width=600,height=300,align=center]
+image::{imagesdir}/Fig4_3_siluet.jpg[width=100%]
 
 [.text-center]
 b) Silhuette
@@ -171,7 +171,7 @@ Figure 4.3. Two types of Drakon-diagrams
 
 To create a Drakon-diagram, the user chooses the necessary icons, filling them with the corresponding operators of the JavaScript programming language (Figure 4.4).
 
-image::{imagesdir}/Fig4_4_icons.jpg[width=500]
+image::{imagesdir}/Fig4_4_icons.jpg[width=100%]
 
 [.text-center]
 Figure 4.4.  Set of DrakonTech icons
