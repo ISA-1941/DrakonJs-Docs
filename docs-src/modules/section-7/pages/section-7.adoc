@@ -20,7 +20,7 @@ Since most sorting tasks in programming involve arrays or similar structures, th
 
 Bubble Sort is one of the simplest sorting algorithms, especially suitable for small datasets. The algorithm gets its name from the way larger values "bubble up" to the end of the array with each pass. The DRAKON-diagram of the algorithm is shown in Figure 7.1. The implementation consists of two modules: `main()` and `bubbleSort(arr)`.
 
-image::{imagesdir}/Fig7_1_bubbleSort.svg[width=50%]
+
 link:{imagesdir}/Fig7_1_bubbleSort.svg[image::{imagesdir}/Fig7_1_bubbleSort.svg[width=50%], window="_blank"]
 
 [.text-center]
