@@ -67,7 +67,8 @@ Because of its simplicity, Bubble Sort is still used in some applications — fo
 
 The Selection Sort algorithm is based on comparison operations. It works by dividing the dataset into two parts: the sorted portion on the left and the unsorted portion on the right. The DRAKON-diagram of this algorithm is shown in Figure 7.2.
 
-image::{imagesdir}/Fig7_2_selectSort.svg[width=75%]
+//image::{imagesdir}/Fig7_2_selectSort.svg[width=75%]
+image::{imagesdir}/Fig7_2_selectSort.svg[width=50%, link="{imagesdir}/Fig7_2_selectSort.svg", window="_blank"]
 
 [.text-center]
 Figure 7.2. DRAKON-diagram of the Selection Sort algorithm
