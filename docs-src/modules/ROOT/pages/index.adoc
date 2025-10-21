@@ -77,8 +77,8 @@ reading this chapter.
 which allows to represent any complex algorithms in the form of a
 DRAKON-diagram using icons, corresponding to the basic constructions of
 the JavaScript language. The technology of automated transformation of the
-DRAKON-diagram into the program code is given in the editor DRAKON WEB
-Editor, with subsequent implementation in the shell of Visual Studio
+DRAKON-diagram into the program code is given in the editor DrakonTech, 
+with subsequent implementation in the shell of Visual Studio
 Code. Actually, this is a hybrid, two-stage approach: in the first step
 a DRAKON-diagram is made, the icons of which are filled with
 constructions of the language JavaScript, on the second step - automatically
