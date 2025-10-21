@@ -1,0 +1,63 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "13",
+            "content": "hash = createHashTable(16)"
+        },
+        "5": {
+            "type": "loopend",
+            "one": "9",
+            "content": ""
+        },
+        "6": {
+            "type": "loopbegin",
+            "one": "7",
+            "content": "i = 0; i <= 15; i++"
+        },
+        "7": {
+            "type": "action",
+            "one": "11",
+            "content": "key = testDataEn[i][0]"
+        },
+        "9": {
+            "type": "action",
+            "one": "10",
+            "content": "console.log(\n    '--- Hash Table Contents ---'\n)"
+        },
+        "10": {
+            "type": "action",
+            "one": "14",
+            "content": "printHashTable(hash)"
+        },
+        "11": {
+            "type": "action",
+            "one": "12",
+            "content": "value = testDataEn[i][1]"
+        },
+        "12": {
+            "type": "action",
+            "one": "5",
+            "content": "hashInsert(hash, key, value)"
+        },
+        "13": {
+            "type": "action",
+            "one": "6",
+            "content": "testDataEn = [\n    [123456, \"John J. Doe\"],\n    [987654, \"Jane K. Smith\"],\n    [112233, \"Peter L. Jones\"],\n    [556677, \"Mary V. Brown\"],\n    [334455, \"David A. Davis\"],\n    [778899, \"Susan G. Wilson\"],\n    [223344, \"Michael D. Garcia\"],\n    [667788, \"Linda E. Rodriguez\"],\n    [445566, \"Christopher H. Martinez\"],\n    [889900, \"Jessica F. Anderson\"],\n    [135790, \"Matthew B. Taylor\"],\n    [024689, \"Ashley C. Thomas\"],\n    [975310, \"Andrew I. Jackson\"],\n    [864201, \"Sarah N. White\"],\n    [753192, \"Daniel O. Harris\"],\n    [642083, \"Brittany P. Lewis\"],\n];"
+        },
+        "14": {
+            "type": "action",
+            "one": "1",
+            "content": "hashLookup(hash, 135790)"
+        }
+    }
+}
