@@ -1,0 +1,76 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "4",
+            "content": "Absence or equality"
+        },
+        "4": {
+            "type": "question",
+            "one": "5",
+            "two": "6",
+            "flag1": 1,
+            "content": "node === null"
+        },
+        "5": {
+            "type": "action",
+            "one": "6",
+            "content": "return null"
+        },
+        "6": {
+            "type": "question",
+            "one": "7",
+            "two": "9",
+            "flag1": 1,
+            "content": "value === node.value"
+        },
+        "7": {
+            "type": "action",
+            "one": "9",
+            "content": "return node"
+        },
+        "8": {
+            "type": "branch",
+            "one": "1",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "9": {
+            "type": "branch",
+            "one": "10",
+            "branchId": 2,
+            "content": "Left or Right"
+        },
+        "10": {
+            "type": "question",
+            "one": "11",
+            "two": "13",
+            "flag1": 1,
+            "content": "value < node.value"
+        },
+        "11": {
+            "type": "action",
+            "one": "8",
+            "content": "return findNode(node.left, value)"
+        },
+        "13": {
+            "type": "action",
+            "one": "8",
+            "content": "return findNode(node.right, value)"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "node, value"
+}

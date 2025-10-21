@@ -1,0 +1,135 @@
+{
+    "type": "drakon",
+    "items": {
+        "24": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "171",
+            "content": ""
+        },
+        "164": {
+            "type": "end"
+        },
+        "171": {
+            "type": "action",
+            "one": "173",
+            "content": "current_x = x_param"
+        },
+        "172": {
+            "type": "question",
+            "one": "164",
+            "two": "194",
+            "flag1": 0,
+            "content": "true"
+        },
+        "173": {
+            "type": "arrow-loop",
+            "one": "172"
+        },
+        "193": {
+            "type": "action",
+            "one": "202",
+            "content": "P = current_x.parent"
+        },
+        "194": {
+            "type": "question",
+            "one": "195",
+            "two": "193",
+            "flag1": 1,
+            "content": "current_x === tree.root"
+        },
+        "195": {
+            "type": "action",
+            "one": "193",
+            "two": "",
+            "content": "current_x.colour = false\nreturn "
+        },
+        "201": {
+            "type": "action",
+            "one": "208",
+            "content": "G = P.parent"
+        },
+        "202": {
+            "type": "question",
+            "one": "203",
+            "two": "201",
+            "flag1": 1,
+            "content": "P === null || P.colour === false"
+        },
+        "203": {
+            "type": "action",
+            "one": "201",
+            "content": "return "
+        },
+        "207": {
+            "type": "action",
+            "one": "213",
+            "content": "U = getUncle(tree, current_x)"
+        },
+        "208": {
+            "type": "question",
+            "one": "209",
+            "two": "207",
+            "flag1": 1,
+            "content": "G === null"
+        },
+        "209": {
+            "type": "action",
+            "one": "207",
+            "content": "P.colour = false\nreturn "
+        },
+        "213": {
+            "type": "action",
+            "one": "219",
+            "content": "currentNodeImage = generateNodeImage(\n    tree,\n    current_x\n)"
+        },
+        "219": {
+            "type": "question",
+            "one": "220",
+            "two": "221",
+            "flag1": 1,
+            "content": "currentNodeImage === 'CASE_A'"
+        },
+        "220": {
+            "type": "action",
+            "one": "228",
+            "content": "result = handleBlackUncle(\n    tree,\n    current_x,\n    P,\n    G,\n    U,\n    currentNodeImage,\n)"
+        },
+        "221": {
+            "type": "action",
+            "one": "228",
+            "content": "result = handleRedUncle(\n    tree,\n    current_x,\n    P,\n    G,\n    U,\n)"
+        },
+        "223": {
+            "type": "question",
+            "one": "224",
+            "two": "225",
+            "flag1": 1,
+            "content": "is_fix_complete"
+        },
+        "224": {
+            "type": "action",
+            "one": "173",
+            "content": "return "
+        },
+        "225": {
+            "type": "action",
+            "one": "173",
+            "content": "current_x = next_x_node"
+        },
+        "228": {
+            "type": "action",
+            "one": "223",
+            "content": "next_x_node = result.next_x_node\nis_fix_complete = result.is_fix_complete"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "tree, x_param"
+}

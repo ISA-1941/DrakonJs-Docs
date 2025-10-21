@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>SVG с подсказками</title>
+  <style>
+    /* Стили для подсказки: жёлтый фон, чёрная рамка, небольшие отступы */
+    #tooltip {
+      position: absolute;
+      display: none;          /* По умолчанию подсказка скрыта */
+      background: #ffffcc;
+      border: 1px solid #000;
+      padding: 5px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      max-width: 200px;       /* Ограничиваем ширину подсказки */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Встраиваем SVG-диаграмму fig8_33_fixRedRed.svg -->
+  <!-- Используем <object>, чтобы встроить внешний SVG и иметь доступ к его DOM для скриптов -->
+  <object id="svgDiagram" type="image/svg+xml" data="fig8_33_fixRedRed.svg" 
+          width="2862" height="762">
+    Ваш браузер не поддерживает встраиваемые SVG.
+  </object>
+
+  <!-- Контейнер для всплывающей подсказки -->
+  <div id="tooltip"></div>
+
+  <script>
+    // Ждём загрузки SVG-документа внутри объекта
+    document.getElementById('svgDiagram').addEventListener('load', function () {
+      const svgDoc = this.contentDocument;       // Получаем внутренний документ SVG
+      const tooltip = document.getElementById('tooltip');  // HTML-элемент подсказки
+
+      // Определяем целевые прямоугольники и соответствующий текст подсказки
+      const targets = [
+        { selector: 'rect[x="20"][y="540"]', text: 'Case 2: Родитель и дядя являются красными – перекрашиваем их и продвигаем узел вверх.' },
+        { selector: 'rect[x="760"][y="280"]', text: 'LL (Left-Left): Узел — левый ребёнок у левого родителя.' },
+        { selector: 'rect[x="760"][y="360"]', text: 'LR (Left-Right): Узел — правый ребёнок у левого родителя.' },
+        { selector: 'rect[x="760"][y="440"]', text: 'RL (Right-Left): Узел — левый ребёнок у правого родителя.' },
+        { selector: 'rect[x="760"][y="520"]', text: 'RR (Right-Right): Узел — правый ребёнок у правого родителя.' }
+      ];
+
+      // Назначаем обработчики событий для каждого целевого прямоугольника
+      targets.forEach(item => {
+        const rectElem = svgDoc.querySelector(item.selector);
+        if (rectElem) {
+          // При наведении мыши – показываем подсказку
+          rectElem.addEventListener('mouseover', function (evt) {
+            tooltip.innerText = item.text;    // Устанавливаем текст подсказки
+            // Вычисляем позицию прямоугольника относительно страницы
+            const rect = rectElem.getBoundingClientRect();
+            const objRect = document.getElementById('svgDiagram').getBoundingClientRect();
+            // Размещаем подсказку правее прямоугольника
+            tooltip.style.left = (objRect.left + rect.left + rect.width + 10) + 'px';
+            tooltip.style.top = (objRect.top + rect.top) + 'px';
+            tooltip.style.display = 'block';  // Показываем подсказку
+          });
+          // При уходе курсора – скрываем подсказку
+          rectElem.addEventListener('mouseout', function () {
+            tooltip.style.display = 'none';
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

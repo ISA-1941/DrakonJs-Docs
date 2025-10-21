@@ -1,0 +1,154 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "Branch1"
+        },
+        "3": {
+            "type": "action",
+            "one": "60",
+            "content": "parent = x.parent"
+        },
+        "26": {
+            "type": "branch",
+            "one": "59",
+            "branchId": 5,
+            "content": "Exit"
+        },
+        "27": {
+            "type": "branch",
+            "one": "38",
+            "branchId": 2,
+            "content": "Branch2"
+        },
+        "38": {
+            "type": "question",
+            "one": "39",
+            "two": "46",
+            "flag1": 1,
+            "content": "// sibling.colour === true\n\nsibling.colour === true"
+        },
+        "39": {
+            "type": "action",
+            "one": "63",
+            "content": "sibling.colour = false;\nparent.colour = true;"
+        },
+        "46": {
+            "type": "branch",
+            "branchId": 3,
+            "one": "47",
+            "content": "Branch3"
+        },
+        "47": {
+            "type": "question",
+            "one": "48",
+            "two": "50",
+            "flag1": 1,
+            "content": "sibling.left.colour === false && sibling.right\n.colour === false\n// Case 2: black brother and both descendants are black"
+        },
+        "48": {
+            "type": "action",
+            "one": "54",
+            "content": "sibling.colour = true\nreturn parent"
+        },
+        "50": {
+            "type": "question",
+            "one": "51",
+            "two": "52",
+            "flag1": 1,
+            "content": "x === parent.left && sibling.right.colour\n=== false\n// Case 3: brother’s left is red, right is black"
+        },
+        "51": {
+            "type": "action",
+            "one": "54",
+            "content": "sibling.left.colour = false\nsibling.colour = true\nrotateRight(tree, sibling)\nsibling = getSibling(x)"
+        },
+        "52": {
+            "type": "question",
+            "one": "53",
+            "two": "54",
+            "flag1": 1,
+            "content": "x === parent.right && sibling.left.colour\n=== false"
+        },
+        "53": {
+            "type": "action",
+            "one": "54",
+            "content": "sibling.right.colour = false\nsibling.colour = true\nrotateLeft(tree, sibling)\nsibling = getSibling(x)"
+        },
+        "54": {
+            "type": "branch",
+            "branchId": 4,
+            "one": "56",
+            "content": "Branch4"
+        },
+        "55": {
+            "type": "question",
+            "one": "57",
+            "two": "58",
+            "flag1": 1,
+            "content": "x === parent.left"
+        },
+        "56": {
+            "type": "action",
+            "one": "55",
+            "content": "sibling.colour = parent.colour;\nparent.colour = false;"
+        },
+        "57": {
+            "type": "action",
+            "one": "26",
+            "content": "sibling.right.colour = false;\nrotateLeft(tree, parent);"
+        },
+        "58": {
+            "type": "action",
+            "one": "26",
+            "content": "sibling.left.colour = false;\nrotateRight(tree, parent);"
+        },
+        "59": {
+            "type": "action",
+            "one": "1",
+            "content": "return tree.root"
+        },
+        "60": {
+            "type": "action",
+            "one": "27",
+            "content": "sibling = getSibling(x)"
+        },
+        "62": {
+            "type": "action",
+            "one": "46",
+            "content": "sibling = getSibling(x)"
+        },
+        "63": {
+            "type": "question",
+            "one": "64",
+            "two": "65",
+            "flag1": 1,
+            "content": "x === parent.left"
+        },
+        "64": {
+            "type": "action",
+            "one": "62",
+            "content": "rotateLeft(tree, parent)"
+        },
+        "65": {
+            "type": "action",
+            "one": "62",
+            "content": "rotateRight(tree, parent)"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "tree, x"
+}

@@ -1,0 +1,96 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "16",
+            "content": "Node rebuilding"
+        },
+        "3": {
+            "type": "action",
+            "one": "5",
+            "content": "L = K.right\nt = L.left"
+        },
+        "5": {
+            "type": "action",
+            "one": "6",
+            "content": "L.parent = K.parent\nL.left = K\nK.parent = L\nK.right = t"
+        },
+        "6": {
+            "type": "question",
+            "one": "7",
+            "two": "9",
+            "flag1": 1,
+            "content": "t !== tree.nullNode"
+        },
+        "7": {
+            "type": "action",
+            "one": "9",
+            "content": "t.parent = K"
+        },
+        "8": {
+            "type": "branch",
+            "one": "15",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "9": {
+            "type": "branch",
+            "one": "10",
+            "branchId": 2,
+            "content": "Subtree root formation"
+        },
+        "10": {
+            "type": "question",
+            "one": "11",
+            "two": "12",
+            "flag1": 1,
+            "content": "K === tree.root"
+        },
+        "11": {
+            "type": "action",
+            "one": "8",
+            "content": "tree.root = L"
+        },
+        "12": {
+            "type": "question",
+            "one": "13",
+            "two": "14",
+            "flag1": 1,
+            "content": "L.parent.left === K"
+        },
+        "13": {
+            "type": "action",
+            "one": "8",
+            "content": "L.parent.left = L"
+        },
+        "14": {
+            "type": "action",
+            "one": "8",
+            "content": "L.parent.right = L"
+        },
+        "15": {
+            "type": "action",
+            "one": "1",
+            "content": "return L"
+        },
+        "16": {
+            "type": "action",
+            "one": "3",
+            "content": "console.log('rotateLeft');"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "tree, K"
+}
