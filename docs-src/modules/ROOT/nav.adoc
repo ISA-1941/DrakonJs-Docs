@@ -1,6 +1,6 @@
 * Introduction
 ** xref:index.adoc[Introduction]
-* ADT
+* Abstract Data Types
 ** xref:section-1:section-1.adoc[ADT]
 * JavaScript View
 ** xref:section-2:section-2.adoc[JavaScript]
