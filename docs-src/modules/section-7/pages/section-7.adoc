@@ -423,7 +423,8 @@ Shell Sort is a variation of Insertion Sort. It begins by comparing and sorting 
 
 The DRAKON-diagram of the Shell Sort algorithm is shown in Figure 7.7.
 
-image::{imagesdir}/Fig7_7_shellSort.svg[width=50%]
+//image::{imagesdir}/Fig7_7_shellSort.svg[width=50%]
+image::{imagesdir}/Fig7_7_shellSort.svg[width=50%, link="{imagesdir}/Fig7_7_shellSort.svg", window="_blank"]
 
 [.text-center]
 Figure 7.7. DRAKON-diagram of the Shell Sort algorithm
@@ -502,10 +503,11 @@ smaller than the child nodes, and a maximum heap (MaxHeap), in which the
 parent node is always greater than or equal to the child nodes (Figure
 7.8).
 
-image::{imagesdir}/Fig7_7_Tree.jpg[width=100%]
+//image::{imagesdir}/Fig7_8_Tree.jpg[width=100%]
+image::{imagesdir}/Fig7_8_Tree.svg[width=50%, link="{imagesdir}/Fig7_8_Tree.svg", window="_blank"]
 
 [.text-center]
-Figure 7.7. Binary tree examples (a - MinHeap; b - MaxHeap)
+Figure 7.8. Binary tree examples (a - MinHeap; b - MaxHeap)
 
 The tree node sequence, starting with the root node, is performed by the
 formula:
@@ -539,7 +541,8 @@ performs node overwriting, _heapify_, which compares adjacent nodes, and
 _swap_, which swap two nodes. The sequence of the nodes in the heap is
 shown in Figure 7.9:
 
-image::{imagesdir}/Fig7_9_All.jpg[width=150%]
+//image::{imagesdir}/Fig7_9_All.jpg[width=150%]
+image::{imagesdir}/Fig7_9_All.svg[width=50%, link="{imagesdir}/Fig7_9_All.svg", window="_blank"]
 
 [.text-center]
 Figure 7.9. Sequence of node movement in heap
