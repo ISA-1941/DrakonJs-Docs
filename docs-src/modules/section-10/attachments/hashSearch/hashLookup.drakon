@@ -1,0 +1,95 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "Define index for key"
+        },
+        "3": {
+            "type": "action",
+            "one": "24",
+            "content": "index = hashFunc(key, hash.size)"
+        },
+        "4": {
+            "type": "action",
+            "one": "13",
+            "content": "node = hash.table[index]"
+        },
+        "12": {
+            "type": "branch",
+            "one": "23",
+            "branchId": 3,
+            "content": "Search result"
+        },
+        "13": {
+            "type": "branch",
+            "one": "25",
+            "branchId": 2,
+            "content": "Bypass of the linked list \nin the bucket"
+        },
+        "21": {
+            "type": "action",
+            "one": "1",
+            "content": "return undefined"
+        },
+        "23": {
+            "type": "action",
+            "one": "21",
+            "content": "console.log(\n    `Key \"${key}\" is not found in hash-table`\n)"
+        },
+        "24": {
+            "type": "action",
+            "one": "4",
+            "content": "console.log(\n    `Lookup \"${key}\" → bucket ${index}`\n)"
+        },
+        "25": {
+            "type": "action",
+            "one": "41",
+            "content": "console.log(`Compare: \"${node.key}\"`)"
+        },
+        "40": {
+            "type": "question",
+            "one": "12",
+            "two": "52",
+            "flag1": 1,
+            "content": "node == null"
+        },
+        "41": {
+            "type": "arrow-loop",
+            "one": "40"
+        },
+        "52": {
+            "type": "question",
+            "one": "53",
+            "two": "54",
+            "flag1": 1,
+            "content": "node.key === key"
+        },
+        "53": {
+            "type": "action",
+            "one": "41",
+            "two": "",
+            "content": "return node.value"
+        },
+        "54": {
+            "type": "action",
+            "one": "41",
+            "two": "",
+            "content": "node = node.next"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "hash, key"
+}

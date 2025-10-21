@@ -1,0 +1,78 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "4"
+        },
+        "3": {
+            "type": "action",
+            "one": "15",
+            "content": "console.log('All Entries:')"
+        },
+        "4": {
+            "type": "action",
+            "one": "5",
+            "content": "myMap = new Map()"
+        },
+        "5": {
+            "type": "action",
+            "one": "11",
+            "content": "dataMap = [\n    [123456, \"John J. Doe\"],\n    [987654, \"Jane K. Smith\"],\n    [112233, \"Peter L. Jones\"],\n    [556677, \"Mary V. Brown\"],\n    [334455, \"David A. Davis\"],\n    [778899, \"Susan G. Wilson\"],\n    [223344, \"Michael D. Garcia\"],\n    [667788, \"Linda E. Rodriguez\"],\n    [445566, \"Christopher H. Martinez\"],\n    [889900, \"Jessica F. Anderson\"],\n    [135790, \"Matthew B. Taylor\"],\n    [024689, \"Ashley C. Thomas\"],\n    [975310, \"Andrew I. Jackson\"],\n    [864201, \"Sarah N. White\"],\n    [753192, \"Daniel O. Harris\"],\n    [642083, \"Brittany P. Lewis\"],\n];"
+        },
+        "10": {
+            "type": "loopend",
+            "one": "3",
+            "two": "",
+            "content": ""
+        },
+        "11": {
+            "type": "loopbegin",
+            "one": "12",
+            "two": "",
+            "content": "i = 0; i <= 15; i++"
+        },
+        "12": {
+            "type": "action",
+            "one": "13",
+            "two": "",
+            "content": "key = dataMap[i][0]"
+        },
+        "13": {
+            "type": "action",
+            "one": "14",
+            "two": "",
+            "content": "value = dataMap[i][1]"
+        },
+        "14": {
+            "type": "action",
+            "one": "10",
+            "two": "",
+            "content": "myMap.set(key, value)"
+        },
+        "15": {
+            "type": "action",
+            "one": "16",
+            "content": "userName = myMap.get(445566);"
+        },
+        "16": {
+            "type": "action",
+            "one": "17",
+            "content": "console.log(\"User 445566:\", userName);"
+        },
+        "17": {
+            "type": "action",
+            "one": "18",
+            "content": "isDeleted = myMap.delete (445566);"
+        },
+        "18": {
+            "type": "action",
+            "one": "1",
+            "content": "console.log(\n    userName,\n    ' (445566) is deleted.'\n)"
+        }
+    }
+}

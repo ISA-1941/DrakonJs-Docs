@@ -1,0 +1,43 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "myMap = new Map()"
+        },
+        "4": {
+            "type": "action",
+            "one": "6",
+            "content": "dataArray = [\n    {key: 123456, value: 'Doe D.'},\n    {key: 987654, value: 'Jane K.'},\n    {key: 112233, value: 'Smith L.'},\n    {key: 556677, value: 'Jones V.'},\n    {key: 778899, value: 'Brown G.'},\n    {key: 223344, value: 'Devis D.'},\n    {key: 223344, value: 'Wilson D.'},\n    {key: 812580, value: 'Garcia F.'},\n    {key: 135790, value: 'Rodriguez B.'},\n    {key: 667788, value: 'Martins E.'},\n    {key: 724689, value: 'Tailor I.'},\n    {key: 864201, value: 'Sarah N.'},\n    {key: 753192, value: 'Jaksom O.'},\n    {key: 445566, value: 'White H.'},\n]"
+        },
+        "5": {
+            "type": "loopend",
+            "one": "1",
+            "content": ""
+        },
+        "6": {
+            "type": "loopbegin",
+            "one": "7",
+            "content": "key; dataArray"
+        },
+        "7": {
+            "type": "action",
+            "one": "8",
+            "content": "value = dataArray[key]"
+        },
+        "8": {
+            "type": "action",
+            "one": "5",
+            "content": "console.log(key, value)"
+        }
+    }
+}

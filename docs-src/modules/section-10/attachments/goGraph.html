@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GoJS Граф с весами</title>
+  <script src="https://unpkg.com/gojs/release/go.js"></script>
+  <style>
+    #myDiagramDiv {
+      width: 500px;
+      height: 300px;
+      border: 1px solid #ccc;
+    }
+    #exportBtn {
+      margin: 10px;
+      padding: 8px 16px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Контейнер для диаграммы -->
+  <div id="myDiagramDiv"></div>
+  
+  <!-- Кнопка для экспорта -->
+  <button id="exportBtn">Сохранить как PNG</button>
+
+  <script>
+    const $ = go.GraphObject.make;
+
+    // Создаём диаграмму
+    const myDiagram = $(
+      go.Diagram,
+      "myDiagramDiv",
+      {
+        "undoManager.isEnabled": true,
+        layout: $(go.ForceDirectedLayout) // Автоматическая расстановка
+      }
+    );
+
+    // Шаблон узла
+    myDiagram.nodeTemplate = $(
+      go.Node,
+      "Auto",
+      $(go.Shape, "Circle", { fill: "#F0F0F0" }),
+      $(go.TextBlock, 
+        { margin: 8, font: "bold 14px sans-serif" },
+        new go.Binding("text", "key"))
+    );
+
+    // Шаблон ребра с весом
+    myDiagram.linkTemplate = $(
+      go.Link,
+      { routing: go.Link.AvoidsNodes },
+      $(go.Shape, { stroke: "#4ECDC4", strokeWidth: 2 }),
+      $(go.Shape, { toArrow: "Standard" }),
+      $(go.TextBlock,
+        {
+          stroke: "#333",
+          font: "12px sans-serif",
+          segmentIndex: 0,
+          segmentOffset: new go.Point(0, 10)
+        },
+        new go.Binding("text", "weight"))
+    );
+
+    // Данные графа
+    myDiagram.model = new go.GraphLinksModel(
+      [
+        { key: "A" }, { key: "B" }, { key: "C" }
+      ],
+      [
+        { from: "A", to: "B", weight: "5" },
+        { from: "B", to: "C", weight: "3" },
+        { from: "A", to: "C", weight: "8" }
+      ]
+    );
+
+    // Функция экспорта в PNG
+    document.getElementById("exportBtn").addEventListener("click", () => {
+      const imageData = myDiagram.makeImageData({
+        scale: 1,
+        background: "white",
+        type: "image/png" // или "image/svg+xml" для SVG
+      });
+      
+      // Создаём ссылку для скачивания
+      const link = document.createElement("a");
+      link.href = imageData;
+      link.download = "graph.png";
+      link.click();
+    });
+  </script>
+</body>
+</html>
