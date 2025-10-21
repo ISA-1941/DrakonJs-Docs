@@ -10,3 +10,41 @@
   font-style: italic;
   margin-top: 0.5rem;
 }
+/* --- DARK THEME OVERRIDES --- */
+
+/* 1. Общий фон страницы (за пределами основного контента) */
+body {
+    background-color: #1a1a1a !important; /* Очень темный фон */
+    color: #e0e0e0 !important;          /* Светлый текст */
+}
+
+/* 2. Фон основного блока контента и навигации (требуется проверка классов) */
+/* Эти классы часто используются в темах Antora или Jekyll */
+.doc, 
+.page, 
+.content-wrapper, 
+.article,
+.nav-panel { 
+    background-color: #212121 !important; /* Чуть светлее, чем body, для контраста */
+    color: #cccccc !important;
+}
+
+/* 3. Стили для ссылок (чтобы они были видимы на темном фоне) */
+a, 
+a:visited {
+    color: #00bcd4 !important; /* Яркий голубой для ссылок */
+}
+
+a:hover {
+    color: #4CAF50 !important; /* Зеленый при наведении */
+}
+
+/* Переопределение цвета верхней навигации, если он белый */
+.header {
+    background-color: #0d0d0d !important;
+}
+
+/* Заголовки (на всякий случай, если они остались черными) */
+h1, h2, h3, h4, h5 {
+    color: #ffffff !important;
+}
