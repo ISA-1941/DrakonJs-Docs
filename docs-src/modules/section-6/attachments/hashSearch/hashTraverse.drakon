@@ -22,35 +22,48 @@
         "6": {
             "type": "action",
             "one": "7",
-            "content": "t = hash.table[i]"
+            "content": "node = hash.table[i]"
         },
         "7": {
             "type": "action",
-            "one": "14",
-            "content": "output = \"Slot \" + i + \" ?\";"
+            "one": "21",
+            "content": "output = \"Slot \" + i + \":\""
         },
-        "13": {
+        "21": {
             "type": "question",
-            "one": "19",
-            "two": "16",
+            "one": "22",
+            "two": "25",
+            "flag1": 1,
+            "content": "node === null || node === undefined"
+        },
+        "22": {
+            "type": "action",
+            "one": "25",
+            "two": "",
+            "content": "console.log(output + 'Empty')"
+        },
+        "24": {
+            "type": "question",
+            "one": "28",
+            "two": "26",
             "flag1": 0,
-            "content": "t !== null"
+            "content": "node !== null"
         },
-        "14": {
+        "25": {
             "type": "arrow-loop",
-            "one": "13"
+            "one": "24"
         },
-        "16": {
+        "26": {
             "type": "action",
-            "one": "17",
-            "content": "output = 'Slot 5'"
+            "one": "27",
+            "content": "output += node.value + ' -> '"
         },
-        "17": {
+        "27": {
             "type": "action",
-            "one": "14",
-            "content": "t = t.next"
+            "one": "25",
+            "content": "node = node.next"
         },
-        "19": {
+        "28": {
             "type": "action",
             "one": "4",
             "content": "console.log(output)"

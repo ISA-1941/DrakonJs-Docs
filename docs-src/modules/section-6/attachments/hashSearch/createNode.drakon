@@ -7,12 +7,17 @@
         "2": {
             "type": "branch",
             "branchId": 0,
-            "one": "4"
+            "one": "5"
         },
         "4": {
             "type": "action",
             "one": "1",
-            "content": "return {\n    value: value,\n    next: next\n}"
+            "content": "return {\n    key: key,\n    value: value,\n    next: next\n}"
+        },
+        "5": {
+            "type": "action",
+            "one": "4",
+            "content": "console.log(\n    \"[createNode] Node is created:\",\n    {key, value}\n)"
         }
     },
     "keywords": {
@@ -23,5 +28,5 @@
         "algoprop": false,
         "lazy": false
     },
-    "params": "value, next = null"
+    "params": "key, value, next = null"
 }

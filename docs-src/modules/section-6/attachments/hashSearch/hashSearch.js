@@ -1,3 +1,4 @@
+const CryptoJS = require('crypto-js');
 main();
 function createHashTable(size) {
     var table;
@@ -7,39 +8,107 @@ function createHashTable(size) {
         size: size
     };
 }
-function createNode(value, next = null) {
+function createNode(key, value, next = null) {
+    console.log('[createNode] Node is created:', {
+        key,
+        value
+    });
     return {
+        key: key,
         value: value,
         next: next
     };
 }
-function hashFunc(i, size) {
-    return i % size;
+function hashFunc(key, size) {
+    var hash, i, keyStr;
+    keyStr = String(key);
+    hash = 0;
+    for (i = 0; i < keyStr.length; i++) {
+        hash = Math.imul(hash, 32) - hash + keyStr.charCodeAt(i);
+    }
+    return Math.abs(hash) % size;
 }
-function hashInsert(hash, value) {
-    var element, index;
-    index = hashFunc(value, hash.size);
-    element = createNode(value, hash.table[index]);
-    hash.table[index] = element;
-    return index;
+function hashFuncSHA256(key, size) {
+    var hashHex;
+    hashHex = CryptoJS.SHA256(String(key)).toString();
+    return parseInt(hashHex, 16) % size;
 }
-function hashLookup(hash, value) {
-    var index, t;
-    index = hashFunc(value, hash.size);
-    t = hash.table[index];
+function hashGet(hash, key) {
+    var index, node;
+    index = hashFunc(key, hash.size);
+    node = hash.table[index];
     while (true) {
-        if (t !== null && t !== undefined) {
-            if (t.value === value) {
-                console.log(value, '- is exist');
-                return;
+        if (node) {
+            if (node.key === key) {
+                return node.value;
             } else {
-                t = t.Next;
+                node = node.next;
             }
         } else {
             break;
         }
     }
-    console.log('After removing', value, '- does not exist');
+    return undefined;
+}
+function hashInsert(hash, key, value) {
+    var index, node;
+    index = hashFuncSHA256(key, hash.size);
+    console.log('!!!!!         index = hashFuncSHA256', index);
+    node = hash.table[index];
+    while (true) {
+        if (node) {
+            if (node.key === key) {
+                node.value = value;
+                return index;
+            } else {
+                node = node.next;
+            }
+        } else {
+            break;
+        }
+    }
+    hash.table[index] = createNode(key, value, hash.table[index]);
+    return index;
+}
+function hashLookupByValue(hash, value) {
+    var i, node;
+    for (i = 0; i < hash.size; i++) {
+        node = hash.table[i];
+        while (true) {
+            if (node !== null && node !== undefined) {
+                if (node.value === value) {
+                    console.log(`Value "${ value }" found. Key: "${ node.key }`);
+                    return node.key;
+                } else {
+                    node = node.next;
+                }
+            } else {
+                break;
+            }
+        }
+    }
+    console.log(`Value "${ value }" fouтв. Лун: "${ node.key }"`);
+    return undefined;
+}
+function hashLookupNew(hash, key) {
+    var index, node;
+    index = hashFunc(key, hash.size);
+    console.log(`Lookup "${ key }" → bucket ${ index }`);
+    node = hash.table[index];
+    //console.log(`Compare: "${ node.key }"`);
+    while (true) {
+        if (node == null) {
+            break;
+        } else {
+            if (node.key === key) {
+                return node.value;
+            } else {
+                node = node.next;
+            }
+        }
+    }
+    console.log(`Key "${ key }" is not found in hash-table`);
+    return undefined;
 }
 function hashRemove(hash, value) {
     var index, node, prev;
@@ -47,15 +116,15 @@ function hashRemove(hash, value) {
     node = hash.table[index];
     prev = null;
     while (true) {
-        if (node !== null) {
-            if (node.value === value) {
-                if (prev === null) {
-                    hash.table[index] = node.next;
-                } else {
+        if (node) {
+            if (node.key === key) {
+                if (prev) {
                     prev.next = node.next;
+                } else {
+                    hash.table[index] = node.next;
                 }
             } else {
-                return;
+                return true;
             }
         } else {
             break;
@@ -65,14 +134,17 @@ function hashRemove(hash, value) {
     node = node.next;
 }
 function hashTraverse(hash) {
-    var i, output, t;
+    var i, node, output;
     for (i = 0; i < hash.size; i++) {
-        t = hash.table[i];
-        output = 'Slot ' + i + ' ?';
+        node = hash.table[i];
+        output = 'Slot ' + i + ':';
+        if (node === null || node === undefined) {
+            console.log(output + 'Empty');
+        }
         while (true) {
-            if (t !== null) {
-                output = 'Slot 5';
-                t = t.next;
+            if (node !== null) {
+                output += node.value + ' -> ';
+                node = node.next;
             } else {
                 break;
             }
@@ -81,15 +153,97 @@ function hashTraverse(hash) {
     }
 }
 function main() {
-    var SIZE, hash, i;
-    SIZE = 15;
-    hash = createHashTable(SIZE);
-    for (i = 0; i < 120; i++) {
-        hashInsert(hash, i);
+    var dataEn, hash, i, key, value;
+    hash = createHashTable(16);
+    dataEn = [
+        [
+            123456,
+            'John J. Doe'
+        ],
+        [
+            987654,
+            'Jane K. Smith'
+        ],
+        [
+            112233,
+            'Peter L. Jones'
+        ],
+        [
+            556677,
+            'Mary V. Brown'
+        ],
+        [
+            334455,
+            'David A. Davis'
+        ],
+        [
+            778899,
+            'Susan G. Wilson'
+        ],
+        [
+            223344,
+            'Michael D. Garcia'
+        ],
+        [
+            667788,
+            'Linda E. Rodriguez'
+        ],
+        [
+            445566,
+            'Christopher H. Martinez'
+        ],
+        [
+            889900,
+            'Jessica F. Anderson'
+        ],
+        [
+            135790,
+            'Matthew B. Taylor'
+        ],
+        [
+            24689,
+            'Ashley C. Thomas'
+        ],
+        [
+            975310,
+            'Andrew I. Jackson'
+        ],
+        [
+            864201,
+            'Sarah N. White'
+        ],
+        [
+            753192,
+            'Daniel O. Harris'
+        ],
+        [
+            642083,
+            'Brittany P. Lewis'
+        ]
+    ];
+    for (i = 0; i <= 15; i++) {
+        key = dataEn[i][0];
+        value = dataEn[i][1];
+        hashInsert(hash, key, value);
     }
-    hashLookup(hash, 74);
-    hashRemove(hash, 74);
-    hashLookup(hash, 74);
     console.log('--- Hash Table Contents ---');
-    hashTraverse(hash);
+    printHashTable(hash);
+    hashLookupNew(hash, 135790);
+}
+function printHashTable(hash) {
+    var i, node, slotContent;
+    console.log('--- Hash Table Contents (Key -> Value) ---');
+    for (i = 0; i < hash.size; i++) {
+        node = hash.table[i];
+        slotContent = [];
+        while (true) {
+            if (node) {
+                slotContent.push(`${ node.key } -> ${ node.value }`);
+                node = node.next;
+            } else {
+                break;
+            }
+        }
+        console.log(`Slot ${ i }: ${ slotContent.join(' -> ') || 'Empty' }`);
+    }
 }

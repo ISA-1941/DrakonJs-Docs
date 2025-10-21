@@ -23,7 +23,7 @@ Figure 7.1. DRAKON-diagram of the Bubble Sort algorithm
 
 The algorithm uses two nested loops. For each index `i`, it iterates over the remaining elements with index `j`. At each step, the values `ar[i]` and `ar[j]` are compared. If `ar[j]` is smaller than `ar[i]`, the two elements are swapped. This process pushes the largest unsorted value toward the end of the array during each outer loop iteration.
 
-The following table shows the results of sorting a series of values for each external cycle parameter (i).
+The following table shows the results of sorting a series of values for each external cycle parameter `(i)`.
 
 ++++
 <div style="display: flex; justify-content: center; font-size: 22px;">
@@ -333,9 +333,9 @@ To better understand how recursive sorting builds the final result, the table be
 
 The time complexity of Quick Sort depends on how well the pivot is chosen:
 
-- **Best case**: the pivot is the median → O(n log n)
-- **Average case**: still O(n log n), due to recursive halving
-- **Worst case**: when the pivot is the smallest or largest item, resulting in unbalanced partitions → O(n²)
+- **Best case**: the pivot is the median → `O(n log n)`
+- **Average case**: still `O(n log n)`, due to recursive halving
+- **Worst case**: when the pivot is the smallest or largest item, resulting in unbalanced partitions → `O(n²)`
 
 Quick Sort uses recursion. In each step, it partitions the array and performs O(n) work. This leads to the recurrence relation:  
 `T(n) = 2T(n/2) + O(n)`  
@@ -361,7 +361,7 @@ Merge Sort is a classic divide-and-conquer algorithm. It works by recursively sp
 During merging, one element from each fragment is selected and compared. The smaller (or larger, depending on the desired order) element is added to the result array. The remaining element is compared again with the next element from the other fragment. This process continues until all elements are merged. Figure 7.5 illustrates this process:
 
 
-image::_images/Fig7_5_merge.svg[width=75%]
+image::_images/Fig7_5_merge_v2.svg[width=100%]
 
 image::_images/Fig7_5_mergeSorting.svg[width=75%]
 
@@ -385,9 +385,9 @@ Visual representation of Merge Sort (splitting phase) is shown on Figure 7.7.
 => [10, 11, 23, 32, 48, 53, 62, 74, 85, 90]
 
 [.text-center]
-Figure 7.7.Visual representation of Merge Sort
+Figure 7.6.Visual representation of Merge Sort
 
-Merge Sort has a time complexity of O(n log n), where `n` is the number of elements in the array. The algorithm splits the array into two halves until only single elements remain. The number of split operations is O(log n), and each merge operation compares `n` elements, which gives the overall complexity of O(nlog n).
+Merge Sort has a time complexity of O(n log n), where `n` is the number of elements in the array. The algorithm splits the array into two halves until only single elements remain. The number of split operations is `O(log n)`, and each merge operation compares `n` elements, which gives the overall complexity of O(nlog n).
 
 The summary of time and space complexity is shown below:
 
@@ -409,7 +409,7 @@ This consistent behavior ensures that equal elements remain in the same order as
 
 === 7.7. Shell Sort
 
-Shell Sort is a variation of Insertion Sort. It begins by comparing and sorting elements that are separated by a certain distance _d_. Then, the process is repeated for smaller values of _d_ until _d = 1_, which is equivalent to a standard insertion sort.
+Shell Sort is a variation of Insertion Sort. It begins by comparing and sorting elements that are separated by a certain distance _d_. Then, the process is repeated for smaller values of `d` until `d = 1`, which is equivalent to a standard insertion sort.
 
 The DRAKON-diagram of the Shell Sort algorithm is shown in Figure 7.7.
 
@@ -424,9 +424,9 @@ Shell Sort uses a three-step process common to many sorting algorithms:
 – merging the results into a sorted array.
 
 The array is partitioned in such a way that each item in a segment is a fixed number of positions apart from the others. This introduces a challenge: choosing the best distance _d_. A simple example of such a sequence is:  
-_d = n / 2_, then _d = d / 2_, and so on, until _d = 1_.
+`d = n / 2`, then `d = d / 2`, and so on, until `d = 1`.
 
-The table illustrates how elements are swapped when a smaller value is found at position _arr[j]_ compared to _arr[j - inc]_.
+The table illustrates how elements are swapped when a smaller value is found at position `arr[j]` compared to `arr[j - inc]`.
 
 [.text-center]
 *inc = 5*
@@ -466,13 +466,13 @@ The table illustrates how elements are swapped when a smaller value is found at 
 |===
 
 
-The average time complexity of Shell Sort is estimated as _O(n * log² n)_, though this depends on multiple factors.
+The average time complexity of Shell Sort is estimated as `O(n * log² n)`, though this depends on multiple factors.
 
 First, Shell Sort is essentially a generalization of Insertion Sort that uses gap-based comparisons. Second, the performance depends on the choice of gap sequence — that is, the values of _d_ used during sorting. Different sequences can yield significantly different results.
 
 Because Shell Sort works by refining the array through a series of passes with decreasing gaps, its time complexity is sensitive to these gap values. The optimal gap sequence is still a subject of research, and no single sequence is universally optimal.
 
-As a result, although the average-case complexity is commonly cited as _O(n * log² n)_, the exact performance may vary depending on the input and the sequence used.
+As a result, although the average-case complexity is commonly cited as `O(n * log² n)`, the exact performance may vary depending on the input and the sequence used.
 
 Shell Sort is **not stable** in its original form, but it can be modified to preserve stability if needed.
 
@@ -524,9 +524,9 @@ and (52), then we present this process in the table:
 |*5* |*11* |14 |20 |23 |41 |52
 |===
 
-The heap sorting algorithm uses three functions: _heap_Sort_, which
-performs node overwriting, _heapify_, which compares adjacent nodes, and
-_swap_, which swap two nodes. The sequence of the nodes in the heap is
+The heap sorting algorithm uses three functions: `heap_Sort`, which
+performs node overwriting, `heapify`, which compares adjacent nodes, and
+`swap`, which swap two nodes. The sequence of the nodes in the heap is
 shown in Figure 7.9:
 
 image::_images/Fig7_9_All.jpg[width=150%]
@@ -541,7 +541,7 @@ image::_images/Fig7_10a_heapSort.svg[width=200%]
 image::_images/Fig7_10b_heapify.svg[width=200%]
 
 [.text-center]
-Figure 7.10. DRAKON-diagram heap sorting algorithm a) heapSort(arr); b) heapify(arr,size,i)
+Figure 7.10. DRAKON-diagram heap sorting algorithm a) `heapSort(arr)`; b) `heapify(arr,size,i)`
 
 
 The evaluation of the complexity of the heap sorting algorithm presented

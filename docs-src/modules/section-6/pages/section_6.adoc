@@ -16,9 +16,7 @@ presentation of a core set of data in a different, more searchable form,
 which are used in real-world applications for processing data sets in
 huge databases.
 
-There is no single algorithm to solve the search problem, nor is there a
-single algorithm for sorting problems that is better suited for all
-cases. Some of the algorithms run faster than others, but require
+There is no single algorithm to solve the search problems. Some of the algorithms run faster than others, but require
 additional RAM to run. Others run very quickly, but can only be used for
 pre-sorted arrays. At the same time, the analysis of search algorithms
 is somewhat different from sorting algorithms. In particular, there is
@@ -59,7 +57,7 @@ In the case of a linear search of an element in an unordered dataset,
 for example, in an array or in a slice, the simplest algorithm is to
 view all elements until the desired value is found (Figure 6.1).
 
-image::_images/Fig6_1_searchValue.svg[width=100%]
+image::_images/Fig6_1_searchValue.svg[width=55%]
 
 [.text-center]
 Figure 6.1. DRAKON-diagrams of linear search algorithm
@@ -82,12 +80,12 @@ as a result of passing through an increasing sorted list, the search is
 stopped. This approach saves time and increases productivity. Figure
 6.2. shows the DRAKON-diagram of this algorithm.
 
-image::_images/Fig6_2_SortedSlice.jpg[width=50%]
+image::_images/Fig6_2_dataSorted.svg[width=55%]
 
 [.text-center]
-Figure 6.2. DRAKON-diagram of searching sorted slice algorithm
+Figure 6.2. DRAKON-diagram of searching sorted data algorithm
 
-=== 6.2. Binary search for data in a sorted slice
+=== 6.2. Binary search for data in a sorted data
 
 Binary search is performed as follows:
 
@@ -105,7 +103,7 @@ the search interval is empty.
 The DRAKON-diagram of the binary search algorithm is represented in
 Figure 6.3. (main() module is similar to the previous algorithm):
 
-image::Engl_image7/Fig6_3_BinarySearch.jpg[width=50%, height=30%, align=center]
+image::_images/Fig6_3_searchBinary.svg[width=75%]
 
 [.text-center]
 Figure 6.3. DRAKON-diagram of Binary Search algorithm
@@ -128,37 +126,24 @@ A.", "Shafler B.”, "Wiley D.", "Brown G.", "Black H.". In this list you
 should delete the entry " Brown G." and then add a new entry "Singer B."
 placing it after the entry "Wiley D.". After that, you should delete the
 duplicates of the entry " Shafler B." leaving only one. The
-corresponding dragon diagrams are presented in Figure 6.4 a,b,c,d:
+corresponding DRAKON-diagrams are presented in Figure 6.4 a,b,c,d:
 
-image::Engl_image7/Fig6_4a_Main.jpg[width=50%, height=30%, align=center]
-
-[.text-center]
-a). Function _main()_
-
-image::Engl_image7/Fig6_4b_Remove.jpg[width=80%, height=30%, align=center]
+image::_images/Fig6_4a_main.svg[width=60%]
 
 [.text-center]
-b). function of deletion _RemoveVal(val)_
+a). Function `main()``
 
-image::Engl_image7/Fig6_4c_SearchData.jpg[width=50%, height=30%, align=center]
+image::_images/Fig6_4bc_FrontBack.jpg[width=120%]
 
-[.text-center]
-c). function of searching _SearchData(val)_
-+
+b). function of pushing new items (`pushFront(list,val) and pushback(list,val)`)
 
-image::Engl_image7/Fig6_4d_PushVal.jpg[width=50%, height=30%, align=center]
+image::_images/Fig6_4d_searchData.svg[width=140%]
 
 [.text-center]
-d). function of inserting by value _PushVal + NodeWithVal_
-
-image::Engl_image7/Fig6_4e_RemoveDupli.jpg[width=70%, height=30%, align=center]
+c). function of searching `searchData(val)`
 
 [.text-center]
-e). function of removing duplicates _RemoveDupli_
-
-[.text-center]
-Figure 6.4. DRAKON diagram of algorithms deletion, search, insertion by
-value and dublicate deletion
+Figure 6.4. DRAKON-diagrams of  search algorithms
 
 === 6.4. Hashing
 
@@ -175,27 +160,27 @@ three basic operations: the operation of adding a new pair, search
 operation and operation to delete the key-value pair. 
 From a programming position, a hash table is a collection of items 
 containing a key-value pair, where the key is computed by a special 
-function called a _hash function_. A hash-table, in turn, 
+function called a `hash function`. A `hash-table`, in turn, 
 consists of buckets, a set of elements with matching or close hash values
 of the function. 
-There are different methods of constructing a hash function, the simplest 
+There are different methods of constructing a `hash function`, the simplest 
 of which is the residual method, where the hash function is defined 
-as the remainder of the division of two numbers (_x, m_), where _x_ 
-is the item of the set, _m_ is the number of buckets. In Golang, 
-the hash function for this method is: _h = x % m_.
+as the remainder of the division of two numbers (`x, m`), where `x` 
+is the item of the set, `m` is the number of buckets. In JavaScript, 
+the `hash function` for this method is: `h = x % m`.
 
 We will conduct a detailed analysis of the hash table creation process 
-utilizing the Go programming language within the DRAKON WEB Editor.  
-First, a variable of the _Node_ type is created, defined as a structure 
-consisting of two fields: the element value is _Value int_ and the next 
-element address is _Next *Node_. In fact, it is a single linked list (see Sect. 1).
+utilizing the JavaScript programming language within the DrakonTech.   
+First, a variable of the `Node` type is created, defined as a structure 
+consisting of two fields: the element value is `Value int` and the next 
+element address is `Next *Node`. In fact, it is a single linked list (see Section 1).
 
 type Node struct \{ Value int Next *Node }
 
 Then, a hash-table is created through a structure that has two fields:
-the first field (_Table_) is a map that relates the integer (_hash
-index_) to the associated list (___Node_), and the second - __Size* of
-type _int_:
+the first field (`Table`) is a map that relates the integer (`hash
+index`) to the associated list (`Node`), and the second - `Size`of
+type `int`:
 
 [source,go]
 ----
@@ -207,20 +192,20 @@ Size int
 
 As a result, this hash table would have to have as many single linked
 lists (buckets) as was specified by the Size constant. In the above case
-the number of slots is 15. Note that the _Node_ and _HashTable_ type
+the number of slots is 15. Note that the `Node` and `HashTable` type
 advertisement, as well as the Size constant, are included in the
 File/File description option (Figure 6.5.).
 
-image::Engl_image7/Fig6_5a_Description.jpg[idth=50%, height=30%, align=center]
+image::_images/Fig6_5a_Description.jpg[width=50%, height=30%, align=center]
 
 [.text-center]
-Figure 6.5. Type declaration _Node_, _HashTable_ and constant _Size_
+Figure 6.5. Type declaration `Node`, `HashTable` and constant `Size`
 
-As an example, consider constructing a hash-table of size _m_ = 15 for a
+As an example, consider constructing a hash-table of size `m` = 15 for a
 collection of integers from 0 to 120. The hash table slots are
 originally empty:
 
-image::Engl_image7/Fig6_HashEmpty.jpg[idth=50%, height=30%, align=center]
+image::`images/Fig6_HashEmpty.jpg[idth=50%, height=30%, align=center]
 
 A hash function that establishes a relationship between an element and its 
 corresponding slot must accept any element from the dataset, specifically 
@@ -228,15 +213,15 @@ ranging from 0 to 120, and return an integer that corresponds to a slot
 number between 0 and 14. The algorithm implementing the remainder method 
 sequentially processes each element from the original set, dividing it by 15 
 and returning the remainder as the hash value. This can be expressed as 
-\( h(item) = item \mod 15 \). For instance, the hash code for the element 119 
-is calculated as \( 119 \mod 15 = 14 \) (where \( 119 - 15 \times 7 = 14 \)), 
+`\( h(item) = item \mod 15 \)`. For instance, the hash code for the element 119 
+is calculated as `\( 119 \mod 15 = 14 \)` (where `\( 119 - 15 \times 7 = 14 \))`, 
 thus placing the value 119 into the corresponding slot.
 
-image::Engl_image7/Fig6_Hash119.jpg[idth=50%, height=30%, align=center]
+image::_images/Fig6_Hash119.jpg[idth=50%, height=30%, align=center]
 
 The algorithm then identifies slots for other elements, gradually
 filling them. When the algorithm encounters element 104 in the loop,
-then the remainder of the division is 104%15 = 14, so this element will
+then the remainder of the division is `104%15 = 14`, so this element will
 also be included in the 14th slot. In this way, each slot will
 accumulate corresponding elements with one index hash. For example, for
 an index hash of 8, the slot will consist of these elements: 113 : 98 :
@@ -245,33 +230,37 @@ an index hash of 8, the slot will consist of these elements: 113 : 98 :
 
 Table 6.1. Hash-table of 15 slots
 
-image::Engl_image7/Fig6_HashTable.jpg[idth=50%, height=30%, align=center]
+image::_images/Fig6_HashTable.jpg[idth=50%, height=30%, align=center]
 
 Thus, the remainder method converts a collection of 120 integers into a
 hash table of 15 slots. The search for an element is now greatly
-accelerated as it takes two steps: first, the hash function h =(x % m)
+accelerated as it takes two steps: first, the hash function `h =(x % m)`
 computes the hash index, and then the search is done in a 7-element
 slot. The algorithm based on the residual method is represented by the
-following dragon diagrams (Figure 6.6.). Here _hinsert_ - module of
-filling with elements of slots on hash-function, _hLookup_-module of
-search of element in hash-table, _hTravers_ - module of passage on
-hash-table.
+following DRAKON-diagrams (Figure 6.6.). Here `hinsert` - module of
+filling with elements of slots on `hash`-function, `hLookup`-module of
+search of element in hash-table, `hTravers` - module of passage on
+`hash`-table.
 
 The implementation of the main hash table functions using the hash
-function is as follows: 1.Create a _HashTable_ structure list of the
-size m to store objects. 2. Compute the object’s hash code by passing it
-through the hash function. 3. Get the bucket hash indices where the
-objects will be saved. 4. Save these objects in the designated bucket.
+function is as follows: 
+1.Create a `HashTable` structure list of the
+size `m` to store objects. 
+2. Compute the object’s hash code by passing it
+through the hashfunction. 
+3. Get the bucket hash indices where the
+objects will be saved. 
+4. Save these objects in the designated bucket.
 
 DRAKON-diagrams of algorithms for implementing the main functions of
 working with hash-tables are shown in Figure 6.6.
 
-image::Engl_image7/Fig6_6_HDia_ab.jpg[idth=50%, height=30%, align=center]
+image::_images/Fig6_6_HDia_ab.jpg[idth=50%, height=30%, align=center]
 
 [.text-center]
 a). Hash-table creating function b). Item searching function
 
-image::Engl_image7/Fig6_6_HDia_cd.jpg[idth=50%, height=30%, align=center]
+image::_images/Fig6_6_HDia_cd.jpg[idth=50%, height=30%, align=center]
 
 [.text-center]
 c). Hash-table travers function d) Deletion item function
@@ -282,12 +271,12 @@ Figure 6.6. DRAKON-diagrams of hash-table algorithms
 Consider the algorithm for removing an element from the hash-table.
 Suppose we delete element 74. First, the bucket containing the item to
 be removed is determined. It then passes through the elements of this
-bucket, where after each _node.Value == value_ check, the current
-element is stored in the _nodePrev_ variable. If the above condition is
-met, the _nodePrev.nextNode_ field (_0xc0000386d0_) is changed to
-(_0xc00384f0_), that is, the deleted element is skipped (Figure 6.6.):
+bucket, where after each `node.Value == value` check, the current
+element is stored in the `nodePrev` variable. If the above condition is
+met, the `nodePrev.nextNode` field (`0xc0000386d0`) is changed to
+(`0xc00384f0`), that is, the deleted element is skipped (Figure 6.6.):
 
-image::Engl_image7/Fig6_6_DeletionItem.jpg[idth=50%, height=30%, align=center]
+image::_images/Fig6_6_DeletionItem.jpg[idth=50%, height=30%, align=center]
 
 [.text-center]
 Figure 6.6. Deletion item from hash-table
@@ -297,8 +286,8 @@ values, the mean square method. The mean square method squares the key
 value and then extracts the average digits of the result, giving a value
 in the range from 0 to M. Software implementation of hash function
 algorithm creation in Golang language is reduced to the use of built-in
-functions of conversion of integers into string (strconv.Atoi(i)) and
-vice versa (strc__onv.Itoa(i))).__ For example, for any four-digit
+functions of conversion of integers into string (`strconv.Atoi(i)`) and
+vice versa (`strc__onv.Itoa(i))`).__ For example, for any four-digit
 number, the hash function is:
 
 [source,go]

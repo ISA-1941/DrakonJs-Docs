@@ -1,48 +1,36 @@
 {
     "history": [
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-7\\attachments\\llRemoveWithValue\\module.drakon",
-            "whenOpened": "2025-04-03T10:48:55.897Z"
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\llRemoveWithValue\\searchData.drakon",
+            "whenOpened": "2025-04-21T07:40:14.284Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-7\\attachments\\llRemoveWithValue\\searchData.drakon",
-            "whenOpened": "2025-04-03T10:21:01.365Z"
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\llRemoveWithValue\\removeDupli.drakon",
+            "whenOpened": "2025-04-21T07:05:50.462Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-7\\attachments\\llRemoveWithValue\\removeDupli.drakon",
-            "whenOpened": "2025-04-03T10:04:27.911Z"
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\llRemoveWithValue\\pushFront.drakon",
+            "whenOpened": "2025-04-21T06:42:21.231Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-7\\attachments\\llRemoveWithValue\\removeVal.drakon",
-            "whenOpened": "2025-04-03T10:04:27.068Z"
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\llRemoveWithValue\\pushBack.drakon",
+            "whenOpened": "2025-04-21T06:34:31.971Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-7\\attachments\\llRemoveWithValue\\pushBack.drakon",
-            "whenOpened": "2025-04-03T09:39:15.927Z"
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\llRemoveWithValue\\nodeWithVal.drakon",
+            "whenOpened": "2025-04-21T06:34:16.429Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-7\\attachments\\llRemoveWithValue\\pushVal.drakon",
-            "whenOpened": "2025-04-03T08:05:03.546Z"
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\llRemoveWithValue\\main.drakon",
+            "whenOpened": "2025-04-21T06:33:57.650Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-7\\attachments\\llRemoveWithValue\\main.drakon",
-            "whenOpened": "2025-04-03T08:03:12.369Z"
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\llRemoveWithValue\\createLinkedList.drakon",
+            "whenOpened": "2025-04-21T06:33:52.745Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-7\\attachments\\llRemoveWithValue\\iterateList.drakon",
-            "whenOpened": "2025-04-03T07:57:58.217Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-7\\attachments\\llRemoveWithValue\\pushFront.drakon",
-            "whenOpened": "2025-04-03T07:09:41.594Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-7\\attachments\\llRemoveWithValue\\nodeWithVal.drakon",
-            "whenOpened": "2025-04-03T06:39:57.436Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-7\\attachments\\llRemoveWithValue\\createLinkedList.drakon",
-            "whenOpened": "2025-04-03T05:53:25.282Z"
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\llRemoveWithValue\\pushVal.drakon",
+            "whenOpened": "2025-04-21T06:33:39.908Z"
         }
     ]
 }
