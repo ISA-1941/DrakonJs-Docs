@@ -1,0 +1,34 @@
+{
+    "items": {
+        "1": {
+            "type": "ridea",
+            "content": "<p>Первичная обработка узла</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "2": {
+            "type": "ridea",
+            "content": "<p>Проверка на отсутствие нарушения</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "3": {
+            "type": "ridea",
+            "content": "<p>Проверка узла на корень</p>",
+            "parent": "1",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "4": {
+            "type": "ridea",
+            "content": "<p>Определение ближайших родственников</p>",
+            "parent": "1",
+            "treeType": "treeview",
+            "ordinal": 1
+        }
+    },
+    "type": "graf",
+    "id": "fixRedRed.graf"
+}

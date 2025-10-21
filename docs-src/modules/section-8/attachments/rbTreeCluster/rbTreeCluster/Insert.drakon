@@ -1,0 +1,121 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "Branch1"
+        },
+        "3": {
+            "type": "action",
+            "one": "6",
+            "content": "NIL = tree.nullNode"
+        },
+        "6": {
+            "type": "question",
+            "one": "7",
+            "two": "10",
+            "flag1": 1,
+            "content": "tree.root === NIL"
+        },
+        "7": {
+            "type": "action",
+            "one": "8",
+            "content": "tree.root = createNode(\n    data,\n    false,\n    NIL,\n    NIL,\n    NIL\n)"
+        },
+        "8": {
+            "type": "action",
+            "one": "10",
+            "content": "return "
+        },
+        "9": {
+            "type": "branch",
+            "one": "17",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "10": {
+            "type": "branch",
+            "one": "11",
+            "branchId": 2,
+            "content": "Branch2"
+        },
+        "11": {
+            "type": "action",
+            "one": "12",
+            "content": "insertionInfo = findInsertionPoint(\n    tree,\n    tree.root,\n    data,\n    NIL\n)"
+        },
+        "12": {
+            "type": "question",
+            "one": "13",
+            "two": "15",
+            "flag1": 1,
+            "content": "insertionInfo.duplicate"
+        },
+        "13": {
+            "type": "action",
+            "one": "14",
+            "content": "console.log('Duplicate value: ' + data)"
+        },
+        "14": {
+            "type": "action",
+            "one": "15",
+            "content": "return "
+        },
+        "15": {
+            "type": "action",
+            "one": "16",
+            "content": "parent = insertionInfo.parent"
+        },
+        "16": {
+            "type": "action",
+            "one": "9",
+            "content": "direction = insertionInfo.direction"
+        },
+        "17": {
+            "type": "action",
+            "one": "18",
+            "content": "newNode = createNode(\n    data,\n    true,\n    parent,\n    NIL,\n    NIL\n)"
+        },
+        "18": {
+            "type": "question",
+            "one": "19",
+            "two": "20",
+            "flag1": 1,
+            "content": "direction === 'left'"
+        },
+        "19": {
+            "type": "action",
+            "one": "21",
+            "content": "parent.left = newNode"
+        },
+        "20": {
+            "type": "action",
+            "one": "21",
+            "content": "parent.right = newNode"
+        },
+        "21": {
+            "type": "action",
+            "one": "22",
+            "content": "fixRedRed(tree, newNode)"
+        },
+        "22": {
+            "type": "action",
+            "one": "1",
+            "content": "tree.root.colour = false"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "tree, data"
+}

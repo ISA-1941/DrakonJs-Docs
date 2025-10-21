@@ -1,0 +1,284 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "4",
+            "content": "Rule 1: Root must be BLACK"
+        },
+        "3": {
+            "type": "action",
+            "one": "57",
+            "content": "parent = x.parent"
+        },
+        "4": {
+            "type": "question",
+            "one": "5",
+            "two": "3",
+            "flag1": 1,
+            "content": "x === tree.root"
+        },
+        "5": {
+            "type": "action",
+            "one": "6",
+            "content": "x.colour = false"
+        },
+        "6": {
+            "type": "action",
+            "one": "3",
+            "content": "return "
+        },
+        "9": {
+            "type": "branch",
+            "one": "23",
+            "branchId": 4,
+            "content": "Nodes turnings"
+        },
+        "10": {
+            "type": "branch",
+            "one": "15",
+            "branchId": 2,
+            "content": "// Case 2: Uncle is RED"
+        },
+        "11": {
+            "type": "action",
+            "one": "60",
+            "content": "grandparent = parent.parent"
+        },
+        "15": {
+            "type": "question",
+            "one": "16",
+            "two": "24",
+            "flag1": 1,
+            "content": "uncle.colour === true"
+        },
+        "16": {
+            "type": "action",
+            "one": "17",
+            "content": "parent.colour = false;\nuncle.colour = false;\ngrandparent.colour = true"
+        },
+        "17": {
+            "type": "action",
+            "one": "18",
+            "content": "fixRedRed(tree, grandparent)"
+        },
+        "18": {
+            "type": "action",
+            "one": "24",
+            "content": "return "
+        },
+        "23": {
+            "type": "action",
+            "one": "29",
+            "content": "rootSubtree = null"
+        },
+        "24": {
+            "type": "branch",
+            "branchId": 3,
+            "one": "25",
+            "content": "Node placement cases"
+        },
+        "25": {
+            "type": "action",
+            "one": "68",
+            "two": "",
+            "content": "LL = parent === grandparent.left && x ===\nparent.left"
+        },
+        "26": {
+            "type": "action",
+            "one": "27",
+            "two": "",
+            "content": "LR = parent === grandparent.left && x ===\nparent.right"
+        },
+        "27": {
+            "type": "action",
+            "one": "9",
+            "two": "",
+            "content": "RL = parent === grandparent.right && x ===\nparent.left"
+        },
+        "29": {
+            "type": "question",
+            "one": "30",
+            "two": "31",
+            "flag1": 1,
+            "content": "LL"
+        },
+        "30": {
+            "type": "action",
+            "one": "42",
+            "content": "rootSubtree = rotateRight(tree, grandparent)"
+        },
+        "31": {
+            "type": "question",
+            "one": "32",
+            "two": "33",
+            "flag1": 1,
+            "content": "RR"
+        },
+        "32": {
+            "type": "action",
+            "one": "46",
+            "content": "rootSubtree = rotateLeft(\n    tree,\n    grandparent\n)"
+        },
+        "33": {
+            "type": "question",
+            "one": "64",
+            "two": "35",
+            "flag1": 1,
+            "content": "LR"
+        },
+        "35": {
+            "type": "question",
+            "one": "66",
+            "two": "37",
+            "flag1": 1,
+            "content": "RL"
+        },
+        "36": {
+            "type": "action",
+            "one": "44",
+            "content": "rootSubtree = rotateLeft(\n    tree,\n    grandparent\n)"
+        },
+        "37": {
+            "type": "action",
+            "one": "38",
+            "content": "console.log(\n    \"Unclassified rotation case.\"\n)"
+        },
+        "38": {
+            "type": "action",
+            "one": "40",
+            "content": "return "
+        },
+        "40": {
+            "type": "question",
+            "one": "41",
+            "two": "1",
+            "flag1": 1,
+            "content": "rootSubtree.parent === tree.nullNode"
+        },
+        "41": {
+            "type": "action",
+            "one": "1",
+            "content": "tree.root = rootSubtree"
+        },
+        "42": {
+            "type": "action",
+            "one": "43",
+            "content": "rootSubtree.colour = false;"
+        },
+        "43": {
+            "type": "action",
+            "one": "40",
+            "content": "grandparent.colour = true"
+        },
+        "44": {
+            "type": "action",
+            "one": "45",
+            "content": "rootSubtree.colour = false"
+        },
+        "45": {
+            "type": "action",
+            "one": "67",
+            "content": "rootSubtree.left.colour = true"
+        },
+        "46": {
+            "type": "action",
+            "one": "48",
+            "content": "rootSubtree.colour = false"
+        },
+        "47": {
+            "type": "action",
+            "one": "49",
+            "content": "rootSubtree.colour = false"
+        },
+        "48": {
+            "type": "action",
+            "one": "40",
+            "content": "grandparent.colour = true"
+        },
+        "49": {
+            "type": "action",
+            "one": "65",
+            "content": "rootSubtree.left.colour = true"
+        },
+        "57": {
+            "type": "question",
+            "one": "58",
+            "two": "11",
+            "flag1": 1,
+            "content": "parent.colour === false"
+        },
+        "58": {
+            "type": "action",
+            "one": "11",
+            "two": "",
+            "content": "return "
+        },
+        "59": {
+            "type": "action",
+            "one": "10",
+            "content": "uncle = getUncle(tree, x)"
+        },
+        "60": {
+            "type": "question",
+            "one": "61",
+            "two": "59",
+            "flag1": 1,
+            "content": "grandparent === tree.nullNode"
+        },
+        "61": {
+            "type": "action",
+            "one": "62",
+            "content": "parent.colour = false"
+        },
+        "62": {
+            "type": "action",
+            "one": "59",
+            "content": "return "
+        },
+        "63": {
+            "type": "action",
+            "one": "47",
+            "content": "rootSubtree = rotateRight(\n    tree,\n    grandparent\n)"
+        },
+        "64": {
+            "type": "action",
+            "one": "63",
+            "content": "rotateLeft(tree, parent)"
+        },
+        "65": {
+            "type": "action",
+            "one": "40",
+            "content": "rootSubtree.right.colour = true"
+        },
+        "66": {
+            "type": "action",
+            "one": "36",
+            "content": "rotateRight(tree, parent)"
+        },
+        "67": {
+            "type": "action",
+            "one": "40",
+            "content": "rootSubtree.right.colour = true"
+        },
+        "68": {
+            "type": "action",
+            "one": "26",
+            "two": "",
+            "content": "RR = parent === grandparent.right && x ===\nparent.right"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "tree,x"
+}

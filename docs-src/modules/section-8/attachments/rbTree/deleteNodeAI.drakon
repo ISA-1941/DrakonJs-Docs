@@ -1,0 +1,243 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "Find the node with this value"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "nullNode = tree.nullNode"
+        },
+        "4": {
+            "type": "action",
+            "one": "39",
+            "content": "z = nullNode"
+        },
+        "6": {
+            "type": "question",
+            "one": "13",
+            "two": "40",
+            "flag1": 0,
+            "content": "node !== nullNode && !foundNode"
+        },
+        "7": {
+            "type": "arrow-loop",
+            "one": "6"
+        },
+        "13": {
+            "type": "question",
+            "one": "14",
+            "two": "17",
+            "flag1": 1,
+            "content": "z === nullNode"
+        },
+        "14": {
+            "type": "action",
+            "one": "15",
+            "content": "console.log(\n    \"Couldn't find node with key:\",\n    key\n)"
+        },
+        "15": {
+            "type": "action",
+            "one": "17",
+            "content": "return "
+        },
+        "16": {
+            "type": "branch",
+            "one": "32",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "17": {
+            "type": "branch",
+            "one": "18",
+            "branchId": 2,
+            "content": "Preparation for removal"
+        },
+        "18": {
+            "type": "action",
+            "one": "19",
+            "content": "y = z"
+        },
+        "19": {
+            "type": "action",
+            "one": "20",
+            "content": "yColour = y.colour"
+        },
+        "20": {
+            "type": "question",
+            "one": "21",
+            "two": "49",
+            "flag1": 1,
+            "content": "z.left === nullNode"
+        },
+        "21": {
+            "type": "action",
+            "one": "22",
+            "content": "x = z.right"
+        },
+        "22": {
+            "type": "action",
+            "one": "16",
+            "content": "joinParentChild(tree, z, z.right)"
+        },
+        "32": {
+            "type": "question",
+            "one": "33",
+            "two": "1",
+            "flag1": 1,
+            "content": "yColour === false"
+        },
+        "33": {
+            "type": "question",
+            "one": "34",
+            "two": "35",
+            "flag1": 1,
+            "content": "x.colour === true"
+        },
+        "34": {
+            "type": "action",
+            "one": "1",
+            "content": "x.colour = false"
+        },
+        "35": {
+            "type": "action",
+            "one": "1",
+            "content": "fixDoubleBlack(tree, x)"
+        },
+        "39": {
+            "type": "action",
+            "one": "7",
+            "content": "foundNode = false"
+        },
+        "40": {
+            "type": "question",
+            "one": "44",
+            "two": "45",
+            "flag1": 1,
+            "content": "node.data === key"
+        },
+        "43": {
+            "type": "action",
+            "one": "7",
+            "two": "",
+            "content": "foundNode = true"
+        },
+        "44": {
+            "type": "action",
+            "one": "43",
+            "two": "",
+            "content": "z = node"
+        },
+        "45": {
+            "type": "question",
+            "one": "46",
+            "two": "47",
+            "flag1": 1,
+            "content": "key < node.data"
+        },
+        "46": {
+            "type": "action",
+            "one": "7",
+            "content": "node = node.left"
+        },
+        "47": {
+            "type": "action",
+            "one": "7",
+            "content": "node = node.right"
+        },
+        "49": {
+            "type": "question",
+            "one": "50",
+            "two": "52",
+            "flag1": 1,
+            "content": "z.right === nullNode"
+        },
+        "50": {
+            "type": "action",
+            "one": "51",
+            "content": "x = z.left"
+        },
+        "51": {
+            "type": "action",
+            "one": "16",
+            "content": "joinParentChild(tree, z, z.left)"
+        },
+        "52": {
+            "type": "action",
+            "one": "53",
+            "two": "",
+            "content": "y = minimum(tree, z.right)"
+        },
+        "53": {
+            "type": "action",
+            "one": "59",
+            "two": "",
+            "content": "yColour = y.colour"
+        },
+        "59": {
+            "type": "action",
+            "one": "60",
+            "two": "",
+            "content": "x = y.right"
+        },
+        "60": {
+            "type": "question",
+            "one": "61",
+            "two": "63",
+            "flag1": 1,
+            "content": "y.parent !== z"
+        },
+        "61": {
+            "type": "action",
+            "one": "62",
+            "two": "",
+            "content": "joinParentChild(tree, y, y.right)"
+        },
+        "62": {
+            "type": "action",
+            "one": "64",
+            "content": "y.right = z.right"
+        },
+        "63": {
+            "type": "action",
+            "one": "65",
+            "content": "joinParentChild(tree, z, y)"
+        },
+        "64": {
+            "type": "action",
+            "one": "63",
+            "content": "y.right.parent = y"
+        },
+        "65": {
+            "type": "action",
+            "one": "66",
+            "content": "y.left = z.left"
+        },
+        "66": {
+            "type": "action",
+            "one": "67",
+            "content": "y.left.parent = y"
+        },
+        "67": {
+            "type": "action",
+            "one": "16",
+            "content": "y.colour = z.colour"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "tree, node, key"
+}

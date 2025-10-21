@@ -1,0 +1,66 @@
+{
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "<p>Branch 1</p>"
+        },
+        "3": {
+            "type": "action",
+            "content": "<p>Check the node for root. Set the root colour to black and Exit.</p>",
+            "one": "4",
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#B6FF00\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "4": {
+            "type": "action",
+            "content": "<p>Determination of next of kin.</p>",
+            "one": "12",
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#B6FF00\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"rgba(0, 0, 0, 0.4)\",\"shadowBlur\":10,\"borderWidth\":\"\"}"
+        },
+        "5": {
+            "type": "action",
+            "content": "<p><strong>Handling the case of \"red uncle\"</strong>: When the father and uncle of the node are red</p>",
+            "one": "8",
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"yellow\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "7": {
+            "type": "branch",
+            "content": "<p>End</p>",
+            "one": "1",
+            "branchId": 3
+        },
+        "8": {
+            "type": "branch",
+            "content": "<p>Branch 2</p>",
+            "one": "11",
+            "branchId": 2
+        },
+        "9": {
+            "type": "action",
+            "content": "<p><strong>Performing rotations:</strong> Calling the corresponding rotation functions</p>",
+            "one": "10"
+        },
+        "10": {
+            "type": "action",
+            "content": "<p><strong>Repainting nodes after turning: </strong>Setting colors after making turns.</p>",
+            "one": "7"
+        },
+        "11": {
+            "type": "action",
+            "content": "<p><strong>Turn Cases Definition: LL, LR, RL, RR </strong>Cases Definition</p>",
+            "one": "9"
+        },
+        "12": {
+            "type": "comment",
+            "content": "<p>Parent is necessary, because it is its color that we check first (the rule \"red-red\" is x red, and parent red).</p><p><br /></p><p>Grandfather is necessary, because it is through him that all operations of turns and repainting are carried out, and he is the key to defining uncle.</p><p><br /></p><p>Uncle is necessary because its color determines which of the two main balancing cases we will apply (Case 1: uncle red, or Case 2: uncle black).</p>",
+            "one": "5",
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#fff9c5\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        }
+    },
+    "type": "drakon",
+    "id": "fixRedRedImage.drakon"
+}

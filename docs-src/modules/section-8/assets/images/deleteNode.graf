@@ -1,0 +1,104 @@
+{
+    "items": {
+        "1": {
+            "type": "ridea",
+            "content": "<p>Variable initialization</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "5": {
+            "type": "idea",
+            "content": "<p><strong>nullNode</strong>: A special node representing NULL (a sheet or no node).</p><p><strong>z</strong>: Node to be removed (or replaced with successor). Initially null.</p><p><strong>foundNode</strong>: Flag indicating whether a node was found. False.</p>",
+            "parent": "1",
+            "treeType": "vertical",
+            "ordinal": 0
+        },
+        "7": {
+            "type": "ridea",
+            "content": "<p>Search for node to delete</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "8": {
+            "type": "idea",
+            "content": "<p><strong>Cycle</strong>: While the current node is not null node and the node is not found</p>",
+            "parent": "7",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "9": {
+            "type": "idea",
+            "content": "<p><strong>Abort cycle</strong> if node found or null node reached</p>",
+            "parent": "7",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "10": {
+            "type": "ridea",
+            "content": "<p>Preparation for removal (defining y and x</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 2
+        },
+        "11": {
+            "type": "idea",
+            "content": "<p>Handling case when node not found</p>",
+            "parent": "7",
+            "treeType": "treeview",
+            "ordinal": 2
+        },
+        "12": {
+            "type": "idea",
+            "content": "<p><strong>y</strong>: The node that will actually be removed or moved to z. Initially z.</p><p><br /></p><p><strong>yColour</strong>: Node color y.</p><p><br /></p><p><strong>x:</strong> The child node y that will take its place.</p>",
+            "parent": "10",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "13": {
+            "type": "ridea",
+            "content": "<p><strong>DELETION CASES</strong></p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 3
+        },
+        "14": {
+            "type": "idea",
+            "content": "<p><strong>Case 1</strong>: Node <strong>z</strong> has no left child</p>",
+            "parent": "13",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "15": {
+            "type": "idea",
+            "content": "<p><strong>Case 2</strong>: Node <strong>z</strong> has no right child</p>",
+            "parent": "13",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "16": {
+            "type": "idea",
+            "content": "<p><strong>Case 3</strong>: <strong>z</strong> has both child elements</p>",
+            "parent": "13",
+            "treeType": "treeview",
+            "ordinal": 2
+        },
+        "17": {
+            "type": "idea",
+            "content": "<p><strong>Case 5 </strong>Correction of red-black tree (after removing y):</p>",
+            "parent": "13",
+            "treeType": "treeview",
+            "ordinal": 4
+        },
+        "19": {
+            "type": "idea",
+            "content": "<p><strong>Case 4. </strong>If <strong>y</strong> is not a direct descendant of <strong>z</strong>:</p>",
+            "parent": "13",
+            "treeType": "treeview",
+            "ordinal": 3
+        }
+    },
+    "type": "graf",
+    "id": "deleteNode.graf"
+}
