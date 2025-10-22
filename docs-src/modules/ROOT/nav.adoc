@@ -14,5 +14,6 @@
 ** xref:section-6:section-6.adoc[Base Search Algorithms]
 * Base algorithms sorting
 ** xref:section-7:section-7.adoc[Base Sorting Algorithms]
-
+* Binary Tree Algorithms
+** xref:section-8:section-8.adoc[Binary Tree Algorithms]
 
