@@ -74,7 +74,7 @@ A binary search tree is built according to a certain algorithm. Consider the seq
 image::{imagesdir}/Fig8_3a_insert.png[width=75%, link="{imagesdir}/Fig8_3a_insert.png", window="_blank"]
 
 
-//image::{imagesdir}/Fig8_3b_createNode.jpg[width=50%]
+//image::{imagesdir}/Fig8_3b_createNode.jpg[width=25%]
 image::{imagesdir}/Fig8_3b_createNode.jpg[width=75%, link="{imagesdir}/Fig8_3b_createNode.jpg", window="_blank"]
 
 [.text-center]
