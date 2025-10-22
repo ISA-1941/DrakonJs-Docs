@@ -70,9 +70,12 @@ no parent node;
 A binary search tree is built according to a certain algorithm. Consider the sequence of integers \{11, 5, 17, 15, 1, 8, 19, 13, 21}, represented as a slice of numbers[]. First the root node \{11} is formed, then in the loop for each node recursively the method
 `insert(tree, value)` is called (Fig. 8.3 a), which in turn calls the method `createNode(value)`, which creates a new node (Fig. 8.3 b).
 
-image::{imagesdir}/Fig8_3a_insert.png[width=50%]
+//image::{imagesdir}/Fig8_3a_insert.png[width=50%]
+image::{imagesdir}/Fig8_3a_insert.png[width=75%, link="{imagesdir}/Fig8_3a_insert.png", window="_blank"]
 
-image::{imagesdir}/Fig8_3b_createNode.jpg[width=50%]
+
+//image::{imagesdir}/Fig8_3b_createNode.jpg[width=50%]
+image::{imagesdir}/Fig8_3b_createNode.jpg[width=75%, link="{imagesdir}/Fig8_3b_createNode.jpg", window="_blank"]
 
 [.text-center]
 Fig.8.3 a,b Binary tree DRAKON-diagrams
@@ -106,8 +109,8 @@ Another basic operation is the `findNode(value)` function. This function uses a 
 val with the values of other nodes as it traverses the tree. 
 The DRAKON-diagram of the `findNode(node, value)`function is shown in Figure 8.5. 
 
-image::{imagesdir}/Fig8_5_findNode.jpg[width=75%]
-
+//image::{imagesdir}/Fig8_5_findNode.jpg[width=75%]
+image::{imagesdir}/Fig8_5_findNode.jpg[width=75%, link="{imagesdir}/Fig8_5_findNode.jpg", window="_blank"]
 [.text-center]
 Figure 8.5. DRAKON-diagram of `findNode(root *BSTree, val int)` method
 
@@ -123,6 +126,7 @@ In this case, this node is removed by changing the value of `node = null` in the
 and the corresponding DRAKON-diagram fragment
 
 image::{imagesdir}/Fig8_6_findNode.jpg[width=75%]
+image::{imagesdir}/Fig8_6_findNode.jpg[width=75%, link="{imagesdir}/Fig8_6_findNode.jpg", window="_blank"]
 
 [.text-center]
 Figure 8.6. Deleting a node without childs
