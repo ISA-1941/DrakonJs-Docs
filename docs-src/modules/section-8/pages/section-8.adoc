@@ -37,7 +37,7 @@ root node of this node.
 
 The information structure of the binary tree is organised as follows (Figure 8.2):
 
-image::_images/Fig8_2_BST.jpg[width=75%]
+image::_images/Fig8_2_BST.jpg[width=50%]
 
 [.text-center]
 Fig.8.2 Binary tree structure (_info_ - value (key), (N - NULL))
