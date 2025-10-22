@@ -3,10 +3,45 @@
   text-align: center;
   margin: 1rem auto;
 }
+/* --- DARK THEME OVERRIDES --- */
 
-/* Signature centering */
-.imageblock .title {
-  text-align: center;
-  font-style: italic;
-  margin-top: 0.5rem;
+/* 1. Общий фон страницы (за пределами контейнера) */
+/* Используем класс article, который присвоен тегу <body> */
+body.article {
+    background-color: #1a1a1a !important; /* Очень темный фон */
+    color: #e0e0e0 !important;          /* Светлый текст */
+}
+
+/* 2. Фон ОСНОВНОГО КОНТЕНТА */
+/* Основной контент, вероятно, находится в div class="body" */
+div.body {
+    background-color: #212121 !important; /* Чуть светлее, чем body, для контраста */
+    color: #cccccc !important;
+    /* Убедитесь, что все дочерние элементы получают цвет текста */
+}
+
+/* 3. Верхняя черная полоса (шапка) */
+header.header {
+    background-color: #0d0d0d !important;
+}
+
+/* 4. Навигация (Боковая панель) */
+/* Классы боковой панели не видны на скриншоте, но часто используются .nav-container или .nav-panel. 
+   Если навигация все еще белая, используйте Инспектор, чтобы найти её точный класс! */
+.nav-panel {
+    background-color: #2c2c2c !important; 
+    color: #cccccc !important;
+}
+
+/* 5. Общие стили для ссылок и заголовков (из вашего предыдущего кода) */
+a, a:visited {
+    color: #00bcd4 !important; /* Яркий голубой для ссылок */
+}
+
+a:hover {
+    color: #4CAF50 !important; /* Зеленый при наведении */
+}
+
+h1, h2, h3, h4, h5 {
+    color: #ffffff !important;
 }
