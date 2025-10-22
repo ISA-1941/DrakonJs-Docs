@@ -1,6 +1,6 @@
 IVANOV S.A.
 
-== DATA STRUCTURES AND ALGORITHMS HYBRID IMPLEMENTATION (DRAKON + GOLANG)
+== DATA STRUCTURES AND ALGORITHMS HYBRID IMPLEMENTATION (DRAKON + JAVASCRIPT)
 
 === INTRODUCTION
 
@@ -55,7 +55,7 @@ of any level. Considerable attention is paid to the issues of evaluating
 the efficiency of data structures and algorithms in terms of occupied
 memory and the execution time of basic operations. The organization of
 data structures and the study of basic algorithms is carried out in the
-Golang programming language and is accompanied by explanatory
+JavaScript programming language and is accompanied by explanatory
 illustrations. In a number of important cases, the algorithm
 visualization technology based on the Drakon graphical language is used.
 
@@ -67,7 +67,7 @@ practical problems related to the use of IT technologies. Knowledge in
 the field of data structure and algorithms is the most important
 component in an interview when applying for a job in a large IT company.
 
-*SECTION 2* describes the basics of the Golang programming language in
+*SECTION 2* describes the basics of the JavaScript programming language in
 sufficient amount for acquaintance and practical mastery of knowledge
 and skills in the field of data structure and algorithms. Of course,
 basic concepts and a certain level of programming are assumed for
@@ -76,17 +76,17 @@ reading this chapter.
 *SECTION 3* gives a brief description of the visual language DRAKON,
 which allows to represent any complex algorithms in the form of a
 DRAKON-diagram using icons, corresponding to the basic constructions of
-the Golang language. The technology of automated transformation of the
-DRAKON-diagram into the program code is given in the editor DRAKON WEB
-Editor, with subsequent implementation in the shell of Visual Studio
+the JavaScript language. The technology of automated transformation of the
+DRAKON-diagram into the program code is given in the editor DrakonTech, 
+with subsequent implementation in the shell of Visual Studio
 Code. Actually, this is a hybrid, two-stage approach: in the first step
 a DRAKON-diagram is made, the icons of which are filled with
-constructions of the language Golang, on the second step - automatically
+constructions of the language JavaScript, on the second step - automatically
 generated software code, implemented in any software environment
 
-*SECTION 4* presents Golang language constructs that implement the basic
+*SECTION 4* presents JavaScript language constructs that implement the basic
 abstract data types described in Section 1: array, cut, list etc.
-Explanations are given regarding the use of appropriate Golang language
+Explanations are given regarding the use of appropriate JavaScript language
 constructs.
 
 *SECTION 5* provides basic insights into the analysis of algorithm

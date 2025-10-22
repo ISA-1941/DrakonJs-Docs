@@ -1,3 +1,6 @@
+:imagesdir: docs-src/modules/section-2/assets/images
+[.text-justify]
+:figure-caption!
 == SECTION 2.JavaScript Programming Language Overview
 
 === 2.1. What is the JavaScript Programming Language?

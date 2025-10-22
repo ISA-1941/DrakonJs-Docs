@@ -1,3 +1,6 @@
+:imagesdir: docs-src/modules/section-1/assets/images
+[.text-justify]
+:figure-caption!:
 == SECTION 1. Abstract Data Types
 
 [abstract]
@@ -25,11 +28,9 @@ According to Steve McConnell, the author of *“Code Complete”*, abstract data
 
 A simplified classification of data structures can be presented as follows:
 
-image::_images/Fig1_1_class.jpg[width=75%]
-
 [.text-center]
-Figure 1.1. Classification of Data Structures
-
+.Figure 1.1. Classification of Data Structures
+image::{imagesdir}/Fig1_1_class.jpg[width=100%]
 
 Each data structure has its own advantages and disadvantages, making it necessary to analyze them in terms of **memory efficiency** and **data access time**.
 
@@ -47,11 +48,9 @@ Moreover, data structures can be classified as **homogeneous** (containing eleme
 
 An **array** is a fundamental data structure that stores a fixed-size collection of elements of the same type. Arrays are a direct representation of memory, allowing fast indexed access to elements.
 
-image::_images/Fig1_2_Array.jpg[width=50%]
-
 [.text-center]
-Figure 1.2. Representation of an Array
-
+.Figure 1.2. Representation of an Array
+image::{imagesdir}/Fig1_2_Array.jpg[width=75%]
 
 ##### **Characteristics of Arrays:**
 
@@ -97,11 +96,9 @@ To overcome these limitations, **dynamic data structures** such as **slices** we
 
 A **linked list** is an ordered collection of elements where each element (node) contains **a value and a reference to the next element**.
 
-
-image::_images/Fig1_3_ll.jpg[width=50%, height=30%, align=center]
-
 [.text-center]
-Figure 1.3. Representation of a Linked List
+.Figure 1.3. Representation of a Linked List
+image::{imagesdir}/Fig1_3_ll.jpg[width=75%] 
 
 
 ##### **Types of Linked Lists:**
@@ -132,18 +129,18 @@ Figure 1.3. Representation of a Linked List
 
 A **stack** is a **Last-In-First-Out (LIFO)** structure where elements are added and removed from the same end.
 
-image::_images/Fig1_4_Stack.jpg[width=30%]
-
 [.text-center]
-Figure 1.4. Stack Structure
+.Figure 1.4. Stack Structure 
+image::{imagesdir}/Fig1_4_Stack.jpg[width=40%]
 
 
 A **queue** is a **First-In-First-Out (FIFO)** structure where elements are added at the back and removed from the front.
 
-image::_images/Fig1_5_Queue.jpg[width=75]
+image::_images/Fig1_5_Queue.jpg[width=50%, height=30%, align=center]
 
 [.text-center]
-Figure 1.5. Queue Structure
+.Figure 1.5. Queue Structure
+image::{imagesdir}/Fig1_5_Queue.jpg[width=75%]
 
 ##### **Common Variations:**
 
@@ -239,10 +236,10 @@ E ⊂ V×V (directed edges)
 ∃! root ∈ V ∀v ∈ V ∃ unique path from root to v
 ```
 
-image::_images/Fig1_7_Tree.jpg[width=50%, height=34%, align=center]
+image::_images/Fig1_6_Tree.jpg[width=50%, height=34%, align=center]
 
 [.text-center]
-Figure 1.7. Tree Structure Taxonomy
+Figure 1.6. Tree Structure Taxonomy
 
 ===== Fundamental Properties
 
@@ -287,10 +284,10 @@ A graph is a pair G = (V, E) where:
   - Weight values
   - Labels
 
-image::_images/Fig1_8_Graph.jpg[width=75%, height=34%, align=center]
+image::_images/Fig1_7_Graph.jpg[width=75%, height=34%, align=center]
 
 [.text-center]
-Figure 1.8. Graph Variant Visualization
+Figure 1.7. Graph Variant Visualization
 
 ===== Typological Spectrum
 
