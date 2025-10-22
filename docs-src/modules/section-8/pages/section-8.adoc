@@ -11,8 +11,8 @@ section, here we will talk about the computer implementation of this
 type of data structures using the visual algorithmic language DRAKON and
 the programming language JavaScript. Recall the basic terminology of binary trees (Figure 8.1):
 
-//image::_images/Fig8_1_Term.jpg[width=75%]
-image::{imagesdir}/Fig1_1_Term.jpg[width=75%, link="{imagesdir}/Fig7_2_selectSort.svg", window="_blank"]
+image::_images/Fig8_1_Term.jpg[width=75%]
+//image::{imagesdir}/Fig1_1_Term.jpg[width=75%, link="{imagesdir}/Fig7_2_selectSort.svg", window="_blank"]
 
 [.text-center]
 Figure 8.1. Basic tree terminology
@@ -70,9 +70,9 @@ no parent node;
 A binary search tree is built according to a certain algorithm. Consider the sequence of integers \{11, 5, 17, 15, 1, 8, 19, 13, 21}, represented as a slice of numbers[]. First the root node \{11} is formed, then in the loop for each node recursively the method
 `insert(tree, value)` is called (Fig. 8.3 a), which in turn calls the method `createNode(value)`, which creates a new node (Fig. 8.3 b).
 
-image::_images/Fig8_3a_insertNode.jpg[width=75%]
+image::_images/Fig8_3a_insertNode.jpg[width=50%]
 
-image::_images/Fig8_3b_createNode.jpg[width=75%]
+image::_images/Fig8_3b_createNode.jpg[width=50%]
 
 [.text-center]
 Fig.8.3 a,b Binary tree DRAKON-diagrams
