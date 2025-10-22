@@ -12,7 +12,7 @@ type of data structures using the visual algorithmic language DRAKON and
 the programming language JavaScript. Recall the basic terminology of binary trees (Figure 8.1):
 
 image::{imagesdir}/Fig8_1_Term.jpg[width=75%]
-//image::{imagesdir}/Fig1_1_Term.jpg[width=75%, link="{imagesdir}/Fig7_2_selectSort.svg", window="_blank"]
+//image::{imagesdir}/Fig8_1_Term.jpg[width=75%, link="{imagesdir}/Fig8_1_Term.jpg", window="_blank"]
 
 [.text-center]
 Figure 8.1. Basic tree terminology
@@ -94,7 +94,8 @@ children (1,8), a node 15 has only a left child, and a node 19 has only
 a right child. This arrangement of nodes is chosen to demonstrate the
 function of removing nodes, which will be discussed later.
 
-image::{imagesdir}/Fig8_4_treeProcess.jpg[width=75%]
+//image::{imagesdir}/Fig8_4_treeProcess.jpg[width=75%]
+image::{imagesdir}/Fig8_4_treeProcess.jpg[width=75%, link="{imagesdir}/Fig8_4_treeProcess.jpg", window="_blank"]
 
 [.text-center]
 Figure 8.4. Building a binary tree
