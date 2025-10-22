@@ -125,8 +125,8 @@ _Option a):_ Node (21) has no descendants (Figure 8.6.).
 In this case, this node is removed by changing the value of `node = null` in the parent node. Figure 8.6. shows the process of deleting node (21)
 and the corresponding DRAKON-diagram fragment
 
-image::{imagesdir}/Fig8_6_findNode.jpg[width=75%]
-image::{imagesdir}/Fig8_6_findNode.jpg[width=75%, link="{imagesdir}/Fig8_6_findNode.jpg", window="_blank"]
+//image::{imagesdir}/Fig8_6_del21.jpg[width=75%] Fig8_6_del21.jpg
+image::{imagesdir}/Fig8_6_del21.jpg[width=75%, link="{imagesdir}/Fig8_6_del21.jpg", window="_blank"]
 
 [.text-center]
 Figure 8.6. Deleting a node without childs
