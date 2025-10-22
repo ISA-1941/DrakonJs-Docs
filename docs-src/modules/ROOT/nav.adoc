@@ -14,5 +14,10 @@
 ** xref:section-6:section-6.adoc[Base Search Algorithms]
 * Base algorithms sorting
 ** xref:section-7:section-7.adoc[Base Sorting Algorithms]
+* Tree Algorithms
+** xref:section-8:section-8.adoc[Tree Algorithms]
+// В файле: docs-src/modules/ROOT/nav.adoc
+// ... (после ссылок на nav.adoc для секций 6 и 7)
+// ...
 
 
