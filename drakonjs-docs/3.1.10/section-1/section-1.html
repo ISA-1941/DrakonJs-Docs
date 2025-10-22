@@ -69,7 +69,7 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">ADT</span>
+    <span class="nav-text">Abstract Data Types</span>
 <ul class="nav-list">
   <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="section-1.html">ADT</a>
@@ -161,7 +161,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">drakonjs-docs</a></li>
-    <li>ADT</li>
+    <li>Abstract Data Types</li>
     <li><a href="section-1.html">ADT</a></li>
   </ul>
 </nav>
@@ -428,6 +428,11 @@ This section introduces the concept of Abstract Data Types (ADTs) and explores b
 <div class="paragraph">
 <p>A <strong>queue</strong> is a <strong>First-In-First-Out (FIFO)</strong> structure where elements are added at the back and removed from the front.</p>
 </div>
+<div class="imageblock text-center unresolved">
+<div class="content">
+<img src="_images/Fig1_5_Queue.jpg" alt="Fig1 5 Queue" width="50%" height="30%">
+</div>
+</div>
 <div class="imageblock unresolved text-center">
 <div class="content">
 <img src="_images/Fig1_5_Queue.jpg" alt="Fig1 5 Queue" width="75%">
@@ -509,7 +514,81 @@ Nonlinear abstract data types model complex relationships where elements may hav
 </div>
 </div>
 <div class="sect2">
-<h3 id="_1_3_1_trees"><a class="anchor" href="#_1_3_1_trees"></a>1.3.1. Trees</h3>
+<h3 id="_1_3_1_associative_arrays"><a class="anchor" href="#_1_3_1_associative_arrays"></a>1.3.1. Associative arrays</h3>
+<div class="paragraph">
+<p>In computer science, an associative array is an abstract data type that stores a collection of (<code>key, value</code>) pairs, such that each possible key appears at most once in the collection.</p>
+</div>
+<div class="paragraph">
+<p>Unlike a regular array an associative ones:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>uses keys (which can be strings, numbers, or other immutable data types) to access elements.</p>
+</li>
+<li>
+<p>he order of elements in an associative array is usually not guaranteed (depending on the implementation of the programming language). The mapping of keys to values ​​is important, not their sequence.</p>
+</li>
+<li>
+<p>designed to store sets of data where each element is identified by a unique name (key). This makes the code more readable and allows easy access to values ​​by their meaningful name.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>An associative array that follows these rules:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>any entry&#8217;s value can be accessed using its key.</p>
+</li>
+<li>
+<p>the same value can exist under multiple keys.</p>
+</li>
+<li>
+<p>a single key can only map to one unique value.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig1_6_AssociativeArray.jpg" alt="Fig1 6 AssociativeArray" width="75">
+</div>
+</div>
+<div class="paragraph">
+<p>Associative array provides basic operations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>insert(key, value) - adds a key-value pair;</p>
+</li>
+<li>
+<p>find(key) value - returns the value of the key (or an error if the key is not present);</p>
+</li>
+<li>
+<p>remove(key) - deletes the key pair.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>contains(key)   bool - checks for a key.</p>
+</div>
+<div class="paragraph">
+<p>size()   int - returns the number of elements.</p>
+</div>
+<div class="paragraph">
+<p>The practical implementation of the basic functions of associative arrays can be done using various approaches: hashing, trees, lists of key-value pairs. The most common, due to its efficiency, is hashing as a way to implement these operations through a hash table. The etymology of the words "hash" and "hashing" is related to the French verb "hacher", which means "chop, shred". Hash functions "cut" the input data into parts and "mix" them to obtain an output value of a fixed length.</p>
+</div>
+<div class="paragraph">
+<p>In theory, it is important to distinguish between the interface (what the operation does) and the implementation (how it does it). The first description of hash functions as a mathematical function that transforms input data of arbitrary size (called a "key" or "message") into output data of fixed size (called a "hash value") was given by Hans Peter Luhn (1953). Donald Knuth (1963) and Wesley Peterson (1968) systematized hashing as an abstract operation on data.</p>
+</div>
+<div class="paragraph">
+<p>Algorithms for practical implementation of basic functions of associative arrays (hash tables) are presented in Section 6.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_3_2_trees"><a class="anchor" href="#_1_3_2_trees"></a>1.3.2. Trees</h3>
 <div class="sect3">
 <h4 id="_hierarchical_model"><a class="anchor" href="#_hierarchical_model"></a>Hierarchical Model</h4>
 <div class="paragraph">
@@ -523,11 +602,13 @@ E ⊂ V×V (directed edges)
 ∃! root ∈ V ∀v ∈ V ∃ unique path from root to v</code></pre>
 </div>
 </div>
-<div class="imageblock unresolved text-center">
+<div class="imageblock text-center unresolved">
 <div class="content">
-<img src="_images/Fig1_6_Tree.jpg" alt="Fig1 6 Tree" width="75%">
+<img src="_images/Fig1_6_Tree.jpg" alt="Fig1 6 Tree" width="50%" height="34%">
 </div>
-<div class="title">Figure 1.6. Tree Structure Taxonomy</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 1.6. Tree Structure Taxonomy</p>
 </div>
 <div class="sect4">
 <h5 id="_fundamental_properties"><a class="anchor" href="#_fundamental_properties"></a>Fundamental Properties</h5>
@@ -617,7 +698,7 @@ E ⊂ V×V (directed edges)
 </div>
 </div>
 <div class="sect2">
-<h3 id="_1_3_2_graphs"><a class="anchor" href="#_1_3_2_graphs"></a>1.3.2. Graphs</h3>
+<h3 id="_1_3_3_graphs"><a class="anchor" href="#_1_3_3_graphs"></a>1.3.3. Graphs</h3>
 <div class="sect3">
 <h4 id="_relational_model"><a class="anchor" href="#_relational_model"></a>Relational Model</h4>
 <div class="paragraph">
@@ -628,11 +709,13 @@ E ⊂ V×V (directed edges)
   - Weight values
   - Labels</p>
 </div>
-<div class="imageblock unresolved text-center">
+<div class="imageblock text-center unresolved">
 <div class="content">
-<img src="_images/Fig1_6_Tree.jpg" alt="Fig1 6 Tree" width="50%]Fig1_7_Graph.jpg[width=75%">
+<img src="_images/Fig1_7_Graph.jpg" alt="Fig1 7 Graph" width="75%" height="34%">
 </div>
-<div class="title">Figure 1.7. Graph Variant Visualization</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 1.7. Graph Variant Visualization</p>
 </div>
 <div class="sect4">
 <h5 id="_typological_spectrum"><a class="anchor" href="#_typological_spectrum"></a>Typological Spectrum</h5>

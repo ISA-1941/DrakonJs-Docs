@@ -1,0 +1,91 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "Node rebuilding"
+        },
+        "3": {
+            "type": "action",
+            "one": "5",
+            "content": "y = x.right\nt = y.left"
+        },
+        "5": {
+            "type": "action",
+            "one": "6",
+            "content": "y.parent = x.parent\ny.left = x\nx.parent = y\nx.right = t"
+        },
+        "6": {
+            "type": "question",
+            "one": "7",
+            "two": "9",
+            "flag1": 1,
+            "content": "t !== tree.nullNode"
+        },
+        "7": {
+            "type": "action",
+            "one": "9",
+            "content": "t.parent = x"
+        },
+        "8": {
+            "type": "branch",
+            "one": "15",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "9": {
+            "type": "branch",
+            "one": "10",
+            "branchId": 2,
+            "content": "Subtree root formation"
+        },
+        "10": {
+            "type": "question",
+            "one": "11",
+            "two": "12",
+            "flag1": 1,
+            "content": "x === tree.root"
+        },
+        "11": {
+            "type": "action",
+            "one": "8",
+            "content": "tree.root = y"
+        },
+        "12": {
+            "type": "question",
+            "one": "13",
+            "two": "14",
+            "flag1": 1,
+            "content": "y.parent.left === x"
+        },
+        "13": {
+            "type": "action",
+            "one": "8",
+            "content": "y.parent.left = y"
+        },
+        "14": {
+            "type": "action",
+            "one": "8",
+            "content": "y.parent.right = y"
+        },
+        "15": {
+            "type": "action",
+            "one": "1",
+            "content": "return y"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "tree, K"
+}

@@ -69,7 +69,7 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">ADT</span>
+    <span class="nav-text">Abstract Data Types</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../section-1/section-1.html">ADT</a>
@@ -194,9 +194,7 @@ which are used in real-world applications for processing data sets in
 huge databases.</p>
 </div>
 <div class="paragraph">
-<p>There is no single algorithm to solve the search problem, nor is there a
-single algorithm for sorting problems that is better suited for all
-cases. Some of the algorithms run faster than others, but require
+<p>There is no single algorithm to solve the search problems. Some of the algorithms run faster than others, but require
 additional RAM to run. Others run very quickly, but can only be used for
 pre-sorted arrays. At the same time, the analysis of search algorithms
 is somewhat different from sorting algorithms. In particular, there is
@@ -251,10 +249,19 @@ DRAKON-diagrams are provided along with assessments of their time and space comp
 for example, in an array or in a slice, the simplest algorithm is to
 view all elements until the desired value is found (Figure 6.1).</p>
 </div>
+<div class="paragraph">
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:docs-src/modules/section-6/pages/section_6.adoc
+image::_images/Fig6_1_searchValue.svg[width=55%]</p>
+</div>
+<div class="exampleblock">
+<div class="content">
 <div class="imageblock unresolved">
 <div class="content">
 <img src="_images/Fig6_1_searchValue.svg" alt="Fig6 1 searchValue" width="100%">
 </div>
+</div>
+<div class="paragraph">
+<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 145e7b37b7700ec3ec318383594e62878315cf69:docs-src/modules/section-6/pages/section-6.adoc</p>
 </div>
 <div class="paragraph text-center">
 <p>Figure 6.1. DRAKON-diagrams of linear search algorithm</p>
@@ -280,17 +287,26 @@ as a result of passing through an increasing sorted list, the search is
 stopped. This approach saves time and increases productivity. Figure
 6.2. shows the DRAKON-diagram of this algorithm.</p>
 </div>
+<div class="paragraph">
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:docs-src/modules/section-6/pages/section_6.adoc
+image::_images/Fig6_2_dataSorted.svg[width=55%]</p>
+</div>
+</div>
+</div>
 <div class="imageblock unresolved">
 <div class="content">
 <img src="_images/Fig6_2_SortedSlice.jpg" alt="Fig6 2 SortedSlice" width="50%">
 </div>
 </div>
+<div class="paragraph">
+<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 145e7b37b7700ec3ec318383594e62878315cf69:docs-src/modules/section-6/pages/section-6.adoc</p>
+</div>
 <div class="paragraph text-center">
-<p>Figure 6.2. DRAKON-diagram of searching sorted slice algorithm</p>
+<p>Figure 6.2. DRAKON-diagram of searching sorted data algorithm</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_6_2_binary_search_for_data_in_a_sorted_slice"><a class="anchor" href="#_6_2_binary_search_for_data_in_a_sorted_slice"></a>6.2. Binary search for data in a sorted slice</h3>
+<h3 id="_6_2_binary_search_for_data_in_a_sorted_data"><a class="anchor" href="#_6_2_binary_search_for_data_in_a_sorted_data"></a>6.2. Binary search for data in a sorted data</h3>
 <div class="paragraph">
 <p>Binary search is performed as follows:</p>
 </div>
@@ -317,10 +333,19 @@ the search interval is empty.</p>
 <p>The DRAKON-diagram of the binary search algorithm is represented in
 Figure 6.3. (main() module is similar to the previous algorithm):</p>
 </div>
+<div class="paragraph">
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:docs-src/modules/section-6/pages/section_6.adoc
+image::_images/Fig6_3_searchBinary.svg[width=75%]</p>
+</div>
+<div class="exampleblock">
+<div class="content">
 <div class="imageblock text-center unresolved">
 <div class="content">
 <img src="_images/Fig6_3_BinarySearch.jpg" alt="Fig6 3 BinarySearch" width="50%" height="30%">
 </div>
+</div>
+<div class="paragraph">
+<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 145e7b37b7700ec3ec318383594e62878315cf69:docs-src/modules/section-6/pages/section-6.adoc</p>
 </div>
 <div class="paragraph text-center">
 <p>Figure 6.3. DRAKON-diagram of Binary Search algorithm</p>
@@ -332,9 +357,9 @@ taken by a function to perform a given input set of size n will not
 exceed log n. <em>Space complexity</em>: O(1). That is, no extra space
 required.</p>
 </div>
+<div class="paragraph">
+<p>=== 6.3. Searching in Single-Linked List</p>
 </div>
-<div class="sect2">
-<h3 id="_6_3_searching_in_single_linked_list"><a class="anchor" href="#_6_3_searching_in_single_linked_list"></a>6.3. Searching in Single-Linked List</h3>
 <div class="paragraph">
 <p>There are three possibilities for a single-linked list. First, the
 desired value is missing from the list, second, the desired value is
@@ -346,16 +371,45 @@ A.", "Shafler B.”, "Wiley D.", "Brown G.", "Black H.". In this list you
 should delete the entry " Brown G." and then add a new entry "Singer B."
 placing it after the entry "Wiley D.". After that, you should delete the
 duplicates of the entry " Shafler B." leaving only one. The
-corresponding dragon diagrams are presented in Figure 6.4 a,b,c,d:</p>
+corresponding DRAKON-diagrams are presented in Figure 6.4 a,b,c,d:</p>
+</div>
+<div class="paragraph">
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:docs-src/modules/section-6/pages/section_6.adoc
+image::_images/Fig6_4a_main.svg[width=60%]</p>
+</div>
+</div>
 </div>
 <div class="imageblock text-center unresolved">
 <div class="content">
 <img src="_images/Fig6_4a_Main.jpg" alt="Fig6 4a Main" width="50%" height="30%">
 </div>
 </div>
-<div class="paragraph text-center">
-<p>a). Function <em>main()</em></p>
+<div class="paragraph">
+<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 145e7b37b7700ec3ec318383594e62878315cf69:docs-src/modules/section-6/pages/section-6.adoc</p>
 </div>
+<div class="paragraph text-center">
+<p>a). Function <code>main()`</code></p>
+</div>
+<div class="paragraph">
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:docs-src/modules/section-6/pages/section_6.adoc
+image::_images/Fig6_4bc_FrontBack.jpg[width=120%]</p>
+</div>
+<div class="paragraph">
+<p>b). function of pushing new items (<code>pushFront(list,val) and pushback(list,val)</code>)</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig6_4d_searchData.svg" alt="Fig6 4d searchData" width="140%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>c). function of searching <code>searchData(val)</code></p>
+</div>
+<div class="paragraph text-center">
+<p>Figure 6.4. DRAKON-diagrams of  search algorithms</p>
+</div>
+<div class="exampleblock">
+<div class="content">
 <div class="imageblock text-center unresolved">
 <div class="content">
 <img src="_images/Fig6_4b_Remove.jpg" alt="Fig6 4b Remove" width="80%" height="30%">
@@ -393,11 +447,12 @@ corresponding dragon diagrams are presented in Figure 6.4 a,b,c,d:</p>
 </div>
 <div class="paragraph text-center">
 <p>Figure 6.4. DRAKON diagram of algorithms deletion, search, insertion by
-value and dublicate deletion</p>
+value and dublicate deletion
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 145e7b37b7700ec3ec318383594e62878315cf69:docs-src/modules/section-6/pages/section-6.adoc</p>
 </div>
+<div class="paragraph">
+<p>=== 6.4. Hashing</p>
 </div>
-<div class="sect2">
-<h3 id="_6_4_hashing"><a class="anchor" href="#_6_4_hashing"></a>6.4. Hashing</h3>
 <div class="paragraph">
 <p>The search time of an item in a data set depends on the number of
 element value comparisons. In order to reduce search times and thus
@@ -413,30 +468,30 @@ three basic operations: the operation of adding a new pair, search
 operation and operation to delete the key-value pair.
 From a programming position, a hash table is a collection of items
 containing a key-value pair, where the key is computed by a special
-function called a <em>hash function</em>. A hash-table, in turn,
+function called a <code>hash function</code>. A <code>hash-table</code>, in turn,
 consists of buckets, a set of elements with matching or close hash values
 of the function.
-There are different methods of constructing a hash function, the simplest
+There are different methods of constructing a <code>hash function</code>, the simplest
 of which is the residual method, where the hash function is defined
-as the remainder of the division of two numbers (<em>x, m</em>), where <em>x</em>
-is the item of the set, <em>m</em> is the number of buckets. In Golang,
-the hash function for this method is: <em>h = x % m</em>.</p>
+as the remainder of the division of two numbers (<code>x, m</code>), where <code>x</code>
+is the item of the set, <code>m</code> is the number of buckets. In JavaScript,
+the <code>hash function</code> for this method is: <code>h = x % m</code>.</p>
 </div>
 <div class="paragraph">
 <p>We will conduct a detailed analysis of the hash table creation process
-utilizing the Go programming language within the DRAKON WEB Editor.
-First, a variable of the <em>Node</em> type is created, defined as a structure
-consisting of two fields: the element value is <em>Value int</em> and the next
-element address is <em>Next *Node</em>. In fact, it is a single linked list (see Sect. 1).</p>
+utilizing the JavaScript programming language within the DrakonTech.
+First, a variable of the <code>Node</code> type is created, defined as a structure
+consisting of two fields: the element value is <code>Value int</code> and the next
+element address is <code>Next *Node</code>. In fact, it is a single linked list (see Section 1).</p>
 </div>
 <div class="paragraph">
 <p>type Node struct \{ Value int Next *Node }</p>
 </div>
 <div class="paragraph">
 <p>Then, a hash-table is created through a structure that has two fields:
-the first field (<em>Table</em>) is a map that relates the integer (<em>hash
-index</em>) to the associated list (<em><em>Node</em>), and the second - </em>Size* of
-type <em>int</em>:</p>
+the first field (<code>Table</code>) is a map that relates the integer (<code>hash
+index</code>) to the associated list (<code>Node</code>), and the second - <code>Size`of
+type `int</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -449,27 +504,45 @@ Size int
 <div class="paragraph">
 <p>As a result, this hash table would have to have as many single linked
 lists (buckets) as was specified by the Size constant. In the above case
-the number of slots is 15. Note that the <em>Node</em> and <em>HashTable</em> type
+the number of slots is 15. Note that the <code>Node</code> and <code>HashTable</code> type
 advertisement, as well as the Size constant, are included in the
 File/File description option (Figure 6.5.).</p>
+</div>
+<div class="paragraph">
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:docs-src/modules/section-6/pages/section_6.adoc
+image::_images/Fig6_5a_Description.jpg[width=50%, height=30%, align=center]</p>
+</div>
+</div>
 </div>
 <div class="imageblock text-center unresolved">
 <div class="content">
 <img src="_images/Fig6_5a_Description.jpg" alt="Fig6 5a Description" height="30%">
 </div>
 </div>
+<div class="paragraph">
+<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 145e7b37b7700ec3ec318383594e62878315cf69:docs-src/modules/section-6/pages/section-6.adoc</p>
+</div>
 <div class="paragraph text-center">
-<p>Figure 6.5. Type declaration <em>Node</em>, <em>HashTable</em> and constant <em>Size</em></p>
+<p>Figure 6.5. Type declaration <code>Node</code>, <code>HashTable</code> and constant <code>Size</code></p>
 </div>
 <div class="paragraph">
-<p>As an example, consider constructing a hash-table of size <em>m</em> = 15 for a
+<p>As an example, consider constructing a hash-table of size <code>m</code> = 15 for a
 collection of integers from 0 to 120. The hash table slots are
 originally empty:</p>
 </div>
+<div class="paragraph">
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:docs-src/modules/section-6/pages/section_6.adoc
+image::`images/Fig6_HashEmpty.jpg[idth=50%, height=30%, align=center]</p>
+</div>
+<div class="exampleblock">
+<div class="content">
 <div class="imageblock text-center unresolved">
 <div class="content">
 <img src="_images/Fig6_HashEmpty.jpg" alt="Fig6 HashEmpty" height="30%">
 </div>
+</div>
+<div class="paragraph">
+<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 145e7b37b7700ec3ec318383594e62878315cf69:docs-src/modules/section-6/pages/section-6.adoc</p>
 </div>
 <div class="paragraph">
 <p>A hash function that establishes a relationship between an element and its
@@ -478,9 +551,15 @@ ranging from 0 to 120, and return an integer that corresponds to a slot
 number between 0 and 14. The algorithm implementing the remainder method
 sequentially processes each element from the original set, dividing it by 15
 and returning the remainder as the hash value. This can be expressed as
-\( h(item) = item \mod 15 \). For instance, the hash code for the element 119
-is calculated as \( 119 \mod 15 = 14 \) (where \( 119 - 15 \times 7 = 14 \)),
+<code>\( h(item) = item \mod 15 \)</code>. For instance, the hash code for the element 119
+is calculated as <code>\( 119 \mod 15 = 14 \)</code> (where <code>\( 119 - 15 \times 7 = 14 \))</code>,
 thus placing the value 119 into the corresponding slot.</p>
+</div>
+<div class="paragraph">
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:docs-src/modules/section-6/pages/section_6.adoc
+image::_images/Fig6_Hash119.jpg[idth=50%, height=30%, align=center]</p>
+</div>
+</div>
 </div>
 <div class="imageblock text-center unresolved">
 <div class="content">
@@ -488,9 +567,12 @@ thus placing the value 119 into the corresponding slot.</p>
 </div>
 </div>
 <div class="paragraph">
+<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 145e7b37b7700ec3ec318383594e62878315cf69:docs-src/modules/section-6/pages/section-6.adoc</p>
+</div>
+<div class="paragraph">
 <p>The algorithm then identifies slots for other elements, gradually
 filling them. When the algorithm encounters element 104 in the loop,
-then the remainder of the division is 104%15 = 14, so this element will
+then the remainder of the division is <code>104%15 = 14</code>, so this element will
 also be included in the 14th slot. In this way, each slot will
 accumulate corresponding elements with one index hash. For example, for
 an index hash of 8, the slot will consist of these elements: 113 : 98 :
@@ -500,45 +582,76 @@ an index hash of 8, the slot will consist of these elements: 113 : 98 :
 <div class="paragraph">
 <p>Table 6.1. Hash-table of 15 slots</p>
 </div>
+<div class="paragraph">
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:docs-src/modules/section-6/pages/section_6.adoc
+image::_images/Fig6_HashTable.jpg[idth=50%, height=30%, align=center]</p>
+</div>
+<div class="exampleblock">
+<div class="content">
 <div class="imageblock text-center unresolved">
 <div class="content">
 <img src="_images/Fig6_HashTable.jpg" alt="Fig6 HashTable" height="30%">
 </div>
 </div>
 <div class="paragraph">
+<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 145e7b37b7700ec3ec318383594e62878315cf69:docs-src/modules/section-6/pages/section-6.adoc</p>
+</div>
+<div class="paragraph">
 <p>Thus, the remainder method converts a collection of 120 integers into a
 hash table of 15 slots. The search for an element is now greatly
-accelerated as it takes two steps: first, the hash function h =(x % m)
+accelerated as it takes two steps: first, the hash function <code>h =(x % m)</code>
 computes the hash index, and then the search is done in a 7-element
 slot. The algorithm based on the residual method is represented by the
-following dragon diagrams (Figure 6.6.). Here <em>hinsert</em> - module of
-filling with elements of slots on hash-function, <em>hLookup</em>-module of
-search of element in hash-table, <em>hTravers</em> - module of passage on
-hash-table.</p>
+following DRAKON-diagrams (Figure 6.6.). Here <code>hinsert</code> - module of
+filling with elements of slots on <code>hash</code>-function, <code>hLookup</code>-module of
+search of element in hash-table, <code>hTravers</code> - module of passage on
+<code>hash</code>-table.</p>
 </div>
 <div class="paragraph">
 <p>The implementation of the main hash table functions using the hash
-function is as follows: 1.Create a <em>HashTable</em> structure list of the
-size m to store objects. 2. Compute the object’s hash code by passing it
-through the hash function. 3. Get the bucket hash indices where the
-objects will be saved. 4. Save these objects in the designated bucket.</p>
+function is as follows:
+1.Create a <code>HashTable</code> structure list of the
+size <code>m</code> to store objects.
+2. Compute the object’s hash code by passing it
+through the hashfunction.
+3. Get the bucket hash indices where the
+objects will be saved.
+4. Save these objects in the designated bucket.</p>
 </div>
 <div class="paragraph">
 <p>DRAKON-diagrams of algorithms for implementing the main functions of
 working with hash-tables are shown in Figure 6.6.</p>
+</div>
+<div class="paragraph">
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:docs-src/modules/section-6/pages/section_6.adoc
+image::_images/Fig6_6_HDia_ab.jpg[idth=50%, height=30%, align=center]</p>
+</div>
+</div>
 </div>
 <div class="imageblock text-center unresolved">
 <div class="content">
 <img src="_images/Fig6_6_HDia_ab.jpg" alt="Fig6 6 HDia ab" height="30%">
 </div>
 </div>
+<div class="paragraph">
+<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 145e7b37b7700ec3ec318383594e62878315cf69:docs-src/modules/section-6/pages/section-6.adoc</p>
+</div>
 <div class="paragraph text-center">
 <p>a). Hash-table creating function b). Item searching function</p>
 </div>
+<div class="paragraph">
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:docs-src/modules/section-6/pages/section_6.adoc
+image::_images/Fig6_6_HDia_cd.jpg[idth=50%, height=30%, align=center]</p>
+</div>
+<div class="exampleblock">
+<div class="content">
 <div class="imageblock text-center unresolved">
 <div class="content">
 <img src="_images/Fig6_6_HDia_cd.jpg" alt="Fig6 6 HDia cd" height="30%">
 </div>
+</div>
+<div class="paragraph">
+<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 145e7b37b7700ec3ec318383594e62878315cf69:docs-src/modules/section-6/pages/section-6.adoc</p>
 </div>
 <div class="paragraph text-center">
 <p>c). Hash-table travers function d) Deletion item function</p>
@@ -550,15 +663,24 @@ working with hash-tables are shown in Figure 6.6.</p>
 <p>Consider the algorithm for removing an element from the hash-table.
 Suppose we delete element 74. First, the bucket containing the item to
 be removed is determined. It then passes through the elements of this
-bucket, where after each <em>node.Value == value</em> check, the current
-element is stored in the <em>nodePrev</em> variable. If the above condition is
-met, the <em>nodePrev.nextNode</em> field (<em>0xc0000386d0</em>) is changed to
-(<em>0xc00384f0</em>), that is, the deleted element is skipped (Figure 6.6.):</p>
+bucket, where after each <code>node.Value == value</code> check, the current
+element is stored in the <code>nodePrev</code> variable. If the above condition is
+met, the <code>nodePrev.nextNode</code> field (<code>0xc0000386d0</code>) is changed to
+(<code>0xc00384f0</code>), that is, the deleted element is skipped (Figure 6.6.):</p>
+</div>
+<div class="paragraph">
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:docs-src/modules/section-6/pages/section_6.adoc
+image::_images/Fig6_6_DeletionItem.jpg[idth=50%, height=30%, align=center]</p>
+</div>
+</div>
 </div>
 <div class="imageblock text-center unresolved">
 <div class="content">
 <img src="_images/Fig6_6_DeletionItem.jpg" alt="Fig6 6 DeletionItem" height="30%">
 </div>
+</div>
+<div class="paragraph">
+<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 145e7b37b7700ec3ec318383594e62878315cf69:docs-src/modules/section-6/pages/section-6.adoc</p>
 </div>
 <div class="paragraph text-center">
 <p>Figure 6.6. Deletion item from hash-table</p>
@@ -569,8 +691,8 @@ values, the mean square method. The mean square method squares the key
 value and then extracts the average digits of the result, giving a value
 in the range from 0 to M. Software implementation of hash function
 algorithm creation in Golang language is reduced to the use of built-in
-functions of conversion of integers into string (strconv.Atoi(i)) and
-vice versa (strc<em>onv.Itoa(i))).</em> For example, for any four-digit
+functions of conversion of integers into string (<code>strconv.Atoi(i)</code>) and
+vice versa (<code>strc<em>onv.Itoa(i))</code>).</em> For example, for any four-digit
 number, the hash function is:</p>
 </div>
 <div class="listingblock">

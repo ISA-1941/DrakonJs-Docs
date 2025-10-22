@@ -1,0 +1,104 @@
+{
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "question",
+            "content": "<p>Red Uncle?</p>",
+            "one": "5",
+            "two": "6",
+            "flag1": 1
+        },
+        "4": {
+            "type": "action",
+            "content": "<p>Parent colour  =&gt; Black  (P:B)</p><p>Uncle colour =&gt; Black  (U:B)</p><p>Grandparent.colour =&gt; Red  (G:R)</p>",
+            "one": "1"
+        },
+        "5": {
+            "type": "comment",
+            "content": "<p>Repainting</p>",
+            "one": "4"
+        },
+        "6": {
+            "type": "comment",
+            "content": "<p>Node rotation </p>",
+            "one": "10"
+        },
+        "7": {
+            "type": "case",
+            "one": "14",
+            "two": "11",
+            "content": "<p>Case 3</p><p>x &lt; P; P &gt;G (left/right zig-zag)</p>"
+        },
+        "8": {
+            "type": "case",
+            "one": "13",
+            "two": "7",
+            "content": "<p>Case 2</p><p>x &gt; P; P &gt; G (right zig-zig)</p>"
+        },
+        "9": {
+            "type": "case",
+            "one": "12",
+            "two": "8",
+            "content": "<p>Case 1</p><p>x &lt; P; P &lt; G (left zig-zig)</p>"
+        },
+        "10": {
+            "type": "select",
+            "one": "9",
+            "content": "<p>Mode of rotation</p>"
+        },
+        "11": {
+            "one": "15",
+            "type": "case",
+            "content": "<p>Case 4</p><p>x &gt; P; P &lt; G (right/left zig-zag)</p>"
+        },
+        "12": {
+            "type": "action",
+            "content": "<p>Right turn around Grandparent</p>",
+            "one": "16"
+        },
+        "13": {
+            "type": "action",
+            "content": "<p>Left turn around Grandparent</p>",
+            "one": "17"
+        },
+        "14": {
+            "type": "action",
+            "content": "<p>Left turn around Parent</p><p>Right turn around Grandparent</p>",
+            "one": "18"
+        },
+        "15": {
+            "type": "action",
+            "content": "<p>Right turn around Parent</p><p>Left turn around Grandparent</p>",
+            "one": "19"
+        },
+        "16": {
+            "type": "action",
+            "content": "<p>Repainting of Nodes</p>",
+            "one": "1"
+        },
+        "17": {
+            "type": "action",
+            "content": "<p>Repainting of Nodes</p>",
+            "one": "1"
+        },
+        "18": {
+            "type": "action",
+            "content": "<p>Repainting of Nodes</p>",
+            "one": "1"
+        },
+        "19": {
+            "type": "action",
+            "content": "<p>Repainting of Nodes</p>",
+            "one": "1"
+        }
+    },
+    "type": "drakon",
+    "id": "Node Inserting.drakon"
+}

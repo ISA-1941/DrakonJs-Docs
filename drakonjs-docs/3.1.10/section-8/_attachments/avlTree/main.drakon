@@ -1,0 +1,90 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "RedBlack Tree buildint and Tree travers"
+        },
+        "3": {
+            "type": "action",
+            "one": "7",
+            "content": "tree = createavlTree()\nvalues = [\n    1,\n    2,\n    5,\n    6,\n    8,\n    11,\n    13,\n    15,\n    17,\n    19,\n    21\n]"
+        },
+        "6": {
+            "type": "loopend",
+            "one": "10",
+            "content": ""
+        },
+        "7": {
+            "type": "loopbegin",
+            "one": "8",
+            "content": "value; values"
+        },
+        "8": {
+            "type": "action",
+            "one": "13",
+            "content": "tree.root = insertNode(tree.root, value)"
+        },
+        "10": {
+            "type": "action",
+            "one": "11",
+            "content": "result = []"
+        },
+        "11": {
+            "type": "action",
+            "one": "12",
+            "content": "inOrder(tree.root, result)"
+        },
+        "12": {
+            "type": "action",
+            "one": "21",
+            "content": "console.log(\"In-order:\", result)"
+        },
+        "13": {
+            "type": "action",
+            "one": "6",
+            "content": "// console.log(\"value = \", value)\n"
+        },
+        "20": {
+            "type": "branch",
+            "one": "1",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "21": {
+            "type": "branch",
+            "one": "25",
+            "branchId": 2,
+            "content": "Removing a node"
+        },
+        "23": {
+            "type": "action",
+            "one": "24",
+            "two": "",
+            "content": "inOrder(tree.root, result)"
+        },
+        "24": {
+            "type": "action",
+            "one": "20",
+            "two": "",
+            "content": "console.log(\n    \"In-order after deleting:\",\n    result\n)"
+        },
+        "25": {
+            "type": "action",
+            "one": "26",
+            "two": "",
+            "content": "tree.root = deleteNode(tree.root, 19)"
+        },
+        "26": {
+            "type": "action",
+            "one": "23",
+            "two": "",
+            "content": "result = []"
+        }
+    }
+}

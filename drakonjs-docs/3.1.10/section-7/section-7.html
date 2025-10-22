@@ -69,7 +69,7 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">ADT</span>
+    <span class="nav-text">Abstract Data Types</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../section-1/section-1.html">ADT</a>
@@ -210,7 +210,7 @@
 <p>The algorithm uses two nested loops. For each index <code>i</code>, it iterates over the remaining elements with index <code>j</code>. At each step, the values <code>ar[i]</code> and <code>ar[j]</code> are compared. If <code>ar[j]</code> is smaller than <code>ar[i]</code>, the two elements are swapped. This process pushes the largest unsorted value toward the end of the array during each outer loop iteration.</p>
 </div>
 <div class="paragraph">
-<p>The following table shows the results of sorting a series of values for each external cycle parameter (i).</p>
+<p>The following table shows the results of sorting a series of values for each external cycle parameter <code>(i)</code>.</p>
 </div>
 <div style="display: flex; justify-content: center; font-size: 22px;">
   <div>
@@ -1372,13 +1372,13 @@ Each element is compared with only the one before it:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Best case</strong>: the pivot is the median → O(n log n)</p>
+<p><strong>Best case</strong>: the pivot is the median → <code>O(n log n)</code></p>
 </li>
 <li>
-<p><strong>Average case</strong>: still O(n log n), due to recursive halving</p>
+<p><strong>Average case</strong>: still <code>O(n log n)</code>, due to recursive halving</p>
 </li>
 <li>
-<p><strong>Worst case</strong>: when the pivot is the smallest or largest item, resulting in unbalanced partitions → O(n²)</p>
+<p><strong>Worst case</strong>: when the pivot is the smallest or largest item, resulting in unbalanced partitions → <code>O(n²)</code></p>
 </li>
 </ul>
 </div>
@@ -1437,10 +1437,19 @@ which solves to <code>O(n log n)</code>.</p>
 <div class="paragraph">
 <p>During merging, one element from each fragment is selected and compared. The smaller (or larger, depending on the desired order) element is added to the result array. The remaining element is compared again with the next element from the other fragment. This process continues until all elements are merged. Figure 7.5 illustrates this process:</p>
 </div>
+<div class="paragraph">
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:docs-src/modules/section-7/pages/section_7.adoc
+image::_images/Fig7_5_merge_v2.svg[width=100%]</p>
+</div>
+<div class="exampleblock">
+<div class="content">
 <div class="imageblock unresolved">
 <div class="content">
 <a class="image" href="_images/Fig7_5_merge.svg" target="_blank" rel="noopener"><img src="_images/Fig7_5_merge.svg" alt="Fig7 5 merge" width="50%"></a>
 </div>
+</div>
+<div class="paragraph">
+<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 145e7b37b7700ec3ec318383594e62878315cf69:docs-src/modules/section-7/pages/section-7.adoc</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
@@ -1474,7 +1483,7 @@ which solves to <code>O(n log n)</code>.</p>
 <p>Figure 7.6.Visual representation of Merge Sort</p>
 </div>
 <div class="paragraph">
-<p>Merge Sort has a time complexity of O(n log n), where <code>n</code> is the number of elements in the array. The algorithm splits the array into two halves until only single elements remain. The number of split operations is O(log n), and each merge operation compares <code>n</code> elements, which gives the overall complexity of O(nlog n).</p>
+<p>Merge Sort has a time complexity of O(n log n), where <code>n</code> is the number of elements in the array. The algorithm splits the array into two halves until only single elements remain. The number of split operations is <code>O(log n)</code>, and each merge operation compares <code>n</code> elements, which gives the overall complexity of O(nlog n).</p>
 </div>
 <div class="paragraph">
 <p>The summary of time and space complexity is shown below:</p>
@@ -1527,11 +1536,11 @@ which solves to <code>O(n log n)</code>.</p>
 <div class="paragraph">
 <p>This consistent behavior ensures that equal elements remain in the same order as they appeared in the original input.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_7_7_shell_sort"><a class="anchor" href="#_7_7_shell_sort"></a>7.7. Shell Sort</h3>
 <div class="paragraph">
-<p>Shell Sort is a variation of Insertion Sort. It begins by comparing and sorting elements that are separated by a certain distance <em>d</em>. Then, the process is repeated for smaller values of <em>d</em> until <em>d = 1</em>, which is equivalent to a standard insertion sort.</p>
+<p>=== 7.7. Shell Sort</p>
+</div>
+<div class="paragraph">
+<p>Shell Sort is a variation of Insertion Sort. It begins by comparing and sorting elements that are separated by a certain distance <em>d</em>. Then, the process is repeated for smaller values of <code>d</code> until <code>d = 1</code>, which is equivalent to a standard insertion sort.</p>
 </div>
 <div class="paragraph">
 <p>The DRAKON-diagram of the Shell Sort algorithm is shown in Figure 7.7.</p>
@@ -1552,10 +1561,10 @@ which solves to <code>O(n log n)</code>.</p>
 </div>
 <div class="paragraph">
 <p>The array is partitioned in such a way that each item in a segment is a fixed number of positions apart from the others. This introduces a challenge: choosing the best distance <em>d</em>. A simple example of such a sequence is:
-<em>d = n / 2</em>, then <em>d = d / 2</em>, and so on, until <em>d = 1</em>.</p>
+<code>d = n / 2</code>, then <code>d = d / 2</code>, and so on, until <code>d = 1</code>.</p>
 </div>
 <div class="paragraph">
-<p>The table illustrates how elements are swapped when a smaller value is found at position <em>arr[j]</em> compared to <em>arr[j - inc]</em>.</p>
+<p>The table illustrates how elements are swapped when a smaller value is found at position <code>arr[j]</code> compared to <code>arr[j - inc]</code>.</p>
 </div>
 <div class="paragraph text-center">
 <p><strong>inc = 5</strong></p>
@@ -1826,7 +1835,7 @@ which solves to <code>O(n log n)</code>.</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>The average time complexity of Shell Sort is estimated as <em>O(n * log² n)</em>, though this depends on multiple factors.</p>
+<p>The average time complexity of Shell Sort is estimated as <code>O(n * log² n)</code>, though this depends on multiple factors.</p>
 </div>
 <div class="paragraph">
 <p>First, Shell Sort is essentially a generalization of Insertion Sort that uses gap-based comparisons. Second, the performance depends on the choice of gap sequence — that is, the values of <em>d</em> used during sorting. Different sequences can yield significantly different results.</p>
@@ -1835,14 +1844,14 @@ which solves to <code>O(n log n)</code>.</p>
 <p>Because Shell Sort works by refining the array through a series of passes with decreasing gaps, its time complexity is sensitive to these gap values. The optimal gap sequence is still a subject of research, and no single sequence is universally optimal.</p>
 </div>
 <div class="paragraph">
-<p>As a result, although the average-case complexity is commonly cited as <em>O(n * log² n)</em>, the exact performance may vary depending on the input and the sequence used.</p>
+<p>As a result, although the average-case complexity is commonly cited as <code>O(n * log² n)</code>, the exact performance may vary depending on the input and the sequence used.</p>
 </div>
 <div class="paragraph">
 <p>Shell Sort is <strong>not stable</strong> in its original form, but it can be modified to preserve stability if needed.</p>
 </div>
+<div class="paragraph">
+<p>=== 7.8. Heapsort</p>
 </div>
-<div class="sect2">
-<h3 id="_7_8_heapsort"><a class="anchor" href="#_7_8_heapsort"></a>7.8. Heapsort</h3>
 <div class="paragraph">
 <p>The pyramid sorting algorithm can be seen as an improved version of the
 choice sorting algorithm (Select Sort): it divides the input data into
@@ -2010,9 +2019,9 @@ and (52), then we present this process in the table:</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>The heap sorting algorithm uses three functions: <em>heap_Sort</em>, which
-performs node overwriting, <em>heapify</em>, which compares adjacent nodes, and
-<em>swap</em>, which swap two nodes. The sequence of the nodes in the heap is
+<p>The heap sorting algorithm uses three functions: <code>heap_Sort</code>, which
+performs node overwriting, <code>heapify</code>, which compares adjacent nodes, and
+<code>swap</code>, which swap two nodes. The sequence of the nodes in the heap is
 shown in Figure 7.9:</p>
 </div>
 <div class="imageblock unresolved">
@@ -2037,15 +2046,15 @@ shown in Figure 7.9:</p>
 </div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 7.10. DRAKON-diagram heap sorting algorithm a) heapSort(arr); b) heapify(arr,size,i)</p>
+<p>Figure 7.10. DRAKON-diagram heap sorting algorithm a) <code>heapSort(arr)</code>; b) <code>heapify(arr,size,i)</code></p>
 </div>
 <div class="paragraph">
 <p>The evaluation of the complexity of the heap sorting algorithm presented
 in the table</p>
 </div>
+<div class="paragraph">
+<p>=== 7.9. Sorting comparison</p>
 </div>
-<div class="sect2">
-<h3 id="_7_9_sorting_comparison"><a class="anchor" href="#_7_9_sorting_comparison"></a>7.9. Sorting comparison</h3>
 <div class="paragraph">
 <p>Choosing a sorting algorithm is determined by the following factors: 1</p>
 </div>
@@ -2180,6 +2189,8 @@ Each algorithm is unique and works best under certain conditions.</p>
 </table>
 <div class="paragraph">
 <p>Some common sorting algorithms are inherently stable, such as MergeSort, InsertSort, and BubbleSort. Others, such as QuickSort, HeapSort, and SelectSort, are unstable. For example, we can use the extra space to maintain stability in QuickSort.</p>
+</div>
+</div>
 </div>
 </div>
 </div>

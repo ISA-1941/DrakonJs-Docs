@@ -1,0 +1,123 @@
+{
+    "items": {
+        "4": {
+            "type": "idea",
+            "content": "<p><strong>Case 5 </strong>Correction of red-black tree (after removing y):</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 2,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#fff196\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "10": {
+            "type": "idea",
+            "content": "<p><strong>Case 4. </strong>If <strong>y</strong> is not a direct descendant of <strong>z</strong>:</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 1,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#fff196\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "11": {
+            "type": "conclusion",
+            "content": "<p>Happens when the successor <strong>y </strong>is deeper in the right subtree (not equal to <strong>z.right</strong>)</p>",
+            "parent": "10",
+            "treeType": "treeview",
+            "ordinal": 0,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#f0f4c3\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "15": {
+            "type": "idea",
+            "content": "<p>If <strong>x </strong>is red: recolour <strong>x </strong>to black</p><p>  - else: call <strong>fixDoubleBlack(tree, x</strong>) / <strong>fixDoubleBlackStep(tree, x</strong>) to fix imbalance</p>",
+            "parent": "4",
+            "treeType": "treeview",
+            "ordinal": 0,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#f0f4c3\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "16": {
+            "type": "callout",
+            "left": 420,
+            "top": 360,
+            "width": 305,
+            "height": 105,
+            "px": -65,
+            "py": 170,
+            "zIndex": 0,
+            "content": "<p>At the selection stage of the removal case (<strong>Case 1, 2, 3</strong>) - the color of the nodes does not matter.</p>",
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#00ff00\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\",\"padding\":5}"
+        },
+        "17": {
+            "type": "ridea",
+            "content": "<p>Cases 1,2,3: Descendants localization</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 0,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#fff196\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "18": {
+            "type": "idea",
+            "content": "<p><strong>Case 1</strong>: Node <strong>z</strong> has no left child element</p>",
+            "parent": "17",
+            "treeType": "treeview",
+            "ordinal": 0,
+            "w": 75,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#f0f4c3\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "19": {
+            "type": "conclusion",
+            "content": "<ul><li><strong>x</strong> becomes the right child of z.</li></ul><p>\t-Call <strong>joinParentChild(tree, z, z.right)</strong>: Replace z with its rightmost child element.</p>",
+            "parent": "18",
+            "treeType": "treeview",
+            "ordinal": 0,
+            "w": 130,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#c8e7c9\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "20": {
+            "type": "idea",
+            "content": "<p><strong>Case 2</strong>: Node <strong>z</strong> has no right child elements</p>",
+            "parent": "17",
+            "treeType": "treeview",
+            "ordinal": 1,
+            "w": 75,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#f0f4c3\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "21": {
+            "type": "conclusion",
+            "content": "<p>•<strong> x</strong> becomes the left child of z.</p><p>- Call <strong>joinParentChild(tree, z, z.left)</strong>: Replace <strong>z</strong>﻿ with its left child.elements</p>",
+            "parent": "20",
+            "treeType": "treeview",
+            "ordinal": 0,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#c8e7c9\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "22": {
+            "type": "idea",
+            "content": "<p><strong>Case 3</strong>: <strong>z</strong> has both child elements</p>",
+            "parent": "17",
+            "treeType": "treeview",
+            "ordinal": 2,
+            "w": 75,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#f0f4c3\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "23": {
+            "type": "conclusion",
+            "content": "<p>This case involves a temporary rearrangement of the tree with z replacing its successor y, and then moving descendants.</p>",
+            "parent": "22",
+            "treeType": "treeview",
+            "ordinal": 0,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#c8e7c9\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "24": {
+            "type": "frame",
+            "left": -15,
+            "top": 70,
+            "width": 370,
+            "height": 775,
+            "zIndex": 1,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\",\"lines\":\"#4800FF\",\"lineWidth\":4}"
+        },
+        "root": {
+            "style": "{\"font\":\"bold 19px Arimo\",\"iconBack\":\"#bf360c\",\"color\":\"#ffffff\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}",
+            "type": "header"
+        }
+    },
+    "type": "graf",
+    "id": "Deletion nodes cases.graf"
+}

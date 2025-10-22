@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Drakon.js Docs</title>
+    <link rel="canonical" href="https://ISA-1941.github.io/DrakonJs-Docs/drakonjs-docs/3.1.10/section-8/Section_8_Trees.html">
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://ISA-1941.github.io/DrakonJs-Docs">Drakon.js Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="drakonjs-docs" data-version="3.1.10">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">drakonjs-docs</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Introduction</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Abstract Data Types</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-1/section-1.html">ADT</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript View</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-2/section-2.html">JavaScript</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Implementation base types</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-3/section-3.html">Implementation base types</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Language Drakon</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-4/section-4.html">Visual Language Drakon</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Complexity of algorithms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-5/section-5.html">Complexity problems</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basic search  algorithms</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-6/section-6.html">Base Search Algorithms</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Base algorithms sorting</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-7/section-7.html">Base Sorting Algorithms</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">drakonjs-docs</span>
+    <span class="version">3.1.10</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">drakonjs-docs</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">3.1.10</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="edit-this-page"><a href="https://github.com/ISA-1941/DrakonJs-Docs/edit/main/docs-src/modules/section-8/pages/Section_8_Trees.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_section_8_binary_tree_algorithms"><a class="anchor" href="#_section_8_binary_tree_algorithms"></a>SECTION 8. BINARY TREE ALGORITHMS</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_8_1_representation_of_binary_trees"><a class="anchor" href="#_8_1_representation_of_binary_trees"></a>8.1 Representation of binary trees</h3>
+<div class="paragraph">
+<p>Four types of imbalanced states exist.
+Binary trees as an abstract data type were discussed in the first
+section, here we will talk about the computer implementation of this
+type of data structures using the visual algorithmic language DRAKON and
+the programming language JavaScript. Recall the basic terminology of binary trees (Figure 8.1):</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_1_Term.jpg" alt="Fig8 1 Term" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.1. Basic tree terminology</p>
+</div>
+<div class="paragraph">
+<p><em>Root:</em> The root of the tree is the only node with no incoming edges. It
+is the top node in the tree;</p>
+</div>
+<div class="paragraph">
+<p><em>Node:</em> This is the basic element of the tree. Each node has data and
+two references that can point to zero or its descendants;Edge: This is
+also the fundamental part of the tree and is used to connect the two
+node points.</p>
+</div>
+<div class="paragraph">
+<p><em>Path:</em> A path is an ordered list of nodes connected by edges.</p>
+</div>
+<div class="paragraph">
+<p><em>Leaf:</em> A leaf node is a node that has no descendants.</p>
+</div>
+<div class="paragraph">
+<p><em>Tree height:</em> The height of a tree is the number of edges on the
+longest path between the root and the leaf.</p>
+</div>
+<div class="paragraph">
+<p><em>Node level:</em> Node level is the number of edges on the path from the
+root node of this node.</p>
+</div>
+<div class="paragraph">
+<p>The information structure of the binary tree is organised as follows (Figure 8.2):</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_2_BST.jpg" alt="Fig8 2 BST" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Fig.8.2 Binary tree structure (<em>info</em> - value (key), (N - NULL))</p>
+</div>
+<div class="paragraph">
+<p>Several types of binary trees are discussed in the training literature, the most important of which is classification based on node values:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>a binary search tree;</p>
+</li>
+<li>
+<p>AVL-Tree;</p>
+</li>
+<li>
+<p>Red-Black Tree.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_8_2_binary_search_tree"><a class="anchor" href="#_8_2_binary_search_tree"></a>8.2 Binary search tree</h3>
+<div class="sect3">
+<h4 id="_8_2_1_building_a_binary_tree"><a class="anchor" href="#_8_2_1_building_a_binary_tree"></a>8.2.1 Building a binary tree</h4>
+<div class="paragraph">
+<p>If the tree is organised in such a way that, for each node, all the node
+values of its left subtree are less than this node and all the values of
+its right subtree are greater, it is called a binary search tree. A BST
+is a recursive data structure because each subtree is also a tree. A BST
+has the following tree properties consists of nodes that retain unique values;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>each node has zero, one or two child nodes;</p>
+</li>
+<li>
+<p>one of the nodes is referred to as the root node, which is at the top of the tree structure;</p>
+</li>
+<li>
+<p>each node has only one parent node, except for the root node which has
+no parent node;</p>
+</li>
+<li>
+<p>the value of each node is greater than that of its left child but less than that of its right child;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A binary search tree is built according to a certain algorithm. Consider the sequence of integers \{11, 5, 17, 15, 1, 8, 19, 13, 21}, represented as a slice of numbers[]. First the root node {11} is formed, then in the loop for each node recursively the method
+<code>insert(tree, value)</code> is called (Fig. 8.3 a), which in turn calls the method <code>createNode(value)</code>, which creates a new node (Fig. 8.3 b).</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_3a_insertNode.jpg" alt="Fig8 3a insertNode" width="75%">
+</div>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_3b_createNode.jpg" alt="Fig8 3b createNode" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Fig.8.3 a,b Binary tree DRAKON-diagrams</p>
+</div>
+<div class="paragraph">
+<p>a) building a tree by insert(node,value); b) creating a node</p>
+</div>
+<div class="paragraph">
+<p>The complete process of creating a binary tree is shown in Figure 8.4.
+The first number 11 is written to the root of the tree. The second
+number 5 is less than the value in the tree root, so it is written to
+the left subtree. The next number 17 is greater than the root number, so
+it is written to the right subtree. Then the number 15 is greater than
+the value at the root of the tree, so it is written to the right
+subtree, but the right subtree is already built. The number 15 is
+compared to the number 17 at the root of the right subtree. Since the
+value to be added is less than the value in the root of the right
+subtree, we add the left subtree to this node. The final result is a
+binary search tree with three variants: a node 5 is the parent of two
+children (1,8), a node 15 has only a left child, and a node 19 has only
+a right child. This arrangement of nodes is chosen to demonstrate the
+function of removing nodes, which will be discussed later.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_4_treeProcess.jpg" alt="Fig8 4 treeProcess" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.4. Building a binary tree</p>
+</div>
+<div class="paragraph">
+<p>8.2.3 Finding a node based on a set value</p>
+</div>
+<div class="paragraph">
+<p>Another basic operation is the <code>findNode(value)</code> function. This function uses a JavaScript instructions construct, which recursively compares the value of
+val with the values of other nodes as it traverses the tree.
+The DRAKON-diagram of the `findNode(node, value)`function is shown in Figure 8.5.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_5_findNode.jpg" alt="Fig8 5 findNode" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.5. DRAKON-diagram of <code>findNode(root *BSTree, val int)</code> method</p>
+</div>
+<div class="paragraph">
+<p>8.2.3 Deleting a node with a specified value</p>
+</div>
+<div class="paragraph">
+<p>The next basic operation is to delete a node with the specified  value. The function <code>removeNode (node,value)</code> is used recursively.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s analyse in more detail the order in which the nodes are moved in these variants.</p>
+</div>
+<div class="paragraph">
+<p><em>Option a):</em> Node (21) has no descendants (Figure 8.6.).</p>
+</div>
+<div class="paragraph">
+<p>In this case, this node is removed by changing the value of <code>node = null</code> in the parent node. Figure 8.6. shows the process of deleting node (21)
+and the corresponding DRAKON-diagram fragment</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_6_findNode.jpg" alt="Fig8 6 findNode" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.6. Deleting a node without childs</p>
+</div>
+<div class="paragraph">
+<p><em>Option b):</em> Node (19) has a right-hand descendant (Figure 8.7).</p>
+</div>
+<div class="paragraph">
+<p>In this case, node (19) is removed from the tree by replacing its
+address in the parent node (17) with the address of its only descendant
+node (21). Figure 8.7. shows the process of removing node (19) and the corresponding DRAKON-diagram fragment.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_7_del19.jpg" alt="Fig8 7 del19" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.7. Deleting node (19) with right-hand descendant</p>
+</div>
+<div class="paragraph">
+<p><em>Option c):</em> Node (8) has a left-hand child (Figure 8.8.).</p>
+</div>
+<div class="paragraph">
+<p>In this case, node (8) is removed from the tree by replacing its
+address in parent node (5) with the address of its only left child node (6). Figure 8.8. shows the process of removing node (8) and the
+corresponding DRAKON-diagram fragment.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_8_del_8.jpg" alt="Fig8 8 del 8" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.8. Deleting node (15) with left-hand child</p>
+</div>
+<div class="paragraph">
+<p><em>Variant d):</em> Node (5) has two descendants (Figure 8.9.). In this case
+the binary search tree is rearranged: node (2) moves to the place of node (5):</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_9_event4.jpg" alt="Fig8 9 event4" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.9. Deleting a node (5) with two childs</p>
+</div>
+<div class="paragraph">
+<p>DRAKON-diagram of the minimum value search method is shown in Fig8.10.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_10_findMin.png" alt="Fig8 10 findMin" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.10. DRAKON-diagram of the minimum value search method</p>
+</div>
+<div class="paragraph">
+<p>The complete DRAKON-diagram of the removal of nodes from a binary search tree is shown in Figure 8.11.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_11_removeNode.svg" alt="Fig8 11 removeNode" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.10. DRAKON-diagram of the removal of nodes</p>
+</div>
+<div class="paragraph">
+<p>8.2.4. Traversing the binary search tree</p>
+</div>
+<div class="paragraph">
+<p>One of the basic tree operations is to traverse tree nodes. Unlike linear data structures, where elements are traversed in a linear order, tree nodes can be traversed in a variety of ways.
+The traversal, in which each ancestor node is viewed before its descendants, is called a pre-ordered walk or direct-order traversal (<em>pre-order walk</em>). There is also an <em>in-order walk</em>, where the left subtree is visited from bottom to top, then the root node, then the right subtree. The traversal, in which first descendants are viewed and then ancestors, is called a post-ordered or reverse-order traversal (<em>post-order walk</em>). All three cases, including the Dragon diagrams, are shown in the Figure 8.12.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_12_PreInPost.jpg" alt="Fig8 12 PreInPost" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.12. Three Classical Tree Traversals: Pre-, In-, Post-Order</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_8_3_self_balancing_binary_trees_avl_trees"><a class="anchor" href="#_8_3_self_balancing_binary_trees_avl_trees"></a>8.3 Self-balancing binary trees (AVL-trees)</h3>
+<div class="paragraph">
+<p>The efficiency of any tree operation depends substantially on the order in which the input data is received. For example, if an incoming sequence of numbers is partially sorted in ascending or descending order, this structure will no longer look like a tree (Figure 8.13).</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_13_avl.jpg" alt="Fig8 13 avl" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.13. Partially sorted input data</p>
+</div>
+<div class="paragraph">
+<p>In such practically "degenerate" trees, the complexity of the operations is determined by the number of nodes, i.e. it is almost linear - O(n).
+The left and right subtrees are unbalanced, which can be estimated by the balance coefficient (kb), which is equal to the difference between the heights of the left and right subtrees. Recall that the height of a tree is defined as the length of the longest branch in a subtree (sum of edges). For an ideal binary search tree (a tree where the number of nodes in the left subtree is equal to the number of nodes in the right subtree), this factor is 0 (Figure 8.14).</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_14_idealTree.jpg" alt="Fig8 14 idealTree" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.14. An ideal binary tree</p>
+</div>
+<div class="paragraph">
+<p>In real life, ideal binary trees are almost never achieved; programmers often try to build a tree where the height of the left subtree differs from the height of the right subtree by no more than 1. Such trees are called AVL-trees; for such trees the complexity of operations is defined as O(logn), i.e. the execution time of basic operations (search, remove) is significantly less than for BST-trees.</p>
+</div>
+<div class="paragraph">
+<p>The algorithms for such trees are based on the process of balancing the tree when a new node is inserted or an existing node is removed. The purpose of balancing is to reconstruct the tree so that the heights of the left and right subtrees do not differ by more than 1. The balancing factor must satisfy the following conditions allowable values kb = -1, 0 and +1;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The value kb = -1 indicates that the right subtree "outweighs" the
+left subtree;</p>
+</li>
+<li>
+<p>The value kb= +1 indicates that the left subtree "outweighs" the right
+subtree;</p>
+</li>
+<li>
+<p>a value of kb = 0 indicates that the tree contains an equal number of
+nodes on each side, i.e. the tree is perfectly balanced.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The balancing algorithm in its most general form is presented in the following DRAKON-scheme (Figure 8.15)</p>
+</div>
+<div class="paragraph">
+<p>mage::_images/Fig8_15_buildingAvlTree.jpg[width=75%]</p>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.15. The balancing algorithm in its most general view</p>
+</div>
+<div class="paragraph">
+<p>The balancing technique boils down to making circular movements of the nodes in four variants:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>right turn (RR);</p>
+</li>
+<li>
+<p>Left turn (LL);</p>
+</li>
+<li>
+<p>Right - left turn (RL);</p>
+</li>
+<li>
+<p>Left to right turn (LR).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The right-hand turn is performed when the root node has a balance factor kb = +2 and its left-hand child has a balance factor kb = +1 (Figure 8.16):</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_16_RR_turn.jpg" alt="Fig8 16 RR turn" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.16. Right turn</p>
+</div>
+<div class="paragraph">
+<p>The left-hand turn is performed when the root node has a balanced kb = - 2 and its right-hand descendant has a balanced kb = - 1 (Figure 8.17):</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_17_LL_turn.jpg" alt="Fig8 17 LL turn" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.17. Left turn</p>
+</div>
+<div class="paragraph">
+<p>A right-left turn is performed when the root node has a balance factor
+kb = -2 and its right-hand child has a balance factor kb = +1 (Figure
+8.18):</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_18_RL_turn.jpg" alt="Fig8 18 RL turn" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.18. Right-left turn</p>
+</div>
+<div class="paragraph">
+<p>Left-right rotation is performed when a node has a balance factor of kb = +2 and its left child has a balance factor of kb = -1 (Figure 8.19):</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_19_LR_turn.jpg" alt="Fig8 19 LR turn" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.19. Left-right turn</p>
+</div>
+<div class="paragraph">
+<p>Consider the balancing process in more detail with an example of tree formation when input data is received in this order: [1, 2, 5, 6, 8, 11, 13, 15, 17, 19, 21]. As shown above, such a tree is unbalanced.</p>
+</div>
+<div class="paragraph">
+<p>Balance checking are started on the arrival of each new node using the <code>insertNode(node, value)</code> function, which determines the position of the new node in the left or right subtree relative to the root node. The choice of the balancing path is determined by the method
+<code>rotateInsert(node, value)</code>. A DRAKON-diagrams of the algorithms of the above methods is shown in Figure 8.20.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_20_insertNode.svg" alt="Fig8 20 insertNode" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.20. DRAKON-diagram depicting the method of inserting node</p>
+</div>
+<div class="paragraph">
+<p>The choice of one of the possible balancing paths (rotations) is determined by the <code>rotateInsert(node, val)</code> function (Figure 8.21).</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_21_avlRotateIinsert.svg" alt="Fig8 21 avlRotateIinsert" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.21. DRAKON-diagram depicting the inserting node method</p>
+</div>
+<div class="paragraph">
+<p>Depending on the location of the new node relative to the parent node and the balance factor values, the left-hand or right-hand rotation methods are performed (Figure 8.22):</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_22_twoRotates.jpg" alt="Fig8 22 twoRotates" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.22. Node rotation programme codes</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s look at the tree rebuilding process in detail as a result of using the <code>rotateInsert(node, val)</code> method on the example of entering the values of three nodes (5,6,8). After receiving the value of last node (8), a "twig" appears instead of the tree that needs to be balanced. In this case the condition in the <code>rotateInsert(node, val)</code> method is met: the balancing factor is 2 and the value of node (8) is more,than the parent node (6) and the <code>rotateLeft(node)</code> method is called. The balancing process in this case is shown in Figure 8.23:</p>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/Fig8_23_exampleLL.jpg" alt="Fig8 23 exampleLL" width="75%">
+</div>
+</div>
+<div class="paragraph">
+<p>Figure 8.23. Example of Left-Left turn balancing</p>
+</div>
+<div class="paragraph">
+<p>The process of new nodes arriving and rebuilding the resulting AVL-tree by balancing for the input set [1,2,5,6,8,11,13,15,17,19,21] is shown in Figure 8.24.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_24_avlTreeProcess.jpg" alt="Fig8 24 avlTreeProcess" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.24. Process of building a balanced AVL-tree</p>
+</div>
+<div class="paragraph">
+<p>DRAKON-diagram of the AVL-trees basic operation `findNode(node, val)is shown in Figure 8.25:</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_25_avlfindNode.svg" alt="Fig8 25 avlfindNode" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.25. DRAKON-diagram depicting the finding a node method</p>
+</div>
+<div class="paragraph">
+<p>Another basic operation, deleting a node with a specified value, consists of the following steps. The node is searched from the root down through the branches to the node to be deleted. The following situations may occur (Figure 8.27):</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_26_varDelNode.jpg" alt="Fig8 26 varDelNode" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>8.26. Cases for nodes to be removed</p>
+</div>
+<div class="paragraph">
+<p>a) The node to be deleted has two non-empty descendants;</p>
+</div>
+<div class="paragraph">
+<p>b) The node to be deleted has no descendants;</p>
+</div>
+<div class="paragraph">
+<p>c) The node to be deleted has one descendant (left or right).</p>
+</div>
+<div class="paragraph">
+<p>As with the other methods, a node with a c value is first recursively identified and then one of the options presented is selected. A DRAKON-diagram of the algorithm for deleting a node with the cases for nodes to be removed value is shown in Figure 8.27.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_27_varDelNode.jpg" alt="Fig8 27 varDelNode" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.27. DRAKON-diagram depicting an algorithm for removing a node
+with a specified value</p>
+</div>
+<div class="paragraph">
+<p>The <code>main()</code> program inputs an array of data, searches for a node with a
+specified  value, and deletes a node with a specified value (Figure 8.28).</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_28_mainFunction.jpg" alt="Fig8 28 mainFunction" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.28. DRAKON-diagram of the main-function</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_8_4_red_black_trees"><a class="anchor" href="#_8_4_red_black_trees"></a>8.4 Red-black trees</h3>
+<div class="sect3">
+<h4 id="_8_4_1_properties_of_red_black_trees"><a class="anchor" href="#_8_4_1_properties_of_red_black_trees"></a>8.4.1. Properties of red-black trees</h4>
+<div class="paragraph">
+<p>A red-black tree is a variant of a self-balancing binary search tree in
+which the nodes are placed according to a certain rule and coloured red
+or black (Figure 8.29)</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_29_redblackTree.png" alt="Fig8 29 redblackTree" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.29. Red-Black Tree</p>
+</div>
+<div class="paragraph">
+<p>The nodes containing data (in this case, integers) are internal. In
+addition, red-black trees contain imaginary, "null" nodes associated
+with tree leaves (Null - in Figure 8.29). Red-black trees satisfy all
+the properties of a binary search tree and must have the following
+properties:</p>
+</div>
+<div class="paragraph">
+<p>1. Each node is coloured red or black.</p>
+</div>
+<div class="paragraph">
+<p>2. The root of the tree is always black.</p>
+</div>
+<div class="paragraph">
+<p>3. All leaves are black (Null).</p>
+</div>
+<div class="paragraph">
+<p>4. Both descendants of the red node are black, i.e. there cannot
+be consecutive red nodes.</p>
+</div>
+<div class="paragraph">
+<p>5. All simple paths from the node to the descending leaves
+contain the same number of black nodes.</p>
+</div>
+<div class="paragraph">
+<p>Unlike AVL trees, where balance is achieved by balancing the heights of
+the left and right subtrees, red-black balance is achieved by the
+properties mentioned above. Adding or removing a node from the red-black
+tree can disrupt the red-black tree properties, and restoring balance is
+achieved by two operations: repainting the nodes and/or rebuilding the
+whole tree or its subtrees using specific rotations.The most important
+of these properties are properties 4 and 5.</p>
+</div>
+<div class="paragraph">
+<p>Property 4 dictates a critical aspect of red-black trees: the path from any given node to its deepest descendant must contain an equal number of red and black nodes. This isn&#8217;t just an arbitrary rule; it&#8217;s a fundamental mechanism for maintaining balance.</p>
+</div>
+<div class="paragraph">
+<p>Property 5 builds on this by enforcing a uniform "black-height" for all paths from any node to its leaf descendants. Regardless of the specific path taken, the count of black nodes remains constant.</p>
+</div>
+<div class="paragraph">
+<p>Black height is an important term used for red-black trees. This is the number of black nodes on any single path from node x (not including it) to the leaf. The black height of any node x is represented as a logarithm of the number of nodes in the tree. In particular, if in each branch from the root to the leaves the same number of black nodes, then the height of the tree will be equal to a logarithm of the number of nodes. This property allows you to quickly perform basic operations of the search tree, such as adding, removing and searching for a node.</p>
+</div>
+<div class="paragraph">
+<p>To perform the above operations at the program level, a red-black tree is first created, for which two user types - node and RBTree are declared:
+Node includes the following fields: <code>data</code> - node numeric value,  <code>colour</code> - node colour type bool: <code>red node</code> - TRUE; <code>black node</code> - false, <code>left</code>, <code>right</code> and <code>parent</code> nodes. In turn RBTree structure represents the reference type variable, that store objects containing not the "value" itself but a reference to the memory area where this object is stored (Fig. 8.30).</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_30_createNodeTree.png" alt="Fig8 30 createNodeTree" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.30. Node Properties and the createNode Factory Function</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Turn Name</th>
+<th class="tableblock halign-left valign-top">X is&#8230;&#8203;</th>
+<th class="tableblock halign-left valign-top">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Left Rotation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Right child of an unbalanced node</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Promotes the right child <code>y</code> upward; the current node <code>x</code> becomes the left child of <code>y</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Right Rotation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Left child of an unbalanced node</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Promotes the left child <code>y</code> upward; the current node <code>x</code> becomes the right child of <code>y</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Left-Right Rotation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Right child of left subtree</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Performs a left rotation on <code>x.left</code>, then a right rotation on <code>x</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Right-Left Rotation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Left child of right subtree</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Performs a right rotation on <code>x.right</code>, then a left rotation on <code>x</code>.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The DRAKON-diagrams of rotate functions are presented on Figure 8.31a,b.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_30_rotateLeft.jpg" alt="Fig8 30 rotateLeft" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.31. Rotate function DRAKON-diagrams (a - rotateLeft; b - rotate right)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_8_4_2_inserting_a_new_node_and_the_balancing_process"><a class="anchor" href="#_8_4_2_inserting_a_new_node_and_the_balancing_process"></a>8.4.2. Inserting a new node and the balancing process</h4>
+<div class="paragraph">
+<p>In the most general way the red-black tree construction algorithm is presented by the function <code>Insert(tree, value)</code>(Figure 8.32):</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_32_Insert.jpg" alt="Fig8 32 Insert" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.32. DRAKON-diagram of the function <code>Insert(tree, data)</code></p>
+</div>
+<div class="paragraph">
+<p>Next, consider the node positions in the tree as a result of each new
+node insertion and determine which properties of the red-black tree are
+violated. To understand this process, we introduce the following
+notation: x - new node, P (Parent) - parent of node x, G (Grandparent) -
+ancestor (parent of parent), U (Uncle) - uncle of node x, S - siblings (Figure 8.33).</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_33_family.jpg" alt="Fig8 33 family" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.33. Designation of the degree of "kinship" of RB Tree nodes (x, P, G, U, S)</p>
+</div>
+<div class="paragraph">
+<p>To describe the process of balancing the red-black tree, let’s name the set of nodes involved in the implementation of balancing <em>tree-cluster</em> and enter a local syntax:
+<strong>:R or :B</strong> is the color of the node. For example, P:R is the red parent.
+<strong>&#8656; or &#8658;</strong> - the direction of the node position. For example, x &#8656; P - the new node x is located to the left of the parent node P.
+The different instances of the red and black nodes are shown in the table
+When a new element is inserted, it is assigned a red colour. To satisfy
+the first two rules, it is sufficient to simply repaint the new vertices
+in the desired colour. After each insertion, all these properties of the
+red-black tree must be checked. If at least one property is not
+satisfactory, the rotation and colour change operations are performed (Table ).</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Variant</th>
+<th class="tableblock halign-left valign-top">nodeImage</th>
+<th class="tableblock halign-left valign-top">Violation</th>
+<th class="tableblock halign-left valign-top">Fix strategy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Red Uncle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x&#8656;P; P:R,P&#8656;G; G:B; U:R</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Both x and P are red; G has two red children (P and U).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor P and U to black (P:B, U:B), G to red (G:R); set x = G (propagate upward).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Black Uncle Case 1 (L–L)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x&#8656;P; P:R,P&#8656;G; G:B; U:B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x and P are both red and lie on left-left; uncle is black.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor P to black (P:B) and G to red (G:R); Right-rotate about (G).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Black Uncle Case 2 (R–R)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x&#8658;P; P:R,P&#8658;G; G:B; U:B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x and P are both red and lie on right-right; uncle is black.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor P to black (P:B) and G to red (G:R); Left-rotate about (G).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Black Uncle Case 3 (L–R)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x&#8658;P; P:R,P&#8656;G; G:B; U:B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">both x and P are red; x is right child of P, P is left child of G; uncle is black;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Left-rotate about (P), then treat as (L–L).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Black Uncle Case 4 s(R–L)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x&#8656;P; P:R,P&#8658;G; G:B; U:B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x is left child of P, P is right child of G; both x and P are red; uncle is black;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Right-rotate about (P), then treat as (R–R).</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The DRAKON-diagram of the red-black tree balancing algorithm when entering a new node is shown in Figure 8.34,8.35.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_34_fixRedRed.svg" alt="Fig8 34 fixRedRed" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.35. Red-Black Tree Balancing Algorithm DRAKON-diagram</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_35_diagr_figs.svg" alt="Fig8 35 diagr figs" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.35. Illustration of Red-Black Tree Balancing Algorithms</p>
+</div>
+<div class="paragraph">
+<p>The dragon diagram of the node rotation algorithms to the red and black tree cluster is shown in Figure 8.36a,b.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_36a_rotateLeft.png" alt="Fig8 36a rotateLeft" width="75%">
+</div>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_36b_rotateRight.png" alt="Fig8 36b rotateRight" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.36. DRAKON-diagrams of the red-black tree cluster node rotation algorithm
+a) Left-rotation; b) Right-rotation</p>
+</div>
+<div class="paragraph">
+<p>Consider the balancing process using the example of building a red-black
+tree from sets of integers that are the keys of the input nodes:
+<code>[11,12,13,14,15,16,17,18,19]</code> (Figure 8.37):</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_37_rbProcess.jpg" alt="Fig8 37 rbProcess" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.37. Process for Balancing the Red-Black Tree</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_8_4_3_deleting_a_node_from_a_red_black_tree"><a class="anchor" href="#_8_4_3_deleting_a_node_from_a_red_black_tree"></a>8.4.3. Deleting a Node from a red-black tree</h4>
+<div class="paragraph">
+<p>Removing a node from a RB tree is a complex process because
+it depends on the location of the node, the presence of children, and
+the colour of the nodes. It is important to remember that all
+transformations of the tree structure must maintain its properties. The
+DRAKON-diagram of the node removal algorithm is shown in Figures 8.38a,b. This
+algorithm can be divided into three stages.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_38a_mindMap_deleteNode.jpg" alt="Fig8 38a mindMap deleteNode" width="75%">
+</div>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_38b_deleteNode.jpg" alt="Fig8 38b deleteNode" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.38. Node Deletion Algorithm (a -intellect map; b - DRAKON-diagram)</p>
+</div>
+<div class="paragraph">
+<p><strong>The first step</strong> is to delete the node. The algorithm traverses the
+nodes of the red-black tree, moving left or right, depending on whether
+the key of the current node is larger or smaller than the specified
+value. When a node with the key key is found, it is stored in the
+variable z. The specified node is then removed from its original
+location in the tree.</p>
+</div>
+<div class="paragraph">
+<p><strong>The second step is to fix the double black node.</strong> If the node to be
+removed was black, it may disturb the properties of the red-black tree,
+since all paths from the root to the leaves must contain the same number
+of black nodes. To remedy this, the concept of a "double black" node is
+introduced. If the node x <em>that replaced the deleted node is black, it
+becomes a "double black" node.</em></p>
+</div>
+<div class="paragraph">
+<p><strong>The third stage is the correction of the double black nodes.</strong> To fix the
+"double black" node, thefunctions <em>fixDoubleBlack (tree, x)</em> and <em>fixDoubleBlackStep(tree, x)</em> are called (Figures 8.39a,b). This feature fixes the "double black nodes" by using a series of rotations and recoloring steps. It considers several cases, depending on the colour of the brother of the "double black" node and its descendants. The function  <em>fixDoubleBlackStep (tree, x)</em> handles all of these cases to ensure that the red-black tree remains balanced after each deletion operation (Table ).</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_39a_fixDoubleBlack.png" alt="Fig8 39a fixDoubleBlack" width="75%">
+</div>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_39b_fixDoubleBlackStep.svg" alt="Fig8 39b fixDoubleBlackStep" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.39. DRAKON-diagram of the node structure correction algorithm when removing "double black node"</p>
+</div>
+<div class="paragraph">
+<p><strong>New Table with nodeImage</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 12.5%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Case</th>
+<th class="tableblock halign-left valign-top">nodeImage</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Required Actions</th>
+<th class="tableblock halign-left valign-top">fixDoubleBlack?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:R, x.leaf</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Red leaf node (no children)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Remove directly</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:B, x&#8656;P; x.child=R</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Black node with one red child</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Promote child, recolor to black</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:B, x&#8656;P; x.child=B or NIL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Black node with black or null child</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Double-black arises</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fixDoubleBlack(x)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:B, x has 2 children; y = min(x.right); y.child=null</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Two children, successor is direct child</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Replace with y, transplant</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maybe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:B, x has 2 children; y = min(x.right); y.child ≠ null</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Two children, successor has child</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Replace with y, transplant + reconnect y&#8217;s child</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 12.5%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Case</th>
+<th class="tableblock halign-left valign-top">Informational Image of the Node</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Required Actions</th>
+<th class="tableblock halign-left valign-top">fixDoubleBlack?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Red leaf node (no children)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Remove directly</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No fix required</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Black node with one red child</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Promote child and repaint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Repaint child to black</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Black node with one black/null child</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Double-black arises</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Call fixDoubleBlack(x)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Node with two children, direct successor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Replace with direct successor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Simple transplant</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maybe</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Node with two children, indirect successor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Replace with successor + rewire subtrees</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Transplant + update structure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maybe</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Before joinParentChild</th>
+<th class="tableblock halign-left valign-top">After joinParentChild</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">image::_images/before_join.png[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">image::_images/after_join.png[]</p></td>
+</tr>
+</tbody>
+</table>
+<div class="imageblock text-center unresolved">
+<div class="content">
+<img src="_images/Fig8_joinPC.png" alt="Fig8 joinPC" width="80%">
+</div>
+<div class="title">Figure 8.XFigure 8.X — Replacing a node in a red-black tree using <code>joinParentChild</code></div>
+</div>
+<div class="paragraph text-center">
+<p>The top diagram illustrates the replacement of node U (<code>9</code>) with subtree V (<code>7</code>) before calling <code>joinParentChild(tree, U, V)</code>.
+The bottom diagram shows the result of the operation: node <code>7</code> has taken the place of <code>9</code>, preserving the tree&#8217;s structure and balance.</p>
+</div>
+<div class="paragraph">
+<p>Consider in more detail the different instances of the removal node in
+the structure of the red-black tree. In the first step, the node is
+removed simply as a node in the binary search tree. If the replacement
+node is a "red" node, or if the removed node is a "red" node, the
+removed node is replaced by another node. There is no need to make any
+further changes to the tree structure (fig.8.37).
+<span class="image unresolved"><img src="media/image40.jpg" alt="media/image40" width="670" height="149"></span></p>
+</div>
+<div class="paragraph">
+<p>Figure 3.37. Deletion of red node (20)</p>
+</div>
+<div class="paragraph">
+<p>If the node to be deleted and the node that replaces it are black nodes,
+a situation called a "double black node" occurs. In this case, some
+additional operations must be performed to ensure that the properties of
+the red-black wood are preserved. The drakon- diagram algorithm of this
+process is shown in Fig. 8.38.</p>
+</div>
+<div class="paragraph">
+<p>If the replacement node is a leaf node (i.e., has no child nodes), we
+replace the node with a "zero" leaf node and colour it black. If the
+replacement node has one child node, we replace the node with its child
+node and colour it black. If the replacement node has two child nodes, we
+replace the node with its subsequent node in order, and then delete the
+next node in order (which is no more than a node with one child node)
+using the method described above.</p>
+</div>
+<div class="paragraph">
+<p><span class="image unresolved"><img src="media/image41.jpg" alt="media/image41" width="1049" height="375"></span></p>
+</div>
+<div class="paragraph">
+<p>Figure 8.38. DRAKON-diagram of the node structure correction algorithm
+when removing "double black node"</p>
+</div>
+<div class="paragraph">
+<p>If a node is deleted and replaced with another node, the properties of
+the red-black wood may be compromised. To restore them, the following
+operations must be performed:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>If the node to be deleted is red, the properties of the red-black tree
+are not disturbed. If the replacement node is red, it should be
+repainted black.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>2. Next, rotate, recolour the nodes and/or transfer the
+"blackness" (the number of black nodes relative to the red ones) up the
+tree until the tree is balanced.</p>
+</div>
+<div class="paragraph">
+<p>3. At the same time, you need to make sure that the root of the
+tree is black.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s consider options for restoring the properties of red-black wood.
+Enter the following notations: the node to be deleted is "x", the child
+node of the deleted node is "y", and the sibling of the node to be
+deleted is "s" (Figure 8.39).</p>
+</div>
+<div class="paragraph">
+<p><span class="image unresolved"><img src="media/image42.jpg" alt="media/image42" width="280" height="174"></span></p>
+</div>
+<div class="paragraph">
+<p>Figure 8.39. Tree node relationship</p>
+</div>
+<div class="paragraph">
+<p>Option 1: If the child element (y) of the node to be deleted (x) is
+coloured red, then after deletion it should be recoloured black, as a
+result of which the number of black nodes will be restored (Figure
+8.40).</p>
+</div>
+<div class="paragraph">
+<p><span class="image unresolved"><img src="media/image43.jpg" alt="media/image43" width="332" height="144"></span></p>
+</div>
+<div class="paragraph">
+<p>Fig. 8.40. Deleting and repainting the child of the node to be removed
+(y)</p>
+</div>
+<div class="paragraph">
+<p>Option 2: When the sib(s) of the node to be deleted (x) is coloured
+black, and at least one of the descendants is red, then four different
+combinations are possible:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Option 2(a): The brother(s) of the node to be deleted (x) is black. In
+this case, the brother (s) is the left descendant of the parent (P), and
+the left child of the brother is coloured red. This is the so-called
+"left-left <em>configuration"</em>, in which the balance is achieved by the
+right rotation, after which the colour of the child should be replaced by
+black (Fig. 8.41).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image unresolved"><img src="media/image44.jpg" alt="media/image44" width="427" height="165"></span></p>
+</div>
+<div class="paragraph">
+<p>Figure. 8.41. Left-Left node delete configuration</p>
+</div>
+<div class="paragraph">
+<p>Option 2(b): Mirror image of case 2(a). The "s" brother is his parent&#8217;s
+right child, and his right child is the red child. The right-right
+configuration performs a left-hand rotation. The child node is then
+changed to black. As a result, the black node counter property is
+restored (Fig. 8.42).</p>
+</div>
+<div class="paragraph">
+<p><span class="image unresolved"><img src="media/image45.jpg" alt="media/image45" width="412" height="123"></span></p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Figure 8.42. Right-Right configuration of node deletion</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Option 2 (c). The brother (s) of the remote node (y) is black. The
+brother(s) is the left offspring of his parent, and his right child is
+red. This is a left-to-right configuration, so a left rotation is
+performed followed by a right rotation. The child node is coloured black
+(Figure 8.43):</p>
+</div>
+<div class="paragraph">
+<p><span class="image unresolved"><img src="media/image46.jpg" alt="media/image46" width="670" height="121"></span></p>
+</div>
+<div class="paragraph">
+<p>Figure 8.43. Left-Right node delete configuration</p>
+</div>
+<div class="paragraph">
+<p>Option 2(d): The brother (s) of the remote node (y) is coloured black.
+The brother (s) is the right child of his parent (P) and his left child
+is the red child. A right-left rotation is then performed, followed by a
+left-hand rotation. The colour of the child node changes to black (Fig.
+8.44).<span class="image unresolved"><img src="media/image47.jpg" alt="media/image47" width="670" height="121"></span> Figure
+8.44. Right-Left node delete configuration</p>
+</div>
+<div class="paragraph">
+<p>Option H: If the node (y) to be removed and its brother(s) are coloured
+black and both of its descendants are missing, i.e. black by definition,
+then you need to recolour the children red and recursively add black to
+the parent. If the parent was red, then it became black. If the parent
+was black, it would become double black. If the parent is the root, then
+it remains black. For example, below is a case where the node (y) to be
+deleted and its brother (s) are black (Figure 8.45):</p>
+</div>
+<div class="paragraph">
+<p><span class="image unresolved"><img src="media/image48.png" alt="media/image48" width="477" height="176"></span></p>
+</div>
+<div class="paragraph">
+<p>Figure 8.45 The Process of rebuilding a tree with two black nodes (y)
+and (s)</p>
+</div>
+<div class="paragraph">
+<p>Option 4: If the sib(s) of the node to be removed (y) is coloured red,
+then a rotation is performed to achieve the balance of the tree. The
+sister nodes are then repainted. For example, consider the following
+option (Fig. 8.46):</p>
+</div>
+<div class="paragraph">
+<p><span class="image unresolved"><img src="media/image49.jpg" alt="media/image49" width="670" height="169"></span></p>
+</div>
+<div class="paragraph">
+<p>Figure 8.46. The process of rebuilding a tree with two nodes (y) and (s)
+of different colours</p>
+</div>
+<div class="paragraph">
+<p>Conclusion</p>
+</div>
+<div class="paragraph">
+<p>Trees are one of the most important data structures in computer science,
+used to represent hierarchical relationships and organize data. They
+provide efficient search, insert, and delete operations, making them
+ideal for use in a variety of applications.</p>
+</div>
+<div class="paragraph">
+<p>AVL trees, named after their creators Adelsky-Velsky and Landis, are
+balanced binary search trees. They provide fast search, insertion, and
+deletion by keeping the height of the tree logarithmic relative to the
+number of nodes. However, AVL trees require additional insertion and
+deletion operations to maintain balance, which can be a disadvantage in
+some applications.</p>
+</div>
+<div class="paragraph">
+<p>Red-black trees are another type of balanced binary search trees. They
+provide efficient search, insert, and delete operations, but can be more
+difficult to implement because of the additional properties they must
+support. They are widely used in many standard libraries.</p>
+</div>
+<div class="paragraph">
+<p>The choice of a specific tree type depends on the specific requirements
+of the application. AVL trees are generally preferred when frequent
+searches are the most important operations, as they provide a more
+stringent balance than red-black trees. On the other hand, red-and-black
+trees can be more effective with frequent insertions and removals, as
+they require fewer turns to maintain balance.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s important to remember that both types of trees require additional
+memory to store balance information, and both can be difficult to
+implement. In some cases, other data structures, such as hash tables or
+B-trees, may be more appropriate. However, despite these challenges,
+trees continue to play a central role in computer science and are a key
+tool for any programmer.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 28%;">
+<col style="width: 5%;">
+<col style="width: 8%;">
+<col style="width: 12%;">
+<col style="width: 6%;">
+<col style="width: 8%;">
+<col style="width: 8%;">
+<col style="width: 8%;">
+<col style="width: 9%;">
+<col style="width: 8%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-center valign-top">Tree type</th>
+<th class="tableblock halign-center valign-top"></th>
+<th class="tableblock halign-center valign-top"></th>
+<th class="tableblock halign-center valign-top"></th>
+<th class="tableblock halign-center valign-top"></th>
+<th class="tableblock halign-center valign-top"></th>
+<th class="tableblock halign-center valign-top"></th>
+<th class="tableblock halign-center valign-top"></th>
+<th class="tableblock halign-center valign-top"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Binary</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">AVL</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Red-Black</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Time Complexity:</p>
+</div>
+<div class="paragraph">
+<p>Insert, Find, Delete</p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">O(N)</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">O(sqrt(N))</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">O(logN)</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">O(logN)</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">O(logN)</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">O(logN)</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">O(logN)</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">O(logN)</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">O(logN)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Space Complexity</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Iterative</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Recursive</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">O(N)</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">O(N)</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">O(N)</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">O(N)</p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">O(1)</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">O(H)=O(sqrt(N))</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

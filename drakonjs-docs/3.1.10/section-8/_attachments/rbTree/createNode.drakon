@@ -1,0 +1,27 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "1",
+            "content": "return {\n    data: data,\n    colour: colour,\n    // true for RED, false for BLACK\n    \n    parent: parent,\n    left: left,\n    right: right\n};"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "data, colour, parent, left, right"
+}

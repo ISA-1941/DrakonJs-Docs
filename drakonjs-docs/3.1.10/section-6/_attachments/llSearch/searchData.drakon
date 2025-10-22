@@ -8,7 +8,7 @@
             "type": "branch",
             "branchId": 1,
             "one": "25",
-            "content": "Branch1"
+            "content": "Find a given number"
         },
         "5": {
             "type": "question",
@@ -38,7 +38,7 @@
             "type": "branch",
             "one": "13",
             "branchId": 2,
-            "content": "Branch2"
+            "content": "Count number of duplicates"
         },
         "13": {
             "type": "question",
