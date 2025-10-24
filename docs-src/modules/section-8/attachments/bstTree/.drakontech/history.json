@@ -1,8 +1,12 @@
 {
     "history": [
         {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\removeNode.drakon",
+            "whenOpened": "2025-10-23T11:43:35.063Z"
+        },
+        {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\main.drakon",
-            "whenOpened": "2025-05-13T10:59:19.860Z"
+            "whenOpened": "2025-10-23T09:40:22.349Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\inOrder.drakon",
@@ -11,10 +15,6 @@
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\createBstTree.drakon",
             "whenOpened": "2025-05-13T07:59:13.837Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\removeNode.drakon",
-            "whenOpened": "2025-05-11T15:16:30.689Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\postOrder.drakon",
