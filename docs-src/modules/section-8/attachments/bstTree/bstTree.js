@@ -104,12 +104,13 @@ function main() {
     } else {
         console.log('Not found');
     }
-    tree.root = removeNode(tree.root, 17);
-    found = findNode(tree.root, 17);
+     console.log('Found:', 8);
+    tree.root = removeNode(tree.root, 8);
+    found = findNode(tree.root, 8);
     if (found) {
-        console.log('Found:', found.value);
+        console.log('Found 8:', found.value);
     } else {
-        console.log('Not found');
+        console.log('Not found 8');
     }
 }
 function postOrder(node, result) {
