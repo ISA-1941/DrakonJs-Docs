@@ -163,7 +163,7 @@ The complete DRAKON-diagram of the removal of nodes from a binary search tree is
 image::_images/Fig8_11_removeNode.svg[width=75%]
 
 [.text-center]
-Figure 8.10. DRAKON-diagram of the removal of nodes
+Figure 8.11. DRAKON-diagram of the removal of nodes
 
 8.2.4. Traversing the binary search tree
 
