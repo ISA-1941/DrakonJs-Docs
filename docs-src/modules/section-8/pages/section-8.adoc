@@ -116,7 +116,7 @@ _Option a):_ Node (21) has no descendants (Figure 8.6.).
 In this case, this node is removed by changing the value of `node = null` in the parent node. Figure 8.6. shows the process of deleting node (21)
 and the corresponding DRAKON-diagram fragment
 
-image::_images/Fig8_6_del21_Js.png[width=75%]
+image::_images/Fig8_6_del21.png[width=75%]
 
 [.text-center]
 Figure 8.6. Deleting a node without childs
@@ -127,7 +127,7 @@ In this case, node (19) is removed from the tree by replacing its
 address in the parent node (17) with the address of its only descendant
 node (21). Figure 8.7. shows the process of removing node (19) and the corresponding DRAKON-diagram fragment.
 
-image::_images/Fig8_7_del19_Js.png[width=75%]
+image::_images/Fig8_7_del19.png[width=75%]
 
 [.text-center]
 Figure 8.7. Deleting node (19) with right-hand descendant
@@ -138,7 +138,7 @@ In this case, node (8) is removed from the tree by replacing its
 address in parent node (5) with the address of its only left child node (6). Figure 8.8. shows the process of removing node (8) and the
 corresponding DRAKON-diagram fragment.
 
-image::_images/Fig8_8_del8_Js.png[width=75%]
+image::_images/Fig8_8_del8.png[width=75%]
 
 [.text-center]
 Figure 8.8. Deleting node (8) with left-hand child
@@ -146,7 +146,7 @@ Figure 8.8. Deleting node (8) with left-hand child
 _Variant d):_ Node (5) has two descendants (Figure 8.9.). In this case
 the binary search tree is rearranged: node (2) moves to the place of node (5):
 
-image::_images/Fig8_9_del5_Js.png[width=75%]
+image::_images/Fig8_9_del5.png[width=75%]
 
 [.text-center]
 Figure 8.9. Deleting a node (5) with two childs
