@@ -1,16 +1,20 @@
 {
     "history": [
         {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\main.drakon",
+            "whenOpened": "2025-10-28T10:08:06.280Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\removeNode.drakon",
+            "whenOpened": "2025-10-28T10:07:51.794Z"
+        },
+        {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\removeNode.drakon",
             "whenOpened": "2025-10-27T11:57:41.181Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\preOrder.drakon",
             "whenOpened": "2025-10-25T07:03:49.996Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\main.drakon",
-            "whenOpened": "2025-10-23T09:40:22.349Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\inOrder.drakon",
