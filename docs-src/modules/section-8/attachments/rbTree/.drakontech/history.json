@@ -1,12 +1,28 @@
 {
     "history": [
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\deleteNodeAI.drakon",
-            "whenOpened": "2025-06-20T13:37:42.930Z"
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\Insert.drakon",
+            "whenOpened": "2025-10-28T12:59:54.842Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\main.drakon",
-            "whenOpened": "2025-06-20T13:29:19.616Z"
+            "whenOpened": "2025-10-28T12:59:18.150Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\InsertNew.drakon",
+            "whenOpened": "2025-10-28T12:57:12.628Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\rotateLeftOld.drakon",
+            "whenOpened": "2025-10-28T12:56:58.095Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\rotateLeft.drakon",
+            "whenOpened": "2025-10-28T12:56:55.068Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\deleteNodeAI.drakon",
+            "whenOpened": "2025-10-28T12:54:47.327Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixDoubleBlackStep.drakon",
@@ -33,20 +49,12 @@
             "whenOpened": "2025-06-18T08:35:52.239Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\rotateLeft.drakon",
-            "whenOpened": "2025-06-18T08:34:09.546Z"
-        },
-        {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\module.drakon",
             "whenOpened": "2025-06-17T15:10:52.979Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\rotateRightLeft.drakon",
             "whenOpened": "2025-06-17T14:51:28.303Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\rotateLeftOld.drakon",
-            "whenOpened": "2025-06-17T14:48:54.535Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\rotateRightOld.drakon",
@@ -67,14 +75,6 @@
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\printTreeNode.drakon",
             "whenOpened": "2025-06-13T15:08:45.118Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\Insert.drakon",
-            "whenOpened": "2025-06-13T09:00:29.314Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\InsertNew.drakon",
-            "whenOpened": "2025-06-13T09:00:08.431Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\createTree.drakon",
