@@ -179,7 +179,7 @@ Figure 8.12. Three Classical Tree Traversals: Pre-, In-, Post-Order
 
 The efficiency of any tree operation depends substantially on the order in which the input data is received. For example, if an incoming sequence of numbers is partially sorted in ascending or descending order, this structure will no longer look like a tree (Figure 8.13).
 
-image::_images/Fig8_13.jpg[width=75%]
+image::_images/Fig8_13.png[width=75%]
 
 [.text-center]
 Figure 8.13. Partially sorted input data
