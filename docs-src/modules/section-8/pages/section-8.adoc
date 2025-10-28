@@ -209,7 +209,7 @@ nodes on each side, i.e. the tree is perfectly balanced.
 
 The balancing algorithm in its most general form is presented in the following DRAKON-scheme (Figure 8.15)
 
-image::{imagesdir}/Fig8_15_buildingAvlTree.jpg[width=75%]
+mage::_images/Fig8_15_buildingAvlTree.jpg[width=75%]
 
 [.text-center]
 Figure 8.15. The balancing algorithm in its most general view 
