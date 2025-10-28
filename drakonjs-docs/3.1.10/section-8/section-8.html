@@ -193,8 +193,10 @@ section, here we will talk about the computer implementation of this
 type of data structures using the visual algorithmic language DRAKON and
 the programming language JavaScript. Recall the basic terminology of binary trees (Figure 8.1):</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_1_Term.jpg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_1_Term.jpg" alt="Fig8 1 Term" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.1. Basic tree terminology</p>
@@ -226,8 +228,10 @@ root node of this node.</p>
 <div class="paragraph">
 <p>The information structure of the binary tree is organised as follows (Figure 8.2):</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_2_BST.jpg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_2_BST.jpg" alt="Fig8 2 BST" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Fig.8.2 Binary tree structure (<em>info</em> - value (key), (N - NULL))</p>
@@ -281,11 +285,15 @@ no parent node;</p>
 <p>A binary search tree is built according to a certain algorithm. Consider the sequence of integers \{11, 5, 17, 15, 1, 8, 19, 13, 21}, represented as a slice of numbers[]. First the root node {11} is formed, then in the loop for each node recursively the method
 <code>insert(tree, value)</code> is called (Fig. 8.3 a), which in turn calls the method <code>createNode(value)</code>, which creates a new node (Fig. 8.3 b).</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_3a_insertNode.jpg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_3a_insertNode.jpg" alt="Fig8 3a insertNode" width="75%">
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_3b_createNode.jpg[width=75%]</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_3b_createNode.jpg" alt="Fig8 3b createNode" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Fig.8.3 a,b Binary tree DRAKON-diagrams</p>
@@ -309,8 +317,10 @@ children (1,8), a node 15 has only a left child, and a node 19 has only
 a right child. This arrangement of nodes is chosen to demonstrate the
 function of removing nodes, which will be discussed later.</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_4_treeProcess.jpg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_4_treeProcess.jpg" alt="Fig8 4 treeProcess" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.4. Building a binary tree</p>
@@ -323,8 +333,10 @@ function of removing nodes, which will be discussed later.</p>
 val with the values of other nodes as it traverses the tree.
 The DRAKON-diagram of the `findNode(node, value)`function is shown in Figure 8.5.</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_5_findNode.jpg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_5_findNode.jpg" alt="Fig8 5 findNode" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.5. DRAKON-diagram of <code>findNode(root *BSTree, val int)</code> method</p>
@@ -345,8 +357,10 @@ The DRAKON-diagram of the `findNode(node, value)`function is shown in Figure 8.5
 <p>In this case, this node is removed by changing the value of <code>node = null</code> in the parent node. Figure 8.6. shows the process of deleting node (21)
 and the corresponding DRAKON-diagram fragment</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_6_del21.png[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_6_del21.png" alt="Fig8 6 del21" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.6. Deleting a node without childs</p>
@@ -359,8 +373,10 @@ and the corresponding DRAKON-diagram fragment</p>
 address in the parent node (17) with the address of its only descendant
 node (21). Figure 8.7. shows the process of removing node (19) and the corresponding DRAKON-diagram fragment.</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_7_del19.png[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_7_del19.png" alt="Fig8 7 del19" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.7. Deleting node (19) with right-hand descendant</p>
@@ -373,8 +389,10 @@ node (21). Figure 8.7. shows the process of removing node (19) and the correspon
 address in parent node (5) with the address of its only left child node (6). Figure 8.8. shows the process of removing node (8) and the
 corresponding DRAKON-diagram fragment.</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_8_del8.png[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_8_del8.png" alt="Fig8 8 del8" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.8. Deleting node (8) with left-hand child</p>
@@ -383,8 +401,10 @@ corresponding DRAKON-diagram fragment.</p>
 <p><em>Variant d):</em> Node (5) has two descendants (Figure 8.9.). In this case
 the binary search tree is rearranged: node (2) moves to the place of node (5):</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_9_del5.png[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_9_del5.png" alt="Fig8 9 del5" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.9. Deleting a node (5) with two childs</p>
@@ -392,8 +412,10 @@ the binary search tree is rearranged: node (2) moves to the place of node (5):</
 <div class="paragraph">
 <p>DRAKON-diagram of the minimum value search method is shown in Fig8.10.</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_10_findMin.png[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_10_findMin.png" alt="Fig8 10 findMin" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.10. DRAKON-diagram of the minimum value search method</p>
@@ -401,8 +423,10 @@ the binary search tree is rearranged: node (2) moves to the place of node (5):</
 <div class="paragraph">
 <p>The complete DRAKON-diagram of the removal of nodes from a binary search tree is shown in Figure 8.11.</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_11_removeNode.svg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_11_removeNode.svg" alt="Fig8 11 removeNode" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.11. DRAKON-diagram of the removal of nodes</p>
@@ -414,8 +438,10 @@ the binary search tree is rearranged: node (2) moves to the place of node (5):</
 <p>One of the basic tree operations is to traverse tree nodes. Unlike linear data structures, where elements are traversed in a linear order, tree nodes can be traversed in a variety of ways.
 The traversal, in which each ancestor node is viewed before its descendants, is called a pre-ordered walk or direct-order traversal (<em>pre-order walk</em>). There is also an <em>in-order walk</em>, where the left subtree is visited from bottom to top, then the root node, then the right subtree. The traversal, in which first descendants are viewed and then ancestors, is called a post-ordered or reverse-order traversal (<em>post-order walk</em>). All three cases, including the Dragon diagrams, are shown in the Figure 8.12.</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_12_PreInPost.jpg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_12_PreInPost.jpg" alt="Fig8 12 PreInPost" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.12. Three Classical Tree Traversals: Pre-, In-, Post-Order</p>
@@ -439,8 +465,10 @@ The traversal, in which each ancestor node is viewed before its descendants, is 
 <p>In such practically "degenerate" trees, the complexity of the operations is determined by the number of nodes, i.e. it is almost linear - O(n).
 The left and right subtrees are unbalanced, which can be estimated by the balance coefficient (kb), which is equal to the difference between the heights of the left and right subtrees. Recall that the height of a tree is defined as the length of the longest branch in a subtree (sum of edges). For an ideal binary search tree (a tree where the number of nodes in the left subtree is equal to the number of nodes in the right subtree), this factor is 0 (Figure 8.14).</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_14_idealTree.jpg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_14_idealTree.jpg" alt="Fig8 14 idealTree" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.14. An ideal binary tree</p>
@@ -500,8 +528,10 @@ nodes on each side, i.e. the tree is perfectly balanced.</p>
 <div class="paragraph">
 <p>The right-hand turn is performed when the root node has a balance factor kb = +2 and its left-hand child has a balance factor kb = +1 (Figure 8.16):</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_16_RR_turn.jpg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_16_RR_turn.jpg" alt="Fig8 16 RR turn" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.16. Right turn</p>
@@ -509,8 +539,10 @@ nodes on each side, i.e. the tree is perfectly balanced.</p>
 <div class="paragraph">
 <p>The left-hand turn is performed when the root node has a balanced kb = - 2 and its right-hand descendant has a balanced kb = - 1 (Figure 8.17):</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_17_LL_turn.jpg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_17_LL_turn.jpg" alt="Fig8 17 LL turn" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.17. Left turn</p>
@@ -520,8 +552,10 @@ nodes on each side, i.e. the tree is perfectly balanced.</p>
 kb = -2 and its right-hand child has a balance factor kb = +1 (Figure
 8.18):</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_18_RL_turn.jpg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_18_RL_turn.jpg" alt="Fig8 18 RL turn" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.18. Right-left turn</p>
@@ -529,8 +563,10 @@ kb = -2 and its right-hand child has a balance factor kb = +1 (Figure
 <div class="paragraph">
 <p>Left-right rotation is performed when a node has a balance factor of kb = +2 and its left child has a balance factor of kb = -1 (Figure 8.19):</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_19_LR_turn.jpg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_19_LR_turn.jpg" alt="Fig8 19 LR turn" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.19. Left-right turn</p>
@@ -542,8 +578,10 @@ kb = -2 and its right-hand child has a balance factor kb = +1 (Figure
 <p>Balance checking are started on the arrival of each new node using the <code>insertNode(node, value)</code> function, which determines the position of the new node in the left or right subtree relative to the root node. The choice of the balancing path is determined by the method
 <code>rotateInsert(node, value)</code>. A DRAKON-diagrams of the algorithms of the above methods is shown in Figure 8.20.</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_20_insertNode.svg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_20_insertNode.svg" alt="Fig8 20 insertNode" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.20. DRAKON-diagram depicting the method of inserting node</p>
@@ -551,8 +589,10 @@ kb = -2 and its right-hand child has a balance factor kb = +1 (Figure
 <div class="paragraph">
 <p>The choice of one of the possible balancing paths (rotations) is determined by the <code>rotateInsert(node, val)</code> function (Figure 8.21).</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_21_avlRotateIinsert.svg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_21_avlRotateIinsert.svg" alt="Fig8 21 avlRotateIinsert" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.21. DRAKON-diagram depicting the inserting node method</p>
@@ -560,8 +600,10 @@ kb = -2 and its right-hand child has a balance factor kb = +1 (Figure
 <div class="paragraph">
 <p>Depending on the location of the new node relative to the parent node and the balance factor values, the left-hand or right-hand rotation methods are performed (Figure 8.22):</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_22_twoRotates.jpg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_22_twoRotates.jpg" alt="Fig8 22 twoRotates" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.22. Node rotation programme codes</p>
@@ -569,8 +611,10 @@ kb = -2 and its right-hand child has a balance factor kb = +1 (Figure
 <div class="paragraph">
 <p>Let&#8217;s look at the tree rebuilding process in detail as a result of using the <code>rotateInsert(node, val)</code> method on the example of entering the values of three nodes (5,6,8). After receiving the value of last node (8), a "twig" appears instead of the tree that needs to be balanced. In this case the condition in the <code>rotateInsert(node, val)</code> method is met: the balancing factor is 2 and the value of node (8) is more,than the parent node (6) and the <code>rotateLeft(node)</code> method is called. The balancing process in this case is shown in Figure 8.23:</p>
 </div>
-<div class="paragraph text-center">
-<p>iimage::_images/Fig8_23_exampleLL.jpg[width=75%]</p>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/Fig8_23_exampleLL.jpg" alt="Fig8 23 exampleLL" width="75%">
+</div>
 </div>
 <div class="paragraph">
 <p>Figure 8.23. Example of Left-Left turn balancing</p>
@@ -578,8 +622,10 @@ kb = -2 and its right-hand child has a balance factor kb = +1 (Figure
 <div class="paragraph">
 <p>The process of new nodes arriving and rebuilding the resulting AVL-tree by balancing for the input set [1,2,5,6,8,11,13,15,17,19,21] is shown in Figure 8.24.</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_24_avlTreeProcess.jpg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_24_avlTreeProcess.jpg" alt="Fig8 24 avlTreeProcess" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.24. Process of building a balanced AVL-tree</p>
@@ -587,8 +633,10 @@ kb = -2 and its right-hand child has a balance factor kb = +1 (Figure
 <div class="paragraph">
 <p>DRAKON-diagram of the AVL-trees basic operation `findNode(node, val)is shown in Figure 8.25:</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_25_avlfindNode.svg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_25_avlfindNode.svg" alt="Fig8 25 avlfindNode" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.25. DRAKON-diagram depicting the finding a node method</p>
@@ -596,8 +644,10 @@ kb = -2 and its right-hand child has a balance factor kb = +1 (Figure
 <div class="paragraph">
 <p>Another basic operation, deleting a node with a specified value, consists of the following steps. The node is searched from the root down through the branches to the node to be deleted. The following situations may occur (Figure 8.27):</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_26_varDelNode.jpg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_26_varDelNode.jpg" alt="Fig8 26 varDelNode" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>8.26. Cases for nodes to be removed</p>
@@ -614,8 +664,10 @@ kb = -2 and its right-hand child has a balance factor kb = +1 (Figure
 <div class="paragraph">
 <p>As with the other methods, a node with a c value is first recursively identified and then one of the options presented is selected. A DRAKON-diagram of the algorithm for deleting a node with the cases for nodes to be removed value is shown in Figure 8.27.</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_27_varDelNode.jpg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_27_varDelNode.jpg" alt="Fig8 27 varDelNode" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.27. DRAKON-diagram depicting an algorithm for removing a node
@@ -625,8 +677,10 @@ with a specified value</p>
 <p>The <code>main()</code> program inputs an array of data, searches for a node with a
 specified  value, and deletes a node with a specified value (Figure 8.28).</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_28_mainFunction.jpg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_28_mainFunction.jpg" alt="Fig8 28 mainFunction" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.28. DRAKON-diagram of the main-function</p>
@@ -641,8 +695,10 @@ specified  value, and deletes a node with a specified value (Figure 8.28).</p>
 which the nodes are placed according to a certain rule and coloured red
 or black (Figure 8.29)</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_29_redblackTree.png[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_29_redblackTree.png" alt="Fig8 29 redblackTree" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.29. Red-Black Tree</p>
@@ -693,8 +749,10 @@ of these properties are properties 4 and 5.</p>
 <p>To perform the above operations at the program level, a red-black tree is first created, for which two user types - node and RBTree are declared:
 Node includes the following fields: <code>data</code> - node numeric value,  <code>colour</code> - node colour type bool: <code>red node</code> - TRUE; <code>black node</code> - false, <code>left</code>, <code>right</code> and <code>parent</code> nodes. In turn RBTree structure represents the reference type variable, that store objects containing not the "value" itself but a reference to the memory area where this object is stored (Fig. 8.30).</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_30_createNodeTree.png[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_30_createNodeTree.png" alt="Fig8 30 createNodeTree" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.30. Node Properties and the createNode Factory Function</p>
@@ -738,8 +796,10 @@ Node includes the following fields: <code>data</code> - node numeric value,  <co
 <div class="paragraph">
 <p>The DRAKON-diagrams of rotate functions are presented on Figure 8.31a,b.</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_30_rotateLeft.jpg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_30_rotateLeft.jpg" alt="Fig8 30 rotateLeft" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.31. Rotate function DRAKON-diagrams (a - rotateLeft; b - rotate right)</p>
@@ -750,8 +810,10 @@ Node includes the following fields: <code>data</code> - node numeric value,  <co
 <div class="paragraph">
 <p>In the most general way the red-black tree construction algorithm is presented by the function <code>Insert(tree, value)</code>(Figure 8.32):</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_32_Insert.jpg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_32_Insert.jpg" alt="Fig8 32 Insert" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.32. DRAKON-diagram of the function <code>Insert(tree, data)</code></p>
@@ -763,8 +825,10 @@ violated. To understand this process, we introduce the following
 notation: x - new node, P (Parent) - parent of node x, G (Grandparent) -
 ancestor (parent of parent), U (Uncle) - uncle of node x, S - siblings (Figure 8.33).</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_33_family.jpg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_33_family.jpg" alt="Fig8 33 family" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.33. Designation of the degree of "kinship" of RB Tree nodes (x, P, G, U, S)</p>
@@ -831,14 +895,18 @@ satisfactory, the rotation and colour change operations are performed (Table ).<
 <div class="paragraph">
 <p>The DRAKON-diagram of the red-black tree balancing algorithm when entering a new node is shown in Figure 8.34,8.35.</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_34_fixRedRed.svg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_34_fixRedRed.svg" alt="Fig8 34 fixRedRed" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.35. Red-Black Tree Balancing Algorithm DRAKON-diagram</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_35_diagr_figs.svg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_35_diagr_figs.svg" alt="Fig8 35 diagr figs" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.35. Illustration of Red-Black Tree Balancing Algorithms</p>
@@ -846,11 +914,15 @@ satisfactory, the rotation and colour change operations are performed (Table ).<
 <div class="paragraph">
 <p>The dragon diagram of the node rotation algorithms to the red and black tree cluster is shown in Figure 8.36a,b.</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_36a_rotateLeft.png[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_36a_rotateLeft.png" alt="Fig8 36a rotateLeft" width="75%">
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_36b_rotateRight.png[width=75%]</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_36b_rotateRight.png" alt="Fig8 36b rotateRight" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.36. DRAKON-diagrams of the red-black tree cluster node rotation algorithm
@@ -861,8 +933,10 @@ a) Left-rotation; b) Right-rotation</p>
 tree from sets of integers that are the keys of the input nodes:
 <code>[11,12,13,14,15,16,17,18,19]</code> (Figure 8.37):</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_37_rbProcess.jpg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_37_rbProcess.jpg" alt="Fig8 37 rbProcess" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.37. Process for Balancing the Red-Black Tree</p>
@@ -878,11 +952,15 @@ transformations of the tree structure must maintain its properties. The
 DRAKON-diagram of the node removal algorithm is shown in Figures 8.38a,b. This
 algorithm can be divided into three stages.</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_38a_mindMap_deleteNode.jpg[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_38a_mindMap_deleteNode.jpg" alt="Fig8 38a mindMap deleteNode" width="75%">
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_38b_deleteNode.jpg[width=75%]</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_38b_deleteNode.jpg" alt="Fig8 38b deleteNode" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.38. Node Deletion Algorithm (a -intellect map; b - DRAKON-diagram)</p>
@@ -907,11 +985,15 @@ becomes a "double black" node.</em></p>
 <p><strong>The third stage is the correction of the double black nodes.</strong> To fix the
 "double black" node, thefunctions <em>fixDoubleBlack (tree, x)</em> and <em>fixDoubleBlackStep(tree, x)</em> are called (Figures 8.39a,b). This feature fixes the "double black nodes" by using a series of rotations and recoloring steps. It considers several cases, depending on the colour of the brother of the "double black" node and its descendants. The function  <em>fixDoubleBlackStep (tree, x)</em> handles all of these cases to ensure that the red-black tree remains balanced after each deletion operation (Table ).</p>
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_39a_fixDoubleBlack.png[width=75%]</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_39a_fixDoubleBlack.png" alt="Fig8 39a fixDoubleBlack" width="75%">
 </div>
-<div class="paragraph">
-<p>iimage::_images/Fig8_39b_fixDoubleBlackStep.svg[width=75%]</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_39b_fixDoubleBlackStep.svg" alt="Fig8 39b fixDoubleBlackStep" width="75%">
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.39. DRAKON-diagram of the node structure correction algorithm when removing "double black node"</p>
@@ -1042,14 +1124,16 @@ becomes a "double black" node.</em></p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">iimage::_images/before_join.png[]</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">iimage::_images/after_join.png[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">image::_images/before_join.png[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">image::_images/after_join.png[]</p></td>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<div class="title">Figure 8.X — Replacing a node in a red-black tree using <code>joinParentChild</code></div>
-<p>iimage::_images/Fig8_joinPC.png[width=80%]</p>
+<div class="imageblock text-center unresolved">
+<div class="content">
+<img src="_images/Fig8_joinPC.png" alt="Fig8 joinPC" width="80%">
+</div>
+<div class="title">Figure 8.XFigure 8.X — Replacing a node in a red-black tree using <code>joinParentChild</code></div>
 </div>
 <div class="paragraph text-center">
 <p>The top diagram illustrates the replacement of node U (<code>9</code>) with subtree V (<code>7</code>) before calling <code>joinParentChild(tree, U, V)</code>.
