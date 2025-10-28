@@ -11,7 +11,7 @@ section, here we will talk about the computer implementation of this
 type of data structures using the visual algorithmic language DRAKON and
 the programming language JavaScript. Recall the basic terminology of binary trees (Figure 8.1):
 
-iimage::{imagesdir}/Fig8_1_Term.jpg[width=75%]
+image::{imagesdir}/Fig8_1_Term.jpg[width=75%]
 
 [.text-center]
 Figure 8.1. Basic tree terminology
@@ -36,7 +36,7 @@ root node of this node.
 
 The information structure of the binary tree is organised as follows (Figure 8.2):
 
-iimage::{imagesdir}/Fig8_2_BST.jpg[width=75%]
+image::{imagesdir}/Fig8_2_BST.jpg[width=75%]
 
 [.text-center]
 Fig.8.2 Binary tree structure (_info_ - value (key), (N - NULL))
@@ -69,9 +69,9 @@ no parent node;
 A binary search tree is built according to a certain algorithm. Consider the sequence of integers \{11, 5, 17, 15, 1, 8, 19, 13, 21}, represented as a slice of numbers[]. First the root node \{11} is formed, then in the loop for each node recursively the method
 `insert(tree, value)` is called (Fig. 8.3 a), which in turn calls the method `createNode(value)`, which creates a new node (Fig. 8.3 b).
 
-iimage::{imagesdir}/Fig8_3a_insertNode.jpg[width=75%]
+image::{imagesdir}/Fig8_3a_insertNode.jpg[width=75%]
 
-iimage::{imagesdir}/Fig8_3b_createNode.jpg[width=75%]
+image::{imagesdir}/Fig8_3b_createNode.jpg[width=75%]
 
 [.text-center]
 Fig.8.3 a,b Binary tree DRAKON-diagrams
@@ -93,7 +93,7 @@ children (1,8), a node 15 has only a left child, and a node 19 has only
 a right child. This arrangement of nodes is chosen to demonstrate the
 function of removing nodes, which will be discussed later.
 
-iimage::{imagesdir}/Fig8_4_treeProcess.jpg[width=75%]
+image::{imagesdir}/Fig8_4_treeProcess.jpg[width=75%]
 
 [.text-center]
 Figure 8.4. Building a binary tree
@@ -104,7 +104,7 @@ Another basic operation is the `findNode(value)` function. This function uses a 
 val with the values of other nodes as it traverses the tree. 
 The DRAKON-diagram of the `findNode(node, value)`function is shown in Figure 8.5. 
 
-iimage::{imagesdir}/Fig8_5_findNode.jpg[width=75%]
+image::{imagesdir}/Fig8_5_findNode.jpg[width=75%]
 
 [.text-center]
 Figure 8.5. DRAKON-diagram of `findNode(root *BSTree, val int)` method
@@ -120,7 +120,7 @@ _Option a):_ Node (21) has no descendants (Figure 8.6.).
 In this case, this node is removed by changing the value of `node = null` in the parent node. Figure 8.6. shows the process of deleting node (21)
 and the corresponding DRAKON-diagram fragment
 
-iimage::{imagesdir}/Fig8_6_del21.png[width=75%]
+image::{imagesdir}/Fig8_6_del21.png[width=75%]
 
 [.text-center]
 Figure 8.6. Deleting a node without childs
@@ -131,7 +131,7 @@ In this case, node (19) is removed from the tree by replacing its
 address in the parent node (17) with the address of its only descendant
 node (21). Figure 8.7. shows the process of removing node (19) and the corresponding DRAKON-diagram fragment.
 
-iimage::{imagesdir}/Fig8_7_del19.png[width=75%]
+image::{imagesdir}/Fig8_7_del19.png[width=75%]
 
 [.text-center]
 Figure 8.7. Deleting node (19) with right-hand descendant
@@ -142,7 +142,7 @@ In this case, node (8) is removed from the tree by replacing its
 address in parent node (5) with the address of its only left child node (6). Figure 8.8. shows the process of removing node (8) and the
 corresponding DRAKON-diagram fragment.
 
-iimage::{imagesdir}/Fig8_8_del8.png[width=75%]
+image::{imagesdir}/Fig8_8_del8.png[width=75%]
 
 [.text-center]
 Figure 8.8. Deleting node (8) with left-hand child
@@ -150,21 +150,21 @@ Figure 8.8. Deleting node (8) with left-hand child
 _Variant d):_ Node (5) has two descendants (Figure 8.9.). In this case
 the binary search tree is rearranged: node (2) moves to the place of node (5):
 
-iimage::{imagesdir}/Fig8_9_del5.png[width=75%]
+image::{imagesdir}/Fig8_9_del5.png[width=75%]
 
 [.text-center]
 Figure 8.9. Deleting a node (5) with two childs
 
 DRAKON-diagram of the minimum value search method is shown in Fig8.10.
 
-iimage::{imagesdir}/Fig8_10_findMin.png[width=75%]
+image::{imagesdir}/Fig8_10_findMin.png[width=75%]
 
 [.text-center]
 Figure 8.10. DRAKON-diagram of the minimum value search method
 
 The complete DRAKON-diagram of the removal of nodes from a binary search tree is shown in Figure 8.11.
 
-iimage::{imagesdir}/Fig8_11_removeNode.svg[width=75%]
+image::{imagesdir}/Fig8_11_removeNode.svg[width=75%]
 
 [.text-center]
 Figure 8.11. DRAKON-diagram of the removal of nodes
@@ -174,7 +174,7 @@ Figure 8.11. DRAKON-diagram of the removal of nodes
 One of the basic tree operations is to traverse tree nodes. Unlike linear data structures, where elements are traversed in a linear order, tree nodes can be traversed in a variety of ways. 
 The traversal, in which each ancestor node is viewed before its descendants, is called a pre-ordered walk or direct-order traversal (_pre-order walk_). There is also an _in-order walk_, where the left subtree is visited from bottom to top, then the root node, then the right subtree. The traversal, in which first descendants are viewed and then ancestors, is called a post-ordered or reverse-order traversal (_post-order walk_). All three cases, including the Dragon diagrams, are shown in the Figure 8.12.
 
-iimage::{imagesdir}/Fig8_12_PreInPost.jpg[width=75%]
+image::{imagesdir}/Fig8_12_PreInPost.jpg[width=75%]
 
 [.text-center]
 Figure 8.12. Three Classical Tree Traversals: Pre-, In-, Post-Order
@@ -191,7 +191,7 @@ Figure 8.13. Partially sorted input data
 In such practically "degenerate" trees, the complexity of the operations is determined by the number of nodes, i.e. it is almost linear - O(n).
 The left and right subtrees are unbalanced, which can be estimated by the balance coefficient (kb), which is equal to the difference between the heights of the left and right subtrees. Recall that the height of a tree is defined as the length of the longest branch in a subtree (sum of edges). For an ideal binary search tree (a tree where the number of nodes in the left subtree is equal to the number of nodes in the right subtree), this factor is 0 (Figure 8.14).
 
-iimage::{imagesdir}/Fig8_14_idealTree.jpg[width=75%]
+image::{imagesdir}/Fig8_14_idealTree.jpg[width=75%]
 
 [.text-center]
 Figure 8.14. An ideal binary tree
@@ -223,14 +223,14 @@ The balancing technique boils down to making circular movements of the nodes in 
 
 The right-hand turn is performed when the root node has a balance factor kb = +2 and its left-hand child has a balance factor kb = +1 (Figure 8.16):
 
-iimage::{imagesdir}/Fig8_16_RR_turn.jpg[width=75%]
+image::{imagesdir}/Fig8_16_RR_turn.jpg[width=75%]
 
 [.text-center]
 Figure 8.16. Right turn
 
 The left-hand turn is performed when the root node has a balanced kb = - 2 and its right-hand descendant has a balanced kb = - 1 (Figure 8.17):
 
-iimage::{imagesdir}/Fig8_17_LL_turn.jpg[width=75%]
+image::{imagesdir}/Fig8_17_LL_turn.jpg[width=75%]
 
 [.text-center]
 Figure 8.17. Left turn
@@ -239,14 +239,14 @@ A right-left turn is performed when the root node has a balance factor
 kb = -2 and its right-hand child has a balance factor kb = +1 (Figure
 8.18):
 
-iimage::{imagesdir}/Fig8_18_RL_turn.jpg[width=75%]
+image::{imagesdir}/Fig8_18_RL_turn.jpg[width=75%]
 
 [.text-center]
 Figure 8.18. Right-left turn
 
 Left-right rotation is performed when a node has a balance factor of kb = +2 and its left child has a balance factor of kb = -1 (Figure 8.19):
 
-iimage::{imagesdir}/Fig8_19_LR_turn.jpg[width=75%]
+image::{imagesdir}/Fig8_19_LR_turn.jpg[width=75%]
 
 [.text-center]
 Figure 8.19. Left-right turn
@@ -256,21 +256,21 @@ Consider the balancing process in more detail with an example of tree formation 
 Balance checking are started on the arrival of each new node using the `insertNode(node, value)` function, which determines the position of the new node in the left or right subtree relative to the root node. The choice of the balancing path is determined by the method
 `rotateInsert(node, value)`. A DRAKON-diagrams of the algorithms of the above methods is shown in Figure 8.20. 
 
-iimage::{imagesdir}/Fig8_20_insertNode.svg[width=75%]
+image::{imagesdir}/Fig8_20_insertNode.svg[width=75%]
 
 [.text-center]
 Figure 8.20. DRAKON-diagram depicting the method of inserting node
 
 The choice of one of the possible balancing paths (rotations) is determined by the `rotateInsert(node, val)` function (Figure 8.21).
 
-iimage::{imagesdir}/Fig8_21_avlRotateIinsert.svg[width=75%]
+image::{imagesdir}/Fig8_21_avlRotateIinsert.svg[width=75%]
 
 [.text-center]
 Figure 8.21. DRAKON-diagram depicting the inserting node method
 
 Depending on the location of the new node relative to the parent node and the balance factor values, the left-hand or right-hand rotation methods are performed (Figure 8.22):
 
-iimage::{imagesdir}/Fig8_22_twoRotates.jpg[width=75%]
+image::{imagesdir}/Fig8_22_twoRotates.jpg[width=75%]
 
 [.text-center]
 Figure 8.22. Node rotation programme codes
@@ -278,27 +278,27 @@ Figure 8.22. Node rotation programme codes
 Let's look at the tree rebuilding process in detail as a result of using the `rotateInsert(node, val)` method on the example of entering the values of three nodes (5,6,8). After receiving the value of last node (8), a "twig" appears instead of the tree that needs to be balanced. In this case the condition in the `rotateInsert(node, val)` method is met: the balancing factor is 2 and the value of node (8) is more,than the parent node (6) and the `rotateLeft(node)` method is called. The balancing process in this case is shown in Figure 8.23:
 
 [.text-center]
-iimage::{imagesdir}/Fig8_23_exampleLL.jpg[width=75%]
+image::{imagesdir}/Fig8_23_exampleLL.jpg[width=75%]
 
 Figure 8.23. Example of Left-Left turn balancing
 
 The process of new nodes arriving and rebuilding the resulting AVL-tree by balancing for the input set [1,2,5,6,8,11,13,15,17,19,21] is shown in Figure 8.24.
 
-iimage::{imagesdir}/Fig8_24_avlTreeProcess.jpg[width=75%]
+image::{imagesdir}/Fig8_24_avlTreeProcess.jpg[width=75%]
 
 [.text-center]
 Figure 8.24. Process of building a balanced AVL-tree
 
 DRAKON-diagram of the AVL-trees basic operation `findNode(node, val)is shown in Figure 8.25:
 
-iimage::{imagesdir}/Fig8_25_avlfindNode.svg[width=75%]
+image::{imagesdir}/Fig8_25_avlfindNode.svg[width=75%]
 
 [.text-center]
 Figure 8.25. DRAKON-diagram depicting the finding a node method
 
 Another basic operation, deleting a node with a specified value, consists of the following steps. The node is searched from the root down through the branches to the node to be deleted. The following situations may occur (Figure 8.27):
 
-iimage::{imagesdir}/Fig8_26_varDelNode.jpg[width=75%]
+image::{imagesdir}/Fig8_26_varDelNode.jpg[width=75%]
 
 [.text-center]
 8.26. Cases for nodes to be removed
@@ -311,7 +311,7 @@ iimage::{imagesdir}/Fig8_26_varDelNode.jpg[width=75%]
 
 As with the other methods, a node with a c value is first recursively identified and then one of the options presented is selected. A DRAKON-diagram of the algorithm for deleting a node with the cases for nodes to be removed value is shown in Figure 8.27.
 
-iimage::{imagesdir}/Fig8_27_varDelNode.jpg[width=75%]
+image::{imagesdir}/Fig8_27_varDelNode.jpg[width=75%]
 
 [.text-center]
 Figure 8.27. DRAKON-diagram depicting an algorithm for removing a node
@@ -320,7 +320,7 @@ with a specified value
 The `main()` program inputs an array of data, searches for a node with a
 specified  value, and deletes a node with a specified value (Figure 8.28). 
 
-iimage::{imagesdir}/Fig8_28_mainFunction.jpg[width=75%]
+image::{imagesdir}/Fig8_28_mainFunction.jpg[width=75%]
 
 [.text-center]
 Figure 8.28. DRAKON-diagram of the main-function 
@@ -333,7 +333,7 @@ A red-black tree is a variant of a self-balancing binary search tree in
 which the nodes are placed according to a certain rule and coloured red
 or black (Figure 8.29)
 
-iimage::{imagesdir}/Fig8_29_redblackTree.png[width=75%]
+image::{imagesdir}/Fig8_29_redblackTree.png[width=75%]
 
 [.text-center]
 Figure 8.29. Red-Black Tree
@@ -373,7 +373,7 @@ Black height is an important term used for red-black trees. This is the number o
 To perform the above operations at the program level, a red-black tree is first created, for which two user types - node and RBTree are declared:
 Node includes the following fields: `data` - node numeric value,  `colour` - node colour type bool: `red node` - TRUE; `black node` - false, `left`, `right` and `parent` nodes. In turn RBTree structure represents the reference type variable, that store objects containing not the "value" itself but a reference to the memory area where this object is stored (Fig. 8.30).
 
-iimage::{imagesdir}/Fig8_30_createNodeTree.png[width=75%]
+image::{imagesdir}/Fig8_30_createNodeTree.png[width=75%]
 
 [.text-center]
 Figure 8.30. Node Properties and the createNode Factory Function 
@@ -404,7 +404,7 @@ Figure 8.30. Node Properties and the createNode Factory Function
 
 The DRAKON-diagrams of rotate functions are presented on Figure 8.31a,b.
 
-iimage::{imagesdir}/Fig8_30_rotateLeft.jpg[width=75%]
+image::{imagesdir}/Fig8_30_rotateLeft.jpg[width=75%]
 
 [.text-center]
 Figure 8.31. Rotate function DRAKON-diagrams (a - rotateLeft; b - rotate right)  
@@ -413,7 +413,7 @@ Figure 8.31. Rotate function DRAKON-diagrams (a - rotateLeft; b - rotate right)
 
 In the most general way the red-black tree construction algorithm is presented by the function `Insert(tree, value)`(Figure 8.32):
 
-iimage::{imagesdir}/Fig8_32_Insert.jpg[width=75%]
+image::{imagesdir}/Fig8_32_Insert.jpg[width=75%]
 
 [.text-center]
 Figure 8.32. DRAKON-diagram of the function `Insert(tree, data)`
@@ -424,7 +424,7 @@ violated. To understand this process, we introduce the following
 notation: x - new node, P (Parent) - parent of node x, G (Grandparent) -
 ancestor (parent of parent), U (Uncle) - uncle of node x, S - siblings (Figure 8.33).
 
-iimage::{imagesdir}/Fig8_33_family.jpg[width=75%]
+image::{imagesdir}/Fig8_33_family.jpg[width=75%]
 
 [.text-center]
 Figure 8.33. Designation of the degree of "kinship" of RB Tree nodes (x, P, G, U, S)  
@@ -474,22 +474,22 @@ satisfactory, the rotation and colour change operations are performed (Table ).
 
 The DRAKON-diagram of the red-black tree balancing algorithm when entering a new node is shown in Figure 8.34,8.35.
 
-iimage::{imagesdir}/Fig8_34_fixRedRed.svg[width=75%]
+image::{imagesdir}/Fig8_34_fixRedRed.svg[width=75%]
 
 [.text-center]
 Figure 8.35. Red-Black Tree Balancing Algorithm DRAKON-diagram 
 
 
-iimage::{imagesdir}/Fig8_35_diagr_figs.svg[width=75%]
+image::{imagesdir}/Fig8_35_diagr_figs.svg[width=75%]
 
 [.text-center]
 Figure 8.35. Illustration of Red-Black Tree Balancing Algorithms
 
 The dragon diagram of the node rotation algorithms to the red and black tree cluster is shown in Figure 8.36a,b.
 
-iimage::{imagesdir}/Fig8_36a_rotateLeft.png[width=75%]
+image::{imagesdir}/Fig8_36a_rotateLeft.png[width=75%]
 
-iimage::{imagesdir}/Fig8_36b_rotateRight.png[width=75%]
+image::{imagesdir}/Fig8_36b_rotateRight.png[width=75%]
 
 [.text-center]
 Figure 8.36. DRAKON-diagrams of the red-black tree cluster node rotation algorithm
@@ -499,7 +499,7 @@ Consider the balancing process using the example of building a red-black
 tree from sets of integers that are the keys of the input nodes:
 `[11,12,13,14,15,16,17,18,19]` (Figure 8.37):
 
-iimage::{imagesdir}/Fig8_37_rbProcess.jpg[width=75%]
+image::{imagesdir}/Fig8_37_rbProcess.jpg[width=75%]
 
 [.text-center]
 Figure 8.37. Process for Balancing the Red-Black Tree
@@ -513,9 +513,9 @@ transformations of the tree structure must maintain its properties. The
 DRAKON-diagram of the node removal algorithm is shown in Figures 8.38a,b. This
 algorithm can be divided into three stages.
 
-iimage::{imagesdir}/Fig8_38a_mindMap_deleteNode.jpg[width=75%]
+image::{imagesdir}/Fig8_38a_mindMap_deleteNode.jpg[width=75%]
 
-iimage::{imagesdir}/Fig8_38b_deleteNode.jpg[width=75%]
+image::{imagesdir}/Fig8_38b_deleteNode.jpg[width=75%]
 
 
 [.text-center]
@@ -538,9 +538,9 @@ becomes a "double black" node._
 *The third stage is the correction of the double black nodes.* To fix the
 "double black" node, thefunctions _fixDoubleBlack (tree, x)_ and _fixDoubleBlackStep(tree, x)_ are called (Figures 8.39a,b). This feature fixes the "double black nodes" by using a series of rotations and recoloring steps. It considers several cases, depending on the colour of the brother of the "double black" node and its descendants. The function  _fixDoubleBlackStep (tree, x)_ handles all of these cases to ensure that the red-black tree remains balanced after each deletion operation (Table ).
 
-iimage::{imagesdir}/Fig8_39a_fixDoubleBlack.png[width=75%]
+image::{imagesdir}/Fig8_39a_fixDoubleBlack.png[width=75%]
 
-iimage::{imagesdir}/Fig8_39b_fixDoubleBlackStep.svg[width=75%]
+image::{imagesdir}/Fig8_39b_fixDoubleBlackStep.svg[width=75%]
 
 [.text-center]
 Figure 8.39. DRAKON-diagram of the node structure correction algorithm when removing "double black node" 
@@ -579,12 +579,12 @@ Figure 8.39. DRAKON-diagram of the node structure correction algorithm when remo
 [cols="1,1", options="header"]
 |===
 | Before joinParentChild | After joinParentChild
-| iimage::{imagesdir}/before_join.png[] | iimage::{imagesdir}/after_join.png[]
+| image::{imagesdir}/before_join.png[] | image::{imagesdir}/after_join.png[]
 |===
 
 .Figure 8.X — Replacing a node in a red-black tree using `joinParentChild`
 [caption="Figure 8.X", align="center"]
-iimage::{imagesdir}/Fig8_joinPC.png[width=80%]
+image::{imagesdir}/Fig8_joinPC.png[width=80%]
 [.text-center]
 The top diagram illustrates the replacement of node U (`9`) with subtree V (`7`) before calling `joinParentChild(tree, U, V)`.  
 The bottom diagram shows the result of the operation: node `7` has taken the place of `9`, preserving the tree's structure and balance.
