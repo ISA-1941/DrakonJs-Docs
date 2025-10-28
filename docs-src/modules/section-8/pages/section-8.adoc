@@ -312,7 +312,7 @@ image::{imagesdir}/Fig8_26_varDelNode.jpg[width=75%]
 As with the other methods, a node with a c value is first recursively identified and then one of the options presented is selected. A DRAKON-diagram of the algorithm for deleting a node with the cases for nodes to be removed value is shown in Figure 8.27.
 
 //image::{imagesdir}/Fig8_27_deleteNode.svg[width=75%]
-image::{imagesdir}/Fig8_27_deleteNode.svg[width=50%, link="{imagesdir}/Fig8_27_deleteNode.svg", window="_blank"]
+image::{imagesdir}/Fig8_27_deleteNode.svg[width=75%, link="{imagesdir}/Fig8_27_deleteNode.svg", window="_blank"]
 
 [.text-center]
 Figure 8.27. DRAKON-diagram depicting an algorithm for removing a node
