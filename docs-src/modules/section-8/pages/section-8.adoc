@@ -321,7 +321,8 @@ with a specified value
 The `main()` program inputs an array of data, searches for a node with a
 specified  value, and deletes a node with a specified value (Figure 8.28). 
 
-image::_images/Fig8_28_mainFunction.jpg[width=75%]
+//image::_images/Fig8_28_mainFunction.svg[width=75%]
+image::{imagesdir}/Fig8_28_mainFunction.svg[width=75%, link="{imagesdir}/Fig8_28_mainFunction.svg", window="_blank"]
 
 [.text-center]
 Figure 8.28. DRAKON-diagram of the main-function 
