@@ -62,9 +62,9 @@ In the case of a linear search of an element in an unordered dataset,
 for example, in an array or in a slice, the simplest algorithm is to
 view all elements until the desired value is found (Figure 6.1).
 
-//image::{imagesdir}/Fig6_1_searchValue.png[width=50%]
-
-image::{imagesdir}/Fig6_1_searchValue.png[width=50%, link="{imagesdir}/Fig6_1_searchValue.svg", window="_blank"]
+//..image::{imagesdir}/Fig6_1_searchValue.svg[width=50%]
+image::{imagesdir}/searchValue.png[width=50%]
+image::{imagesdir}/Fig6_1_searchValue.svg[width=50%]
 
 [.text-center]
 Figure 6.1. DRAKON-diagrams of linear search algorithm
