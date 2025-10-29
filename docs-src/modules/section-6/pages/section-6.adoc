@@ -1,4 +1,4 @@
-:imagesdir: docs-src/modules/section-6/assets/images
+:imagesdir: ../assets/images
 
 [.text-justify]
 :figure-caption!:
@@ -62,7 +62,8 @@ In the case of a linear search of an element in an unordered dataset,
 for example, in an array or in a slice, the simplest algorithm is to
 view all elements until the desired value is found (Figure 6.1).
 
-image::{imagesdir}/Fig6_1_searchValue.svg[width=100%]
+//..image::{imagesdir}/Fig6_1_searchValue.svg[width=50%]
+image::{imagesdir}/searchValue.png[width=50%]
 
 [.text-center]
 Figure 6.1. DRAKON-diagrams of linear search algorithm
@@ -85,7 +86,7 @@ as a result of passing through an increasing sorted list, the search is
 stopped. This approach saves time and increases productivity. Figure
 6.2. shows the DRAKON-diagram of this algorithm.
 
-image::{imagesdir}/Fig6_2_SortedSlice.jpg[width=50%]
+image::{imagesdir}/Fig6_2_dataSorted.svg[width=50%]
 
 [.text-center]
 Figure 6.2. DRAKON-diagram of searching sorted data algorithm
@@ -108,7 +109,7 @@ the search interval is empty.
 The DRAKON-diagram of the binary search algorithm is represented in
 Figure 6.3. (main() module is similar to the previous algorithm):
 
-image::{imagesdir}/Fig6_3_BinarySearch.jpg[width=50%, height=30%, align=center]
+image::{imagesdir}/Fig6_3_searchBinary.svg[width=50%]
 
 [.text-center]
 Figure 6.3. DRAKON-diagram of Binary Search algorithm
@@ -133,14 +134,14 @@ placing it after the entry "Wiley D.". After that, you should delete the
 duplicates of the entry " Shafler B." leaving only one. The
 corresponding DRAKON-diagrams are presented in Figure 6.4 a,b,c,d:
 
-image::{imagesdir}/Fig6_4a_Main.jpg[width=50%, height=30%, align=center]
+image::{imagesdir}/Fig6_4a_main.svg[width=50%]
 
 [.text-center]
 a). Function `main()``
 
 b). function of pushing new items (`pushFront(list,val) and pushback(list,val)`)
 
-image::{imagesdir}/Fig6_4d_searchData.svg[width=140%]
+image::{imagesdir}/Fig6_4b_searchData.svg[width=140%]
 
 [.text-center]
 c). function of searching `searchData(val)`
@@ -148,29 +149,29 @@ c). function of searching `searchData(val)`
 [.text-center]
 Figure 6.4. DRAKON-diagrams of  search algorithms
 
-image::{imagesdir}/Fig6_4b_Remove.jpg[width=80%, height=30%, align=center]
+image::{imagesdir}/Fig6_4c_Remove.jpg[width=80%]
 
 [.text-center]
-b). function of deletion _RemoveVal(val)_
+d). function of deletion _RemoveVal(val)_
 
-image::{imagesdir}/Fig6_4c_SearchData.jpg[width=50%, height=30%, align=center]
+image::{imagesdir}/Fig6_4d_SearchData.jpg[width=50%]
 
 [.text-center]
-c). function of searching _SearchData(val)_
+e). function of searching _SearchData(val)_
 +
 
-image::{imagesdir}/Fig6_4d_PushVal.jpg[width=50%, height=30%, align=center]
+image::{imagesdir}/Fig6_4d_PushVal.jpg[width=50%]
 
 [.text-center]
-d). function of inserting by value _PushVal + NodeWithVal_
+g). function of inserting by value _PushVal + NodeWithVal_
 
 image::{imagesdir}/Fig6_4e_RemoveDupli.jpg[width=70%, height=30%, align=center]
 
 [.text-center]
-e). function of removing duplicates _RemoveDupli_
+f). function of removing duplicates _RemoveDupli_
 
 [.text-center]
-Figure 6.4. DRAKON diagram of algorithms deletion, search, insertion by value and dublicate deletion
+Figure 6.4. DRAKON-diagram of algorithms deletion, search, insertion by value and dublicate deletion
 
 === 6.4. Hashing
 
