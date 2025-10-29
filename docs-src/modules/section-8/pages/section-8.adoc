@@ -192,7 +192,7 @@ In such practically "degenerate" trees, the complexity of the operations is dete
 The left and right subtrees are unbalanced, which can be estimated by the balance coefficient (kb), which is equal to the difference between the heights of the left and right subtrees. Recall that the height of a tree is defined as the length of the longest branch in a subtree (sum of edges). For an ideal binary search tree (a tree where the number of nodes in the left subtree is equal to the number of nodes in the right subtree), this factor is 0 (Figure 8.14).
 
 image::{imagesdir}/Fig8_14_idealTree.jpg[width=75%]
-
+                  
 [.text-center]
 Figure 8.14. An ideal binary tree
 
