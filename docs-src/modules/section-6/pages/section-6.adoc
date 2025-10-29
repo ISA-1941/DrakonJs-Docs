@@ -64,6 +64,7 @@ view all elements until the desired value is found (Figure 6.1).
 
 //..image::{imagesdir}/Fig6_1_searchValue.svg[width=50%]
 image::{imagesdir}/searchValue.png[width=50%]
+image::{imagesdir}/Fig6_1_searchValue.svg[width=50%]
 
 [.text-center]
 Figure 6.1. DRAKON-diagrams of linear search algorithm
