@@ -331,11 +331,9 @@ Figure 8.28. DRAKON-diagram of the main-function
 
 ==== 8.4.1. Properties of red-black trees
 
-A red-black tree is a variant of a self-balancing binary search tree in
-which the nodes are placed according to a certain rule and coloured red
-or black (Figure 8.29)
+A red-black tree is a variant of a self-balancing binary search tree in which the nodes are placed according to a certain rule and coloured red or black (Figure 8.29)
 
-image::_images/Fig8_29_redblackTree.png[width=75%]
+image::{imagesdir}/Fig8_29_redblackTree.jpg[width=75%]
 
 [.text-center]
 Figure 8.29. Red-Black Tree
