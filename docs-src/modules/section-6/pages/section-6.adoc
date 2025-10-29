@@ -279,18 +279,11 @@ objects will be saved.
 DRAKON-diagrams of algorithms for implementing the main functions of
 working with hash-tables are shown in Figure 6.6.
 
-<<<<<<< HEAD:docs-src/modules/section-6/pages/section_6.adoc
-image::_images/Fig6_6_HDia_ab.jpg[idth=50%, height=30%, align=center]
-=======
 image::{imagesdir}/Fig6_6_HDia_ab.jpg[idth=50%, height=30%, align=center]
->>>>>>> 145e7b37b7700ec3ec318383594e62878315cf69:docs-src/modules/section-6/pages/section-6.adoc
 
 [.text-center]
 a). Hash-table creating function b). Item searching function
 
-<<<<<<< HEAD:docs-src/modules/section-6/pages/section_6.adoc
-image::_images/Fig6_6_HDia_cd.jpg[idth=50%, height=30%, align=center]
-=======
 image::{imagesdir}/Fig6_6_HDia_cd.jpg[idth=50%, height=30%, align=center]
 >>>>>>> 145e7b37b7700ec3ec318383594e62878315cf69:docs-src/modules/section-6/pages/section-6.adoc
 
@@ -308,11 +301,7 @@ element is stored in the `nodePrev` variable. If the above condition is
 met, the `nodePrev.nextNode` field (`0xc0000386d0`) is changed to
 (`0xc00384f0`), that is, the deleted element is skipped (Figure 6.6.):
 
-<<<<<<< HEAD:docs-src/modules/section-6/pages/section_6.adoc
-image::_images/Fig6_6_DeletionItem.jpg[idth=50%, height=30%, align=center]
-=======
 image::{imagesdir}/Fig6_6_DeletionItem.jpg[idth=50%, height=30%, align=center]
->>>>>>> 145e7b37b7700ec3ec318383594e62878315cf69:docs-src/modules/section-6/pages/section-6.adoc
 
 [.text-center]
 Figure 6.6. Deletion item from hash-table
