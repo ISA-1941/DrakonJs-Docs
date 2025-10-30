@@ -234,15 +234,7 @@ Size int
 
 As a result, this hash table would have to have as many single linked
 lists (buckets) as was specified by the Size constant. In the above case
-the number of slots is 15. Note that the `Node` and `HashTable` type
-advertisement, as well as the Size constant, are included in the
-File/File description option (Figure 6.5.).
-
-image::{imagesdir}/Fig6_5a_Description.jpg[idth=75%, height=30%, align=center]
-
-[.text-center]
-Figure 6.5. Type declaration `Node`, `HashTable` and constant `Size`
-
+the number of slots is 15. 
 As an example, consider constructing a hash-table of size `m` = 15 for a
 collection of integers from 0 to 120. The hash table slots are
 originally empty:
