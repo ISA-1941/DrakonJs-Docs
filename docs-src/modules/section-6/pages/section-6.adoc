@@ -182,10 +182,10 @@ image::{imagesdir}/Fig6_4e_pushVal.png[width=100%, link="{imagesdir}/Fig6_4e_pus
 image::{imagesdir}/Fig6_4e_nodeWithVal.png[width=100%, link="{imagesdir}/Fig6_4e_nodeWithVal.svg", window="_blank"]
 
 [.text-center]
-f). function of removing duplicates _RemoveDupli_
+f). function of removing duplicates _removeDupli_
 
-//image::{imagesdir}/Fig6_4f_RemoveDupli.png[width=100%]
-image::{imagesdir}/Fig6_4f_RemoveDupli.png[width=100%, link="{imagesdir}/Fig6_4f_RemoveDupli.svg", window="_blank"]
+//image::{imagesdir}/Fig6_4f_removeDupli.png[width=100%]
+image::{imagesdir}/Fig6_4f_removeDupli.png[width=100%, link="{imagesdir}/Fig6_4f_RemoveDupli.svg", window="_blank"]
 
 [.text-center]
 Figure 6.4. DRAKON-diagram of algorithms deletion, search, insertion by value and dublicate deletion
