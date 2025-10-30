@@ -327,12 +327,6 @@ image::{imagesdir}/Fig6_5c_hashTraverse.png[width=75%, link="{imagesdir}/Fig6_5c
 
 d) Deletion item function
 
-//image::{imagesdir}/Fig6_5d_hashRemove.png[width=75%]
-image::{imagesdir}/Fig6_5d_hashRemove.png[width=75%, link="{imagesdir}/Fig6_5d_hashRemove.svg", window="_blank"]
-
-[.text-center]
-Figure 6.5. DRAKON-diagrams of hash-table algorithms
-
 Consider the algorithm for removing an element from the hash-table.
 Suppose we delete element 74. First, the bucket containing the item to
 be removed is determined. It then passes through the elements of this
@@ -341,10 +335,12 @@ element is stored in the `nodePrev` variable. If the above condition is
 met, the `nodePrev.nextNode` field (`0xc0000386d0`) is changed to
 (`0xc00384f0`), that is, the deleted element is skipped (Figure 6.5d.):
 
-image::{imagesdir}/Fig6_5d_hashRemove.png[idth=75%]
+//image::{imagesdir}/Fig6_5d_hashRemove.png[width=75%]
+image::{imagesdir}/Fig6_5d_hashRemove.png[width=75%, link="{imagesdir}/Fig6_5d_hashRemove.svg", window="_blank"]
 
 [.text-center]
-Figure 6.5. Deletion item from hash-table
+Figure 6.5. DRAKON-diagrams of hash-table algorithms
+
 
 Another example of a "good" hash function is for use with integer key
 values, the mean square method. The mean square method squares the key
