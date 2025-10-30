@@ -158,8 +158,8 @@ Figure 6.4. DRAKON-diagrams of  pushFront/pushBack algorithms
 
 c). function of searching `searchData(val)`
 
-//image::{imagesdir}/Fig6_4c_searchData.png[width=75%]
-image::{imagesdir}/Fig6_4c_searchData.png[width=40%, link="{imagesdir}/Fig6_4c_searchData.svg", window="_blank"]
+//image::{imagesdir}/Fig6_4c_searchData.png[width=50%]
+image::{imagesdir}/Fig6_4c_searchData.png[width=50%, link="{imagesdir}/Fig6_4c_searchData.svg", window="_blank"]
 
 [.text-center]
 
@@ -167,8 +167,8 @@ Figure 6.4. DRAKON-diagrams of  search algorithms
 
 d). function of deletion _RemoveVal(val)_
 
-//image::{imagesdir}/Fig6_4d_removeVal.png[width=75%]
-image::{imagesdir}/Fig6_4d_removeVal.png[width=40%, link="{imagesdir}/Fig6_4d_removeVal.svg", window="_blank"]
+//image::{imagesdir}/Fig6_4d_removeVal.png[width=100%]
+image::{imagesdir}/Fig6_4d_removeVal.png[width=100%, link="{imagesdir}/Fig6_4d_removeVal.svg", window="_blank"]
 
 [.text-center]
 e). function of searching _SearchData(val)_
