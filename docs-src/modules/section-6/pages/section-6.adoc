@@ -113,7 +113,7 @@ The DRAKON-diagram of the binary search algorithm is represented in
 Figure 6.3. (main() module is similar to the previous algorithm):
 
 //image::{imagesdir}/Fig6_3_searchValue.png[width=50%]
-image::{imagesdir}/Fig6_3_searchValue.png[width=50%, link="{imagesdir}/Fig6_3_searchBinary.svg", window="_blank"]
+image::{imagesdir}/Fig6_3_searchValue.png[width=50%, link="{imagesdir}/Fig6_3_searchValue.svg", window="_blank"]
 
 [.text-center]
 Figure 6.3. DRAKON-diagram of Binary Search algorithm
