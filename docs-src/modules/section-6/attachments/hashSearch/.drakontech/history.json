@@ -1,6 +1,10 @@
 {
     "history": [
         {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\hashSearch\\hashTraverse.drakon",
+            "whenOpened": "2025-10-30T19:08:28.322Z"
+        },
+        {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\hashSearch\\hashRemove.drakon",
             "whenOpened": "2025-10-30T18:58:07.370Z"
         },
@@ -35,10 +39,6 @@
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\hashSearch\\hashGet.drakon",
             "whenOpened": "2025-10-30T15:43:14.834Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\hashSearch\\hashTraverse.drakon",
-            "whenOpened": "2025-10-30T15:43:07.033Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\hashSearch\\printHashTable.drakon",
