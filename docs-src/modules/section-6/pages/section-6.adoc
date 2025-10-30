@@ -147,10 +147,10 @@ a). Function `main()``
 b). function of pushing new items (`pushFront(list,val) and pushback(list,val)`)
 
 //image::{imagesdir}/Fig6_4b_pushFront.png[width=75%]
-image::{imagesdir}/Fig6_4b_pushFront.png[width=20%, link="{imagesdir}/Fig6_4b_pushFront.svg", window="_blank"]
+image::{imagesdir}/Fig6_4b_pushFront.png[width=40%, link="{imagesdir}/Fig6_4b_pushFront.svg", window="_blank"]
 
 //image::{imagesdir}/Fig6_4b_pushBack.png[width=75%]
-image::{imagesdir}/Fig6_4b_pushBack.png[width=20%, link="{imagesdir}/Fig6_4b_pushBack.svg", window="_blank"]
+image::{imagesdir}/Fig6_4b_pushBack.png[width=40%, link="{imagesdir}/Fig6_4b_pushBack.svg", window="_blank"]
 
 [.text-center]
 
