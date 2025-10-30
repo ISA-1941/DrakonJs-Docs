@@ -315,14 +315,10 @@ a). Hash-table creating function
 //image::{imagesdir}/Fig6_5a_hashInserr.png[width=75%]
 image::{imagesdir}/Fig6_5a_hashInsert.png[width=75%, link="{imagesdir}/Fig6_5a_hashInsert.svg", window="_blank"]
 
-[.text-center]
-
 b). Item searching function
 
 //image::{imagesdir}/Fig6_5b_searchHash.png[width=75%]
 image::{imagesdir}/Fig6_5b_searchHash.png[width=75%, link="{imagesdir}/Fig6_5b_searchHash.svg", window="_blank"]
-
-[.text-center]
 
 c). Hash-table travers function 
 
