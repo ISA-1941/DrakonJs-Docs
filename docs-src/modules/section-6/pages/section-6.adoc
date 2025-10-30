@@ -321,8 +321,17 @@ b). Item searching function
 
 //image::{imagesdir}/Fig6_5b_searchHash.png[idth=75%]
 image::{imagesdir}/Fig6_5b_searchHash.png[width=75%, link="{imagesdir}/Fig6_5b_searchHash.svg", window="_blank"]
+
 [.text-center]
-c). Hash-table travers function d) Deletion item function
+
+
+c). Hash-table travers function 
+
+
+d) Deletion item function
+
+//image::{imagesdir}/Fig6_5c_hashRemove.png[width=75%]
+image::{imagesdir}/Fig6_5c_hashRemove.png[width=75%, link="{imagesdir}/Fig6_5c_hashRemove.svg", window="_blank"]
 
 [.text-center]
 Figure 6.6. DRAKON-diagrams of hash-table algorithms
@@ -333,12 +342,12 @@ be removed is determined. It then passes through the elements of this
 bucket, where after each `node.Value == value` check, the current
 element is stored in the `nodePrev` variable. If the above condition is
 met, the `nodePrev.nextNode` field (`0xc0000386d0`) is changed to
-(`0xc00384f0`), that is, the deleted element is skipped (Figure 6.6.):
+(`0xc00384f0`), that is, the deleted element is skipped (Figure 6.5d.):
 
-image::{imagesdir}/Fig6_6_DeletionItem.jpg[idth=75%, height=30%, align=center]
+image::{imagesdir}/Fig6_5d_hashRemove.png[idth=75%]
 
 [.text-center]
-Figure 6.6. Deletion item from hash-table
+Figure 6.5. Deletion item from hash-table
 
 Another example of a "good" hash function is for use with integer key
 values, the mean square method. The mean square method squares the key
