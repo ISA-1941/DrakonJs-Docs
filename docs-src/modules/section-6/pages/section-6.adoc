@@ -87,7 +87,7 @@ as a result of passing through an increasing sorted list, the search is
 stopped. This approach saves time and increases productivity. Figure
 6.2. shows the DRAKON-diagram of this algorithm.
 
-image::{imagesdir}/Fig6_2_dataSorted.png[width=50%]
+//image::{imagesdir}/Fig6_2_dataSorted.png[width=50%]
 image::{imagesdir}/Fig6_2_dataSorted.png[width=50%, link="{imagesdir}/Fig6_2_dataSorted.svg", window="_blank"]
 
 
@@ -112,7 +112,8 @@ the search interval is empty.
 The DRAKON-diagram of the binary search algorithm is represented in
 Figure 6.3. (main() module is similar to the previous algorithm):
 
-image::{imagesdir}/Fig6_3_searchBinary.svg[width=50%]
+//image::{imagesdir}/Fig6_3_searchValue.png[width=50%]
+image::{imagesdir}/Fig6_3_searchValue.png[width=50%, link="{imagesdir}/Fig6_3_searchBinary.svg", window="_blank"]
 
 [.text-center]
 Figure 6.3. DRAKON-diagram of Binary Search algorithm
@@ -137,14 +138,16 @@ placing it after the entry "Wiley D.". After that, you should delete the
 duplicates of the entry " Shafler B." leaving only one. The
 corresponding DRAKON-diagrams are presented in Figure 6.4 a,b,c,d:
 
-image::{imagesdir}/Fig6_4a_main.svg[width=50%]
+//image::{imagesdir}/Fig6_4a_main.png[width=50%]
+image::{imagesdir}/Fig6_4a_main.png[width=50%, link="{imagesdir}/Fig6_4a_main.svg", window="_blank"]
 
 [.text-center]
 a). Function `main()``
 
 b). function of pushing new items (`pushFront(list,val) and pushback(list,val)`)
 
-image::{imagesdir}/Fig6_4b_searchData.svg[width=140%]
+//image::{imagesdir}/Fig6_4b_searchData.png[width=50%]
+image::{imagesdir}/Fig6_4b_searchData.png[width=50%, link="{imagesdir}/Fig6_4b_searchData.svg", window="_blank"]
 
 [.text-center]
 c). function of searching `searchData(val)`
