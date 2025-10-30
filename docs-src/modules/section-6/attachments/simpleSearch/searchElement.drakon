@@ -42,7 +42,7 @@
             "type": "action",
             "one": "9",
             "two": "",
-            "content": "found = true;\nconsole.log(\n    \"The searched element - \",\n    value\n);"
+            "content": "found = true;\nconsole.log(\n    \"The searched element - index =\",\n    i,\n    \"value = \",\n    value\n);"
         },
         "13": {
             "type": "action",

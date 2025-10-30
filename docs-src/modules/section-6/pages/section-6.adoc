@@ -62,8 +62,8 @@ In the case of a linear search of an element in an unordered dataset,
 for example, in an array or in a slice, the simplest algorithm is to
 view all elements until the desired value is found (Figure 6.1).
 
-//image::{imagesdir}/Fig6_1_searchValue.png[width=50%]
-image::{imagesdir}/Fig6_1_searchValue.png[width=50%, link="{imagesdir}/Fig6_1_searchValue.svg", window="_blank"]
+//image::{imagesdir}/Fig6_1_searchElement.png[width=50%]
+image::{imagesdir}/Fig6_1_searchElement.png[width=50%, link="{imagesdir}/Fig6_1_searchElement.svg", window="_blank"]
 
 [.text-center]
 Figure 6.1. DRAKON-diagrams of linear search algorithm
@@ -86,7 +86,9 @@ as a result of passing through an increasing sorted list, the search is
 stopped. This approach saves time and increases productivity. Figure
 6.2. shows the DRAKON-diagram of this algorithm.
 
-image::{imagesdir}/Fig6_2_dataSorted.svg[width=50%]
+image::{imagesdir}/Fig6_2_dataSorted.png[width=50%]
+image::{imagesdir}/Fig6_2_dataSorted.png[width=50%, link="{imagesdir}/Fig6_2_dataSorted.svg", window="_blank"]
+
 
 [.text-center]
 Figure 6.2. DRAKON-diagram of searching sorted data algorithm
