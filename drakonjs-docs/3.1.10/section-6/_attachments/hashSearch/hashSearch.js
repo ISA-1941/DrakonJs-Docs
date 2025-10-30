@@ -29,9 +29,10 @@ function hashFunc(key, size) {
     return Math.abs(hash) % size;
 }
 function hashFuncSHA256(key, size) {
-    var hashHex;
+    var hashHex, hashInt;
     hashHex = CryptoJS.SHA256(String(key)).toString();
-    return parseInt(hashHex, 16) % size;
+    hashInt = parseInt(hashHex.substring(0, 8), 16);
+    return hashInt % size;
 }
 function hashGet(hash, key) {
     var index, node;
@@ -53,7 +54,6 @@ function hashGet(hash, key) {
 function hashInsert(hash, key, value) {
     var index, node;
     index = hashFuncSHA256(key, hash.size);
-    console.log('!!!!!         index = hashFuncSHA256', index);
     node = hash.table[index];
     while (true) {
         if (node) {
@@ -92,10 +92,12 @@ function hashLookupByValue(hash, value) {
 }
 function hashLookupNew(hash, key) {
     var index, node;
-    index = hashFunc(key, hash.size);
+    index = hashFuncSHA256(key, hash.size);
     console.log(`Lookup "${ key }" → bucket ${ index }`);
     node = hash.table[index];
-    //console.log(`Compare: "${ node.key }"`);
+    if (node !== null) {
+        console.log(`Compare: "${ node.key }"`);
+    }
     while (true) {
         if (node == null) {
             break;
@@ -154,7 +156,7 @@ function hashTraverse(hash) {
 }
 function main() {
     var dataEn, hash, i, key, value;
-    hash = createHashTable(16);
+    hash = createHashTable(32);
     dataEn = [
         [
             123456,
