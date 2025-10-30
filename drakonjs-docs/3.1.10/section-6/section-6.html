@@ -838,7 +838,15 @@ working with hash-tables are shown in Figure 6.6.</p>
 </div>
 </div>
 <div class="paragraph text-center">
-<p>c). Hash-table travers function d) Deletion item function</p>
+<p>c). Hash-table travers function</p>
+</div>
+<div class="paragraph">
+<p>d) Deletion item function</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<a class="image" href="_images/Fig6_5c_hashRemove.svg" target="_blank" rel="noopener"><img src="_images/Fig6_5c_hashRemove.png" alt="Fig6 5c hashRemove" width="75%"></a>
+</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 6.6. DRAKON-diagrams of hash-table algorithms</p>
@@ -850,15 +858,15 @@ be removed is determined. It then passes through the elements of this
 bucket, where after each <code>node.Value == value</code> check, the current
 element is stored in the <code>nodePrev</code> variable. If the above condition is
 met, the <code>nodePrev.nextNode</code> field (<code>0xc0000386d0</code>) is changed to
-(<code>0xc00384f0</code>), that is, the deleted element is skipped (Figure 6.6.):</p>
+(<code>0xc00384f0</code>), that is, the deleted element is skipped (Figure 6.5d.):</p>
 </div>
-<div class="imageblock text-center unresolved">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/Fig6_6_DeletionItem.jpg" alt="Fig6 6 DeletionItem" height="30%">
+<img src="_images/Fig6_5d_hashRemove.png" alt="Fig6 5d hashRemove">
 </div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 6.6. Deletion item from hash-table</p>
+<p>Figure 6.5. Deletion item from hash-table</p>
 </div>
 <div class="paragraph">
 <p>Another example of a "good" hash function is for use with integer key
