@@ -312,22 +312,21 @@ working with hash-tables are shown in Figure 6.6.
 
 a). Hash-table creating function 
 
-//image::{imagesdir}/Fig6_5a_hashInserr.png[idth=75%]
+//image::{imagesdir}/Fig6_5a_hashInserr.png[width=75%]
 image::{imagesdir}/Fig6_5a_hashInsert.png[width=75%, link="{imagesdir}/Fig6_5a_hashInsert.svg", window="_blank"]
 
 [.text-center]
 
 b). Item searching function
 
-//image::{imagesdir}/Fig6_5b_searchHash.png[idth=75%]
+//image::{imagesdir}/Fig6_5b_searchHash.png[width=75%]
 image::{imagesdir}/Fig6_5b_searchHash.png[width=75%, link="{imagesdir}/Fig6_5b_searchHash.svg", window="_blank"]
 
 [.text-center]
 
-
 c). Hash-table travers function 
 
-//image::{imagesdir}/Fig6_5c_searchHash.png[idth=75%]
+//image::{imagesdir}/Fig6_5c_searchHash.png[width=75%]
 image::{imagesdir}/Fig6_5c_searchHash.png[width=75%, link="{imagesdir}/Fig6_5c_searchHash.svg", window="_blank"]
 
 d) Deletion item function
@@ -336,7 +335,7 @@ d) Deletion item function
 image::{imagesdir}/Fig6_5d_hashRemove.png[width=75%, link="{imagesdir}/Fig6_5d_hashRemove.svg", window="_blank"]
 
 [.text-center]
-Figure 6.6. DRAKON-diagrams of hash-table algorithms
+Figure 6.5. DRAKON-diagrams of hash-table algorithms
 
 Consider the algorithm for removing an element from the hash-table.
 Suppose we delete element 74. First, the bucket containing the item to
