@@ -13,7 +13,7 @@
         "3": {
             "type": "action",
             "one": "24",
-            "content": "index = hashFunc(key, hash.size)"
+            "content": "index = hashFuncSHA256(key, hash.size)"
         },
         "4": {
             "type": "action",
@@ -28,7 +28,7 @@
         },
         "13": {
             "type": "branch",
-            "one": "25",
+            "one": "55",
             "branchId": 2,
             "content": "Bypass of the linked list \nin the bucket"
         },
@@ -46,11 +46,6 @@
             "type": "action",
             "one": "4",
             "content": "console.log(\n    `Lookup \"${key}\" → bucket ${index}`\n)"
-        },
-        "25": {
-            "type": "action",
-            "one": "41",
-            "content": "console.log(`Compare: \"${node.key}\"`)"
         },
         "40": {
             "type": "question",
@@ -81,6 +76,18 @@
             "one": "41",
             "two": "",
             "content": "node = node.next"
+        },
+        "55": {
+            "type": "question",
+            "one": "56",
+            "two": "41",
+            "flag1": 1,
+            "content": "node !== null"
+        },
+        "56": {
+            "type": "action",
+            "one": "41",
+            "content": "console.log(`Compare: \"${node.key}\"`)"
         }
     },
     "keywords": {

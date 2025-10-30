@@ -17,12 +17,12 @@
         "4": {
             "type": "action",
             "one": "5",
-            "content": "hashInt = parseInt(hashHex, 16)"
+            "content": "hashInt = parseInt(\n    hashHex.substring(0, 8),\n    16\n)"
         },
         "5": {
             "type": "action",
             "one": "1",
-            "content": "return Math.floor(\n    size * (hashInt / 2 *  * 256)\n)"
+            "content": "return hashInt % size"
         }
     },
     "keywords": {

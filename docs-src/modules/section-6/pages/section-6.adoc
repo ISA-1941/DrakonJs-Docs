@@ -239,7 +239,12 @@ As an example, consider constructing a hash-table of size `m` = 15 for a
 collection of integers from 0 to 120. The hash table slots are
 originally empty:
 
-image::{imagesdir}/Fig6_HashEmpty.jpg[idth=75%, height=30%, align=center]
+[cols="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1", options="header"]
+|===
+|0 |1 |2 |3 |4 |5 |6 |7 |8 |9 |10 |11 |12 |13 |14
+
+|- |- |- |- |- |- |- |- |- |- |- |- |- |- |-
+|===
 
 A hash function that establishes a relationship between an element and its 
 corresponding slot must accept any element from the dataset, specifically 
@@ -251,7 +256,12 @@ and returning the remainder as the hash value. This can be expressed as
 is calculated as `\( 119 \mod 15 = 14 \)` (where `\( 119 - 15 \times 7 = 14 \))`, 
 thus placing the value 119 into the corresponding slot.
 
-image::{imagesdir}/Fig6_Hash119.jpg[idth=75%, height=30%, align=center]
+[cols="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1", options="header"]
+|===
+|0 |1 |2 |3 |4 |5 |6 |7 |8 |9 |10 |11 |12 |13 |14
+
+|- |- |- |- |- |- |- |- |- |- |- |- |- |- |119
+|===
 
 The algorithm then identifies slots for other elements, gradually
 filling them. When the algorithm encounters element 104 in the loop,
@@ -264,7 +274,18 @@ an index hash of 8, the slot will consist of these elements: 113 : 98 :
 
 Table 6.1. Hash-table of 15 slots
 
-image::{imagesdir}/Fig6_HashTable.jpg[idth=75%, height=30%, align=center]
+[options="header"]
+|====
+| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14
+| 105 | 106 | 107 | 108 | 109 | 110 | 111 | 112 | 113 | 114 | 115 | 116 | 117 | 118 | 119
+| 103 | 91 | 92 | 103 | 94 | 95 | 96 | 97 | 98 | 99 | 100 | 101 | 102 | 103 | 104
+| 88 | 76 | 77 | 78 | 79 | 80 | 81 | 82 | 83 | 84 | 85 | 86 | 87 | 88 | 89
+| 73 | 61 | 62 | 63 | 64 | 65 | 66 | 67 | 68 | 69 | 70 | 71 | 72 | 73 | 74
+| 58 | 46 | 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54 | 55 | 56 | 57 | 58 | 59
+| 43 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44
+| 28 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29
+| 13 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14
+|====
 
 Thus, the remainder method converts a collection of 120 integers into a
 hash table of 15 slots. The search for an element is now greatly
@@ -289,14 +310,17 @@ objects will be saved.
 DRAKON-diagrams of algorithms for implementing the main functions of
 working with hash-tables are shown in Figure 6.6.
 
-image::{imagesdir}/Fig6_6_HDia_ab.jpg[idth=75%, height=30%, align=center]
+a). Hash-table creating function 
+
+//image::{imagesdir}/Fig6_5a_hashInserr.png[idth=75%]
+image::{imagesdir}/Fig6_5a_hashInsert.png[width=75%, link="{imagesdir}/Fig6_5a_hashInsert.svg", window="_blank"]
 
 [.text-center]
-a). Hash-table creating function b). Item searching function
 
-image::{imagesdir}/Fig6_6_HDia_cd.jpg[idth=75%, height=30%, align=center]
->>>>>>> 145e7b37b7700ec3ec318383594e62878315cf69:docs-src/modules/section-6/pages/section-6.adoc
+b). Item searching function
 
+//image::{imagesdir}/Fig6_5b_searchHash.png[idth=75%]
+image::{imagesdir}/Fig6_5b_searchHash.png[width=75%, link="{imagesdir}/Fig6_5b_searchHash.svg", window="_blank"]
 [.text-center]
 c). Hash-table travers function d) Deletion item function
 
