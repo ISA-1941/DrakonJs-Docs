@@ -14,7 +14,7 @@ function main() {
         17
     ];
     console.log('input data -->', data);
-    value = 99;
+    value = 76;
     console.log('searching value -->', value);
     searchElement(data, value);
 }
@@ -24,7 +24,7 @@ function searchElement(data, value) {
     for (i = 0; i < data.length; i++) {
         if (data[i] === value) {
             found = true;
-            console.log('The searched element - ', value);
+            console.log('The searched element - index =', i, 'value = ', value);
         }
     }
     if (!found) {
