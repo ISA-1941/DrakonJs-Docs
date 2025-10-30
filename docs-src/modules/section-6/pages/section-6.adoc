@@ -167,8 +167,8 @@ Figure 6.4. DRAKON-diagrams of  search algorithms
 
 d). function of deletion _RemoveVal(val)_
 
-//image::{imagesdir}/Fig6_4d_removeVal.png[width=100%]
-image::{imagesdir}/Fig6_4d_removeVal.png[width=100%, link="{imagesdir}/Fig6_4d_removeVal.svg", window="_blank"]
+//image::{imagesdir}/Fig6_4d_removeVal.png[width=50%]
+image::{imagesdir}/Fig6_4d_removeVal.png[width=50%, link="{imagesdir}/Fig6_4d_removeVal.svg", window="_blank"]
 
 [.text-center]
 Figure 6.4. DRAKON-diagrams of  deletion algorithms
@@ -176,16 +176,16 @@ Figure 6.4. DRAKON-diagrams of  deletion algorithms
 e). function of inserting by value _PushVal + NodeWithVal_
 
 //image::{imagesdir}/Fig6_4d_removeVal.png[width=100%]
-image::{imagesdir}/Fig6_4e_pushVal.png[width=100%, link="{imagesdir}/Fig6_4e_pushVal.svg", window="_blank"]
+image::{imagesdir}/Fig6_4e_pushVal.png[width=50%, link="{imagesdir}/Fig6_4e_pushVal.svg", window="_blank"]
 
-//image::{imagesdir}/Fig6_4e_nodeWithVal.png[width=100%]
-image::{imagesdir}/Fig6_4e_nodeWithVal.png[width=100%, link="{imagesdir}/Fig6_4e_nodeWithVal.svg", window="_blank"]
+//image::{imagesdir}/Fig6_4e_nodeWithVal.png[width=50%]
+image::{imagesdir}/Fig6_4e_nodeWithVal.png[width=50%, link="{imagesdir}/Fig6_4e_nodeWithVal.svg", window="_blank"]
 
 [.text-center]
 f). function of removing duplicates _removeDupli_
 
-//image::{imagesdir}/Fig6_4f_removeDupli.png[width=100%]
-image::{imagesdir}/Fig6_4f_removeDupli.png[width=100%, link="{imagesdir}/Fig6_4f_RemoveDupli.svg", window="_blank"]
+//image::{imagesdir}/Fig6_4f_removeDupli.png[width=50%]
+image::{imagesdir}/Fig6_4f_removeDupli.png[width=50%, link="{imagesdir}/Fig6_4f_RemoveDupli.svg", window="_blank"]
 
 [.text-center]
 Figure 6.4. DRAKON-diagram of algorithms deletion, search, insertion by value and dublicate deletion
