@@ -62,7 +62,7 @@ In the case of a linear search of an element in an unordered dataset,
 for example, in an array or in a slice, the simplest algorithm is to
 view all elements until the desired value is found (Figure 6.1).
 
-//image::{imagesdir}/Fig6_1_searchElement.png[width=50%]
+image::{imagesdir}/Fig6_1_searchElement.png[width=50%]
 image::{imagesdir}/Fig6_1_searchElement.png[width=50%, link="{imagesdir}/Fig6_1_searchElement.svg", window="_blank"]
 
 [.text-center]
