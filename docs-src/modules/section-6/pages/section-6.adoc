@@ -68,13 +68,17 @@ DRAKON-diagrams are provided along with assessments of their time and space comp
 | 6.4d | RemoveVal | Deleting a Node by Value
 | 6.4e | PushVal / NodeWithVal | Inserting by Value and Locating Node by Value
 | 6.4f | RemoveDupli | Removing Duplicate Nodes
-| 6. | Hash Table Creation | Creating a Hash Table Structure
-| 6.x | Hash Table Search | Searching for an Element by Key
-| 6.x | Hash Table Traversal | Traversing Hash Table Items
-| 6.x | Hash Table Deletion | Deleting an Element by Key
+| 6.a | Hash Table Creation | Creating a Hash Table Structure
+| 6.b | Hash Table Search | Searching for an Element by Key
+| 6.c | Hash Table Traversal | Traversing Hash Table Items
+| 6.d | Hash Table Deletion | Deleting an Element by Key
 |=== 
 
-
+[NOTE]
+====
+All illustrations in this section are provided in the **SVG** format.  
+Click on any image to open it in a separate window for detailed viewing.
+====
 
 === 6.1. Linear data searching
 
@@ -358,7 +362,7 @@ met, the `nodePrev.nextNode` field (`0xc0000386d0`) is changed to
 (`0xc00384f0`), that is, the deleted element is skipped (Figure 6.5d.):
 
 //image::{imagesdir}/Fig6_5d_hashRemove.png[width=75%]
-image::{imagesdir}/Fig6_5d_hashRemove.png[width=50%, link="{imagesdir}/Fig6_5d_hashRemove.svg", window="_blank"]
+image::{imagesdir}/Fig6_5d_hashRemove.png[width=75%, link="{imagesdir}/Fig6_5d_hashRemove.svg", window="_blank"]
 
 [.text-center]
 Figure 6.5. DRAKON-diagrams of Hash Table Algorithms
