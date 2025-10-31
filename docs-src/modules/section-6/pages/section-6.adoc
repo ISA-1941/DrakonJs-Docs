@@ -67,10 +67,10 @@ DRAKON-diagrams are provided along with assessments of their time and space comp
 | 6.4d | removeVal | Deleting a node by value
 | 6.4e | pushVal / nodeWithVal | Inserting by value and locating node by value
 | 6.4f | removeDupli | Removing duplicate nodes
-| 6.x | Hash Table Creation | Creating a hash table structure
-| 6.x | Hash Table Search | Searching for an element by key
-| 6.x | Hash Table Deletion | Deleting an element by key
-| 6.x | Hash Table Traversal | Traversing hash table items
+| 6.a | Hash Table Creation | Creating a hash table structure
+| 6.b | Hash Table Search | Searching for an element by key
+| 6.c | Hash Table Traversal | Traversing hash table items
+| 6.d | Hash Table Deletion | Deleting an element by key
 |=== 
 
 
