@@ -215,7 +215,8 @@ image::{imagesdir}/Fig6_4f_removeDupli.png[width=75%, link="{imagesdir}/Fig6_4f_
 [.text-center]
 .Figure 6.4. DRAKON-diagram of algorithms deletion, search, insertion by value and dublicate deletion
 
-6.4. Hashing
+
+=== 6.4. Hashing
 
 The search time of an item in a data set depends on the number of
 element value comparisons. In order to reduce search times and thus
