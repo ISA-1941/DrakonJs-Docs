@@ -120,6 +120,7 @@ image::{imagesdir}/Fig6_2_dataSorted.png[width=50%, link="{imagesdir}/Fig6_2_dat
 [.text-center]
 .Figure 6.2. DRAKON-diagram of the Search in a Sorted Array
 
+
 === 6.2. Binary search for data in a sorted data
 
 Binary search is performed as follows:
@@ -136,7 +137,7 @@ the selected half is again determined and compared to the key.
 the search interval is empty.
 
 The DRAKON-diagram of the binary search algorithm is represented in
-.Figure 6.3. (main() module is similar to the previous algorithm):
+Figure 6.3. (main() module is similar to the previous algorithm):
 
 //image::{imagesdir}/Fig6_3_searchValue.png[width=75%]
 image::{imagesdir}/Fig6_3_searchValue.png[width=50%, link="{imagesdir}/Fig6_3_searchValue.svg", window="_blank"]
