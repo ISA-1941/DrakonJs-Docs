@@ -181,7 +181,10 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<div class="sect1 text-justify">
+<div class="paragraph text-justify">
+<p>:.Figure-caption!:</p>
+</div>
+<div class="sect1">
 <h2 id="_section_6_basic_search_algorithms"><a class="anchor" href="#_section_6_basic_search_algorithms"></a>SECTION 6. BASIC SEARCH ALGORITHMS</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -251,7 +254,7 @@ DRAKON-diagrams are provided along with assessments of their time and space comp
 </div>
 </div>
 <div class="sect1">
-<h2 id="_list_of_figures"><a class="anchor" href="#_list_of_figures"></a>List of Figures</h2>
+<h2 id="_list_of_figures"><a class="anchor" href="#_list_of_figures"></a>List of .Figures</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -261,7 +264,7 @@ DRAKON-diagrams are provided along with assessments of their time and space comp
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Figure</th>
+<th class="tableblock halign-left valign-top">.Figure</th>
 <th class="tableblock halign-left valign-top">Title</th>
 <th class="tableblock halign-left valign-top">Description</th>
 </tr>
@@ -357,7 +360,7 @@ Click on any image to open it in a separate window for detailed viewing.</p>
 <div class="paragraph">
 <p>In the case of a linear search of an element in an unordered dataset,
 for example, in an array or in a slice, the simplest algorithm is to
-view all elements until the desired value is found (Figure 6.1).</p>
+view all elements until the desired value is found (.Figure 6.1).</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
@@ -365,9 +368,7 @@ view all elements until the desired value is found (Figure 6.1).</p>
 </div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 6.1. DRAKON-diagram of the Linear Search Algorithm</p>
-</div>
-<div class="paragraph">
+<div class="title">Figure 6.1. DRAKON-diagram of the Linear Search Algorithm</div>
 <p>This algorithm is not very effective, but it works on arbitrary
 collections. <em>Time complexity:</em> O(n). In the worst case (the desired
 element is in the last position) to find the element you need to pass
@@ -385,7 +386,7 @@ finding the desired element is much more efficient than in an unordered
 linear search. Because in many cases, you don’t have to go through the
 whole list. For example, when an item with a higher value is discovered
 as a result of passing through an increasing sorted list, the search is
-stopped. This approach saves time and increases productivity. Figure
+stopped. This approach saves time and increases productivity. .Figure
 6.2. shows the DRAKON-diagram of this algorithm.</p>
 </div>
 <div class="imageblock unresolved">
@@ -393,13 +394,11 @@ stopped. This approach saves time and increases productivity. Figure
 <a class="image" href="_images/Fig6_2_dataSorted.svg" target="_blank" rel="noopener"><img src="_images/Fig6_2_dataSorted.png" alt="Fig6 2 dataSorted" width="50%"></a>
 </div>
 </div>
-<div class="paragraph text-center">
-<p>Figure 6.2. DRAKON-diagram of the Search in a Sorted Array</p>
 </div>
-</div>
-<div class="sect2">
+<div class="sect2 text-center">
 <h3 id="_6_2_binary_search_for_data_in_a_sorted_data"><a class="anchor" href="#_6_2_binary_search_for_data_in_a_sorted_data"></a>6.2. Binary search for data in a sorted data</h3>
 <div class="paragraph">
+<div class="title">Figure 6.2. DRAKON-diagram of the Search in a Sorted Array</div>
 <p>Binary search is performed as follows:</p>
 </div>
 <div class="olist arabic">
@@ -423,7 +422,7 @@ the search interval is empty.</p>
 </div>
 <div class="paragraph">
 <p>The DRAKON-diagram of the binary search algorithm is represented in
-Figure 6.3. (main() module is similar to the previous algorithm):</p>
+.Figure 6.3. (main() module is similar to the previous algorithm):</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
@@ -431,9 +430,7 @@ Figure 6.3. (main() module is similar to the previous algorithm):</p>
 </div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 6.3. DRAKON-diagram of Binary Search algorithm</p>
-</div>
-<div class="paragraph">
+<div class="title">Figure 6.3. DRAKON-diagram of Binary Search algorithm</div>
 <p><em>Time complexity</em> of binary search algorithm belongs to class O(log n).
 The way to interpret this is that the asymptotic increase in the time
 taken by a function to perform a given input set of size n will not
@@ -454,7 +451,7 @@ A.", "Shafler B.”, "Wiley D.", "Brown G.", "Black H.". In this list you
 should delete the entry " Brown G." and then add a new entry "Singer B."
 placing it after the entry "Wiley D.". After that, you should delete the
 duplicates of the entry " Shafler B." leaving only one. The
-corresponding DRAKON-diagrams are presented in Figure 6.4 a,b,c,d:</p>
+corresponding DRAKON-diagrams are presented in .Figure 6.4 a,b,c,d:</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
@@ -478,9 +475,7 @@ corresponding DRAKON-diagrams are presented in Figure 6.4 a,b,c,d:</p>
 </div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 6.4. DRAKON-diagrams of  pushFront/pushBack algorithms</p>
-</div>
-<div class="paragraph">
+<div class="title">Figure 6.4. DRAKON-diagrams of  pushFront/pushBack algorithms</div>
 <p>c). function of searching <code>searchData(val)</code></p>
 </div>
 <div class="imageblock unresolved">
@@ -489,9 +484,7 @@ corresponding DRAKON-diagrams are presented in Figure 6.4 a,b,c,d:</p>
 </div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 6.4. DRAKON-diagrams of  search algorithms</p>
-</div>
-<div class="paragraph">
+<div class="title">Figure 6.4. DRAKON-diagrams of  search algorithms</div>
 <p>d). function of deletion <em>RemoveVal(val)</em></p>
 </div>
 <div class="imageblock unresolved">
@@ -500,9 +493,7 @@ corresponding DRAKON-diagrams are presented in Figure 6.4 a,b,c,d:</p>
 </div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 6.4. DRAKON-diagrams of  deletion algorithms</p>
-</div>
-<div class="paragraph">
+<div class="title">Figure 6.4. DRAKON-diagrams of  deletion algorithms</div>
 <p>e). function of inserting by value <em>PushVal + NodeWithVal</em></p>
 </div>
 <div class="imageblock unresolved">
@@ -515,21 +506,19 @@ corresponding DRAKON-diagrams are presented in Figure 6.4 a,b,c,d:</p>
 <a class="image" href="_images/Fig6_4e_nodeWithVal.svg" target="_blank" rel="noopener"><img src="_images/Fig6_4e_nodeWithVal.png" alt="Fig6 4e nodeWithVal" width="50%"></a>
 </div>
 </div>
-<div class="paragraph text-center">
+<div class="paragraph">
 <p>f). function of removing duplicates <em>removeDupli</em></p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/Fig6_4f_RemoveDupli.svg" target="_blank" rel="noopener"><img src="_images/Fig6_4f_removeDupli.png" alt="Fig6 4f removeDupli" width="50%"></a>
+<a class="image" href="_images/Fig6_4f_RemoveDupli.svg" target="_blank" rel="noopener"><img src="_images/Fig6_4f_removeDupli.png" alt="Fig6 4f removeDupli" width="75%"></a>
 </div>
 </div>
-<div class="paragraph text-center">
-<p>Figure 6.4. DRAKON-diagram of algorithms deletion, search, insertion by value and dublicate deletion</p>
 </div>
-</div>
-<div class="sect2">
+<div class="sect2 text-center">
 <h3 id="_6_4_hashing"><a class="anchor" href="#_6_4_hashing"></a>6.4. Hashing</h3>
 <div class="paragraph">
+<div class="title">Figure 6.4. DRAKON-diagram of algorithms deletion, search, insertion by value and dublicate deletion</div>
 <p>The search time of an item in a data set depends on the number of
 element value comparisons. In order to reduce search times and thus
 improve computational efficiency, fewer comparisons are needed. This can be achieved by converting a larger data set into a smaller range called hashing, resulting in hash tables.</p>
@@ -902,7 +891,7 @@ hash table of 15 slots. The search for an element is now greatly
 accelerated as it takes two steps: first, the hash function <code>h =(x % m)</code>
 computes the hash index, and then the search is done in a 7-element
 slot. The algorithm based on the residual method is represented by the
-following DRAKON-diagrams (Figure 6.6.). Here <code>hinsert</code> - module of
+following DRAKON-diagrams (.Figure 6.6.). Here <code>hinsert</code> - module of
 filling with elements of slots on <code>hash</code>-function, <code>hLookup</code>-module of
 search of element in hash-table, <code>hTravers</code> - module of passage on
 <code>hash</code>-table.</p>
@@ -920,7 +909,7 @@ objects will be saved.
 </div>
 <div class="paragraph">
 <p>DRAKON-diagrams of algorithms for implementing the main functions of
-working with hash-tables are shown in Figure 6.5.</p>
+working with hash-tables are shown in .Figure 6.5.</p>
 </div>
 <div class="paragraph">
 <p>a). Hash Table Creation Function</p>
@@ -956,7 +945,7 @@ be removed is determined. It then passes through the elements of this
 bucket, where after each <code>node.Value == value</code> check, the current
 element is stored in the <code>nodePrev</code> variable. If the above condition is
 met, the <code>nodePrev.nextNode</code> field (<code>0xc0000386d0</code>) is changed to
-(<code>0xc00384f0</code>), that is, the deleted element is skipped (Figure 6.5d.):</p>
+(<code>0xc00384f0</code>), that is, the deleted element is skipped (.Figure 6.5d.):</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
@@ -964,9 +953,7 @@ met, the <code>nodePrev.nextNode</code> field (<code>0xc0000386d0</code>) is cha
 </div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 6.5. DRAKON-diagrams of Hash Table Algorithms</p>
-</div>
-<div class="paragraph">
+<div class="title">Figure 6.5. DRAKON-diagrams of Hash Table Algorithms</div>
 <p>Another example of a "good" hash function is for use with integer key
 values, the mean square method. The mean square method squares the key
 value and then extracts the average digits of the result, giving a value
