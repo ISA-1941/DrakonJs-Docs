@@ -246,7 +246,7 @@ From a programming position, a hash table is a collection of items containing a 
 
 We will conduct a detailed analysis of the hash table creation process utilizing the JavaScript programming language within the DrakonTech. First, a hash table structure is created through the createHashTable function that initializes an array of specified size filled with null values (Figure 6.5a): 
 
-image::{imagesdir}/Fig6_5a_createhashTable.png[width=75%]
+image::{imagesdir}/Fig6_5a_createHashTable.png[width=75%]
 
 [.text-center]
 Figure 6.5a. DRAKON-diagram of Hash Table Creation
@@ -254,7 +254,7 @@ Figure 6.5a. DRAKON-diagram of Hash Table Creation
 For storing individual elements, the createNode function is used (see Figure 6.5b), 
 which creates a node containing the key-value pair and an optional reference to the next node for collision resolution through chaining ()
 
-image::{imagesdir}/Fig6_5b_createNode.png[width=75%]
+image::{imagesdir}/Fig6_5b_createNodes.png[width=75%]
 
 [.text-center]
 Figure 6.5b. DRAKON-diagram of Node Creation
