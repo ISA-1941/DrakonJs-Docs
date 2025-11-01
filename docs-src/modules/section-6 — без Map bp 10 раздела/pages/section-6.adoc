@@ -225,8 +225,8 @@ improve computational efficiency, fewer comparisons are needed. This can be achi
 
 From the perspective of the theory of abstract data types (ADT), a
 hash-table is a data structure that implements the interface of an
-associative array that allows you to store key-value pairs and perform three basic operations: 
-the operation of adding a new pair, search operation and operation to delete the key-value pair. 
+associative array that allows you to store key-value pairs and perform three basic operations: the operation of adding a new pair, search
+operation and operation to delete the key-value pair. 
 From a programming position, a hash table is a collection of items 
 containing a key-value pair, where the key is computed by a special 
 function called a `hash function`. A `hash-table`, in turn, 
@@ -238,30 +238,26 @@ as the remainder of the division of two numbers (`x, m`), where `x`
 is the item of the set, `m` is the number of buckets. In JavaScript, 
 the `hash function` for this method is: `h = x % m`.
 
-The search time of an item in a data set depends on the number of element value comparisons. In order to reduce search times and thus improve computational efficiency, fewer comparisons are needed. This can be achieved by converting a larger data set into a smaller range called hashing, resulting in hash tables.
+We will conduct a detailed analysis of the hash table creation process 
+utilizing the JavaScript programming language within the DrakonTech.   
+First, a variable of the `Node` type is created, defined as a structure 
+consisting of two fields: the element value is `Value int` and the next 
+element address is `Next *Node`. In fact, it is a single linked list (see Section 1).
 
-From the perspective of the theory of abstract data types (ADT), a hash-table is a data structure that implements the interface of an associative array that allows you to store key-value pairs and perform three basic operations: the operation of adding a new pair, search operation and operation to delete the key-value pair.
+type Node struct \{ Value int Next *Node }
 
-From a programming position, a hash table is a collection of items containing a key-value pair, where the key is computed by a special function called a hash function. A hash-table, in turn, consists of buckets, a set of elements with matching or close hash values of the function.
+Then, a hash-table is created through a structure that has two fields:
+the first field (`Table`) is a map that relates the integer (`hash
+index`) to the associated list (`Node`), and the second - `Size`of
+type `int`:
 
-We will conduct a detailed analysis of the hash table creation process utilizing the JavaScript programming language within the DrakonTech. First, a hash table structure is created through the createHashTable function that initializes an array of specified size filled with null values (Figure 6.5a): 
-
-image::{imagesdir}/Fig6_5a_createhashTable.png[width=75%]
-
-[.text-center]
-Figure 6.5a. DRAKON-diagram of Hash Table Creation
-
-For storing individual elements, the createNode function is used (see Figure 6.5b), 
-which creates a node containing the key-value pair and an optional reference to the next node for collision resolution through chaining ()
-
-image::{imagesdir}/Fig6_5b_createNode.png[width=75%]
-
-[.text-center]
-Figure 6.5b. DRAKON-diagram of Node Creation
-
-
-These two fundamental functions provide the foundation for building a complete hash table implementation 
-in JavaScript, enabling efficient key-value storage and retrieval operations.
+[source,go]
+----
+type HashTable struct {
+Table map[int] *Node
+Size int
+}
+----
 
 As a result, this hash table would have to have as many single linked
 lists (buckets) as was specified by the Size constant. In the above case

@@ -1,0 +1,80 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "5"
+        },
+        "3": {
+            "type": "action",
+            "one": "13",
+            "content": "console.log(\n    `Value \"${value}\" fouтв. Лун: \"${node.key}\"`\n)"
+        },
+        "4": {
+            "type": "loopend",
+            "one": "3",
+            "content": ""
+        },
+        "5": {
+            "type": "loopbegin",
+            "one": "6",
+            "content": "i = 0; i < hash.size; i++"
+        },
+        "6": {
+            "type": "action",
+            "one": "8",
+            "content": "node = hash.table[i]"
+        },
+        "7": {
+            "type": "question",
+            "one": "4",
+            "two": "9",
+            "flag1": 0,
+            "content": "node !== null && node !== undefined"
+        },
+        "8": {
+            "type": "arrow-loop",
+            "one": "7"
+        },
+        "9": {
+            "type": "question",
+            "one": "10",
+            "two": "12",
+            "flag1": 1,
+            "content": "node.value === value"
+        },
+        "10": {
+            "type": "action",
+            "one": "11",
+            "content": "console.log(\n    `Value \"${value}\" found. Key: \"${node.key}`\n)"
+        },
+        "11": {
+            "type": "action",
+            "one": "8",
+            "content": "return node.key"
+        },
+        "12": {
+            "type": "action",
+            "one": "8",
+            "content": "node = node.next"
+        },
+        "13": {
+            "type": "action",
+            "one": "1",
+            "content": "return undefined"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "hash, value"
+}
