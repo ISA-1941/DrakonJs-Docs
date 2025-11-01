@@ -1,0 +1,69 @@
+
+
+
+
+ 2780/900 
+Достигнуто ограничение
+
+
+
+Let’s look at the logic of these two functions together to understand how they work together to manipulate a linked list.
+
+**1. Function nodeWithVal(list, val):**
+
+* **Target:** This function searches for a node in the linked list that contains a given value of 'val'.
+* **Logic:**
+    * It starts with the first list node ('list.headNode') and uses the current variable to bypass the list.
+    * It goes through the list, checking the current.data for a match of the val for each node.
+    * If a value is found, the function returns a reference to this node ('current').
+    * If the value is not found after the entire list has been passed (when `current`becomes `null'), the function returns `null'.
+* **Result:** The function returns either a reference to the specified node or null if no value is found.
+
+**2. The function «pushVal(list, targetVal, newVal)»:**
+
+* **Purpose:** This function inserts a new node...
+
+
+Этот метод `removeDupli` предназначен для удаления дубликатов заданного значения `val` из связанного списка `list`. Он обрабатывает дубликаты как в начале списка, так и в середине/конце.
+
+Давайте разберем код по частям:
+
+**1. Удаление дубликатов в начале списка:**
+
+```javascript
+let node = list.headNode;
+while (node !== null && node.data === val) {
+    list.headNode = node.nextNode;
+    node = list.headNode;
+}
+```
+
+* `node`: создается переменная `node`, которая изначально указывает на первый узел списка (`list.headNode`).
+* `while (node !== null && node.data === val)`: цикл `while` выполняется, пока `node` не станет `null` (конец списка) и `node.data` равен `val` (найден дубликат).
+    * `list.headNode = node.nextNode`: если найден дубликат, `list.headNode` перемещается на следующий узел, эффективно удаляя текущий узел из начала списка.
+    * `node = list.headNode`: `node` обновляется, чтобы указывать на новый первый узел (или `null`, если дубликаты были в самом начале и список стал пустым).
+* Этот цикл удаляет все дубликаты, находящиеся в начале списка.
+
+**2. Удаление дубликатов в середине/конце списка:**
+
+```javascript
+while (node !== null) {
+    const nextNode = node.nextNode;
+    if (nextNode !== null && nextNode.data === val && list.len > 1) {
+        node.nextNode = nextNode.nextNode;
+        list.len--;
+    } else {
+        node = nextNode;
+    }
+}
+```
+**function removeDupli(list, val)**
+
+* ‘while (node !== null)’: this cycle runs through the rest of the list (after processing the initial duplicates).
+* 'const nextNode = node.nextNode': 'nextNode' saves the reference to the next node after the current 'node'.
+* ‘if (nextNode !== null && nextNode.data === val && list.len > 1)': checks whether the next node is present, whether it is a duplicate (‘nextNode.data === val’) and whether the list contains more than one element.
+    * ‘node.nextNode = nextNode.nextNode’: if a duplicate is found, ‘node.nextNode’ skips the duplicate, pointing to the next node after the duplicate.
+    * 'list.len--': the length of the list is reduced by 1 because the duplicate is removed.
+* 'else { node = nextNode; }': if the next node is not a duplicate, then the 'node' moves to the next node.
+* This cycle removes all duplicates in the middle and end of the list.
+

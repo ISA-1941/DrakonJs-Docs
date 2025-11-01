@@ -1,0 +1,104 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "Delete duplicates at the top of list"
+        },
+        "3": {
+            "type": "action",
+            "one": "5",
+            "content": "node = list.headNode"
+        },
+        "4": {
+            "type": "question",
+            "one": "16",
+            "two": "6",
+            "flag1": 0,
+            "content": "node !== null && node.data === val"
+        },
+        "5": {
+            "type": "arrow-loop",
+            "one": "4"
+        },
+        "6": {
+            "type": "action",
+            "one": "7",
+            "content": "list.headNode = node.nextNode"
+        },
+        "7": {
+            "type": "action",
+            "one": "5",
+            "content": "node = list.headNode"
+        },
+        "15": {
+            "type": "branch",
+            "one": "1",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "16": {
+            "type": "branch",
+            "one": "18",
+            "branchId": 2,
+            "content": "Delete duplicates in middle/end of list"
+        },
+        "17": {
+            "type": "question",
+            "one": "15",
+            "two": "19",
+            "flag1": 0,
+            "content": "node !== null"
+        },
+        "18": {
+            "type": "arrow-loop",
+            "one": "17",
+            "two": ""
+        },
+        "19": {
+            "type": "action",
+            "one": "20",
+            "two": "",
+            "content": "nextNode = node.nextNode"
+        },
+        "20": {
+            "type": "question",
+            "one": "21",
+            "two": "23",
+            "flag1": 1,
+            "content": "nextNode !== null && nextNode.data === val\n&& list.len > 1"
+        },
+        "21": {
+            "type": "action",
+            "one": "22",
+            "two": "",
+            "content": "node.nextNode = nextNode.nextNode"
+        },
+        "22": {
+            "type": "action",
+            "one": "18",
+            "two": "",
+            "content": "list.len--"
+        },
+        "23": {
+            "type": "action",
+            "one": "18",
+            "two": "",
+            "content": "node = nextNode"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "list, val"
+}

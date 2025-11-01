@@ -1,0 +1,75 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "7",
+            "content": "index = hashFuncSHA256(key, hash.size)"
+        },
+        "7": {
+            "type": "action",
+            "one": "9",
+            "content": "node = hash.table[index]"
+        },
+        "8": {
+            "type": "question",
+            "one": "27",
+            "two": "10",
+            "flag1": 0,
+            "content": "node"
+        },
+        "9": {
+            "type": "arrow-loop",
+            "one": "8"
+        },
+        "10": {
+            "type": "question",
+            "one": "24",
+            "two": "26",
+            "flag1": 1,
+            "content": "node.key === key"
+        },
+        "24": {
+            "type": "action",
+            "one": "25",
+            "content": "node.value = value"
+        },
+        "25": {
+            "type": "action",
+            "one": "9",
+            "content": "return index"
+        },
+        "26": {
+            "type": "action",
+            "one": "9",
+            "content": "node = node.next"
+        },
+        "27": {
+            "type": "action",
+            "one": "28",
+            "content": "hash.table[index] = createNode(\n    key,\n    value,\n    hash.table[index]\n)"
+        },
+        "28": {
+            "type": "action",
+            "one": "1",
+            "content": "return index"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "hash, key, value"
+}
