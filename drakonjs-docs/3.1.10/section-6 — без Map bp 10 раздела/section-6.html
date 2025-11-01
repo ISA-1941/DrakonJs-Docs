@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: Drakon.js Docs</title>
-    <link rel="canonical" href="https://ISA-1941.github.io/DrakonJs-Docs/drakonjs-docs/3.1.10/section-6/section-6.html">
+    <link rel="canonical" href="https://ISA-1941.github.io/DrakonJs-Docs/drakonjs-docs/3.1.10/section-6%20—%20без%20Map%20bp%2010%20раздела/section-6.html">
     <meta name="generator" content="Antora 3.1.10">
     <link rel="stylesheet" href="../../../_/css/site.css">
   </head>
@@ -116,8 +116,8 @@
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Basic search  algorithms</span>
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="section-6.html">Base Search Algorithms</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../section-6/section-6.html">Base Search Algorithms</a>
   </li>
 </ul>
   </li>
@@ -168,13 +168,8 @@
 <button class="nav-toggle"></button>
   <a href="../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="../index.html">drakonjs-docs</a></li>
-    <li>Basic search  algorithms</li>
-    <li><a href="section-6.html">Base Search Algorithms</a></li>
-  </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/ISA-1941/DrakonJs-Docs/edit/main/docs-src/modules/section-6/pages/section-6.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/ISA-1941/DrakonJs-Docs/edit/main/docs-src/modules/section-6%20—%20без%20Map%20bp%2010%20раздела/pages/section-6.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -537,8 +532,8 @@ improve computational efficiency, fewer comparisons are needed. This can be achi
 <div class="paragraph">
 <p>From the perspective of the theory of abstract data types (ADT), a
 hash-table is a data structure that implements the interface of an
-associative array that allows you to store key-value pairs and perform three basic operations:
-the operation of adding a new pair, search operation and operation to delete the key-value pair.
+associative array that allows you to store key-value pairs and perform three basic operations: the operation of adding a new pair, search
+operation and operation to delete the key-value pair.
 From a programming position, a hash table is a collection of items
 containing a key-value pair, where the key is computed by a special
 function called a <code>hash function</code>. A <code>hash-table</code>, in turn,
@@ -551,40 +546,28 @@ is the item of the set, <code>m</code> is the number of buckets. In JavaScript,
 the <code>hash function</code> for this method is: <code>h = x % m</code>.</p>
 </div>
 <div class="paragraph">
-<p>The search time of an item in a data set depends on the number of element value comparisons. In order to reduce search times and thus improve computational efficiency, fewer comparisons are needed. This can be achieved by converting a larger data set into a smaller range called hashing, resulting in hash tables.</p>
+<p>We will conduct a detailed analysis of the hash table creation process
+utilizing the JavaScript programming language within the DrakonTech.
+First, a variable of the <code>Node</code> type is created, defined as a structure
+consisting of two fields: the element value is <code>Value int</code> and the next
+element address is <code>Next *Node</code>. In fact, it is a single linked list (see Section 1).</p>
 </div>
 <div class="paragraph">
-<p>From the perspective of the theory of abstract data types (ADT), a hash-table is a data structure that implements the interface of an associative array that allows you to store key-value pairs and perform three basic operations: the operation of adding a new pair, search operation and operation to delete the key-value pair.</p>
+<p>type Node struct \{ Value int Next *Node }</p>
 </div>
 <div class="paragraph">
-<p>From a programming position, a hash table is a collection of items containing a key-value pair, where the key is computed by a special function called a hash function. A hash-table, in turn, consists of buckets, a set of elements with matching or close hash values of the function.</p>
+<p>Then, a hash-table is created through a structure that has two fields:
+the first field (<code>Table</code>) is a map that relates the integer (<code>hash
+index</code>) to the associated list (<code>Node</code>), and the second - <code>Size`of
+type `int</code>:</p>
 </div>
-<div class="paragraph">
-<p>We will conduct a detailed analysis of the hash table creation process utilizing the JavaScript programming language within the DrakonTech. First, a hash table structure is created through the createHashTable function that initializes an array of specified size filled with null values (Figure 6.5a):</p>
-</div>
-<div class="imageblock unresolved">
+<div class="listingblock">
 <div class="content">
-<img src="_images/Fig6_5a_createhashTable.png" alt="Fig6 5a createhashTable" width="75%">
+<pre class="highlightjs highlight"><code class="language-go hljs" data-lang="go">type HashTable struct {
+Table map[int] *Node
+Size int
+}</code></pre>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 6.5a. DRAKON-diagram of Hash Table Creation</p>
-</div>
-<div class="paragraph">
-<p>For storing individual elements, the createNode function is used (see Figure 6.5b),
-which creates a node containing the key-value pair and an optional reference to the next node for collision resolution through chaining ()</p>
-</div>
-<div class="imageblock unresolved">
-<div class="content">
-<img src="_images/Fig6_5b_createNode.png" alt="Fig6 5b createNode" width="75%">
-</div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 6.5b. DRAKON-diagram of Node Creation</p>
-</div>
-<div class="paragraph">
-<p>These two fundamental functions provide the foundation for building a complete hash table implementation
-in JavaScript, enabling efficient key-value storage and retrieval operations.</p>
 </div>
 <div class="paragraph">
 <p>As a result, this hash table would have to have as many single linked
