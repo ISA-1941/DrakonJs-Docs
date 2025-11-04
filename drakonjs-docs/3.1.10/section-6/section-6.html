@@ -529,27 +529,8 @@ corresponding DRAKON-diagrams are presented in Figure 6.4 a,b,c,d:</p>
 </div>
 <div class="sect2">
 <h3 id="_6_4_hashing"><a class="anchor" href="#_6_4_hashing"></a>6.4. Hashing</h3>
-<div class="paragraph">
-<p>The search time of an item in a data set depends on the number of
-element value comparisons. In order to reduce search times and thus
-improve computational efficiency, fewer comparisons are needed. This can be achieved by converting a larger data set into a smaller range called hashing, resulting in hash tables.</p>
-</div>
-<div class="paragraph">
-<p>From the perspective of the theory of abstract data types (ADT), a
-hash-table is a data structure that implements the interface of an
-associative array that allows you to store key-value pairs and perform three basic operations:
-the operation of adding a new pair, search operation and operation to delete the key-value pair.
-From a programming position, a hash table is a collection of items
-containing a key-value pair, where the key is computed by a special
-function called a <code>hash function</code>. A <code>hash-table</code>, in turn,
-consists of buckets, a set of elements with matching or close hash values
-of the function.
-There are different methods of constructing a <code>hash function</code>, the simplest
-of which is the residual method, where the hash function is defined
-as the remainder of the division of two numbers (<code>x, m</code>), where <code>x</code>
-is the item of the set, <code>m</code> is the number of buckets. In JavaScript,
-the <code>hash function</code> for this method is: <code>h = x % m</code>.</p>
-</div>
+<div class="sect3">
+<h4 id="_over_view_of_hash_tables"><a class="anchor" href="#_over_view_of_hash_tables"></a>Over View of Hash Tables</h4>
 <div class="paragraph">
 <p>The search time of an item in a data set depends on the number of element value comparisons. In order to reduce search times and thus improve computational efficiency, fewer comparisons are needed. This can be achieved by converting a larger data set into a smaller range called hashing, resulting in hash tables.</p>
 </div>
@@ -560,23 +541,23 @@ the <code>hash function</code> for this method is: <code>h = x % m</code>.</p>
 <p>From a programming position, a hash table is a collection of items containing a key-value pair, where the key is computed by a special function called a hash function. A hash-table, in turn, consists of buckets, a set of elements with matching or close hash values of the function.</p>
 </div>
 <div class="paragraph">
-<p>We will conduct a detailed analysis of the hash table creation process utilizing the JavaScript programming language within the DrakonTech. First, a hash table structure is created through the createHashTable function that initializes an array of specified size filled with null values (Figure 6.5a):</p>
+<p>We will conduct a detailed analysis of the hash table creation process utilizing the JavaScript programming language within the DrakonTech. First, a hash table structure is created through the <code>createHashTable function</code> that initializes an array of specified size filled with null values (Figure 6.5a):</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<img src="_images/Fig6_5a_createHashTable.png" alt="Fig6 5a createHashTable" width="75%">
+<img src="_images/Fig6_5a_createHashTable.png" alt="Fig6 5a createHashTable" width="50%">
 </div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 6.5a. DRAKON-diagram of Hash Table Creation</p>
 </div>
 <div class="paragraph">
-<p>For storing individual elements, the createNode function is used (see Figure 6.5b),
+<p>For storing individual elements, the <code>createNode function</code> is used (see Figure 6.5b),
 which creates a node containing the key-value pair and an optional reference to the next node for collision resolution through chaining ()</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<img src="_images/Fig6_5b_createNodes.png" alt="Fig6 5b createNodes" width="75%">
+<img src="_images/Fig6_5b_createNodes.png" alt="Fig6 5b createNodes" width="50%">
 </div>
 </div>
 <div class="paragraph text-center">
@@ -587,337 +568,377 @@ which creates a node containing the key-value pair and an optional reference to 
 in JavaScript, enabling efficient key-value storage and retrieval operations.</p>
 </div>
 <div class="paragraph">
-<p>As a result, this hash table would have to have as many single linked
-lists (buckets) as was specified by the Size constant. In the above case
-the number of slots is 15.
-As an example, consider constructing a hash-table of size <code>m</code> = 15 for a
-collection of integers from 0 to 120. The hash table slots are
-originally empty:</p>
+<p>As an example, consider constructing a hash-table of size <code>m = 32</code> for a collection of 16 key-value pairs, where the key is an identification number and the value is a full name (Table 1).</p>
+</div>
+<div class="paragraph text-right">
+<p>Table 1. The collection of 16 key-value pairs</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6676%;">
+<col style="width: 11.1111%;">
+<col style="width: 22.2222%;">
+<col style="width: 11.1111%;">
+<col style="width: 33.3333%;">
+<col style="width: 22.2223%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">0</th>
-<th class="tableblock halign-left valign-top">1</th>
-<th class="tableblock halign-left valign-top">2</th>
-<th class="tableblock halign-left valign-top">3</th>
-<th class="tableblock halign-left valign-top">4</th>
-<th class="tableblock halign-left valign-top">5</th>
-<th class="tableblock halign-left valign-top">6</th>
-<th class="tableblock halign-left valign-top">7</th>
-<th class="tableblock halign-left valign-top">8</th>
-<th class="tableblock halign-left valign-top">9</th>
-<th class="tableblock halign-left valign-top">10</th>
-<th class="tableblock halign-left valign-top">11</th>
-<th class="tableblock halign-left valign-top">12</th>
-<th class="tableblock halign-left valign-top">13</th>
-<th class="tableblock halign-left valign-top">14</th>
+<th class="tableblock halign-left valign-top">Slot</th>
+<th class="tableblock halign-left valign-top">Address of memory</th>
+<th class="tableblock halign-left valign-top">Key</th>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Next Address</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>A hash function that establishes a relationship between an element and its
-corresponding slot must accept any element from the dataset, specifically
-ranging from 0 to 120, and return an integer that corresponds to a slot
-number between 0 and 14. The algorithm implementing the remainder method
-sequentially processes each element from the original set, dividing it by 15
-and returning the remainder as the hash value. This can be expressed as
-<code>\( h(item) = item \mod 15 \)</code>. For instance, the hash code for the element 119
-is calculated as <code>\( 119 \mod 15 = 14 \)</code> (where <code>\( 119 - 15 \times 7 = 14 \))</code>,
-thus placing the value 119 into the corresponding slot.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6676%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">0</th>
-<th class="tableblock halign-left valign-top">1</th>
-<th class="tableblock halign-left valign-top">2</th>
-<th class="tableblock halign-left valign-top">3</th>
-<th class="tableblock halign-left valign-top">4</th>
-<th class="tableblock halign-left valign-top">5</th>
-<th class="tableblock halign-left valign-top">6</th>
-<th class="tableblock halign-left valign-top">7</th>
-<th class="tableblock halign-left valign-top">8</th>
-<th class="tableblock halign-left valign-top">9</th>
-<th class="tableblock halign-left valign-top">10</th>
-<th class="tableblock halign-left valign-top">11</th>
-<th class="tableblock halign-left valign-top">12</th>
-<th class="tableblock halign-left valign-top">13</th>
-<th class="tableblock halign-left valign-top">14</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">119</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>The algorithm then identifies slots for other elements, gradually
-filling them. When the algorithm encounters element 104 in the loop,
-then the remainder of the division is <code>104%15 = 14</code>, so this element will
-also be included in the 14th slot. In this way, each slot will
-accumulate corresponding elements with one index hash. For example, for
-an index hash of 8, the slot will consist of these elements: 113 : 98 :
-83 : 68 : 53 : 38 : 23 : 8. And the entire hash table will be as follows
-(Table 6.1.):</p>
-</div>
-<div class="paragraph">
-<p>Table 6.1. Hash-table of 15 slots</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6666%;">
-<col style="width: 6.6676%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">0</th>
-<th class="tableblock halign-left valign-top">1</th>
-<th class="tableblock halign-left valign-top">2</th>
-<th class="tableblock halign-left valign-top">3</th>
-<th class="tableblock halign-left valign-top">4</th>
-<th class="tableblock halign-left valign-top">5</th>
-<th class="tableblock halign-left valign-top">6</th>
-<th class="tableblock halign-left valign-top">7</th>
-<th class="tableblock halign-left valign-top">8</th>
-<th class="tableblock halign-left valign-top">9</th>
-<th class="tableblock halign-left valign-top">10</th>
-<th class="tableblock halign-left valign-top">11</th>
-<th class="tableblock halign-left valign-top">12</th>
-<th class="tableblock halign-left valign-top">13</th>
-<th class="tableblock halign-left valign-top">14</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">105</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">106</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">107</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">108</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">109</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">110</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">111</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">112</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">113</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">114</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">115</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">116</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">117</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">118</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">119</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x0000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">103</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">91</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">92</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">103</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">94</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">95</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">96</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">97</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">98</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">99</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">100</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">101</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">102</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">103</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">104</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">88</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">76</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">77</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">78</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">79</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">80</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">82</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">83</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">84</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">85</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">86</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">87</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">88</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">89</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">73</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">62</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">63</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">64</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">65</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">66</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">67</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">68</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">69</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">70</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">72</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">73</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">74</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">58</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">46</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">47</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">48</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">49</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">50</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">52</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">53</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">54</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">55</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">56</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">57</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">58</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">59</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">43</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">32</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">33</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">34</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">35</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">36</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">37</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">38</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">39</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">40</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">42</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">43</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">44</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">17</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">18</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">19</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">22</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">23</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">25</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">26</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">27</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">29</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x1000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">642083</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brittany P. Lewis</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x2000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">753192</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Daniel O. Harris</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x3000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x4000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">556677</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mary V. Brown</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x5000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x6000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x7000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x8000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">889900</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jessica F. Anderson</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x8100</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x8100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">112233</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Peter L. Jones</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x9000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0xA000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">334455</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">David A. Davis</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0xB000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*Empty`</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0xC000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24689</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ashley C. Thomas</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0xD000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*Empty`</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0xE000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">778899</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Susan G. Wilson</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0xE100</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0xE100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">987654</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jane K. Smith</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0xF000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">123456</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">John J. Doe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x10000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x11000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*Empty`</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x12000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*Empty`</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x13000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*Empty`</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x14000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*Empty`</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x15000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*Empty`</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x16000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*Empty`</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x17000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">135790</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Matthew B. Taylor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x18000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">445566</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Christopher H. Martinez</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x19000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">864201</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sarah N. White</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x1A000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*Empty`</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x1B000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*Empty`</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x1C000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">223344</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Michael D. Garcia</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x1D000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*Empty`</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x1E000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">667788</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Linda E. Rodriguez</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x1F000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">975310</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Andrew I. Jackson</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>Thus, the remainder method converts a collection of 120 integers into a
-hash table of 15 slots. The search for an element is now greatly
-accelerated as it takes two steps: first, the hash function <code>h =(x % m)</code>
-computes the hash index, and then the search is done in a 7-element
-slot. The algorithm based on the residual method is represented by the
-following DRAKON-diagrams (Figure 6.6.). Here <code>hinsert</code> - module of
-filling with elements of slots on <code>hash</code>-function, <code>hLookup</code>-module of
-search of element in hash-table, <code>hTravers</code> - module of passage on
-<code>hash</code>-table.</p>
+<p>A <strong>hash function</strong> transforms a <strong>key</strong> (in our case, a six-digit numerical identifier) into a <strong>hash address</strong> — the index of a cell in the hash table where the corresponding value (for example, an employee record) will be stored.
+The <strong>value itself is not hashed</strong>; it is simply stored at the computed address. Thus, hashing is always applied <strong>to the key only</strong>, providing fast and efficient access to data based on the key.</p>
+</div>
+<div class="paragraph">
+<p>Each cell (or slot) in the hash table represents a collection of singly linked nodes, where each node contains three fields: the key, the value, and the address of the next node stored in the same slot.</p>
+</div>
+<div class="paragraph">
+<p>Depending on how many elements are mapped to the same hash address, three situations may occur:</p>
+</div>
+<div class="paragraph">
+<p>Empty slot – no elements have been hashed to this address.
+Single-node slot – only one key-value pair occupies this position.
+Chained slot – multiple nodes form a linked list when several keys produce the same hash value (a collision).</p>
+</div>
+<div class="paragraph">
+<p>There are many different types of hash functions, and they vary in design, performance, and collision behavior. However, to demonstrate the hashing process, we will choose the simplest hash function, calculated as the remainder of dividing the hash table element&#8217;s <code>key</code> by the number of buckets (<code>size</code>), where a bucket represents a slot or container in the hash table that can hold one or more elements.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">function hashFunc(key, size) {
+    return Math.abs(key) % size;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In our case, we have chosen the number of buckets (<code>size</code>) to be 16. As a result of applying the hash function, a hash table with 16 buckets is formed. Figure 6.5.c shows slots containing information about (key, value) pairs:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">Slot 0: [123456, "John J. Doe"]
+Slot 1: []
+Slot 2: []
+Slot 3: [642083, "Brittany P. Lewis"]
+Slot 4: []
+Slot 5: [556677, "Mary V. Brown"]
+Slot 6: [987654, "Jane K. Smith"]
+Slot 7: [334455, "David A. Davis"]
+Slot 8: [753192, "Daniel O. Harris"]
+Slot 9: [112233, "Peter L. Jones"] -&gt; [24689, "Ashley C. Thomas"] -&gt; [864201, "Sarah N. White"]
+Slot 10: [223514, "Michael D. Garcia"]
+Slot 11: []
+Slot 12: [667788, "Linda E. Rodriguez"] -&gt; [889900, "Jessica F. Anders"]
+Slot 13: []
+Slot 14: [445566, "Christopher H. Martinez"] -&gt; [135790, "Matthew B. Taylor"] -&gt; [975310, "Andrew I. Jackson"]
+Slot 15: [778399, "Susan G. Wilson"]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Collision Resolution: Separate Chaining with a Linked List
+A hash function will often map different keys to the same bucket; this is called a collision. As we can see in the example, Buckets 9, 12, and 14 each contain more than one element. To handle these collisions, our hash table uses a method called separate chaining.</p>
+</div>
+<div class="paragraph">
+<p>In this method, each bucket is implemented as the head of a singly linked list. Instead of holding a single element, a bucket holds a pointer to the first node in a chain of elements that all hash to that same bucket index.</p>
+</div>
+<div class="paragraph">
+<p>Bucket Structure: The Linked List Node
+Each element in the chain is stored within a node. The structure of this node is fundamental to the implementation and consists of three fields:</p>
+</div>
+<div class="paragraph">
+<p>Key: The unique identifier for the element.</p>
+</div>
+<div class="paragraph">
+<p>Value: The actual data associated with the key.</p>
+</div>
+<div class="paragraph">
+<p>Next: A pointer (or reference) to the next node in the linked list. If there is no next node (i.e., this is the last node in the chain), this field contains null.</p>
+</div>
+<div class="paragraph">
+<p>This node structure is visualized in Figure 6.5c.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig6_5c_bucket.png" alt="Fig6 5c bucket" width="50%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 6.5c. Hash Table Bucket Implemented with a Linked List (Chaining)</p>
+</div>
+<div class="paragraph">
+<p>How It Works in Practice
+Insertion: When a new (key, value) pair is inserted, the hash function hashFunc(key, 16) calculates the index of the target bucket.</p>
+</div>
+<div class="paragraph">
+<p>If the bucket is empty, a new node is created, filled with the key and value, its Next pointer is set to null, and the bucket is made to point to this new node.</p>
+</div>
+<div class="paragraph">
+<p>If the bucket is not empty (a collision occurs), a new node is created and is then linked into the existing list. A common and efficient method is to insert it at the beginning of the chain. In our example (Bucket 9), the chain was built sequentially: first 112233, then 24689 was added to the end, and finally 864201 was added to the end.</p>
+</div>
+<div class="paragraph">
+<p>Fig. 6.5 shows a DRAKON-diagram of the <code>hashInsert(hash, key, value)</code> function, which constructs the hash table by creating and inserting a new node for each key-value pair. The algorithm encapsulates the entire logic described above: calculating the bucket index, handling an empty bucket, and resolving collisions by chaining a new node into the existing linked list.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<a class="image" href="_images/Gig6_5d_hashInsert.svg" target="_blank" rel="noopener"><img src="_images/Fig6_5d_hashInsert.png" alt="Fig6 5d hashInsert" width="50%"></a>
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Fig. 6.5: DRAKON-diagram of the hashInsert(hash, key, value) function</p>
+</div>
+<div class="paragraph">
+<p>Lookup: To find a value by its key, the hash function is applied to find the correct bucket. The linked list in that bucket is then traversed from the head, comparing the search key with the key field of each node until a match is found or the end of the list (null) is reached.</p>
+</div>
+<div class="paragraph">
+<p>Deletion: To delete an element, the hash function leads us to the correct bucket, we traverse the linked list to find the node, and then we remove it by adjusting the Next pointer of the previous node.</p>
+</div>
+<div class="paragraph">
+<p>This chaining method allows the hash table to store an arbitrary number of elements regardless of its fixed size (16 buckets), while maintaining efficient average-case performance for insertions, lookups, and deletions.</p>
 </div>
 <div class="paragraph">
 <p>The implementation of the basic hash table functions using the hash
@@ -988,19 +1009,6 @@ functions of conversion of integers into string (<code>strconv.Atoi(i)</code>) a
 vice versa (<code>strc<em>onv.Itoa(i))</code>).</em> For example, for any four-digit
 number, the hash function is:</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-go hljs" data-lang="go">func  hFunc(i,) int {
-    var j int
-    var s string
-    i = i*i
-    s = strconv.Itoa(i)
-    s = s[3:5]
-    j,_ = strconv.Atoi(s)
-    return j
-}</code></pre>
-</div>
-</div>
 <div class="paragraph">
 <p>A more realistic scenario in hash table construction involves the phenomenon
 known as collision, where multiple keys hash to the same bucket or index.
@@ -1022,6 +1030,7 @@ that hash to that index. These approaches represent two classic hashing schemes:
 </div>
 <div class="paragraph">
 <p>However, this topic is outside the scope of this manual.</p>
+</div>
 </div>
 </div>
 </div>

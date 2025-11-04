@@ -20,13 +20,7 @@ function createNode(key, value, next = null) {
     };
 }
 function hashFunc(key, size) {
-    var hash, i, keyStr;
-    keyStr = String(key);
-    hash = 0;
-    for (i = 0; i < keyStr.length; i++) {
-        hash = Math.imul(hash, 32) - hash + keyStr.charCodeAt(i);
-    }
-    return Math.abs(hash) % size;
+    return Math.abs(key) % size;
 }
 function hashFuncSHA256(key, size) {
     var hashHex, hashInt;
@@ -53,7 +47,7 @@ function hashGet(hash, key) {
 }
 function hashInsert(hash, key, value) {
     var index, node;
-    index = hashFuncSHA256(key, hash.size);
+    index = hashFunc(key, hash.size);
     node = hash.table[index];
     while (true) {
         if (node) {
@@ -77,7 +71,7 @@ function hashLookupByValue(hash, value) {
         while (true) {
             if (node !== null && node !== undefined) {
                 if (node.value === value) {
-                    console.log(`Value "${ value }" found. Key: "${ node.key }`);
+                    console.log(`Value "${ value }" found. key: "${ node.key }`);
                     return node.key;
                 } else {
                     node = node.next;
@@ -87,29 +81,7 @@ function hashLookupByValue(hash, value) {
             }
         }
     }
-    console.log(`Value "${ value }" fouтв. Лун: "${ node.key }"`);
-    return undefined;
-}
-function hashLookupNew(hash, key) {
-    var index, node;
-    index = hashFuncSHA256(key, hash.size);
-    console.log(`Lookup "${ key }" → bucket ${ index }`);
-    node = hash.table[index];
-    if (node !== null) {
-        console.log(`Compare: "${ node.key }"`);
-    }
-    while (true) {
-        if (node == null) {
-            break;
-        } else {
-            if (node.key === key) {
-                return node.value;
-            } else {
-                node = node.next;
-            }
-        }
-    }
-    console.log(`Key "${ key }" is not found in hash-table`);
+    //console.log(`Value "${ value }" found. key: "${ node.key }"`);
     return undefined;
 }
 function hashRemove(hash, value) {
@@ -156,7 +128,7 @@ function hashTraverse(hash) {
 }
 function main() {
     var dataEn, hash, i, key, value;
-    hash = createHashTable(32);
+    hash = createHashTable(16);
     dataEn = [
         [
             123456,
@@ -196,7 +168,7 @@ function main() {
         ],
         [
             889900,
-            'Jessica F. Anderson'
+            'Jessica F. Anders'
         ],
         [
             135790,
@@ -230,7 +202,7 @@ function main() {
     }
     console.log('--- Hash Table Contents ---');
     printHashTable(hash);
-    hashLookupNew(hash, 135790);
+    hashLookupByValue(hash, 135790);
 }
 function printHashTable(hash) {
     var i, node, slotContent;
@@ -248,4 +220,26 @@ function printHashTable(hash) {
         }
         console.log(`Slot ${ i }: ${ slotContent.join(' -> ') || 'Empty' }`);
     }
+}
+function searchHash(hash, key) {
+    var index, node;
+    index = hashFuncSHA256(key, hash.size);
+    console.log(`Lookup "${ key }" → bucket ${ index }`);
+    node = hash.table[index];
+    if (node !== null) {
+        console.log(`Compare: "${ node.key }"`);
+    }
+    while (true) {
+        if (node == null) {
+            break;
+        } else {
+            if (node.key === key) {
+                return node.value;
+            } else {
+                node = node.next;
+            }
+        }
+    }
+    console.log(`Key "${ key }" is not found in hash-table`);
+    return undefined;
 }
