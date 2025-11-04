@@ -13,7 +13,7 @@
         "3": {
             "type": "action",
             "one": "13",
-            "content": "hash = createHashTable(32)"
+            "content": "hash = createHashTable(16)"
         },
         "5": {
             "type": "loopend",
@@ -43,7 +43,7 @@
         "13": {
             "type": "action",
             "one": "6",
-            "content": "dataEn = [\n    [123456, \"John J. Doe\"],\n    [987654, \"Jane K. Smith\"],\n    [112233, \"Peter L. Jones\"],\n    [556677, \"Mary V. Brown\"],\n    [334455, \"David A. Davis\"],\n    [778899, \"Susan G. Wilson\"],\n    [223344, \"Michael D. Garcia\"],\n    [667788, \"Linda E. Rodriguez\"],\n    [445566, \"Christopher H. Martinez\"],\n    [889900, \"Jessica F. Anderson\"],\n    [135790, \"Matthew B. Taylor\"],\n    [024689, \"Ashley C. Thomas\"],\n    [975310, \"Andrew I. Jackson\"],\n    [864201, \"Sarah N. White\"],\n    [753192, \"Daniel O. Harris\"],\n    [642083, \"Brittany P. Lewis\"],\n];"
+            "content": "dataEn = [\n    [123456, \"John J. Doe\"],\n    [987654, \"Jane K. Smith\"],\n    [112233, \"Peter L. Jones\"],\n    [556677, \"Mary V. Brown\"],\n    [334455, \"David A. Davis\"],\n    [778899, \"Susan G. Wilson\"],\n    [223344, \"Michael D. Garcia\"],\n    [667788, \"Linda E. Rodriguez\"],\n    [445566, \"Christopher H. Martinez\"],\n    [889900, \"Jessica F. Anders\"],\n    [135790, \"Matthew B. Taylor\"],\n    [024689, \"Ashley C. Thomas\"],\n    [975310, \"Andrew I. Jackson\"],\n    [864201, \"Sarah N. White\"],\n    [753192, \"Daniel O. Harris\"],\n    [642083, \"Brittany P. Lewis\"],\n];"
         },
         "15": {
             "type": "branch",
@@ -73,7 +73,7 @@
             "type": "action",
             "one": "15",
             "two": "",
-            "content": "hashLookupNew(hash, 135790)"
+            "content": "hashLookupByValue(hash, 135790)"
         }
     }
 }

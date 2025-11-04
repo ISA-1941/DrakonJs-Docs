@@ -19,13 +19,7 @@ function createNode(key, value, next = null) {
     };
 }
 function hashFunc(key, size) {
-    var hash, i, keyStr;
-    keyStr = String(key);
-    hash = 0;
-    for (i = 0; i < keyStr.length; i++) {
-        hash = Math.imul(hash, 32) - hash + keyStr.charCodeAt(i);
-    }
-    return Math.abs(hash) % size;
+    return Math.abs(key) % size;
 }
 function hashGet(hash, key) {
     var index, node;
@@ -201,7 +195,7 @@ function main() {
         ],
         [
             889900,
-            'Jessica F. Anderson'
+            'Jessica F. Anders'
         ],
         [
             135790,
