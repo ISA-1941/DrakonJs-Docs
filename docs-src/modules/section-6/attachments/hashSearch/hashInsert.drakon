@@ -12,7 +12,7 @@
         "3": {
             "type": "action",
             "one": "7",
-            "content": "index = hashFuncSHA256(key, hash.size)"
+            "content": "index = hashFunc(key, hash.size)"
         },
         "7": {
             "type": "action",

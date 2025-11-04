@@ -12,7 +12,7 @@
         "3": {
             "type": "action",
             "one": "13",
-            "content": "console.log(\n    `Value \"${value}\" fouтв. Лун: \"${node.key}\"`\n)"
+            "content": "console.log(\n    `Value \"${value}\" found. key: \"${node.key}\"`\n)"
         },
         "4": {
             "type": "loopend",
@@ -50,7 +50,7 @@
         "10": {
             "type": "action",
             "one": "11",
-            "content": "console.log(\n    `Value \"${value}\" found. Key: \"${node.key}`\n)"
+            "content": "console.log(\n    `Value \"${value}\" found. key: \"${node.key}`\n)"
         },
         "11": {
             "type": "action",

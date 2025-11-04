@@ -219,24 +219,7 @@ Figure 6.4. DRAKON-diagram of algorithms deletion, search, insertion by value an
 
 === 6.4. Hashing
 
-The search time of an item in a data set depends on the number of
-element value comparisons. In order to reduce search times and thus
-improve computational efficiency, fewer comparisons are needed. This can be achieved by converting a larger data set into a smaller range called hashing, resulting in hash tables.
-
-From the perspective of the theory of abstract data types (ADT), a
-hash-table is a data structure that implements the interface of an
-associative array that allows you to store key-value pairs and perform three basic operations: 
-the operation of adding a new pair, search operation and operation to delete the key-value pair. 
-From a programming position, a hash table is a collection of items 
-containing a key-value pair, where the key is computed by a special 
-function called a `hash function`. A `hash-table`, in turn, 
-consists of buckets, a set of elements with matching or close hash values
-of the function. 
-There are different methods of constructing a `hash function`, the simplest 
-of which is the residual method, where the hash function is defined 
-as the remainder of the division of two numbers (`x, m`), where `x` 
-is the item of the set, `m` is the number of buckets. In JavaScript, 
-the `hash function` for this method is: `h = x % m`.
+==== Over View of Hash Tables
 
 The search time of an item in a data set depends on the number of element value comparisons. In order to reduce search times and thus improve computational efficiency, fewer comparisons are needed. This can be achieved by converting a larger data set into a smaller range called hashing, resulting in hash tables.
 
@@ -244,17 +227,17 @@ From the perspective of the theory of abstract data types (ADT), a hash-table is
 
 From a programming position, a hash table is a collection of items containing a key-value pair, where the key is computed by a special function called a hash function. A hash-table, in turn, consists of buckets, a set of elements with matching or close hash values of the function.
 
-We will conduct a detailed analysis of the hash table creation process utilizing the JavaScript programming language within the DrakonTech. First, a hash table structure is created through the createHashTable function that initializes an array of specified size filled with null values (Figure 6.5a): 
+We will conduct a detailed analysis of the hash table creation process utilizing the JavaScript programming language within the DrakonTech. First, a hash table structure is created through the `createHashTable function` that initializes an array of specified size filled with null values (Figure 6.5a): 
 
-image::{imagesdir}/Fig6_5a_createHashTable.png[width=75%]
+image::{imagesdir}/Fig6_5a_createHashTable.png[width=50%]
 
 [.text-center]
 Figure 6.5a. DRAKON-diagram of Hash Table Creation
 
-For storing individual elements, the createNode function is used (see Figure 6.5b), 
+For storing individual elements, the `createNode function` is used (see Figure 6.5b), 
 which creates a node containing the key-value pair and an optional reference to the next node for collision resolution through chaining ()
 
-image::{imagesdir}/Fig6_5b_createNodes.png[width=75%]
+image::{imagesdir}/Fig6_5b_createNodes.png[width=50%]
 
 [.text-center]
 Figure 6.5b. DRAKON-diagram of Node Creation
@@ -263,70 +246,308 @@ Figure 6.5b. DRAKON-diagram of Node Creation
 These two fundamental functions provide the foundation for building a complete hash table implementation 
 in JavaScript, enabling efficient key-value storage and retrieval operations.
 
-As a result, this hash table would have to have as many single linked
-lists (buckets) as was specified by the Size constant. In the above case
-the number of slots is 15. 
-As an example, consider constructing a hash-table of size `m` = 15 for a
-collection of integers from 0 to 120. The hash table slots are
-originally empty:
+As an example, consider constructing a hash-table of size `m = 32` for a collection of 16 key-value pairs, where the key is an identification number and the value is a full name (Table 1). 
 
-[cols="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1", options="header"]
+[.text-right]
+Table 1. The collection of 16 key-value pairs
+
+[cols="1,2,1,3,2", options="header"]
 |===
-|0 |1 |2 |3 |4 |5 |6 |7 |8 |9 |10 |11 |12 |13 |14
+| Slot |Address of memory| Key | Value |Next Address 
 
-|- |- |- |- |- |- |- |- |- |- |- |- |- |- |-
+| 0
+| 0x0000
+| Empty
+| Empty
+| Empty
+
+| 1
+| 0x1000
+| 642083
+| Brittany P. Lewis
+| null
+
+| 2
+| 0x2000
+| 753192
+| Daniel O. Harris
+| null
+
+| 3
+| 0x3000
+| Empty
+| Empty
+| Empty
+
+| 4
+| 0x4000
+| 556677
+| Mary V. Brown
+| null
+
+| 5
+| 0x5000
+| Empty
+| Empty
+| Empty
+
+| 6
+| 0x6000
+| Empty
+| Empty
+| Empty
+
+| 7
+| 0x7000
+| Empty
+| Empty
+| Empty
+
+| 8
+| 0x8000
+| 889900
+| Jessica F. Anderson
+| 0x8100
+
+|
+| 0x8100
+| 112233
+| Peter L. Jones
+| null
+
+| 9
+| 0x9000
+| Empty
+| Empty
+| Empty
+
+| 10
+| 0xA000
+| 334455
+| David A. Davis
+| null
+
+| 11
+| 0xB000
+| Empty
+| Empty
+| *Empty`
+
+| 12
+| 0xC000
+| 24689
+| Ashley C. Thomas
+| null
+
+| 13
+| 0xD000
+| Empty
+| Empty
+| *Empty`
+
+| 14
+| 0xE000
+| 778899
+| Susan G. Wilson
+| 0xE100
+
+|
+| 0xE100
+| 987654
+| Jane K. Smith
+| null
+
+| 15
+| 0xF000
+| 123456
+| John J. Doe
+| null
+
+| 16
+| 0x10000
+| Empty
+| Empty
+| Empty
+
+| 17
+| 0x11000
+| Empty
+| Empty
+| *Empty`
+
+| 18
+| 0x12000
+| Empty
+| Empty
+| *Empty`
+
+| 19
+| 0x13000
+| Empty
+| Empty
+| *Empty`
+
+| 20
+| 0x14000
+| Empty
+| Empty
+| *Empty`
+
+| 21
+| 0x15000
+| Empty
+| Empty
+| *Empty`
+
+| 22
+| 0x16000
+| Empty
+| Empty
+| *Empty`
+
+| 23
+| 0x17000
+| 135790
+| Matthew B. Taylor
+| null
+
+| 24
+| 0x18000
+| 445566
+| Christopher H. Martinez
+| null
+
+| 25
+| 0x19000
+| 864201
+| Sarah N. White
+| null
+
+| 26
+| 0x1A000
+| Empty
+| Empty
+| *Empty`
+
+| 27
+| 0x1B000
+| Empty
+| Empty
+| *Empty`
+
+| 28
+| 0x1C000
+| 223344
+| Michael D. Garcia
+| null
+
+| 29
+| 0x1D000
+| Empty
+| Empty
+| *Empty`
+
+| 30
+| 0x1E000
+| 667788
+| Linda E. Rodriguez
+| null
+
+| 31
+| 0x1F000
+| 975310
+| Andrew I. Jackson
+| null
 |===
 
-A hash function that establishes a relationship between an element and its 
-corresponding slot must accept any element from the dataset, specifically 
-ranging from 0 to 120, and return an integer that corresponds to a slot 
-number between 0 and 14. The algorithm implementing the remainder method 
-sequentially processes each element from the original set, dividing it by 15 
-and returning the remainder as the hash value. This can be expressed as 
-`\( h(item) = item \mod 15 \)`. For instance, the hash code for the element 119 
-is calculated as `\( 119 \mod 15 = 14 \)` (where `\( 119 - 15 \times 7 = 14 \))`, 
-thus placing the value 119 into the corresponding slot.
+A **hash function** transforms a *key* (in our case, a six-digit numerical identifier) into a **hash address** — the index of a cell in the hash table where the corresponding value (for example, an employee record) will be stored.
+The **value itself is not hashed**; it is simply stored at the computed address. Thus, hashing is always applied **to the key only**, providing fast and efficient access to data based on the key.
 
-[cols="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1", options="header"]
-|===
-|0 |1 |2 |3 |4 |5 |6 |7 |8 |9 |10 |11 |12 |13 |14
+Each cell (or slot) in the hash table represents a collection of singly linked nodes, where each node contains three fields: the key, the value, and the address of the next node stored in the same slot.
 
-|- |- |- |- |- |- |- |- |- |- |- |- |- |- |119
-|===
 
-The algorithm then identifies slots for other elements, gradually
-filling them. When the algorithm encounters element 104 in the loop,
-then the remainder of the division is `104%15 = 14`, so this element will
-also be included in the 14th slot. In this way, each slot will
-accumulate corresponding elements with one index hash. For example, for
-an index hash of 8, the slot will consist of these elements: 113 : 98 :
-83 : 68 : 53 : 38 : 23 : 8. And the entire hash table will be as follows
-(Table 6.1.):
+Depending on how many elements are mapped to the same hash address, three situations may occur:
 
-Table 6.1. Hash-table of 15 slots
+Empty slot – no elements have been hashed to this address.
+Single-node slot – only one key-value pair occupies this position.
+Chained slot – multiple nodes form a linked list when several keys produce the same hash value (a collision).
 
-[options="header"]
-|====
-| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14
-| 105 | 106 | 107 | 108 | 109 | 110 | 111 | 112 | 113 | 114 | 115 | 116 | 117 | 118 | 119
-| 103 | 91 | 92 | 103 | 94 | 95 | 96 | 97 | 98 | 99 | 100 | 101 | 102 | 103 | 104
-| 88 | 76 | 77 | 78 | 79 | 80 | 81 | 82 | 83 | 84 | 85 | 86 | 87 | 88 | 89
-| 73 | 61 | 62 | 63 | 64 | 65 | 66 | 67 | 68 | 69 | 70 | 71 | 72 | 73 | 74
-| 58 | 46 | 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54 | 55 | 56 | 57 | 58 | 59
-| 43 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44
-| 28 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29
-| 13 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14
-|====
+There are many different types of hash functions, and they vary in design, performance, and collision behavior. However, to demonstrate the hashing process, we will choose the simplest hash function, calculated as the remainder of dividing the hash table element's `key` by the number of buckets (`size`), where a bucket represents a slot or container in the hash table that can hold one or more elements.
 
-Thus, the remainder method converts a collection of 120 integers into a
-hash table of 15 slots. The search for an element is now greatly
-accelerated as it takes two steps: first, the hash function `h =(x % m)`
-computes the hash index, and then the search is done in a 7-element
-slot. The algorithm based on the residual method is represented by the
-following DRAKON-diagrams (Figure 6.6.). Here `hinsert` - module of
-filling with elements of slots on `hash`-function, `hLookup`-module of
-search of element in hash-table, `hTravers` - module of passage on
-`hash`-table.
+[source,js]
+----
+function hashFunc(key, size) {
+    return Math.abs(key) % size;
+}
+----
+
+In our case, we have chosen the number of buckets (`size`) to be 16. As a result of applying the hash function, a hash table with 16 buckets is formed. Figure 6.5.c shows slots containing information about (key, value) pairs:
+
+[source,js]
+----
+Slot 0: [123456, "John J. Doe"]
+Slot 1: []
+Slot 2: []
+Slot 3: [642083, "Brittany P. Lewis"]
+Slot 4: []
+Slot 5: [556677, "Mary V. Brown"]
+Slot 6: [987654, "Jane K. Smith"]
+Slot 7: [334455, "David A. Davis"]
+Slot 8: [753192, "Daniel O. Harris"]
+Slot 9: [112233, "Peter L. Jones"] -> [24689, "Ashley C. Thomas"] -> [864201, "Sarah N. White"]
+Slot 10: [223514, "Michael D. Garcia"]
+Slot 11: []
+Slot 12: [667788, "Linda E. Rodriguez"] -> [889900, "Jessica F. Anders"]
+Slot 13: []
+Slot 14: [445566, "Christopher H. Martinez"] -> [135790, "Matthew B. Taylor"] -> [975310, "Andrew I. Jackson"]
+Slot 15: [778399, "Susan G. Wilson"]
+----
+
+Collision Resolution: Separate Chaining with a Linked List
+A hash function will often map different keys to the same bucket; this is called a collision. As we can see in the example, Buckets 9, 12, and 14 each contain more than one element. To handle these collisions, our hash table uses a method called separate chaining.
+
+In this method, each bucket is implemented as the head of a singly linked list. Instead of holding a single element, a bucket holds a pointer to the first node in a chain of elements that all hash to that same bucket index.
+
+Bucket Structure: The Linked List Node
+Each element in the chain is stored within a node. The structure of this node is fundamental to the implementation and consists of three fields:
+
+Key: The unique identifier for the element.
+
+Value: The actual data associated with the key.
+
+Next: A pointer (or reference) to the next node in the linked list. If there is no next node (i.e., this is the last node in the chain), this field contains null.
+
+This node structure is visualized in Figure 6.5c.
+
+image::{imagesdir}/Fig6_5c_bucket.png[width=50%]
+
+[.text-center]
+Figure 6.5c. Hash Table Bucket Implemented with a Linked List (Chaining) 
+
+How It Works in Practice
+Insertion: When a new (key, value) pair is inserted, the hash function hashFunc(key, 16) calculates the index of the target bucket.
+
+If the bucket is empty, a new node is created, filled with the key and value, its Next pointer is set to null, and the bucket is made to point to this new node.
+
+If the bucket is not empty (a collision occurs), a new node is created and is then linked into the existing list. A common and efficient method is to insert it at the beginning of the chain. In our example (Bucket 9), the chain was built sequentially: first 112233, then 24689 was added to the end, and finally 864201 was added to the end. 
+
+Fig. 6.5 shows a DRAKON-diagram of the `hashInsert(hash, key, value)` function, which constructs the hash table by creating and inserting a new node for each key-value pair. The algorithm encapsulates the entire logic described above: calculating the bucket index, handling an empty bucket, and resolving collisions by chaining a new node into the existing linked list.
+
+image::{imagesdir}/Fig6_5d_hashInsert.png[width=50%, link="{imagesdir}/Gig6_5d_hashInsert.svg", window = "_blank"]  
+
+[.text-center]
+Fig. 6.5: DRAKON-diagram of the hashInsert(hash, key, value) function
+
+Lookup: To find a value by its key, the hash function is applied to find the correct bucket. The linked list in that bucket is then traversed from the head, comparing the search key with the key field of each node until a match is found or the end of the list (null) is reached.
+
+Deletion: To delete an element, the hash function leads us to the correct bucket, we traverse the linked list to find the node, and then we remove it by adjusting the Next pointer of the previous node.
+
+This chaining method allows the hash table to store an arbitrary number of elements regardless of its fixed size (16 buckets), while maintaining efficient average-case performance for insertions, lookups, and deletions.
+
+
+
+
+
 
 The implementation of the basic hash table functions using the hash
 function is as follows: 
@@ -382,18 +603,7 @@ functions of conversion of integers into string (`strconv.Atoi(i)`) and
 vice versa (`strc__onv.Itoa(i))`).__ For example, for any four-digit
 number, the hash function is:
 
-[source,go]
-----
-func  hFunc(i,) int {
-    var j int
-    var s string
-    i = i*i
-    s = strconv.Itoa(i)
-    s = s[3:5]
-    j,_ = strconv.Atoi(s)
-    return j
-}
-----
+
 
 A more realistic scenario in hash table construction involves the phenomenon
 known as collision, where multiple keys hash to the same bucket or index. 
