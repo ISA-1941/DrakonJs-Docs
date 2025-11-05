@@ -896,7 +896,7 @@ Next: A pointer (or reference) to the next node in the linked list. If there is 
 </div>
 <div class="paragraph">
 <p>How It Works in Practice
-Insertion: When a new (key, value) pair is inserted, the hash function <code>hashFunc(key, 16)</code> calculates the index of the target bucket. If the bucket is empty, a new node is created, filled with the key and value, its Next pointer is set to null, and the bucket is made to point to this new node. If the bucket is not empty (a collision occurs), a new node is created and is then linked into the existing list. A common and efficient method is to insert it at the beginning of the chain. In our example (Bucket 9), the chain was built sequentially: first 112233, then 24689 was added to the end, and finally 864201 was added to the end.</p>
+Insertion: When a new (key, value) pair is inserted, the hash function <code>hashFunc(key, 16)</code> calculates the index of the target bucket. If the bucket is empty, a new node is created, filled with the key and value, its Next pointer is set to null, and the bucket is made to point to this new node. If the bucket is not empty (a collision occurs), a new node is created and is then linked into the existing list. A common and efficient method is to insert it at the beginning of the chain (LIFO method). In our example (Bucket 9), the last element inserted (864201) became the head of the chain, followed by the previously inserted element (112233).</p>
 </div>
 <div class="paragraph">
 <p>DRAKON-diagrams of algorithms for implementing the basic functions of working with hash-tables are shown in Figure 6.6.</p>
