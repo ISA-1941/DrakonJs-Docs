@@ -917,22 +917,21 @@ The algorithm encapsulates the entire logic described above: calculating the buc
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/Fig6_6b_searchHash.svg" target="_blank" rel="noopener"><img src="_images/Fig6_6b_searchHash.png" alt="Fig6 6b searchHash" width="50%"></a>
+<a class="image" href="_images/Fig6_6b_searchHash.svg" target="_blank" rel="noopener"><img src="_images/Fig6_6b_searchHash.png" alt="Fig6 6b searchHash" width="75%"></a>
 </div>
 </div>
 <div class="paragraph">
 <p>c). Hash Table Traversal Function</p>
 </div>
-<div class="imageblock unresolved">
-<div class="content">
-<a class="image" href="_images/Fig6_6c_hashTraverse.svg" target="_blank" rel="noopener"><img src="_images/Fig6_6c_hashTraverse.png" alt="Fig6 6c hashTraverse" width="50%"></a>
-</div>
+<div class="paragraph">
+<p>This function demonstrates how to iterate through the entire hash table, printing all stored Elements and revealing the structure of the linked list chains used for collision resolution.
+image::_images/Fig6_6c_hashTraverse.png[width=50%, link="_images/Fig6_6c_hashTraverse.svg", window="_blank"]</p>
 </div>
 <div class="paragraph">
 <p>d) Hash Table Deletion Function</p>
 </div>
 <div class="paragraph">
-<p>Consider the algorithm for removing an element from the hash-table.Suppose we delete element 74. First, the bucket containing the item to be removed is determined. It then passes through the elements of this bucket, where after each <code>node.Value == value</code> check, the current element is stored in the <code>nodePrev</code> variable. If the above condition is met, the <code>nodePrev.nextNode</code> field (<code>0xc0000386d0</code>) is changed to (<code>0xc00384f0</code>), that is, the deleted element is skipped (Figure 6.5d.):</p>
+<p>Consider the algorithm for removing an element from the hash-table.Suppose we delete element 74. First, the bucket containing the item to be removed is determined. It then passes through the elements of this bucket, where after each <code>node.Value == value</code> check, the current element is stored in the <code>nodePrev</code> variable. If the above condition is met, the <code>nodePrev.nextNode</code> field (<code>0xc0000386d0</code>) is changed to (<code>0xc00384f0</code>), that is, the deleted element is skipped:</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
@@ -940,39 +939,7 @@ The algorithm encapsulates the entire logic described above: calculating the buc
 </div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 6.5. DRAKON-diagrams of Hash Table Algorithms</p>
-</div>
-<div class="paragraph">
-<p>Another example of a "good" hash function is for use with integer key
-values, the mean square method. The mean square method squares the key
-value and then extracts the average digits of the result, giving a value
-in the range from 0 to M. Software implementation of hash function
-algorithm creation in Golang language is reduced to the use of built-in
-functions of conversion of integers into string (<code>strconv.Atoi(i)</code>) and
-vice versa (<code>strc<em>onv.Itoa(i))</code>).</em> For example, for any four-digit
-number, the hash function is:</p>
-</div>
-<div class="paragraph">
-<p>A more realistic scenario in hash table construction involves the phenomenon
-known as collision, where multiple keys hash to the same bucket or index.
-In many cases, two or more keys are hashed identically, resulting in their
-mapping to the same slot in the hash table. To handle this situation, there are
-two primary strategies: either locate an alternative entry for the new key or
-maintain a separate list at each index in the hash table to accommodate all keys
-that hash to that index. These approaches represent two classic hashing schemes:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>оpen addressing hashing with linear testing;</p>
-</li>
-<li>
-<p>сhain hashing or so-called multidimensional hashing.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>However, this topic is outside the scope of this manual.</p>
+<p>Figure 6.6. Basic DRAKON-diagrams of Hash Table Algorithms</p>
 </div>
 </div>
 </div>
