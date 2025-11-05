@@ -853,21 +853,22 @@ Chained slot – multiple nodes form a linked list when several keys produce the
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">Slot 0: [123456, "John J. Doe"]
-Slot 1: []
-Slot 2: []
-Slot 3: [642083, "Brittany P. Lewis"]
-Slot 4: []
-Slot 5: [556677, "Mary V. Brown"]
-Slot 6: [987654, "Jane K. Smith"]
-Slot 7: [334455, "David A. Davis"]
-Slot 8: [753192, "Daniel O. Harris"]
-Slot 9: [112233, "Peter L. Jones"] -&gt; [24689, "Ashley C. Thomas"] -&gt; [864201, "Sarah N. White"]
-Slot 10: [223514, "Michael D. Garcia"]
-Slot 11: []
-Slot 12: [667788, "Linda E. Rodriguez"] -&gt; [889900, "Jessica F. Anders"]
-Slot 13: []
-Slot 14: [445566, "Christopher H. Martinez"] -&gt; [135790, "Matthew B. Taylor"] -&gt; [975310, "Andrew I. Jackson"]
-Slot 15: [778399, "Susan G. Wilson"]</code></pre>
+Slot 0: 223344 -&gt; Michael D. Garcia -&gt; 123456 -&gt; John J. Doe
+Slot 1: 24689 -&gt; Ashley C. Thomas
+Slot 2: Empty
+Slot 3: 642083 -&gt; Brittany P. Lewis -&gt; 778899 -&gt; Susan G. Wilson
+Slot 4: Empty
+Slot 5: 556677 -&gt; Mary V. Brown
+Slot 6: 987654 -&gt; Jane K. Smith
+Slot 7: 334455 -&gt; David A. Davis
+Slot 8: 753192 -&gt; Daniel O. Harris
+Slot 9: 864201 -&gt; Sarah N. White -&gt; 112233 -&gt; Peter L. Jones
+Slot 10: Empty
+Slot 11: Empty
+Slot 12: 889900 -&gt; Jessica F. Anders -&gt; 667788 -&gt; Linda E. Rodriguez
+Slot 13: Empty
+Slot 14: 975310 -&gt; Andrew I. Jackson -&gt; 135790 -&gt; Matthew B. Taylor -&gt; 445566 -&gt; Christopher H. Martinez
+Slot 15: Empty</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -895,7 +896,7 @@ Next: A pointer (or reference) to the next node in the linked list. If there is 
 </div>
 <div class="paragraph">
 <p>How It Works in Practice
-Insertion: When a new (key, value) pair is inserted, the hash function hashFunc(key, 16) calculates the index of the target bucket. If the bucket is empty, a new node is created, filled with the key and value, its Next pointer is set to null, and the bucket is made to point to this new node. If the bucket is not empty (a collision occurs), a new node is created and is then linked into the existing list. A common and efficient method is to insert it at the beginning of the chain. In our example (Bucket 9), the chain was built sequentially: first 112233, then 24689 was added to the end, and finally 864201 was added to the end.</p>
+Insertion: When a new (key, value) pair is inserted, the hash function <code>hashFunc(key, 16)</code> calculates the index of the target bucket. If the bucket is empty, a new node is created, filled with the key and value, its Next pointer is set to null, and the bucket is made to point to this new node. If the bucket is not empty (a collision occurs), a new node is created and is then linked into the existing list. A common and efficient method is to insert it at the beginning of the chain. In our example (Bucket 9), the chain was built sequentially: first 112233, then 24689 was added to the end, and finally 864201 was added to the end.</p>
 </div>
 <div class="paragraph">
 <p>DRAKON-diagrams of algorithms for implementing the basic functions of working with hash-tables are shown in Figure 6.6.</p>
