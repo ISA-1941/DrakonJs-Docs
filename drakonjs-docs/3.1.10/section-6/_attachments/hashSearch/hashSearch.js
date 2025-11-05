@@ -48,6 +48,7 @@ function hashGet(hash, key) {
 function hashInsert(hash, key, value) {
     var index, node;
     index = hashFunc(key, hash.size);
+    console.log("key = ", key, "index =", index);
     node = hash.table[index];
     while (true) {
         if (node) {

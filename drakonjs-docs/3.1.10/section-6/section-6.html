@@ -454,7 +454,7 @@ A.", "Shafler B.”, "Wiley D.", "Brown G.", "Black H.". In this list you
 should delete the entry " Brown G." and then add a new entry "Singer B."
 placing it after the entry "Wiley D.". After that, you should delete the
 duplicates of the entry " Shafler B." leaving only one. The
-corresponding DRAKON-diagrams are presented in Figure 6.4 a,b,c,d:</p>
+corresponding DRAKON-diagrams are presented in Figure 6.4 a,b,c,d,e,f</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
@@ -462,10 +462,7 @@ corresponding DRAKON-diagrams are presented in Figure 6.4 a,b,c,d:</p>
 </div>
 </div>
 <div class="paragraph text-center">
-<p>a). Function <code>main()`</code></p>
-</div>
-<div class="paragraph">
-<p>b). function of pushing new items (<code>pushFront(list,val) and pushback(list,val)</code>)</p>
+<p>a). Function <code>main()</code></p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
@@ -478,10 +475,7 @@ corresponding DRAKON-diagrams are presented in Figure 6.4 a,b,c,d:</p>
 </div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 6.4. DRAKON-diagrams of  pushFront/pushBack algorithms</p>
-</div>
-<div class="paragraph">
-<p>c). function of searching <code>searchData(val)</code></p>
+<p>b). Function of pushing new items (<code>pushFront(list,val) and pushback(list,val)</code>)</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
@@ -489,10 +483,7 @@ corresponding DRAKON-diagrams are presented in Figure 6.4 a,b,c,d:</p>
 </div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 6.4. DRAKON-diagrams of  search algorithms</p>
-</div>
-<div class="paragraph">
-<p>d). function of deletion <em>RemoveVal(val)</em></p>
+<p>c). Function of searching <code>searchData(val)</code></p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
@@ -500,10 +491,7 @@ corresponding DRAKON-diagrams are presented in Figure 6.4 a,b,c,d:</p>
 </div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 6.4. DRAKON-diagrams of  deletion algorithms</p>
-</div>
-<div class="paragraph">
-<p>e). function of inserting by value <em>PushVal + NodeWithVal</em></p>
+<p>d). Function of deletion <code>RemoveVal(val)</code></p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
@@ -515,13 +503,16 @@ corresponding DRAKON-diagrams are presented in Figure 6.4 a,b,c,d:</p>
 <a class="image" href="_images/Fig6_4e_nodeWithVal.svg" target="_blank" rel="noopener"><img src="_images/Fig6_4e_nodeWithVal.png" alt="Fig6 4e nodeWithVal" width="50%"></a>
 </div>
 </div>
-<div class="paragraph">
-<p>f). function of removing duplicates <em>removeDupli</em></p>
+<div class="paragraph text-center">
+<p>e). Function of inserting by value <code>PushVal + NodeWithVal</code></p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
 <a class="image" href="_images/Fig6_4f_RemoveDupli.svg" target="_blank" rel="noopener"><img src="_images/Fig6_4f_removeDupli.png" alt="Fig6 4f removeDupli" width="75%"></a>
 </div>
+</div>
+<div class="paragraph text-center">
+<p>f). Function of removing duplicates <code>removeDupli</code></p>
 </div>
 <div class="paragraph text-center">
 <p>Figure 6.4. DRAKON-diagram of algorithms deletion, search, insertion by value and dublicate deletion</p>
@@ -880,15 +871,19 @@ Slot 15: [778399, "Susan G. Wilson"]</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Collision Resolution: Separate Chaining with a Linked List
-A hash function will often map different keys to the same bucket; this is called a collision. As we can see in the example, Buckets 9, 12, and 14 each contain more than one element. To handle these collisions, our hash table uses a method called separate chaining.</p>
+<p><strong>Collision Resolution: Separate Chaining with a Linked List</strong></p>
+</div>
+<div class="paragraph">
+<p>A hash function will often map different keys to the same bucket; this is called a collision. As we can see in the example, Buckets 9, 12, and 14 each contain more than one element. To handle these collisions, our hash table uses a method called separate chaining.</p>
 </div>
 <div class="paragraph">
 <p>In this method, each bucket is implemented as the head of a singly linked list. Instead of holding a single element, a bucket holds a pointer to the first node in a chain of elements that all hash to that same bucket index.</p>
 </div>
 <div class="paragraph">
-<p>Bucket Structure: The Linked List Node
-Each element in the chain is stored within a node. The structure of this node is fundamental to the implementation and consists of three fields:</p>
+<p><strong>Bucket Implementation: The Structure of a Linked List Node</strong></p>
+</div>
+<div class="paragraph">
+<p>Each element in the chain is stored within a node. The structure of this node is fundamental to the implementation and consists of three fields:</p>
 </div>
 <div class="paragraph">
 <p>Key: The unique identifier for the element.</p>
