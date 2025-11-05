@@ -530,45 +530,22 @@ b). Hash Table Search Function
 To find a value by its key, the hash function is applied to find the correct bucket. The linked list in that bucket is then traversed from the head, comparing the search key with the key field of each node until a match is found or the end of the list (null) is reached.
 
 //image::{imagesdir}/Fig6_5b_searchHash.png[width=75%]
-image::{imagesdir}/Fig6_6b_searchHash.png[width=50%, link="{imagesdir}/Fig6_6b_searchHash.svg", window="_blank"]
+image::{imagesdir}/Fig6_6b_searchHash.png[width=75%, link="{imagesdir}/Fig6_6b_searchHash.svg", window="_blank"]
 
 c). Hash Table Traversal Function 
 
+This function demonstrates how to iterate through the entire hash table, printing all stored Elements and revealing the structure of the linked list chains used for collision resolution.
 //image::{imagesdir}/Fig6_5c_hashTraverse.png[width=75%]
 image::{imagesdir}/Fig6_6c_hashTraverse.png[width=50%, link="{imagesdir}/Fig6_6c_hashTraverse.svg", window="_blank"]
 
 d) Hash Table Deletion Function
 
-Consider the algorithm for removing an element from the hash-table.Suppose we delete element 74. First, the bucket containing the item to be removed is determined. It then passes through the elements of this bucket, where after each `node.Value == value` check, the current element is stored in the `nodePrev` variable. If the above condition is met, the `nodePrev.nextNode` field (`0xc0000386d0`) is changed to (`0xc00384f0`), that is, the deleted element is skipped (Figure 6.5d.):
+Consider the algorithm for removing an element from the hash-table.Suppose we delete element 74. First, the bucket containing the item to be removed is determined. It then passes through the elements of this bucket, where after each `node.Value == value` check, the current element is stored in the `nodePrev` variable. If the above condition is met, the `nodePrev.nextNode` field (`0xc0000386d0`) is changed to (`0xc00384f0`), that is, the deleted element is skipped:
 
 //image::{imagesdir}/Fig6_5d_hashRemove.png[width=75%]
 image::{imagesdir}/Fig6_6d_hashRemove.png[width=75%, link="{imagesdir}/Fig6_6d_hashRemove.svg", window="_blank"]
 
 [.text-center]
-Figure 6.5. DRAKON-diagrams of Hash Table Algorithms
+Figure 6.6. Basic DRAKON-diagrams of Hash Table Algorithms
 
 
-Another example of a "good" hash function is for use with integer key
-values, the mean square method. The mean square method squares the key
-value and then extracts the average digits of the result, giving a value
-in the range from 0 to M. Software implementation of hash function
-algorithm creation in Golang language is reduced to the use of built-in
-functions of conversion of integers into string (`strconv.Atoi(i)`) and
-vice versa (`strc__onv.Itoa(i))`).__ For example, for any four-digit
-number, the hash function is:
-
-
-
-A more realistic scenario in hash table construction involves the phenomenon
-known as collision, where multiple keys hash to the same bucket or index. 
-In many cases, two or more keys are hashed identically, resulting in their 
-mapping to the same slot in the hash table. To handle this situation, there are 
-two primary strategies: either locate an alternative entry for the new key or 
-maintain a separate list at each index in the hash table to accommodate all keys 
-that hash to that index. These approaches represent two classic hashing schemes:
-
-
-* оpen addressing hashing with linear testing;
-* сhain hashing or so-called multidimensional hashing.
-
-However, this topic is outside the scope of this manual.
