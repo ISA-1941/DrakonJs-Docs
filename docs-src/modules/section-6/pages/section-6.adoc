@@ -508,7 +508,7 @@ Key: The unique identifier for the element.
 Value: The actual data associated with the key.
 Next: A pointer (or reference) to the next node in the linked list. If there is no next node (i.e., this is the last node in the chain), this field contains null. This node structure is visualized in Figure 6.5c.
 
-image::{imagesdir}/Fig6_5c_bucket.png[width=50%]
+image::{imagesdir}/Fig6_5c_bucket.png[width=75%]
 
 [.text-center]
 Figure 6.5c. Hash Table Bucket Implemented with a Linked List (Chaining) 
