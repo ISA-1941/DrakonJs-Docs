@@ -245,6 +245,6 @@ function printHashTable(hash) {
                 break;
             }
         }
-        console.log(`Slot ${ i }: ${ slotContent.join(' -> ') || 'Empty' }`);
+        //console.log(`Slot ${ i }: ${ slotContent.join(' -> ') || 'Empty' }`);
     }
 }
