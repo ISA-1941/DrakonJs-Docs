@@ -163,15 +163,13 @@ A.", "Shafler B.”, "Wiley D.", "Brown G.", "Black H.". In this list you
 should delete the entry " Brown G." and then add a new entry "Singer B."
 placing it after the entry "Wiley D.". After that, you should delete the
 duplicates of the entry " Shafler B." leaving only one. The
-corresponding DRAKON-diagrams are presented in Figure 6.4 a,b,c,d:
+corresponding DRAKON-diagrams are presented in Figure 6.4 a,b,c,d,e,f
 
 //image::{imagesdir}/Fig6_4a_main.png[width=75%]
 image::{imagesdir}/Fig6_4a_main.png[width=50%, link="{imagesdir}/Fig6_4a_main.svg", window="_blank"]
 
 [.text-center]
-a). Function `main()``
-
-b). function of pushing new items (`pushFront(list,val) and pushback(list,val)`)
+a). Function `main()`
 
 //image::{imagesdir}/Fig6_4b_pushFront.png[width=75%]
 image::{imagesdir}/Fig6_4b_pushFront.png[width=50%, link="{imagesdir}/Fig6_4b_pushFront.svg", window="_blank"]
@@ -180,27 +178,19 @@ image::{imagesdir}/Fig6_4b_pushFront.png[width=50%, link="{imagesdir}/Fig6_4b_pu
 image::{imagesdir}/Fig6_4b_pushBack.png[width=50%, link="{imagesdir}/Fig6_4b_pushBack.svg", window="_blank"]
 
 [.text-center]
-
-Figure 6.4. DRAKON-diagrams of  pushFront/pushBack algorithms
-
-c). function of searching `searchData(val)`
+b). Function of pushing new items (`pushFront(list,val) and pushback(list,val)`)
 
 //image::{imagesdir}/Fig6_4c_searchData.png[width=75%]
 image::{imagesdir}/Fig6_4c_searchData.png[width=50%, link="{imagesdir}/Fig6_4c_searchData.svg", window="_blank"]
 
 [.text-center]
-
-Figure 6.4. DRAKON-diagrams of  search algorithms
-
-d). function of deletion _RemoveVal(val)_
+c). Function of searching `searchData(val)`
 
 //image::{imagesdir}/Fig6_4d_removeVal.png[width=75%]
 image::{imagesdir}/Fig6_4d_removeVal.png[width=50%, link="{imagesdir}/Fig6_4d_removeVal.svg", window="_blank"]
 
 [.text-center]
-Figure 6.4. DRAKON-diagrams of  deletion algorithms
-
-e). function of inserting by value _PushVal + NodeWithVal_
+d). Function of deletion `RemoveVal(val)`
 
 //image::{imagesdir}/Fig6_4d_removeVal.png[width=100%]
 image::{imagesdir}/Fig6_4e_pushVal.png[width=50%, link="{imagesdir}/Fig6_4e_pushVal.svg", window="_blank"]
@@ -208,10 +198,14 @@ image::{imagesdir}/Fig6_4e_pushVal.png[width=50%, link="{imagesdir}/Fig6_4e_push
 //image::{imagesdir}/Fig6_4e_nodeWithVal.png[width=75%]
 image::{imagesdir}/Fig6_4e_nodeWithVal.png[width=50%, link="{imagesdir}/Fig6_4e_nodeWithVal.svg", window="_blank"]
 
-f). function of removing duplicates _removeDupli_
+[.text-center]
+e). Function of inserting by value `PushVal + NodeWithVal`
 
 //image::{imagesdir}/Fig6_4f_removeDupli.png[width=75%]
 image::{imagesdir}/Fig6_4f_removeDupli.png[width=75%, link="{imagesdir}/Fig6_4f_RemoveDupli.svg", window="_blank"]
+
+[.text-center]
+f). Function of removing duplicates `removeDupli`
 
 [.text-center]
 Figure 6.4. DRAKON-diagram of algorithms deletion, search, insertion by value and dublicate deletion
@@ -503,12 +497,14 @@ Slot 14: [445566, "Christopher H. Martinez"] -> [135790, "Matthew B. Taylor"] ->
 Slot 15: [778399, "Susan G. Wilson"]
 ----
 
-Collision Resolution: Separate Chaining with a Linked List
+**Collision Resolution: Separate Chaining with a Linked List**
+
 A hash function will often map different keys to the same bucket; this is called a collision. As we can see in the example, Buckets 9, 12, and 14 each contain more than one element. To handle these collisions, our hash table uses a method called separate chaining.
 
 In this method, each bucket is implemented as the head of a singly linked list. Instead of holding a single element, a bucket holds a pointer to the first node in a chain of elements that all hash to that same bucket index.
 
-Bucket Structure: The Linked List Node
+**Bucket Implementation: The Structure of a Linked List Node**
+
 Each element in the chain is stored within a node. The structure of this node is fundamental to the implementation and consists of three fields:
 
 Key: The unique identifier for the element.
