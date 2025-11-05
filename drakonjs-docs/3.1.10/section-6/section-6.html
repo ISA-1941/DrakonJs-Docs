@@ -895,55 +895,29 @@ Next: A pointer (or reference) to the next node in the linked list. If there is 
 </div>
 <div class="paragraph">
 <p>How It Works in Practice
-Insertion: When a new (key, value) pair is inserted, the hash function hashFunc(key, 16) calculates the index of the target bucket. If the bucket is empty, a new node is created, filled with the key and value, its Next pointer is set to null, and the bucket is made to point to this new node. If the bucket is not empty (a collision occurs), a new node is created and is then linked into the existing list. A common and efficient method is to insert it at the beginning of the chain. In our example (Bucket 9), the chain was built sequentially: first 112233, then 24689 was added to the end, and finally 864201 was added to the end.
-Fig. 6.5 shows a DRAKON-diagram of the <code>hashInsert(hash, key, value)</code> function, which constructs the hash table by creating and inserting a new node for each key-value pair. The algorithm encapsulates the entire logic described above: calculating the bucket index, handling an empty bucket, and resolving collisions by chaining a new node into the existing linked list.</p>
+Insertion: When a new (key, value) pair is inserted, the hash function hashFunc(key, 16) calculates the index of the target bucket. If the bucket is empty, a new node is created, filled with the key and value, its Next pointer is set to null, and the bucket is made to point to this new node. If the bucket is not empty (a collision occurs), a new node is created and is then linked into the existing list. A common and efficient method is to insert it at the beginning of the chain. In our example (Bucket 9), the chain was built sequentially: first 112233, then 24689 was added to the end, and finally 864201 was added to the end.</p>
+</div>
+<div class="paragraph">
+<p>DRAKON-diagrams of algorithms for implementing the basic functions of working with hash-tables are shown in Figure 6.6.</p>
+</div>
+<div class="paragraph">
+<p>a). Hash Table Creation Function
+The algorithm encapsulates the entire logic described above: calculating the bucket index, handling an empty bucket, and resolving collisions by chaining a new node into the existing linked list.</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/Gig6_5d_hashInsert.svg" target="_blank" rel="noopener"><img src="_images/Fig6_5d_hashInsert.png" alt="Fig6 5d hashInsert" width="50%"></a>
-</div>
-</div>
-<div class="paragraph text-center">
-<p>Fig. 6.5: DRAKON-diagram of the hashInsert(hash, key, value) function</p>
-</div>
-<div class="paragraph">
-<p>Lookup: To find a value by its key, the hash function is applied to find the correct bucket. The linked list in that bucket is then traversed from the head, comparing the search key with the key field of each node until a match is found or the end of the list (null) is reached.</p>
-</div>
-<div class="paragraph">
-<p>Deletion: To delete an element, the hash function leads us to the correct bucket, we traverse the linked list to find the node, and then we remove it by adjusting the Next pointer of the previous node.</p>
-</div>
-<div class="paragraph">
-<p>This chaining method allows the hash table to store an arbitrary number of elements regardless of its fixed size (16 buckets), while maintaining efficient average-case performance for insertions, lookups, and deletions.</p>
-</div>
-<div class="paragraph">
-<p>The implementation of the basic hash table functions using the hash
-function is as follows:
-1.Create a <code>HashTable</code> structure list of the
-size <code>m</code> to store objects.
-2. Compute the object’s hash code by passing it
-through the hashfunction.
-3. Get the bucket hash indices where the
-objects will be saved.
-4. Save these objects in the designated bucket.</p>
-</div>
-<div class="paragraph">
-<p>DRAKON-diagrams of algorithms for implementing the main functions of
-working with hash-tables are shown in Figure 6.5.</p>
-</div>
-<div class="paragraph">
-<p>a). Hash Table Creation Function</p>
-</div>
-<div class="imageblock unresolved">
-<div class="content">
-<a class="image" href="_images/Fig6_5a_hashInsert.svg" target="_blank" rel="noopener"><img src="_images/Fig6_5a_hashInsert.png" alt="Fig6 5a hashInsert" width="50%"></a>
+<a class="image" href="_images/Fig6_6a_hashInsert.svg" target="_blank" rel="noopener"><img src="_images/Fig6_6a_hashInsert.png" alt="Fig6 6a hashInsert" width="75%"></a>
 </div>
 </div>
 <div class="paragraph">
 <p>b). Hash Table Search Function</p>
 </div>
+<div class="paragraph">
+<p>To find a value by its key, the hash function is applied to find the correct bucket. The linked list in that bucket is then traversed from the head, comparing the search key with the key field of each node until a match is found or the end of the list (null) is reached.</p>
+</div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/Fig6_5b_searchHash.svg" target="_blank" rel="noopener"><img src="_images/Fig6_5b_searchHash.png" alt="Fig6 5b searchHash" width="50%"></a>
+<a class="image" href="_images/Fig6_6b_searchHash.svg" target="_blank" rel="noopener"><img src="_images/Fig6_6b_searchHash.png" alt="Fig6 6b searchHash" width="50%"></a>
 </div>
 </div>
 <div class="paragraph">
@@ -951,24 +925,18 @@ working with hash-tables are shown in Figure 6.5.</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/Fig6_5c_hashTraverse.svg" target="_blank" rel="noopener"><img src="_images/Fig6_5c_hashTraverse.png" alt="Fig6 5c hashTraverse" width="50%"></a>
+<a class="image" href="_images/Fig6_6c_hashTraverse.svg" target="_blank" rel="noopener"><img src="_images/Fig6_6c_hashTraverse.png" alt="Fig6 6c hashTraverse" width="50%"></a>
 </div>
 </div>
 <div class="paragraph">
 <p>d) Hash Table Deletion Function</p>
 </div>
 <div class="paragraph">
-<p>Consider the algorithm for removing an element from the hash-table.
-Suppose we delete element 74. First, the bucket containing the item to
-be removed is determined. It then passes through the elements of this
-bucket, where after each <code>node.Value == value</code> check, the current
-element is stored in the <code>nodePrev</code> variable. If the above condition is
-met, the <code>nodePrev.nextNode</code> field (<code>0xc0000386d0</code>) is changed to
-(<code>0xc00384f0</code>), that is, the deleted element is skipped (Figure 6.5d.):</p>
+<p>Consider the algorithm for removing an element from the hash-table.Suppose we delete element 74. First, the bucket containing the item to be removed is determined. It then passes through the elements of this bucket, where after each <code>node.Value == value</code> check, the current element is stored in the <code>nodePrev</code> variable. If the above condition is met, the <code>nodePrev.nextNode</code> field (<code>0xc0000386d0</code>) is changed to (<code>0xc00384f0</code>), that is, the deleted element is skipped (Figure 6.5d.):</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/Fig6_5d_hashRemove.svg" target="_blank" rel="noopener"><img src="_images/Fig6_5d_hashRemove.png" alt="Fig6 5d hashRemove" width="75%"></a>
+<a class="image" href="_images/Fig6_6d_hashRemove.svg" target="_blank" rel="noopener"><img src="_images/Fig6_6d_hashRemove.png" alt="Fig6 6d hashRemove" width="75%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
