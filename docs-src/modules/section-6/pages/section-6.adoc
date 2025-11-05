@@ -480,21 +480,22 @@ In our case, we have chosen the number of buckets (`size`) to be 16. As a result
 [source,js]
 ----
 Slot 0: [123456, "John J. Doe"]
-Slot 1: []
-Slot 2: []
-Slot 3: [642083, "Brittany P. Lewis"]
-Slot 4: []
-Slot 5: [556677, "Mary V. Brown"]
-Slot 6: [987654, "Jane K. Smith"]
-Slot 7: [334455, "David A. Davis"]
-Slot 8: [753192, "Daniel O. Harris"]
-Slot 9: [112233, "Peter L. Jones"] -> [24689, "Ashley C. Thomas"] -> [864201, "Sarah N. White"]
-Slot 10: [223514, "Michael D. Garcia"]
-Slot 11: []
-Slot 12: [667788, "Linda E. Rodriguez"] -> [889900, "Jessica F. Anders"]
-Slot 13: []
-Slot 14: [445566, "Christopher H. Martinez"] -> [135790, "Matthew B. Taylor"] -> [975310, "Andrew I. Jackson"]
-Slot 15: [778399, "Susan G. Wilson"]
+Slot 0: 223344 -> Michael D. Garcia -> 123456 -> John J. Doe
+Slot 1: 24689 -> Ashley C. Thomas
+Slot 2: Empty
+Slot 3: 642083 -> Brittany P. Lewis -> 778899 -> Susan G. Wilson
+Slot 4: Empty
+Slot 5: 556677 -> Mary V. Brown
+Slot 6: 987654 -> Jane K. Smith
+Slot 7: 334455 -> David A. Davis
+Slot 8: 753192 -> Daniel O. Harris
+Slot 9: 864201 -> Sarah N. White -> 112233 -> Peter L. Jones
+Slot 10: Empty
+Slot 11: Empty
+Slot 12: 889900 -> Jessica F. Anders -> 667788 -> Linda E. Rodriguez
+Slot 13: Empty
+Slot 14: 975310 -> Andrew I. Jackson -> 135790 -> Matthew B. Taylor -> 445566 -> Christopher H. Martinez
+Slot 15: Empty
 ----
 
 **Collision Resolution: Separate Chaining with a Linked List**
@@ -514,7 +515,7 @@ image::{imagesdir}/Fig6_5c_bucket.png[width=100%]
 Figure 6.5c. Hash Table Bucket Implemented with a Linked List (Chaining) 
 
 How It Works in Practice
-Insertion: When a new (key, value) pair is inserted, the hash function hashFunc(key, 16) calculates the index of the target bucket. If the bucket is empty, a new node is created, filled with the key and value, its Next pointer is set to null, and the bucket is made to point to this new node. If the bucket is not empty (a collision occurs), a new node is created and is then linked into the existing list. A common and efficient method is to insert it at the beginning of the chain. In our example (Bucket 9), the chain was built sequentially: first 112233, then 24689 was added to the end, and finally 864201 was added to the end. 
+Insertion: When a new (key, value) pair is inserted, the hash function `hashFunc(key, 16)` calculates the index of the target bucket. If the bucket is empty, a new node is created, filled with the key and value, its Next pointer is set to null, and the bucket is made to point to this new node. If the bucket is not empty (a collision occurs), a new node is created and is then linked into the existing list. A common and efficient method is to insert it at the beginning of the chain. In our example (Bucket 9), the chain was built sequentially: first 112233, then 24689 was added to the end, and finally 864201 was added to the end. 
 
 
 DRAKON-diagrams of algorithms for implementing the basic functions of working with hash-tables are shown in Figure 6.6.
