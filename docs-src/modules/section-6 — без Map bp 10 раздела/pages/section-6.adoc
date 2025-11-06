@@ -404,3 +404,15 @@ that hash to that index. These approaches represent two classic hashing schemes:
 * сhain hashing or so-called multidimensional hashing.
 
 However, this topic is outside the scope of this manual.
+==== Topics Beyond the Scope of This Book
+
+This section has focused on the fundamental principles of hashing and the implementation of a hash table using *separate chaining*.
+However, several important and advanced aspects of modern hashing remain outside the scope of this book:
+
+* **Open addressing techniques** — linear probing, quadratic probing, and double hashing.
+* **Dynamic resizing** of hash tables when the load factor exceeds a threshold.
+* **Cryptographic hash functions** (MD5, SHA family, etc.) used for data integrity and security rather than indexing.
+* **Perfect hashing** and **minimal perfect hashing**, which eliminate collisions entirely but require complex precomputation.
+* **Distributed hash tables (DHTs)** — used in peer-to-peer networks and blockchain architectures.
+
+These topics will be explored in future works devoted to large-scale data management, high-performance systems, and secure information storage.
