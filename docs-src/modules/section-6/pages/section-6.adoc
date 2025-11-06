@@ -124,10 +124,10 @@ DRAKON-diagrams are provided along with assessments of their time and space comp
 | DRAKON-diagram of the Hash Deletion Algorithm
 |===
 
-
+NOTE
 All illustrations in this section are provided in the **SVG** format.  
 Click on any image to open it in a separate window for detailed viewing.
-====
+
 
 === 6.1. Linear data searching
 
