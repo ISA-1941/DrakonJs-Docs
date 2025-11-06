@@ -213,13 +213,13 @@ Figure 6.4. DRAKON-diagram of algorithms deletion, search, insertion by value an
 
 === 6.4. Hashing
 
-==== Over View of Hash Tables
+==== Overview of Hash Tables
 
-The search time of an item in a data set depends on the number of element value comparisons. In order to reduce search times and thus improve computational efficiency, fewer comparisons are needed. This can be achieved by converting a larger data set into a smaller range called hashing, resulting in hash tables.
+The time required to locate an item within a data set depends primarily on the number of value comparisons performed during the search process. In order to reduce search times and thus improve computational efficiency, fewer comparisons are needed. This can be achieved by converting a larger data set into a smaller range called hashing, resulting in hash tables.
 
-From the perspective of the theory of abstract data types (ADT), a hash-table is a data structure that implements the interface of an associative array that allows you to store key-value pairs and perform three basic operations: the operation of adding a new pair, search operation and operation to delete the key-value pair.
+From the perspective of the theory of abstract data types (ADT), a hash table is a data structure that implements the interface of an associative array that allows you to store key-value pairs and perform three basic operations: the operation of adding a new pair, search operation and operation to delete the key-value pair.
 
-From a programming position, a hash table is a collection of items containing a key-value pair, where the key is computed by a special function called a hash function. A hash-table, in turn, consists of buckets, a set of elements with matching or close hash values of the function.
+From a programming perspective, a hash table is a collection of key–value pairs, where each key is transformed by a special function called a hash function into an index that determines the storage location of the value. A hash table, in turn, consists of buckets, a set of elements with matching or close hash values of the function.
 
 We will conduct a detailed analysis of the hash table creation process utilizing the JavaScript programming language within the DrakonTech. First, a hash table structure is created through the `createHashTable function` that initializes an array of specified size filled with null values (Figure 6.5a): 
 
@@ -240,14 +240,14 @@ Figure 6.5b. DRAKON-diagram of Node Creation
 These two fundamental functions provide the foundation for building a complete hash table implementation 
 in JavaScript, enabling efficient key-value storage and retrieval operations.
 
-As an example, consider constructing a hash-table of size `m = 32` for a collection of 16 key-value pairs, where the key is an identification number and the value is a full name (Table 1). 
+As an example, consider constructing a hash table of size `m = 16` for a collection of 16 key-value pairs, where the key is an identification number and the value is a full name (Table 1). 
 
 [.text-right]
 Table 1. The collection of 16 key-value pairs
 
 [cols="1,2,1,3,2", options="header"]
 |===
-| Slot |Address of memory| Key | Value |Next Address 
+| Slot |Address Memory| Key | Value |Next Pointer 
 
 | 0
 | 0x0000
@@ -459,12 +459,10 @@ The **value itself is not hashed**; it is simply stored at the computed address.
 
 Each cell (or slot) in the hash table represents a collection of singly linked nodes, where each node contains three fields: the key, the value, and the address of the next node stored in the same slot.
 
-
 Depending on how many elements are mapped to the same hash address, three situations may occur:
-
-Empty slot – no elements have been hashed to this address.
-Single-node slot – only one key-value pair occupies this position.
-Chained slot – multiple nodes form a linked list when several keys produce the same hash value (a collision).
+• Empty slot – no elements are mapped to this address.
+• Single-node slot – exactly one key–value pair occupies this position.
+• Chained slot – multiple nodes are linked together when several keys produce the same hash value (a collision).
 
 There are many different types of hash functions, and they vary in design, performance, and collision behavior. However, to demonstrate the hashing process, we will choose the simplest hash function, calculated as the remainder of dividing the hash table element's `key` by the number of buckets (`size`), where a bucket represents a slot or container in the hash table that can hold one or more elements.
 
@@ -516,9 +514,10 @@ Figure 6.5c. Hash Table Bucket Implemented with a Linked List (Chaining)
 
 How It Works in Practice
 Insertion: When a new (key, value) pair is inserted, the hash function `hashFunc(key, 16)` calculates the index of the target bucket. If the bucket is empty, a new node is created, filled with the key and value, its Next pointer is set to null, and the bucket is made to point to this new node. If the bucket is not empty (a collision occurs), a new node is created and is then linked into the existing list. A common and efficient method is to insert it at the beginning of the chain (LIFO method). In our example (Bucket 9), the last element inserted (864201) became the head of the chain, followed by the previously inserted element (112233).
+This approach ensures constant-time average performance for insertion, lookup, and deletion operations, assuming a well-designed hash function and a reasonable load factor.
 
 
-DRAKON-diagrams of algorithms for implementing the basic functions of working with hash-tables are shown in Figure 6.6.
+DRAKON-diagrams of algorithms for implementing the basic functions of working with hash tables are shown in Figure 6.6.
 
 a). Hash Table Creation Function 
 The algorithm encapsulates the entire logic described above: calculating the bucket index, handling an empty bucket, and resolving collisions by chaining a new node into the existing linked list.
@@ -541,7 +540,7 @@ image::{imagesdir}/Fig6_6c_hashTraverse.png[width=50%, link="{imagesdir}/Fig6_6c
 
 d) Hash Table Deletion Function
 
-Consider the algorithm for removing an element from the hash-table.Suppose we delete element 74. First, the bucket containing the item to be removed is determined. It then passes through the elements of this bucket, where after each `node.Value == value` check, the current element is stored in the `nodePrev` variable. If the above condition is met, the `nodePrev.nextNode` field (`0xc0000386d0`) is changed to (`0xc00384f0`), that is, the deleted element is skipped:
+Consider the algorithm for removing an element from the hash table.Suppose we delete element 123456. First, the bucket containing the item to be removed is determined. It then passes through the elements of this bucket, after each check `node.value === value`, the current element is stored in the `nodePrev` variable. If the above condition is met, the `nodePrev.nextNode` field (`0xc0000386d0`) is changed to (`0xc00384f0`), that is, the deleted element is skipped:
 
 //image::{imagesdir}/Fig6_5d_hashRemove.png[width=75%]
 image::{imagesdir}/Fig6_6d_hashRemove.png[width=75%, link="{imagesdir}/Fig6_6d_hashRemove.svg", window="_blank"]
@@ -549,4 +548,43 @@ image::{imagesdir}/Fig6_6d_hashRemove.png[width=75%, link="{imagesdir}/Fig6_6d_h
 [.text-center]
 Figure 6.6. Basic DRAKON-diagrams of Hash Table Algorithms
 
+==== Choosing a Hash Function
+
+The efficiency of a hash table largely depends on the quality of its *hash function*.
+A well-designed function should distribute keys as evenly as possible across all available buckets, minimizing the likelihood of collisions.
+
+In this section, we used a simple modular hash function:
+
+## [source,js]
+
+function hashFunc(key, size) {
+return Math.abs(key) % size;
+}
+-
+
+This approach is sufficient for demonstration purposes and for relatively small data sets where keys are uniformly distributed.
+However, as the data volume grows, the limitations of such a simple function become more noticeable.
+For large-scale systems, more advanced hash functions — based on **bitwise transformations**, **multiplicative methods**, or even **cryptographic algorithms** — provide a more uniform distribution of keys and reduce clustering.
+
+The advantages of complex hash functions become evident when:
+
+* The number of stored records reaches thousands or millions.
+* The key values show regular or repetitive patterns (for example, sequential identifiers).
+* Collisions significantly affect performance due to frequent insertions and deletions.
+
+Ultimately, choosing a hash function involves balancing **speed** and **uniformity** of key distribution.
+In practical systems, the best results are often achieved by empirical testing on real data samples rather than through purely theoretical analysis.
+
+==== Topics Beyond the Scope of This Book
+
+This section has focused on the fundamental principles of hashing and the implementation of a hash table using *separate chaining*.
+However, several important and advanced aspects of modern hashing remain outside the scope of this book:
+
+* **Open addressing techniques** — linear probing, quadratic probing, and double hashing.
+* **Dynamic resizing** of hash tables when the load factor exceeds a threshold.
+* **Cryptographic hash functions** (MD5, SHA family, etc.) used for data integrity and security rather than indexing.
+* **Perfect hashing** and **minimal perfect hashing**, which eliminate collisions entirely but require complex precomputation.
+* **Distributed hash tables (DHTs)** — used in peer-to-peer networks and blockchain architectures.
+
+These topics will be explored in future works devoted to large-scale data management, high-performance systems, and secure information storage.
 
