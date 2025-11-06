@@ -951,18 +951,12 @@ A well-designed function should distribute keys as evenly as possible across all
 <div class="paragraph">
 <p>In this section, we used a simple modular hash function:</p>
 </div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">function hashFunc(key, size) {
+    return Math.abs(key) % size;
+}</code></pre>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_sourcejs"><a class="anchor" href="#_sourcejs"></a>[source,js]</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>function hashFunc(key, size) {
-return Math.abs(key) % size;
-}
--</p>
 </div>
 <div class="paragraph">
 <p>This approach is sufficient for demonstration purposes and for relatively small data sets where keys are uniformly distributed.
@@ -988,6 +982,7 @@ For large-scale systems, more advanced hash functions — based on <strong>bitwi
 <div class="paragraph">
 <p>Ultimately, choosing a hash function involves balancing <strong>speed</strong> and <strong>uniformity</strong> of key distribution.
 In practical systems, the best results are often achieved by empirical testing on real data samples rather than through purely theoretical analysis.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_topics_beyond_the_scope_of_this_book"><a class="anchor" href="#_topics_beyond_the_scope_of_this_book"></a>Topics Beyond the Scope of This Book</h4>
@@ -1016,6 +1011,7 @@ However, several important and advanced aspects of modern hashing remain outside
 </div>
 <div class="paragraph">
 <p>These topics will be explored in future works devoted to large-scale data management, high-performance systems, and secure information storage.</p>
+</div>
 </div>
 </div>
 </div>
