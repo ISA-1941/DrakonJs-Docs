@@ -292,7 +292,7 @@ in JavaScript, enabling efficient key-value storage and retrieval operations.
 As an example, consider constructing a hash table of size `m = 16` for a collection of 16 key-value pairs, where the key is an identification number and the value is a full name (Table 1). 
 
 [.text-right]
-.Table 1. The collection of 16 key-value pairs
+Table 2. The collection of 16 key-value pairs
 
 [cols="1,1", options="header"]
 |===
