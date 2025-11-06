@@ -1,6 +1,10 @@
 {
     "history": [
         {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\rotateLeft.drakon",
+            "whenOpened": "2025-11-06T19:21:05.568Z"
+        },
+        {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\findNode.drakon",
             "whenOpened": "2025-11-06T18:59:34.409Z"
         },
@@ -11,10 +15,6 @@
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\rebalance.drakon",
             "whenOpened": "2025-11-06T17:27:04.640Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\rotateLeft.drakon",
-            "whenOpened": "2025-11-06T17:22:58.056Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\insertNode.drakon",

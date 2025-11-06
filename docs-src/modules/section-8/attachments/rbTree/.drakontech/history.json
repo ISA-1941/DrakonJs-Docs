@@ -1,6 +1,18 @@
 {
     "history": [
         {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixDoubleBlackStep.drakon",
+            "whenOpened": "2025-11-06T19:33:26.569Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixDoubleBlack.drakon",
+            "whenOpened": "2025-11-06T19:33:24.387Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixRedRed.drakon",
+            "whenOpened": "2025-11-06T19:27:25.115Z"
+        },
+        {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\Insert.drakon",
             "whenOpened": "2025-10-28T12:59:54.842Z"
         },
@@ -25,24 +37,12 @@
             "whenOpened": "2025-10-28T12:54:47.327Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixDoubleBlackStep.drakon",
-            "whenOpened": "2025-06-20T11:16:53.674Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixDoubleBlack.drakon",
-            "whenOpened": "2025-06-20T11:16:51.898Z"
-        },
-        {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\joinParentChild.drakon",
             "whenOpened": "2025-06-20T11:11:21.978Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\getSibling.drakon",
             "whenOpened": "2025-06-20T11:06:48.915Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixRedRed.drakon",
-            "whenOpened": "2025-06-20T11:06:46.853Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\rotateRight.drakon",

@@ -414,7 +414,7 @@ Figure 8.30. Node Properties and the createNode Factory Function
 
 The DRAKON-diagrams of rotate functions are presented on Figure 8.31a,b.
 
-image::{imagesdir}/Fig8_31_rotateLeft.png[width=75%]
+//image::{imagesdir}/Fig8_31_rotateLeft.png[width=75%]
 image::{imagesdir}/Fig8_31_rotateLeft.png[width=75%, link="{imagesdir}/Fig8_31_rotateLeft.svg", window="_blank"]
 
 [.text-center]
@@ -485,10 +485,11 @@ satisfactory, the rotation and colour change operations are performed (Table ).
 
 The DRAKON-diagram of the red-black tree balancing algorithm when entering a new node is shown in Figure 8.34,8.35.
 
-image::{imagesdir}/Fig8_34_fixRedRed.svg[width=75%]
+//image::{imagesdir}/Fig8_34_fixRedRed.png[width=75%]
+image::{imagesdir}/Fig8_34_fixRedRed.png[width=75%, link="{imagesdir}/Fig8_34_fixRedRed.svg", window="_blank"]
 
 [.text-center]
-Figure 8.35. Red-Black Tree Balancing Algorithm DRAKON-diagram 
+Figure 8.34. Red-Black Tree Balancing Algorithm DRAKON-diagram 
 
 
 image::{imagesdir}/Fig8_35_diagr_figs.svg[width=75%]
