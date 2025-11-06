@@ -96,10 +96,10 @@ a right child. This arrangement of nodes is chosen to demonstrate the
 function of removing nodes, which will be discussed later.
 
 //image::{imagesdir}/Fig8_4_treeProcess.jpg[width=75%]
-image::{imagesdir}/Fig8_4_treeProcess.jpg[width=150%, link="{imagesdir}/Fig8_4_treeProcess.svg", window="_blank"]
+image::{imagesdir}/Fig8_4_treeProcess.jpg[width=125%, link="{imagesdir}/Fig8_4_treeProcess.svg", window="_blank"]
 
 [.text-center]
-Figure 8.4. Building a binary tree
+Figure 8.4. Building a binary tree !!!
 
 8.2.3 Finding a node based on a set value
 
