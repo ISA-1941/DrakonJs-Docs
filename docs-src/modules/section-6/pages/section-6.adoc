@@ -555,12 +555,12 @@ A well-designed function should distribute keys as evenly as possible across all
 
 In this section, we used a simple modular hash function:
 
-## [source,js]
-
+[source,js]
+----
 function hashFunc(key, size) {
-return Math.abs(key) % size;
+    return Math.abs(key) % size;
 }
--
+----
 
 This approach is sufficient for demonstration purposes and for relatively small data sets where keys are uniformly distributed.
 However, as the data volume grows, the limitations of such a simple function become more noticeable.
