@@ -178,7 +178,7 @@ Figure 8.11. DRAKON-diagram of the removal of nodes
 One of the basic tree operations is to traverse tree nodes. Unlike linear data structures, where elements are traversed in a linear order, tree nodes can be traversed in a variety of ways. 
 The traversal, in which each ancestor node is viewed before its descendants, is called a pre-ordered walk or direct-order traversal (_pre-order walk_). There is also an _in-order walk_, where the left subtree is visited from bottom to top, then the root node, then the right subtree. The traversal, in which first descendants are viewed and then ancestors, is called a post-ordered or reverse-order traversal (_post-order walk_). All three cases, including the Dragon diagrams, are shown in the Figure 8.12.
 
-image::{imagesdir}/Fig8_12_PreInPost.jpg[width=75%]
+image::{imagesdir}/Fig8_12_PreInPost.jpg[width=100%]
 
 [.text-center]
 Figure 8.12. Three Classical Tree Traversals: Pre-, In-, Post-Order
