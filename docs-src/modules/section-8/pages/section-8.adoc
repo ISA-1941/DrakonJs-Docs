@@ -74,7 +74,7 @@ A binary search tree is built according to a certain algorithm. Consider the seq
 image::{imagesdir}/Fig8_3a_insert.png[width=100%, link="{imagesdir}/Fig8_3a_insert.svg", window="_blank"]
 
 //image::{imagesdir}/Fig8_3b_createNode.jpg[width=50%]
-image::{imagesdir}/Fig8_3b_createNode.png[width=100%, link="{imagesdir}/ig8_3b_createNode.svg", window="_blank"]
+image::{imagesdir}/Fig8_3b_createNode.png[width=75%, link="{imagesdir}/ig8_3b_createNode.svg", window="_blank"]
 
 [.text-center]
 Fig.8.3 Binary tree DRAKON-diagrams
@@ -95,7 +95,7 @@ children (1,8), a node 15 has only a left child, and a node 19 has only
 a right child. This arrangement of nodes is chosen to demonstrate the
 function of removing nodes, which will be discussed later.
 
-image::{imagesdir}/Fig8_4_treeProcess.jpg[width=10%]
+image::{imagesdir}/Fig8_4_treeProcess.jpg[width=75%]
 
 [.text-center]
 Figure 8.4. Building a binary tree
