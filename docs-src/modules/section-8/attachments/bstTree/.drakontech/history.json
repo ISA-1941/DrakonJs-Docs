@@ -1,6 +1,14 @@
 {
     "history": [
         {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\createNode.drakon",
+            "whenOpened": "2025-11-06T13:26:34.968Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\insertNode.drakon",
+            "whenOpened": "2025-11-06T13:23:56.569Z"
+        },
+        {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\main.drakon",
             "whenOpened": "2025-10-28T12:42:01.264Z"
         },
@@ -31,14 +39,6 @@
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\findNode.drakon",
             "whenOpened": "2025-05-10T18:56:23.165Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\insertNode.drakon",
-            "whenOpened": "2025-05-10T18:29:47.853Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\createNode.drakon",
-            "whenOpened": "2025-05-10T18:12:47.486Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\module.drakon",
