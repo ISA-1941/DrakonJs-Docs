@@ -1,6 +1,10 @@
 {
     "history": [
         {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\findNode.drakon",
+            "whenOpened": "2025-11-06T15:19:25.344Z"
+        },
+        {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\createNode.drakon",
             "whenOpened": "2025-11-06T13:26:34.968Z"
         },
@@ -35,10 +39,6 @@
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\findMin.drakon",
             "whenOpened": "2025-05-11T07:55:51.256Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\findNode.drakon",
-            "whenOpened": "2025-05-10T18:56:23.165Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\bstTree\\module.drakon",
