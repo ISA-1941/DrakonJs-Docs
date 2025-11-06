@@ -300,8 +300,8 @@ Figure 8.24. Process of building a balanced AVL-tree
 
 DRAKON-diagram of the AVL-trees basic operation `findNode(node, val)is shown in Figure 8.25:
 
-image::{imagesdir}/Fig8_25_findNode.png[width=75%]
-image::{imagesdir}/Fig8_25_findNode.png[width=100%, link="{imagesdir}/Fig8_20_findNode.svg", window="_blank"]
+//image::{imagesdir}/Fig8_25_findNode.png[width=75%]
+image::{imagesdir}/Fig8_25_findNode.png[width=100%, link="{imagesdir}/Fig8_25_findNode.svg", window="_blank"]
 
 [.text-center]
 Figure 8.25. DRAKON-diagram depicting the finding a node method
