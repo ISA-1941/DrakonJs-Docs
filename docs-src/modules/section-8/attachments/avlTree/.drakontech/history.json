@@ -1,32 +1,32 @@
 {
     "history": [
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\deleteNode.drakon",
-            "whenOpened": "2025-10-28T13:01:41.303Z"
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\rotateInsert.drakon",
+            "whenOpened": "2025-11-06T17:27:08.606Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\rotateInsert.drakon",
-            "whenOpened": "2025-10-28T13:01:24.231Z"
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\rebalance.drakon",
+            "whenOpened": "2025-11-06T17:27:04.640Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\rotateLeft.drakon",
+            "whenOpened": "2025-11-06T17:22:58.056Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\insertNode.drakon",
+            "whenOpened": "2025-11-06T16:58:47.701Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\deleteNode.drakon",
+            "whenOpened": "2025-10-28T13:01:41.303Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\main.drakon",
             "whenOpened": "2025-05-29T18:22:31.430Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\insertNode.drakon",
-            "whenOpened": "2025-05-29T17:25:31.601Z"
-        },
-        {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\rotateRight.drakon",
             "whenOpened": "2025-05-29T11:48:04.719Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\rotateLeft.drakon",
-            "whenOpened": "2025-05-29T11:48:03.274Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\rebalance.drakon",
-            "whenOpened": "2025-05-29T11:47:59.393Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\height.drakon",
