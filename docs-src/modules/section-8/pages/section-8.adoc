@@ -107,8 +107,8 @@ Another basic operation is the `findNode(value)` function. This function uses a 
 val with the values of other nodes as it traverses the tree. 
 The DRAKON-diagram of the `findNode(node, value)`function is shown in Figure 8.5. 
 
-//image::{imagesdir}/Fig8_5_findNode.jpg[width=100%]
-image::{imagesdir}/Fig8_5_findNode.jpg[width=100%, link="{imagesdir}/Fig8_5_findNode.svg", window="_blank"]
+//image::{imagesdir}/Fig8_5_findNode.png[width=100%]
+image::{imagesdir}/Fig8_5_findNode.png[width=100%, link="{imagesdir}/Fig8_5_findNode.svg", window="_blank"]
 
 [.text-center]
 Figure 8.5. DRAKON-diagram of Node Finding Algorithm
