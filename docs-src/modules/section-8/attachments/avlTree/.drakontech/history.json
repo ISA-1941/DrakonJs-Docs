@@ -1,6 +1,10 @@
 {
     "history": [
         {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\findNode.drakon",
+            "whenOpened": "2025-11-06T18:59:34.409Z"
+        },
+        {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\rotateInsert.drakon",
             "whenOpened": "2025-11-06T17:27:08.606Z"
         },
@@ -35,10 +39,6 @@
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\inOrder.drakon",
             "whenOpened": "2025-05-29T11:47:52.265Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\findNode.drakon",
-            "whenOpened": "2025-05-25T05:31:51.444Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\findMin.drakon",

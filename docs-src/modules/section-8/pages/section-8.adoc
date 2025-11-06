@@ -300,7 +300,8 @@ Figure 8.24. Process of building a balanced AVL-tree
 
 DRAKON-diagram of the AVL-trees basic operation `findNode(node, val)is shown in Figure 8.25:
 
-image::{imagesdir}/Fig8_25_avlfindNode.svg[width=75%]
+image::{imagesdir}/Fig8_25_findNode.png[width=75%]
+image::{imagesdir}/Fig8_25_findNode.png[width=100%, link="{imagesdir}/Fig8_20_findNode.svg", window="_blank"]
 
 [.text-center]
 Figure 8.25. DRAKON-diagram depicting the finding a node method
@@ -310,7 +311,7 @@ Another basic operation, deleting a node with a specified value, consists of the
 image::{imagesdir}/Fig8_26_varDelNode.jpg[width=75%]
 
 [.text-center]
-8.26. Cases for nodes to be removed
+Figure 8.26. Cases for nodes to be removed
 
 {empty}a) The node to be deleted has two non-empty descendants;
 
