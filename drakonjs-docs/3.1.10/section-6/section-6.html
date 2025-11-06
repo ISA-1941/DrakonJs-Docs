@@ -424,7 +424,7 @@ the search interval is empty.</p>
 </div>
 <div class="paragraph">
 <p>The DRAKON-diagram of the binary search algorithm is represented in
-Figure 6.3. (main() module is similar to the previous algorithm):</p>
+Figure 6.3.</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
@@ -562,264 +562,82 @@ in JavaScript, enabling efficient key-value storage and retrieval operations.</p
 <div class="paragraph">
 <p>As an example, consider constructing a hash table of size <code>m = 16</code> for a collection of 16 key-value pairs, where the key is an identification number and the value is a full name (Table 1).</p>
 </div>
-<div class="paragraph text-right">
-<p>Table 1. The collection of 16 key-value pairs</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock frame-all grid-all stretch text-right">
+<caption class="title">Table 2. Table 1. The collection of 16 key-value pairs</caption>
 <colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 22.2222%;">
-<col style="width: 11.1111%;">
-<col style="width: 33.3333%;">
-<col style="width: 22.2223%;">
+<col style="width: 50%;">
+<col style="width: 50%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Slot</th>
-<th class="tableblock halign-left valign-top">Address Memory</th>
 <th class="tableblock halign-left valign-top">Key</th>
 <th class="tableblock halign-left valign-top">Value</th>
-<th class="tableblock halign-left valign-top">Next Pointer</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x0000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x1000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">642083</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brittany P. Lewis</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x2000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">753192</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Daniel O. Harris</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x3000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x4000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">556677</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mary V. Brown</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x5000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x6000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x7000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x8000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">889900</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Jessica F. Anderson</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x8100</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x8100</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">112233</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Peter L. Jones</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x9000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0xA000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">334455</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">David A. Davis</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0xB000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">*Empty`</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0xC000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">24689</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ashley C. Thomas</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0xD000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">*Empty`</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0xE000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">778899</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Susan G. Wilson</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0xE100</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0xE100</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">987654</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Jane K. Smith</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0xF000</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">123456</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">John J. Doe</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x10000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">987654</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jane K. Smith</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">17</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x11000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">*Empty`</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">112233</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Peter L. Jones</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">18</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x12000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">*Empty`</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">556677</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mary V. Brown</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">19</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x13000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">*Empty`</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">334455</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">David A. Davis</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x14000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">*Empty`</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">778899</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Susan G. Wilson</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x15000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">*Empty`</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">22</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x16000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">*Empty`</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">23</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x17000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">135790</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Matthew B. Taylor</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x18000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">445566</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Christopher H. Martinez</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">25</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x19000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">864201</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sarah N. White</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">26</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x1A000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">*Empty`</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">27</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x1B000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">*Empty`</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x1C000</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">223344</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Michael D. Garcia</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">29</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x1D000</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Empty</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">*Empty`</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x1E000</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">667788</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Linda E. Rodriguez</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0x1F000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">445566</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Christopher H. Martinez</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">889900</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jessica F. Anders</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">135790</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Matthew B. Taylor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24689</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ashley C. Thomas</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">975310</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Andrew I. Jackson</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">864201</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sarah N. White</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">753192</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Daniel O. Harris</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">642083</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brittany P. Lewis</p></td>
 </tr>
 </tbody>
 </table>
