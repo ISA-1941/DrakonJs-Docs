@@ -195,7 +195,8 @@ Figure 8.13. Partially sorted input data
 In such practically "degenerate" trees, the complexity of the operations is determined by the number of nodes, i.e. it is almost linear - O(n).
 The left and right subtrees are unbalanced, which can be estimated by the balance coefficient (kb), which is equal to the difference between the heights of the left and right subtrees. Recall that the height of a tree is defined as the length of the longest branch in a subtree (sum of edges). For an ideal binary search tree (a tree where the number of nodes in the left subtree is equal to the number of nodes in the right subtree), this factor is 0 (Figure 8.14).
 
-image::{imagesdir}/Fig8_14_treeIdeal.png[width=75%]
+//image::{imagesdir}/Fig8_14_treeIdeal.png[width=75%]
+image::{imagesdir}/Fig8_14_treeIdeal.png[width=100%, link="{imagesdir}/Fig8_14_treeIdeal.svg", window="_blank"]
                    
 [.text-center]
 Figure 8.14. An ideal binary tree
@@ -213,7 +214,8 @@ nodes on each side, i.e. the tree is perfectly balanced.
 
 The balancing algorithm in its most general form is presented in the following DRAKON-scheme (Figure 8.15)
 
-image::_images/Fig8_15_buildingAvlTree.png[width=75%]
+//image::_images/Fig8_15_buildingAvlTree.png[width=100%]
+image::{imagesdir}/Fig8_15_buildingAvlTree.png[width=100%, link="{imagesdir}/Fig8_15_buildingAvlTree.svg", window="_blank"]
 
 [.text-center]
 Figure 8.15. The balancing algorithm in its most general view 
@@ -227,7 +229,7 @@ The balancing technique boils down to making circular movements of the nodes in 
 
 The right-hand turn is performed when the root node has a balance factor kb = +2 and its left-hand child has a balance factor kb = +1 (Figure 8.16):
 
-image::{imagesdir}/Fig8_16_RR_turn.jpg[width=75%]
+image::{imagesdir}/Fig8_16_RR_turn.jpg[width=100%]
 
 [.text-center]
 Figure 8.16. Right turn
