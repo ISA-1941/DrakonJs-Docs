@@ -70,12 +70,12 @@ no parent node;
 A binary search tree is built according to a certain algorithm. Consider the sequence of integers \{11, 5, 17, 15, 1, 8, 19, 13, 21}, represented as a slice of numbers[]. First the root node \{11} is formed, then in the loop for each node recursively the method
 `insert(tree, value)` is called (Fig. 8.3 a), which in turn calls the method `createNode(value)`, which creates a new node (Fig. 8.3 b).
 
-image::{imagesdir}/Fig8_3a_insert.png[width=75%]
+image::{imagesdir}/Fig8_3a_insertNode.png[width=75%]
 
 image::{imagesdir}/Fig8_3b_createNode.jpg[width=75%]
 
 [.text-center]
-Fig.8.3 Binary tree DRAKON-diagrams
+Fig.8.3 a,b Binary tree DRAKON-diagrams
 
 a) building a tree by insert(node,value); b) creating a node
 
@@ -94,7 +94,7 @@ children (1,8), a node 15 has only a left child, and a node 19 has only
 a right child. This arrangement of nodes is chosen to demonstrate the
 function of removing nodes, which will be discussed later.
 
-image::{imagesdir}/Fig8_4_treeProcess.jpg[width=120%]
+image::{imagesdir}/Fig8_4_treeProcess.jpg[width=10%]
 
 [.text-center]
 Figure 8.4. Building a binary tree
