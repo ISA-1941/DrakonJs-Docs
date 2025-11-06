@@ -248,16 +248,12 @@ center of the search structure and divide the search space in half.</p>
 To enhance the understanding of the practical applications of these algorithms,
 DRAKON-diagrams are provided along with assessments of their time and space complexity.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_list_of_figures"><a class="anchor" href="#_list_of_figures"></a>List of Figures</h2>
-<div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. List of Figures</caption>
 <colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
+<col style="width: 12.5%;">
+<col style="width: 37.5%;">
+<col style="width: 50%;">
 </colgroup>
 <thead>
 <tr>
@@ -313,44 +309,51 @@ DRAKON-diagrams are provided along with assessments of their time and space comp
 <td class="tableblock halign-left valign-top"><p class="tableblock">Removing Duplicate Nodes</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">6.a</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.5a</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Hash Table Creation</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Creating a Hash Table Structure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DRAKON-diagram of the <code>createHashTable</code> Function</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">6.b</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.5b</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Node Creation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DRAKON-diagram of the <code>createNode</code> Function</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.5c</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hash Table Bucket</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Visualization of a Bucket with Linked List (Chaining)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.6a</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hash Table Insertion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DRAKON-diagram of the Hash Insertion Algorithm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.6b</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Hash Table Search</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Searching for an Element by Key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DRAKON-diagram of the Hash Search Algorithm</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">6.c</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.6c</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Hash Table Traversal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Traversing Hash Table Items</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DRAKON-diagram of the Hash Traversal Algorithm</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">6.d</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.6d</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Hash Table Deletion</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Deleting an Element by Key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DRAKON-diagram of the Hash Deletion Algorithm</p></td>
 </tr>
 </tbody>
 </table>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
 <div class="paragraph">
 <p>All illustrations in this section are provided in the <strong>SVG</strong> format.
 Click on any image to open it in a separate window for detailed viewing.</p>
 </div>
-</td>
-</tr>
-</table>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>=== 6.1. Linear data searching</p>
 </div>
-<div class="sect2">
-<h3 id="_6_1_linear_data_searching"><a class="anchor" href="#_6_1_linear_data_searching"></a>6.1. Linear data searching</h3>
 <div class="paragraph">
 <p>a). Linear searching of input data</p>
 </div>
@@ -396,9 +399,9 @@ stopped. This approach saves time and increases productivity. Figure
 <div class="paragraph text-center">
 <p>Figure 6.2. DRAKON-diagram of the Search in a Sorted Array</p>
 </div>
+<div class="paragraph">
+<p>=== 6.2. Binary search for data in a sorted data</p>
 </div>
-<div class="sect2">
-<h3 id="_6_2_binary_search_for_data_in_a_sorted_data"><a class="anchor" href="#_6_2_binary_search_for_data_in_a_sorted_data"></a>6.2. Binary search for data in a sorted data</h3>
 <div class="paragraph">
 <p>Binary search is performed as follows:</p>
 </div>
@@ -440,9 +443,9 @@ taken by a function to perform a given input set of size n will not
 exceed log n. <em>Space complexity</em>: O(1). That is, no extra space
 required.</p>
 </div>
+<div class="paragraph">
+<p>=== 6.3. Searching in Single-Linked List</p>
 </div>
-<div class="sect2">
-<h3 id="_6_3_searching_in_single_linked_list"><a class="anchor" href="#_6_3_searching_in_single_linked_list"></a>6.3. Searching in Single-Linked List</h3>
 <div class="paragraph">
 <p>There are three possibilities for a single-linked list. First, the
 desired value is missing from the list, second, the desired value is
@@ -517,11 +520,12 @@ corresponding DRAKON-diagrams are presented in Figures 6.4 a,b,c,d,e,f</p>
 <div class="paragraph text-center">
 <p>Figure 6.4. DRAKON-diagram of algorithms deletion, search, insertion by value and dublicate deletion</p>
 </div>
+<div class="paragraph">
+<p>=== 6.4. Hashing</p>
 </div>
-<div class="sect2">
-<h3 id="_6_4_hashing"><a class="anchor" href="#_6_4_hashing"></a>6.4. Hashing</h3>
-<div class="sect3">
-<h4 id="_overview_of_hash_tables"><a class="anchor" href="#_overview_of_hash_tables"></a>Overview of Hash Tables</h4>
+<div class="paragraph">
+<p>==== Overview of Hash Tables</p>
+</div>
 <div class="paragraph">
 <p>The time required to locate an item within a data set depends primarily on the number of value comparisons performed during the search process. In order to reduce search times and thus improve computational efficiency, fewer comparisons are needed. This can be achieved by converting a larger data set into a smaller range called hashing, resulting in hash tables.</p>
 </div>
@@ -941,9 +945,9 @@ image::_images/Fig6_6c_hashTraverse.png[width=50%, link="_images/Fig6_6c_hashTra
 <div class="paragraph text-center">
 <p>Figure 6.6. Basic DRAKON-diagrams of Hash Table Algorithms</p>
 </div>
+<div class="paragraph">
+<p>==== Choosing a Hash Function</p>
 </div>
-<div class="sect3">
-<h4 id="_choosing_a_hash_function"><a class="anchor" href="#_choosing_a_hash_function"></a>Choosing a Hash Function</h4>
 <div class="paragraph">
 <p>The efficiency of a hash table largely depends on the quality of its <strong>hash function</strong>.
 A well-designed function should distribute keys as evenly as possible across all available buckets, minimizing the likelihood of collisions.</p>
