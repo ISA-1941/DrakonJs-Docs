@@ -278,8 +278,8 @@ Figure 8.21. DRAKON-diagram depicting the inserting node method
 
 Depending on the location of the new node relative to the parent node and the balance factor values, the left-hand or right-hand rotation methods are performed (Figure 8.22):
 
-image::{imagesdir}/Fig8_22_twoRotates.png[width=75%]
-image::{imagesdir}/Fig8_22_twoRotates.png[width=100%, link="{imagesdir}/Fig8_22_twoRotates.svg", window="_blank"]
+image::{imagesdir}/Fig8_22_twoRotates.jpg[width=75%]
+image::{imagesdir}/Fig8_22_twoRotates.jpg[width=100%, link="{imagesdir}/Fig8_22_twoRotates.svg", window="_blank"]
 
 [.text-center]
 Figure 8.22. Node rotation programme codes
