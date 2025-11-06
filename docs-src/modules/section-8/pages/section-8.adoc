@@ -262,21 +262,24 @@ Consider the balancing process in more detail with an example of tree formation 
 Balance checking are started on the arrival of each new node using the `insertNode(node, value)` function, which determines the position of the new node in the left or right subtree relative to the root node. The choice of the balancing path is determined by the method
 `rotateInsert(node, value)`. A DRAKON-diagrams of the algorithms of the above methods is shown in Figure 8.20. 
 
-image::{imagesdir}/Fig8_20_insertNode.svg[width=75%]
+//image::{imagesdir}/Fig8_20_insertNode.png[width=75%]
+image::{imagesdir}/Fig8_20_insertNode.png[width=100%, link="{imagesdir}/Fig8_20_insertNode.svg", window="_blank"]
 
 [.text-center]
 Figure 8.20. DRAKON-diagram depicting the method of inserting node
 
 The choice of one of the possible balancing paths (rotations) is determined by the `rotateInsert(node, val)` function (Figure 8.21).
 
-image::{imagesdir}/Fig8_21_avlRotateIinsert.svg[width=75%]
+//image::{imagesdir}/Fig8_21_avlRotateIinsert.png[width=75%]
+image::{imagesdir}/Fig8_21_RotateIinsert.png[width=100%, link="{imagesdir}/Fig8_21_RotateIinsert.svg", window="_blank"]
 
 [.text-center]
 Figure 8.21. DRAKON-diagram depicting the inserting node method
 
 Depending on the location of the new node relative to the parent node and the balance factor values, the left-hand or right-hand rotation methods are performed (Figure 8.22):
 
-image::{imagesdir}/Fig8_22_twoRotates.jpg[width=75%]
+image::{imagesdir}/Fig8_22_twoRotates.png[width=75%]
+image::{imagesdir}/Fig8_22_twoRotates.png[width=100%, link="{imagesdir}/Fig8_22_twoRotates.svg", window="_blank"]
 
 [.text-center]
 Figure 8.22. Node rotation programme codes
@@ -290,7 +293,7 @@ Figure 8.23. Example of Left-Left turn balancing
 
 The process of new nodes arriving and rebuilding the resulting AVL-tree by balancing for the input set [1,2,5,6,8,11,13,15,17,19,21] is shown in Figure 8.24.
 
-image::{imagesdir}/Fig8_24_avlTreeProcess.jpg[width=75%]
+image::{imagesdir}/Fig8_24_avlTreeProcess.jpg[width=100%]
 
 [.text-center]
 Figure 8.24. Process of building a balanced AVL-tree
