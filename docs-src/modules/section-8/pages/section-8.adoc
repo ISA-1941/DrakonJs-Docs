@@ -270,8 +270,8 @@ Figure 8.20. DRAKON-diagram depicting the method of inserting node
 
 The choice of one of the possible balancing paths (rotations) is determined by the `rotateInsert(node, val)` function (Figure 8.21).
 
-//image::{imagesdir}/Fig8_21_rotateIinsert.png[width=75%]
-image::{imagesdir}/Fig8_21_rotateIinsert.png[width=100%, link="{imagesdir}/Fig8_21_rotateIinsert.svg", window="_blank"]
+//image::{imagesdir}/Fig8_21_rotateInsert.png[width=75%]
+image::{imagesdir}/Fig8_21_rotateInsert.png[width=100%, link="{imagesdir}/Fig8_21_rotateInsert.svg", window="_blank"]
 
 [.text-center]
 Figure 8.21. DRAKON-diagram depicting the inserting node method
