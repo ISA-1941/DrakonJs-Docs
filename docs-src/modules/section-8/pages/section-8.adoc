@@ -424,7 +424,7 @@ Figure 8.31. Rotate function DRAKON-diagrams (a - rotateLeft; b - rotate right)
 
 In the most general way the red-black tree construction algorithm is presented by the function `Insert(tree, value)`(Figure 8.32):
 
-image::{imagesdir}/Fig8_32_rbInsert.png[width=75%]
+//image::{imagesdir}/Fig8_32_rbInsert.png[width=75%]
 image::{imagesdir}/Fig8_32_rbInsert.png[width=75%, link="{imagesdir}/Fig8_32_rbInsert.svg", window="_blank"]
 
 [.text-center]
