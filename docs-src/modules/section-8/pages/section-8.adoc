@@ -529,7 +529,8 @@ transformations of the tree structure must maintain its properties. The
 DRAKON-diagram of the node removal algorithm is shown in Figures 8.38a,b. This
 algorithm can be divided into three stages.
 
-image::{imagesdir}/Fig8_38a_mindMap_deleteNode.png[width=75%]
+//image::{imagesdir}/Fig8_38a_mindMap_deleteNode.png[width=75%]
+image::{imagesdir}/Fig8_38a_mindMap_deleteNode.png[width=100%, link="{imagesdir}/Fig8_38a_mindMap_deleteNode.svg", window="_blank"]
 
 //image::{imagesdir}/Fig8_38b_deleteNode.png[width=75%]
 image::{imagesdir}/Fig8_38b_deleteNode.png[width=100%, link="{imagesdir}/Fig8_38b_deleteNode.svg", window="_blank"]
