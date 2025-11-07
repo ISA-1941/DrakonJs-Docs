@@ -490,6 +490,7 @@ The DRAKON-diagram of the red-black tree balancing algorithm when entering a new
 //image::{imagesdir}/Fig8_34_fixRedRed.png[width=100%]
 image::{imagesdir}/Fig8_34_fixRedRed.png[width=100%, link="{imagesdir}/Fig8_34_fixRedRed.svg", window="_blank"]
 
+[.text-center]
 .Figure 8.34. Red-Black Tree Balancing Algorithm DRAKON-diagram 
 
 
