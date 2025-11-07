@@ -414,7 +414,7 @@ Figure 8.30. Node Properties and the createNode Factory Function
 
 The DRAKON-diagrams of rotate functions are presented on Figure 8.31a,b.
 
-//image::{imagesdir}/Fig8_31_rotates.png[width=75%]
+image::{imagesdir}/Fig8_31_rotates.png[width=75%]
 image::{imagesdir}/Fig8_31_rotates.png[width=75%, link="{imagesdir}/Fig8_31_rotates.svg", window="_blank"]
 
 [.text-center]
