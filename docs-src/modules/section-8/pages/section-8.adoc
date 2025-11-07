@@ -493,7 +493,7 @@ image::{imagesdir}/Fig8_34_fixRedRed.png[width=100%, link="{imagesdir}/Fig8_34_f
 Figure 8.34. Red-Black Tree Balancing Algorithm DRAKON-diagram 
 
 
-image::{imagesdir}/Fig8_35_diagr_figs.png[width=75%]
+//image::{imagesdir}/Fig8_35_diagr_figs.png[width=75%]
 image::{imagesdir}/Fig8_35_diagr_figs.png[width=100%, link="{imagesdir}/Fig8_35_diagr_figs.svg", window="_blank"]
 
 [.text-center]
