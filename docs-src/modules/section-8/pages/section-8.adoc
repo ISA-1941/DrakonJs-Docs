@@ -443,41 +443,42 @@ Figure 8.33. Designation of the degree of "kinship" of RB Tree nodes (x, P, G, U
 
 To describe the process of balancing the red-black tree, let’s name the set of nodes involved in the implementation of balancing _tree-cluster_ and enter a local syntax:
 *:R or :B* is the color of the node. For example, P:R is the red parent.
-*<= or =>* - the direction of the node position. For example, x <= P - the new node x is located to the left of the parent node P. 
-The different instances of the red and black nodes are shown in the table
-When a new element is inserted, it is assigned a red colour. To satisfy
-the first two rules, it is sufficient to simply repaint the new vertices
-in the desired colour. After each insertion, all these properties of the
-red-black tree must be checked. If at least one property is not
-satisfactory, the rotation and colour change operations are performed (Table ).
+*⇐  or ⇒* - the direction of the node position. For example, x ⇐  P - the new node x is located to the left of the parent node P. 
+The term nodeImage denotes the local configuration of nodes within a tree-cluster,
+including their colors and relative positions (left or right).
+When a new element is inserted, it is initially assigned the red color.
+To satisfy the first two rules, it is sufficient to repaint the new vertex as needed.
+After each insertion, all red-black tree properties must be verified.
+If at least one property is violated, rotation and recoloring operations are performed.
+The different nodeImages representing possible configurations of red and black nodes are summarized in Table 8.3. 
 
-
+:!table-caption:
+.Table 8.3 — NodeImages for Red-Black Tree Insertion Cases
 |===
 | Variant | nodeImage | Violation | Fix strategy
 
-
 | Red Uncle
-| x:R,x<=P; P:R,P<=G; G:B; U:R
+| x:R,x⇐ P; P:R,P⇐ G; G:B; U:R 
 | Both x and P are red; G has two red children (P and U).
 | Recolor P and U to black (P:B, U:B), G to red (G:R); set x = G (propagate upward).
 
 | Black Uncle Case 1 (L–L)
-| x:R,x<=P; P:R,P<=G; G:B; U:B
+| x:R,x⇐ P; P:R,P⇐ G; G:B; U:B
 | x and P are both red and lie on left-left; uncle is black.
 | Recolor P to black (P:B) and G to red (G:R); Right-rotate about (G).
 
 | Black Uncle Case 2 (R–R)
-| x:R,x=>P; P:R,P=>G; G:B; U:B
+| x:R,x⇒P; P:R,P⇒G; G:B; U:B
 | x and P are both red and lie on right-right; uncle is black.
 | Recolor P to black (P:B) and G to red (G:R); Left-rotate about (G).
 
 | Black Uncle Case 3 (L–R)
-| x:R,x=>P; P:R,P<=G; G:B; U:B
+| x:R,x⇒P; P:R,P⇐ G; G:B; U:B
 | both x and P are red; x is right child of P, P is left child of G; uncle is black; 
 | Left-rotate about (P), then treat as (L–L).
 
-| Black Uncle Case 4 s(R–L)
-| x:R,x<=P; P:R,P=>G; G:B; U:B
+| Black Uncle Case 4 (R–L)
+| x:R,x⇐ P; P:R,P⇒G; G:B; U:B
 | x is left child of P, P is right child of G; both x and P are red; uncle is black; 
 | Right-rotate about (P), then treat as (R–R).
 | 
@@ -489,8 +490,7 @@ The DRAKON-diagram of the red-black tree balancing algorithm when entering a new
 //image::{imagesdir}/Fig8_34_fixRedRed.png[width=100%]
 image::{imagesdir}/Fig8_34_fixRedRed.png[width=100%, link="{imagesdir}/Fig8_34_fixRedRed.svg", window="_blank"]
 
-[.text-center]
-Figure 8.34. Red-Black Tree Balancing Algorithm DRAKON-diagram 
+.Figure 8.34. Red-Black Tree Balancing Algorithm DRAKON-diagram 
 
 
 //image::{imagesdir}/Fig8_35_diagr_figs.png[width=75%]
@@ -570,17 +570,14 @@ Figure 8.39. DRAKON-diagram of the node structure correction algorithm when remo
 
 | 1 | x:R, x.leaf | Red leaf node (no children) | Remove directly | No
 
-| 2 | x:B, x<=P; x.child=R | Black node with one red child | Promote child, recolor to black | No
+| 2 | x:B, x⇐ P; x.child=R | Black node with one red child | Promote child, recolor to black | No
 
-| 3 | x:B, x<=P; x.child=B or NIL | Black node with black or null child | Double-black arises | fixDoubleBlack(x) | Yes
+| 3 | x:B, x⇐ P; x.child=B or NIL | Black node with black or null child | Double-black arises | fixDoubleBlack(x) | Yes
 
 | 4 | x:B, x has 2 children; y = min(x.right); y.child=null | Two children, successor is direct child | Replace with y, transplant | Maybe
 
 | 5 | x:B, x has 2 children; y = min(x.right); y.child ≠ null | Two children, successor has child | Replace with y, transplant + reconnect y's child | Maybe
 |===
-
-
-
 
 [cols="1,2,2,2,1", options="header"]
 |===
@@ -601,8 +598,11 @@ Figure 8.39. DRAKON-diagram of the node structure correction algorithm when remo
 
 .Figure 8.X — Replacing a node in a red-black tree using `joinParentChild`
 [caption="Figure 8.X", align="center"]
+
 image::{imagesdir}/Fig8_joinPC.png[width=80%]
+
 [.text-center]
+
 The top diagram illustrates the replacement of node U (`9`) with subtree V (`7`) before calling `joinParentChild(tree, U, V)`.  
 The bottom diagram shows the result of the operation: node `7` has taken the place of `9`, preserving the tree's structure and balance.
 
@@ -612,6 +612,7 @@ removed simply as a node in the binary search tree. If the replacement
 node is a "red" node, or if the removed node is a "red" node, the
 removed node is replaced by another node. There is no need to make any
 further changes to the tree structure (fig.8.37).
+
 image:media/image40.jpg[media/image40,width=670,height=149]
 
 Figure 3.37. Deletion of red node (20)
