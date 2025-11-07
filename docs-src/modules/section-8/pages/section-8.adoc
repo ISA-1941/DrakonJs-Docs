@@ -501,10 +501,10 @@ Figure 8.35. Illustration of Red-Black Tree Balancing Algorithms
 
 The Drakon-diagram of the node rotation algorithms to the red and black tree cluster is shown in Figure 8.36a,b.
 
-image::{imagesdir}/Fig8_36a_rotateLeft.png[width=75%]
+//image::{imagesdir}/Fig8_36a_rotateLeft.png[width=75%]
 image::{imagesdir}/Fig8_36a_rotateLeft.png[width=100%, link="{imagesdir}/Fig8_36a_rotateLeft.svg", window="_blank"]
 
-image::{imagesdir}/Fig8_36b_rotateRight.png[width=75%]
+//image::{imagesdir}/Fig8_36b_rotateRight.png[width=75%]
 image::{imagesdir}/Fig8_36b_rotateRight.png[width=100%, link="{imagesdir}/Fig8_36b_rotateRight.svg", window="_blank"]
 
 [.text-center]
