@@ -535,8 +535,6 @@ image::{imagesdir}/Fig8_38a_mindMap_deleteNode.png[width=100%, link="{imagesdir}
 //image::{imagesdir}/Fig8_38b_deleteNode.png[width=75%]
 image::{imagesdir}/Fig8_38b_deleteNode.png[width=100%, link="{imagesdir}/Fig8_38b_deleteNode.svg", window="_blank"]
 
-
-
 [.text-center]
 Figure 8.38. Node Deletion Algorithm (a -intellect map; b - DRAKON-diagram)
 
