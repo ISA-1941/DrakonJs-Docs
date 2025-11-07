@@ -837,15 +837,17 @@ ancestor (parent of parent), U (Uncle) - uncle of node x, S - siblings (Figure 8
 <div class="paragraph">
 <p>To describe the process of balancing the red-black tree, let’s name the set of nodes involved in the implementation of balancing <em>tree-cluster</em> and enter a local syntax:
 <strong>:R or :B</strong> is the color of the node. For example, P:R is the red parent.
-<strong>&#8656; or &#8658;</strong> - the direction of the node position. For example, x &#8656; P - the new node x is located to the left of the parent node P.
-The different instances of the red and black nodes are shown in the table
-When a new element is inserted, it is assigned a red colour. To satisfy
-the first two rules, it is sufficient to simply repaint the new vertices
-in the desired colour. After each insertion, all these properties of the
-red-black tree must be checked. If at least one property is not
-satisfactory, the rotation and colour change operations are performed (Table ).</p>
+<strong>⇐  or ⇒</strong> - the direction of the node position. For example, x ⇐  P - the new node x is located to the left of the parent node P.
+The term nodeImage denotes the local configuration of nodes within a tree-cluster,
+including their colors and relative positions (left or right).
+When a new element is inserted, it is initially assigned the red color.
+To satisfy the first two rules, it is sufficient to repaint the new vertex as needed.
+After each insertion, all red-black tree properties must be verified.
+If at least one property is violated, rotation and recoloring operations are performed.
+The different nodeImages representing possible configurations of red and black nodes are summarized in Table 8.3.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 8.3 — NodeImages for Red-Black Tree Insertion Cases</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -863,31 +865,31 @@ satisfactory, the rotation and colour change operations are performed (Table ).<
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Red Uncle</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x&#8656;P; P:R,P&#8656;G; G:B; U:R</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x⇐ P; P:R,P⇐ G; G:B; U:R</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Both x and P are red; G has two red children (P and U).</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Recolor P and U to black (P:B, U:B), G to red (G:R); set x = G (propagate upward).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Black Uncle Case 1 (L–L)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x&#8656;P; P:R,P&#8656;G; G:B; U:B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x⇐ P; P:R,P⇐ G; G:B; U:B</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">x and P are both red and lie on left-left; uncle is black.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Recolor P to black (P:B) and G to red (G:R); Right-rotate about (G).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Black Uncle Case 2 (R–R)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x&#8658;P; P:R,P&#8658;G; G:B; U:B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x⇒P; P:R,P⇒G; G:B; U:B</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">x and P are both red and lie on right-right; uncle is black.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Recolor P to black (P:B) and G to red (G:R); Left-rotate about (G).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Black Uncle Case 3 (L–R)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x&#8658;P; P:R,P&#8656;G; G:B; U:B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x⇒P; P:R,P⇐ G; G:B; U:B</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">both x and P are red; x is right child of P, P is left child of G; uncle is black;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Left-rotate about (P), then treat as (L–L).</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Black Uncle Case 4 s(R–L)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x&#8656;P; P:R,P&#8658;G; G:B; U:B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Black Uncle Case 4 (R–L)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x⇐ P; P:R,P⇒G; G:B; U:B</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">x is left child of P, P is right child of G; both x and P are red; uncle is black;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Right-rotate about (P), then treat as (R–R).</p></td>
 </tr>
@@ -901,13 +903,11 @@ satisfactory, the rotation and colour change operations are performed (Table ).<
 <a class="image" href="_images/Fig8_34_fixRedRed.svg" target="_blank" rel="noopener"><img src="_images/Fig8_34_fixRedRed.png" alt="Fig8 34 fixRedRed" width="100%"></a>
 </div>
 </div>
-<div class="paragraph text-center">
-<p>Figure 8.34. Red-Black Tree Balancing Algorithm DRAKON-diagram</p>
-</div>
-<div class="imageblock unresolved">
+<div class="imageblock unresolved text-center">
 <div class="content">
 <a class="image" href="_images/Fig8_35_diagr_figs.svg" target="_blank" rel="noopener"><img src="_images/Fig8_35_diagr_figs.png" alt="Fig8 35 diagr figs" width="100%"></a>
 </div>
+<div class="title">Figure 8.34. Red-Black Tree Balancing Algorithm DRAKON-diagram</div>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.35. Illustration of Red-Black Tree Balancing Algorithms</p>
@@ -1029,14 +1029,14 @@ becomes a "double black" node.</em></p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x:B, x&#8656;P; x.child=R</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:B, x⇐ P; x.child=R</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Black node with one red child</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Promote child, recolor to black</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x:B, x&#8656;P; x.child=B or NIL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:B, x⇐ P; x.child=B or NIL</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Black node with black or null child</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Double-black arises</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">fixDoubleBlack(x)</p></td>
@@ -1146,8 +1146,10 @@ the structure of the red-black tree. In the first step, the node is
 removed simply as a node in the binary search tree. If the replacement
 node is a "red" node, or if the removed node is a "red" node, the
 removed node is replaced by another node. There is no need to make any
-further changes to the tree structure (fig.8.37).
-<span class="image unresolved"><img src="media/image40.jpg" alt="media/image40" width="670" height="149"></span></p>
+further changes to the tree structure (fig.8.37).</p>
+</div>
+<div class="paragraph">
+<p><span class="image unresolved"><img src="media/image40.jpg" alt="media/image40" width="670" height="149"></span></p>
 </div>
 <div class="paragraph">
 <p>Figure 3.37. Deletion of red node (20)</p>
