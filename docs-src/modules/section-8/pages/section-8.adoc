@@ -499,11 +499,13 @@ image::{imagesdir}/Fig8_35_diagr_figs.png[width=100%, link="{imagesdir}/Fig8_35_
 [.text-center]
 Figure 8.35. Illustration of Red-Black Tree Balancing Algorithms
 
-The dragon diagram of the node rotation algorithms to the red and black tree cluster is shown in Figure 8.36a,b.
+The Drakon-diagram of the node rotation algorithms to the red and black tree cluster is shown in Figure 8.36a,b.
 
 image::{imagesdir}/Fig8_36a_rotateLeft.png[width=75%]
+image::{imagesdir}/Fig8_36a_rotateLeft.png[width=100%, link="{imagesdir}/Fig8_36a_rotateLeft.svg", window="_blank"]
 
 image::{imagesdir}/Fig8_36b_rotateRight.png[width=75%]
+image::{imagesdir}/Fig8_36b_rotateRight.png[width=100%, link="{imagesdir}/Fig8_36b_rotateRight.svg", window="_blank"]
 
 [.text-center]
 Figure 8.36. DRAKON-diagrams of the red-black tree cluster node rotation algorithm
@@ -529,7 +531,9 @@ algorithm can be divided into three stages.
 
 image::{imagesdir}/Fig8_38a_mindMap_deleteNode.jpg[width=75%]
 
-image::{imagesdir}/Fig8_38b_deleteNode.jpg[width=75%]
+//image::{imagesdir}/Fig8_38b_deleteNode.jpg[width=75%]
+image::{imagesdir}/Fig8_36b_rotateRight.png[width=100%, link="{imagesdir}/Fig8_36b_rotateRight.svg", window="_blank"]
+
 
 
 [.text-center]
@@ -602,10 +606,6 @@ image::{imagesdir}/Fig8_joinPC.png[width=80%]
 [.text-center]
 The top diagram illustrates the replacement of node U (`9`) with subtree V (`7`) before calling `joinParentChild(tree, U, V)`.  
 The bottom diagram shows the result of the operation: node `7` has taken the place of `9`, preserving the tree's structure and balance.
-
-
-
-
 
 Consider in more detail the different instances of the removal node in
 the structure of the red-black tree. In the first step, the node is
