@@ -1,6 +1,10 @@
 {
     "history": [
         {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\deleteNode.drakon",
+            "whenOpened": "2025-11-07T11:07:21.378Z"
+        },
+        {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\Insert.drakon",
             "whenOpened": "2025-11-07T09:00:45.766Z"
         },
@@ -31,10 +35,6 @@
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\rotateLeft.drakon",
             "whenOpened": "2025-10-28T12:56:55.068Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\deleteNodeAI.drakon",
-            "whenOpened": "2025-10-28T12:54:47.327Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\joinParentChild.drakon",
