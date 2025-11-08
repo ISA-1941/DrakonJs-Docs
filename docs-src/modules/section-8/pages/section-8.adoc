@@ -609,9 +609,10 @@ node is a "red" node, or if the removed node is a "red" node, the
 removed node is replaced by another node. There is no need to make any
 further changes to the tree structure (fig.8.41).
 
-image:media/image1.jpg[media/image40,width=670,height=149]
+image::{imagesdir}/Fig8_41_delRed.png[width=80%]
 
-Figure 3.41. Deletion of red node (20)
+[.text-center]
+Figure 8.41. Deletion of red node (20)
 
 If the node to be deleted and the node that replaces it are black nodes,
 a situation called a "double black node" occurs. In this case, some
