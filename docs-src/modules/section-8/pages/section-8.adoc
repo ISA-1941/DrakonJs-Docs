@@ -381,18 +381,47 @@ Property 5 builds on this by enforcing a uniform "black-height" for all paths fr
 Black height is an important term used for red-black trees. This is the number of black nodes on any single path from node x (not including it) to the leaf. The black height of any node x is represented as a logarithm of the number of nodes in the tree. In particular, if in each branch from the root to the leaves the same number of black nodes, then the height of the tree will be equal to a logarithm of the number of nodes. This property allows you to quickly perform basic operations of the search tree, such as adding, removing and searching for a node.
 
 To perform the above operations at the program level, a red-black tree is first created, for which two user types - node and RBTree are declared:
-Node includes the following fields: `data` - node numeric value,  `colour` - node colour type bool: `red node` - TRUE; `black node` - false, `left`, `right` and `parent` nodes. In turn RBTree structure represents the reference type variable, that store objects containing not the "value" itself but a reference to the memory area where this object is stored (Fig. 8.30).
+Node includes the following fields: `data` - node numeric value,  `colour` - node colour type bool: `red node` - TRUE; `black node` - false, `left`, `right` and `parent` nodes. In turn RBTree structure represents the reference type variable, that store objects containing not the "value" itself but a reference to the memory area where this object is stored (Table. 8.?).
 
-[cols="a,a", frame=none, grid=none, align=center]
+[cols="1,1", options="header", frame=none, grid=none, align=center]
 |===
-| image::{imagesdir}/Fig8_30a_createNode.png[width=100%]
-| image::{imagesdir}/Fig8_30b_createTree.png[width=50%]
+| *Function: createNode* | *Function: createTree*
+
+| [source,js]
+----
+function createNode(data, colour, parent, left, right) {
+    return {
+        data: data,
+        colour: colour,
+        parent: parent,
+        left: left,
+        right: right
+    };
+}
+----
+
+| [source,js]
+----
+function createTree() {
+    var nullNode;
+    nullNode = {
+        data: 0,
+        colour: false,
+        left: null,
+        right: null,
+        parent: null
+    };
+    nullNode.left = nullNode;
+    nullNode.right = nullNode;
+    nullNode.parent = nullNode;
+    return {
+        root: nullNode,
+        nullNode: nullNode
+    };
+}
+----
 |===
 
-image::{imagesdir}/Fig8_30a_createNode.png[[pdfwidth=6cm]]
-image::{imagesdir}/Fig8_30b_createTree.png[[pdfwidth=4cm]]
-
-Figure 8.30. Drakon-diagram of Node and Tree  description
 
 [cols="1,1,3", options="header"]
 |===
