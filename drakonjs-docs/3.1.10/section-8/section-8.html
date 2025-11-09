@@ -664,7 +664,7 @@ kb = -2 and its right-hand child has a balance factor kb = +1 (Figure
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/Fig8_27_deleteNode.svg" target="_blank" rel="noopener"><img src="_images/Fig8_27_deleteNode.svg" alt="Fig8 27 deleteNode" width="75%"></a>
+<a class="image" href="_images/Fig8_27_deleteNode.svg" target="_blank" rel="noopener"><img src="_images/Fig8_27_deleteNode.png" alt="Fig8 27 deleteNode" width="75%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
@@ -747,7 +747,7 @@ Node includes the following fields: <code>data</code> - node numeric value,  <co
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<img src="_images/Fig8_30_createNodeTree.png" alt="Fig8 30 createNodeTree" width="100%">
+<a class="image" href="_images/Fig8_27_deleteNode.svg" target="_blank" rel="noopener"><img src="_images/Fig8_30_createNodeTree.png" alt="Fig8 30 createNodeTree" width="75%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
@@ -1152,7 +1152,7 @@ process is shown in Fig.8.42.</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<img src="_images/Fig8_42a_fixDoubleBlack.png" alt="Fig8 42a fixDoubleBlack" width="100%">
+<img src="_images/Fig8_42a_fixDoubleBlack.png" alt="Fig8 42a fixDoubleBlack" width="80%">
 </div>
 </div>
 <div class="imageblock unresolved">
@@ -1178,7 +1178,7 @@ using the method described above.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Figure 8.38. DRAKON-diagram of the node structure correction algorithm
+<p>Figure 8.43. DRAKON-diagram of the node structure correction algorithm
 when removing "double black node"</p>
 </div>
 <div class="paragraph">
@@ -1186,14 +1186,10 @@ when removing "double black node"</p>
 the red-black wood may be compromised. To restore them, the following
 operations must be performed:</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>If the node to be deleted is red, the properties of the red-black tree
+<div class="paragraph">
+<p>. If the node to be deleted is red, the properties of the red-black tree
 are not disturbed. If the replacement node is red, it should be
 repainted black.</p>
-</li>
-</ol>
 </div>
 <div class="paragraph">
 <p>2. Next, rotate, recolour the nodes and/or transfer the
@@ -1208,13 +1204,15 @@ tree is black.</p>
 <p>Let&#8217;s consider options for restoring the properties of red-black wood.
 Enter the following notations: the node to be deleted is "x", the child
 node of the deleted node is "y", and the sibling of the node to be
-deleted is "s" (Figure 8.39).</p>
+deleted is "s" (Figure 8.43).</p>
 </div>
-<div class="paragraph">
-<p><span class="image unresolved"><img src="media/image42.jpg" alt="media/image42" width="280" height="174"></span></p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_43_Term.jpg" alt="Fig8 43 Term" width="100%">
 </div>
-<div class="paragraph">
-<p>Figure 8.39. Tree node relationship</p>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.43. Tree node relationship</p>
 </div>
 <div class="paragraph">
 <p>Option 1: If the child element (y) of the node to be deleted (x) is
@@ -1222,10 +1220,17 @@ coloured red, then after deletion it should be recoloured black, as a
 result of which the number of black nodes will be restored (Figure
 8.40).</p>
 </div>
-<div class="paragraph">
-<p><span class="image unresolved"><img src="media/image43.jpg" alt="media/image43" width="332" height="144"></span></p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_39_Term.jpg" alt="Fig8 39 Term" width="100%">
 </div>
-<div class="paragraph">
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<a class="image" href="_images/Fig8_42b_fixDoubleBlackStep.svg" target="_blank" rel="noopener"><img src="_images/Fig8_42b_fixDoubleBlackStep.png" alt="Fig8 42b fixDoubleBlackStep" width="100%"></a>
+</div>
+</div>
+<div class="paragraph text-center">
 <p>Fig. 8.40. Deleting and repainting the child of the node to be removed
 (y)</p>
 </div>
