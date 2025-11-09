@@ -1,6 +1,14 @@
 {
     "history": [
         {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\createNode.drakon",
+            "whenOpened": "2025-11-09T19:41:43.261Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\createTree.drakon",
+            "whenOpened": "2025-11-09T19:39:55.962Z"
+        },
+        {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixDoubleBlackStep.drakon",
             "whenOpened": "2025-11-08T20:07:36.704Z"
         },
@@ -75,14 +83,6 @@
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\printTreeNode.drakon",
             "whenOpened": "2025-06-13T15:08:45.118Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\createTree.drakon",
-            "whenOpened": "2025-06-10T17:50:52.308Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\createNode.drakon",
-            "whenOpened": "2025-06-10T17:43:10.848Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\transplant.drakon",
