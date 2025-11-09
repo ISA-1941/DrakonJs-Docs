@@ -617,8 +617,14 @@ Figure 8.41. Deletion of red node (20)
 If the node to be deleted and the node that replaces it are black nodes,
 a situation called a "double black node" occurs. In this case, some
 additional operations must be performed to ensure that the properties of
-the red-black wood are preserved. The drakon- diagram algorithm of this
-process is shown in Fig. 8.38.
+the red-black wood are preserved. The Drakon-diagrams algorithm of this
+process is shown in Fig.8.42.
+
+//image::{imagesdir}/Fig8_42_Fig8_42a_fixDoubleBlack.png[width=80%]
+image::{imagesdir}/Fig8_42_Fig8_42a_fixDoubleBlack.png[width=100%, link="{imagesdir}/Fig8_42_Fig8_42a_fixDoubleBlack.svg", window="_blank"]
+
+[.text-center]
+Figure 8.42. Drakon-diagram of the node structure correction algorithm when removing "double black node"
 
 If the replacement node is a leaf node (i.e., has no child nodes), we
 replace the node with a "zero" leaf node and colour it black. If the
@@ -628,7 +634,7 @@ replace the node with its subsequent node in order, and then delete the
 next node in order (which is no more than a node with one child node)
 using the method described above.
 
-image:media/image41.jpg[media/image41,width=1049,height=375]
+image::{imagesdir}/Fig8_43_delRed.png[width=80%]
 
 Figure 8.38. DRAKON-diagram of the node structure correction algorithm
 when removing "double black node"
