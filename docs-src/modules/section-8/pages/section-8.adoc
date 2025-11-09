@@ -385,12 +385,12 @@ Node includes the following fields: `data` - node numeric value,  `colour` - nod
 
 [cols="a,a", frame=none, grid=none, align=center]
 |===
-| image::{imagesdir}/Fig8_30a_createNode.png[width=75%]
-| image::{imagesdir}/Fig8_30b_createTree.png[width=75%]
+| image::{imagesdir}/Fig8_30a_createNode.png[width=100%]
+| image::{imagesdir}/Fig8_30b_createTree.png[width=50%]
 |===
 
-image::{imagesdir}/Fig8_30a_createNode.png[width=75%]
-image::{imagesdir}/Fig8_30b_createTree.png[width=75%]
+image::{imagesdir}/Fig8_30a_createNode.png[[pdfwidth=6cm]]
+image::{imagesdir}/Fig8_30b_createTree.png[[pdfwidth=6cm]]
 
 Figure 8.30. Drakon-diagram of Node and Tree  description
 
