@@ -383,8 +383,8 @@ Black height is an important term used for red-black trees. This is the number o
 To perform the above operations at the program level, a red-black tree is first created, for which two user types - node and RBTree are declared:
 Node includes the following fields: `data` - node numeric value,  `colour` - node colour type bool: `red node` - TRUE; `black node` - false, `left`, `right` and `parent` nodes. In turn RBTree structure represents the reference type variable, that store objects containing not the "value" itself but a reference to the memory area where this object is stored (Fig. 8.30).
 
-image::{imagesdir}/Fig8_30a_createNode.svg[width=100%]
-image::{imagesdir}/Fig8_30b_createTree.svg[width=100%]
+image::{imagesdir}/Fig8_30a_createNode.png[width=100%]
+image::{imagesdir}/Fig8_30b_createTree.png[width=100%]
 
 Figure 8.30. Drakon-diagram of Node and Tree  description
 
