@@ -6,4 +6,6 @@ Control: After Fig8_40
 
 8.11.2025
 Images from 37 need + 4 
-37 - 40
+37 - 41
+========
+Pause Fig8_42 Correct rbtree 
