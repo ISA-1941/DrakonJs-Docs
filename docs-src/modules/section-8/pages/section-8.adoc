@@ -385,7 +385,7 @@ Node includes the following fields: `data` - node numeric value,  `colour` - nod
 
 [cols="a,a", frame=none, grid=none, align=center]
 |===
-| image::{imagesdir}/Fig8_30a_createNode.png[width=100%]
+| image::{imagesdir}/Fig8_30a_createNode.png[width=150%]
 | image::{imagesdir}/Fig8_30b_createTree.png[width=100%]
 |===
 
