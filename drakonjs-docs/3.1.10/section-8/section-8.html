@@ -743,56 +743,31 @@ of these properties are properties 4 and 5.</p>
 </div>
 <div class="paragraph">
 <p>To perform the above operations at the program level, a red-black tree is first created, for which two user types - node and RBTree are declared:
-Node includes the following fields: <code>data</code> - node numeric value,  <code>colour</code> - node colour type bool: <code>red node</code> - TRUE; <code>black node</code> - false, <code>left</code>, <code>right</code> and <code>parent</code> nodes. In turn RBTree structure represents the reference type variable, that store objects containing not the "value" itself but a reference to the memory area where this object is stored (Table. 8.?).</p>
+Node includes the following fields: <code>data</code> - node numeric value,  <code>colour</code> - node colour type bool: <code>red node</code> - TRUE; <code>black node</code> - false, <code>left</code>, <code>right</code> and <code>parent</code> nodes. In turn RBTree structure represents the reference type variable, that store objects containing not the "value" itself but a reference to the memory area where this object is stored (Fig. 8.30).</p>
 </div>
 <table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
 </colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Function: createNode</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Function: createTree</strong></th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[source,js]
-----
-function createNode(data, colour, parent, left, right) {
-    return {
-        data: data,
-        colour: colour,
-        parent: parent,
-        left: left,
-        right: right
-    };
-}
-----</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[source,js]
-----
-function createTree() {
-    var nullNode;
-    nullNode = {
-        data: 0,
-        colour: false,
-        left: null,
-        right: null,
-        parent: null
-    };
-    nullNode.left = nullNode;
-    nullNode.right = nullNode;
-    nullNode.parent = nullNode;
-    return {
-        root: nullNode,
-        nullNode: nullNode
-    };
-}
-----</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_30a_createNode.png" alt="Fig8 30a createNode" width="100%">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_30b_createTree.png" alt="Fig8 30b createTree" width="50%">
+</div>
+</div></div></td>
 </tr>
 </tbody>
 </table>
+<div class="paragraph text-center">
+<p>Figure 8.30. Drakon-diagram of Node and Tree  description</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
