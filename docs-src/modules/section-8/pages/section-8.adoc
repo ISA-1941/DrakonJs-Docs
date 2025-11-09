@@ -390,7 +390,7 @@ Node includes the following fields: `data` - node numeric value,  `colour` - nod
 |===
 
 image::{imagesdir}/Fig8_30a_createNode.png[[pdfwidth=6cm]]
-image::{imagesdir}/Fig8_30b_createTree.png[[pdfwidth=6cm]]
+image::{imagesdir}/Fig8_30b_createTree.png[[pdfwidth=4cm]]
 
 Figure 8.30. Drakon-diagram of Node and Tree  description
 
