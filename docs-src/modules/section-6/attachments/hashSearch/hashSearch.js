@@ -22,12 +22,6 @@ function createNode(key, value, next = null) {
 function hashFunc(key, size) {
     return Math.abs(key) % size;
 }
-function hashFuncSHA256(key, size) {
-    var hashHex, hashInt;
-    hashHex = CryptoJS.SHA256(String(key)).toString();
-    hashInt = parseInt(hashHex.substring(0, 8), 16);
-    return hashInt % size;
-}
 function hashGet(hash, key) {
     var index, node;
     index = hashFunc(key, hash.size);
