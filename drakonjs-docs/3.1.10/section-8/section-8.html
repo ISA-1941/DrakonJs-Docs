@@ -1147,8 +1147,16 @@ further changes to the tree structure (fig.8.41).</p>
 <p>If the node to be deleted and the node that replaces it are black nodes,
 a situation called a "double black node" occurs. In this case, some
 additional operations must be performed to ensure that the properties of
-the red-black wood are preserved. The drakon- diagram algorithm of this
-process is shown in Fig. 8.38.</p>
+the red-black wood are preserved. The Drakon-diagrams algorithm of this
+process is shown in Fig.8.42.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<a class="image" href="_images/Fig8_42_Fig8_42a_fixDoubleBlack.svg" target="_blank" rel="noopener"><img src="_images/Fig8_42_Fig8_42a_fixDoubleBlack.png" alt="Fig8 42 Fig8 42a fixDoubleBlack" width="100%"></a>
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.42. Drakon-diagram of the node structure correction algorithm when removing "double black node"</p>
 </div>
 <div class="paragraph">
 <p>If the replacement node is a leaf node (i.e., has no child nodes), we
@@ -1159,8 +1167,10 @@ replace the node with its subsequent node in order, and then delete the
 next node in order (which is no more than a node with one child node)
 using the method described above.</p>
 </div>
-<div class="paragraph">
-<p><span class="image unresolved"><img src="media/image41.jpg" alt="media/image41" width="1049" height="375"></span></p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_43_delRed.png" alt="Fig8 43 delRed" width="80%">
+</div>
 </div>
 <div class="paragraph">
 <p>Figure 8.38. DRAKON-diagram of the node structure correction algorithm
