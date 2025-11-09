@@ -620,8 +620,10 @@ additional operations must be performed to ensure that the properties of
 the red-black wood are preserved. The Drakon-diagrams algorithm of this
 process is shown in Fig.8.42.
 
-//image::{imagesdir}/Fig8_42_Fig8_42a_fixDoubleBlack.png[width=80%]
-image::{imagesdir}/Fig8_42_Fig8_42a_fixDoubleBlack.png[width=100%, link="{imagesdir}/Fig8_42_Fig8_42a_fixDoubleBlack.svg", window="_blank"]
+image::{imagesdir}/Fig8_42a_Fig8_42a_fixDoubleBlack.png[width=80%]
+
+image::{imagesdir}/Fig8_42b_fixDoubleBlackStep.png[width=80%]
+image::{imagesdir}/Fig8_42b_fixDoubleBlackStep.png[width=100%, link="{imagesdir}/Fig8_42b_fixDoubleBlackStep.svg", window="_blank"]
 
 [.text-center]
 Figure 8.42. Drakon-diagram of the node structure correction algorithm when removing "double black node"
