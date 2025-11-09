@@ -321,8 +321,8 @@ Figure 8.26. Cases for nodes to be removed
 
 As with the other methods, a node with a c value is first recursively identified and then one of the options presented is selected. A DRAKON-diagram of the algorithm for deleting a node with the cases for nodes to be removed value is shown in Figure 8.27.
 
-//image::{imagesdir}/Fig8_27_deleteNode.svg[width=75%]
-image::{imagesdir}/Fig8_27_deleteNode.svg[width=75%, link="{imagesdir}/Fig8_27_deleteNode.svg", window="_blank"]
+//image::{imagesdir}/Fig8_27_deleteNode.png[width=75%]
+image::{imagesdir}/Fig8_27_deleteNode.png[width=75%, link="{imagesdir}/Fig8_27_deleteNode.svg", window="_blank"]
 
 [.text-center]
 Figure 8.27. DRAKON-diagram depicting an algorithm for removing a node
@@ -383,8 +383,8 @@ Black height is an important term used for red-black trees. This is the number o
 To perform the above operations at the program level, a red-black tree is first created, for which two user types - node and RBTree are declared:
 Node includes the following fields: `data` - node numeric value,  `colour` - node colour type bool: `red node` - TRUE; `black node` - false, `left`, `right` and `parent` nodes. In turn RBTree structure represents the reference type variable, that store objects containing not the "value" itself but a reference to the memory area where this object is stored (Fig. 8.30).
 
-image::{imagesdir}/Fig8_30_createNodeTree.png[width=100%]
-
+//image::{imagesdir}/Fig8_30_createNodeTree.png[width=100%]
+image::{imagesdir}/Fig8_30_createNodeTree.png[width=75%, link="{imagesdir}/Fig8_27_deleteNode.svg", window="_blank"]
 [.text-center]
 Figure 8.30. Node Properties and the createNode Factory Function 
 
@@ -620,7 +620,7 @@ additional operations must be performed to ensure that the properties of
 the red-black wood are preserved. The Drakon-diagrams algorithm of this
 process is shown in Fig.8.42.
 
-image::{imagesdir}/Fig8_42a_fixDoubleBlack.png[width=100%]
+image::{imagesdir}/Fig8_42a_fixDoubleBlack.png[width=80%]
 
 //image::{imagesdir}/Fig8_42b_fixDoubleBlackStep.png[width=100%]
 image::{imagesdir}/Fig8_42b_fixDoubleBlackStep.png[width=100%, link="{imagesdir}/Fig8_42b_fixDoubleBlackStep.svg", window="_blank"]
@@ -638,7 +638,7 @@ using the method described above.
 
 image::{imagesdir}/Fig8_43_delRed.png[width=80%]
 
-Figure 8.38. DRAKON-diagram of the node structure correction algorithm
+Figure 8.43. DRAKON-diagram of the node structure correction algorithm
 when removing "double black node"
 
 If a node is deleted and replaced with another node, the properties of
@@ -646,7 +646,7 @@ the red-black wood may be compromised. To restore them, the following
 operations must be performed:
 
 [arabic]
-. If the node to be deleted is red, the properties of the red-black tree
+{empty}. If the node to be deleted is red, the properties of the red-black tree
 are not disturbed. If the replacement node is red, it should be
 repainted black.
 
@@ -660,19 +660,23 @@ tree is black.
 Let's consider options for restoring the properties of red-black wood.
 Enter the following notations: the node to be deleted is "x", the child
 node of the deleted node is "y", and the sibling of the node to be
-deleted is "s" (Figure 8.39).
+deleted is "s" (Figure 8.43).
 
-image:media/image42.jpg[media/image42,width=280,height=174]
+image::{imagesdir}/Fig8_43_Term.jpg[width=100%]
 
-Figure 8.39. Tree node relationship
+[.text-center]
+Figure 8.43. Tree node relationship
+
 
 Option 1: If the child element (y) of the node to be deleted (x) is
 coloured red, then after deletion it should be recoloured black, as a
 result of which the number of black nodes will be restored (Figure
 8.40).
 
-image:media/image43.jpg[media/image43,width=332,height=144]
+image::{imagesdir}/Fig8_39_Term.jpg[width=100%]
+image::{imagesdir}/Fig8_42b_fixDoubleBlackStep.png[width=100%, link="{imagesdir}/Fig8_42b_fixDoubleBlackStep.svg", window="_blank"]
 
+[.text-center]
 Fig. 8.40. Deleting and repainting the child of the node to be removed
 (y)
 
