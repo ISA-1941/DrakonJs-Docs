@@ -415,7 +415,7 @@ image::{imagesdir}/Fig8_33_rotates.png[width=75%]
 image::{imagesdir}/Fig8_33_rotates.png[width=75%, link="{imagesdir}/Fig8_31_rotates.svg", window="_blank"]
 
 [.text-center]
-Figure 8.32. Rotate function DRAKON-diagrams (a - rotateLeft; b - rotate right)  
+Figure 8.33. Rotate function DRAKON-diagrams (a - rotateLeft; b - rotate right)  
 
 To describe the process of balancing the red-black tree, let’s name the set of nodes involved in the implementation of balancing _tree-cluster_ and enter a local syntax:*:R or :B* is the color of the node. For example, P:R is the red parent.
 *<-  or ->* - the direction of the node position. For example, x <-  P - the new node x is located to the left of the parent node P. 
