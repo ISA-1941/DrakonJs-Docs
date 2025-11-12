@@ -526,10 +526,9 @@ becomes a "double black" node._
 *The third stage is the correction of the double black nodes.* To fix the
 "double black" node, thefunctions _fixDoubleBlack (tree, x)_ and _fixDoubleBlackStep(tree, x)_ are called (Figures 8.39a,b). This feature fixes the "double black nodes" by using a series of rotations and recoloring steps. It considers several cases, depending on the colour of the brother of the "double black" node and its descendants. The function  _fixDoubleBlackStep (tree, x)_ handles all of these cases to ensure that the red-black tree remains balanced after each deletion operation (Table ).
 
-image::{imagesdir}/Fig8_38a_fixDoubleBlack.png[width=75%]
+image::{imagesdir}/Fig8_38a_fixDoubleBlack.png[width=50%]
 //image::{imagesdir}/Fig8_38b_fixDoubleBlackStep.png[width=75%]
-image::{imagesdir}/Fig8_38b_fixDoubleBlackStep.png[width=75%]/Fig8_38b_fixDoubleBlackStep.svg", window="_blank"]
-
+image::{imagesdir}/Fig8_38b_fixDoubleBlackStep.png[width=100%, link="{imagesdir}/Fig8_38b_fixDoubleBlackStep.svg", window="_blank"]
 [.text-center]
 Figure 8.38. DRAKON-diagram of the node structure correction algorithm when removing "double black node" 
 
