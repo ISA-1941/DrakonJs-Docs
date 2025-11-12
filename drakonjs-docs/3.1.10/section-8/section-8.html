@@ -1084,15 +1084,15 @@ becomes a "double black" node.</em></p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>Replacing a node in a red-black tree using <code>joinParentChild</code> is shown on Figure 8.40:</p>
+<p>Replacing a node in a red-black tree using <code>joinParentChild</code> is shown on Figure 8.39</p>
 </div>
 <div class="imageblock text-center unresolved">
 <div class="content">
-<img src="_images/Fig8_40_joinPC.png" alt="Fig8 40 joinPC" width="80%">
+<img src="_images/Fig8_39_joinPC.png" alt="Fig8 39 joinPC" width="80%">
 </div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 40. Replacing a node in a red-black tree</p>
+<p>Figure 39. Replacing a node in a red-black tree</p>
 </div>
 <div class="paragraph">
 <p>The top diagram illustrates the replacement of node U (<code>9</code>) with subtree V (<code>7</code>) before calling <code>joinParentChild(tree, U, V)</code>.
@@ -1104,15 +1104,15 @@ the structure of the red-black tree. In the first step, the node is
 removed simply as a node in the binary search tree. If the replacement
 node is a "red" node, or if the removed node is a "red" node, the
 removed node is replaced by another node. There is no need to make any
-further changes to the tree structure (fig.8.41).</p>
+further changes to the tree structure (fig.8.40).</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<img src="_images/Fig8_41_delRed.png" alt="Fig8 41 delRed" width="80%">
+<img src="_images/Fig8_40_delRed.png" alt="Fig8 40 delRed" width="80%">
 </div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 8.41. Deletion of red node (20)</p>
+<p>Figure 8.40. Deletion of red node (20)</p>
 </div>
 <div class="paragraph">
 <p>If the node to be deleted and the node that replaces it are black nodes,
