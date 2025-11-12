@@ -452,13 +452,13 @@ The different `nodeImage` representing possible configurations of red and black 
 |===
 
 
-The DRAKON-diagram of the red-black tree balancing algorithm when entering a new node is shown in Figure 8.34,8.35.
+The DRAKON-diagram of the red-black tree balancing algorithm when entering a new node is shown in Figure 8.33,8.34.
 
 //image::{imagesdir}/Fig8_34_fixRedRed.png[width=100%]
 image::{imagesdir}/Fig8_33_fixRedRed.png[width=100%, link="{imagesdir}/Fig8_33_fixRedRed.svg", window="_blank"]
 
 [.text-center]
-.Figure 8.33. Red-Black Tree Balancing Algorithm DRAKON-diagram 
+Figure 8.33. Red-Black Tree Balancing Algorithm DRAKON-diagram 
 
 
 //image::{imagesdir}/Fig8_35_diagr_figs.png[width=75%]
