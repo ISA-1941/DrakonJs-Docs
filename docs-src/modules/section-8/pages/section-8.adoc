@@ -362,6 +362,7 @@ properties:
 
 {empty}4. Both descendants of the red node are black, i.e. there cannot
 be consecutive red nodes.
+Both descendants of the red node are black
 
 {empty}5. All simple paths from the node to the descending leaves
 contain the same number of black nodes.
@@ -369,11 +370,11 @@ contain the same number of black nodes.
 Unlike AVL trees, where balance is achieved by balancing the heights of the left and right subtrees, red-black balance is achieved by the properties mentioned above. Adding or removing a node from the red-black
 tree can disrupt the red-black tree properties, and restoring balance is achieved by two operations: repainting the nodes and/or rebuilding the whole tree or its subtrees using specific rotations.The most important of these properties are properties 4 and 5.
 
-Property 4 dictates a critical aspect of red-black trees: the path from any given node to its deepest descendant must contain an equal number of red and black nodes. This isn't just an arbitrary rule; it's a fundamental mechanism for maintaining balance.
+Property 4 dictates a critical aspect of red-black trees: both descendants of the red node are black.
 
 Property 5 builds on this by enforcing a uniform "black-height" for all paths from any node to its leaf descendants. Regardless of the specific path taken, the count of black nodes remains constant.
 
-Black height is an important term used for red-black trees. This is the number of black nodes on any single path from node x (not including it) to the leaf. The black height of any node x is represented as a logarithm of the number of nodes in the tree. In particular, if in each branch from the root to the leaves the same number of black nodes, then the height of the tree will be equal to a logarithm of the number of nodes. This property allows you to quickly perform basic operations of the search tree, such as adding, removing and searching for a node.
+Black height is an important term used for red-black trees. This is the number of black nodes on any single path from node x (not including it) to the leaf. Properties 4 and 5 together ensure that the longest path from the root to a leaf (which alternates between red and black nodes) is at most twice as long as the shortest path (comprised solely of black nodes). This constraint guarantees that the tree remains approximately balanced, maintaining a height of O(log n), where n is the number of nodes.
 
 To perform the above operations at the program level, a red-black tree is first created, for which two user types - node and rbTree are declared:
 Node includes the following fields: `data` - node numeric value,  `colour` - node colour type bool: `red node` - TRUE; `black node` - false, `left`, `right` and `parent` nodes. In turn rbTree structure represents the reference type variable, that store objects containing not the "value" itself but a reference to the memory area where this object is stored (Fig. 8.30).
@@ -408,13 +409,13 @@ image::{imagesdir}/Fig8_32_rbInsert.png[width=75%, link="{imagesdir}/Fig8_32_rbI
 [.text-center]
 Figure 8.32. DRAKON-diagram of the function `Insert(tree, data)`
 
-The DRAKON-diagrams of rotate functions are presented on Figure 8.31a,b.
+The DRAKON-diagrams of rotate functions are presented on Figure 8.33a,b.
 
-image::{imagesdir}/Fig8_31_rotates.png[width=75%]
-image::{imagesdir}/Fig8_31_rotates.png[width=75%, link="{imagesdir}/Fig8_31_rotates.svg", window="_blank"]
+image::{imagesdir}/Fig8_33_rotates.png[width=75%]
+image::{imagesdir}/Fig8_33_rotates.png[width=75%, link="{imagesdir}/Fig8_31_rotates.svg", window="_blank"]
 
 [.text-center]
-Figure 8.31. Rotate function DRAKON-diagrams (a - rotateLeft; b - rotate right)  
+Figure 8.32. Rotate function DRAKON-diagrams (a - rotateLeft; b - rotate right)  
 
 To describe the process of balancing the red-black tree, let’s name the set of nodes involved in the implementation of balancing _tree-cluster_ and enter a local syntax:*:R or :B* is the color of the node. For example, P:R is the red parent.
 *<-  or ->* - the direction of the node position. For example, x <-  P - the new node x is located to the left of the parent node P. 
@@ -424,17 +425,17 @@ When a new element is inserted, it is initially assigned the red color.
 To satisfy the first two rules, it is sufficient to repaint the new vertex as needed.
 After each insertion, all red-black tree properties must be verified.
 If at least one property is violated, rotation and recoloring operations are performed.
-The different `nodeImages` representing possible configurations of red and black nodes are summarized in Table 8.3. 
+The different `nodeImage` representing possible configurations of red and black nodes are summarized in Table 8.3. 
 
 :!table-caption:
-.Table 8.3 — NodeImages for Red-Black Tree Insertion Cases
+.Table 8.3 — NodeImage for Red-Black Tree Insertion Cases
 |===
 | Variant | nodeImage | Violation | Fix strategy
 
 | Red Uncle
 | x:R,x<-P; P:R,P<-G; G:B; U:R 
 | Both x and P are red; G has two red children (P and U).
-| Recolor P and U to black (P:B, U:B), G to red (G:R); set x = G (propagate upward).
+| Recolor P and U to black (P:B, U:B), G to red (G:R); set x = G (propagate upward). Note: After this operation, the violation (two consecutive red nodes) may propagate up two levels. The algorithm must continue by     |treating G as the new current node x (i.e., it performs a recursive ascent). If G is the root, it will remain red after recoloring, and the algorithm will ultimately repaint the root to black in its final step.
 
 | Black Uncle Case 1 (L–L)
 | x:R,x<-P; P:R,P<-G; G:B; U:B
