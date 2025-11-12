@@ -362,7 +362,6 @@ properties:
 
 {empty}4. Both descendants of the red node are black, i.e. there cannot
 be consecutive red nodes.
-Both descendants of the red node are black
 
 {empty}5. All simple paths from the node to the descending leaves
 contain the same number of black nodes.
@@ -411,15 +410,14 @@ Figure 8.32. DRAKON-diagram of the function `Insert(tree, data)`
 
 To describe the process of balancing the red-black tree, let’s name the set of nodes involved in the implementation of balancing _tree-cluster_ and enter a local syntax:*:R or :B* is the color of the node. For example, P:R is the red parent.
 *<-  or ->* - the direction of the node position. For example, x <-  P - the new node x is located to the left of the parent node P. 
-The term `nodeImage` denotes the local configuration of nodes within a tree-cluster,
-including their colors and relative positions (left or right).
-When a new element is inserted, it is initially assigned the red color.
-To satisfy the first two rules, it is sufficient to repaint the new vertex as needed.
-After each insertion, all red-black tree properties must be verified.
-If at least one property is violated, rotation and recoloring operations are performed.
-The different `nodeImage` representing possible configurations of red and black nodes are summarized in Table 8.3. 
-
+The term nodeImage denotes the local configuration of nodes within a tree-cluster, including their colors and relative positions (left or right).
+When a new red node is inserted into the red-black tree, it is first connected in the same way as in a regular binary search tree — by comparing the key values and attaching the node as the left or right child.
+However, this simple act of insertion may cause a local violation of one or more red-black properties, most commonly the “no two consecutive red nodes” rule.
+To restore balance, the algorithm analyses the local configuration of nodes — a tree-cluster — formed by the newly added node x, its parent P, grandparent G, and uncle U.
+Each possible configuration (or nodeImage) corresponds to a typical balancing case, which determines the required sequence of operations: recoloring and/or rotation.
+All canonical nodeImage configurations representing possible red and black node arrangements are summarized in Table 8.3, which shows how each type of violation is detected and corrected to preserve all red-black properties.
 :!table-caption:
+
 .Table 8.3 — NodeImage for Red-Black Tree Insertion Cases
 |===
 | Variant | nodeImage | Violation | Fix strategy
@@ -480,7 +478,7 @@ image::{imagesdir}/Fig8_35b_rotateRight.png[width=100%, link="{imagesdir}/Fig8_3
                                       b) Right-rotation
 
 [.text-center]
-Figure 8.35. DRAKON-diagrams of the red-black tree cluster node rotation algorithms
+Figure 8.35. DRAKON-diagrams of node rotation algorithms used in red-black tree clusters.
 
 Consider the balancing process using the example of building a red-black
 tree from sets of integers that are the keys of the input nodes:
@@ -491,23 +489,25 @@ image::{imagesdir}/Fig8_36_rbProcess.jpg[width=75%]
 [.text-center]
 Figure 8.36 Process for Balancing the Red-Black Tree
 
+This example demonstrates how local rotations and recoloring maintain global balance. Despite multiple insertions, the tree height grows logarithmically, illustrating the efficiency of the red-black approach.
+
 ==== 8.4.3. Deleting a Node from a red-black tree
 
 Removing a node from a RB tree is a complex process because
 it depends on the location of the node, the presence of children, and
 the colour of the nodes. It is important to remember that all
 transformations of the tree structure must maintain its properties. The
-DRAKON-diagram of the node removal algorithm is shown in Figures 8.38a,b. This
+DRAKON-diagram of the node removal algorithm is shown in Figures 8.37a,b. This
 algorithm can be divided into three stages.
 
 //image::{imagesdir}/Fig8_38a_mindMap_deleteNode.png[width=75%]
-image::{imagesdir}/Fig8_38a_mindMap_deleteNode.png[width=100%, link="{imagesdir}/Fig8_38a_mindMap_deleteNode.svg", window="_blank"]
+image::{imagesdir}/Fig8_37a_mindMap_deleteNode.png[width=100%, link="{imagesdir}/Fig8_37a_mindMap_deleteNode.svg", window="_blank"]
 
 //image::{imagesdir}/Fig8_38b_deleteNode.png[width=75%]
-image::{imagesdir}/Fig8_38b_deleteNode.png[width=100%, link="{imagesdir}/Fig8_38b_deleteNode.svg", window="_blank"]
+image::{imagesdir}/Fig8_37b_deleteNode.png[width=100%, link="{imagesdir}/Fig8_37b_deleteNode.svg", window="_blank"]
 
 [.text-center]
-Figure 8.38. Node Deletion Algorithm (a -intellect map; b - DRAKON-diagram)
+Figure 8.37. Node Deletion Algorithm (a -intellect map; b - DRAKON-diagram)
 
 *The first step* is to delete the node. The algorithm traverses the
 nodes of the red-black tree, moving left or right, depending on whether
