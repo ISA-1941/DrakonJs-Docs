@@ -560,13 +560,13 @@ Figure 8.38. DRAKON-diagram of the node structure correction algorithm when remo
 | 5 | Node with two children, indirect successor | Replace with successor + rewire subtrees | Transplant + update structure | Maybe
 |===
 
-Replacing a node in a red-black tree using `joinParentChild` is shown on Figure 8.40:
+Replacing a node in a red-black tree using `joinParentChild` is shown on Figure 8.39
 [caption="Figure 8.40", align="center"]
 
-image::{imagesdir}/Fig8_40_joinPC.png[width=80%]
+image::{imagesdir}/Fig8_39_joinPC.png[width=80%]
 
 [.text-center]
-Figure 40. Replacing a node in a red-black tree
+Figure 39. Replacing a node in a red-black tree
 
 The top diagram illustrates the replacement of node U (`9`) with subtree V (`7`) before calling `joinParentChild(tree, U, V)`.  
 The bottom diagram shows the result of the operation: node `7` has taken the place of `9`, preserving the tree's structure and balance.
@@ -576,12 +576,12 @@ the structure of the red-black tree. In the first step, the node is
 removed simply as a node in the binary search tree. If the replacement
 node is a "red" node, or if the removed node is a "red" node, the
 removed node is replaced by another node. There is no need to make any
-further changes to the tree structure (fig.8.41).
+further changes to the tree structure (fig.8.40).
 
-image::{imagesdir}/Fig8_41_delRed.png[width=80%]
+image::{imagesdir}/Fig8_40_delRed.png[width=80%]
 
 [.text-center]
-Figure 8.41. Deletion of red node (20)
+Figure 8.40. Deletion of red node (20)
 
 If the node to be deleted and the node that replaces it are black nodes,
 a situation called a "double black node" occurs. In this case, some
