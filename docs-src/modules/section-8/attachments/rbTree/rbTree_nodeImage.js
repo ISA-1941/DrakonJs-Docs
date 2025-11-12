@@ -2,27 +2,155 @@ main();
 function Insert(tree, data) {
     var NIL, direction, insertionInfo, newNode, parent;
     NIL = tree.nullNode;
+    
     if (tree.root === NIL) {
         tree.root = createNode(data, false, NIL, NIL, NIL);
+        printFullTreeHistory(tree, tree.root, 'INITIAL', 'Create root');
         return;
     }
+    
     insertionInfo = findInsertionPoint(tree, tree.root, data, NIL);
-    console.log('insertionInfo: ' ,insertionInfo);
+    
     if (insertionInfo.duplicate) {
-        console.log('Duplicate value: ' + data);
+        console.log('❌ Duplicate value: ' + data);
         return;
     }
+    
     parent = insertionInfo.parent;
     direction = insertionInfo.direction;
     newNode = createNode(data, true, parent, NIL, NIL);
+    
     if (direction === 'left') {
         parent.left = newNode;
     } else {
         parent.right = newNode;
     }
+    
+    // Определяем какое действие потребуется ДО балансировки
+    let plannedAction = 'None';
+    if (parent.colour) {
+        const G = parent.parent;
+        const U = G ? (parent === G.left ? G.right : G.left) : null;
+        
+        if (U && U.colour) {
+            plannedAction = 'CASE 1: Recolor P+U->B, G->R';
+        } else {
+            if (parent === G.left && newNode === parent.left) {
+                plannedAction = 'CASE 2: Right rotate G';
+            } else if (parent === G.right && newNode === parent.right) {
+                plannedAction = 'CASE 3: Left rotate G';
+            } else if (parent === G.left && newNode === parent.right) {
+                plannedAction = 'CASE 4: Left(P)->Right(G)';
+            } else if (parent === G.right && newNode === parent.left) {
+                plannedAction = 'CASE 5: Right(P)->Left(G)';
+            }
+        }
+    }
+    
+    console.log(`\n🔴 INSERTING: ${data}`);
+    printFullTreeHistory(tree, newNode, 'BEFORE', plannedAction);
+    
+    // Балансировка
     fixRedRed(tree, newNode);
+    
+    printFullTreeHistory(tree, newNode, 'AFTER', 'Balancing complete');
     tree.root.colour = false;
 }
+
+function printFullTreeHistory(tree, currentNode, stage, action) {
+    console.log(`=== ${stage} BALANCING ===`);
+    if (action) {
+        console.log('Action:', action);
+    }
+    console.log('Node     | Parent    | Grandfather | Position  | Violation    | Action');
+    console.log('-----------------------------------------------------------------------');
+    
+    // Запускаем обход дерева
+    printPath(tree, tree.root, null, [], currentNode, stage);
+    
+    console.log('-----------------------------------------------------------------------\n');
+}
+
+function printPath(tree, node, parent, path, currentNode, stage) {
+    if (!node || node === tree.nullNode) return;
+    
+    // Добавляем текущий узел в путь
+    const newPath = [...path, {node: node, parent: parent}];
+    
+    // Если это лист или достигли целевого узла - печатаем путь
+    if (node === currentNode || (node.left === tree.nullNode && node.right === tree.nullNode)) {
+        for (let i = 0; i < newPath.length; i++) {
+            const current = newPath[i].node;
+            const parent = newPath[i].parent;
+            const grandparent = i >= 2 ? newPath[i-2].node : null;
+            
+            const nodeStr = `${current.data}(${current.colour ? 'R' : 'B'})`.padEnd(8);
+            const parentStr = parent ? `${parent.data}(${parent.colour ? 'R' : 'B'})`.padEnd(9) : 'null'.padEnd(9);
+            const grandStr = grandparent ? `${grandparent.data}(${grandparent.colour ? 'R' : 'B'})`.padEnd(11) : 'null'.padEnd(11);
+            
+            // Определяем позицию с гарантированно работающими символами
+            let position = 'root';
+            if (parent) {
+                const isLeftChild = current === parent.left;
+                if (grandparent) {
+                    const parentIsLeftChild = parent === grandparent.left;
+                    position = (isLeftChild ? 'x<-' : 'x->') + 
+                              (parentIsLeftChild ? 'P<-G' : 'P->G');
+                } else {
+                    position = (isLeftChild ? 'x<-P' : 'x->P');
+                }
+            }
+            
+            const positionStr = position.padEnd(10);
+            
+            // Проверяем нарушения
+            let violation = 'None';
+            let nodeAction = '-';
+            
+            if (current === currentNode) {
+                const currentParent = current.parent !== tree.nullNode ? current.parent : null;
+                if (currentParent && currentParent.colour && current.colour) {
+                    violation = 'Red-Red';
+                    if (stage === 'BEFORE') {
+                        const G = currentParent.parent !== tree.nullNode ? currentParent.parent : null;
+                        const U = G ? (currentParent === G.left ? G.right : G.left) : null;
+                        
+                        if (U && U.colour) {
+                            nodeAction = 'P:B, U:B, G:R';
+                        } else {
+                            if (currentParent === G.left && current === currentParent.left) {
+                                nodeAction = 'Right(G)';
+                            } else if (currentParent === G.right && current === currentParent.right) {
+                                nodeAction = 'Left(G)';
+                            } else if (currentParent === G.left && current === currentParent.right) {
+                                nodeAction = 'Left(P)->Right(G)';
+                            } else if (currentParent === G.right && current === currentParent.left) {
+                                nodeAction = 'Right(P)->Left(G)';
+                            }
+                        }
+                    } else if (stage === 'AFTER') {
+                        nodeAction = 'Fixed';
+                    }
+                }
+            }
+            
+            const violationStr = violation.padEnd(13);
+            const actionStr = nodeAction.padEnd(12);
+            
+            console.log(`${nodeStr} | ${parentStr} | ${grandStr} | ${positionStr} | ${violationStr} | ${actionStr}`);
+        }
+        console.log('---');
+    }
+    
+    // Рекурсивно обходим потомков
+    if (node.left !== tree.nullNode) {
+        printPath(tree, node.left, node, newPath, currentNode, stage);
+    }
+    if (node.right !== tree.nullNode) {
+        printPath(tree, node.right, node, newPath, currentNode, stage);
+    }
+}
+
 function InsertNew(tree, value) {
     var new_inserted_node;
     new_inserted_node = insertNode(tree, tree.root, value);

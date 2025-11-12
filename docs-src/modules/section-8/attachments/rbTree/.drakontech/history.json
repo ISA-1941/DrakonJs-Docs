@@ -1,12 +1,36 @@
 {
     "history": [
         {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\Insert.drakon",
+            "whenOpened": "2025-11-11T09:42:25.664Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixRedRed.drakon",
+            "whenOpened": "2025-11-11T09:42:12.386Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\findInsertionPoint.drakon",
+            "whenOpened": "2025-11-11T09:38:55.068Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\deleteNode.drakon",
+            "whenOpened": "2025-11-11T09:05:44.460Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\main.drakon",
+            "whenOpened": "2025-11-10T09:46:52.889Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\InsertNew.drakon",
+            "whenOpened": "2025-11-10T09:11:33.920Z"
+        },
+        {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\createTree.drakon",
-            "whenOpened": "2025-11-09T19:55:40.318Z"
+            "whenOpened": "2025-11-10T08:21:48.819Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\createNode.drakon",
-            "whenOpened": "2025-11-09T19:41:43.261Z"
+            "whenOpened": "2025-11-10T08:21:46.203Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixDoubleBlackStep.drakon",
@@ -15,26 +39,6 @@
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixDoubleBlack.drakon",
             "whenOpened": "2025-11-08T20:07:24.844Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\deleteNode.drakon",
-            "whenOpened": "2025-11-07T11:07:21.378Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\Insert.drakon",
-            "whenOpened": "2025-11-07T09:00:45.766Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixRedRed.drakon",
-            "whenOpened": "2025-11-06T19:27:25.115Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\main.drakon",
-            "whenOpened": "2025-10-28T12:59:18.150Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\InsertNew.drakon",
-            "whenOpened": "2025-10-28T12:57:12.628Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\rotateLeftOld.drakon",
@@ -75,10 +79,6 @@
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\minimum.drakon",
             "whenOpened": "2025-06-14T17:52:46.049Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\findInsertionPoint.drakon",
-            "whenOpened": "2025-06-14T10:49:44.741Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\printTreeNode.drakon",
