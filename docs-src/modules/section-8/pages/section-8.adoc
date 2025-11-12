@@ -493,7 +493,7 @@ Explanation of the Types of Rotations Used in the Balancing Process
 | Performs a right rotation on `x.right`, then a left rotation on `x`. 
 |===
 
-The Drakon-diagram of the node rotation algorithms to the red and black tree cluster is shown in Figure 8.36a,b.
+The Drakon-diagram of the node rotation algorithms to the red and black tree cluster is shown in Figure 8.35a,b.
 
 //image::{imagesdir}/Fig8_36a_rotateLeft.png[width=75%]
 image::{imagesdir}/Fig8_35a_rotateLeft.png[width=100%, link="{imagesdir}/Fig8_35a_rotateLeft.svg", window="_blank"]
