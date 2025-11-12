@@ -506,8 +506,7 @@ image::{imagesdir}/Fig8_35b_rotateRight.png[width=100%, link="{imagesdir}/Fig8_3
                                       b) Right-rotation
 
 [.text-center]
-Figure 8.35. DRAKON-diagrams of the red-black tree cluster node rotation algorithm
-a) Left-rotation; b) Right-rotation
+Figure 8.35. DRAKON-diagrams of the red-black tree cluster node rotation algorithms
 
 Consider the balancing process using the example of building a red-black
 tree from sets of integers that are the keys of the input nodes:
