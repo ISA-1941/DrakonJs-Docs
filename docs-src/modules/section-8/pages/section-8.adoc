@@ -468,6 +468,126 @@ image::{imagesdir}/Fig8_34_diagr_figs.png[width=100%, link="{imagesdir}/Fig8_34_
 Figure 8.34. Illustration of Red-Black Tree Balancing Algorithms
 
 
+The different `nodeImage` representing possible configurations of red and black nodea are summarized in Table 8.4.
+
+image::{imagesdir}/Case_1.png[width=100%]
+
+[cols="1,1,2,2,2", options="header"]
+|===
+| Case | NodeImage & Path | Violation | Fix Strategy | Rotation Type
+| Red Uncle
+|
+x:R, x←P, P:R, P←G, G:B, U:R
+|
+Both x and P are red; G has two red children (P and U).
+|
+
+Recolor P and U to black.
+
+Recolor G to red.
+
+Set x = G (recursive ascent).
+|
+Recolor Only
+
+| Black Uncle Case 1 (L–L)
+|
+
+x:R, x←P
+
+P:R, P←G
+
+G:B
+
+U:B
+|
+x and P are both red and form a left-left line; uncle is black.
+|
+
+Recolor P to black.
+
+Recolor G to red.
+
+Right-rotate about G.
+|
+Right Rotation
+
+| Black Uncle Case 2 (R–R)
+|
+
+x:R, x→P
+
+P:R, P→G
+
+G:B
+
+U:B
+|
+x and P are both red and form a right-right line; uncle is black.
+|
+
+Recolor P to black.
+
+Recolor G to red.
+
+Left-rotate about G.
+|
+Left Rotation
+
+| Black Uncle Case 3 (L–R)
+|
+
+x:R, x→P
+
+P:R, P←G
+
+G:B
+
+U:B
+|
+x and P are both red and form a left-right line; uncle is black.
+|
+
+Left-rotate about P.
+
+Now x and P form a left-left line.
+
+Apply Case 1 (L-L) strategy.
+|
+Left-Right Rotation (Left, then Right)
+
+| Black Uncle Case 4 (R–L)
+|
+
+x:R, x←P
+
+P:R, P→G
+
+G:B
+
+U:B
+|
+x and P are both red and form a right-left line; uncle is black.
+|
+
+Right-rotate about P.
+
+Now x and P form a right-right line.
+
+Apply Case 2 (R-R) strategy.
+|
+Right-Left Rotation (Right, then Left)
+|===
+
+
+
+
+
+
+
+
+
+
 Explanation of the Types of Rotations Used in the Balancing Process 
 
 [cols="1,1,3", options="header"]
