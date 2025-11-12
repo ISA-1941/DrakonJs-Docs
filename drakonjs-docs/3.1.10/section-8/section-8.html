@@ -724,13 +724,8 @@ be consecutive red nodes.</p>
 contain the same number of black nodes.</p>
 </div>
 <div class="paragraph">
-<p>Unlike AVL trees, where balance is achieved by balancing the heights of
-the left and right subtrees, red-black balance is achieved by the
-properties mentioned above. Adding or removing a node from the red-black
-tree can disrupt the red-black tree properties, and restoring balance is
-achieved by two operations: repainting the nodes and/or rebuilding the
-whole tree or its subtrees using specific rotations.The most important
-of these properties are properties 4 and 5.</p>
+<p>Unlike AVL trees, where balance is achieved by balancing the heights of the left and right subtrees, red-black balance is achieved by the properties mentioned above. Adding or removing a node from the red-black
+tree can disrupt the red-black tree properties, and restoring balance is achieved by two operations: repainting the nodes and/or rebuilding the whole tree or its subtrees using specific rotations.The most important of these properties are properties 4 and 5.</p>
 </div>
 <div class="paragraph">
 <p>Property 4 dictates a critical aspect of red-black trees: the path from any given node to its deepest descendant must contain an equal number of red and black nodes. This isn&#8217;t just an arbitrary rule; it&#8217;s a fundamental mechanism for maintaining balance.</p>
@@ -742,8 +737,8 @@ of these properties are properties 4 and 5.</p>
 <p>Black height is an important term used for red-black trees. This is the number of black nodes on any single path from node x (not including it) to the leaf. The black height of any node x is represented as a logarithm of the number of nodes in the tree. In particular, if in each branch from the root to the leaves the same number of black nodes, then the height of the tree will be equal to a logarithm of the number of nodes. This property allows you to quickly perform basic operations of the search tree, such as adding, removing and searching for a node.</p>
 </div>
 <div class="paragraph">
-<p>To perform the above operations at the program level, a red-black tree is first created, for which two user types - node and RBTree are declared:
-Node includes the following fields: <code>data</code> - node numeric value,  <code>colour</code> - node colour type bool: <code>red node</code> - TRUE; <code>black node</code> - false, <code>left</code>, <code>right</code> and <code>parent</code> nodes. In turn RBTree structure represents the reference type variable, that store objects containing not the "value" itself but a reference to the memory area where this object is stored (Fig. 8.30).</p>
+<p>To perform the above operations at the program level, a red-black tree is first created, for which two user types - node and rbTree are declared:
+Node includes the following fields: <code>data</code> - node numeric value,  <code>colour</code> - node colour type bool: <code>red node</code> - TRUE; <code>black node</code> - false, <code>left</code>, <code>right</code> and <code>parent</code> nodes. In turn rbTree structure represents the reference type variable, that store objects containing not the "value" itself but a reference to the memory area where this object is stored (Fig. 8.30).</p>
 </div>
 <table class="tableblock frame-none grid-none stretch">
 <colgroup>
@@ -766,7 +761,132 @@ Node includes the following fields: <code>data</code> - node numeric value,  <co
 </tbody>
 </table>
 <div class="paragraph text-center">
-<p>Figure 8.30. Drakon-diagram of Node and Tree  description</p>
+<p>Figure 8.30. Drakon-diagram of Node and Tree  Description</p>
+</div>
+<div class="paragraph">
+<p>Next, consider the node positions in the tree as a result of each new
+node insertion and determine which properties of the red-black tree are
+violated. To understand this process, we introduce the following
+notation: x - new node, P (Parent) - parent of node x, G (Grandparent) -
+ancestor (parent of parent), U (Uncle) - uncle of node x, S - siblings (Figure 8.31).</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_31_family.jpg" alt="Fig8 31 family" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.31. Designation of the degree of "kinship" of RB Tree nodes (x, P, G, U, S)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_8_4_2_inserting_a_new_node_and_the_balancing_process"><a class="anchor" href="#_8_4_2_inserting_a_new_node_and_the_balancing_process"></a>8.4.2. Inserting a new node and the balancing process</h4>
+<div class="paragraph">
+<p>In the most general way the red-black tree construction algorithm is presented by the function <code>Insert(tree, value)</code>(Figure 8.32):</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<a class="image" href="_images/Fig8_32_rbInsert.svg" target="_blank" rel="noopener"><img src="_images/Fig8_32_rbInsert.png" alt="Fig8 32 rbInsert" width="75%"></a>
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.32. DRAKON-diagram of the function <code>Insert(tree, data)</code></p>
+</div>
+<div class="paragraph">
+<p>The DRAKON-diagrams of rotate functions are presented on Figure 8.31a,b.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_31_rotates.png" alt="Fig8 31 rotates" width="75%">
+</div>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<a class="image" href="_images/Fig8_31_rotates.svg" target="_blank" rel="noopener"><img src="_images/Fig8_31_rotates.png" alt="Fig8 31 rotates" width="75%"></a>
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.31. Rotate function DRAKON-diagrams (a - rotateLeft; b - rotate right)</p>
+</div>
+<div class="paragraph">
+<p>To describe the process of balancing the red-black tree, let’s name the set of nodes involved in the implementation of balancing <em>tree-cluster</em> and enter a local syntax:*:R or :B* is the color of the node. For example, P:R is the red parent.
+<strong>&#8592;  or &#8594;</strong> - the direction of the node position. For example, x &#8592;  P - the new node x is located to the left of the parent node P.
+The term <code>nodeImage</code> denotes the local configuration of nodes within a tree-cluster,
+including their colors and relative positions (left or right).
+When a new element is inserted, it is initially assigned the red color.
+To satisfy the first two rules, it is sufficient to repaint the new vertex as needed.
+After each insertion, all red-black tree properties must be verified.
+If at least one property is violated, rotation and recoloring operations are performed.
+The different <code>nodeImages</code> representing possible configurations of red and black nodes are summarized in Table 8.3.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 8.3 — NodeImages for Red-Black Tree Insertion Cases</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Variant</th>
+<th class="tableblock halign-left valign-top">nodeImage</th>
+<th class="tableblock halign-left valign-top">Violation</th>
+<th class="tableblock halign-left valign-top">Fix strategy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Red Uncle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x&#8592;P; P:R,P&#8592;G; G:B; U:R</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Both x and P are red; G has two red children (P and U).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor P and U to black (P:B, U:B), G to red (G:R); set x = G (propagate upward).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Black Uncle Case 1 (L–L)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x&#8592;P; P:R,P&#8592;G; G:B; U:B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x and P are both red and lie on left-left; uncle is black.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor P to black (P:B) and G to red (G:R); Right-rotate about (G).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Black Uncle Case 2 (R–R)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x&#8594;P; P:R,P&#8594;G; G:B; U:B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x and P are both red and lie on right-right; uncle is black.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor P to black (P:B) and G to red (G:R); Left-rotate about (G).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Black Uncle Case 3 (L–R)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x&#8594;P; P:R,P&#8592; G; G:B; U:B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">both x and P are red; x is right child of P, P is left child of G; uncle is black;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Left-rotate about (P), then treat as (L–L).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Black Uncle Case 4 (R–L)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x&#8592;P; P:R,P&#8594;G; G:B; U:B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x is left child of P, P is right child of G; both x and P are red; uncle is black;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Right-rotate about (P), then treat as (R–R).</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The DRAKON-diagram of the red-black tree balancing algorithm when entering a new node is shown in Figure 8.34,8.35.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<a class="image" href="_images/Fig8_34_fixRedRed.svg" target="_blank" rel="noopener"><img src="_images/Fig8_34_fixRedRed.png" alt="Fig8 34 fixRedRed" width="100%"></a>
+</div>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<a class="image" href="_images/Fig8_35_diagr_figs.svg" target="_blank" rel="noopener"><img src="_images/Fig8_35_diagr_figs.png" alt="Fig8 35 diagr figs" width="100%"></a>
+</div>
+<div class="title">Figure 8.34. Red-Black Tree Balancing Algorithm DRAKON-diagram</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.35. Illustration of Red-Black Tree Balancing Algorithms</p>
+</div>
+<div class="paragraph">
+<p>Обїяснение of the types of rotations used in the balancing process is given in Table 8.4.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -804,129 +924,6 @@ Node includes the following fields: <code>data</code> - node numeric value,  <co
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>The DRAKON-diagrams of rotate functions are presented on Figure 8.31a,b.</p>
-</div>
-<div class="imageblock unresolved">
-<div class="content">
-<img src="_images/Fig8_31_rotates.png" alt="Fig8 31 rotates" width="75%">
-</div>
-</div>
-<div class="imageblock unresolved">
-<div class="content">
-<a class="image" href="_images/Fig8_31_rotates.svg" target="_blank" rel="noopener"><img src="_images/Fig8_31_rotates.png" alt="Fig8 31 rotates" width="75%"></a>
-</div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 8.31. Rotate function DRAKON-diagrams (a - rotateLeft; b - rotate right)</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_8_4_2_inserting_a_new_node_and_the_balancing_process"><a class="anchor" href="#_8_4_2_inserting_a_new_node_and_the_balancing_process"></a>8.4.2. Inserting a new node and the balancing process</h4>
-<div class="paragraph">
-<p>In the most general way the red-black tree construction algorithm is presented by the function <code>Insert(tree, value)</code>(Figure 8.32):</p>
-</div>
-<div class="imageblock unresolved">
-<div class="content">
-<a class="image" href="_images/Fig8_32_rbInsert.svg" target="_blank" rel="noopener"><img src="_images/Fig8_32_rbInsert.png" alt="Fig8 32 rbInsert" width="75%"></a>
-</div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 8.32. DRAKON-diagram of the function <code>Insert(tree, data)</code></p>
-</div>
-<div class="paragraph">
-<p>Next, consider the node positions in the tree as a result of each new
-node insertion and determine which properties of the red-black tree are
-violated. To understand this process, we introduce the following
-notation: x - new node, P (Parent) - parent of node x, G (Grandparent) -
-ancestor (parent of parent), U (Uncle) - uncle of node x, S - siblings (Figure 8.33).</p>
-</div>
-<div class="imageblock unresolved">
-<div class="content">
-<img src="_images/Fig8_33_family.jpg" alt="Fig8 33 family" width="75%">
-</div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 8.33. Designation of the degree of "kinship" of RB Tree nodes (x, P, G, U, S)</p>
-</div>
-<div class="paragraph">
-<p>To describe the process of balancing the red-black tree, let’s name the set of nodes involved in the implementation of balancing <em>tree-cluster</em> and enter a local syntax:
-<strong>:R or :B</strong> is the color of the node. For example, P:R is the red parent.
-<strong>⇐  or ⇒</strong> - the direction of the node position. For example, x ⇐  P - the new node x is located to the left of the parent node P.
-The term nodeImage denotes the local configuration of nodes within a tree-cluster,
-including their colors and relative positions (left or right).
-When a new element is inserted, it is initially assigned the red color.
-To satisfy the first two rules, it is sufficient to repaint the new vertex as needed.
-After each insertion, all red-black tree properties must be verified.
-If at least one property is violated, rotation and recoloring operations are performed.
-The different nodeImages representing possible configurations of red and black nodes are summarized in Table 8.3.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 8.3 — NodeImages for Red-Black Tree Insertion Cases</caption>
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Variant</th>
-<th class="tableblock halign-left valign-top">nodeImage</th>
-<th class="tableblock halign-left valign-top">Violation</th>
-<th class="tableblock halign-left valign-top">Fix strategy</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Red Uncle</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x⇐ P; P:R,P⇐ G; G:B; U:R</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Both x and P are red; G has two red children (P and U).</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor P and U to black (P:B, U:B), G to red (G:R); set x = G (propagate upward).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Black Uncle Case 1 (L–L)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x⇐ P; P:R,P⇐ G; G:B; U:B</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x and P are both red and lie on left-left; uncle is black.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor P to black (P:B) and G to red (G:R); Right-rotate about (G).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Black Uncle Case 2 (R–R)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x⇒P; P:R,P⇒G; G:B; U:B</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x and P are both red and lie on right-right; uncle is black.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor P to black (P:B) and G to red (G:R); Left-rotate about (G).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Black Uncle Case 3 (L–R)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x⇒P; P:R,P⇐ G; G:B; U:B</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">both x and P are red; x is right child of P, P is left child of G; uncle is black;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Left-rotate about (P), then treat as (L–L).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Black Uncle Case 4 (R–L)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x⇐ P; P:R,P⇒G; G:B; U:B</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x is left child of P, P is right child of G; both x and P are red; uncle is black;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Right-rotate about (P), then treat as (R–R).</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>The DRAKON-diagram of the red-black tree balancing algorithm when entering a new node is shown in Figure 8.34,8.35.</p>
-</div>
-<div class="imageblock unresolved">
-<div class="content">
-<a class="image" href="_images/Fig8_34_fixRedRed.svg" target="_blank" rel="noopener"><img src="_images/Fig8_34_fixRedRed.png" alt="Fig8 34 fixRedRed" width="100%"></a>
-</div>
-</div>
-<div class="imageblock unresolved text-center">
-<div class="content">
-<a class="image" href="_images/Fig8_35_diagr_figs.svg" target="_blank" rel="noopener"><img src="_images/Fig8_35_diagr_figs.png" alt="Fig8 35 diagr figs" width="100%"></a>
-</div>
-<div class="title">Figure 8.34. Red-Black Tree Balancing Algorithm DRAKON-diagram</div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 8.35. Illustration of Red-Black Tree Balancing Algorithms</p>
-</div>
 <div class="paragraph">
 <p>The Drakon-diagram of the node rotation algorithms to the red and black tree cluster is shown in Figure 8.36a,b.</p>
 </div>
@@ -1044,14 +1041,14 @@ becomes a "double black" node.</em></p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x:B, x⇐ P; x.child=R</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:B, x&#8592; P; x.child=R</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Black node with one red child</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Promote child, recolor to black</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x:B, x⇐ P; x.child=B or NIL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:B, x&#8592; P; x.child=B or NIL</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Black node with black or null child</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Double-black arises</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">fixDoubleBlack(x)</p></td>

@@ -1,0 +1,83 @@
+{
+    "items": {
+        "1": {
+            "type": "idea",
+            "content": "<p>1.Check if tree is empty</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "2": {
+            "type": "idea",
+            "content": "<p>3.Create new node (red)</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 2
+        },
+        "3": {
+            "type": "idea",
+            "content": "<p>2.Find insertion point</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "4": {
+            "type": "ridea",
+            "content": "<p>Compare data</p>",
+            "parent": "3",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "5": {
+            "type": "idea",
+            "content": "<p>Detect duplicate</p>",
+            "parent": "3",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "6": {
+            "type": "ridea",
+            "content": "<p>Create root (black node)</p>",
+            "parent": "1",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "7": {
+            "type": "ridea",
+            "content": "<p>Attach to parent (left/right)</p>",
+            "parent": "2",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "8": {
+            "type": "idea",
+            "content": "<p>4.Fix red-red conflict</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 3
+        },
+        "9": {
+            "type": "ridea",
+            "content": "<p> Case 1: Uncle red → recolour</p>",
+            "parent": "8",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "10": {
+            "type": "ridea",
+            "content": "<p>Case 2–3: Uncle black → rotation(s)</p>",
+            "parent": "8",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "11": {
+            "type": "idea",
+            "content": "<p>5.Ensure root is black</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 4
+        }
+    },
+    "type": "graf",
+    "id": "Fig8_32_Insert.graf"
+}
