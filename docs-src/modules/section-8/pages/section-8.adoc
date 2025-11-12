@@ -504,7 +504,7 @@ algorithm can be divided into three stages.
 image::{imagesdir}/Fig8_37a_mindMap_deleteNode.png[width=100%, link="{imagesdir}/Fig8_37a_mindMap_deleteNode.svg", window="_blank"]
 a) Intellect map
 //image::{imagesdir}/Fig8_38b_deleteNode.png[width=75%]
-image::{imagesdir}/Fig8_37b_deleteNode.png[width=100%, link="{imagesdir}/Fig8_37b_deleteNode.svg", window="_blank"]
+image::{imagesdir}/Fig8_37b_deleteNode.png[width=100%], link="{imagesdir}/Fig8_37b_deleteNode.svg", window="_blank"]
 b) DRAKON-diagram
 [.text-center]
 Figure 8.37. Node Deletion Algorithm 
