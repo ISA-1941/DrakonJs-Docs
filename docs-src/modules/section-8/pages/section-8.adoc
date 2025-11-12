@@ -470,7 +470,7 @@ Figure 8.34. Illustration of Red-Black Tree Balancing Algorithms
 
 The different `nodeImage` representing possible configurations of red and black nodea are summarized in Table 8.4.
 
-image::{imagesdir}/Case_1.png[width=100%]
+image::{imagesdir}/Case_1.png[width=20%]
 
 [cols="1,1,2,2,2", options="header"]
 |===
