@@ -497,14 +497,13 @@ The Drakon-diagram of the node rotation algorithms to the red and black tree clu
 
 //image::{imagesdir}/Fig8_36a_rotateLeft.png[width=75%]
 image::{imagesdir}/Fig8_35a_rotateLeft.png[width=100%, link="{imagesdir}/Fig8_35a_rotateLeft.svg", window="_blank"]
-[.text-center]
-a) Left-rotation;
-
+                                      
+                                      a) Left-rotation;
 
 //image::{imagesdir}/Fig8_36b_rotateRight.png[width=75%]
 image::{imagesdir}/Fig8_35b_rotateRight.png[width=100%, link="{imagesdir}/Fig8_35b_rotateRight.svg", window="_blank"]
-[.text-center]
-b) Right-rotation
+                                      
+                                      b) Right-rotation
 
 [.text-center]
 Figure 8.35. DRAKON-diagrams of the red-black tree cluster node rotation algorithm
