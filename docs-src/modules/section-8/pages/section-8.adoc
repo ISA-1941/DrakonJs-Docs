@@ -502,12 +502,12 @@ algorithm can be divided into three stages.
 
 //image::{imagesdir}/Fig8_38a_mindMap_deleteNode.png[width=75%]
 image::{imagesdir}/Fig8_37a_mindMap_deleteNode.png[width=100%, link="{imagesdir}/Fig8_37a_mindMap_deleteNode.svg", window="_blank"]
-
+a) Intellect map
 //image::{imagesdir}/Fig8_38b_deleteNode.png[width=75%]
 image::{imagesdir}/Fig8_37b_deleteNode.png[width=100%, link="{imagesdir}/Fig8_37b_deleteNode.svg", window="_blank"]
-
+b) DRAKON-diagram
 [.text-center]
-Figure 8.37. Node Deletion Algorithm (a -intellect map; b - DRAKON-diagram)
+Figure 8.37. Node Deletion Algorithm 
 
 *The first step* is to delete the node. The algorithm traverses the
 nodes of the red-black tree, moving left or right, depending on whether
@@ -526,12 +526,12 @@ becomes a "double black" node._
 *The third stage is the correction of the double black nodes.* To fix the
 "double black" node, thefunctions _fixDoubleBlack (tree, x)_ and _fixDoubleBlackStep(tree, x)_ are called (Figures 8.39a,b). This feature fixes the "double black nodes" by using a series of rotations and recoloring steps. It considers several cases, depending on the colour of the brother of the "double black" node and its descendants. The function  _fixDoubleBlackStep (tree, x)_ handles all of these cases to ensure that the red-black tree remains balanced after each deletion operation (Table ).
 
-image::{imagesdir}/Fig8_39a_fixDoubleBlack.png[width=75%]
-
-image::{imagesdir}/Fig8_39b_fixDoubleBlackStep.svg[width=75%]
+image::{imagesdir}/Fig8_38a_fixDoubleBlack.png[width=75%]
+//image::{imagesdir}/Fig8_38b_fixDoubleBlackStep.png[width=75%]
+image::{imagesdir}/Fig8_38b_fixDoubleBlackStep.png[width=75%]/Fig8_38b_fixDoubleBlackStep.svg", window="_blank"]
 
 [.text-center]
-Figure 8.39. DRAKON-diagram of the node structure correction algorithm when removing "double black node" 
+Figure 8.38. DRAKON-diagram of the node structure correction algorithm when removing "double black node" 
 
 *New Table with nodeImage*
 
