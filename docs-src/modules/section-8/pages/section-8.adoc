@@ -409,14 +409,6 @@ image::{imagesdir}/Fig8_32_rbInsert.png[width=75%, link="{imagesdir}/Fig8_32_rbI
 [.text-center]
 Figure 8.32. DRAKON-diagram of the function `Insert(tree, data)`
 
-The DRAKON-diagrams of rotate functions are presented on Figure 8.33a,b.
-
-image::{imagesdir}/Fig8_33_rotates.png[width=75%]
-image::{imagesdir}/Fig8_33_rotates.png[width=75%, link="{imagesdir}/Fig8_31_rotates.svg", window="_blank"]
-
-[.text-center]
-Figure 8.33. Rotate function DRAKON-diagrams (a - rotateLeft; b - rotate right)  
-
 To describe the process of balancing the red-black tree, let’s name the set of nodes involved in the implementation of balancing _tree-cluster_ and enter a local syntax:*:R or :B* is the color of the node. For example, P:R is the red parent.
 *<-  or ->* - the direction of the node position. For example, x <-  P - the new node x is located to the left of the parent node P. 
 The term `nodeImage` denotes the local configuration of nodes within a tree-cluster,
@@ -463,17 +455,17 @@ The different `nodeImage` representing possible configurations of red and black 
 The DRAKON-diagram of the red-black tree balancing algorithm when entering a new node is shown in Figure 8.34,8.35.
 
 //image::{imagesdir}/Fig8_34_fixRedRed.png[width=100%]
-image::{imagesdir}/Fig8_34_fixRedRed.png[width=100%, link="{imagesdir}/Fig8_34_fixRedRed.svg", window="_blank"]
+image::{imagesdir}/Fig8_33_fixRedRed.png[width=100%, link="{imagesdir}/Fig8_33_fixRedRed.svg", window="_blank"]
 
 [.text-center]
-.Figure 8.34. Red-Black Tree Balancing Algorithm DRAKON-diagram 
+.Figure 8.33. Red-Black Tree Balancing Algorithm DRAKON-diagram 
 
 
 //image::{imagesdir}/Fig8_35_diagr_figs.png[width=75%]
-image::{imagesdir}/Fig8_35_diagr_figs.png[width=100%, link="{imagesdir}/Fig8_35_diagr_figs.svg", window="_blank"]
+image::{imagesdir}/Fig8_34_diagr_figs.png[width=100%, link="{imagesdir}/Fig8_34_diagr_figs.svg", window="_blank"]
 
 [.text-center]
-Figure 8.35. Illustration of Red-Black Tree Balancing Algorithms
+Figure 8.34. Illustration of Red-Black Tree Balancing Algorithms
 
 
 Explanation of the Types of Rotations Used in the Balancing Process 
@@ -504,23 +496,23 @@ Explanation of the Types of Rotations Used in the Balancing Process
 The Drakon-diagram of the node rotation algorithms to the red and black tree cluster is shown in Figure 8.36a,b.
 
 //image::{imagesdir}/Fig8_36a_rotateLeft.png[width=75%]
-image::{imagesdir}/Fig8_36a_rotateLeft.png[width=100%, link="{imagesdir}/Fig8_36a_rotateLeft.svg", window="_blank"]
+image::{imagesdir}/Fig8_35a_rotateLeft.png[width=100%, link="{imagesdir}/Fig8_35a_rotateLeft.svg", window="_blank"]
 
 //image::{imagesdir}/Fig8_36b_rotateRight.png[width=75%]
-image::{imagesdir}/Fig8_36b_rotateRight.png[width=100%, link="{imagesdir}/Fig8_36b_rotateRight.svg", window="_blank"]
+image::{imagesdir}/Fig8_35b_rotateRight.png[width=100%, link="{imagesdir}/Fig8_35b_rotateRight.svg", window="_blank"]
 
 [.text-center]
-Figure 8.36. DRAKON-diagrams of the red-black tree cluster node rotation algorithm
+Figure 8.35. DRAKON-diagrams of the red-black tree cluster node rotation algorithm
 a) Left-rotation; b) Right-rotation
 
 Consider the balancing process using the example of building a red-black
 tree from sets of integers that are the keys of the input nodes:
-`[11,12,13,14,15,16,17,18,19]` (Figure 8.37):
+`[11,12,13,14,15,16,17,18,19]` (Figure 8.36):
 
-image::{imagesdir}/Fig8_37_rbProcess.jpg[width=75%]
+image::{imagesdir}/Fig8_36_rbProcess.jpg[width=75%]
 
 [.text-center]
-Figure 8.37. Process for Balancing the Red-Black Tree
+Figure 8.36 Process for Balancing the Red-Black Tree
 
 ==== 8.4.3. Deleting a Node from a red-black tree
 
