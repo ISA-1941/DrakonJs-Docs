@@ -794,22 +794,6 @@ ancestor (parent of parent), U (Uncle) - uncle of node x, S - siblings (Figure 8
 <p>Figure 8.32. DRAKON-diagram of the function <code>Insert(tree, data)</code></p>
 </div>
 <div class="paragraph">
-<p>The DRAKON-diagrams of rotate functions are presented on Figure 8.33a,b.</p>
-</div>
-<div class="imageblock unresolved">
-<div class="content">
-<img src="_images/Fig8_33_rotates.png" alt="Fig8 33 rotates" width="75%">
-</div>
-</div>
-<div class="imageblock unresolved">
-<div class="content">
-<a class="image" href="_images/Fig8_31_rotates.svg" target="_blank" rel="noopener"><img src="_images/Fig8_33_rotates.png" alt="Fig8 33 rotates" width="75%"></a>
-</div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 8.33. Rotate function DRAKON-diagrams (a - rotateLeft; b - rotate right)</p>
-</div>
-<div class="paragraph">
 <p>To describe the process of balancing the red-black tree, let’s name the set of nodes involved in the implementation of balancing <em>tree-cluster</em> and enter a local syntax:*:R or :B* is the color of the node. For example, P:R is the red parent.
 <strong>&#8592;  or &#8594;</strong> - the direction of the node position. For example, x &#8592;  P - the new node x is located to the left of the parent node P.
 The term <code>nodeImage</code> denotes the local configuration of nodes within a tree-cluster,
@@ -874,17 +858,17 @@ The different <code>nodeImage</code> representing possible configurations of red
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/Fig8_34_fixRedRed.svg" target="_blank" rel="noopener"><img src="_images/Fig8_34_fixRedRed.png" alt="Fig8 34 fixRedRed" width="100%"></a>
+<a class="image" href="_images/Fig8_33_fixRedRed.svg" target="_blank" rel="noopener"><img src="_images/Fig8_33_fixRedRed.png" alt="Fig8 33 fixRedRed" width="100%"></a>
 </div>
 </div>
 <div class="imageblock unresolved text-center">
 <div class="content">
-<a class="image" href="_images/Fig8_35_diagr_figs.svg" target="_blank" rel="noopener"><img src="_images/Fig8_35_diagr_figs.png" alt="Fig8 35 diagr figs" width="100%"></a>
+<a class="image" href="_images/Fig8_34_diagr_figs.svg" target="_blank" rel="noopener"><img src="_images/Fig8_34_diagr_figs.png" alt="Fig8 34 diagr figs" width="100%"></a>
 </div>
-<div class="title">Figure 8.34. Red-Black Tree Balancing Algorithm DRAKON-diagram</div>
+<div class="title">Figure 8.33. Red-Black Tree Balancing Algorithm DRAKON-diagram</div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 8.35. Illustration of Red-Black Tree Balancing Algorithms</p>
+<p>Figure 8.34. Illustration of Red-Black Tree Balancing Algorithms</p>
 </div>
 <div class="paragraph">
 <p>Explanation of the Types of Rotations Used in the Balancing Process</p>
@@ -930,30 +914,30 @@ The different <code>nodeImage</code> representing possible configurations of red
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/Fig8_36a_rotateLeft.svg" target="_blank" rel="noopener"><img src="_images/Fig8_36a_rotateLeft.png" alt="Fig8 36a rotateLeft" width="100%"></a>
+<a class="image" href="_images/Fig8_35a_rotateLeft.svg" target="_blank" rel="noopener"><img src="_images/Fig8_35a_rotateLeft.png" alt="Fig8 35a rotateLeft" width="100%"></a>
 </div>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/Fig8_36b_rotateRight.svg" target="_blank" rel="noopener"><img src="_images/Fig8_36b_rotateRight.png" alt="Fig8 36b rotateRight" width="100%"></a>
+<a class="image" href="_images/Fig8_35b_rotateRight.svg" target="_blank" rel="noopener"><img src="_images/Fig8_35b_rotateRight.png" alt="Fig8 35b rotateRight" width="100%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 8.36. DRAKON-diagrams of the red-black tree cluster node rotation algorithm
+<p>Figure 8.35. DRAKON-diagrams of the red-black tree cluster node rotation algorithm
 a) Left-rotation; b) Right-rotation</p>
 </div>
 <div class="paragraph">
 <p>Consider the balancing process using the example of building a red-black
 tree from sets of integers that are the keys of the input nodes:
-<code>[11,12,13,14,15,16,17,18,19]</code> (Figure 8.37):</p>
+<code>[11,12,13,14,15,16,17,18,19]</code> (Figure 8.36):</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<img src="_images/Fig8_37_rbProcess.jpg" alt="Fig8 37 rbProcess" width="75%">
+<img src="_images/Fig8_36_rbProcess.jpg" alt="Fig8 36 rbProcess" width="75%">
 </div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 8.37. Process for Balancing the Red-Black Tree</p>
+<p>Figure 8.36 Process for Balancing the Red-Black Tree</p>
 </div>
 </div>
 <div class="sect3">
