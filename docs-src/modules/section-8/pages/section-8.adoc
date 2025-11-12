@@ -475,7 +475,7 @@ image::{imagesdir}/Fig8_35_diagr_figs.png[width=100%, link="{imagesdir}/Fig8_35_
 Figure 8.35. Illustration of Red-Black Tree Balancing Algorithms
 
 
-Обїяснение of the types of rotations used in the balancing process is given in Table 8.4. 
+Explanation of the Types of Rotations Used in the Balancing Process 
 
 [cols="1,1,3", options="header"]
 |===
