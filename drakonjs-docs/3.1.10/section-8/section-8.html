@@ -929,7 +929,7 @@ tree from sets of integers that are the keys of the input nodes:
 <p>s: The sibling of x.</p>
 </div>
 <div class="paragraph">
-<p>s.left, s.right: The left and right nephews (children) of the sibling s.</p>
+<p>s_L, s_R: The left and right children of the sibling s.</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
@@ -940,7 +940,7 @@ tree from sets of integers that are the keys of the input nodes:
 <p>Figure 8.37. Tree node relationship</p>
 </div>
 <div class="paragraph">
-<p>The deletion algorithm follows three key stages. The following sections detail all possible cases it must address. The final and most complex stage, resolving a "double-black" node, is handled by the fixDoubleBlack(x) function.</p>
+<p>The deletion algorithm follows three key stages. The following sections detail all possible cases it must address. The final and most complex stage, resolving a "double-black" node, is handled by the <code>fixDoubleBlack(x)</code> function.</p>
 </div>
 <div class="paragraph">
 <p><strong>Case 1: The Sibling s is Red</strong></p>
@@ -948,6 +948,35 @@ tree from sets of integers that are the keys of the input nodes:
 <div class="paragraph">
 <p>This is a "gateway" case. A red sibling allows us to perform a rotation to transform the tree into a configuration where the sibling is black, leading to one of the subsequent cases.</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 28.5714%;">
+<col style="width: 14.2857%;">
+<col style="width: 28.5714%;">
+<col style="width: 28.5715%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Tree-Cluster (BEFORE)</th>
+<th class="tableblock halign-left valign-top">Violation</th>
+<th class="tableblock halign-left valign-top">Actions</th>
+<th class="tableblock halign-left valign-top">Tree-Cluster (AFTER)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>x:DB, x←P; P:B; s:R, s→P; s_L:B; s_R:B</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Red sibling blocks direct access to black nephews. Creates an imbalanced subtree.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor s to black</p>
+<p class="tableblock">Recolor P to red</p>
+<p class="tableblock">Left-rotate around P</p>
+<p class="tableblock">Re-analyze the new configuration of x (its sibling is now black)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x:DB, x←P; P:R; s:B, s→P; s_L:B; s_R:B (Now proceed to Case 2, 3, or 4)</p></td>
+</tr>
+</tbody>
+</table>
 <div class="imageblock unresolved">
 <div class="content">
 <a class="image" href="_images/Fig8_37a_mindMap_deleteNode.svg" target="_blank" rel="noopener"><img src="_images/Fig8_37a_mindMap_deleteNode.png" alt="Fig8 37a mindMap deleteNode" width="100%"></a>
