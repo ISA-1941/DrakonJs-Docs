@@ -508,17 +508,12 @@ image::{imagesdir}/Fig8_37_Term.jpg[width=50%]
 [.text-center]
 Figure 8.37. Tree node relationship
 
+The deletion algorithm follows three key stages. The following sections detail all possible cases it must address. The final and most complex stage, resolving a "double-black" node, is handled by the fixDoubleBlack(x) function. 
 
-It is important to remember that all
-transformations of the tree structure must maintain its properties. This
-algorithm can be divided into three stages.
+*Case 1: The Sibling s is Red*
 
-*Stage 1: Standard BST Deletion*
-First, the node is removed using the standard binary search tree deletion logic. The outcome of this step determines the necessity of further rebalancing.
+This is a "gateway" case. A red sibling allows us to perform a rotation to transform the tree into a configuration where the sibling is black, leading to one of the subsequent cases.
 
-- If the deleted node was red, no properties are violated, and the process is complete.
-
-- If the deleted node was black, it may create a "double-black" deficit in the tree, which must be resolved.
 
 //image::{imagesdir}/Fig8_38a_mindMap_deleteNode.png[width=75%]
 image::{imagesdir}/Fig8_37a_mindMap_deleteNode.png[width=100%, link="{imagesdir}/Fig8_37a_mindMap_deleteNode.svg", window="_blank"]
@@ -530,6 +525,8 @@ image::{imagesdir}/Fig8_37b_deleteNode.png[width=100%], link="{imagesdir}/Fig8_3
 b) DRAKON-diagram
 [.text-center]
 Figure 8.37. Node Deletion Algorithm 
+
+
 
 *Stage 2: Introducing the "Double-Black" Concept*
 If a black node is deleted, the path through its parent now has one less black node. This deficit is conceptualized as a "double-black" node (x), which is the node that replaced the deleted one (or a NIL leaf if it had no children). The goal of the next stage is to "bubble" this extra blackness up the tree until it can be dissolved.
