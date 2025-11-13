@@ -511,7 +511,7 @@ This preserves the black-height on all paths through this subtree.
 
 Tree-Cluster: x:B, x←P; x_L|x_R:R → Replace x with child (x_l|x_R); P:R|B
 
-image::{imagesdir}/rbTree_Del_Case_0.png[width=50%]
+image::{imagesdir}/Fig8_38_Del_Case_0.png[width=50%]
 
 
 To understand the balancing operations, we first introduce the standard notation used throughout this section (Figure 8.37):
