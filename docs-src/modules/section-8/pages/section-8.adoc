@@ -493,38 +493,49 @@ This example demonstrates how local rotations and recoloring maintain global bal
 
 ==== 8.4.3. Deleting a Node from a red-black tree
 
-Removing a node from a RB tree is a complex process because
-it depends on the location of the node, the presence of children, and
-the colour of the nodes. It is important to remember that all
-transformations of the tree structure must maintain its properties. The
-DRAKON-diagram of the node removal algorithm is shown in Figures 8.37a,b. This
+Removing a node from a red-black tree is a complex process because it depends on the location of the node, the presence of children, and the colour of the nodes involved. To understand the balancing operations, we first introduce the standard notation used throughout this section (Figure 8.37):
+
+x: The node to be deleted, or the "double-black" node that replaces it after deletion.
+
+P: The parent of x.
+
+s: The sibling of x.
+
+s.left, s.right: The left and right nephews (children) of the sibling s.
+
+image::{imagesdir}/Fig8_37_Term.jpg[width=100%]
+
+[.text-center]
+Figure 8.37. Tree node relationship
+
+
+It is important to remember that all
+transformations of the tree structure must maintain its properties. This
 algorithm can be divided into three stages.
+
+*Stage 1: Standard BST Deletion*
+First, the node is removed using the standard binary search tree deletion logic. The outcome of this step determines the necessity of further rebalancing.
+
+- If the deleted node was red, no properties are violated, and the process is complete.
+
+- If the deleted node was black, it may create a "double-black" deficit in the tree, which must be resolved.
 
 //image::{imagesdir}/Fig8_38a_mindMap_deleteNode.png[width=75%]
 image::{imagesdir}/Fig8_37a_mindMap_deleteNode.png[width=100%, link="{imagesdir}/Fig8_37a_mindMap_deleteNode.svg", window="_blank"]
 a) Intellect map
+
 //image::{imagesdir}/Fig8_38b_deleteNode.png[width=75%]
 image::{imagesdir}/Fig8_37b_deleteNode.png[width=100%], link="{imagesdir}/Fig8_37b_deleteNode.svg", window="_blank"]
+
 b) DRAKON-diagram
 [.text-center]
 Figure 8.37. Node Deletion Algorithm 
 
-*The first step* is to delete the node. The algorithm traverses the
-nodes of the red-black tree, moving left or right, depending on whether
-the key of the current node is larger or smaller than the specified
-value. When a node with the key key is found, it is stored in the
-variable z. The specified node is then removed from its original
-location in the tree.
+*Stage 2: Introducing the "Double-Black" Concept*
+If a black node is deleted, the path through its parent now has one less black node. This deficit is conceptualized as a "double-black" node (x), which is the node that replaced the deleted one (or a NIL leaf if it had no children). The goal of the next stage is to "bubble" this extra blackness up the tree until it can be dissolved.
 
-*The second step is to fix the double black node.* If the node to be
-removed was black, it may disturb the properties of the red-black tree,
-since all paths from the root to the leaves must contain the same number
-of black nodes. To remedy this, the concept of a "double black" node is
-introduced. If the node x _that replaced the deleted node is black, it
-becomes a "double black" node._
-
-*The third stage is the correction of the double black nodes.* To fix the
-"double black" node, thefunctions _fixDoubleBlack (tree, x)_ and _fixDoubleBlackStep(tree, x)_ are called (Figures 8.39a,b). This feature fixes the "double black nodes" by using a series of rotations and recoloring steps. It considers several cases, depending on the colour of the brother of the "double black" node and its descendants. The function  _fixDoubleBlackStep (tree, x)_ handles all of these cases to ensure that the red-black tree remains balanced after each deletion operation (Table ).
+*Stage 3: Resolving the Double-Black Node with `fixDoubleBlack(x)`*
+This is the core rebalancing phase. The function `fixDoubleBlack(x)` is called, where x is the double-black node. The resolution depends entirely on the color of x's sibling (s) and that sibling's children (Figure 8.38). 
 
 image::{imagesdir}/Fig8_38a_fixDoubleBlack.png[width=50%]
 //image::{imagesdir}/Fig8_38b_fixDoubleBlackStep.png[width=75%]
@@ -532,7 +543,114 @@ image::{imagesdir}/Fig8_38b_fixDoubleBlackStep.png[width=100%, link="{imagesdir}
 [.text-center]
 Figure 8.38. DRAKON-diagram of the node structure correction algorithm when removing "double black node" 
 
-*New Table with nodeImage*
+The following table provides a complete guide to the cases handled by fixDoubleBlack. The key is to identify the configuration of the sibling (s) and its children to determine the correct sequence of rotations and recolorings.
+
+Table 8.4 — `fixDoubleBlack(x)` Resolution Cases
+
+[cols="1,2,2,2,2", options="header"]
+|===
+| Case | Sibling (s) & Nephews | Description | Actions | Outcome
+| 1
+| s is red
+|
+The sibling is red. This is a gateway case to the other cases.
+|
+
+Recolor s to black
+
+Recolor x.parent to red
+
+Rotate left if x is left child (right otherwise)
+
+Re-enter `fixDoubleBlack(x)` for the new sibling (which is now guaranteed to be black).
+|
+Transforms the problem into a case with a black sibling (2, 3, or 4).
+
+| 2
+| s is black, and both of s's children are black
+|
+The sibling cannot lend a black node.
+|
+
+Recolor s to red
+
+Move the double-black problem upward by setting x = x.parent.
+
+If the new x is red, it becomes black (problem solved).
+
+If the new x is the root, stop.
+
+Otherwise, recurse with fixDoubleBlack(new x).
+|
+The double-black "bubbles up" to the parent.
+
+| 3
+| s is black, and at least one of s's children is red.
+| This case has sub-cases based on the configuration.
+|
+*See sub-cases 3a-3d below.*
+|
+The double-black is eliminated via rotations.
+|===
+
+Sub-cases of Case 3 (Black Sibling with a Red Child):
+
+[cols="1,3,4", options="header"]
+|===
+| Sub-case | Configuration (x is left child) | Actions
+| 3a (L-L)
+| s is the right child, and s's right child is red.
+|
+
+Recolor s to the color of x.parent
+
+Recolor x.parent to black
+
+Recolor s.right to black
+
+Left-rotate around x.parent
+
+| 3b (L-R)
+| s is the right child, and s's left child is red (right is black).
+|
+
+Recolor s.left to black
+
+Recolor s to red
+
+Right-rotate around s
+
+This transforms the case into 3a (L-L). Apply 3a.
+
+| 3c (R-R)
+| s is the left child, and s's left child is red.
+|
+
+Recolor s to the color of x.parent
+
+Recolor x.parent to black
+
+Recolor s.left to black
+
+Right-rotate around x.parent
+
+| 3d (R-L)
+| s is the left child, and s's right child is red (left is black).
+|
+
+Recolor s.right to black
+
+Recolor s to red
+
+Left-rotate around s
+
+This transforms the case into 3c (R-R). Apply 3c.
+|===
+
+
+
+
+
 
 [cols="1,2,2,2,1", options="header"]
 |===
@@ -586,16 +704,16 @@ Figure 8.40. Deletion of red node (20)
 If the node to be deleted and the node that replaces it are black nodes,
 a situation called a "double black node" occurs. In this case, some
 additional operations must be performed to ensure that the properties of
-the red-black wood are preserved. The Drakon-diagrams algorithm of this
-process is shown in Fig.8.42.
+the red-black tree are preserved. The Drakon-diagrams algorithm of this
+process is shown in Fig.8.41.
 
-image::{imagesdir}/Fig8_42a_fixDoubleBlack.png[width=80%]
+image::{imagesdir}/Fig8_41_fixDoubleBlack.png[width=80%]
 
 //image::{imagesdir}/Fig8_42b_fixDoubleBlackStep.png[width=100%]
-image::{imagesdir}/Fig8_42b_fixDoubleBlackStep.png[width=100%, link="{imagesdir}/Fig8_42b_fixDoubleBlackStep.svg", window="_blank"]
+image::{imagesdir}/Fig8_41b_fixDoubleBlackStep.png[width=100%, link="{imagesdir}/Fig8_41b_fixDoubleBlackStep.svg", window="_blank"]
 
 [.text-center]
-Figure 8.42. Drakon-diagram of the node structure correction algorithm when removing "double black node"
+Figure 8.41. Drakon-diagram of the node structure correction algorithm when removing "double black node"
 
 If the replacement node is a leaf node (i.e., has no child nodes), we
 replace the node with a "zero" leaf node and colour it black. If the
@@ -611,7 +729,7 @@ Figure 8.43. DRAKON-diagram of the node structure correction algorithm
 when removing "double black node"
 
 If a node is deleted and replaced with another node, the properties of
-the red-black wood may be compromised. To restore them, the following
+the red-black tree may be compromised. To restore them, the following
 operations must be performed:
 
 [arabic]
@@ -626,7 +744,7 @@ tree until the tree is balanced.
 {empty}3. At the same time, you need to make sure that the root of the
 tree is black.
 
-Let's consider options for restoring the properties of red-black wood.
+Let's consider options for restoring the properties of red-black tree.
 Enter the following notations: the node to be deleted is "x", the child
 node of the deleted node is "y", and the sibling of the node to be
 deleted is "s" (Figure 8.43).
