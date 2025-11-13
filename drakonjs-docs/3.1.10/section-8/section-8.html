@@ -917,12 +917,46 @@ tree from sets of integers that are the keys of the input nodes:
 <div class="sect3">
 <h4 id="_8_4_3_deleting_a_node_from_a_red_black_tree"><a class="anchor" href="#_8_4_3_deleting_a_node_from_a_red_black_tree"></a>8.4.3. Deleting a Node from a red-black tree</h4>
 <div class="paragraph">
-<p>Removing a node from a RB tree is a complex process because
-it depends on the location of the node, the presence of children, and
-the colour of the nodes. It is important to remember that all
-transformations of the tree structure must maintain its properties. The
-DRAKON-diagram of the node removal algorithm is shown in Figures 8.37a,b. This
+<p>Removing a node from a red-black tree is a complex process because it depends on the location of the node, the presence of children, and the colour of the nodes involved. To understand the balancing operations, we first introduce the standard notation used throughout this section (Figure 8.37):</p>
+</div>
+<div class="paragraph">
+<p>x: The node to be deleted, or the "double-black" node that replaces it after deletion.</p>
+</div>
+<div class="paragraph">
+<p>P: The parent of x.</p>
+</div>
+<div class="paragraph">
+<p>s: The sibling of x.</p>
+</div>
+<div class="paragraph">
+<p>s.left, s.right: The left and right nephews (children) of the sibling s.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_37_Term.jpg" alt="Fig8 37 Term" width="100%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.37. Tree node relationship</p>
+</div>
+<div class="paragraph">
+<p>It is important to remember that all
+transformations of the tree structure must maintain its properties. This
 algorithm can be divided into three stages.</p>
+</div>
+<div class="paragraph">
+<p><strong>Stage 1: Standard BST Deletion</strong>
+First, the node is removed using the standard binary search tree deletion logic. The outcome of this step determines the necessity of further rebalancing.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the deleted node was red, no properties are violated, and the process is complete.</p>
+</li>
+<li>
+<p>If the deleted node was black, it may create a "double-black" deficit in the tree, which must be resolved.</p>
+</li>
+</ul>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
@@ -930,32 +964,26 @@ algorithm can be divided into three stages.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>a) Intellect map
-image::_images/Fig8_37b_deleteNode.png[width=100%], link="_images/Fig8_37b_deleteNode.svg", window="_blank"]
-b) DRAKON-diagram</p>
+<p>a) Intellect map</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<a class="image" href="_images/Fig8_37b_deleteNode.svg" target="_blank" rel="noopener"><img src="_images/Fig8_37b_deleteNode.png" alt="Fig8 37b deleteNode" width="100%]"></a>
+</div>
+</div>
+<div class="paragraph">
+<p>b) DRAKON-diagram</p>
 </div>
 <div class="paragraph text-center">
 <p>Figure 8.37. Node Deletion Algorithm</p>
 </div>
 <div class="paragraph">
-<p><strong>The first step</strong> is to delete the node. The algorithm traverses the
-nodes of the red-black tree, moving left or right, depending on whether
-the key of the current node is larger or smaller than the specified
-value. When a node with the key key is found, it is stored in the
-variable z. The specified node is then removed from its original
-location in the tree.</p>
+<p><strong>Stage 2: Introducing the "Double-Black" Concept</strong>
+If a black node is deleted, the path through its parent now has one less black node. This deficit is conceptualized as a "double-black" node (x), which is the node that replaced the deleted one (or a NIL leaf if it had no children). The goal of the next stage is to "bubble" this extra blackness up the tree until it can be dissolved.</p>
 </div>
 <div class="paragraph">
-<p><strong>The second step is to fix the double black node.</strong> If the node to be
-removed was black, it may disturb the properties of the red-black tree,
-since all paths from the root to the leaves must contain the same number
-of black nodes. To remedy this, the concept of a "double black" node is
-introduced. If the node x <em>that replaced the deleted node is black, it
-becomes a "double black" node.</em></p>
-</div>
-<div class="paragraph">
-<p><strong>The third stage is the correction of the double black nodes.</strong> To fix the
-"double black" node, thefunctions <em>fixDoubleBlack (tree, x)</em> and <em>fixDoubleBlackStep(tree, x)</em> are called (Figures 8.39a,b). This feature fixes the "double black nodes" by using a series of rotations and recoloring steps. It considers several cases, depending on the colour of the brother of the "double black" node and its descendants. The function  <em>fixDoubleBlackStep (tree, x)</em> handles all of these cases to ensure that the red-black tree remains balanced after each deletion operation (Table ).</p>
+<p><strong>Stage 3: Resolving the Double-Black Node with <code>fixDoubleBlack(x)</code></strong>
+This is the core rebalancing phase. The function <code>fixDoubleBlack(x)</code> is called, where x is the double-black node. The resolution depends entirely on the color of x&#8217;s sibling (s) and that sibling&#8217;s children (Figure 8.38).</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
@@ -971,8 +999,110 @@ becomes a "double black" node.</em></p>
 <p>Figure 8.38. DRAKON-diagram of the node structure correction algorithm when removing "double black node"</p>
 </div>
 <div class="paragraph">
-<p><strong>New Table with nodeImage</strong></p>
+<p>The following table provides a complete guide to the cases handled by fixDoubleBlack. The key is to identify the configuration of the sibling (s) and its children to determine the correct sequence of rotations and recolorings.</p>
 </div>
+<div class="paragraph">
+<p>Table 8.4 — <code>fixDoubleBlack(x)</code> Resolution Cases</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 22.2222%;">
+<col style="width: 22.2222%;">
+<col style="width: 22.2222%;">
+<col style="width: 22.2223%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Case</th>
+<th class="tableblock halign-left valign-top">Sibling (s) &amp; Nephews</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Actions</th>
+<th class="tableblock halign-left valign-top">Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">s is red</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The sibling is red. This is a gateway case to the other cases.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor s to black</p>
+<p class="tableblock">Recolor x.parent to red</p>
+<p class="tableblock">Rotate left if x is left child (right otherwise)</p>
+<p class="tableblock">Re-enter <code>fixDoubleBlack(x)</code> for the new sibling (which is now guaranteed to be black).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Transforms the problem into a case with a black sibling (2, 3, or 4).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">s is black, and both of s&#8217;s children are black</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The sibling cannot lend a black node.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor s to red</p>
+<p class="tableblock">Move the double-black problem upward by setting x = x.parent.</p>
+<p class="tableblock">If the new x is red, it becomes black (problem solved).</p>
+<p class="tableblock">If the new x is the root, stop.</p>
+<p class="tableblock">Otherwise, recurse with fixDoubleBlack(new x).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The double-black "bubbles up" to the parent.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">s is black, and at least one of s&#8217;s children is red.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This case has sub-cases based on the configuration.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>See sub-cases 3a-3d below.</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The double-black is eliminated via rotations.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Sub-cases of Case 3 (Black Sibling with a Red Child):</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 12.5%;">
+<col style="width: 37.5%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Sub-case</th>
+<th class="tableblock halign-left valign-top">Configuration (x is left child)</th>
+<th class="tableblock halign-left valign-top">Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3a (L-L)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">s is the right child, and s&#8217;s right child is red.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor s to the color of x.parent</p>
+<p class="tableblock">Recolor x.parent to black</p>
+<p class="tableblock">Recolor s.right to black</p>
+<p class="tableblock">Left-rotate around x.parent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3b (L-R)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">s is the right child, and s&#8217;s left child is red (right is black).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor s.left to black</p>
+<p class="tableblock">Recolor s to red</p>
+<p class="tableblock">Right-rotate around s</p>
+<p class="tableblock">This transforms the case into 3a (L-L). Apply 3a.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3c (R-R)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">s is the left child, and s&#8217;s left child is red.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor s to the color of x.parent</p>
+<p class="tableblock">Recolor x.parent to black</p>
+<p class="tableblock">Recolor s.left to black</p>
+<p class="tableblock">Right-rotate around x.parent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3d (R-L)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">s is the left child, and s&#8217;s right child is red (left is black).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor s.right to black</p>
+<p class="tableblock">Recolor s to red</p>
+<p class="tableblock">Left-rotate around s</p>
+<p class="tableblock">This transforms the case into 3c (R-R). Apply 3c.</p></td>
+</tr>
+</tbody>
+</table>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 12.5%;">
@@ -1118,21 +1248,21 @@ further changes to the tree structure (fig.8.40).</p>
 <p>If the node to be deleted and the node that replaces it are black nodes,
 a situation called a "double black node" occurs. In this case, some
 additional operations must be performed to ensure that the properties of
-the red-black wood are preserved. The Drakon-diagrams algorithm of this
-process is shown in Fig.8.42.</p>
+the red-black tree are preserved. The Drakon-diagrams algorithm of this
+process is shown in Fig.8.41.</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<img src="_images/Fig8_42a_fixDoubleBlack.png" alt="Fig8 42a fixDoubleBlack" width="80%">
+<img src="_images/Fig8_41_fixDoubleBlack.png" alt="Fig8 41 fixDoubleBlack" width="80%">
 </div>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/Fig8_42b_fixDoubleBlackStep.svg" target="_blank" rel="noopener"><img src="_images/Fig8_42b_fixDoubleBlackStep.png" alt="Fig8 42b fixDoubleBlackStep" width="100%"></a>
+<a class="image" href="_images/Fig8_41b_fixDoubleBlackStep.svg" target="_blank" rel="noopener"><img src="_images/Fig8_41b_fixDoubleBlackStep.png" alt="Fig8 41b fixDoubleBlackStep" width="100%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 8.42. Drakon-diagram of the node structure correction algorithm when removing "double black node"</p>
+<p>Figure 8.41. Drakon-diagram of the node structure correction algorithm when removing "double black node"</p>
 </div>
 <div class="paragraph">
 <p>If the replacement node is a leaf node (i.e., has no child nodes), we
@@ -1154,7 +1284,7 @@ when removing "double black node"</p>
 </div>
 <div class="paragraph">
 <p>If a node is deleted and replaced with another node, the properties of
-the red-black wood may be compromised. To restore them, the following
+the red-black tree may be compromised. To restore them, the following
 operations must be performed:</p>
 </div>
 <div class="paragraph">
@@ -1172,7 +1302,7 @@ tree until the tree is balanced.</p>
 tree is black.</p>
 </div>
 <div class="paragraph">
-<p>Let&#8217;s consider options for restoring the properties of red-black wood.
+<p>Let&#8217;s consider options for restoring the properties of red-black tree.
 Enter the following notations: the node to be deleted is "x", the child
 node of the deleted node is "y", and the sibling of the node to be
 deleted is "s" (Figure 8.43).</p>
