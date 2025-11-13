@@ -503,7 +503,7 @@ s: The sibling of x.
 
 s.left, s.right: The left and right nephews (children) of the sibling s.
 
-image::{imagesdir}/Fig8_37_Term.jpg[width=100%]
+image::{imagesdir}/Fig8_37_Term.jpg[width=50%]
 
 [.text-center]
 Figure 8.37. Tree node relationship
