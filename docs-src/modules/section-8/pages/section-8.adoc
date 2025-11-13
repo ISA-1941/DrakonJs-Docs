@@ -501,19 +501,36 @@ P: The parent of x.
 
 s: The sibling of x.
 
-s.left, s.right: The left and right nephews (children) of the sibling s.
+s_L, s_R: The left and right children of the sibling s.
 
 image::{imagesdir}/Fig8_37_Term.jpg[width=50%]
 
 [.text-center]
 Figure 8.37. Tree node relationship
 
-The deletion algorithm follows three key stages. The following sections detail all possible cases it must address. The final and most complex stage, resolving a "double-black" node, is handled by the fixDoubleBlack(x) function. 
+The deletion algorithm follows three key stages. The following sections detail all possible cases it must address. The final and most complex stage, resolving a "double-black" node, is handled by the `fixDoubleBlack(x)` function. 
 
 *Case 1: The Sibling s is Red*
 
 This is a "gateway" case. A red sibling allows us to perform a rotation to transform the tree into a configuration where the sibling is black, leading to one of the subsequent cases.
 
+[cols="2,1,2,2", options="header"]
+|===
+| Tree-Cluster (BEFORE) | Violation | Actions | Tree-Cluster (AFTER)
+
+a| x:DB, x←P; P:B; s:R, s→P; s_L:B; s_R:B
+| Red sibling blocks direct access to black nephews. Creates an imbalanced subtree.
+|
+
+Recolor s to black
+
+Recolor P to red
+
+Left-rotate around P
+
+Re-analyze the new configuration of x (its sibling is now black)
+| x:DB, x←P; P:R; s:B, s→P; s_L:B; s_R:B (Now proceed to Case 2, 3, or 4)
+|===
 
 //image::{imagesdir}/Fig8_38a_mindMap_deleteNode.png[width=75%]
 image::{imagesdir}/Fig8_37a_mindMap_deleteNode.png[width=100%, link="{imagesdir}/Fig8_37a_mindMap_deleteNode.svg", window="_blank"]
