@@ -940,23 +940,13 @@ tree from sets of integers that are the keys of the input nodes:
 <p>Figure 8.37. Tree node relationship</p>
 </div>
 <div class="paragraph">
-<p>It is important to remember that all
-transformations of the tree structure must maintain its properties. This
-algorithm can be divided into three stages.</p>
+<p>The deletion algorithm follows three key stages. The following sections detail all possible cases it must address. The final and most complex stage, resolving a "double-black" node, is handled by the fixDoubleBlack(x) function.</p>
 </div>
 <div class="paragraph">
-<p><strong>Stage 1: Standard BST Deletion</strong>
-First, the node is removed using the standard binary search tree deletion logic. The outcome of this step determines the necessity of further rebalancing.</p>
+<p><strong>Case 1: The Sibling s is Red</strong></p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>If the deleted node was red, no properties are violated, and the process is complete.</p>
-</li>
-<li>
-<p>If the deleted node was black, it may create a "double-black" deficit in the tree, which must be resolved.</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>This is a "gateway" case. A red sibling allows us to perform a rotation to transform the tree into a configuration where the sibling is black, leading to one of the subsequent cases.</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
