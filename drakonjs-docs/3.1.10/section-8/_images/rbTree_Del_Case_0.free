@@ -1,0 +1,193 @@
+{
+    "items": {
+        "1": {
+            "type": "f_circle",
+            "left": -130,
+            "top": -90,
+            "width": 40,
+            "height": 35,
+            "zIndex": 0,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#000000\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "3": {
+            "type": "f_circle",
+            "left": -55,
+            "top": -45,
+            "width": 40,
+            "height": 35,
+            "zIndex": 1,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#ff0000\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "4": {
+            "type": "f_circle",
+            "left": -240,
+            "top": 15,
+            "width": 40,
+            "height": 35,
+            "zIndex": 2,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#000000\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "5": {
+            "type": "f_circle",
+            "left": -200,
+            "top": -40,
+            "width": 40,
+            "height": 35,
+            "zIndex": 3,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#ff0000\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "7": {
+            "type": "f_circle",
+            "left": -160,
+            "top": 15,
+            "width": 40,
+            "height": 35,
+            "zIndex": 4,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#000000\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "8": {
+            "type": "f_circle",
+            "left": -90,
+            "top": 10,
+            "width": 40,
+            "height": 35,
+            "zIndex": 5,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#000000\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "9": {
+            "type": "f_circle",
+            "left": -10,
+            "top": 10,
+            "width": 40,
+            "height": 35,
+            "zIndex": 6,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#000000\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "10": {
+            "type": "line",
+            "left": -90,
+            "top": -65,
+            "x2": 45,
+            "y2": 30,
+            "style": "{\"headStyle\":\"arrow\"}",
+            "zIndex": 7
+        },
+        "11": {
+            "type": "line",
+            "left": -125,
+            "top": -60,
+            "x2": -40,
+            "y2": 30,
+            "style": "{\"headStyle\":\"arrow\"}",
+            "zIndex": 8
+        },
+        "12": {
+            "type": "line",
+            "left": -190,
+            "top": -10,
+            "x2": -25,
+            "y2": 35,
+            "style": "{\"headStyle\":\"arrow\"}",
+            "zIndex": 9
+        },
+        "13": {
+            "type": "line",
+            "left": -165,
+            "top": -5,
+            "x2": 15,
+            "y2": 30,
+            "style": "{\"headStyle\":\"arrow\"}",
+            "zIndex": 10
+        },
+        "14": {
+            "type": "line",
+            "left": -45,
+            "top": -10,
+            "x2": -20,
+            "y2": 25,
+            "style": "{\"headStyle\":\"arrow\"}",
+            "zIndex": 11
+        },
+        "15": {
+            "type": "line",
+            "left": -20,
+            "top": -10,
+            "x2": 15,
+            "y2": 30,
+            "style": "{\"headStyle\":\"arrow\"}",
+            "zIndex": 12
+        },
+        "16": {
+            "type": "text",
+            "left": -140,
+            "top": -95,
+            "width": 55,
+            "height": 45,
+            "content": "<p>20</p>",
+            "zIndex": 13,
+            "style": "{\"font\":\"24px Arimo\",\"iconBack\":\"\",\"color\":\"#ffffff\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "17": {
+            "type": "text",
+            "left": -250,
+            "top": 10,
+            "width": 55,
+            "height": 45,
+            "content": "<p>17</p>",
+            "zIndex": 14,
+            "style": "{\"font\":\"24px Arimo\",\"iconBack\":\"\",\"color\":\"#ffffff\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "18": {
+            "type": "text",
+            "left": -170,
+            "top": 10,
+            "width": 55,
+            "height": 45,
+            "content": "<p>19</p>",
+            "zIndex": 15,
+            "style": "{\"font\":\"24px Arimo\",\"iconBack\":\"\",\"color\":\"#ffffff\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "19": {
+            "type": "text",
+            "left": -100,
+            "top": 5,
+            "width": 55,
+            "height": 45,
+            "content": "<p>24</p>",
+            "zIndex": 16,
+            "style": "{\"font\":\"24px Arimo\",\"iconBack\":\"\",\"color\":\"#ffffff\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "20": {
+            "type": "text",
+            "left": -20,
+            "top": 5,
+            "width": 55,
+            "height": 45,
+            "content": "<p>26</p>",
+            "zIndex": 17,
+            "style": "{\"font\":\"24px Arimo\",\"iconBack\":\"\",\"color\":\"#ffffff\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "21": {
+            "type": "text",
+            "left": -210,
+            "top": -45,
+            "width": 55,
+            "height": 45,
+            "content": "<p>18</p>",
+            "zIndex": 18,
+            "style": "{\"font\":\"24px Arimo\",\"iconBack\":\"\",\"color\":\"#000000\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "22": {
+            "type": "text",
+            "left": -65,
+            "top": -50,
+            "width": 55,
+            "height": 45,
+            "content": "<p>22</p>",
+            "zIndex": 19,
+            "style": "{\"font\":\"24px Arimo\",\"iconBack\":\"\",\"color\":\"#000000\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        }
+    },
+    "type": "free",
+    "id": "rbTree_Del_Case_0.free"
+}
