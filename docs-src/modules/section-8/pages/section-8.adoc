@@ -493,7 +493,28 @@ This example demonstrates how local rotations and recoloring maintain global bal
 
 ==== 8.4.3. Deleting a Node from a red-black tree
 
-Removing a node from a red-black tree is a complex process because it depends on the location of the node, the presence of children, and the colour of the nodes involved. To understand the balancing operations, we first introduce the standard notation used throughout this section (Figure 8.37):
+Removing a node from a red-black tree is a complex process because it depends on the location of the node, the presence of children, and the colour of the nodes involved. However, in several common cases, no rebalancing is required at all.
+*Simple Cases Where No Rebalancing is Needed*
+`Case A`: Deleting a Red Node with No Children;
+
+Since the node is red, its removal does not affect the black-height of any path.
+
+The tree remains balanced without any additional operations.
+
+Tree-Cluster: x:R, x←P; P:R|B; 
+
+`Case B`: Deleting a Black Node with One Red Child
+
+The red child replaces the deleted black node and is repainted black.
+
+This preserves the black-height on all paths through this subtree.
+
+Tree-Cluster: x:B, x←P; x_L|x_R:R → Replace x with child (x_l|x_R); P:R|B
+
+image::{imagesdir}/rbTree_Del_Case_0.png[width=50%]
+
+
+To understand the balancing operations, we first introduce the standard notation used throughout this section (Figure 8.37):
 
 x: The node to be deleted, or the "double-black" node that replaces it after deletion.
 
