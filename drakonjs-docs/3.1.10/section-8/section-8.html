@@ -917,18 +917,21 @@ tree from sets of integers that are the keys of the input nodes:
 <div class="sect3">
 <h4 id="_8_4_3_deleting_a_node_from_a_red_black_tree"><a class="anchor" href="#_8_4_3_deleting_a_node_from_a_red_black_tree"></a>8.4.3. Deleting a Node from a red-black tree</h4>
 <div class="paragraph">
-<p>Removing a node from a red-black tree is a complex process because it depends on the location of the node, the presence of children, and the colour of the nodes involved. However, in several common cases, no rebalancing is required at all.
-<strong>Simple Cases Where No Rebalancing is Needed</strong>
-<code>Case A</code>: Deleting a Red Node with No Children;</p>
+<p>Removing a node from a red-black tree is a complex process because it depends on the location of the node, the presence of children, and the colour of the nodes involved. However, in several common cases, no rebalancing is required at all.</p>
 </div>
 <div class="paragraph">
-<p>Since the node is red, its removal does not affect the black-height of any path.</p>
+<p><strong>Simple Cases Where No Rebalancing is Needed</strong></p>
 </div>
 <div class="paragraph">
-<p>The tree remains balanced without any additional operations.</p>
+<p><code>Case A</code>: Deleting a Red Node with No Children;
+Since the node is red, its removal does not affect the black-height of any path.
+The tree remains balanced without any additional operations.
+Tree-Cluster: x:R, x←P; P:R|B;</p>
 </div>
-<div class="paragraph">
-<p>Tree-Cluster: x:R, x←P; P:R|B;</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_38_Del_Case_0.png" alt="Fig8 38 Del Case 0" width="50%">
+</div>
 </div>
 <div class="paragraph">
 <p><code>Case B</code>: Deleting a Black Node with One Red Child</p>
@@ -941,11 +944,6 @@ tree from sets of integers that are the keys of the input nodes:
 </div>
 <div class="paragraph">
 <p>Tree-Cluster: x:B, x←P; x_L|x_R:R → Replace x with child (x_l|x_R); P:R|B</p>
-</div>
-<div class="imageblock unresolved">
-<div class="content">
-<img src="_images/Fig8_38_Del_Case_0.png" alt="Fig8 38 Del Case 0" width="50%">
-</div>
 </div>
 <div class="paragraph">
 <p>To understand the balancing operations, we first introduce the standard notation used throughout this section (Figure 8.37):</p>
