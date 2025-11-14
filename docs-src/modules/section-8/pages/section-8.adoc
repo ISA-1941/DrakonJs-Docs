@@ -498,8 +498,11 @@ Removing a node from a red-black tree is a complex process because it depends on
 *Simple Cases Where No Rebalancing is Needed*
 
 `Case A`: Deleting a Red Node with No Children;
+
 Since the node is red, its removal does not affect the black-height of any path.
+
 The tree remains balanced without any additional operations.
+
 Tree-Cluster: x:R, x←P; P:R|B; 
 
 image::{imagesdir}/Fig8_38_Del_Case_0.png[width=50%]
