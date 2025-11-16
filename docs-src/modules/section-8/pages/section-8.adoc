@@ -355,14 +355,10 @@ the properties of a binary search tree and must have the following
 properties:
 
 {empty}1. Each node is coloured red or black.
-
 {empty}2. The root of the tree is always black.
-
 {empty}3. All leaves are black (Null).
-
 {empty}4. Both descendants of the red node are black, i.e. there cannot
 be consecutive red nodes.
-
 {empty}5. All simple paths from the node to the descending leaves
 contain the same number of black nodes.
 
@@ -375,7 +371,7 @@ Property 5 builds on this by enforcing a uniform "black-height" for all paths fr
 
 Black height is an important term used for red-black trees. This is the number of black nodes on any single path from node x (not including it) to the leaf. Properties 4 and 5 together ensure that the longest path from the root to a leaf (which alternates between red and black nodes) is at most twice as long as the shortest path (comprised solely of black nodes). This constraint guarantees that the tree remains approximately balanced, maintaining a height of O(log n), where n is the number of nodes.
 
-To perform the above operations at the program level, a red-black tree is first created, for which two user types - node and rbTree are declared:
+To perform the above operations at the program level, a red-black tree is first created, for which two user types - `node` and `rbTree` are declared:
 Node includes the following fields: `data` - node numeric value,  `colour` - node colour type bool: `red node` - TRUE; `black node` - false, `left`, `right` and `parent` nodes. In turn rbTree structure represents the reference type variable, that store objects containing not the "value" itself but a reference to the memory area where this object is stored (Fig. 8.30).
 
 [cols="a,a", frame=none, grid=none, align=center]
