@@ -932,7 +932,7 @@ tree from sets of integers that are the keys of the input nodes:
 If the node (x) has zero or one child, the deletion is straightforward: remove x and  replace it with its non-NIL child, or with a NIL node if it has no children. If node (x) has two children, its value is replaced by its inorder successor (the minimum node in its right subtree) or its inorder predecessor (the maximum node in its left subtree). The deletion operation is then performed on the successor/predecessor node, which is guaranteed to have at most one child. This replacement process is critical for maintaining the BST property.</p>
 </li>
 <li>
-<p><code>Color of the Node to be Removed:`</code>
+<p><code>Color of the Node to be Removed:</code>
 The complexity of the balancing operation depends entirely on the color of the node that is actually removed (the node that takes the final position of x, which might be the successor/predecessor).</p>
 </li>
 </ol>
@@ -948,9 +948,13 @@ The complexity of the balancing operation depends entirely on the color of the n
 <ol class="loweralpha" type="a">
 <li>
 <p>Deleting a Black Node: This is the more complex case. Removing a black node violates the RBT property that requires all paths from the root to the leaf nodes to contain the same number of black nodes (the black height). Restoring this balance requires an iterative rebalancing process.</p>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p><code>Application of Corrective Adjustments</code>: After a black node is deleted, a rebalancing procedure is initiated to restore the RBT properties. This process involves a series of recoloring and rotations. The "Double Black" Concept: The node that replaces the deleted black node is temporarily marked as "Double Black" (DB). This is a conceptual designation indicating a structural violation: that the path through this node has lost one black node. Corrective Cases (Fix-Up): The core of the rebalancing algorithm involves applying various fix-up cases based on the color and position of the sibling (or brother) of the (DB) node. These cases dictate whether to perform recoloring, a rotation (single or double), or a combination of both to propagate the (DB) violation up the tree until the root or a suitable correction is achieved.</p>
+</li>
+</ol>
+</div>
 </li>
 </ol>
 </div>
