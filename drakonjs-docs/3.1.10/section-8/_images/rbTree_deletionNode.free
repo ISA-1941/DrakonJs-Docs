@@ -1,0 +1,73 @@
+{
+    "items": {
+        "1": {
+            "type": "rectangle",
+            "left": -570,
+            "top": -115,
+            "width": 200,
+            "height": 50,
+            "zIndex": 0,
+            "content": "<p>Red-Black Tree Node Deletion Algorithm</p>",
+            "style": "{\"font\":\"12px Arimo\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "2": {
+            "type": "rectangle",
+            "left": -330,
+            "top": -115,
+            "width": 200,
+            "height": 50,
+            "zIndex": 1,
+            "content": "<p>1.Node Identification and Search</p>",
+            "style": "{\"font\":\"12px Arimo\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "3": {
+            "type": "line",
+            "left": -370,
+            "top": -95,
+            "x2": 40,
+            "y2": 0,
+            "style": "{\"headStyle\":\"arrow\"}",
+            "zIndex": 2
+        },
+        "4": {
+            "type": "rectangle",
+            "left": -95,
+            "top": -115,
+            "width": 200,
+            "height": 50,
+            "zIndex": 3,
+            "content": "<p>2.Node Removal and Replacement</p>",
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "5": {
+            "type": "line",
+            "left": -130,
+            "top": -90,
+            "x2": 35,
+            "y2": 0,
+            "style": "{\"headStyle\":\"arrow\"}",
+            "zIndex": 4
+        },
+        "6": {
+            "type": "rectangle",
+            "left": -420,
+            "top": 115,
+            "width": 200,
+            "height": 50,
+            "zIndex": 5,
+            "content": "<p>2.Node Removal and Replacement</p>",
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "7": {
+            "type": "line",
+            "left": -320,
+            "top": 80,
+            "x2": 0,
+            "y2": 35,
+            "style": "{\"headStyle\":\"arrow\"}",
+            "zIndex": 6
+        }
+    },
+    "type": "free",
+    "id": "rbTree_deletionNode.free"
+}
