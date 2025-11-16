@@ -1,0 +1,55 @@
+{
+    "items": {
+        "1": {
+            "type": "idea",
+            "content": "<ol><li>Search for the Node to be Deleted</li></ol>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "2": {
+            "type": "idea",
+            "content": "<p>2.. Node Removal and Replacement</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "3": {
+            "type": "idea",
+            "content": "<p>3. Color Consideration and Complexity</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 2
+        },
+        "4": {
+            "type": "idea",
+            "content": "<p>Corrective Adjustments and Rebalancing</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 3
+        },
+        "5": {
+            "type": "idea",
+            "content": "<p>As with a standard <strong>Binary Search Tree (BST)</strong> deletion, the algorithm first identifies and locates the node (x) that needs to be removed from the tree structure.</p>",
+            "parent": "1",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "6": {
+            "type": "idea",
+            "content": "<p>If the node node (x) has <strong>zero or one child</strong>, the deletion is straightforward: remove node (x) and replace it directly with its single child (if one exists) or with NIL (a sentinel leaf node).</p>",
+            "parent": "2",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "7": {
+            "type": "idea",
+            "content": "<p>If node (x) has <strong>two children</strong>, its value is replaced by its <strong>inorder successor</strong> (the minimum node in its right subtree) or its <strong>inorder predecessor</strong> (the maximum node in its left subtree). The deletion operation is then performed on the successor/predecessor node, which is guaranteed to have at most one child. This replacement process is critical for maintaining the BST property.</p>",
+            "parent": "2",
+            "treeType": "treeview",
+            "ordinal": 1
+        }
+    },
+    "type": "graf",
+    "id": "Node Identification and Search.graf"
+}
