@@ -347,7 +347,9 @@ Figure 8.28. DRAKON-diagram of the main-function
 
 :imagesdir: docs-src/modules/section-8/assets/images/part_4
 
-==== 8.4.1. Properties of red-black trees
+==== 8.4.1. Inserting a new node and the balancing process
+
+8.4.1.1. Properties of red-black trees
 
 A red-black tree is a variant of a self-balancing binary search tree in which the nodes are placed according to a certain rule and coloured red or black (Figure 8.29)
 
@@ -393,7 +395,7 @@ Node includes the following fields: `data` - node numeric value,  `color` - node
 |===
 
 [.text-center]
-Figure 8.30. Drakon-diagram of Node and Tree  Description
+Figure 8.30. DRAKON-diagram of Node and Tree  Description
 
 Next, consider the node positions in the tree as a result of each new
 node insertion and determine which properties of the red-black tree are
@@ -427,7 +429,7 @@ image::{imagesdir}/Fig8_32_describeCluster.png[width=75%, link="{imagesdir}/Fig8
 [.text-center]
 Figure 8.32. DRAKON-diagram of the Function `describeCluster(tree, node)`
 
-==== 8.4.2. Inserting a new node and the balancing process
+==== 8.4.1.2. Inserting a new node
 
 In the most general way the red-black tree construction algorithm is presented by the function `rbInsert(tree, key)`(Figure 8.33):
 
@@ -441,7 +443,7 @@ Figure 8.33. DRAKON-diagram of the function `rbInsert(tree, data)`
 When a new red node is inserted into the red-black tree, it is first connected in the same way as in a regular binary search tree — by comparing the key values and attaching the node as the left or right child.
 However, this simple act of insertion may cause a local violation of one or more red-black properties, most commonly the “no two consecutive red nodes” rule.
 To restore balance, the algorithm analyses the local configuration of nodes — a tree-cluster — formed by the newly added node x, its parent P, grandparent G, and uncle U.
-Each possible configuration (or `nodeImage`) corresponds to a typical balancing case, which determines the required sequence of operations: recoloring and/or rotation. The Drakon-diagram of tree balancing when inserting a new  node is shown in Figure 34.
+Each possible configuration (or `nodeImage`) corresponds to a typical balancing case, which determines the required sequence of operations: recoloring and/or rotation. The DRAKON-diagram of tree balancing when inserting a new  node is shown in Figure 34.
 
 image::{imagesdir}/Fig8_34_fixInsert.png[width=75%, link="{imagesdir}/Fig8_34_fixInsert.svg", window="_blank"]
 
@@ -561,7 +563,7 @@ image::{imagesdir}/Fig8_34_diagr_figs.png[width=100%, link="{imagesdir}/Fig8_34_
 [.text-center]
 Figure 8.34. Illustration of Red-Black Tree Balancing Algorithms
 
-The Drakon-diagram of the node rotation algorithms to the red and black tree cluster is shown in Figure 8.35a,b.
+The DRAKON-diagram of the node rotation algorithms to the red and black tree cluster is shown in Figure 8.35a,b.
 
 //image::{imagesdir}/Fig8_36a_rotateLeft.png[width=75%]
 image::{imagesdir}/Fig8_35a_rotateLeft.png[width=100%, link="{imagesdir}/Fig8_35a_rotateLeft.svg", window="_blank"]
@@ -576,16 +578,101 @@ image::{imagesdir}/Fig8_35b_rotateRight.png[width=100%, link="{imagesdir}/Fig8_3
 [.text-center]
 Figure 8.35. DRAKON-diagrams of node rotation algorithms used in red-black tree clusters.
 
-Consider the balancing process using the example of building a red-black
-tree from sets of integers that are the keys of the input nodes:
-`[11,12,13,14,15,16,17,18,19]` (Figure 8.36):
+// ====================================================================
+// SECTION: Red-Black Tree Node Insertion Videos
+// This section demonstrates 5 Cases of node insertion in a Red-Black Tree.
+// Top panel: navigation buttons (Case 1–5)
+// Videos below: vertical list with posters and captions (Figure X)
+// ====================================================================
 
-image::{imagesdir}/Fig8_36_rbProcess.jpg[width=75%]
+== Видеодемонстрации вставки узлов (Case 1–5)
 
+//
+// PANEL OF NAVIGATION BUTTONS
+// [.case-buttons] role defined in site.css
+// Each button links to the corresponding video section below
+//
+[.case-buttons]
+****
+* <<case1,Case 1>>
+* <<case2,Case 2>>
+* <<case3,Case 3>>
+* <<case4,Case 4>>
+* <<case5,Case 5>>
+****
+
+//
+// CASE 1 VIDEO
+// Anchor for navigation: [[case1]]
+//
+[[case1]]
+=== Case 1 — Red Uncle (Recolor)
+
+.Video — Case 1
 [.text-center]
-Figure 8.36 Process for Balancing the Red-Black Tree
+****
+video::video/case1.mp4[poster=video/posters/poster1.png, width=640, controls]
+****
 
-This example demonstrates how local rotations and recoloring maintain global balance. Despite multiple insertions, the tree height grows logarithmically, illustrating the efficiency of the red-black approach.
+// Figure caption
+Figure 1 — Insertion of a new node: Case 1 — Red Uncle. Node recoloring demonstration.
+
+//
+// CASE 2 VIDEO
+//
+[[case2]]
+=== Case 2 — Left-Right Rotation (Inner)
+
+.Video — Case 2
+[.text-center]
+****
+video::video/case2.mp4[poster=video/posters/poster2.png, width=640, controls]
+****
+
+Figure 2 — Insertion of a new node: Case 2 — Left-Right B3:(LR) Inner Rotation.
+
+//
+// CASE 3 VIDEO
+//
+[[case3]]
+=== Case 3 — Right-Left Rotation (Inner)
+
+.Video — Case 3
+[.text-center]
+****
+video::video/case3.mp4[poster=video/posters/poster3.png, width=640, controls]
+****
+
+Figure 3 — Insertion of a new node: Case 3 — Right-Left B4:(RL) Inner Rotation.
+
+//
+// CASE 4 VIDEO
+//
+[[case4]]
+=== Case 4 — Left-Left Rotation (Outer)
+
+.Video — Case 4
+[.text-center]
+****
+video::video/case4.mp4[poster=video/posters/poster4.png, width=640, controls]
+****
+
+Figure 4 — Insertion of a new node: Case 4 — Left-Left B1:(LL) Outer Rotation.
+
+//
+// CASE 5 VIDEO
+//
+[[case5]]
+=== Case 5 — Right-Right Rotation (Outer)
+
+.Video — Case 5
+[.text-center]
+****
+video::video/case5.mp4[poster=video/posters/poster5.png, width=640, controls]
+****
+
+Figure 5 — Insertion of a new node: Case 5 — Right-Right B2:(RR) Outer Rotation.
+
 
 ==== 8.4.3. Deleting a Node from a red-black tree
 
@@ -855,7 +942,7 @@ Figure 8.40. Deletion of red node (20)
 If the node to be deleted and the node that replaces it are black nodes,
 a situation called a "double black node" occurs. In this case, some
 additional operations must be performed to ensure that the properties of
-the red-black tree are preserved. The Drakon-diagrams algorithm of this
+the red-black tree are preserved. The DRAKON-diagrams algorithm of this
 process is shown in Fig.8.41.
 
 image::{imagesdir}/Fig8_41_fixDoubleBlack.png[width=80%]
@@ -864,7 +951,7 @@ image::{imagesdir}/Fig8_41_fixDoubleBlack.png[width=80%]
 image::{imagesdir}/Fig8_41b_fixDoubleBlackStep.png[width=100%, link="{imagesdir}/Fig8_41b_fixDoubleBlackStep.svg", window="_blank"]
 
 [.text-center]
-Figure 8.41. Drakon-diagram of the node structure correction algorithm when removing "double black node"
+Figure 8.41. DRAKON-diagram of the node structure correction algorithm when removing "double black node"
 
 If the replacement node is a leaf node (i.e., has no child nodes), we
 replace the node with a "zero" leaf node and color it black. If the
