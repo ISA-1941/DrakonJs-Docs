@@ -7,81 +7,86 @@
         "2": {
             "type": "branch",
             "branchId": 1,
-            "one": "16",
-            "content": "Node rebuilding"
+            "one": "3",
+            "content": "Branch1"
         },
         "3": {
             "type": "action",
+            "one": "4",
+            "content": "y = x.right"
+        },
+        "4": {
+            "type": "action",
             "one": "5",
-            "content": "L = K.right\nt = L.left"
+            "content": "x.right = y.left"
         },
         "5": {
-            "type": "action",
+            "type": "question",
             "one": "6",
-            "content": "L.parent = K.parent\nL.left = K\nK.parent = L\nK.right = t"
+            "two": "8",
+            "flag1": 1,
+            "content": "y.left !== tree.nullNode"
         },
         "6": {
-            "type": "question",
-            "one": "7",
-            "two": "9",
-            "flag1": 1,
-            "content": "t !== tree.nullNode"
+            "type": "action",
+            "one": "8",
+            "content": "y.left.parent = x"
         },
         "7": {
-            "type": "action",
-            "one": "9",
-            "content": "t.parent = K"
-        },
-        "8": {
             "type": "branch",
             "one": "15",
             "branchId": 3,
             "content": "Exit"
         },
-        "9": {
+        "8": {
             "type": "branch",
-            "one": "10",
+            "one": "9",
             "branchId": 2,
-            "content": "Subtree root formation"
+            "content": "Branch2"
+        },
+        "9": {
+            "type": "action",
+            "one": "10",
+            "content": "y.parent = x.parent"
         },
         "10": {
             "type": "question",
             "one": "11",
             "two": "12",
             "flag1": 1,
-            "content": "K === tree.root"
+            "content": "x.parent === tree.nullNode"
         },
         "11": {
             "type": "action",
-            "one": "8",
-            "content": "tree.root = L"
+            "one": "7",
+            "content": "tree.root = y"
         },
         "12": {
             "type": "question",
             "one": "13",
             "two": "14",
             "flag1": 1,
-            "content": "L.parent.left === K"
+            "content": "x === x.parent.left"
         },
         "13": {
             "type": "action",
-            "one": "8",
-            "content": "L.parent.left = L"
+            "one": "7",
+            "content": "x.parent.left = y"
         },
         "14": {
             "type": "action",
-            "one": "8",
-            "content": "L.parent.right = L"
+            "one": "7",
+            "content": "x.parent.right = y"
         },
         "15": {
             "type": "action",
-            "one": "1",
-            "content": "return L"
+            "one": "16",
+            "content": "y.left = x"
         },
         "16": {
             "type": "action",
-            "one": "3",
-            "content": "console.log('rotateLeft');"
+            "one": "1",
+            "content": "x.parent = y"
         }
     },
     "keywords": {
@@ -92,5 +97,5 @@
         "algoprop": false,
         "lazy": false
     },
-    "params": "tree, K"
+    "params": "tree,x"
 }

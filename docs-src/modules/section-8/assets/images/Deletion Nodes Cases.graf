@@ -81,7 +81,7 @@
         },
         "21": {
             "type": "conclusion",
-            "content": "<p>•<strong> x</strong> becomes the left child of z.</p><p>- Call <strong>joinParentChild(tree, z, z.left)</strong>: Replace <strong>z</strong>﻿ with its left child.elements</p>",
+            "content": "<p>•<strong> x</strong> becomes the left child of z.</p><p>- Call <strong>joinParentChild(tree, z, z.left)</strong>: Replace <strong>z</strong> with its left child elements</p>",
             "parent": "20",
             "treeType": "treeview",
             "ordinal": 0,
@@ -119,5 +119,5 @@
         }
     },
     "type": "graf",
-    "id": "Deletion nodes cases.graf"
+    "id": "Deletion Nodes Cases.graf"
 }

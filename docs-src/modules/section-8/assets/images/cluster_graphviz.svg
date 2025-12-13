@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="324pt" height="252pt" viewBox="0.00 0.00 324.00 252.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(36 216)">
+<title>G</title>
+<polygon fill="#add8e6" stroke="none" points="-36,36 -36,-216 288,-216 288,36 -36,36"/>
+<!-- N25 -->
+<g id="node1" class="node">
+<title>N25</title>
+<ellipse fill="red" stroke="darkgreen" stroke-width="2" cx="126" cy="-162" rx="18" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="126" y="-157.8" font-family="Times,serif" font-size="14.00" fill="white">25</text>
+</g>
+<!-- N20 -->
+<g id="node2" class="node">
+<title>N20</title>
+<ellipse fill="black" stroke="darkgreen" stroke-width="2" cx="90" cy="-90" rx="18" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="90" y="-85.8" font-family="Times,serif" font-size="14.00" fill="white">20</text>
+</g>
+<!-- N25&#45;&gt;N20 -->
+<g id="edge1" class="edge">
+<title>N25-&gt;N20</title>
+<path fill="none" stroke="black" stroke-width="1.5" d="M117.83,-145.12C113.64,-136.97 108.43,-126.83 103.65,-117.54"/>
+<polygon fill="black" stroke="black" stroke-width="1.5" points="106.86,-116.13 99.17,-108.84 100.64,-119.33 106.86,-116.13"/>
+</g>
+<!-- N30 -->
+<g id="node3" class="node">
+<title>N30</title>
+<ellipse fill="black" stroke="darkgreen" stroke-width="2" cx="162" cy="-90" rx="18" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="162" y="-85.8" font-family="Times,serif" font-size="14.00" fill="white">30</text>
+</g>
+<!-- N25&#45;&gt;N30 -->
+<g id="edge2" class="edge">
+<title>N25-&gt;N30</title>
+<path fill="none" stroke="black" stroke-width="1.5" d="M134.17,-145.12C138.36,-136.97 143.57,-126.83 148.35,-117.54"/>
+<polygon fill="black" stroke="black" stroke-width="1.5" points="151.36,-119.33 152.83,-108.84 145.14,-116.13 151.36,-119.33"/>
+</g>
+<!-- N18 -->
+<g id="node4" class="node">
+<title>N18</title>
+<ellipse fill="red" stroke="darkgreen" stroke-width="2" cx="18" cy="-18" rx="18" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="18" y="-13.8" font-family="Times,serif" font-size="14.00" fill="white">18</text>
+</g>
+<!-- N20&#45;&gt;N18 -->
+<g id="edge3" class="edge">
+<title>N20-&gt;N18</title>
+<path fill="none" stroke="black" stroke-width="1.5" d="M77.13,-76.49C66.68,-66.33 51.74,-51.8 39.49,-39.89"/>
+<polygon fill="black" stroke="black" stroke-width="1.5" points="42,-37.45 32.39,-32.99 37.12,-42.47 42,-37.45"/>
+</g>
+<!-- N23 -->
+<g id="node5" class="node">
+<title>N23</title>
+<ellipse fill="red" stroke="darkgreen" stroke-width="2" cx="90" cy="-18" rx="18" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="90" y="-13.8" font-family="Times,serif" font-size="14.00" fill="white">23</text>
+</g>
+<!-- N20&#45;&gt;N23 -->
+<g id="edge4" class="edge">
+<title>N20-&gt;N23</title>
+<path fill="none" stroke="black" stroke-width="1.5" d="M90,-71.34C90,-64.59 90,-56.69 90,-49.11"/>
+<polygon fill="black" stroke="black" stroke-width="1.5" points="93.5,-49.17 90,-39.17 86.5,-49.17 93.5,-49.17"/>
+</g>
+<!-- N28 -->
+<g id="node6" class="node">
+<title>N28</title>
+<ellipse fill="red" stroke="darkgreen" stroke-width="2" cx="162" cy="-18" rx="18" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="162" y="-13.8" font-family="Times,serif" font-size="14.00" fill="white">28</text>
+</g>
+<!-- N30&#45;&gt;N28 -->
+<g id="edge6" class="edge">
+<title>N30-&gt;N28</title>
+<path fill="none" stroke="black" stroke-width="1.5" d="M162,-71.34C162,-64.59 162,-56.69 162,-49.11"/>
+<polygon fill="black" stroke="black" stroke-width="1.5" points="165.5,-49.17 162,-39.17 158.5,-49.17 165.5,-49.17"/>
+</g>
+<!-- N32 -->
+<g id="node7" class="node">
+<title>N32</title>
+<ellipse fill="red" stroke="darkgreen" stroke-width="2" cx="234" cy="-18" rx="18" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="234" y="-13.8" font-family="Times,serif" font-size="14.00" fill="white">32</text>
+</g>
+<!-- N30&#45;&gt;N32 -->
+<g id="edge5" class="edge">
+<title>N30-&gt;N32</title>
+<path fill="none" stroke="black" stroke-width="1.5" d="M174.87,-76.49C185.32,-66.33 200.26,-51.8 212.51,-39.89"/>
+<polygon fill="black" stroke="black" stroke-width="1.5" points="214.88,-42.47 219.61,-32.99 210,-37.45 214.88,-42.47"/>
+</g>
+</g>
+</svg>

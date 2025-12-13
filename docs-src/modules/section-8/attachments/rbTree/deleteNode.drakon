@@ -8,7 +8,7 @@
             "type": "branch",
             "branchId": 1,
             "one": "3",
-            "content": "Find the node with this value"
+            "content": "Find the node to delete"
         },
         "3": {
             "type": "action",
@@ -17,218 +17,84 @@
         },
         "4": {
             "type": "action",
-            "one": "39",
-            "content": "z = nullNode"
+            "one": "5",
+            "content": "nodeToDelete = findNode(tree, key)"
+        },
+        "5": {
+            "type": "question",
+            "one": "6",
+            "two": "8",
+            "flag1": 1,
+            "content": "nodeToDelete === nullNode || !nodeToDelete"
         },
         "6": {
-            "type": "question",
-            "one": "13",
-            "two": "40",
-            "flag1": 0,
-            "content": "node !== nullNode && !foundNode"
+            "type": "action",
+            "one": "8",
+            "content": "console.log(\n    `Node with key ${key} not found`\n)\nreturn "
         },
         "7": {
-            "type": "arrow-loop",
-            "one": "6"
-        },
-        "13": {
-            "type": "question",
-            "one": "14",
-            "two": "17",
-            "flag1": 1,
-            "content": "z === nullNode"
-        },
-        "14": {
-            "type": "action",
-            "one": "15",
-            "content": "console.log(\n    \"Couldn't find node with key:\",\n    key\n)"
-        },
-        "15": {
-            "type": "action",
-            "one": "17",
-            "content": "return "
-        },
-        "16": {
             "type": "branch",
-            "one": "32",
+            "one": "30",
             "branchId": 3,
-            "content": "Exit"
+            "content": "Exit Conditional fixation"
         },
-        "17": {
+        "8": {
             "type": "branch",
-            "one": "18",
+            "one": "9",
             "branchId": 2,
-            "content": "Preparation for removal"
+            "content": "Diagnostic before deletion with notation"
         },
-        "18": {
+        "9": {
             "type": "action",
-            "one": "19",
-            "content": "y = z"
+            "one": "35",
+            "content": "clusterInfoBefore = describeCluster(\n    tree,\n    nodeToDelete\n)"
         },
-        "19": {
+        "25": {
             "type": "action",
-            "one": "20",
-            "content": "yColour = y.colour"
+            "one": "36",
+            "content": "mes1 = `Cluster before delete: node`;\nmes2 = `${nodeToDelete.key}  ${clusterInfoBefore.description}`;\nconsole.log(mes1 + mes2);"
         },
-        "20": {
+        "26": {
+            "type": "action",
+            "one": "7",
+            "content": "fixNode = bstDelete(tree, nodeToDelete)"
+        },
+        "30": {
             "type": "question",
-            "one": "21",
-            "two": "49",
+            "one": "31",
+            "two": "33",
             "flag1": 1,
-            "content": "z.left === nullNode"
+            "content": "fixNode !== nullNode && fixNode"
         },
-        "21": {
+        "31": {
             "type": "action",
-            "one": "22",
-            "content": "x = z.right"
-        },
-        "22": {
-            "type": "action",
-            "one": "16",
-            "content": "joinParentChild(tree, z, z.right)"
+            "one": "32",
+            "content": "clusterInfoAfter = describeCluster(\n    tree,\n    fixNode\n)"
         },
         "32": {
-            "type": "question",
-            "one": "33",
-            "two": "1",
-            "flag1": 1,
-            "content": "yColour === false"
+            "type": "action",
+            "one": "34",
+            "content": "caseInfoAfter = determineDeleteCase(\n    tree,\n    fixNode\n)"
         },
         "33": {
-            "type": "question",
-            "one": "34",
-            "two": "35",
-            "flag1": 1,
-            "content": "x.colour === true"
+            "type": "action",
+            "one": "1",
+            "content": "return nodeToDelete"
         },
         "34": {
             "type": "action",
-            "one": "1",
-            "content": "x.colour = false"
+            "one": "33",
+            "content": "fixDelete(tree, caseInfoAfter)"
         },
         "35": {
             "type": "action",
-            "one": "1",
-            "content": "fixDoubleBlack(tree, x)"
+            "one": "25",
+            "content": "caseInfoBefore = determineDeleteCase(\n    tree,\n    nodeToDelete\n)"
         },
-        "39": {
+        "36": {
             "type": "action",
-            "one": "7",
-            "content": "foundNode = false"
-        },
-        "40": {
-            "type": "question",
-            "one": "44",
-            "two": "45",
-            "flag1": 1,
-            "content": "node.data === key"
-        },
-        "43": {
-            "type": "action",
-            "one": "7",
-            "two": "",
-            "content": "foundNode = true"
-        },
-        "44": {
-            "type": "action",
-            "one": "43",
-            "two": "",
-            "content": "z = node"
-        },
-        "45": {
-            "type": "question",
-            "one": "46",
-            "two": "47",
-            "flag1": 1,
-            "content": "key < node.data"
-        },
-        "46": {
-            "type": "action",
-            "one": "7",
-            "content": "node = node.left"
-        },
-        "47": {
-            "type": "action",
-            "one": "7",
-            "content": "node = node.right"
-        },
-        "49": {
-            "type": "question",
-            "one": "50",
-            "two": "52",
-            "flag1": 1,
-            "content": "z.right === nullNode"
-        },
-        "50": {
-            "type": "action",
-            "one": "51",
-            "content": "x = z.left"
-        },
-        "51": {
-            "type": "action",
-            "one": "16",
-            "content": "joinParentChild(tree, z, z.left)"
-        },
-        "52": {
-            "type": "action",
-            "one": "53",
-            "two": "",
-            "content": "y = minimum(tree, z.right)"
-        },
-        "53": {
-            "type": "action",
-            "one": "59",
-            "two": "",
-            "content": "yColour = y.colour"
-        },
-        "59": {
-            "type": "action",
-            "one": "60",
-            "two": "",
-            "content": "x = y.right"
-        },
-        "60": {
-            "type": "question",
-            "one": "61",
-            "two": "63",
-            "flag1": 1,
-            "content": "y.parent !== z"
-        },
-        "61": {
-            "type": "action",
-            "one": "62",
-            "two": "",
-            "content": "joinParentChild(tree, y, y.right)"
-        },
-        "62": {
-            "type": "action",
-            "one": "64",
-            "content": "y.right = z.right"
-        },
-        "63": {
-            "type": "action",
-            "one": "65",
-            "content": "joinParentChild(tree, z, y)"
-        },
-        "64": {
-            "type": "action",
-            "one": "63",
-            "content": "y.right.parent = y"
-        },
-        "65": {
-            "type": "action",
-            "one": "66",
-            "content": "y.left = z.left"
-        },
-        "66": {
-            "type": "action",
-            "one": "67",
-            "content": "y.left.parent = y"
-        },
-        "67": {
-            "type": "action",
-            "one": "16",
-            "content": "y.colour = z.colour"
+            "one": "26",
+            "content": "console.log(\n    `Delete case: ${caseInfoBefore}`\n)"
         }
     },
     "keywords": {
@@ -239,5 +105,5 @@
         "algoprop": false,
         "lazy": false
     },
-    "params": "tree, node, key"
+    "params": "tree, key"
 }

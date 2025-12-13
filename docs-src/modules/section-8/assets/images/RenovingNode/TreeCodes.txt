@@ -1,0 +1,92 @@
+Inital tree
+=======================
+// ЭТАП 1: Исходное дерево (Удаляемый Z=71 выделен)
+digraph RBTreeStep1 {
+  bgcolor="#A0C8E1";
+  node [shape=circle, style=filled, fontname="Helvetica-Bold", fontsize=12, penwidth=2];
+  edge [color=black, arrowhead=open, arrowsize=0.9, penwidth=1.5];
+
+  // --- Nodes ---
+  n55 [label="55", fillcolor=black, fontcolor=white, color="#9ACD32"];
+  n37 [label="37", fillcolor=red,   fontcolor=white, color="#9ACD32"];
+  n15 [label="15", fillcolor=black, fontcolor=white, color="#9ACD32"];
+  n5  [label="5",  fillcolor=black, fontcolor=white, color="#9ACD32"];
+  n10 [label="10", fillcolor=red,   fontcolor=white, color="#9ACD32"];
+  n25 [label="25", fillcolor=red,   fontcolor=white, color="#9ACD32"];
+  n20 [label="20", fillcolor=black, fontcolor=white, color="#9ACD32"];
+  n32 [label="32", fillcolor=black, fontcolor=white, color="#9ACD32"];
+  n29 [label="29", fillcolor=red,   fontcolor=white, color="#9ACD32"];
+  n43 [label="43", fillcolor=black, fontcolor=white, color="#9ACD32"];
+  n40 [label="40", fillcolor=black, fontcolor=white, color="#9ACD32"];
+  n49 [label="49", fillcolor=black, fontcolor=white, color="#9ACD32"];
+  n75 [label="75", fillcolor=black, fontcolor=white, color="#9ACD32"];
+  n66 [label="66", fillcolor=red,   fontcolor=white, color="#9ACD32"]; // P
+  n62 [label="62", fillcolor=black, fontcolor=white, color="#9ACD32"]; // W
+  n58 [label="58", fillcolor=red,   fontcolor=white, color="#9ACD32"]; // N
+  n71 [label="71", fillcolor=black, fontcolor=white, color="yellow", peripheries=2, penwidth=3]; // Z=71
+  n85 [label="85", fillcolor=red,   fontcolor=white, color="#9ACD32"];
+  n79 [label="79", fillcolor=black, fontcolor=white, color="#9ACD32"];
+  n89 [label="89", fillcolor=black, fontcolor=white, color="#9ACD32"];
+  n94 [label="94", fillcolor=red,   fontcolor=white, color="#9ACD32"];
+
+  // --- Edges ---
+  n55 -> n37; n55 -> n75;
+  n37 -> n15; n37 -> n43;
+  n15 -> n5; n15 -> n25;
+  n5  -> n10;
+  n25 -> n20; n25 -> n32;
+  n32 -> n29;
+  n43 -> n40; n43 -> n49;
+  n75 -> n66; n75 -> n85;
+  n66 -> n62; n66 -> n71; 
+  n62 -> n58;
+  n85 -> n79; n85 -> n89;
+  n89 -> n94;
+
+  // Keep nodes on roughly tree-shaped layout (подсказки, которые сохраняют форму)
+  
+}
+
+Это дерево после удаления узла 71
+
+digraph RBTreeAfterDeletion {
+  bgcolor="#E1F7D0";
+  node [shape=circle, style=filled, fontname="Helvetica-Bold", fontsize=12, penwidth=2];
+  edge [color=black, arrowhead=open, arrowsize=0.9, penwidth=1.5];
+
+  // --- Nodes ---
+  n55 [label="55", fillcolor=black, fontcolor=white];
+  n37 [label="37", fillcolor=red, fontcolor=white];
+  n15 [label="15", fillcolor=black, fontcolor=white];
+  n5  [label="5", fillcolor=black, fontcolor=white];
+  n10 [label="10", fillcolor=red, fontcolor=white];
+  n25 [label="25", fillcolor=red, fontcolor=white];
+  n20 [label="20", fillcolor=black, fontcolor=white];
+  n32 [label="32", fillcolor=black, fontcolor=white];
+  n29 [label="29", fillcolor=red, fontcolor=white];
+  n43 [label="43", fillcolor=black, fontcolor=white];
+  n40 [label="40", fillcolor=black, fontcolor=white];
+  n49 [label="49", fillcolor=black, fontcolor=white];
+  n75 [label="75", fillcolor=black, fontcolor=white];
+  n66 [label="66", fillcolor=red, fontcolor=white];
+  n62 [label="62", fillcolor=black, fontcolor=white];
+  n58 [label="58", fillcolor=red, fontcolor=white];
+  n85 [label="85", fillcolor=red, fontcolor=white];
+  n79 [label="79", fillcolor=black, fontcolor=white];
+  n89 [label="89", fillcolor=black, fontcolor=white];
+  n94 [label="94", fillcolor=red, fontcolor=white];
+
+  // --- Edges ---
+  n55 -> n37; n55 -> n75;
+  n37 -> n15; n37 -> n43;
+  n15 -> n5; n15 -> n25;
+  n5 -> n10;
+  n25 -> n20; n25 -> n32;
+  n32 -> n29;
+  n43 -> n40; n43 -> n49;
+  n75 -> n66; n75 -> n85;
+  n66 -> n62; // Убрана связь n66 -> n71
+  n62 -> n58;
+  n85 -> n79; n85 -> n89;
+  n89 -> n94;
+}

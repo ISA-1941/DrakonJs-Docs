@@ -1,0 +1,110 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "Z-образный case \n\"Double rotation\""
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "parent = node.parent;\ngrand = parent.parent;"
+        },
+        "4": {
+            "type": "question",
+            "one": "6",
+            "two": "5",
+            "flag1": 1,
+            "content": "node === parent.right && parent === grand.left"
+        },
+        "5": {
+            "type": "question",
+            "one": "8",
+            "two": "14",
+            "flag1": 1,
+            "content": "node === parent.left && parent === grand.right"
+        },
+        "6": {
+            "type": "action",
+            "one": "7",
+            "content": "rotateLeft(tree, parent)"
+        },
+        "7": {
+            "type": "action",
+            "one": "14",
+            "content": "node = node.left"
+        },
+        "8": {
+            "type": "action",
+            "one": "9",
+            "content": "rotateRight(tree, parent)"
+        },
+        "9": {
+            "type": "action",
+            "one": "14",
+            "content": "node = node.right"
+        },
+        "13": {
+            "type": "branch",
+            "one": "18",
+            "branchId": 3,
+            "content": "End"
+        },
+        "14": {
+            "type": "branch",
+            "one": "21",
+            "branchId": 2,
+            "content": "Branch2"
+        },
+        "18": {
+            "type": "question",
+            "one": "19",
+            "two": "20",
+            "flag1": 1,
+            "content": "node === parent.left && parent === grand.left"
+        },
+        "19": {
+            "type": "action",
+            "one": "23",
+            "two": "",
+            "content": "rotateRight(tree, grand)"
+        },
+        "20": {
+            "type": "action",
+            "one": "23",
+            "two": "",
+            "content": "rotateLeft(tree, grand)"
+        },
+        "21": {
+            "type": "action",
+            "one": "22",
+            "two": "",
+            "content": "parent = node.parent\ngrand = parent.parent"
+        },
+        "22": {
+            "type": "action",
+            "one": "13",
+            "two": "",
+            "content": "parent.color = 'B'\ngrand.color = 'R'"
+        },
+        "23": {
+            "type": "action",
+            "one": "1",
+            "content": "return tree"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "tree, node"
+}
