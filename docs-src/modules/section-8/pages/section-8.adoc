@@ -580,49 +580,47 @@ Figure 8.35. DRAKON-diagrams of node rotation algorithms used in red-black tree 
 
 == Видеодемонстрации вставки узлов (Case 1–5)
 
-[.case-buttons]
-****
-* link:#case1[Case 1]
-* link:#case2[Case 2]
-* link:#case3[Case 3]
-* link:#case4[Case 4]
-* link:#case5[Case 5]
-****
+Видеодемонстрации вставки узлов (Case 1–5)
 
-=== Case 1
-[[case1]]
-[video, width=640, height=360, controls]
-----
-image::attachments/case1.mp4[]
-----
+Case 1
+++++
+<video width="640" height="360" controls>
+  <source src="attachments/case1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+++++
 
-=== Case 2
-[[case2]]
-[video, width=640, height=360, controls]
-----
-image::attachments/case2.mp4[]
-----
+Case 2
+++++
+<video width="640" height="360" controls>
+  <source src="attachments/case2.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+++++
 
-=== Case 3
-[[case3]]
-[video, width=640, height=360, controls]
-----
-image::attachments/case3.mp4[]
-----
+Case 3
+++++
+<video width="640" height="360" controls>
+  <source src="attachments/case3.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+++++
 
-=== Case 4
-[[case4]]
-[video, width=640, height=360, controls]
-----
-image::attachments/case4.mp4[]
-----
+Case 4
+++++
+<video width="640" height="360" controls>
+  <source src="attachments/case4.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+++++
 
-=== Case 5
-[[case5]]
-[video, width=640, height=360, controls]
-----
-image::attachments/case5.mp4[]
-----
+Case 5
+++++
+<video width="640" height="360" controls>
+  <source src="attachments/case5.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+++++
 
 
 ==== 8.4.3. Deleting a Node from a red-black tree
