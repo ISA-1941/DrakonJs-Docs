@@ -602,16 +602,48 @@ Figure 8.35. DRAKON-diagrams of node rotation algorithms used in red-black tree 
 ****
 
 ++++
-<video width="640" height="360" controls>
-  <source src="../attachments/case1.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<div id="case-videos">
+  <video id="case1-video" width="640" height="360" controls style="display:none">
+    <source src="../attachments/case1.mp4" type="video/mp4">
+  </video>
 
-<video width="640" height="360" controls>
-  <source src="../attachments/case2.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+  <video id="case2-video" width="640" height="360" controls style="display:none">
+    <source src="../attachments/case2.mp4" type="video/mp4">
+  </video>
+
+  <video id="case3-video" width="640" height="360" controls style="display:none">
+    <source src="../attachments/case3.mp4" type="video/mp4">
+  </video>
+
+  <video id="case4-video" width="640" height="360" controls style="display:none">
+    <source src="../attachments/case4.mp4" type="video/mp4">
+  </video>
+
+  <video id="case5-video" width="640" height="360" controls style="display:none">
+    <source src="../attachments/case5.mp4" type="video/mp4">
+  </video>
+</div>
+
+<script>
+document.querySelectorAll('.case-buttons li a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const caseId = link.getAttribute('href').substring(2); // убираем <<
+
+    // Скрыть все видео
+    document.querySelectorAll('#case-videos video').forEach(v => {
+      v.pause();
+      v.style.display = 'none';
+    });
+
+    // Показать выбранное видео
+    const video = document.getElementById(`${caseId}-video`);
+    if(video) video.style.display = 'block';
+  });
+});
+</script>
 ++++
+
 
 
 ==== 8.4.3. Deleting a Node from a red-black tree
