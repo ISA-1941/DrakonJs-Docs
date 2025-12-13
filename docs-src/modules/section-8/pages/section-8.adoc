@@ -578,72 +578,51 @@ image::{imagesdir}/Fig8_35b_rotateRight.png[width=100%, link="{imagesdir}/Fig8_3
 [.text-center]
 Figure 8.35. DRAKON-diagrams of node rotation algorithms used in red-black tree clusters.
 
-// ====================================================================
-// SECTION: Red-Black Tree Node Insertion Videos
-// This section demonstrates 5 Cases of node insertion in a Red-Black Tree.
-// Top panel: navigation buttons (Case 1–5)
-// Videos below: vertical list with posters and captions (Figure X)
-// ====================================================================
-
 == Видеодемонстрации вставки узлов (Case 1–5)
 
-//
-// PANEL OF NAVIGATION BUTTONS
-// [.case-buttons] role defined in site.css
-// Each button links to the corresponding video section below
-//
 [.case-buttons]
 ****
-* <<case1,Case 1>>
-* <<case2,Case 2>>
-* <<case3,Case 3>>
-* <<case4,Case 4>>
-* <<case5,Case 5>>
+* link:#case1[Case 1]
+* link:#case2[Case 2]
+* link:#case3[Case 3]
+* link:#case4[Case 4]
+* link:#case5[Case 5]
 ****
 
-++++
-<div id="case-videos">
-  <video id="case1-video" width="640" height="360" controls style="display:none">
-    <source src="../attachments/case1.mp4" type="video/mp4">
-  </video>
+=== Case 1
+[[case1]]
+[video, width=640, height=360, controls]
+----
+image::attachments/case1.mp4[]
+----
 
-  <video id="case2-video" width="640" height="360" controls style="display:none">
-    <source src="../attachments/case2.mp4" type="video/mp4">
-  </video>
+=== Case 2
+[[case2]]
+[video, width=640, height=360, controls]
+----
+image::attachments/case2.mp4[]
+----
 
-  <video id="case3-video" width="640" height="360" controls style="display:none">
-    <source src="../attachments/case3.mp4" type="video/mp4">
-  </video>
+=== Case 3
+[[case3]]
+[video, width=640, height=360, controls]
+----
+image::attachments/case3.mp4[]
+----
 
-  <video id="case4-video" width="640" height="360" controls style="display:none">
-    <source src="../attachments/case4.mp4" type="video/mp4">
-  </video>
+=== Case 4
+[[case4]]
+[video, width=640, height=360, controls]
+----
+image::attachments/case4.mp4[]
+----
 
-  <video id="case5-video" width="640" height="360" controls style="display:none">
-    <source src="../attachments/case5.mp4" type="video/mp4">
-  </video>
-</div>
-
-<script>
-document.querySelectorAll('.case-buttons li a').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const caseId = link.getAttribute('href').substring(2); // убираем <<
-
-    // Скрыть все видео
-    document.querySelectorAll('#case-videos video').forEach(v => {
-      v.pause();
-      v.style.display = 'none';
-    });
-
-    // Показать выбранное видео
-    const video = document.getElementById(`${caseId}-video`);
-    if(video) video.style.display = 'block';
-  });
-});
-</script>
-++++
-
+=== Case 5
+[[case5]]
+[video, width=640, height=360, controls]
+----
+image::attachments/case5.mp4[]
+----
 
 
 ==== 8.4.3. Deleting a Node from a red-black tree
