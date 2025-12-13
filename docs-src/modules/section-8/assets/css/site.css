@@ -1,0 +1,20 @@
+.case-buttons {
+  text-align: center;
+  margin: 1.2em 0;
+}
+
+.case-buttons a {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 4px;
+  background: #e0e0e0;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+  transition: background 0.2s;
+}
+
+.case-buttons a:hover {
+  background: #d0d0d0;
+}

@@ -1,0 +1,60 @@
+{
+    "items": {
+        "1": {
+            "type": "f_circle",
+            "left": -525,
+            "top": -30,
+            "width": 20,
+            "height": 20,
+            "zIndex": 0,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#000000\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "2": {
+            "type": "f_circle",
+            "left": -550,
+            "top": 5,
+            "width": 20,
+            "height": 20,
+            "zIndex": 1,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#ff0000\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "3": {
+            "type": "f_circle",
+            "left": -570,
+            "top": 45,
+            "width": 20,
+            "height": 20,
+            "zIndex": 2,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#ff0000\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "4": {
+            "type": "f_circle",
+            "left": -510,
+            "top": 5,
+            "width": 20,
+            "height": 20,
+            "zIndex": 3,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#ff0000\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "5": {
+            "type": "line",
+            "left": -520,
+            "top": -15,
+            "x2": -15,
+            "y2": 25,
+            "style": "{\"font\":\"15px Arimo\",\"headStyle\":\"arrow\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}",
+            "zIndex": 4
+        },
+        "6": {
+            "type": "text",
+            "left": -570,
+            "top": 55,
+            "width": 205,
+            "height": 20,
+            "content": "<p>17</p>",
+            "zIndex": 5
+        }
+    },
+    "type": "free",
+    "id": "ClusterCase_1.free"
+}

@@ -1,313 +1,186 @@
 main();
-function Insert(tree, data) {
-    var NIL, direction, insertionInfo, newNode, parent;
-    NIL = tree.nullNode;
-    if (tree.root === NIL) {
-        tree.root = createNode(data, false, NIL, NIL, NIL);
-        return;
-    }
-    insertionInfo = findInsertionPoint(tree, tree.root, data, NIL);
-    console.log('insertionInfo: ' ,insertionInfo);
-    if (insertionInfo.duplicate) {
-        console.log('Duplicate value: ' + data);
-        return;
-    }
-    parent = insertionInfo.parent;
-    direction = insertionInfo.direction;
-    newNode = createNode(data, true, parent, NIL, NIL);
-    if (direction === 'left') {
-        parent.left = newNode;
-    } else {
-        parent.right = newNode;
-    }
-    fixRedRed(tree, newNode);
-    tree.root.colour = false;
-}
-function InsertNew(tree, value) {
-    var new_inserted_node;
-    new_inserted_node = insertNode(tree, tree.root, value);
-    if (tree.root === null) {
-        tree.root = new_inserted_node;
-        tree.root.colour = false;
-        return;
-    }
-    if (new_inserted_node !== tree.root && new_inserted_node.parent && new_inserted_node.parent.colour === true) {
-        fixInsert(tree, new_inserted_node);
-    }
-    tree.root.colour = false;
-}
-function createNode(data, colour, parent, left, right) {
-    return {
-        data: data,
-        colour: colour,
-        parent: parent,
-        left: left,
-        right: right
-    };
-}
-function createTree() {
-    var nullNode;
-    nullNode = {
-        data: 0,
-        colour: false,
-        left: null,
-        right: null,
-        parent: null
-    };
-    nullNode.left = nullNode;
-    nullNode.right = nullNode;
-    nullNode.parent = nullNode;
-    return {
-        root: nullNode,
-        nullNode: nullNode
-    };
-}
-function deleteNodeAI(tree, node, key) {
-    var foundNode, node, nullNode, x, y, yColour, z;
+function bstDelete(tree, node) {
+    var mes1, mes2, message, nullNode, x, y;
     nullNode = tree.nullNode;
-    z = nullNode;
-    foundNode = false;
+    console.log(`bstDelete: starting for node ${ node.key }`);
+    if (!node || node === nullNode || node === undefined) {
+        console.log('bstDelete: invalid node, returning nullNode');
+        return nullNode;
+    }
+    y = node;
+    mes1 = `bstDelete: node ${ node.key }`;
+    mes2 = ` has left: ${ node.left.key }, right: ${ node.right.key }`;
+    message = mes1 + mes2;
+    console.log(message);
+    if (node.left === nullNode || node.right === nullNode) {
+        y = node;
+        console.log(`bstDelete: y set to original node ${ y.key }`);
+    } else {
+        message = `bstDelete: both children exist, finding min in right subtree`;
+        console.log(message);
+        y = findMin(tree, node.right);
+        if (!y || y === nullNode || y === undefined) {
+            console.log('bstDelete: findMin returned invalid, using original node');
+            y = node;
+        }
+        console.log(`bstDelete: y set to ${ y.key }`);
+    }
+    if (y.left !== nullNode) {
+        x = y.left;
+        console.log(`bstDelete: x set to y.left: ${ x.key }`);
+    } else {
+        x = y.right;
+        console.log(`bstDelete: x set to y.right: ${ x ? x.key : 'null' }`);
+    }
+    if (x) {
+        x.parent = y.parent;
+        console.log(`bstDelete: set x.parent to ${ y.parent.key }`);
+    } else {
+        console.log('bstDelete: x is null, skipping parent assignment');
+    }
+    if (y.parent === nullNode) {
+        tree.root = x || nullNode;
+        console.log(`bstDelete: set tree.root to ${ x ? x.key : 'null' }`);
+    } else {
+        if (y === y.parent.left) {
+            y.parent.left = x || nullNode;
+            console.log(`bstDelete: set y.parent.left to ${ x ? x.key : 'null' }`);
+        } else {
+            y.parent.right = x || nullNode;
+            console.log(`bstDelete: set y.parent.right to ${ x ? x.key : 'null' }`);
+        }
+    }
+    if (y !== node) {
+        console.log(`bstDelete: copying key from ${ y.key } to ${ node.key }`);
+        node.key = y.key;
+    }
+    if (y.color === 'B') {
+        console.log(`bstDelete: y is black, returning x for fixing: ${ x ? x.key : 'null' }`);
+        return x || nullNode;
+    }
+    console.log('bstDelete: y is red, no fix needed, returning nullNode');
+    return nullNode;
+}
+function bstInsert(tree, key) {
+    var newNode, x, y;
+    y = tree.nullNode;
+    x = tree.root;
     while (true) {
-        if (node !== nullNode && !foundNode) {
-            if (node.data === key) {
-                z = node;
-                foundNode = true;
+        if (x !== tree.nullNode) {
+            y = x;
+            if (key < x.key) {
+                x = x.left;
             } else {
-                if (key < node.data) {
-                    node = node.left;
-                } else {
-                    node = node.right;
-                }
+                x = x.right;
             }
         } else {
             break;
         }
     }
-    if (z === nullNode) {
-        console.log('Couldn\'t find node with key:', key);
+    newNode = makeNode(key, 'R', tree.nullNode, tree.nullNode, y);
+    if (y === tree.nullNode) {
+        tree.root = newNode;
+    } else {
+        if (key < y.key) {
+            y.left = newNode;
+        } else {
+            y.right = newNode;
+        }
+    }
+    return newNode;
+}
+function deleteNode(tree, key) {
+    var caseInfoAfter, caseInfoBefore, clusterInfoAfter, clusterInfoBefore, fixNode, mes1, mes2, nodeToDelete, nullNode;
+    nullNode = tree.nullNode;
+    nodeToDelete = findNode(tree, key);
+    if (nodeToDelete === nullNode || !nodeToDelete) {
+        console.log(`Node with key ${ key } not found`);
         return;
     }
-    y = z;
-    yColour = y.colour;
-    if (z.left === nullNode) {
-        x = z.right;
-        joinParentChild(tree, z, z.right);
-    } else {
-        if (z.right === nullNode) {
-            x = z.left;
-            joinParentChild(tree, z, z.left);
-        } else {
-            y = minimum(tree, z.right);
-            yColour = y.colour;
-            x = y.right;
-            if (y.parent !== z) {
-                joinParentChild(tree, y, y.right);
-                y.right = z.right;
-                y.right.parent = y;
-            }
-            joinParentChild(tree, z, y);
-            y.left = z.left;
-            y.left.parent = y;
-            y.colour = z.colour;
-        }
+    clusterInfoBefore = describeCluster(tree, nodeToDelete);
+    caseInfoBefore = determineDeleteCase(tree, nodeToDelete);
+    mes1 = `Cluster before delete: node`;
+    mes2 = `${ nodeToDelete.key }  ${ clusterInfoBefore.description }`;
+    console.log(mes1 + mes2);
+    console.log(`Delete case: ${ caseInfoBefore }`);
+    fixNode = bstDelete(tree, nodeToDelete);
+    if (fixNode !== nullNode && fixNode) {
+        clusterInfoAfter = describeCluster(tree, fixNode);
+        caseInfoAfter = determineDeleteCase(tree, fixNode);
+        fixDelete(tree, caseInfoAfter);
     }
-    if (yColour === false) {
-        if (x.colour === true) {
-            x.colour = false;
-        } else {
-            fixDoubleBlack(tree, x);
-        }
-    }
+    return nodeToDelete;
 }
-function findInsertionPoint(tree, node, data, parent) {
-    if (node === tree.nullNode) {
-        return {
-            parent: parent,
-            direction: data < parent.data ? 'left' : 'right'
-        };
-    }
-    if (data < node.data) {
-        return findInsertionPoint(tree, node.left, data, node);
-    } else {
-        if (data > node.data) {
-            return findInsertionPoint(tree, node.right, data, node);
-        } else {
-            return {
-                node: node,
-                duplicate: true
-            };
-        }
-    }
-}
-function fixDoubleBlack(tree, x) {
-    var x;
-    while (true) {
-        if (x !== tree.root && x.colour === false) {
-            x = fixDoubleBlackStep(tree, x);
-        } else {
-            break;
-        }
-    }
-    x.colour = false;
-}
-function fixDoubleBlackStep(tree, x) {
-    var parent, sibling;
-    parent = x.parent;
-    sibling = getSibling(x);
-    if (sibling.colour === true) {
-        sibling.colour = false;
-        parent.colour = true;
-        if (x === parent.left) {
-            rotateLeft(tree, parent);
-        } else {
-            rotateRight(tree, parent);
-        }
-        sibling = getSibling(x);
-    }
-    if (sibling.left.colour === false && sibling.right.colour === false) {
-        sibling.colour = true;
-        return parent;
-    } else {
-        if (x === parent.left && sibling.right.colour === false) {
-            sibling.left.colour = false;
-            sibling.colour = true;
-            rotateRight(tree, sibling);
-            sibling = getSibling(x);
-        } else {
-            if (x === parent.right && sibling.left.colour === false) {
-                sibling.right.colour = false;
-                sibling.colour = true;
-                rotateLeft(tree, sibling);
-                sibling = getSibling(x);
+function describeCluster(tree, node) {
+    var G, P, U, nodes, nullNode, pToG, parts, x, xToP;
+    nullNode = tree.nullNode;
+    parts = [];
+    nodes = { x: node };
+    x = node;
+    parts.push(`x:${ x.color }`);
+    P = x.parent;
+    nodes.P = P;
+    if (P !== nullNode) {
+        xToP = x === P.left ? 'x<-P' : 'x->P';
+        parts.push(`${ xToP }; P:${ P.color }`);
+        G = P.parent;
+        nodes.G = G;
+        if (G !== nullNode) {
+            pToG = P === G.left ? 'P<-G' : 'P->G';
+            parts.push(`${ pToG }; G:${ G.color }`);
+            U = P === G.left ? G.right : G.left;
+            nodes.U = U;
+            if (U !== nullNode) {
+                parts.push(`U:${ U.color }`);
+            } else {
+                parts.push('U:null');
             }
         }
     }
-    sibling.colour = parent.colour;
-    parent.colour = false;
-    if (x === parent.left) {
-        sibling.right.colour = false;
-        rotateLeft(tree, parent);
-    } else {
-        sibling.left.colour = false;
-        rotateRight(tree, parent);
-    }
-    return tree.root;
+    return {
+        description: parts.join(', '),
+        nodes: nodes
+    };
 }
-function fixRedRed(tree,x) {
-    var LL, LR, RL, RR, grandparent, parent, rootSubtree, uncle;
+function determineDeleteCase(tree, node) {
+    var P, S, Sl, Sr, case5_left, case5_right, isXLeftChild, nullNode, x;
+    nullNode = tree.nullNode;
+    x = node;
     if (x === tree.root) {
-        x.colour = false;
-        return;
+        return 'Delete Case 1: x is root - done';
     }
-    parent = x.parent;
-    if (parent.colour === false) {
-        return;
+    P = x.parent;
+    isXLeftChild = x === P.left;
+    S = isXLeftChild ? P.right : P.left;
+    if (S.color === 'R') {
+        return 'Delete Case 2: Sibling is red - rotate and recolor';
     }
-    grandparent = parent.parent;
-    if (grandparent === tree.nullNode) {
-        parent.colour = false;
-        return;
-    }
-    uncle = getUncle(tree, x);
-    if (uncle.colour === true) {
-        parent.colour = false;
-        uncle.colour = false;
-        grandparent.colour = true;
-        fixRedRed(tree, grandparent);
-        return;
-    }
-    LL = parent === grandparent.left && x === parent.left;
-    RR = parent === grandparent.right && x === parent.right;
-    LR = parent === grandparent.left && x === parent.right;
-    RL = parent === grandparent.right && x === parent.left;
-    rootSubtree = null;
-    if (LL) {
-        rootSubtree = rotateRight(tree, grandparent);
-        rootSubtree.colour = false;
-        grandparent.colour = true;
-    } else {
-        if (RR) {
-            rootSubtree = rotateLeft(tree, grandparent);
-            rootSubtree.colour = false;
-            grandparent.colour = true;
+    Sl = S.left;
+    Sr = S.right;
+    if (Sl.color === 'B' && Sr.color === 'B') {
+        if (P.color === 'B') {
+            return 'Case 3';
         } else {
-            if (LR) {
-                rotateLeft(tree, parent);
-                rootSubtree = rotateRight(tree, grandparent);
-                rootSubtree.colour = false;
-                rootSubtree.left.colour = true;
-                rootSubtree.right.colour = true;
-            } else {
-                if (RL) {
-                    rotateRight(tree, parent);
-                    rootSubtree = rotateLeft(tree, grandparent);
-                    rootSubtree.colour = false;
-                    rootSubtree.left.colour = true;
-                    rootSubtree.right.colour = true;
-                } else {
-                    console.log('Unclassified rotation case.');
-                    return;
-                }
-            }
+            return 'Case 4:';
         }
     }
-    if (rootSubtree.parent === tree.nullNode) {
-        tree.root = rootSubtree;
+    if (Sl && Sr) {
+        case5_left = isXLeftChild && Sl.color === 'R' && Sr.color === 'B';
+        case5_right = !isXLeftChild && Sr.color === 'R' && Sl.color === 'B';
     }
+    if (case5_left || case5_right) {
+        return case5_left ? 'Delete Case 5: Sibling\'s left child red' : 'Delete Case 5  Sibling\'s right child red';
+    }
+    if (case6_left || case6_right) {
+        return case6_left ? 'Delete Case 6: Sibling\'s right child red' : 'Delete Case 5: Sibling\'s left child red';
+    }
+    return 'Unknown delete case';
 }
-function getSibling(node) {
-    var parent;
-    parent = node.parent;
-    return node === parent.left ? parent.right : parent.left;
-}
-function getUncle(tree, x) {
-    var grandparent, parent;
-    parent = x.parent;
-    if (parent) {
-        grandparent = parent.parent;
-    } else {
-        grandparent = null;
-    }
-    if (!grandparent) {
-        return tree.nullNode;
-    }
-    if (parent === grandparent.left) {
-        return grandparent.right;
-    } else {
-        return grandparent.left;
-    }
-}
-function joinParentChild(tree, u, v) {
-    if (u.parent === tree.nullNode) {
-        tree.root = v;
-    } else {
-        if (u === u.parent.left) {
-            u.parent.left = v;
-        } else {
-            u.parent.right = v;
-        }
-    }
-    v.parent = u.parent;
-}
-function main() {
-    var tree, val, values;
-    tree = createTree();
-    values = [
-       40,35,30,25,20,15,10,5,
-    ];
-    for (val of values) {
-        Insert(tree, val);
-    }
-    console.log('Red-Black Tree:');
-    printTreeNode(tree, tree.root, '', false);
-    deleteNodeAI(tree, tree.root, 5);
-    console.log('After deleting 5');
-    printTreeNode(tree, tree.root, '', false);
-}
-function minimum(tree, node) {
-    var node;
+function findMin(tree, node) {
+    var node, nullNode;
+    nullNode = tree.nullNode;
     while (true) {
-        if (node.left !== tree.nullNode) {
+        if (node.left !== nullNode) {
             node = node.left;
         } else {
             break;
@@ -315,125 +188,277 @@ function minimum(tree, node) {
     }
     return node;
 }
-function printTreeNode(tree, node, indent = "", isLeft = true) {
-    var color, label, newIndent;
+function findMinBest(tree, node) {
+    var current;
+    if (!tree || !node || node === nullNode || node === undefined) {
+        console.log('findMin: Invalid input, returning nullNode');
+        return nullNode;
+    }
+    console.log(`findMin: starting with node ${ node.key }`);
+    current = node;
+    while (true) {
+        if (current && current !== nullNode && current !== undefined && current.left && current.left !== nullNode && current.left !== undefined) {
+            console.log(`findMin: moving from ${ current.key } to ${ current.left.key }`);
+            current = current.left;
+        } else {
+            break;
+        }
+    }
+    onsole.log(`findMin: returning ${ current.key }`);
+    return current;
+}
+function findNode(tree, key) {
+    var current, nullNode;
+    nullNode = tree.nullNode;
+    current = tree.root;
+    while (true) {
+        if (current !== nullNode && current !== undefined && current.key !== key) {
+            if (key < current.key) {
+                current = current.left;
+            } else {
+                current = current.right;
+            }
+        } else {
+            break;
+        }
+    }
+    return current;
+}
+function fixCase1(tree, node) {
+    return tree;
+}
+function fixCase2(tree, x) {
+    var grand, parent, uncle;
+    parent = x.parent;
+    grand = parent.parent;
+    uncle = parent === grand.left ? grand.right : grand.left;
+    parent.color = 'B';
+    uncle.color = 'B';
+    grand.color = 'R';
+    return fixInsert(tree, grand);
+}
+function fixCase3_4(tree, x) {
+    var grand, parent, x;
+    parent = x.parent;
+    grand = parent.parent;
+    if (x === parent.right && parent === grand.left) {
+        rotateLeft(tree, parent);
+        x = x.left;
+    } else {
+        if (x === parent.left && parent === grand.right) {
+            rotateRight(tree, parent);
+            x = x.right;
+        }
+    }
+    parent = x.parent;
+    grand = parent.parent;
+    parent.color = 'B';
+    grand.color = 'R';
+    if (x === parent.left && parent === grand.left) {
+        rotateRight(tree, grand);
+    } else {
+        rotateLeft(tree, grand);
+    }
+    return tree;
+}
+function fixDelete(tree, caseInfoAfter) {
+    var caseType, clusterInfo, description, nodes;
+    caseType = caseInfoAfter.caseType;
+    clusterInfo = caseInfoAfter.clusterInfo;
+    description = caseInfoAfter.description;
+    nodes = clusterInfo.nodes;
+    console.log(`Executing fix for: ${ caseType }`);
+    if (caseType === 'ROOT_CASE') {
+        nodes.x.color = 'B';
+    } else {
+        if (caseType === 'RED_NODE') {
+            nodes.x.color = 'B';
+        } else {
+            if (caseType === 'RED_SIBLING') {
+                handleRedSiblingCase(tree, clusterInfo);
+            } else {
+                if (caseType === 'BLACK_SIBLING_CHILDREN') {
+                    handleBlackSiblingChildrenCase(tree, clusterInfo);
+                } else {
+                    if (caseType === 'COMPLEX_ROTATION') {
+                        handleComplexRotationCase(tree, clusterInfo);
+                    } else {
+                        console.log(`Unknown case: ${ caseType }`);
+                    }
+                }
+            }
+        }
+    }
+}
+function fixInsert(tree, node) {
+    var grand, parent, uncle;
+    parent = node.parent;
+    if (parent === tree.nullNode) {
+        tree.root.color = 'B';
+        return tree;
+    }
+    if (parent.color === 'B') {
+        return fixCase1(tree, node);
+    }
+    grand = parent.parent;
+    uncle = parent === grand.left ? grand.right : grand.left;
+    if (uncle.color === 'R') {
+        return fixCase2(tree, node);
+    }
+    return fixCase3_4(tree, node);
+}
+function main() {
+    var i, tree, val, values;
+    tree = makeRBTree();
+    values = [];
+    for (i = 0; i < 15; i++) {
+        values.push(Math.floor(Math.random() * 40) + 11);
+    }
+    for (val of values) {
+        rbInsert(tree, val);
+    }
+    console.log('\nTree after inserts !!!:\n');
+    printTree(tree, tree.root);
+    deleteNode(tree, 80);
+    console.log('\nTree after delete node  (FIXED):\n');
+    printTree(tree, tree.root);
+    setTimeout(() => {
+        return tree;
+    }, 0);
+}
+function makeNode(key, color, left, right, parent) {
+    return {
+        key,
+        color,
+        left,
+        right,
+        parent
+    };
+}
+function makeRBTree() {
+    var nullNode;
+    nullNode = {};
+    nullNode.key = null;
+    nullNode.color = 'B';
+    nullNode.left = nullNode;
+    nullNode.right = nullNode;
+    nullNode.parent = nullNode;
+    return {
+        root: nullNode,
+        nullNode
+    };
+}
+function printTree(tree, node = tree.root, indent = "", isLeft = true) {
+    var BLACK, GRAY, RED, RESET, colorCode, indentChild;
+    RED = '\x1B[31m';
+    BLACK = '\x1B[37m';
+    GRAY = '\x1B[90m';
+    RESET = '\x1B[0m';
     if (node === tree.nullNode) {
+        console.log(indent + (isLeft ? 'L\u2500\u2500 ' : 'R\u2500\u2500 ') + GRAY + 'NIL' + RESET);
         return;
     }
-    label = isLeft ? 'L:' : 'R:';
-    color = node.colour ? 'red' : 'black';
-    console.log(indent + label + node.data + ' (' + color + ')');
-    newIndent = isLeft ? indent + '|  ' : indent + '   ';
-    printTreeNode(tree, node.left, newIndent, true);
-    printTreeNode(tree, node.right, newIndent, false);
+    colorCode = node.color === 'R' ? RED : BLACK;
+    console.log(indent + (isLeft ? 'L\u2500\u2500 ' : 'R\u2500\u2500 ') + colorCode + `${ node.key }(${ node.color })` + RESET);
+    indentChild = indent + (isLeft ? '\u2502   ' : '    ');
+    printTree(tree, node.left, indentChild, true);
+    printTree(tree, node.right, indentChild, false);
 }
-function rotateLeft(tree, K) {
-    var L, t;
-    console.log('rotateLeft');
-    L = K.right;
-    t = L.left;
-    L.parent = K.parent;
-    L.left = K;
-    K.parent = L;
-    K.right = t;
-    if (t !== tree.nullNode) {
-        t.parent = K;
-    }
-    if (K === tree.root) {
-        tree.root = L;
+function processDeleteCase(tree, x) {
+    if (x === x.parent.left) {
+        return handleLeftCases(tree, x);
     } else {
-        if (L.parent.left === K) {
-            L.parent.left = L;
+        return handleRightCases(tree, x);
+    }
+}
+function rbInsert(tree, key) {
+    var node;
+    node = bstInsert(tree, key);
+    console.log('val=', key, rbInsertCaseShort(tree, node));
+    fixInsert(tree, node);
+    tree.root.color = 'B';
+    return tree;
+}
+function rbInsertCaseShort(tree, node) {
+    var grand, isNodeLeft, isParentLeft, parent, uncle;
+    if (!node || node.key === undefined || node.key === null) {
+        return 'Error: No valid node provided';
+    }
+    parent = node.parent;
+    if (!parent || parent === tree.nullNode) {
+        return 'Case 1: Node is root - x:B';
+    }
+    if (parent.color === 'B') {
+        return 'Case 2: P:B - no fix needed';
+    }
+    grand = parent.parent;
+    if (!grand) {
+        return 'No grandparent found';
+    }
+    uncle = parent === grand.left ? grand.right : grand.left;
+    isParentLeft = parent === grand.left;
+    isNodeLeft = node === parent.left;
+    if (uncle && uncle.color === 'R') {
+        return 'Case 3: P:R and U:R - recolor';
+    }
+    if (isParentLeft && !isNodeLeft || !isParentLeft && isNodeLeft) {
+        return 'Case 4: U:B, x and P in <- -> - rotate parent';
+    }
+    return 'Case 5: U:B, x -> -> - rotate grandparent';
+    return 'Unknown insert case';
+}
+function rotateLeft(tree,x) {
+    var y;
+    y = x.right;
+    x.right = y.left;
+    if (y.left !== tree.nullNode) {
+        y.left.parent = x;
+    }
+    y.parent = x.parent;
+    if (x.parent === tree.nullNode) {
+        tree.root = y;
+    } else {
+        if (x === x.parent.left) {
+            x.parent.left = y;
         } else {
-            L.parent.right = L;
+            x.parent.right = y;
         }
     }
-    return L;
-}
-function rotateLeftOld(tree, K) {
-    var t, y;
-    y = x.right;
-    t = y.left;
-    y.parent = x.parent;
     y.left = x;
     x.parent = y;
-    x.right = t;
-    if (t !== tree.nullNode) {
-        t.parent = x;
+}
+function rotateRight(tree, x) {
+    var y;
+    y = x.left;
+    x.left = y.right;
+    if (y.right !== tree.nullNode) {
+        y.right.parent = x;
     }
-    if (x === tree.root) {
+    y.parent = x.parent;
+    if (x.parent === tree.nullNode) {
         tree.root = y;
     } else {
-        if (y.parent.left === x) {
-            y.parent.left = y;
+        if (x === x.parent.right) {
+            x.parent.right = y;
         } else {
-            y.parent.right = y;
+            x.parent.left = y;
         }
     }
-    return y;
-}
-function rotateLeftRight(tree, node) {
-    node.left = rotateLeft(tree, node.left);
-    return rotateRight(tree, node);
-}
-function rotateRight(tree,K) {
-    var L, t;
-    console.log('rotateRight');
-    L = K.left;
-    t = L.right;
-    L.parent = K.parent;
-    L.right = K;
-    K.parent = L;
-    K.left = t;
-    if (t !== tree.nullNode) {
-        t.parent = K;
-    }
-    if (K === tree.root) {
-        tree.root = L;
-    } else {
-        if (L.parent.left === K) {
-            L.parent.left = L;
-        } else {
-            L.parent.right = L;
-        }
-    }
-    return L;
-}
-function rotateRightLeft(tree, node) {
-    node.right = rotateRight(tree, node.right);
-    return rotateLeft(tree, node);
-}
-function rotateRightOld(tree,x) {
-    var t, y;
-    y = x.left;
-    t = y.right;
-    y.parent = x.parent;
     y.right = x;
     x.parent = y;
-    x.left = t;
-    if (t !== tree.nullNode) {
-        t.parent = x;
-    }
-    if (x === tree.root) {
-        tree.root = y;
-    } else {
-        if (y.parent.left === x) {
-            y.parent.left = y;
-        } else {
-            y.parent.right = y;
-        }
-    }
-    return y;
 }
-function transplant(tree, u, v) {
-    if (u.parent === tree.nullNode) {
-        tree.root = v;
-    } else {
-        if (u === u.parent.left) {
-            u.parent.left = v;
+function search(tree, key) {
+    var node;
+    node = tree.root;
+    while (true) {
+        if (node !== tree.nullNode) {
+            if (key === node.key) {
+                return node;
+            }
+            node = key < node.key ? node.left : node.right;
         } else {
-            u.parent.right = v;
+            break;
         }
     }
-    v.parent = u.parent;
+    return tree.nullNode;
 }

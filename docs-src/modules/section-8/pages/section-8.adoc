@@ -1,4 +1,4 @@
-:imagesdir: docs-src/modules/section-8/assets/images
+//:imagesdir: docs-src/modules/section-8/assets/images
 
 [.text-justify]
 :figure-caption!:
@@ -6,6 +6,8 @@
 == SECTION 8. BINARY TREE ALGORITHMS
 
 === 8.1 Representation of binary trees
+:imagesdir: docs-src/modules/section-8/assets/images/part_1
+
 Four types of imbalanced states exist.
 Binary trees as an abstract data type were discussed in the first
 section, here we will talk about the computer implementation of this
@@ -49,6 +51,8 @@ Several types of binary trees are discussed in the training literature, the most
 - Red-Black Tree.
 
 === 8.2 Binary search tree
+
+:imagesdir: docs-src/modules/section-8/assets/images/part_2
 
 ==== 8.2.1 Building a binary tree
 
@@ -184,6 +188,8 @@ image::{imagesdir}/Fig8_12_PreInPost.jpg[width=100%]
 Figure 8.12. Three Classical Tree Traversals: Pre-, In-, Post-Order
 
 === 8.3 Self-balancing binary trees (AVL-trees)
+
+:imagesdir: docs-src/modules/section-8/assets/images/part_3
 
 The efficiency of any tree operation depends substantially on the order in which the input data is received. For example, if an incoming sequence of numbers is partially sorted in ascending or descending order, this structure will no longer look like a tree (Figure 8.13).
 
@@ -339,6 +345,8 @@ Figure 8.28. DRAKON-diagram of the main-function
 
 === 8.4 Red-black trees
 
+:imagesdir: docs-src/modules/section-8/assets/images/part_4
+
 ==== 8.4.1. Properties of red-black trees
 
 A red-black tree is a variant of a self-balancing binary search tree in which the nodes are placed according to a certain rule and coloured red or black (Figure 8.29)
@@ -376,7 +384,7 @@ Property 5 builds on this by enforcing a uniform "black-height" for all paths fr
 Black height is an important term used for red-black trees. This is the number of black nodes on any single path from node x (not including it) to the leaf. Properties 4 and 5 together ensure that the longest path from the root to a leaf (which alternates between red and black nodes) is at most twice as long as the shortest path (comprised solely of black nodes). This constraint guarantees that the tree remains approximately balanced, maintaining a height of O(log n), where n is the number of nodes.
 
 To perform the above operations at the program level, a red-black tree is first created, for which two user types - `node` and `rbTree` are declared:
-Node includes the following fields: `data` - node numeric value,  `colour` - node colour type bool: `red node` - TRUE; `black node` - false, `left`, `right` and `parent` nodes. In turn rbTree structure represents the reference type variable, that store objects containing not the "value" itself but a reference to the memory area where this object is stored (Fig. 8.30).
+Node includes the following fields: `data` - node numeric value,  `color` - node color type bool: `red node` - true; `black node` - false, `left`, `right` and `parent` nodes. In turn `rbTree structure` represents the reference type variable, that store objects containing not the "value" itself but a reference to the memory area where this object is stored (Fig. 8.30).
 
 [cols="a,a", frame=none, grid=none, align=center]
 |===
@@ -389,64 +397,152 @@ Figure 8.30. Drakon-diagram of Node and Tree  Description
 
 Next, consider the node positions in the tree as a result of each new
 node insertion and determine which properties of the red-black tree are
-violated. To understand this process, we introduce the following
-notation: x - new node, P (Parent) - parent of node x, G (Grandparent) -
-ancestor (parent of parent), U (Uncle) - uncle of node x, S - siblings (Figure 8.31).
+violated. For the purpose of analysis, we introduce the following notation 
+for the Red-Black Tree sub-structure (), which we shall subsequently term a  `nodeImages` or "cluster".
+
+All canonical `nodeImages` configurations representing possible red and black node arrangements are summarized in Table 8.3, which shows how each type of violation is detected and corrected to preserve all red-black properties. The following node designations are introduced in Table 8.3:
+
+x – The newly inserted node (red) causing a potential violation.
+
+P – Parent of x.
+
+G – Grandparent of x (parent of P). Always black before fixup.
+
+U – Uncle of x (sibling of P). Can be null (considered black).
+
+Color notation: R – Red, B – Black.
+
+Rotation: Always performed around a node, relinking its children and parent to maintain binary search tree order.
 
 image::{imagesdir}/Fig8_31_family.jpg[width=75%]
 
 [.text-center]
-Figure 8.31. Designation of the degree of "kinship" of RB Tree nodes (x, P, G, U, S)  
+Figure 8.31. Designation of the degree of "kinship" of RB Tree nodes (cluster) (x, P, G, U, S)  
+
+To describe the process of balancing the red-black tree, let’s name the set of nodes involved in the implementation of balancing _tree-cluster_ and enter a local syntax: **:R or :B** is the color of the node. For example, P:R is the red parent.
+*<-  or ->* - the direction of the node position. For example, x<-P - the new node x is located to the left of the parent node P. 
+
+image::{imagesdir}/Fig8_32_describeCluster.png[width=75%, link="{imagesdir}/Fig8_32_describeCluster.svg", window="_blank"]
+
+[.text-center]
+Figure 8.32. DRAKON-diagram of the Function `describeCluster(tree, node)`
 
 ==== 8.4.2. Inserting a new node and the balancing process
 
-In the most general way the red-black tree construction algorithm is presented by the function `Insert(tree, value)`(Figure 8.32):
+In the most general way the red-black tree construction algorithm is presented by the function `rbInsert(tree, key)`(Figure 8.33):
 
 //image::{imagesdir}/Fig8_32_rbInsert.png[width=75%]
-image::{imagesdir}/Fig8_32_rbInsert.png[width=75%, link="{imagesdir}/Fig8_32_rbInsert.svg", window="_blank"]
+image::{imagesdir}/Fig8_33_rbInsert.png[width=75%, link="{imagesdir}/Fig8_33_rbInsert.svg", window="_blank"]
 
 [.text-center]
-Figure 8.32. DRAKON-diagram of the function `Insert(tree, data)`
+Figure 8.33. DRAKON-diagram of the function `rbInsert(tree, data)`
 
-To describe the process of balancing the red-black tree, let’s name the set of nodes involved in the implementation of balancing _tree-cluster_ and enter a local syntax:*:R or :B* is the color of the node. For example, P:R is the red parent.
-*<-  or ->* - the direction of the node position. For example, x <-  P - the new node x is located to the left of the parent node P. 
-The term nodeImage denotes the local configuration of nodes within a tree-cluster, including their colors and relative positions (left or right).
+
 When a new red node is inserted into the red-black tree, it is first connected in the same way as in a regular binary search tree — by comparing the key values and attaching the node as the left or right child.
 However, this simple act of insertion may cause a local violation of one or more red-black properties, most commonly the “no two consecutive red nodes” rule.
 To restore balance, the algorithm analyses the local configuration of nodes — a tree-cluster — formed by the newly added node x, its parent P, grandparent G, and uncle U.
-Each possible configuration (or nodeImage) corresponds to a typical balancing case, which determines the required sequence of operations: recoloring and/or rotation.
-All canonical nodeImage configurations representing possible red and black node arrangements are summarized in Table 8.3, which shows how each type of violation is detected and corrected to preserve all red-black properties.
+Each possible configuration (or `nodeImage`) corresponds to a typical balancing case, which determines the required sequence of operations: recoloring and/or rotation. The Drakon-diagram of tree balancing when inserting a new  node is shown in Figure 34.
+
+image::{imagesdir}/Fig8_34_fixInsert.png[width=75%, link="{imagesdir}/Fig8_34_fixInsert.svg", window="_blank"]
+
+[.text-center]
+Figure 8.34. DRAKON-diagram of the Tree Balancing function `fixInsert(tree, data)`
+
+
 :!table-caption:
 
-.Table 8.3 — NodeImage for Red-Black Tree Insertion Cases
+.Table 8.3 — Red-Black Tree Insertion Balancing Cases
+[%autowidth]
 |===
-| Variant | nodeImage | Violation | Fix strategy
+| Case | Violation (Red-Red Conflict) | Key Condition | Balancing Strategy (Fix) | Result / Notes
 
+| Case A (Red Uncle)
+| Parent (P) and the new node (x) are both red.
+| The uncle (U) of node x is red.
+|
+
+Recolor:
+a. Parent (P) → black.
+b. Uncle (U) → black.
+c. Grandparent (G) → red.
+
+Recurse: Treat the grandparent (G) as the new potential violation point (x) and continue the fix-up procedure upwards.
+| The conflict propagates upward. If G becomes the root and is red, it will be repainted black in the final step of the algorithm.
+
+| Case B1 (LL)
+| Parent (P) and the new node (x) are both red.
+| The uncle (U) is black, and x is the left child of its left child parent (P). (LL configuration)
+|
+
+Recolor: P → black, G → red.
+
+Rotate: Perform a right rotation around the grandparent (G).
+| The violation is resolved locally. The former parent (P) becomes the new root of this subtree.
+
+| Case B2 (RR)
+| Parent (P) and the new node (x) are both red.
+| The uncle (U) is black, and x is the right child of its right child parent (P). (RR configuration)
+|
+
+Recolor: P → black, G → red.
+
+Rotate: Perform a left rotation around the grandparent (G).
+| The violation is resolved locally. The former parent (P) becomes the new root of this subtree.
+
+| Case B3 (LR)
+| Parent (P) and the new node (x) are both red.
+| The uncle (U) is black. x is the right child of its left child parent (P). (LR configuration)
+|
+
+First Rotation: Perform a left rotation around the parent (P). This transforms the configuration into LL (Case B1).
+
+Second Rotation & Recolor: Now, with x and G in an LL relationship relative to the new subtree root, apply the Case B1 fix:
+a. Recolor the new local root (x) → black, G → red.
+b. Perform a right rotation around the grandparent (G).
+| The double rotation restructures the tree to balance it. The new node (x) becomes the root of this subtree.
+
+| Case B4 (RL)
+| Parent (P) and the new node (x) are both red.
+| The uncle (U) is black. x is the left child of its right child parent (P). (RL configuration)
+|
+
+First Rotation: Perform a right rotation around the parent (P). This transforms the configuration into RR (Case B2).
+
+Second Rotation & Recolor: Now, with x and G in an RR relationship relative to the new subtree root, apply the Case B2 fix:
+a. Recolor the new local root (x) → black, G → red.
+b. Perform a left rotation around the grandparent (G).
+| The double rotation restructures the tree to balance it. The new node (x) becomes the root of this subtree.
+|===
+
+
+.Table 8.4 — Mapping of CLRS Cases to Video Variants
+|===
+| CLRS Case | Table Variant | Video Code | Meaning
+
+| Case 1
 | Red Uncle
-| x:R,x<-P; P:R,P<-G; G:B; U:R 
-| Both x and P are red; G has two red children (P and U).
-| Recolor P and U to black (P:B, U:B), G to red (G:R); set x = G (propagate upward). Note: After this operation, the violation (two consecutive red nodes) may propagate up two levels. The algorithm must continue by     |treating G as the new current node x (i.e., it performs a recursive ascent). If G is the root, it will remain red after recoloring, and the algorithm will ultimately repaint the root to black in its final step.
+| A
+| Recolor
 
-| Black Uncle Case 1 (L–L)
-| x:R,x<-P; P:R,P<-G; G:B; U:B
-| x and P are both red and lie on left-left; uncle is black.
-| Recolor P to black (P:B) and G to red (G:R); Right-rotate about (G).
+| Case 2
+| LR
+| B3
+| Inner rotation
 
-| Black Uncle Case 2 (R–R)
-| x:R,x->P; P:R,P->G; G:B; U:B
-| x and P are both red and lie on right-right; uncle is black.
-| Recolor P to black (P:B) and G to red (G:R); Left-rotate about (G).
+| Case 2
+| RL
+| B4
+| Inner rotation
 
-| Black Uncle Case 3 (L–R)
-| x:R,x->P; P:R,P<- G; G:B; U:B
-| both x and P are red; x is right child of P, P is left child of G; uncle is black; 
-| Left-rotate about (P), then treat as (L–L).
+| Case 3
+| LL
+| B1
+| Outer rotation
 
-| Black Uncle Case 4 (R–L)
-| x:R,x<-P; P:R,P->G; G:B; U:B
-| x is left child of P, P is right child of G; both x and P are red; uncle is black; 
-| Right-rotate about (P), then treat as (R–R).
-| 
+| Case 3
+| RR
+| B2
+| Outer rotation
 |===
 
 
@@ -493,7 +589,9 @@ This example demonstrates how local rotations and recoloring maintain global bal
 
 ==== 8.4.3. Deleting a Node from a red-black tree
 
-Removing a node from a red-black tree is a complex process because it depends on the location of the node, the presence of children, and the colour of the nodes involved. However, in several common cases, no rebalancing is required at all.
+!!!!!!! https://www.youtube.com/watch?v=OAkmHIR9YkY&t=1421s !!!!!!!!
+
+Removing a node from a red-black tree is a complex process because it depends on the location of the node, the presence of children, and the color of the nodes involved. However, in several common cases, no rebalancing is required at all.
 
 The deletion process in a Red-Black Tree (RBT) consists of the following steps, with special attention paid to maintaining the tree's balancing properties:
 
@@ -502,15 +600,17 @@ The deletion process in a Red-Black Tree (RBT) consists of the following steps, 
 2. `Deletion and Replacement:`
 If the node (x) has zero or one child, the deletion is straightforward: remove x and  replace it with its non-NIL child, or with a NIL node if it has no children. If node (x) has two children, its value is replaced by its inorder successor (the minimum node in its right subtree) or its inorder predecessor (the maximum node in its left subtree). The deletion operation is then performed on the successor/predecessor node, which is guaranteed to have at most one child. This replacement process is critical for maintaining the BST property.
 
-3. `Color of the Node to be Removed:` 
-The complexity of the balancing operation depends entirely on the color of the node that is actually removed (the node that takes the final position of x, which might be the successor/predecessor). 
-
+3. Color of the Node to be Removed::
+The complexity of the balancing operation depends entirely on the color of the node that is actually removed (the node that takes the final position of x, which might be the successor/predecessor).
+ 
 [loweralpha]
-     a. Deleting a Red Node: This is the simplest case. A red node does not contribute to the black height of any path. Simply removing it does not violate any RBT properties, and the tree remains balanced. 
+.. Deleting a Red Node::
+This is the simplest case. A red node does not contribute to the black height of any path. Simply removing it does not violate any RBT properties, and the tree remains balanced.
+ 
+.. Deleting a Black Node::
+This is the more complex case. Removing a black node violates the RBT property that requires all paths from the root to the leaf nodes to contain the same number of black nodes (the black height). Restoring this balance requires an iterative rebalancing process.
 
-[loweralpha]
-     b. Deleting a Black Node: This is the more complex case. Removing a black node violates the RBT property that requires all paths from the root to the leaf nodes to contain the same number of black nodes (the black height). Restoring this balance requires an iterative rebalancing process.
-
+[arabic, start=4]
 4. `Application of Corrective Adjustments`: After a black node is deleted, a rebalancing procedure is initiated to restore the RBT properties. This process involves a series of recoloring and rotations. The "Double Black" Concept: The node that replaces the deleted black node is temporarily marked as "Double Black" (DB). This is a conceptual designation indicating a structural violation: that the path through this node has lost one black node. Corrective Cases (Fix-Up): The core of the rebalancing algorithm involves applying various fix-up cases based on the color and position of the sibling (or brother) of the (DB) node. These cases dictate whether to perform recoloring, a rotation (single or double), or a combination of both to propagate the (DB) violation up the tree until the root or a suitable correction is achieved.
 
 *Simple Cases Where No Rebalancing is Needed*
@@ -767,9 +867,9 @@ image::{imagesdir}/Fig8_41b_fixDoubleBlackStep.png[width=100%, link="{imagesdir}
 Figure 8.41. Drakon-diagram of the node structure correction algorithm when removing "double black node"
 
 If the replacement node is a leaf node (i.e., has no child nodes), we
-replace the node with a "zero" leaf node and colour it black. If the
+replace the node with a "zero" leaf node and color it black. If the
 replacement node has one child node, we replace the node with its child
-node and colour it black. If the replacement node has two child nodes, we
+node and color it black. If the replacement node has two child nodes, we
 replace the node with its subsequent node in order, and then delete the
 next node in order (which is no more than a node with one child node)
 using the method described above.
@@ -826,7 +926,7 @@ combinations are possible:
 this case, the brother (s) is the left descendant of the parent (P), and
 the left child of the brother is coloured red. This is the so-called
 "left-left _configuration"_, in which the balance is achieved by the
-right rotation, after which the colour of the child should be replaced by
+right rotation, after which the color of the child should be replaced by
 black (Fig. 8.41).
 
 image:media/image44.jpg[media/image44,width=427,height=165]
@@ -858,7 +958,7 @@ Figure 8.43. Left-Right node delete configuration
 Option 2(d): The brother (s) of the remote node (y) is coloured black.
 The brother (s) is the right child of his parent (P) and his left child
 is the red child. A right-left rotation is then performed, followed by a
-left-hand rotation. The colour of the child node changes to black (Fig.
+left-hand rotation. The color of the child node changes to black (Fig.
 8.44).image:media/image47.jpg[media/image47,width=670,height=121] Figure
 8.44. Right-Left node delete configuration
 

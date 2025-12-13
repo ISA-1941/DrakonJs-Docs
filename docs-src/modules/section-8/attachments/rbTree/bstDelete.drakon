@@ -1,0 +1,198 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "Branch1"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "nullNode = tree.nullNode"
+        },
+        "4": {
+            "type": "action",
+            "one": "5",
+            "content": "console.log(\n    `bstDelete: starting for node ${node.key}`\n)"
+        },
+        "5": {
+            "type": "question",
+            "one": "6",
+            "two": "7",
+            "flag1": 1,
+            "content": "!node || node === nullNode || node === undefined"
+        },
+        "6": {
+            "type": "action",
+            "one": "7",
+            "content": "console.log(\n    \"bstDelete: invalid node, returning nullNode\"\n);\nreturn nullNode"
+        },
+        "7": {
+            "type": "action",
+            "one": "9",
+            "content": "y = node\n// node to delete\n// x - node that will take y's place"
+        },
+        "8": {
+            "type": "action",
+            "one": "10",
+            "content": "console.log(message)"
+        },
+        "9": {
+            "type": "action",
+            "one": "8",
+            "content": "mes1 = `bstDelete: node ${ node.key }`\nmes2 = ` has left: ${ node.left.key }, right: ${ node.right.key }`\nmessage = mes1 + mes2"
+        },
+        "10": {
+            "type": "question",
+            "one": "11",
+            "two": "13",
+            "flag1": 1,
+            "content": "node.left === nullNode || node.right ===\nnullNode"
+        },
+        "11": {
+            "type": "action",
+            "one": "20",
+            "content": "y = node\nconsole.log(\n    `bstDelete: y set to original node ${y.key}`\n)"
+        },
+        "13": {
+            "type": "action",
+            "one": "14",
+            "content": "message = `bstDelete: both children exist, finding min in right subtree`\nconsole.log(message)\ny = findMin(tree, node.right)"
+        },
+        "14": {
+            "type": "question",
+            "one": "15",
+            "two": "18",
+            "flag1": 1,
+            "content": "!y || y === nullNode || y === undefined"
+        },
+        "15": {
+            "type": "action",
+            "one": "18",
+            "content": "console.log(\n    \"bstDelete: findMin returned invalid, using original node\"\n);\ny = node;"
+        },
+        "18": {
+            "type": "action",
+            "one": "20",
+            "content": "console.log(\n    `bstDelete: y set to ${y.key}`\n)"
+        },
+        "19": {
+            "type": "branch",
+            "one": "35",
+            "branchId": 3,
+            "content": "1. If y is not the original node, copy data\n2. Return node for fixing (if y was black, fixing is required)"
+        },
+        "20": {
+            "type": "branch",
+            "one": "22",
+            "branchId": 2,
+            "content": "Determine x - y's child"
+        },
+        "22": {
+            "type": "question",
+            "one": "23",
+            "two": "24",
+            "flag1": 1,
+            "content": "y.left !== nullNode"
+        },
+        "23": {
+            "type": "action",
+            "one": "25",
+            "content": "x = y.left;\nconsole.log(\n    `bstDelete: x set to y.left: ${x.key}`\n)"
+        },
+        "24": {
+            "type": "action",
+            "one": "25",
+            "content": "x = y.right;\nconsole.log(\n    `bstDelete: x set to y.right: ${x ? x.key : 'null'}`\n)"
+        },
+        "25": {
+            "type": "question",
+            "one": "26",
+            "two": "27",
+            "flag1": 1,
+            "content": "x"
+        },
+        "26": {
+            "type": "action",
+            "one": "28",
+            "content": "x.parent = y.parent;\nconsole.log(\n    `bstDelete: set x.parent to ${y.parent.key}`\n)"
+        },
+        "27": {
+            "type": "action",
+            "one": "28",
+            "content": "console.log(\n    \"bstDelete: x is null, skipping parent assignment\"\n)"
+        },
+        "28": {
+            "type": "question",
+            "one": "29",
+            "two": "30",
+            "flag1": 1,
+            "content": "y.parent === nullNode"
+        },
+        "29": {
+            "type": "action",
+            "one": "19",
+            "content": "tree.root = x || nullNode;\nconsole.log(\n    `bstDelete: set tree.root to ${x ? x.key : 'null'}`\n)"
+        },
+        "30": {
+            "type": "question",
+            "one": "31",
+            "two": "32",
+            "flag1": 1,
+            "content": "y === y.parent.left"
+        },
+        "31": {
+            "type": "action",
+            "one": "19",
+            "content": "y.parent.left = x || nullNode;\nconsole.log(\n    `bstDelete: set y.parent.left to ${x ? x.key : 'null'}`\n)"
+        },
+        "32": {
+            "type": "action",
+            "one": "19",
+            "content": "y.parent.right = x || nullNode;\nconsole.log(\n    `bstDelete: set y.parent.right to ${x ? x.key : 'null'}`\n)"
+        },
+        "33": {
+            "type": "question",
+            "one": "34",
+            "two": "37",
+            "flag1": 1,
+            "content": "y.color === \"B\""
+        },
+        "34": {
+            "type": "action",
+            "one": "37",
+            "content": "console.log(\n    `bstDelete: y is black, returning x for fixing: ${x ? x.key : 'null'}`\n);\nreturn x || nullNode"
+        },
+        "35": {
+            "type": "question",
+            "one": "36",
+            "two": "33",
+            "flag1": 1,
+            "content": "y !== node"
+        },
+        "36": {
+            "type": "action",
+            "one": "33",
+            "content": "console.log(\n    `bstDelete: copying key from ${y.key} to ${node.key}`\n);\nnode.key = y.key;"
+        },
+        "37": {
+            "type": "action",
+            "one": "1",
+            "content": "console.log(\n    \"bstDelete: y is red, no fix needed, returning nullNode\"\n);\nreturn nullNode;"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "tree, node"
+}

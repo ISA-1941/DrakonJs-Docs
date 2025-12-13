@@ -8,74 +8,90 @@
             "type": "branch",
             "branchId": 1,
             "one": "3",
-            "content": "Red Black Tree building"
+            "content": "Branch1"
         },
         "3": {
             "type": "action",
-            "one": "4",
-            "content": "tree = createTree()"
-        },
-        "4": {
-            "type": "action",
-            "one": "6",
-            "content": "values = [21, 17, 15, 13, 11, 9, 7, 5, 3]"
+            "one": "24",
+            "content": "tree = makeRBTree()"
         },
         "5": {
             "type": "loopend",
-            "one": "14",
+            "one": "9",
+            "two": "",
             "content": ""
         },
         "6": {
             "type": "loopbegin",
             "one": "7",
+            "two": "",
             "content": "val; values"
         },
         "7": {
             "type": "action",
             "one": "5",
-            "content": "Insert(tree, val)"
+            "two": "",
+            "content": "rbInsert(tree, val)"
         },
-        "13": {
+        "8": {
             "type": "branch",
             "one": "1",
             "branchId": 3,
             "content": "Exit"
         },
-        "14": {
+        "9": {
             "type": "branch",
-            "one": "15",
+            "one": "11",
             "branchId": 2,
-            "content": "Red-Black Tree Traversal"
+            "content": "Branch2"
+        },
+        "11": {
+            "type": "action",
+            "one": "13",
+            "content": "console.log(\n    \"\\nTree after inserts !!!:\\n\"\n)\n//console.log(\"tree.root = \", tree.root)\nprintTree(tree, tree.root);"
+        },
+        "12": {
+            "type": "soutput",
+            "one": "8",
+            "content": "return tree"
+        },
+        "13": {
+            "type": "action",
+            "one": "14",
+            "content": "deleteNode(tree, 80)"
+        },
+        "14": {
+            "type": "action",
+            "one": "15",
+            "content": "console.log(\n    '\\nTree after delete node  (FIXED):\\n'\n)"
         },
         "15": {
             "type": "action",
-            "one": "16",
-            "two": "",
-            "content": "console.log(\"Red-Black Tree:\")"
+            "one": "12",
+            "content": "printTree(tree, tree.root)"
         },
-        "16": {
-            "type": "action",
-            "one": "17",
+        "20": {
+            "type": "loopend",
+            "one": "6",
             "two": "",
-            "content": "printTreeNode(tree, tree.root, \"\", false)"
+            "content": ""
         },
-        "17": {
-            "type": "action",
-            "one": "19",
+        "21": {
+            "type": "loopbegin",
+            "one": "22",
             "two": "",
-            "content": "deleteNodeAI(tree, tree.root, 9)"
+            "content": "i = 0; i < 15; i++"
         },
-        "18": {
+        "22": {
             "type": "action",
-            "one": "13",
+            "one": "20",
             "two": "",
-            "content": "printTreeNode(tree, tree.root, \"\", false)"
+            "content": "values.push(\n    Math.floor(Math.random() * 40) + 11\n)"
         },
-        "19": {
+        "24": {
             "type": "action",
-            "one": "18",
-            "two": "",
-            "content": "console.log(\"After deleting \")"
+            "one": "21",
+            "content": "values = []"
         }
     }
 }

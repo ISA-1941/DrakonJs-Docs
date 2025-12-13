@@ -1,0 +1,116 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "Branch1"
+        },
+        "3": {
+            "type": "action",
+            "one": "8",
+            "content": "caseType = caseInfoAfter.caseType;\nclusterInfo = caseInfoAfter.clusterInfo;\ndescription = caseInfoAfter.description;\nnodes = clusterInfo.nodes;"
+        },
+        "8": {
+            "type": "action",
+            "one": "10",
+            "content": "console.log(\n    `Executing fix for: ${caseType}`\n)"
+        },
+        "9": {
+            "type": "branch",
+            "one": "1",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "10": {
+            "type": "branch",
+            "one": "14",
+            "branchId": 2,
+            "content": "Switch"
+        },
+        "11": {
+            "type": "case",
+            "one": "21",
+            "content": "\"RED_SIBLING\"",
+            "two": "15"
+        },
+        "12": {
+            "type": "case",
+            "one": "20",
+            "two": "11",
+            "content": "\"RED_NODE\""
+        },
+        "13": {
+            "type": "case",
+            "one": "19",
+            "two": "12",
+            "content": "\"ROOT_CASE\""
+        },
+        "14": {
+            "type": "select",
+            "one": "13",
+            "content": "caseType"
+        },
+        "15": {
+            "one": "22",
+            "type": "case",
+            "two": "16",
+            "content": "\"BLACK_SIBLING_CHILDREN\""
+        },
+        "16": {
+            "one": "23",
+            "type": "case",
+            "two": "17",
+            "content": "\"COMPLEX_ROTATION\""
+        },
+        "17": {
+            "one": "18",
+            "type": "case",
+            "two": null,
+            "content": ""
+        },
+        "18": {
+            "type": "action",
+            "one": "9",
+            "content": "console.log(`Unknown case: ${caseType}`)"
+        },
+        "19": {
+            "type": "action",
+            "one": "9",
+            "content": "nodes.x.color = \"B\""
+        },
+        "20": {
+            "type": "action",
+            "one": "9",
+            "content": "nodes.x.color = \"B\""
+        },
+        "21": {
+            "type": "action",
+            "one": "9",
+            "content": "handleRedSiblingCase(tree, clusterInfo)"
+        },
+        "22": {
+            "type": "action",
+            "one": "9",
+            "content": "handleBlackSiblingChildrenCase(\n    tree,\n    clusterInfo\n)"
+        },
+        "23": {
+            "type": "action",
+            "one": "9",
+            "content": "handleComplexRotationCase(\n    tree,\n    clusterInfo\n)"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "tree, caseInfoAfter"
+}
