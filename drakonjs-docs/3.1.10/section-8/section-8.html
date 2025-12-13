@@ -1033,95 +1033,51 @@ b. Perform a left rotation around the grandparent (G).</p></td>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="case1"><a class="anchor" href="#case1"></a>Case 1 — Red Uncle (Recolor)</h3>
-<div class="sidebarblock text-center">
-<div class="content">
-<div class="title">Video — Case 1</div>
-<div class="videoblock">
-<div class="content">
-<video src="_images/video/case1.mp4" width="640" height="controls" poster="_images/video/posters/poster1.png" controls>
-Your browser does not support the video tag.
-</video>
+<div id="case-videos">
+  <video id="case1-video" width="640" height="360" controls style="display:none">
+    <source src="../attachments/case1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video id="case2-video" width="640" height="360" controls style="display:none">
+    <source src="../attachments/case2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video id="case3-video" width="640" height="360" controls style="display:none">
+    <source src="../attachments/case3.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video id="case4-video" width="640" height="360" controls style="display:none">
+    <source src="../attachments/case4.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video id="case5-video" width="640" height="360" controls style="display:none">
+    <source src="../attachments/case5.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 </div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Figure 1 — Insertion of a new node: Case 1 — Red Uncle. Node recoloring demonstration.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="case2"><a class="anchor" href="#case2"></a>Case 2 — Left-Right Rotation (Inner)</h3>
-<div class="sidebarblock text-center">
-<div class="content">
-<div class="title">Video — Case 2</div>
-<div class="videoblock">
-<div class="content">
-<video src="_images/video/case2.mp4" width="640" height="controls" poster="_images/video/posters/poster2.png" controls>
-Your browser does not support the video tag.
-</video>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Figure 2 — Insertion of a new node: Case 2 — Left-Right B3:(LR) Inner Rotation.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="case3"><a class="anchor" href="#case3"></a>Case 3 — Right-Left Rotation (Inner)</h3>
-<div class="sidebarblock text-center">
-<div class="content">
-<div class="title">Video — Case 3</div>
-<div class="videoblock">
-<div class="content">
-<video src="_images/video/case3.mp4" width="640" height="controls" poster="_images/video/posters/poster3.png" controls>
-Your browser does not support the video tag.
-</video>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Figure 3 — Insertion of a new node: Case 3 — Right-Left B4:(RL) Inner Rotation.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="case4"><a class="anchor" href="#case4"></a>Case 4 — Left-Left Rotation (Outer)</h3>
-<div class="sidebarblock text-center">
-<div class="content">
-<div class="title">Video — Case 4</div>
-<div class="videoblock">
-<div class="content">
-<video src="_images/video/case4.mp4" width="640" height="controls" poster="_images/video/posters/poster4.png" controls>
-Your browser does not support the video tag.
-</video>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Figure 4 — Insertion of a new node: Case 4 — Left-Left B1:(LL) Outer Rotation.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="case5"><a class="anchor" href="#case5"></a>Case 5 — Right-Right Rotation (Outer)</h3>
-<div class="sidebarblock text-center">
-<div class="content">
-<div class="title">Video — Case 5</div>
-<div class="videoblock">
-<div class="content">
-<video src="_images/video/case5.mp4" width="640" height="controls" poster="_images/video/posters/poster5.png" controls>
-Your browser does not support the video tag.
-</video>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Figure 5 — Insertion of a new node: Case 5 — Right-Right B2:(RR) Outer Rotation.</p>
-</div>
+
+<script>
+document.querySelectorAll('.case-buttons li a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const caseId = link.getAttribute('href').substring(2); // убираем <<
+
+    // Скрыть все видео
+    document.querySelectorAll('#case-videos video').forEach(v => {
+      v.pause();
+      v.style.display = 'none';
+    });
+
+    // Показать выбранное видео
+    const video = document.getElementById(`${caseId}-video`);
+    if(video) video.style.display = 'block';
+  });
+});
+</script>
 <div class="sect3">
 <h4 id="_8_4_3_deleting_a_node_from_a_red_black_tree"><a class="anchor" href="#_8_4_3_deleting_a_node_from_a_red_black_tree"></a>8.4.3. Deleting a Node from a red-black tree</h4>
 <div class="paragraph">
@@ -1849,7 +1805,6 @@ tool for any programmer.</p>
 </tr>
 </tbody>
 </table>
-</div>
 </div>
 </div>
 </div>
