@@ -738,7 +738,7 @@ tree can disrupt the red-black tree properties, and restoring balance is achieve
 </div>
 <div class="paragraph">
 <p>To perform the above operations at the program level, a red-black tree is first created, for which two user types - <code>node</code> and <code>rbTree</code> are declared:
-Node includes the following fields: <code>data</code> - node numeric value,  <code>colour</code> - node colour type bool: <code>red node</code> - TRUE; <code>black node</code> - false, <code>left</code>, <code>right</code> and <code>parent</code> nodes. In turn rbTree structure represents the reference type variable, that store objects containing not the "value" itself but a reference to the memory area where this object is stored (Fig. 8.30).</p>
+Node includes the following fields: <code>data</code> - node numeric value,  <code>color</code> - node color type bool: <code>red node</code> - true; <code>black node</code> - false, <code>left</code>, <code>right</code> and <code>parent</code> nodes. In turn <code>rbTree structure</code> represents the reference type variable, that store objects containing not the "value" itself but a reference to the memory area where this object is stored (Fig. 8.30).</p>
 </div>
 <table class="tableblock frame-none grid-none stretch">
 <colgroup>
@@ -766,9 +766,29 @@ Node includes the following fields: <code>data</code> - node numeric value,  <co
 <div class="paragraph">
 <p>Next, consider the node positions in the tree as a result of each new
 node insertion and determine which properties of the red-black tree are
-violated. To understand this process, we introduce the following
-notation: x - new node, P (Parent) - parent of node x, G (Grandparent) -
-ancestor (parent of parent), U (Uncle) - uncle of node x, S - siblings (Figure 8.31).</p>
+violated. For the purpose of analysis, we introduce the following notation
+for the Red-Black Tree sub-structure (), which we shall subsequently term a  <code>nodeImages</code> or "cluster".</p>
+</div>
+<div class="paragraph">
+<p>All canonical <code>nodeImages</code> configurations representing possible red and black node arrangements are summarized in Table 8.3, which shows how each type of violation is detected and corrected to preserve all red-black properties. The following node designations are introduced in Table 8.3:</p>
+</div>
+<div class="paragraph">
+<p>x – The newly inserted node (red) causing a potential violation.</p>
+</div>
+<div class="paragraph">
+<p>P – Parent of x.</p>
+</div>
+<div class="paragraph">
+<p>G – Grandparent of x (parent of P). Always black before fixup.</p>
+</div>
+<div class="paragraph">
+<p>U – Uncle of x (sibling of P). Can be null (considered black).</p>
+</div>
+<div class="paragraph">
+<p>Color notation: R – Red, B – Black.</p>
+</div>
+<div class="paragraph">
+<p>Rotation: Always performed around a node, relinking its children and parent to maintain binary search tree order.</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
@@ -776,35 +796,118 @@ ancestor (parent of parent), U (Uncle) - uncle of node x, S - siblings (Figure 8
 </div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 8.31. Designation of the degree of "kinship" of RB Tree nodes (x, P, G, U, S)</p>
+<p>Figure 8.31. Designation of the degree of "kinship" of RB Tree nodes (cluster) (x, P, G, U, S)</p>
+</div>
+<div class="paragraph">
+<p>To describe the process of balancing the red-black tree, let’s name the set of nodes involved in the implementation of balancing <em>tree-cluster</em> and enter a local syntax: <strong>:R or :B</strong> is the color of the node. For example, P:R is the red parent.
+<strong>&#8592;  or &#8594;</strong> - the direction of the node position. For example, x&#8592;P - the new node x is located to the left of the parent node P.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<a class="image" href="_images/Fig8_32_describeCluster.svg" target="_blank" rel="noopener"><img src="_images/Fig8_32_describeCluster.png" alt="Fig8 32 describeCluster" width="75%"></a>
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.32. DRAKON-diagram of the Function <code>describeCluster(tree, node)</code></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_8_4_2_inserting_a_new_node_and_the_balancing_process"><a class="anchor" href="#_8_4_2_inserting_a_new_node_and_the_balancing_process"></a>8.4.2. Inserting a new node and the balancing process</h4>
 <div class="paragraph">
-<p>In the most general way the red-black tree construction algorithm is presented by the function <code>Insert(tree, value)</code>(Figure 8.32):</p>
+<p>In the most general way the red-black tree construction algorithm is presented by the function <code>rbInsert(tree, key)</code>(Figure 8.33):</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/Fig8_32_rbInsert.svg" target="_blank" rel="noopener"><img src="_images/Fig8_32_rbInsert.png" alt="Fig8 32 rbInsert" width="75%"></a>
+<a class="image" href="_images/Fig8_33_rbInsert.svg" target="_blank" rel="noopener"><img src="_images/Fig8_33_rbInsert.png" alt="Fig8 33 rbInsert" width="75%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 8.32. DRAKON-diagram of the function <code>Insert(tree, data)</code></p>
+<p>Figure 8.33. DRAKON-diagram of the function <code>rbInsert(tree, data)</code></p>
 </div>
 <div class="paragraph">
-<p>To describe the process of balancing the red-black tree, let’s name the set of nodes involved in the implementation of balancing <em>tree-cluster</em> and enter a local syntax:*:R or :B* is the color of the node. For example, P:R is the red parent.
-<strong>&#8592;  or &#8594;</strong> - the direction of the node position. For example, x &#8592;  P - the new node x is located to the left of the parent node P.
-The term nodeImage denotes the local configuration of nodes within a tree-cluster, including their colors and relative positions (left or right).
-When a new red node is inserted into the red-black tree, it is first connected in the same way as in a regular binary search tree — by comparing the key values and attaching the node as the left or right child.
+<p>When a new red node is inserted into the red-black tree, it is first connected in the same way as in a regular binary search tree — by comparing the key values and attaching the node as the left or right child.
 However, this simple act of insertion may cause a local violation of one or more red-black properties, most commonly the “no two consecutive red nodes” rule.
 To restore balance, the algorithm analyses the local configuration of nodes — a tree-cluster — formed by the newly added node x, its parent P, grandparent G, and uncle U.
-Each possible configuration (or nodeImage) corresponds to a typical balancing case, which determines the required sequence of operations: recoloring and/or rotation.
-All canonical nodeImage configurations representing possible red and black node arrangements are summarized in Table 8.3, which shows how each type of violation is detected and corrected to preserve all red-black properties.
-:!table-caption:</p>
+Each possible configuration (or <code>nodeImage</code>) corresponds to a typical balancing case, which determines the required sequence of operations: recoloring and/or rotation. The Drakon-diagram of tree balancing when inserting a new  node is shown in Figure 34.</p>
 </div>
+<div class="imageblock unresolved">
+<div class="content">
+<a class="image" href="_images/Fig8_34_fixInsert.svg" target="_blank" rel="noopener"><img src="_images/Fig8_34_fixInsert.png" alt="Fig8 34 fixInsert" width="75%"></a>
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 8.34. DRAKON-diagram of the Tree Balancing function <code>fixInsert(tree, data)</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Table 8.3 — Red-Black Tree Insertion Balancing Cases</caption>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Case</th>
+<th class="tableblock halign-left valign-top">Violation (Red-Red Conflict)</th>
+<th class="tableblock halign-left valign-top">Key Condition</th>
+<th class="tableblock halign-left valign-top">Balancing Strategy (Fix)</th>
+<th class="tableblock halign-left valign-top">Result / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Case A (Red Uncle)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parent (P) and the new node (x) are both red.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The uncle (U) of node x is red.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor:
+a. Parent (P) → black.
+b. Uncle (U) → black.
+c. Grandparent (G) → red.</p>
+<p class="tableblock">Recurse: Treat the grandparent (G) as the new potential violation point (x) and continue the fix-up procedure upwards.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The conflict propagates upward. If G becomes the root and is red, it will be repainted black in the final step of the algorithm.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Case B1 (LL)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parent (P) and the new node (x) are both red.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The uncle (U) is black, and x is the left child of its left child parent (P). (LL configuration)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor: P → black, G → red.</p>
+<p class="tableblock">Rotate: Perform a right rotation around the grandparent (G).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The violation is resolved locally. The former parent (P) becomes the new root of this subtree.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Case B2 (RR)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parent (P) and the new node (x) are both red.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The uncle (U) is black, and x is the right child of its right child parent (P). (RR configuration)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor: P → black, G → red.</p>
+<p class="tableblock">Rotate: Perform a left rotation around the grandparent (G).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The violation is resolved locally. The former parent (P) becomes the new root of this subtree.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Case B3 (LR)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parent (P) and the new node (x) are both red.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The uncle (U) is black. x is the right child of its left child parent (P). (LR configuration)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">First Rotation: Perform a left rotation around the parent (P). This transforms the configuration into LL (Case B1).</p>
+<p class="tableblock">Second Rotation &amp; Recolor: Now, with x and G in an LL relationship relative to the new subtree root, apply the Case B1 fix:
+a. Recolor the new local root (x) → black, G → red.
+b. Perform a right rotation around the grandparent (G).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The double rotation restructures the tree to balance it. The new node (x) becomes the root of this subtree.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Case B4 (RL)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parent (P) and the new node (x) are both red.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The uncle (U) is black. x is the left child of its right child parent (P). (RL configuration)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">First Rotation: Perform a right rotation around the parent (P). This transforms the configuration into RR (Case B2).</p>
+<p class="tableblock">Second Rotation &amp; Recolor: Now, with x and G in an RR relationship relative to the new subtree root, apply the Case B2 fix:
+a. Recolor the new local root (x) → black, G → red.
+b. Perform a left rotation around the grandparent (G).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The double rotation restructures the tree to balance it. The new node (x) becomes the root of this subtree.</p></td>
+</tr>
+</tbody>
+</table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Table 8.3 — NodeImage for Red-Black Tree Insertion Cases</caption>
+<caption class="title">Table 8.4 — Mapping of CLRS Cases to Video Variants</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -813,42 +916,42 @@ All canonical nodeImage configurations representing possible red and black node 
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Variant</th>
-<th class="tableblock halign-left valign-top">nodeImage</th>
-<th class="tableblock halign-left valign-top">Violation</th>
-<th class="tableblock halign-left valign-top">Fix strategy</th>
+<th class="tableblock halign-left valign-top">CLRS Case</th>
+<th class="tableblock halign-left valign-top">Table Variant</th>
+<th class="tableblock halign-left valign-top">Video Code</th>
+<th class="tableblock halign-left valign-top">Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Case 1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Red Uncle</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x&#8592;P; P:R,P&#8592;G; G:B; U:R</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Both x and P are red; G has two red children (P and U).</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor P and U to black (P:B, U:B), G to red (G:R); set x = G (propagate upward). Note: After this operation, the violation (two consecutive red nodes) may propagate up two levels. The algorithm must continue by</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">treating G as the new current node x (i.e., it performs a recursive ascent). If G is the root, it will remain red after recoloring, and the algorithm will ultimately repaint the root to black in its final step.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Black Uncle Case 1 (L–L)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x&#8592;P; P:R,P&#8592;G; G:B; U:B</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x and P are both red and lie on left-left; uncle is black.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Case 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inner rotation</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor P to black (P:B) and G to red (G:R); Right-rotate about (G).</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Black Uncle Case 2 (R–R)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x&#8594;P; P:R,P&#8594;G; G:B; U:B</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x and P are both red and lie on right-right; uncle is black.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Case 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inner rotation</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor P to black (P:B) and G to red (G:R); Left-rotate about (G).</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Black Uncle Case 3 (L–R)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x&#8594;P; P:R,P&#8592; G; G:B; U:B</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">both x and P are red; x is right child of P, P is left child of G; uncle is black;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Case 3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Outer rotation</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Left-rotate about (P), then treat as (L–L).</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Black Uncle Case 4 (R–L)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x:R,x&#8592;P; P:R,P&#8594;G; G:B; U:B</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x is left child of P, P is right child of G; both x and P are red; uncle is black;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Case 3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Outer rotation</p></td>
 </tr>
 </tbody>
 </table>
@@ -917,7 +1020,10 @@ tree from sets of integers that are the keys of the input nodes:
 <div class="sect3">
 <h4 id="_8_4_3_deleting_a_node_from_a_red_black_tree"><a class="anchor" href="#_8_4_3_deleting_a_node_from_a_red_black_tree"></a>8.4.3. Deleting a Node from a red-black tree</h4>
 <div class="paragraph">
-<p>Removing a node from a red-black tree is a complex process because it depends on the location of the node, the presence of children, and the colour of the nodes involved. However, in several common cases, no rebalancing is required at all.</p>
+<p>!!!!!!! <a href="https://www.youtube.com/watch?v=OAkmHIR9YkY&amp;t=1421s" class="bare">https://www.youtube.com/watch?v=OAkmHIR9YkY&amp;t=1421s</a> !!!!!!!!</p>
+</div>
+<div class="paragraph">
+<p>Removing a node from a red-black tree is a complex process because it depends on the location of the node, the presence of children, and the color of the nodes involved. However, in several common cases, no rebalancing is required at all.</p>
 </div>
 <div class="paragraph">
 <p>The deletion process in a Red-Black Tree (RBT) consists of the following steps, with special attention paid to maintaining the tree&#8217;s balancing properties:</p>
@@ -932,7 +1038,7 @@ tree from sets of integers that are the keys of the input nodes:
 If the node (x) has zero or one child, the deletion is straightforward: remove x and  replace it with its non-NIL child, or with a NIL node if it has no children. If node (x) has two children, its value is replaced by its inorder successor (the minimum node in its right subtree) or its inorder predecessor (the maximum node in its left subtree). The deletion operation is then performed on the successor/predecessor node, which is guaranteed to have at most one child. This replacement process is critical for maintaining the BST property.</p>
 </li>
 <li>
-<p><code>Color of the Node to be Removed:</code>
+<p>Color of the Node to be Removed::
 The complexity of the balancing operation depends entirely on the color of the node that is actually removed (the node that takes the final position of x, which might be the successor/predecessor).</p>
 </li>
 </ol>
@@ -940,21 +1046,19 @@ The complexity of the balancing operation depends entirely on the color of the n
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Deleting a Red Node: This is the simplest case. A red node does not contribute to the black height of any path. Simply removing it does not violate any RBT properties, and the tree remains balanced.</p>
+<p>Deleting a Red Node::
+This is the simplest case. A red node does not contribute to the black height of any path. Simply removing it does not violate any RBT properties, and the tree remains balanced.</p>
+</li>
+<li>
+<p>Deleting a Black Node::
+This is the more complex case. Removing a black node violates the RBT property that requires all paths from the root to the leaf nodes to contain the same number of black nodes (the black height). Restoring this balance requires an iterative rebalancing process.</p>
 </li>
 </ol>
 </div>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Deleting a Black Node: This is the more complex case. Removing a black node violates the RBT property that requires all paths from the root to the leaf nodes to contain the same number of black nodes (the black height). Restoring this balance requires an iterative rebalancing process.</p>
 <div class="olist arabic">
-<ol class="arabic">
+<ol class="arabic" start="4">
 <li>
 <p><code>Application of Corrective Adjustments</code>: After a black node is deleted, a rebalancing procedure is initiated to restore the RBT properties. This process involves a series of recoloring and rotations. The "Double Black" Concept: The node that replaces the deleted black node is temporarily marked as "Double Black" (DB). This is a conceptual designation indicating a structural violation: that the path through this node has lost one black node. Corrective Cases (Fix-Up): The core of the rebalancing algorithm involves applying various fix-up cases based on the color and position of the sibling (or brother) of the (DB) node. These cases dictate whether to perform recoloring, a rotation (single or double), or a combination of both to propagate the (DB) violation up the tree until the root or a suitable correction is achieved.</p>
-</li>
-</ol>
-</div>
 </li>
 </ol>
 </div>
@@ -1347,9 +1451,9 @@ process is shown in Fig.8.41.</p>
 </div>
 <div class="paragraph">
 <p>If the replacement node is a leaf node (i.e., has no child nodes), we
-replace the node with a "zero" leaf node and colour it black. If the
+replace the node with a "zero" leaf node and color it black. If the
 replacement node has one child node, we replace the node with its child
-node and colour it black. If the replacement node has two child nodes, we
+node and color it black. If the replacement node has two child nodes, we
 replace the node with its subsequent node in order, and then delete the
 next node in order (which is no more than a node with one child node)
 using the method described above.</p>
@@ -1428,7 +1532,7 @@ combinations are possible:</p>
 this case, the brother (s) is the left descendant of the parent (P), and
 the left child of the brother is coloured red. This is the so-called
 "left-left <em>configuration"</em>, in which the balance is achieved by the
-right rotation, after which the colour of the child should be replaced by
+right rotation, after which the color of the child should be replaced by
 black (Fig. 8.41).</p>
 </li>
 </ul>
@@ -1473,7 +1577,7 @@ performed followed by a right rotation. The child node is coloured black
 <p>Option 2(d): The brother (s) of the remote node (y) is coloured black.
 The brother (s) is the right child of his parent (P) and his left child
 is the red child. A right-left rotation is then performed, followed by a
-left-hand rotation. The colour of the child node changes to black (Fig.
+left-hand rotation. The color of the child node changes to black (Fig.
 8.44).<span class="image unresolved"><img src="media/image47.jpg" alt="media/image47" width="670" height="121"></span> Figure
 8.44. Right-Left node delete configuration</p>
 </div>

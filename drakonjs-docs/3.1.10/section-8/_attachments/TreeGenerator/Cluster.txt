@@ -1,0 +1,24 @@
+digraph G {
+    graph [pad="0.5", nodesep="0.5", ranksep="0.75", bgcolor="#ADD8E6"]; // Светло-голубой фон
+    node [shape=circle, style=filled, fontcolor=white, fixedsize=true, width=0.75, penwidth=2, color="darkgreen"]; // Зеленая обводка
+    edge [dir=forward, penwidth=1.5]; // Толщина стрелок
+
+    // Узлы и их цвета
+    N25 [label="25", fillcolor=red];
+    N20 [label="20", fillcolor=black];
+    N30 [label="30", fillcolor=black];
+    N18 [label="18", fillcolor=red];
+    N23 [label="23", fillcolor=red];
+    N32 [label="32", fillcolor=red]; // Узел 32 (красный)
+
+    // Связи
+    N25 -> N20;
+    N25 -> N30;
+    N20 -> N18;
+    N20 -> N23;
+    N30 -> N32; // Связь к узлу 32
+    
+    // Позиционные подсказки
+    {rank=same; N20; N30};
+    {rank=same; N18; N23; N32};
+}

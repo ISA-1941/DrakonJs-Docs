@@ -1,0 +1,69 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "Branch1"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "tree = makeRBTree()"
+        },
+        "4": {
+            "type": "action",
+            "one": "6",
+            "content": "values = [\n    5,\n    10,\n    15,\n    20,\n    25,\n    30,\n    35,\n    40,\n    45,\n    50,\n    55,\n    60,\n    65,\n    70,\n    75,\n    80,\n    85,\n    90,\n    95\n]"
+        },
+        "5": {
+            "type": "loopend",
+            "one": "9",
+            "two": "",
+            "content": ""
+        },
+        "6": {
+            "type": "loopbegin",
+            "one": "7",
+            "two": "",
+            "content": "val; values"
+        },
+        "7": {
+            "type": "action",
+            "one": "5",
+            "two": "",
+            "content": "insert(tree, val)"
+        },
+        "8": {
+            "type": "branch",
+            "one": "1",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "9": {
+            "type": "branch",
+            "one": "11",
+            "branchId": 2,
+            "content": "Branch2"
+        },
+        "10": {
+            "type": "action",
+            "one": "12",
+            "content": "console.log(\n    \"search 55 ->\",\n    search(tree, 55).key\n)"
+        },
+        "11": {
+            "type": "action",
+            "one": "10",
+            "content": "console.log(\"\\nTree after inserts:\\n\");\nprintTree(tree, tree.root);"
+        },
+        "12": {
+            "type": "soutput",
+            "one": "8",
+            "content": "return tree"
+        }
+    }
+}

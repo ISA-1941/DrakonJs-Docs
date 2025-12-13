@@ -32,7 +32,7 @@
             "one": "39",
             "two": "46",
             "flag1": 1,
-            "content": "// sibling.colour === true\n\nsibling.colour === true"
+            "content": "// sibling.colour === red\n\nsibling.colour === true"
         },
         "39": {
             "type": "action",

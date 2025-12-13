@@ -190,7 +190,7 @@ function createTree() {
         nullNode: nullNode
     };
 }
-function deleteNodeAI(tree, node, key) {
+function deleteNode(tree, node, key) {
     var foundNode, node, nullNode, x, y, yColour, z;
     nullNode = tree.nullNode;
     z = nullNode;
@@ -421,15 +421,15 @@ function main() {
     var tree, val, values;
     tree = createTree();
     values = [
-       40,35,30,25,20,15,10,5,
+       46,34,68,18,39,58,82,10,23,43,53,62,76,90,87,94,
     ];
     for (val of values) {
         Insert(tree, val);
     }
     console.log('Red-Black Tree:');
     printTreeNode(tree, tree.root, '', false);
-    deleteNodeAI(tree, tree.root, 5);
-    console.log('After deleting 5');
+    deleteNode(tree, tree.root, 68);
+    console.log('After deleting 68');
     printTreeNode(tree, tree.root, '', false);
 }
 function minimum(tree, node) {
