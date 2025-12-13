@@ -1033,15 +1033,46 @@ b. Perform a left rotation around the grandparent (G).</p></td>
 </div>
 </div>
 </div>
-<video width="640" height="360" controls>
-  <source src="../attachments/case1.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<div id="case-videos">
+  <video id="case1-video" width="640" height="360" controls style="display:none">
+    <source src="../attachments/case1.mp4" type="video/mp4">
+  </video>
 
-<video width="640" height="360" controls>
-  <source src="../attachments/case2.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+  <video id="case2-video" width="640" height="360" controls style="display:none">
+    <source src="../attachments/case2.mp4" type="video/mp4">
+  </video>
+
+  <video id="case3-video" width="640" height="360" controls style="display:none">
+    <source src="../attachments/case3.mp4" type="video/mp4">
+  </video>
+
+  <video id="case4-video" width="640" height="360" controls style="display:none">
+    <source src="../attachments/case4.mp4" type="video/mp4">
+  </video>
+
+  <video id="case5-video" width="640" height="360" controls style="display:none">
+    <source src="../attachments/case5.mp4" type="video/mp4">
+  </video>
+</div>
+
+<script>
+document.querySelectorAll('.case-buttons li a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const caseId = link.getAttribute('href').substring(2); // убираем <<
+
+    // Скрыть все видео
+    document.querySelectorAll('#case-videos video').forEach(v => {
+      v.pause();
+      v.style.display = 'none';
+    });
+
+    // Показать выбранное видео
+    const video = document.getElementById(`${caseId}-video`);
+    if(video) video.style.display = 'block';
+  });
+});
+</script>
 <div class="sect3">
 <h4 id="_8_4_3_deleting_a_node_from_a_red_black_tree"><a class="anchor" href="#_8_4_3_deleting_a_node_from_a_red_black_tree"></a>8.4.3. Deleting a Node from a red-black tree</h4>
 <div class="paragraph">
