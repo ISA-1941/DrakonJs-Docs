@@ -579,7 +579,10 @@ image::{imagesdir}/Fig8_35b_rotateRight.png[width=100%, link="{imagesdir}/Fig8_3
 Figure 8.35. DRAKON-diagrams of node rotation algorithms used in red-black tree clusters.
 
 
-=== Node Insertion Process
+=== Rebalancing After Insertion — Video Examples
+
+[.text-center]
+Case 1 — Recoloring (Red Uncle)
 
 ++++
 <video controls width="640">
