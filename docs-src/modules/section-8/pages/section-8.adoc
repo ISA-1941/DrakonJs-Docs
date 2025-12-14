@@ -578,6 +578,8 @@ image::{imagesdir}/Fig8_35b_rotateRight.png[width=100%, link="{imagesdir}/Fig8_3
 [.text-center]
 Figure 8.35. DRAKON-diagrams of node rotation algorithms used in red-black tree clusters.
 
+
+
 = Binary Tree Algorithms
 
 == Red-Black Trees
@@ -587,19 +589,9 @@ Figure 8.35. DRAKON-diagrams of node rotation algorithms used in red-black tree 
 The following video demonstrations show the cluster adjustment process during node insertion in Red-Black trees.
 
 .Video 1: Initial node insertion and violation detection
-video::{video-dir}/case1.mp4[width={video-width}, options=controls]
+// Use an explicit path instead of {video-dir}
+video::../assets/video/case3.mp4[width=800, options="controls"]
 
-.Video 2: First rotation and color adjustment  
-video::{video-dir}/case2.mp4[width={video-width}, options=controls]
-
-.Video 3: Second rotation for tree balancing
-video::{video-dir}/case3.mp4[width={video-width}, options=controls]
-
-.Video 4: Final cluster reorganization
-video::{video-dir}/case4.mp4[width={video-width}, options=controls]
-
-.Video 5: Complete insertion process overview
-video::{video-dir}case5.mp4[width={video-width}, options=controls]
 
 
 ==== 8.4.3. Deleting a Node from a red-black tree
