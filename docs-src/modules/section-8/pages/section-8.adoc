@@ -586,7 +586,6 @@ Figure 8.35. DRAKON-diagrams of node rotation algorithms used in red-black tree 
   <source src="./_attachments/case1.mp4" type="video/mp4">
 </video>
 ++++
-
 The following video demonstrations show the cluster adjustment process during node insertion in Red-Black trees.
 
 
