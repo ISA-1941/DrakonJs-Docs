@@ -1,0 +1,8 @@
+name: section-8 # or another, but usually the folder name
+title: Red-Black Trees # module title (optional)
+version: '1.0' # if not specified, inherits from the component
+
+asciidoc:
+  attributes:
+    video-dir: ./assets/video
+    video-width: 800
