@@ -1,20 +1,28 @@
 {
     "history": [
         {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\deleteNode.drakon",
+            "whenOpened": "2025-12-14T21:20:29.418Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\describeCluster.drakon",
+            "whenOpened": "2025-12-14T21:20:10.036Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixInsert.drakon",
+            "whenOpened": "2025-12-14T21:19:24.085Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\bstInsert.drakon",
+            "whenOpened": "2025-12-14T21:19:03.987Z"
+        },
+        {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\main.drakon",
             "whenOpened": "2025-12-11T18:47:37.364Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\describeCluster.drakon",
-            "whenOpened": "2025-12-11T18:47:22.775Z"
-        },
-        {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixCase3_4.drakon",
             "whenOpened": "2025-12-09T21:21:04.065Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixInsert.drakon",
-            "whenOpened": "2025-12-09T21:01:19.885Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\rbInsertCaseShort.drakon",
@@ -47,14 +55,6 @@
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\determineDeleteCase.drakon",
             "whenOpened": "2025-12-03T20:16:14.385Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\deleteNode.drakon",
-            "whenOpened": "2025-12-02T20:22:01.336Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\bstInsert.drakon",
-            "whenOpened": "2025-12-02T18:20:17.815Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixDelete.drakon",
