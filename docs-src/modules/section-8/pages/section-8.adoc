@@ -399,8 +399,8 @@ Figure 8.30. DRAKON-diagram of Node and Tree  Description
 
 Next, consider the node positions in the tree as a result of each new
 node insertion and determine which properties of the red-black tree are
-violated. For the purpose of analysis, we introduce the following notation 
-for the Red-Black Tree sub-structure (), which we shall subsequently term a  `nodeImages` or "cluster".
+violated. For analysis, we define a local Red-Black Tree substructure, which we call a cluster (`nodeImages`).
+
 
 All canonical `nodeImages` configurations representing possible red and black node arrangements are summarized in Table 8.3, which shows how each type of violation is detected and corrected to preserve all red-black properties. The following node designations are introduced in Table 8.3:
 
@@ -581,6 +581,8 @@ Figure 8.35. DRAKON-diagrams of node rotation algorithms used in red-black tree 
 
 === Rebalancing After Insertion — Video Examples
 
+The following videos demonstrate rebalancing during node insertion in Red-Black trees.
+
 [.text-center]
 Case 1 — Recoloring (Red Uncle)
 
@@ -589,10 +591,14 @@ Case 1 — Recoloring (Red Uncle)
   <source src="./_attachments/case1.mp4" type="video/mp4">
 </video>
 ++++
-The following video demonstrations show the cluster adjustment process during node insertion in Red-Black trees.
 
+Case 2 — Inner Rotation (LR Case)
 
-
+++++
+<video controls width="640">
+  <source src="./_attachments/case2.mp4" type="video/mp4">
+</video>
+++++
 
 ==== 8.4.3. Deleting a Node from a red-black tree
 
