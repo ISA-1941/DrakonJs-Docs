@@ -429,7 +429,7 @@ In the most general way the red-black tree construction algorithm is presented b
 image::{imagesdir}/Fig8_32_rbInsert.png[width=75%, link="{imagesdir}/Fig8_32_rbInsert.svg", window="_blank"]
 
 [.text-center]
-Figure 8.33. DRAKON-diagram of the function `rbInsert(tree, data)`
+Figure 8.32. DRAKON-diagram of the function `rbInsert(tree, data)`
 
 
 When a new red node is inserted into the red-black tree, it is first connected in the same way as in a regular binary search tree — by comparing the key values and attaching the node as the left or right child.
