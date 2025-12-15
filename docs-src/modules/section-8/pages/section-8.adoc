@@ -596,7 +596,7 @@ Case 5 — Outer Rotation (RR Case)
 Enter a sequence of numbers, for example, 5, 10, 15, 20, 25, to see how the tree automatically balances itself.
 
 ++++
-<iframe src="attachments/rb_tree_visualizer.html" style="width: 100%; height: 600px; border: 1px solid #ccc; border-radius: 8px;" loading="lazy" title="Red-Black Tree Visualizer"></iframe>
+<iframe src="attachments/rbTree/rb_tree_visualizer.html" style="width: 100%; height: 600px; border: 1px solid #ccc; border-radius: 8px;" loading="lazy" title="Red-Black Tree Visualizer"></iframe>
 ++++
 
 
