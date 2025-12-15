@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RB Tree Visualizer</title>
+    <!-- Load Tailwind CSS for utility classes -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Font and main container settings */
@@ -24,6 +25,26 @@
         }
         .black-node { fill: #374151; stroke: #1F2937; }
         .red-node { fill: #EF4444; stroke: #B91C1C; }
+
+        /* ADDED: Simple explicit style for controls container for resilience */
+        #controls-container {
+            padding: 1rem;
+            background-color: #f9fafb; /* Light gray background */
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+            display: flex; /* Ensure flex behavior */
+            gap: 12px;
+            flex-wrap: wrap; /* Allow wrapping on small screens */
+            align-items: center;
+        }
+        /* Explicit width for input for better visibility */
+        #keyInput {
+            min-width: 150px;
+            padding: 8px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 p-4 sm:p-6">
@@ -32,25 +53,25 @@
         <h1 class="text-2xl font-bold mb-4 text-gray-800">Interactive Red-Black Tree Visualizer</h1>
         <p class="text-sm mb-4 text-gray-600">Enter a number to insert and observe the automatic balancing and recoloring of nodes.</p>
 
-        <!-- Insertion Controls -->
-        <div class="flex flex-col sm:flex-row gap-3 p-4 bg-white shadow-lg rounded-lg mb-6 items-center">
+        <!-- Insertion Controls - Now with an explicit ID and simplified structure -->
+        <div id="controls-container" class="shadow-lg">
             <input 
                 type="number" 
                 id="keyInput" 
                 placeholder="Enter a Key" 
-                class="w-full sm:w-40 p-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500"
+                class="flex-grow p-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500"
                 min="1"
                 max="999"
             >
             <button 
                 id="insertBtn" 
-                class="w-full sm:w-auto px-4 py-2 bg-red-600 text-white font-semibold rounded-md shadow-md hover:bg-red-700 transition duration-150 ease-in-out disabled:bg-gray-400"
+                class="px-4 py-2 bg-red-600 text-white font-semibold rounded-md shadow-md hover:bg-red-700 transition duration-150 ease-in-out disabled:bg-gray-400"
             >
                 Insert Node
             </button>
             <button 
                 id="resetBtn" 
-                class="w-full sm:w-auto px-4 py-2 bg-gray-500 text-white font-semibold rounded-md shadow-md hover:bg-gray-600 transition duration-150 ease-in-out"
+                class="px-4 py-2 bg-gray-500 text-white font-semibold rounded-md shadow-md hover:bg-gray-600 transition duration-150 ease-in-out"
             >
                 Reset Tree
             </button>
@@ -68,51 +89,29 @@
     </div>
 
     <script>
-        // --- 1. Red-Black Tree Logic (Functional/Procedural style, compatible with DRAKON) ---
+        // --- 1. Red-Black Tree Logic (Functional/Procedural style) ---
 
         const NODE_RADIUS = 15; // Node radius for visualization
         const H_SPACING = 50;  // Default horizontal space between nodes
         const V_SPACING = 80;  // Vertical space between levels
 
-        /**
-         * Node factory function. Creates a new node object.
-         * @param {number|null} key - The key value.
-         * @param {string} color - 'R' (Red) or 'B' (Black).
-         * @param {object|null} left - Left child node.
-         * @param {object|null} right - Right child node.
-         * @param {object|null} parent - Parent node.
-         * @returns {object} The new node object.
-         */
         function makeNode(key = null, color = "B", left = null, right = null, parent = null) {
             return { key, color, left, right, parent, x: 0, y: 0, visualKey: key }; 
         }
 
-        /**
-         * Tree factory function. Creates the tree structure with a sentinel nullNode.
-         * @returns {object} The tree structure containing root and nullNode.
-         */
         function makeRBTree() {
-            // The sentinel NIL node is always black
             const nullNode = makeNode(null, "B", null, null, null);
             nullNode.left = nullNode;
             nullNode.right = nullNode;
             nullNode.parent = nullNode;
-            nullNode.visualKey = "NIL"; // Visual label for the sentinel
+            nullNode.visualKey = "NIL"; 
             
             return { root: nullNode, nullNode };
         }
 
-        // --- RBT Helper Functions (All functions accept state explicitly) ---
-
-        /**
-         * Inserts a key using standard BST logic, returns the newly created Red node.
-         * @param {object} tree - The tree structure (containing root and nullNode).
-         * @param {number} key - The key to insert.
-         * @returns {object} The newly created node.
-         */
         function bstInsert(tree, key) {
-            let y = tree.nullNode; // Trailing pointer (parent of new node)
-            let x = tree.root;     // Current node
+            let y = tree.nullNode;
+            let x = tree.root;
 
             while (x !== tree.nullNode) {
                 y = x;
@@ -120,12 +119,10 @@
                 else x = x.right;
             }
 
-            // Create new node (always starts Red)
             const newNode = makeNode(key, "R", tree.nullNode, tree.nullNode, y);
             
-            // Link new node into the tree
             if (y === tree.nullNode) {
-                tree.root = newNode; // Tree was empty
+                tree.root = newNode;
             } else if (key < y.key) {
                 y.left = newNode;
             } else {
@@ -135,18 +132,12 @@
             return newNode;
         }
 
-        /**
-         * Performs a Left Rotation around node x.
-         * @param {object} tree - The tree structure.
-         * @param {object} x - The pivot node (must have a right child).
-         */
         function rotateLeft(tree, x) {
-            const y = x.right; // y is the node that moves up
+            const y = x.right;
             x.right = y.left;
             if (y.left !== tree.nullNode) y.left.parent = x;
             y.parent = x.parent;
             
-            // Adjust root or parent's child pointer
             if (x.parent === tree.nullNode) tree.root = y;
             else if (x === x.parent.left) x.parent.left = y;
             else x.parent.right = y;
@@ -155,18 +146,12 @@
             x.parent = y;
         }
 
-        /**
-         * Performs a Right Rotation around node x.
-         * @param {object} tree - The tree structure.
-         * @param {object} x - The pivot node (must have a left child).
-         */
         function rotateRight(tree, x) {
-            const y = x.left; // y is the node that moves up
+            const y = x.left;
             x.left = y.right;
             if (y.right !== tree.nullNode) y.right.parent = x;
             y.parent = x.parent;
             
-            // Adjust root or parent's child pointer
             if (x.parent === tree.nullNode) tree.root = y;
             else if (x === x.parent.right) x.parent.right = y;
             else x.parent.left = y;
@@ -175,10 +160,8 @@
             x.parent = y;
         }
 
-        // Fix case 1: Parent is black (no violation)
-        function fixCase1(tree, node) { /* Do nothing */ return tree; }
+        function fixCase1(tree, node) { return tree; }
 
-        // Fix case 2: Parent and Uncle are Red (Recolor)
         function fixCase2(tree, node) {
             const parent = node.parent;
             const grand = parent.parent;
@@ -188,16 +171,13 @@
             uncle.color = 'B';
             grand.color = 'R';
 
-            // Recurse up the tree at the grandparent
             return fixInsert(tree, grand);
         }
 
-        // Fix case 3: Parent is Red, Uncle is Black (Rotation and Recolor)
         function fixCase3(tree, node) {
             let parent = node.parent;
             let grand = parent.parent;
 
-            // Inner case conversion (e.g., LR -> LL or RL -> RR)
             if (node === parent.right && parent === grand.left) {
                 rotateLeft(tree, parent);
                 node = node.left; 
@@ -206,14 +186,12 @@
                 node = node.right; 
             }
 
-            // Recalculate parent/grandparent after potential inner rotation
             parent = node.parent;
             grand = parent.parent;
 
             parent.color = 'B';
             grand.color = 'R';
 
-            // Outer case rotation
             if (node === parent.left && parent === grand.left) {
                 rotateRight(tree, grand);
             } else {
@@ -223,85 +201,57 @@
             return tree;
         }
 
-        /**
-         * Fixes Red-Black tree properties after insertion.
-         * @param {object} tree - The tree structure.
-         * @param {object} node - The newly inserted node.
-         */
         function fixInsert(tree, node) {
             const parent = node.parent;
 
-            // Case 0: Node is the root
             if (parent === tree.nullNode) {
                 tree.root.color = 'B';
                 return tree;
             }
 
-            // Case 1: Parent is Black (No violation)
             if (parent.color === 'B') {
                 return fixCase1(tree, node);
             }
             
-            // If parent is Red, we must have a grandparent
             const grand = parent.parent;
             const uncle = (parent === grand.left) ? grand.right : grand.left;
 
-            // Case 2: Parent and Uncle are Red (Recolor and repeat)
             if (uncle.color === 'R') {
                 return fixCase2(tree, node);
             }
 
-            // Case 3: Parent is Red, Uncle is Black (Rotation and Recolor)
             return fixCase3(tree, node);
         }
 
-        /**
-         * Main insert function.
-         * @param {object} tree - The tree structure.
-         * @param {number} key - The key to insert.
-         */
         function insert(tree, key) {
             const node = bstInsert(tree, key);
             fixInsert(tree, node);
-            // Ensure root is always black
             tree.root.color = 'B';
             return tree;
         }
 
 
-        // --- 2. SVG Visualization Logic (Remains the same) ---
+        // --- 2. SVG Visualization Logic ---
 
         let rbtree;
         let x_counter; 
 
         const svg = document.getElementById('tree-svg');
-        const container = document.getElementById('tree-svg-container');
         const keyInput = document.getElementById('keyInput');
         const insertBtn = document.getElementById('insertBtn');
         const resetBtn = document.getElementById('resetBtn');
         const statusDiv = document.getElementById('status');
         
-        // Function to calculate (X, Y) positions for all nodes
         function calculatePositions(node, depth) {
             if (node === rbtree.nullNode) return;
-
-            // Set Y position
             node.y = depth * V_SPACING + NODE_RADIUS + 20;
-
-            // 1. Process left subtree first
             calculatePositions(node.left, depth + 1);
-
-            // 2. Set X position (In-order traversal prevents overlap)
             node.x = x_counter * H_SPACING + NODE_RADIUS;
             x_counter++;
-
-            // 3. Process right subtree
             calculatePositions(node.right, depth + 1);
         }
 
-        // Function to render the tree in SVG
         function renderTree() {
-            // Clear SVG
             svg.innerHTML = '';
             
             if (rbtree.root === rbtree.nullNode) {
@@ -315,14 +265,12 @@
                 return;
             }
             
-            x_counter = 1; // Reset horizontal counter
+            x_counter = 1;
             calculatePositions(rbtree.root, 0);
 
-            // Determine necessary SVG dimensions
             let maxX = 0;
             let maxDepth = 0;
             
-            // Find max X and max Y (depth) to adjust the viewBox
             const findMax = (node) => {
                 if (node === rbtree.nullNode) return;
                 maxX = Math.max(maxX, node.x);
@@ -335,16 +283,13 @@
             const newWidth = maxX + H_SPACING + NODE_RADIUS;
             const newHeight = maxDepth + V_SPACING;
 
-            // Update SVG dimensions/viewBox to fit the content dynamically
             svg.setAttribute('width', newWidth);
             svg.setAttribute('height', newHeight);
             svg.setAttribute('viewBox', `0 0 ${newWidth} ${newHeight}`);
             
-            // Recursive function to draw lines and nodes
             const drawNode = (node) => {
                 if (node === rbtree.nullNode) return;
 
-                // 1. Draw lines to children
                 if (node.left !== rbtree.nullNode) {
                     drawLine(node, node.left);
                 }
@@ -352,10 +297,8 @@
                     drawLine(node, node.right);
                 }
 
-                // 2. Draw the node itself
                 drawCircle(node);
 
-                // Recursive call
                 drawNode(node.left);
                 drawNode(node.right);
             };
@@ -375,18 +318,15 @@
         }
 
         function drawCircle(node) {
-            // Group element for positioning the node and its text together
             const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
             g.setAttribute('transform', `translate(${node.x}, ${node.y})`);
 
-            // Node circle
             const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
             circle.setAttribute('r', NODE_RADIUS);
             circle.setAttribute('class', `node-circle ${node.color === 'R' ? 'red-node' : 'black-node'}`);
             circle.setAttribute('stroke-width', 2);
             g.appendChild(circle);
 
-            // Node text/key
             const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
             text.setAttribute('text-anchor', 'middle');
             text.setAttribute('dominant-baseline', 'central');
@@ -409,7 +349,6 @@
             } else {
                 statusDiv.classList.add('bg-blue-100', 'text-blue-800', 'border-blue-500');
             }
-            // Hide after 5 seconds
             setTimeout(() => {
                 statusDiv.classList.add('hidden');
             }, 5000);
@@ -423,7 +362,6 @@
                 return;
             }
             
-            // Check for duplicates
             let currentNode = rbtree.root;
             while(currentNode !== rbtree.nullNode) {
                 if (currentNode.key === key) {
@@ -451,9 +389,8 @@
             keyInput.value = '';
         }
 
-        // Initialization on load
         document.addEventListener('DOMContentLoaded', () => {
-            handleReset(); // Reset and initial render of an empty tree
+            handleReset();
             
             insertBtn.addEventListener('click', handleInsert);
             resetBtn.addEventListener('click', handleReset);
