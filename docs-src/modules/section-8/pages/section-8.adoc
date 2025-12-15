@@ -588,18 +588,6 @@ Case 5 — Outer Rotation (RR Case)
 </video>
 ++++
 
-
-==== 8.4.1.3. Independent Mastery of the Red-Black Tree Construction Algorithm
-
-[NOTE]
-.Tip
-Enter a sequence of numbers, for example, 5, 10, 15, 20, 25, to see how the tree automatically balances itself.
-
-++++
-<iframe src="attachments/rbTree/rb_tree_visualizer.html" style="width: 100%; height: 600px; border: 1px solid #ccc; border-radius: 8px;" loading="lazy" title="Red-Black Tree Visualizer"></iframe>
-++++
-
-
 ==== 8.4.2. Deleting a Node from a red-black tree
 
 !!!!!!! https://www.youtube.com/watch?v=OAkmHIR9YkY&t=1421s !!!!!!!!
