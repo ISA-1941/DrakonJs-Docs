@@ -797,9 +797,6 @@ violated. For analysis, we define a local Red-Black Tree substructure, which we 
 <img src="_images/Fig8_31_family.jpg" alt="Fig8 31 family" width="75%">
 </div>
 </div>
-<div class="paragraph">
-<p>imagesdir</p>
-</div>
 <div class="paragraph text-center">
 <p>Figure 8.31. Designation of the degree of "kinship" of RB Tree nodes (cluster) (x, P, G, U, S)</p>
 </div>
@@ -809,7 +806,7 @@ violated. For analysis, we define a local Red-Black Tree substructure, which we 
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<img src="_images/Fig8_32_describeCluster.png" alt="Fig8 32 describeCluster" width="75%]">
+<img src="_images/Fig8_32_describeCluster.png" alt="Fig8 32 describeCluster" width="75%">
 </div>
 </div>
 <div class="paragraph text-center">
@@ -911,57 +908,8 @@ b. Perform a left rotation around the grandparent (G).</p></td>
 </tr>
 </tbody>
 </table>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 8.4 — Mapping of CLRS Cases to Video Variants</caption>
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">CLRS Case</th>
-<th class="tableblock halign-left valign-top">Table Variant</th>
-<th class="tableblock halign-left valign-top">Video Code</th>
-<th class="tableblock halign-left valign-top">Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Case 1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Red Uncle</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Recolor</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Case 2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">LR</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">B3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Inner rotation</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Case 2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">RL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">B4</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Inner rotation</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Case 3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">LL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">B1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Outer rotation</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Case 3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">RR</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">B2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Outer rotation</p></td>
-</tr>
-</tbody>
-</table>
 <div class="paragraph">
-<p>The DRAKON-diagram of the red-black tree balancing algorithm when entering a new node is shown in Figure 8.33,8.34.</p>
+<p>The DRAKON-diagram of the red-black tree balancing algorithm when entering a new node is shown in Figure 8.33.</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
@@ -971,20 +919,12 @@ b. Perform a left rotation around the grandparent (G).</p></td>
 <div class="paragraph text-center">
 <p>Figure 8.33. Red-Black Tree Balancing Algorithm DRAKON-diagram</p>
 </div>
-<div class="imageblock unresolved">
-<div class="content">
-<a class="image" href="_images/Fig8_34_diagr_figs.svg" target="_blank" rel="noopener"><img src="_images/Fig8_34_diagr_figs.png" alt="Fig8 34 diagr figs" width="100%"></a>
-</div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 8.34. Illustration of Red-Black Tree Balancing Algorithms</p>
-</div>
 <div class="paragraph">
-<p>The DRAKON-diagram of the node rotation algorithms to the red and black tree cluster is shown in Figure 8.35a,b.</p>
+<p>The DRAKON-diagram of the node rotation algorithms to the red and black tree cluster is shown in Figure 8.34a,b.</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/Fig8_35a_rotateLeft.svg" target="_blank" rel="noopener"><img src="_images/Fig8_35a_rotateLeft.png" alt="Fig8 35a rotateLeft" width="100%"></a>
+<a class="image" href="_images/Fig8_34a_rotateLeft.svg" target="_blank" rel="noopener"><img src="_images/Fig8_34a_rotateLeft.png" alt="Fig8 34a rotateLeft" width="100%"></a>
 </div>
 </div>
 <div class="literalblock">
@@ -994,7 +934,7 @@ b. Perform a left rotation around the grandparent (G).</p></td>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/Fig8_35b_rotateRight.svg" target="_blank" rel="noopener"><img src="_images/Fig8_35b_rotateRight.png" alt="Fig8 35b rotateRight" width="100%"></a>
+<a class="image" href="_images/Fig8_34b_rotateRight.svg" target="_blank" rel="noopener"><img src="_images/Fig8_34b_rotateRight.png" alt="Fig8 34b rotateRight" width="100%"></a>
 </div>
 </div>
 <div class="literalblock">
@@ -1006,9 +946,8 @@ b. Perform a left rotation around the grandparent (G).</p></td>
 <p>Figure 8.35. DRAKON-diagrams of node rotation algorithms used in red-black tree clusters.</p>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_rebalancing_after_insertion_video_examples"><a class="anchor" href="#_rebalancing_after_insertion_video_examples"></a>Rebalancing After Insertion — Video Examples</h3>
+<div class="sect3">
+<h4 id="_8_4_1_2_rebalancing_after_insertion_video_examples"><a class="anchor" href="#_8_4_1_2_rebalancing_after_insertion_video_examples"></a>8.4.1.2. Rebalancing After Insertion — Video Examples</h4>
 <div class="paragraph">
 <p>The following videos demonstrate rebalancing during node insertion in Red-Black trees.</p>
 </div>
@@ -1042,8 +981,36 @@ b. Perform a left rotation around the grandparent (G).</p></td>
 <video controls width="640">
   <source src="./_attachments/case4.mp4" type="video/mp4">
 </video>
+</div>
 <div class="sect3">
-<h4 id="_8_4_3_deleting_a_node_from_a_red_black_tree"><a class="anchor" href="#_8_4_3_deleting_a_node_from_a_red_black_tree"></a>8.4.3. Deleting a Node from a red-black tree</h4>
+<h4 id="_8_4_1_3_independent_mastery_of_the_red_black_tree_construction_algorithm"><a class="anchor" href="#_8_4_1_3_independent_mastery_of_the_red_black_tree_construction_algorithm"></a>8.4.1.3. Independent Mastery of the Red-Black Tree Construction Algorithm</h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Tip</div>
+Enter a sequence of numbers, for example, 5, 10, 15, 20, 25, to see how the tree automatically balances itself.
+</td>
+</tr>
+</table>
+</div>
+<iframe
+src="attachments/rb_tree_visualizer.html"
+
+style="width: 100%; height: 600px; border: 1px solid #ccc;
+border-radius: 8px;"
+
+loading="lazy"
+
+title="Red-Black Tree Visualizer">
+
+</iframe>
+</div>
+<div class="sect3">
+<h4 id="_8_4_2_deleting_a_node_from_a_red_black_tree"><a class="anchor" href="#_8_4_2_deleting_a_node_from_a_red_black_tree"></a>8.4.2. Deleting a Node from a red-black tree</h4>
 <div class="paragraph">
 <p>!!!!!!! <a href="https://www.youtube.com/watch?v=OAkmHIR9YkY&amp;t=1421s" class="bare">https://www.youtube.com/watch?v=OAkmHIR9YkY&amp;t=1421s</a> !!!!!!!!</p>
 </div>
