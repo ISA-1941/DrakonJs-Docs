@@ -28,13 +28,18 @@
 
         /* FIXED: Simple explicit style for controls container for resilience and visibility */
         #controls-container {
-            padding: 1rem;
+            padding: 1rem !important;
             /* Using a high-contrast background to ensure controls are visible */
-            background-color: #fef3c7; /* Light Yellow/Cream */
-            border: 2px solid #f59e0b; /* Orange border */
-            border-radius: 0.5rem;
-            margin-bottom: 1.5rem;
-            display: flex; /* Ensure flex behavior */
+            background-color: #fef3c7 !important; /* Light Yellow/Cream, forced */
+            border: 2px solid #f59e0b !important; /* Orange border, forced */
+            border-radius: 0.5rem !important;
+            margin-bottom: 1.5rem !important;
+            
+            /* Force display and visibility against external CSS interference */
+            display: flex !important; 
+            visibility: visible !important;
+            z-index: 1000 !important; /* Bring it to the front */
+            
             gap: 12px;
             flex-wrap: wrap; /* Allow wrapping on small screens */
             align-items: center;
@@ -54,6 +59,11 @@
         <h1 class="text-2xl font-bold mb-4 text-gray-800">Interactive Red-Black Tree Visualizer</h1>
         <p class="text-sm mb-4 text-gray-600">Enter a number to insert and observe the automatic balancing and recoloring of nodes.</p>
 
+        <!-- DIAGNOSTIC: Check if this element is visible. If yes, the HTML path is correct. -->
+        <div id="diagnostic-check" class="p-2 mb-2 bg-yellow-200 text-yellow-900 font-bold rounded-md text-sm" style="display: block !important; visibility: visible !important; z-index: 1000 !important;">
+            DIAGNOSTIC: If you see this yellow box, the HTML is loading correctly. The form controls should appear below.
+        </div>
+        
         <!-- Insertion Controls - With explicit ID for robustness -->
         <div id="controls-container" class="shadow-lg">
             <input 
@@ -396,6 +406,15 @@
         document.addEventListener('DOMContentLoaded', () => {
             // Diagnostic message: Checking that DOMContentLoaded fired
             console.log("RB Tree Visualizer DOMContentLoaded.");
+            
+            const controls = document.getElementById('controls-container');
+            if (controls) {
+                // Log computed style to help diagnose external CSS conflicts
+                console.log("Controls container found in DOM. Display style (computed):", window.getComputedStyle(controls).display, "Z-Index:", window.getComputedStyle(controls).zIndex);
+            } else {
+                console.error("Controls container NOT found in DOM.");
+            }
+
             handleReset();
             
             insertBtn.addEventListener('click', handleInsert);
