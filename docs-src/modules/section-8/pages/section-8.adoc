@@ -426,7 +426,9 @@ Figure 8.31. Designation of the degree of "kinship" of RB Tree nodes (cluster) (
 In the most general way the red-black tree construction algorithm is presented by the function `rbInsert(tree, key)`(Figure 8.32):
 
 //image::{imagesdir}/Fig8_32_rbInsert.png[width=75%]
-image::{imagesdir}/Fig8_32_rbInsert.png[width=75%, link="{imagesdir}/Fig8_32_rbInsert.svg", window="_blank"]
+image::{imagesdir}/Fig8_32_rbInsert.png[width=75%]
+
+//[width=75%, link="{imagesdir}/Fig8_32_rbInsert.svg", window="_blank"]
 
 [.text-center]
 Figure 8.32. DRAKON-diagram of the function `rbInsert(tree, data)`
@@ -437,10 +439,10 @@ However, this simple act of insertion may cause a local violation of one or more
 To restore balance, the algorithm analyses the local configuration of nodes — a tree-cluster — formed by the newly added node x, its parent P, grandparent G, and uncle U.
 Each possible configuration (or `nodeImage`) corresponds to a typical balancing case, which determines the required sequence of operations: recoloring and/or rotation. The DRAKON-diagram of tree balancing when inserting a new  node is shown in Figure 34.
 
-image::{imagesdir}/Fig8_34_fixInsert.png[width=75%, link="{imagesdir}/Fig8_34_fixInsert.svg", window="_blank"]
+image::{imagesdir}/Fig8_33_fixInsert.png[width=75%, link="{imagesdir}/Fig8_33_fixInsert.svg", window="_blank"]
 
 [.text-center]
-Figure 8.34. DRAKON-diagram of the Tree Balancing function `fixInsert(tree, data)`
+Figure 8.33. DRAKON-diagram of the Tree Balancing function `fixInsert(tree, data)`
 
 
 :!table-caption:
