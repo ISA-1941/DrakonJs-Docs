@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RB Tree Visualizer</title>
+    <title>Red-Black Tree Visualizer</title>
     <!-- Load Tailwind CSS for utility classes -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -26,11 +26,12 @@
         .black-node { fill: #374151; stroke: #1F2937; }
         .red-node { fill: #EF4444; stroke: #B91C1C; }
 
-        /* ADDED: Simple explicit style for controls container for resilience */
+        /* FIXED: Simple explicit style for controls container for resilience and visibility */
         #controls-container {
             padding: 1rem;
-            background-color: #f9fafb; /* Light gray background */
-            border: 1px solid #e5e7eb;
+            /* Using a high-contrast background to ensure controls are visible */
+            background-color: #fef3c7; /* Light Yellow/Cream */
+            border: 2px solid #f59e0b; /* Orange border */
             border-radius: 0.5rem;
             margin-bottom: 1.5rem;
             display: flex; /* Ensure flex behavior */
@@ -53,7 +54,7 @@
         <h1 class="text-2xl font-bold mb-4 text-gray-800">Interactive Red-Black Tree Visualizer</h1>
         <p class="text-sm mb-4 text-gray-600">Enter a number to insert and observe the automatic balancing and recoloring of nodes.</p>
 
-        <!-- Insertion Controls - Now with an explicit ID and simplified structure -->
+        <!-- Insertion Controls - With explicit ID for robustness -->
         <div id="controls-container" class="shadow-lg">
             <input 
                 type="number" 
@@ -90,6 +91,9 @@
 
     <script>
         // --- 1. Red-Black Tree Logic (Functional/Procedural style) ---
+
+        // Diagnostic message: Checking if the script loads
+        console.log("RB Tree Visualizer Script Loaded.");
 
         const NODE_RADIUS = 15; // Node radius for visualization
         const H_SPACING = 50;  // Default horizontal space between nodes
@@ -365,7 +369,7 @@
             let currentNode = rbtree.root;
             while(currentNode !== rbtree.nullNode) {
                 if (currentNode.key === key) {
-                     updateStatus(`Key ${key} already exists in the tree. Duplicates are not allowed.`, true);
+                     updateStatus(`Key ${key} already exists. Duplicates are not allowed.`, true);
                      return;
                 }
                 currentNode = key < currentNode.key ? currentNode.left : currentNode.right;
@@ -385,11 +389,13 @@
         function handleReset() {
             rbtree = makeRBTree();
             renderTree();
-            updateStatus("The RB Tree has been reset. Start inserting keys.", false);
+            updateStatus("RB Tree has been reset. Start inserting keys.", false);
             keyInput.value = '';
         }
 
         document.addEventListener('DOMContentLoaded', () => {
+            // Diagnostic message: Checking that DOMContentLoaded fired
+            console.log("RB Tree Visualizer DOMContentLoaded.");
             handleReset();
             
             insertBtn.addEventListener('click', handleInsert);
