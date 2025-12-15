@@ -1,16 +1,24 @@
 {
     "history": [
         {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixInsert.drakon",
+            "whenOpened": "2025-12-15T10:05:27.176Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixCase3_4.drakon",
+            "whenOpened": "2025-12-15T10:03:10.628Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixCase2.drakon",
+            "whenOpened": "2025-12-15T10:03:06.111Z"
+        },
+        {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\deleteNode.drakon",
             "whenOpened": "2025-12-14T21:20:29.418Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\describeCluster.drakon",
             "whenOpened": "2025-12-14T21:20:10.036Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixInsert.drakon",
-            "whenOpened": "2025-12-14T21:19:24.085Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\bstInsert.drakon",
@@ -21,20 +29,12 @@
             "whenOpened": "2025-12-11T18:47:37.364Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixCase3_4.drakon",
-            "whenOpened": "2025-12-09T21:21:04.065Z"
-        },
-        {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\rbInsertCaseShort.drakon",
             "whenOpened": "2025-12-09T21:00:54.258Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\rbInsert.drakon",
             "whenOpened": "2025-12-09T21:00:49.231Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixCase2.drakon",
-            "whenOpened": "2025-12-09T20:53:25.500Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixCase1.drakon",
