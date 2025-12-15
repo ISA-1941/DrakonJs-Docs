@@ -2,11 +2,19 @@
     "history": [
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\rbInsert.drakon",
-            "whenOpened": "2025-12-15T20:35:02.661Z"
+            "whenOpened": "2025-12-15T20:59:54.621Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\rbInsertCaseShort.drakon",
+            "whenOpened": "2025-12-15T20:53:10.611Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixInsert.drakon",
-            "whenOpened": "2025-12-15T10:05:27.176Z"
+            "whenOpened": "2025-12-15T20:52:55.796Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\processDeleteCase.drakon",
+            "whenOpened": "2025-12-15T20:48:54.873Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixCase3_4.drakon",
@@ -31,10 +39,6 @@
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\main.drakon",
             "whenOpened": "2025-12-11T18:47:37.364Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\rbInsertCaseShort.drakon",
-            "whenOpened": "2025-12-09T21:00:54.258Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixCase1.drakon",
@@ -87,10 +91,6 @@
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\findNode.drakon",
             "whenOpened": "2025-11-30T10:50:07.961Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\processDeleteCase.drakon",
-            "whenOpened": "2025-11-30T10:48:24.470Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\bstDelete.drakon",
