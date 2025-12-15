@@ -421,21 +421,12 @@ image::{imagesdir}/Fig8_31_family.jpg[width=75%]
 [.text-center]
 Figure 8.31. Designation of the degree of "kinship" of RB Tree nodes (cluster) (x, P, G, U, S)  
 
-To describe the process of balancing the red-black tree, let’s name the set of nodes involved in the implementation of balancing _tree-cluster_ and enter a local syntax: **:R or :B** is the color of the node. For example, P:R is the red parent.
-*<-  or ->* - the direction of the node position. For example, x<-P - the new node x is located to the left of the parent node P. 
-
-image::{imagesdir}/Fig8_32_describeCluster.png[width=75%]
-//[width=75%, link="{imagesdir}/Fig8_32_describeCluster.svg", window="_blank"]
-
-[.text-center]
-Figure 8.32. DRAKON-diagram of the Function `describeCluster(tree, node)`
-
 ==== 8.4.1.2. Inserting a new node
 
-In the most general way the red-black tree construction algorithm is presented by the function `rbInsert(tree, key)`(Figure 8.33):
+In the most general way the red-black tree construction algorithm is presented by the function `rbInsert(tree, key)`(Figure 8.32):
 
 //image::{imagesdir}/Fig8_32_rbInsert.png[width=75%]
-image::{imagesdir}/Fig8_33_rbInsert.png[width=75%, link="{imagesdir}/Fig8_33_rbInsert.svg", window="_blank"]
+image::{imagesdir}/Fig8_32_rbInsert.png[width=75%, link="{imagesdir}/Fig8_32_rbInsert.svg", window="_blank"]
 
 [.text-center]
 Figure 8.33. DRAKON-diagram of the function `rbInsert(tree, data)`
@@ -587,6 +578,10 @@ Case 5 — Outer Rotation (RR Case)
   <source src="./_attachments/case5.mp4" type="video/mp4">
 </video>
 ++++
+
+Student Note: Experimenting with Red-Black Trees
+You are encouraged to deepen your understanding of Red-Black Trees by conducting experiments using the dedicated online visualization and simulation tool,  [Red-Black Tree Visualizer](https://www.cs.usfca.edu/~galles/visualization/RedBlack.html). This interactive platform allows you to insert and delete nodes, observe the balancing operations in real-time, and visualize the tree structure dynamically. Engaging with this tool will enhance your comprehension of the complex balancing mechanisms inherent in Red-Black Trees.
+
 
 ==== 8.4.2. Deleting a Node from a red-black tree
 
