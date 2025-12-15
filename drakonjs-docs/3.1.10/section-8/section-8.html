@@ -800,27 +800,15 @@ violated. For analysis, we define a local Red-Black Tree substructure, which we 
 <div class="paragraph text-center">
 <p>Figure 8.31. Designation of the degree of "kinship" of RB Tree nodes (cluster) (x, P, G, U, S)</p>
 </div>
-<div class="paragraph">
-<p>To describe the process of balancing the red-black tree, let’s name the set of nodes involved in the implementation of balancing <em>tree-cluster</em> and enter a local syntax: <strong>:R or :B</strong> is the color of the node. For example, P:R is the red parent.
-<strong>&#8592;  or &#8594;</strong> - the direction of the node position. For example, x&#8592;P - the new node x is located to the left of the parent node P.</p>
-</div>
-<div class="imageblock unresolved">
-<div class="content">
-<img src="_images/Fig8_32_describeCluster.png" alt="Fig8 32 describeCluster" width="75%">
-</div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 8.32. DRAKON-diagram of the Function <code>describeCluster(tree, node)</code></p>
-</div>
 </div>
 <div class="sect3">
 <h4 id="_8_4_1_2_inserting_a_new_node"><a class="anchor" href="#_8_4_1_2_inserting_a_new_node"></a>8.4.1.2. Inserting a new node</h4>
 <div class="paragraph">
-<p>In the most general way the red-black tree construction algorithm is presented by the function <code>rbInsert(tree, key)</code>(Figure 8.33):</p>
+<p>In the most general way the red-black tree construction algorithm is presented by the function <code>rbInsert(tree, key)</code>(Figure 8.32):</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/Fig8_33_rbInsert.svg" target="_blank" rel="noopener"><img src="_images/Fig8_33_rbInsert.png" alt="Fig8 33 rbInsert" width="75%"></a>
+<a class="image" href="_images/Fig8_32_rbInsert.svg" target="_blank" rel="noopener"><img src="_images/Fig8_32_rbInsert.png" alt="Fig8 32 rbInsert" width="75%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
@@ -981,6 +969,10 @@ b. Perform a left rotation around the grandparent (G).</p></td>
 <video controls width="640">
   <source src="./_attachments/case5.mp4" type="video/mp4">
 </video>
+<div class="paragraph">
+<p>Student Note: Experimenting with Red-Black Trees
+You are encouraged to deepen your understanding of Red-Black Trees by conducting experiments using the dedicated online visualization and simulation tool,  [Red-Black Tree Visualizer](<a href="https://www.cs.usfca.edu/~galles/visualization/RedBlack.html" class="bare">https://www.cs.usfca.edu/~galles/visualization/RedBlack.html</a>). This interactive platform allows you to insert and delete nodes, observe the balancing operations in real-time, and visualize the tree structure dynamically. Engaging with this tool will enhance your comprehension of the complex balancing mechanisms inherent in Red-Black Trees.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_8_4_2_deleting_a_node_from_a_red_black_tree"><a class="anchor" href="#_8_4_2_deleting_a_node_from_a_red_black_tree"></a>8.4.2. Deleting a Node from a red-black tree</h4>
