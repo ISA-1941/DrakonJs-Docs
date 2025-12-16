@@ -427,7 +427,7 @@ In the most general way the red-black tree construction algorithm is presented b
 
 :imagesdir: docs-src/modules/section-8/assets/images/part_4
 
-image::{imagesdir}/rbInsert.png[width=75%]
+image::{imagesdir}/fixCase3.png[width=75%]
 //[width=75%, link="{imagesdir}/Fig8_32_rbInsert.svg", window="_blank"]
 
 [.text-center]
