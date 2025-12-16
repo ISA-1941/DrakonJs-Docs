@@ -380,7 +380,7 @@ Node includes the following fields: `data` - node numeric value,  `color` - node
 [cols="a,a", frame=none, grid=none, align=center]
 |===
 |image::{imagesdir}/Fig8_30a_makeNode.png[width=100%]
-|image::{imagesdir}/Fig8_30b_makeRBTreess.png[width=75%]
+|image::{imagesdir}/Fig8_30b_makeRBTree.png[width=75%]
 |===
 
 [.text-center]
