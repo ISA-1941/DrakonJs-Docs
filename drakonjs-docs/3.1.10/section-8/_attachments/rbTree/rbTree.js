@@ -319,7 +319,8 @@ function main() {
     }
     console.log('\nTree after inserts !!!:\n');
     printTree(tree, tree.root);
-    deleteNode(tree, 80);
+    console.log('values = ', values, values[4]); 
+    deleteNode(tree, values[4]);
     console.log('\nTree after delete node  (FIXED):\n');
     printTree(tree, tree.root);
     setTimeout(() => {
