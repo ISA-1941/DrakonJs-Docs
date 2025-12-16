@@ -414,7 +414,8 @@ image::{imagesdir}/Fig8_31_family.jpg[width=75%]
 [.text-center]
 Figure 8.31. Designation of the degree of "kinship" of RB Tree nodes (cluster) (x, P, G, U, S)  
 
-In the most general way the red-black tree construction algorithm is presented by the function `rbInsert(tree, key)`(Figure 8.32)
+In the most general way the red-black tree construction algorithm is presented by the function `rbInsert(tree, key):
+
 
 image::{imagesdir}/Fig8_32_rbInsert.png[width=75%, link="{imagesdir}/Fig8_32_rbInsert.svg", window="_blank"]
 
