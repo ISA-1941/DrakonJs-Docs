@@ -345,11 +345,9 @@ Figure 8.28. DRAKON-diagram of the main-function
 
 === 8.4 Red-black trees
 
-:imagesdir: docs-src/modules/section-8/assets/images/part_4
-
 ==== 8.4.1. Inserting a new node and the balancing process
 
-8.4.1.1. Properties of red-black trees
+:imagesdir: docs-src/modules/section-8/assets/images/part_4
 
 A red-black tree is a variant of a self-balancing binary search tree in which the nodes are placed according to a certain rule and coloured red or black (Figure 8.29)
 
@@ -420,8 +418,6 @@ image::{imagesdir}/Fig8_31_family.jpg[width=75%]
 
 [.text-center]
 Figure 8.31. Designation of the degree of "kinship" of RB Tree nodes (cluster) (x, P, G, U, S)  
-
-==== 8.4.1.2. Inserting a new node
 
 In the most general way the red-black tree construction algorithm is presented by the function `rbInsert(tree, key)`(Figure 8.32)
 
