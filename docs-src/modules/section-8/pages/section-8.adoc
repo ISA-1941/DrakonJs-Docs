@@ -427,9 +427,9 @@ In the most general way the red-black tree construction algorithm is presented b
 
 :imagesdir: docs-src/modules/section-8/assets/images/part_4
 
-image::{imagesdir}/Fig8_32_rbInsert.png[width=75%]
+image::{imagesdir}/rbInsert.png[width=75%]
 //[width=75%, link="{imagesdir}/Fig8_32_rbInsert.svg", window="_blank"]
-"D:\GitWorks\DrakonJsLocal\Project_Book\docs-src\modules\section-8\assets\images\part_4\Fig8_32_rbInsert.png"
+
 [.text-center]
 Figure 8.32. DRAKON-diagram of the function `rbInsert(tree, data)`
 
