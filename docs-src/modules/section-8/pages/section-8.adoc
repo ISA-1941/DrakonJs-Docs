@@ -423,7 +423,7 @@ Figure 8.31. Designation of the degree of "kinship" of RB Tree nodes (cluster) (
 
 ==== 8.4.1.2. Inserting a new node
 
-In the most general way the red-black tree construction algorithm is presented by the function `rbInsert(tree, key)`(Figure 8.32):
+In the most general way the red-black tree construction algorithm is presented by the function `rbInsert(tree, key)`(Figure 8.32)
 
 image::{imagesdir}/Fig8_33_fixInsert.png[width=75%, link="{imagesdir}/Fig8_33_fixInsert.svg", window="_blank"]
 //image::{imagesdir}/Fig8_32_rbInsert.png[width=75%]
@@ -508,16 +508,6 @@ a. Recolor the new local root (x) → black, G → red.
 b. Perform a left rotation around the grandparent (G).
 | The double rotation restructures the tree to balance it. The new node (x) becomes the root of this subtree.
 |===
-
-
-The DRAKON-diagram of the red-black tree balancing algorithm when entering a new node is shown in Figure 8.33.
-
-//image::{imagesdir}/Fig8_34_fixRedRed.png[width=100%]
-image::{imagesdir}/Fig8_33_fixRedRed.png[width=100%, link="{imagesdir}/Fig8_33_fixRedRed.svg", window="_blank"]
-
-[.text-center]
-Figure 8.33. Red-Black Tree Balancing Algorithm DRAKON-diagram 
-
 
 The DRAKON-diagram of the node rotation algorithms to the red and black tree cluster is shown in Figure 8.34a,b.
 
