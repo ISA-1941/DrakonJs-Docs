@@ -412,8 +412,7 @@ Figure 8.31. Designation of the degree of "kinship" of RB Tree nodes (cluster) (
 
 In the most general way the red-black tree construction algorithm is presented by the function `rbInsert(tree, key)`(Figure 8.32)
 
-image::{imagesdir}/Fig8_32_rbInsert.png[width=75%]
-//[width=75%, link="{imagesdir}/Fig8_32_rbInsert.svg", window="_blank"]
+image::{imagesdir}/Fig8_32_rbInsert.png[width=75%, link="{imagesdir}/Fig8_32_rbInsert.svg", window="_blank"]
 
 [.text-center]
 Figure 8.32. DRAKON-diagram of the function `rbInsert(tree, data)`
