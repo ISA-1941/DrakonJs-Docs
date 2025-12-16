@@ -513,9 +513,6 @@ image::{imagesdir}/Fig8_34b_rotateRight.png[width=100%, link="{imagesdir}/Fig8_3
 [.text-center]
 Figure 8.35. DRAKON-diagrams of node rotation algorithms used in red-black tree clusters.
 
-
-==== 8.4.1.2. Rebalancing After Insertion — Video Examples
-
 The following videos demonstrate rebalancing during node insertion in Red-Black trees.
 
 [.text-center]
@@ -565,7 +562,7 @@ You are encouraged to deepen your understanding of Red-Black Trees by conducting
 
 ==== 8.4.2. Deleting a Node from a red-black tree
 
-!!!!!!! https://www.youtube.com/watch?v=OAkmHIR9YkY&t=1421s !!!!!!!!
+//!!!!!!! https://www.youtube.com/watch?v=OAkmHIR9YkY&t=1421s !!!!!!!!
 
 Removing a node from a red-black tree is a complex process because it depends on the location of the node, the presence of children, and the color of the nodes involved. However, in several common cases, no rebalancing is required at all.
 

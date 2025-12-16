@@ -1,6 +1,18 @@
 {
     "history": [
         {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\deleteNode.drakon",
+            "whenOpened": "2025-12-16T21:26:24.511Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixDelete.drakon",
+            "whenOpened": "2025-12-16T15:21:45.515Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\deleteNode.drakon",
+            "whenOpened": "2025-12-16T15:20:39.250Z"
+        },
+        {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\rbInsert.drakon",
             "whenOpened": "2025-12-16T14:59:03.848Z"
         },
@@ -33,10 +45,6 @@
             "whenOpened": "2025-12-15T10:03:06.111Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\deleteNode.drakon",
-            "whenOpened": "2025-12-14T21:20:29.418Z"
-        },
-        {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\describeCluster.drakon",
             "whenOpened": "2025-12-14T21:20:10.036Z"
         },
@@ -67,10 +75,6 @@
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\determineDeleteCase.drakon",
             "whenOpened": "2025-12-03T20:16:14.385Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixDelete.drakon",
-            "whenOpened": "2025-12-01T20:31:33.255Z"
         },
         {
             "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\search.drakon",
