@@ -568,13 +568,13 @@ Removing a node from a red-black tree is a complex process because it depends on
 
 The deletion process in a Red-Black Tree (RBT) consists of the following steps, with special attention paid to maintaining the tree's balancing properties:
 
-1. `Identification and Search:` As with a standard Binary Search Tree (BST) deletion, the algorithm first identifies and locates the node (x) that needs to be removed from the tree structure.
+1. `Identification and Search:` As with a standard Binary Search Tree (BST) deletion, the algorithm first identifies and locates the node (z) that needs to be removed from the tree structure.
 
 2. `Deletion and Replacement:`
-If the node (x) has zero or one child, the deletion is straightforward: remove x and  replace it with its non-NIL child, or with a NIL node if it has no children. If node (x) has two children, its value is replaced by its inorder successor (the minimum node in its right subtree) or its inorder predecessor (the maximum node in its left subtree). The deletion operation is then performed on the successor/predecessor node, which is guaranteed to have at most one child. This replacement process is critical for maintaining the BST property.
+If the node (z) has zero or one child, the deletion is straightforward: remove x and  replace it with its non-NIL child, or with a NIL node if it has no children. If node (z) has two children, its value is replaced by its inorder successor (the minimum node in its right subtree) or its inorder predecessor (the maximum node in its left subtree). The deletion operation is then performed on the successor/predecessor node, which is guaranteed to have at most one child. This replacement process is critical for maintaining the BST property.
 
 3. Color of the Node to be Removed::
-The complexity of the balancing operation depends entirely on the color of the node that is actually removed (the node that takes the final position of x, which might be the successor/predecessor).
+The complexity of the balancing operation depends entirely on the color of the node that is actually removed (the node that takes the final position of z, which might be the successor/predecessor).
  
 [loweralpha]
 .. Deleting a Red Node::
@@ -591,9 +591,9 @@ This is the more complex case. Removing a black node violates the RBT property t
 `Case A`: Deleting a Red Node with No Children
 Since the node is red, its removal does not affect the black-height of any path.
 The tree remains balanced without any additional operations.
-Tree-Cluster: x:R, x←P; P:R|B; 
+Tree-Cluster: z:R, z←P; P:R|B; 
 
-image::{imagesdir}/Fig8_38_Del_Case_0.png[width=50%]
+image::{imagesdir}/Fig8_35_Del_Case_0.png[width=50%]
 
 `Case B`: Deleting a Black Node with One Red Child
 
@@ -601,24 +601,21 @@ The red child replaces the deleted black node and is repainted black.
 
 This preserves the black-height on all paths through this subtree.
 
-Tree-Cluster: x:B, x←P; x_L|x_R:R → Replace x with child (x_L|x_R); P:R|B
-
-
-
+Tree-Cluster: z:B, z←P; z_L|z_R:R → Replace z with child (z_L|z_R); P:R|B
 
 To understand the balancing operations, we first introduce the standard notation used throughout this section (Figure 8.37):
 
-x: The node to be deleted, or the "double-black" node that replaces it after deletion.
-P: The parent of x.
-s: The sibling of x.
+z: The node to be deleted, or the "double-black" node that replaces it after deletion.
+P: The parent of z.
+s: The sibling of z.
 s_L, s_R: The left and right children of the sibling s.
 
-image::{imagesdir}/Fig8_37_Term.jpg[width=50%]
+image::{imagesdir}/Fig8_36_Term.jpg[width=50%]
 
 [.text-center]
-Figure 8.37. Tree node relationship
+Figure 8.36. Tree node relationship
 
-The deletion algorithm follows three key stages. The following sections detail all possible cases it must address. The final and most complex stage, resolving a "double-black" node, is handled by the `fixDoubleBlack(x)` function. 
+The deletion algorithm follows three key stages. The following sections detail all possible cases it must address. The final and most complex stage, resolving a "double-black" node, is handled by the `fixDoubleBlack(z)` function. 
 
 *Case 1: The Sibling s is Red*
 
@@ -628,7 +625,7 @@ This is a "gateway" case. A red sibling allows us to perform a rotation to trans
 |===
 | Tree-Cluster (BEFORE) | Violation | Actions | Tree-Cluster (AFTER)
 
-a| x:DB, x←P; P:B; s:R, s→P; s_L:B; s_R:B
+a| z:DB, z←P; P:B; s:R, s→P; s_L:B; s_R:B
 | Red sibling blocks direct access to black nephews. Creates an imbalanced subtree.
 |
 
