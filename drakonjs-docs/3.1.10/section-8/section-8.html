@@ -764,8 +764,8 @@ Node includes the following fields: <code>data</code> - node numeric value,  <co
 <div class="paragraph text-center">
 <p>Figure 8.30. DRAKON-diagram of Node and Tree Description</p>
 </div>
-<div class="paragraph text-center">
-<p>Figure 8.30. DRAKON-diagram of Node and Tree  Description</p>
+<div class="paragraph">
+<p>The insertion of a new node into a red-black tree is performed by the <code>rbInsert(tree, key)</code> function, which creates a new red node and connects it to the tree in the same way as in a regular binary search tree. However, this simple act of insertion may cause a local violation of one or more red-black properties, most commonly the “no two consecutive red nodes” rule. To restore balance, the algorithm analyses the local configuration of nodes — a tree-cluster — formed by the newly added node x, its parent P, grandparent G, and uncle U.</p>
 </div>
 <div class="paragraph">
 <p>Next, consider the node positions in the tree as a result of each new
