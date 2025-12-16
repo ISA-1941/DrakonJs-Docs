@@ -969,15 +969,15 @@ You are encouraged to deepen your understanding of Red-Black Trees by conducting
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><code>Identification and Search:</code> As with a standard Binary Search Tree (BST) deletion, the algorithm first identifies and locates the node (x) that needs to be removed from the tree structure.</p>
+<p><code>Identification and Search:</code> As with a standard Binary Search Tree (BST) deletion, the algorithm first identifies and locates the node (z) that needs to be removed from the tree structure.</p>
 </li>
 <li>
 <p><code>Deletion and Replacement:</code>
-If the node (x) has zero or one child, the deletion is straightforward: remove x and  replace it with its non-NIL child, or with a NIL node if it has no children. If node (x) has two children, its value is replaced by its inorder successor (the minimum node in its right subtree) or its inorder predecessor (the maximum node in its left subtree). The deletion operation is then performed on the successor/predecessor node, which is guaranteed to have at most one child. This replacement process is critical for maintaining the BST property.</p>
+If the node (z) has zero or one child, the deletion is straightforward: remove x and  replace it with its non-NIL child, or with a NIL node if it has no children. If node (z) has two children, its value is replaced by its inorder successor (the minimum node in its right subtree) or its inorder predecessor (the maximum node in its left subtree). The deletion operation is then performed on the successor/predecessor node, which is guaranteed to have at most one child. This replacement process is critical for maintaining the BST property.</p>
 </li>
 <li>
 <p>Color of the Node to be Removed::
-The complexity of the balancing operation depends entirely on the color of the node that is actually removed (the node that takes the final position of x, which might be the successor/predecessor).</p>
+The complexity of the balancing operation depends entirely on the color of the node that is actually removed (the node that takes the final position of z, which might be the successor/predecessor).</p>
 </li>
 </ol>
 </div>
@@ -1007,11 +1007,11 @@ This is the more complex case. Removing a black node violates the RBT property t
 <p><code>Case A</code>: Deleting a Red Node with No Children
 Since the node is red, its removal does not affect the black-height of any path.
 The tree remains balanced without any additional operations.
-Tree-Cluster: x:R, x←P; P:R|B;</p>
+Tree-Cluster: z:R, z←P; P:R|B;</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<img src="_images/Fig8_38_Del_Case_0.png" alt="Fig8 38 Del Case 0" width="50%">
+<img src="_images/Fig8_35_Del_Case_0.png" alt="Fig8 35 Del Case 0" width="50%">
 </div>
 </div>
 <div class="paragraph">
@@ -1024,27 +1024,27 @@ Tree-Cluster: x:R, x←P; P:R|B;</p>
 <p>This preserves the black-height on all paths through this subtree.</p>
 </div>
 <div class="paragraph">
-<p>Tree-Cluster: x:B, x←P; x_L|x_R:R → Replace x with child (x_L|x_R); P:R|B</p>
+<p>Tree-Cluster: z:B, z←P; z_L|z_R:R → Replace z with child (z_L|z_R); P:R|B</p>
 </div>
 <div class="paragraph">
 <p>To understand the balancing operations, we first introduce the standard notation used throughout this section (Figure 8.37):</p>
 </div>
 <div class="paragraph">
-<p>x: The node to be deleted, or the "double-black" node that replaces it after deletion.
-P: The parent of x.
-s: The sibling of x.
+<p>z: The node to be deleted, or the "double-black" node that replaces it after deletion.
+P: The parent of z.
+s: The sibling of z.
 s_L, s_R: The left and right children of the sibling s.</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<img src="_images/Fig8_37_Term.jpg" alt="Fig8 37 Term" width="50%">
+<img src="_images/Fig8_36_Term.jpg" alt="Fig8 36 Term" width="50%">
 </div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 8.37. Tree node relationship</p>
+<p>Figure 8.36. Tree node relationship</p>
 </div>
 <div class="paragraph">
-<p>The deletion algorithm follows three key stages. The following sections detail all possible cases it must address. The final and most complex stage, resolving a "double-black" node, is handled by the <code>fixDoubleBlack(x)</code> function.</p>
+<p>The deletion algorithm follows three key stages. The following sections detail all possible cases it must address. The final and most complex stage, resolving a "double-black" node, is handled by the <code>fixDoubleBlack(z)</code> function.</p>
 </div>
 <div class="paragraph">
 <p><strong>Case 1: The Sibling s is Red</strong></p>
@@ -1070,7 +1070,7 @@ s_L, s_R: The left and right children of the sibling s.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>x:DB, x←P; P:B; s:R, s→P; s_L:B; s_R:B</p>
+<p>z:DB, z←P; P:B; s:R, s→P; s_L:B; s_R:B</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Red sibling blocks direct access to black nephews. Creates an imbalanced subtree.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Recolor s to black</p>
