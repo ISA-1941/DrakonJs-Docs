@@ -419,7 +419,7 @@ In the most general way the red-black tree construction algorithm is presented b
 
 image::{imagesdir}/Fig8_32_rbInsert.png[width=75%, link="{imagesdir}/Fig8_32_rbInsert.svg", window="_blank"]
 
-image::{imagesdir}/Fig8_32_rbInsert.png[width=75%]
+
 
 [.text-center]
 Figure 8.32. DRAKON-diagram of the function `rbInsert(tree, data)`
