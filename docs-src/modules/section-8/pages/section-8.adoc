@@ -593,7 +593,7 @@ Since the node is red, its removal does not affect the black-height of any path.
 The tree remains balanced without any additional operations.
 Tree-Cluster: z:R, z←P; P:R|B; 
 
-image::{imagesdir}/Fig8_35_Del_Case_0.png[width=50%]
+image::{imagesdir}/Fig8_35_Del_Case_0.png[width=30%]
 
 `Case B`: Deleting a Black Node with One Red Child
 
