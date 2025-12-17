@@ -609,8 +609,9 @@ z: The node to be deleted, or the "double-black" node that replaces it after del
 P: The parent of z.
 s: The sibling of z.
 s_L, s_R: The left and right children of the sibling s.
+y: The node that actually replaces z in the tree.
 
-image::{imagesdir}/Fig8_36_Term.jpg[width=50%]
+image::{imagesdir}/Fig8_36_Term_Cluster.jpg[width=50%]
 
 [.text-center]
 Figure 8.36. Tree node relationship
