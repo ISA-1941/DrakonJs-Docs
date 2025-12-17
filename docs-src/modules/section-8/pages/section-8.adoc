@@ -648,9 +648,7 @@ image::{imagesdir}/Fig8_37b_deleteNode.png[width=100%], link="{imagesdir}/Fig8_3
 
 b) DRAKON-diagram
 [.text-center]
-Figure 8.37. Node Deletion Algorithm 
-
-
+Figure 8.37. Node Deletion Algorithms 
 
 *Stage 2: Introducing the "Double-Black" Concept*
 If a black node is deleted, the path through its parent now has one less black node. This deficit is conceptualized as a "double-black" node (x), which is the node that replaced the deleted one (or a NIL leaf if it had no children). The goal of the next stage is to "bubble" this extra blackness up the tree until it can be dissolved.
