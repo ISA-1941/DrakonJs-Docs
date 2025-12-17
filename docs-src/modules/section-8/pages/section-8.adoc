@@ -593,7 +593,7 @@ Since the node is red, its removal does not affect the black-height of any path.
 The tree remains balanced without any additional operations.
 Tree-Cluster: z:R, z←P; P:R|B; 
 
-image::{imagesdir}/Fig8_35_Del_Case_0.jpg[width=50%]
+image::{imagesdir}/Fig8_35_Del_Case_0.png[width=50%]
 
 `Case B`: Deleting a Black Node with One Red Child
 
@@ -636,17 +636,18 @@ Recolor P to red
 Left-rotate around P
 
 Re-analyze the new configuration of x (its sibling is now black)
-| x:DB, x←P; P:R; s:B, s→P; s_L:B; s_R:B (Now proceed to Case 2, 3, or 4)
+| z:DB, z←P; P:R; s:B, s→P; s_L:B; s_R:B (Now proceed to Case 2, 3, or 4)
 |===
 
-//image::{imagesdir}/Fig8_38a_mindMap_deleteNode.png[width=75%]
-image::{imagesdir}/Fig8_37a_mindMap_deleteNode.png[width=100%, link="{imagesdir}/Fig8_37a_mindMap_deleteNode.svg", window="_blank"]
+image::{imagesdir}/Fig8_37a_mindMap_deleteNode.png[width=75%]
+
 a) Intellect map
 
 //image::{imagesdir}/Fig8_38b_deleteNode.png[width=75%]
-image::{imagesdir}/Fig8_37b_deleteNode.png[width=100%], link="{imagesdir}/Fig8_37b_deleteNode.svg", window="_blank"]
+image::{imagesdir}/Fig8_37b_deleteNode.png[width=100%, link="{imagesdir}/Fig8_38b_deleteNode.svg", window="_blank"]
 
 b) DRAKON-diagram
+
 [.text-center]
 Figure 8.37. Node Deletion Algorithms 
 
@@ -657,8 +658,10 @@ If a black node is deleted, the path through its parent now has one less black n
 This is the core rebalancing phase. The function `fixDoubleBlack(x)` is called, where x is the double-black node. The resolution depends entirely on the color of x's sibling (s) and that sibling's children (Figure 8.38). 
 
 image::{imagesdir}/Fig8_38a_fixDoubleBlack.png[width=50%]
-//image::{imagesdir}/Fig8_38b_fixDoubleBlackStep.png[width=75%]
-image::{imagesdir}/Fig8_38b_fixDoubleBlackStep.png[width=100%, link="{imagesdir}/Fig8_38b_fixDoubleBlackStep.svg", window="_blank"]
+
+image::{imagesdir}/Fig8_38b_fixDoubleBlackStep.png[width=75%]
+//image::{imagesdir}/Fig8_38b_fixDoubleBlackStep.png[width=100%, link="{imagesdir}/Fig8_38b_fixDoubleBlackStep.svg", window="_blank"]
+
 [.text-center]
 Figure 8.38. DRAKON-diagram of the node structure correction algorithm when removing "double black node" 
 
@@ -800,7 +803,7 @@ This transforms the case into 3c (R-R). Apply 3c.
 Replacing a node in a red-black tree using `joinParentChild` is shown on Figure 8.39
 [caption="Figure 8.40", align="center"]
 
-image::{imagesdir}/Fig8_39_joinPC.png[width=80%]
+image::{imagesdir}/Fig8_39_joinPC.png[width=60%]
 
 [.text-center]
 Figure 39. Replacing a node in a red-black tree
