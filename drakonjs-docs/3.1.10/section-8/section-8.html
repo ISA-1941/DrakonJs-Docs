@@ -1011,20 +1011,21 @@ Tree-Cluster: z:R, z←P; P:R|B;</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<img src="_images/Fig8_35_Del_Case_0.png" alt="Fig8 35 Del Case 0" width="30%">
+<img src="_images/Fig8_35_Del_Case_A.png" alt="Fig8 35 Del Case A" width="30%">
 </div>
 </div>
 <div class="paragraph">
 <p><code>Case B</code>: Deleting a Black Node with One Red Child</p>
 </div>
 <div class="paragraph">
-<p>The red child replaces the deleted black node and is repainted black.</p>
+<p>The red child replaces the deleted black node and is repainted black.
+This preserves the black-height on all paths through this subtree.
+Tree-Cluster: z:B, z←P; z_L|z_R:R → Replace z with child (z_L|z_R); P:R|B</p>
 </div>
-<div class="paragraph">
-<p>This preserves the black-height on all paths through this subtree.</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="_images/Fig8_35_Del_Case_B.png" alt="Fig8 35 Del Case B" width="30%">
 </div>
-<div class="paragraph">
-<p>Tree-Cluster: z:B, z←P; z_L|z_R:R → Replace z with child (z_L|z_R); P:R|B</p>
 </div>
 <div class="paragraph">
 <p>To understand the balancing operations, we first introduce the standard notation used throughout this section (Figure 8.37):</p>
