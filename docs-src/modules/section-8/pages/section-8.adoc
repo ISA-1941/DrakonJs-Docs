@@ -611,7 +611,7 @@ s: The sibling of z.
 s_L, s_R: The left and right children of the sibling s.
 y: The node that actually replaces z in the tree.
 
-image::{imagesdir}/Fig8_36_Term_Cluster.png[width=50%]
+image::{imagesdir}/Fig8_36_Term_Cluster.png[width=30%]
 
 [.text-center]
 Figure 8.36. Tree node relationship
