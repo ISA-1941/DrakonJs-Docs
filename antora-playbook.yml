@@ -2,15 +2,18 @@ site:
   title: Drakon.js Docs
   url: https://ISA-1941.github.io/DrakonJs-Docs/
   start_page: drakonjs-docs::index.adoc
+
 content:
   sources:
     - url: .
+      branches: HEAD
       start_path: docs-src
+
 ui:
   bundle:
     url: ./ui/ui-bundle.zip
   supplemental_files:
-    - path: assets/css/custom.css   # is the only way Antora knows about the file 
+    - path: assets/css/custom.css
 
 output:
   dir: ./public
