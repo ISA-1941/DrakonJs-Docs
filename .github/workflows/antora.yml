@@ -21,7 +21,8 @@ jobs:
           node-version: '20'
 
       - name: Install Antora
-        run: npm install @antora/site-generator 
+        # Оставляем только основной пакет, он содержит всё необходимое
+        run: npm install @antora/site-generator
 
       - name: Generate Site
         run: npx antora antora-playbook.yml
@@ -29,12 +30,14 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Указываем папку, в которую Antora собрала сайт (у вас это public)
           path: ./public
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
