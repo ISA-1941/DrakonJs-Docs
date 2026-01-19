@@ -338,7 +338,7 @@ image::{imagesdir}/Fig8_28_mainFunction.svg[width=75%, link="{imagesdir}/Fig8_28
 [.text-center]
 Figure 8.28. DRAKON-diagram of the main-function 
 
-=== 8.4 Red-black trees
+=== 8.4 Red-black trees       Проверка ПРОВЕРКА
 
 ==== 8.4.1. Inserting a new node and the balancing process
 
