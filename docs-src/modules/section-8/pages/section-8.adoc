@@ -830,7 +830,7 @@ additional operations must be performed to ensure that the properties of
 the red-black tree are preserved. The DRAKON-diagrams algorithm of this
 process is shown in Fig.8.41.
 
-image::{imagesdir}/Fig8_41_fixDoubleBlack.png[width=80%]
+image::{imagesdir}/Fig8_41a_fixDoubleBlack.png[width=80%]
 
 //image::{imagesdir}/Fig8_42b_fixDoubleBlackStep.png[width=100%]
 image::{imagesdir}/Fig8_41b_fixDoubleBlackStep.png[width=100%, link="{imagesdir}/Fig8_41b_fixDoubleBlackStep.svg", window="_blank"]
@@ -846,11 +846,11 @@ replace the node with its subsequent node in order, and then delete the
 next node in order (which is no more than a node with one child node)
 using the method described above.
 
-image::{imagesdir}/Fig8_43_delRed.png[width=80%]
+image::{imagesdir}/Fig8_42_delRed.png[width=80%]
 
-Figure 8.43. DRAKON-diagram of the node structure correction algorithm
+Figure 8.42. DRAKON-diagram of the node structure correction algorithm
 when removing "double black node"
-
+cd ..
 If a node is deleted and replaced with another node, the properties of
 the red-black tree may be compromised. To restore them, the following
 operations must be performed:
