@@ -1,108 +1,44 @@
 {
     "history": [
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\deleteNode.drakon",
-            "whenOpened": "2025-12-16T21:26:24.511Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/section-8/attachments/rbTree/fixDelete.drakon",
+            "whenOpened": "2026-01-19T21:21:46.815Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixDelete.drakon",
-            "whenOpened": "2025-12-16T15:21:45.515Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/section-8/attachments/rbTree/fixCase3_4.drakon",
+            "whenOpened": "2026-01-19T21:21:32.229Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\deleteNode.drakon",
-            "whenOpened": "2025-12-16T15:20:39.250Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/section-8/attachments/rbTree/fixCase2.drakon",
+            "whenOpened": "2026-01-19T21:21:29.242Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\rbInsert.drakon",
-            "whenOpened": "2025-12-16T14:59:03.848Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/section-8/attachments/rbTree/fixCase1.drakon",
+            "whenOpened": "2026-01-19T21:21:25.838Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\makeRBTree.drakon",
-            "whenOpened": "2025-12-16T13:22:18.907Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/section-8/attachments/rbTree/deleteNode.drakon",
+            "whenOpened": "2026-01-19T21:20:43.635Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\makeNode.drakon",
-            "whenOpened": "2025-12-16T13:22:16.196Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/section-8/attachments/rbTree/findMinBest.drakon",
+            "whenOpened": "2026-01-19T21:20:31.307Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixInsert.drakon",
-            "whenOpened": "2025-12-15T21:24:59.440Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/section-8/attachments/rbTree/determineDeleteCase.drakon",
+            "whenOpened": "2026-01-19T21:20:27.478Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\rbInsertCaseShort.drakon",
-            "whenOpened": "2025-12-15T20:53:10.611Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/section-8/attachments/rbTree/describeCluster.drakon",
+            "whenOpened": "2026-01-19T21:20:25.253Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\processDeleteCase.drakon",
-            "whenOpened": "2025-12-15T20:48:54.873Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/section-8/attachments/rbTree/rotateRight.drakon",
+            "whenOpened": "2026-01-19T12:17:22.379Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixCase3_4.drakon",
-            "whenOpened": "2025-12-15T10:03:10.628Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixCase2.drakon",
-            "whenOpened": "2025-12-15T10:03:06.111Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\describeCluster.drakon",
-            "whenOpened": "2025-12-14T21:20:10.036Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\bstInsert.drakon",
-            "whenOpened": "2025-12-14T21:19:03.987Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\main.drakon",
-            "whenOpened": "2025-12-11T18:47:37.364Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\fixCase1.drakon",
-            "whenOpened": "2025-12-09T19:55:17.963Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\printTree.drakon",
-            "whenOpened": "2025-12-05T17:16:16.965Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\rotateLeft.drakon",
-            "whenOpened": "2025-12-04T15:28:49.938Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\findMin.drakon",
-            "whenOpened": "2025-12-03T20:41:39.468Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\determineDeleteCase.drakon",
-            "whenOpened": "2025-12-03T20:16:14.385Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\search.drakon",
-            "whenOpened": "2025-11-30T10:52:41.040Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\rotateRight.drakon",
-            "whenOpened": "2025-11-30T10:52:40.169Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\printTree.drakon",
-            "whenOpened": "2025-11-30T10:52:30.011Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\module.drakon",
-            "whenOpened": "2025-11-30T10:52:28.198Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\findNode.drakon",
-            "whenOpened": "2025-11-30T10:50:07.961Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\bstDelete.drakon",
-            "whenOpened": "2025-11-30T10:44:36.739Z"
-        },
-        {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\rbTree\\findMinBest.drakon",
-            "whenOpened": "2025-11-29T18:13:24.589Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/section-8/attachments/rbTree/rbInsert.drakon",
+            "whenOpened": "2026-01-19T12:17:19.809Z"
         }
     ]
 }

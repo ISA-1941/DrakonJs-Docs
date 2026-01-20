@@ -1,8 +1,16 @@
 {
     "history": [
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\RB_TREE_others\\rbTreeWorked\\deleteNode.drakon",
-            "whenOpened": "2025-11-27T17:08:54.099Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/section-8/attachments/RB_TREE_others/rbTreeWorked/fixDoubleBlack.drakon",
+            "whenOpened": "2026-01-20T09:01:23.996Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/section-8/attachments/RB_TREE_others/rbTreeWorked/fixDoubleBlackStep.drakon",
+            "whenOpened": "2026-01-20T08:57:06.047Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/section-8/attachments/RB_TREE_others/rbTreeWorked/joinParentChild.drakon",
+            "whenOpened": "2026-01-19T21:22:41.749Z"
         }
     ]
 }
