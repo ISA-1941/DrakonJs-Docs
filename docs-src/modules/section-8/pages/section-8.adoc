@@ -838,6 +838,9 @@ image::{imagesdir}/Fig8_41b_fixDoubleBlackStep.png[width=100%, link="{imagesdir}
 [.text-center]
 Figure 8.41. DRAKON-diagram of the node structure correction algorithm when removing "double black node"
 
+
+This place is failed
+
 If the replacement node is a leaf node (i.e., has no child nodes), we
 replace the node with a "zero" leaf node and color it black. If the
 replacement node has one child node, we replace the node with its child
