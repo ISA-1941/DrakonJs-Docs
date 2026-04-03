@@ -1,7 +1,7 @@
 site:
-  title: Drakon.js Docs
+  title: DRAKON JavaScript Docs
   url: https://ISA-1941.github.io/DrakonJs-Docs/
-  start_page: drakonjs-docs::index.adoc
+  start_page: ROOT::index.adoc
 
 content:
   sources:
@@ -11,9 +11,9 @@ content:
 
 ui:
   bundle:
-    url: ./ui/ui-bundle.zip
-  supplemental_files:
-    - path: assets/css/custom.css
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
 
 output:
   dir: ./public
+  clean: true

@@ -1,0 +1,732 @@
+= Section 9. Graphs and Graph Algorithms
+
+:imagesdir: ./assets/images
+
+== 9.1. General Information. Basic Terminology
+
+[source,asciidoc]
+
+[.right]
+[sidebar,width=25%]
+.Core Terminology
+
+Glossary of Basic Graph Terms
+
+Before we dive into the algorithms, let us align our terminology. In the context of engineering data structures, these terms have precise meanings:
+
+Vertex (Node): The fundamental unit of a graph, representing an entity (e.g., a city, a router, or a data object).
+
+Edge (Arc): A connection between two vertices. In directed graphs, an edge is often called an Arc.
+
+Incident: An edge is incident to a vertex if the vertex is one of the edge's two endpoints.
+
+Adjacent: Two vertices are adjacent if they are connected by a common edge.
+
+Degree (deg(v)): The count of edges incident to vertex v.
+
+Loop: An edge that connects a vertex to itself.
+
+Path: A sequence of edges that allows you to travel from one vertex to another.
+
+Cycle: A path that starts and ends at the same vertex.
+
+This section discusses data structures such as graphs. In mathematics, a graph is a structure consisting of vertices (nodes) and edges (connections) that connect these vertices.
+
+In general, graphs share many similarities with trees, and one can consider trees as a special case of graphs. However, the practical value of graphs in solving real-world problems is much greater. Many tasks can be reduced to considering a set of objects whose properties are described by the relationships between them.
+
+Such objects include:
+
+    Electrical and electronic circuits
+
+    Circuit boards
+
+    Road maps
+
+    Aviation routes
+
+    Descriptions of constructions
+
+    Games
+
+Among the tasks that can be solved using graphs are:
+
+    Finding the shortest path between two vertices
+
+    Solving the problem of maximum capacity of pipelines, road networks, or computer networks
+
+    Distributing N workers to perform M different types of work
+
+    Choosing the most efficient method of problem solving, among others
+
+A graph is a mathematical structure defined by two sets:
+
+    A set of vertices (also known as nodes)
+
+    A set of edges that connect pairs of these vertices
+
+Formally, a graph is denoted as G = (V, E), where V is the set of vertices and E is the set of edges connecting them.
+
+=== Directed and Undirected Graphs
+
+Graphs as data structures can be represented in two primary forms: undirected and directed. In undirected graphs, there are no "inputs" or "outputs"; there is only the objective fact of a connection. In directed graphs (or digraphs), direction matters, and a connection from vertex u to vertex v is not equivalent to a connection from v to u (Figure 9.1).
+
+1. Undirected Graph
+
+In these graphs, there are no "inputs" or "outputs"; there is only the objective fact of a connection.
+
+    Vertex Degree (deg(v)): This is the total number of edges incident to a given vertex.
+
+    Loops: This is a critical point for this textbook. In an undirected graph, a loop is counted twice (+2 to the degree). Why? Because both ends of the loop-edge are "plugged into" the same vertex, and each end contributes to the degree.
+
+2. Directed Graph (Digraph)
+
+Here, the logic becomes more nuanced as direction matters. The degree is split into two distinct components:
+
+    In-degree (deg⁻(v)): The number of edges entering (incident into) the vertex.
+
+    Out-degree (deg⁺(v)): The number of edges leaving (incident from) the vertex.
+
+    Total Degree: The sum of the in-degree and out-degree.
+
+    Loops in a Digraph: In this case, a loop is counted exactly once for the in-degree and once for the out-degree. It does not "double" the total degree in the same way as in an undirected graph; instead, it is honestly distributed between the two directions.
+
+[.text-center]
+image::{imagesdir}/Fig9_1_example_Graph.svg[width=75%]
+
+[.text-center]
+Figure 9.1. The view of (a) undirected; (b) directed
+
+=== Adjacency, Incidence, and Degree
+
+A vertex and an edge are incident if the vertex is one of the endpoints of the edge.
+
+Refined Terms for Directed Graphs (Digraphs)
+
+    In-degree (deg⁻(v)): The number of edges directed into the vertex. In flow-based models, this represents the "input" capacity.
+
+    Out-degree (deg⁺(v)): The number of edges directed away from the vertex. In state machines, this represents the number of possible transitions.
+
+    Total Degree: The sum of in-degree and out-degree.
+
+    Self-Loop (Digraph): A special case where an edge starts and ends at the same vertex. It contributes exactly 1 to the in-degree and exactly 1 to the out-degree.
+
+[.text-center]
+image::{imagesdir}/Figure_9.2_Basic_graph_parameters.svg[width=75%, align="center"]
+
+[.text-center]
+Figure 9.2. Basic graph parameters
+
+== 9.2. Graph Representation Methods
+
+Solving problems related to processing a data set organized in the form of graphs requires modeling them in computer programs. In practice, two structures are typically used to model the structure of a graph: the adjacency matrix and the adjacency list.
+
+=== Adjacency Matrix
+
+An adjacency matrix is a two-dimensional array that indicates the existence of a relationship between two vertices. If the graph has V vertices, then the adjacency matrix is a V × V array. In an undirected graph, the adjacency relationship is symmetric: if vertex *u* is adjacent to *v*, then *v* is also adjacent to *u*. This symmetry is reflected in the adjacency matrix, which is always symmetric about its main diagonal.
+
+In contrast, for a directed graph (or digraph), the relationship is not necessarily symmetric. An edge (u, v) means vertex *v* is adjacent from vertex *u*, and this is indicated in the matrix by a '1' at position A[u][v] only.
+
+[.text-center]
+image::{imagesdir}/Fig9_3_AdjMatrix.jpg[width=75%]
+
+[.text-center]
+Figure 9.3. Adjacency matrix for undirected and directed graphs
+
+=== Adjacency List
+
+In some cases, a more memory-efficient way to represent a graph is to use an adjacency list. This method involves an array of linked lists (or arrays), where each individual list contains information about which vertices are adjacent to a given one.
+
+[.text-center]
+image::{imagesdir}/Fig9_4_AdjList.jpg[width=75%]
+
+[.text-center]
+Figure 9.4. Adjacency list representation
+
+=== Comparison and Complexity
+
+The space complexity of representing a graph depends heavily on the chosen data structure:
+
+    Adjacency Matrix: Requires O(V²) memory. This is memory-intensive, especially for large, sparse graphs (graphs with relatively few edges). It also often requires knowing the number of vertices in advance.
+
+    Adjacency List: Requires O(V + E) memory, where E is the number of edges. This is much more efficient for sparse graphs, which are common in real-world applications.
+
+In practice, the choice between these representations is a trade-off. An adjacency matrix is often preferable for dense graphs (graphs where the number of edges approaches V²) and when frequent edge lookups are required (O(1) complexity). An adjacency list is generally better for sparse graphs.
+
+=== Weighted Graphs
+
+Many real-life problems require modeling graphs with numerical values associated with edges, such as distance, cost, or travel time. Such graphs are called weighted graphs. In an adjacency matrix, the weight is stored as the value of the matrix element (instead of '1'), and a special value (like ∞ or '0') can represent the absence of an edge. In an adjacency list, each element in the list is typically a structure containing both the adjacent vertex ID and the edge weight.
+
+[.text-center]
+image::{imagesdir}/Fig9_5_WeightField.svg[width=75%]
+
+[.text-center]
+Figure 9.5. Adjacency list with a 'weight' field
+
+=== Graph Representation in JavaScript
+
+Since JavaScript is a dynamic language, we rely on the flexibility of Objects, Arrays, and built-in collections like Map and Set.
+
+1. Adjacency Matrix in JavaScript
+
+A two-dimensional array is used, where vertices correspond to array indices.
+
+[source,javascript]
+
+// Initialize a 3x3 matrix for an undirected graph
+const numVertices = 3;
+const adjMatrix = Array(numVertices).fill().map(() => Array(numVertices).fill(0));
+
+function addEdgeMatrix(u, v) {
+adjMatrix[u][v] = 1;
+adjMatrix[v][u] = 1; // For undirected graph
+}
+
+addEdgeMatrix(0, 1);
+addEdgeMatrix(1, 2);
+
+// Check adjacency (O(1))
+console.log(adjMatrix[0][1]); // 1
+
+2. Adjacency List in JavaScript
+
+This is the most popular representation for most tasks in JS. It is typically implemented as an array of arrays.
+
+[source,javascript]
+
+const numVertices = 3;
+const adjList = Array(numVertices).fill().map(() => []);
+
+function addEdgeList(u, v) {
+adjList[u].push(v);
+adjList[v].push(u); // For undirected graph
+}
+
+addEdgeList(0, 1);
+addEdgeList(1, 2);
+
+// Check adjacency (O(degree(u)))
+console.log(adjList[0].includes(1)); // true
+
+3. Weighted Graph in JavaScript
+
+For weighted graphs, we store objects containing the neighbor vertex and the weight.
+
+[source,javascript]
+
+const weightedAdjList = Array(numVertices).fill().map(() => []);
+
+function addWeightedEdge(u, v, weight) {
+weightedAdjList[u].push({ node: v, weight });
+weightedAdjList[v].push({ node: u, weight }); // For undirected weighted graph
+}
+
+addWeightedEdge(0, 1, 5);
+addWeightedEdge(1, 2, 10);
+
+== 9.3. Fundamentals of Graph Traversal
+
+Once a graph structure is established, the next logical task is to systematically visit all its vertices. This process is called graph traversal. There are two primary techniques: Depth-First Search (DFS) and Breadth-First Search (BFS).
+
+The fundamental difference between DFS and BFS lies in the order in which they explore the graph, which stems from the underlying data structure they use to manage yet-to-be-visited vertices:
+
+    Depth-First Search (DFS) uses a stack (often implemented via recursion) to explore as deep as possible along each branch before backtracking. While DFS does not inherently find shortest paths, it is indispensable for tasks like detecting cycles, topological sorting, and exploring a graph when its overall structure is not known in advance.
+
+    Breadth-First Search (BFS) uses a queue to explore the graph level by level. It visits all direct neighbors of the starting vertex, then all of their neighbors, and so on. BFS is guaranteed to find the shortest path (in terms of the number of edges) in an unweighted graph.
+
+The step-by-step process for each algorithm is shown in the tables below for the example graph, starting from vertex V₀.
+
+[.text-center]
+image::{imagesdir}/Fig9_6_baseGraph.svg[width=75%]
+
+[.text-center]
+Figure 9.6. A simple graph for demonstrating DFS and BFS traversals
+
+The following directed graph serves as the reference structure for the DFS and BFS traces presented in Tables 9.1 and 9.2. The traversal begins at vertex V₀.
+
+=== Depth-First Search (DFS) — Using Stack (LIFO)
+
+[cols="1,2,3,4,5,6", options="header"]
+|===
+| Step | Action | Current Vertex | Unvisited Neighbors | Stack Content (LIFO) | Visited Order
+| 1 | Start | 0 | [1, 3] | [1, 3] | [0]
+| 2 | Pop from stack | 1 | [2, 3, 4] | [3, 2, 4] | [0, 1]
+| 3 | Pop from stack | 2 | [5] | [3, 4, 5] | [0, 1, 2]
+| 4 | Pop from stack | 5 | [4] | [3, 4] | [0, 1, 2, 5]
+| 5 | Pop from stack | 4 | [0, 3] (0 already visited) → [3] | [3] | [0, 1, 2, 5, 4]
+| 6 | Pop from stack | 3 | [5] (5 already visited) → [] | [] | [0, 1, 2, 5, 4, 3]
+|===
+
+[NOTE]
+.Key Principle of DFS
+====
+
+    Stack operates on LIFO (Last In, First Out)
+
+    The algorithm goes deep until the end of a branch before backtracking
+
+    New neighbors are pushed to the top of the stack
+    ====
+
+=== Breadth-First Search (BFS) — Using Queue (FIFO)
+
+[cols="1,2,3,4,5,6", options="header"]
+|===
+| Step | Action | Current Vertex | Unvisited Neighbors | Queue Content (FIFO) | Visited Order
+| 1 | Start | 0 | [1, 3] | [1, 3] | [0]
+| 2 | Dequeue from front | 1 | [2, 3, 4] | [3, 2, 4] | [0, 1]
+| 3 | Dequeue from front | 3 | [5] | [2, 4, 5] | [0, 1, 3]
+| 4 | Dequeue from front | 2 | [5] | [4, 5] | [0, 1, 3, 2]
+| 5 | Dequeue from front | 4 | [0, 3] (0 and 3 already visited) → [] | [5] | [0, 1, 3, 2, 4]
+| 6 | Dequeue from front | 5 | [4] (4 already visited) → [] | [] | [0, 1, 3, 2, 4, 5]
+|===
+
+[NOTE]
+.Key Principle of BFS
+====
+
+    Queue operates on FIFO (First In, First Out)
+
+    The algorithm expands like a wave — all neighbors first, then their neighbors
+
+    New neighbors are added to the end of the queue
+    ====
+
+=== Comparison: Stack vs. Queue
+
+[cols="1,2,3", options="header"]
+|===
+| Feature | DFS (Stack) | BFS (Queue)
+| Data Structure | Stack (LIFO) | Queue (FIFO)
+| Traversal Order | 0 → 1 → 2 → 5 → 4 → 3 | 0 → 1 → 3 → 2 → 4 → 5
+| Strategy | "Depth-first" — explores as deep as possible | "Breadth-first" — explores level by level
+| How neighbors are added | Pushed to the top of the stack | Enqueued to the end of the queue
+| When vertex is processed | Immediately after being popped | Immediately after being dequeued
+| Visualization | 🟠 Orange edges (the path taken) | 🟠🟢🔵 Colors by level/distance
+|===
+
+=== Visual Representation
+
+Stack (DFS) — LIFO
+text
+
+Step 1: Stack [1, 3]     → pop 1 (last added)
+Step 2: Stack [3, 4, 2]  → pop 2 (last added!)
+Step 3: Stack [3, 4, 5]  → pop 5
+Step 4: Stack [3, 4]     → pop 4
+Step 5: Stack [3]        → pop 3
+
+[NOTE]
+Vertex 3 was added first but processed last!
+
+Queue (BFS) — FIFO
+text
+
+Step 1: Queue [1, 3]   → dequeue 1 (first added)
+Step 2: Queue [3, 2, 4] → dequeue 3 (first in queue)
+Step 3: Queue [2, 4, 5] → dequeue 2
+Step 4: Queue [4, 5]    → dequeue 4
+Step 5: Queue [5]       → dequeue 5
+
+[NOTE]
+Order of addition = order of processing!
+
+=== Summary of Traversal Comparison
+
+These tables clearly demonstrate that:
+
+    DFS (with Stack) "dives deep" — vertex 3, added first, is processed last
+
+    BFS (with Queue) processes vertices in the order they are discovered — the wave expands evenly
+
+This is the fundamental difference between the two graph traversal algorithms! 🎯
+
+=== DRAKON-Diagrams for DFS and BFS
+
+Before analyzing the practical considerations for selecting an appropriate traversal strategy, it is instructive to examine the algorithmic logic encoded in the implementation. The Drakon-diagrams below provide a visual representation of the control flow for both Depth-First Search (DFS) and Breadth-First Search (BFS) algorithms as they are implemented in the accompanying code examples.
+
+These diagrams decompose the traversal process into discrete decision points and operations, illustrating how the choice of underlying data structure — a stack for DFS versus a queue for BFS — fundamentally shapes the execution path. Each diagram follows the same logical structure: initialization of the data structure with the starting vertex, iterative processing until no vertices remain, and systematic exploration of the graph while maintaining a visited set to prevent redundant processing.
+
+The following Drakon-diagram illustrates the DFS_stack(graph, start) function. The LIFO (Last-In-First-Out) behavior of the stack drives deep exploration, forcing the algorithm to exhaust each branch before backtracking to previously discovered vertices.
+
+[.text-center]
+image::{imagesdir}/Fig9_6a_DFS_stack.svg[width=75%]
+
+[.text-center]
+Figure 9.7a. Drakon-diagram illustrating the control flow of DFS (Depth-First Search)
+
+[.text-center]
+image::{imagesdir}/Fig9_6b_BFS_queue.svg[width=75%]
+
+[.text-center]
+Figure 9.7b. Drakon-diagram illustrating the control flow of BFS (Breadth-First Search)
+
+=== Choosing Between DFS and BFS
+
+In practice, the choice between DFS and BFS depends on the specific problem:
+
+|===
+| Task | Recommended Algorithm | Reason
+| Shortest path (unweighted) | BFS | Minimum number of edges
+| Graph connectivity | DFS or BFS | Any traversal works
+| Cycle detection | DFS | Easy to track the call stack
+| Topological sorting | DFS | Works naturally with recursion
+| Finding connected components | DFS or BFS | Any traversal works
+| Solving puzzles/mazes (any path) | DFS | Requires less memory on average
+|===
+
+== 9.4. Calculation of Paths and Travel Costs from a Given Vertex to All Other Vertices
+
+This subsection examines the implementation of an algorithm for finding all possible routes between two vertices in a graph, as well as calculating their cost characteristics — distance (in kilometers) and travel price (in arbitrary units).
+
+The graph represents a transportation network, where vertices correspond to settlements and edges represent roads between them. Each edge is characterized by two parameters: length and travel cost.
+
+To solve this problem, an all-paths search algorithm based on recursive backtracking was implemented. Unlike classical graph traversal algorithms (BFS, DFS), which find a single path or vertex visitation order, this approach enables:
+
+    Finding all possible routes between given vertices
+
+    Accounting for weighted characteristics of each edge
+
+    Calculating total distance and cost for each route
+
+    Selecting optimal routes according to different criteria
+
+[NOTE]
+====
+The implementation also includes BFS_queue and DFS_stack functions, which demonstrate classical graph traversal algorithms (breadth-first and depth-first search). However, these are not used for finding all weighted paths, as they do not provide exhaustive enumeration of all possible routes while accounting for edge weights.
+====
+
+At the core of the implemented algorithm lies the method of exponential backtracking. This approach systematically traverses all possible paths through the graph, maintaining cumulative information about the current route. Upon reaching the target vertex, the path is saved; after fully exploring each branch, a backtracking step reverts to the previous state, enabling the search to proceed with alternative routes. In the worst-case scenario, the number of paths considered grows exponentially with the number of vertices — an inherent cost of exhaustive enumeration.
+
+[.text-center]
+image::{imagesdir}/Fig9_7_searchContext.svg[width=80%]
+
+[.text-center]
+Figure 9.8. Context Object: from structure creation (a) to data population (b)
+(a) — function creates an empty container with the required structure for storing search parameters and results.
+(b) — the container is populated with data during the search process, accumulating information.
+
+A visual representation of the function structure, their relationships, and operational logic is presented in the mind map (Figure 9.9).
+
+[.text-center]
+image::{imagesdir}/Fig9_8_viewAlgorithmGraph.svg[width=80%]
+
+[.text-center]
+Figure 9.9. Mind map of path search functions
+
+=== Description of Key Functions
+
+==== initPathSearch(graph, source, target)
+
+[cols="1,3a", options="header"]
+|===
+| Attribute | Description
+| Purpose | Initializes the search for all paths from source vertex to target vertex. Creates a search context, resets parameters, and initiates recursive graph traversal.
+| Parameters | graph – graph object containing adjacency matrix and edge weights; source – source vertex identifier; target – target vertex identifier
+| Return Value | Array allPaths containing all discovered paths as pathInfo objects
+|===
+
+Operations
+
+[cols="1,3a", options="header"]
+|===
+| Step | Action
+| 1 | Creates an empty allPaths array
+| 2 | Initializes search context with starting values: currentPath – string with source vertex, totalDistance – 0, totalPrice – 0, visited – array for tracking visited vertices
+| 3 | Marks the source vertex as visited
+| 4 | Invokes recursive function findPathWithContext(source, context)
+| 5 | Returns the allPaths array for subsequent analysis
+|===
+
+[.text-center]
+image::{imagesdir}/iFig9_9_initPathSearch.svg[width=80%]
+
+[.text-center]
+Figure 9.10. Drakon-diagram of the initialization function for path search
+
+==== findPathWithContext(current, context)
+
+[cols="1,3a", options="header"]
+|===
+| Attribute | Description
+| Purpose | The core recursive function that sequentially enumerates all neighbors of the current vertex, updates accumulated parameters (path, distance, cost), and persists the discovered route upon reaching the target vertex.
+| Parameters | current – current vertex identifier; context – search state object containing target, graph, currentPath, totalDistance, totalPrice, visited, allPaths
+| Return Value | void – results are stored in context.allPaths
+|===
+
+Operations
+
+[cols="1,3a", options="header"]
+|===
+| Step | Action
+| 1 | Checks if the target vertex has been reached. If so, invokes handleFoundPath(context) and terminates the current recursive call
+| 2 | Iterates through all neighbors of the current vertex using the adjacency matrix
+| 3 | For each unvisited neighbor: invokes prepareMoveToNeighbor to prepare transition data
+| 4 | Recursively invokes findPathWithContext(neighbor, context)
+| 5 | Upon returning from recursion, invokes backtrackFromNeighbor to restore the previous state
+|===
+
+[.text-center]
+image::{imagesdir}/iFig9_10_findPathWithContext.svg[width=80%]
+
+[.text-center]
+Figure 9.11. Drakon-diagram of the recursive path search function
+
+==== handleFoundPath(context)
+
+[cols="1,3a", options="header"]
+|===
+| Attribute | Description
+| Purpose | Invoked when a complete path from source to target vertex is discovered during recursive traversal. Creates a structured record of the found path, stores it in the collection, and logs results to the console.
+| Parameters | context – search state object containing fields: currentPath (string), totalDistance (number), totalPrice (number), allPaths (array)
+| Return Value | pathInfo object with fields path, vertices, distance, price
+|===
+
+pathInfo Data Structure
+
+[cols="1,1,2a", options="header"]
+|===
+| Field | Type | Description
+| path | string | String representation of the path with vertices joined by " - " (example: "1 - 3 - 5 - 7")
+| vertices | Array<number> | Numeric array of vertex identifiers for programmatic access (example: [1, 3, 5, 7])
+| distance | number | Total path length in kilometers
+| price | number | Total path cost in monetary units (y.e.)
+|===
+
+Operations
+
+[cols="1,3a", options="header"]
+|===
+| Step | Action
+| 1 | Constructs a pathInfo object from context data
+| 2 | Appends pathInfo to the context.allPaths array
+| 3 | Logs the path, distance, and price to the console
+| 4 | Returns pathInfo for use by the caller
+|===
+
+[.text-center]
+image::{imagesdir}/iFig9_11_handleFoundPath.svg[width=80%]
+
+[.text-center]
+Figure 9.12. Drakon-diagram of the path handler function
+
+==== prepareMoveToNeighbor(context, current, neighbor)
+
+[cols="1,3a", options="header"]
+|===
+| Attribute | Description
+| Purpose | Prepares data for transitioning to a neighboring vertex: computes edge distance and traversal cost, persists the current state for subsequent backtracking.
+| Parameters | context – search state object; current – current vertex identifier; neighbor – neighboring vertex identifier
+| Return Value | oldState object containing the previous state (oldPath, oldDistance, oldPrice) for later restoration
+|===
+
+Operations
+
+[cols="1,3a", options="header"]
+|===
+| Step | Action
+| 1 | Retrieves edge distance and price between current and neighbor from the graph
+| 2 | Persists the current state in an oldState object (previous path, distance, price)
+| 3 | Updates context.currentPath by appending neighbor
+| 4 | Increments context.totalDistance by the edge distance
+| 5 | Increments context.totalPrice by the edge price
+| 6 | Marks neighbor as visited
+| 7 | Returns oldState for use in backtrackFromNeighbor
+|===
+
+[.text-center]
+image::{imagesdir}/iFig9_12_prepareMoveToNeighbor.svg[width=80%]
+
+[.text-center]
+Figure 9.13. Drakon-diagram of the transition preparation function
+
+==== backtrackFromNeighbor(context, neighbor, oldState)
+
+[cols="1,3a", options="header"]
+|===
+| Attribute | Description
+| Purpose | Performs backtracking to the previous state after processing a neighboring vertex. Resets the visited flag, restores the path and accumulated sums. This mechanism ensures exhaustive enumeration of all possible routes.
+| Parameters | context – search state object; neighbor – vertex being processed; oldState – object containing the previous state (oldPath, oldDistance, oldPrice)
+| Return Value | void – context state is restored
+|===
+
+Operations
+
+[cols="1,3a", options="header"]
+|===
+| Step | Action
+| 1 | Unmarks the neighbor vertex as visited
+| 2 | Restores context.currentPath from oldState.oldPath
+| 3 | Restores context.totalDistance from oldState.oldDistance
+| 4 | Restores context.totalPrice from oldState.oldPrice
+|===
+
+[.text-center]
+image::{imagesdir}/iFig9_13_backtrackFromNeighbor.svg[width=80%]
+
+[.text-center]
+Figure 9.14. Drakon-diagram of the backtracking function
+
+=== Algorithmic Complexity Analysis
+
+The implemented backtracking algorithm has a time complexity of O(V!) in the worst case, as it explores all possible paths without revisiting vertices. This is acceptable for small to medium-sized graphs (up to 10–12 vertices) but becomes impractical for dense graphs with many vertices. Space complexity is O(V) for storing the current path and visited vertices during recursion.
+
+Classical BFS and DFS algorithms, while not suitable for all-paths enumeration in weighted graphs, demonstrate O(V + E) time complexity and are included for pedagogical purposes to illustrate fundamental graph traversal techniques.
+
+=== Program Execution Example
+
+As an example, we will calculate all possible paths and travel costs between several pairs of vertices in the given graph (Figure 9.15).
+
+When the main() function executes, it searches for all paths for three vertex pairs: (0 → 5), (1 → 6), and (2 → 3). For each case, all found routes are displayed with their distance and cost. Subsequently, for the pair (0 → 5), the shortest route by distance and the cheapest route are additionally identified and displayed.
+
+[source,javascript]
+
+// Example output for paths from 0 to 5:
+=== Find all paths from 0 to 5 ===
+Path Vertices: 0-1-4-3-5
+Distance: 101.28 km
+Price: 31.80 u.
+
+Path Vertices: 0-6-3-5
+Distance: 94.21 km
+Price: 21.60 u.
+
+Thus, the developed software module enables not only finding all possible routes in a graph but also performing their quantitative and qualitative analysis, which can be applied to transportation logistics problems and route optimization tasks.
+
+== 9.5. Dijkstra's Algorithm
+
+The Dijkstra algorithm is designed to find the shortest paths from a given vertex to all other vertices in a graph, provided that all edge weights are non-negative. This condition is essential for the algorithm to work correctly and guarantees that the found paths are indeed the shortest possible.
+
+The algorithm is named after the renowned Dutch computer scientist Edsger W. Dijkstra, who first conceived it in 1956. Interestingly, according to Dijkstra himself, the algorithm was devised in just 20 minutes while he was sitting at a café with his fiancée — a brilliant example of how simple ideas can change the world.
+
+Today, Dijkstra's algorithm finds wide application across various fields of science, technology, and everyday life:
+
+    In GPS navigation systems: it is the core technology behind finding the fastest routes, taking into account distance, traffic conditions, and other factors.
+
+    In telecommunications networks: the algorithm helps determine the optimal path for data transmission from source to destination (used in routing protocols such as OSPF and IS-IS).
+
+    In robotics: it is used for path planning, enabling robots to reach their goals in the most efficient and safe manner.
+
+    In computer games: the algorithm powers character and object navigation through complex game worlds.
+
+    In logistics and transportation planning: it helps find optimal delivery routes, minimizing costs and improving efficiency.
+
+In this section, we will not only implement Dijkstra's algorithm in JavaScript but also visualize its logic, allowing us to see, step by step, how the computer finds the shortest paths through the graph.
+
+=== Graph Representation for Dijkstra's Algorithm
+
+For our demonstration of Dijkstra's algorithm, we will use the graph shown in Figure 9.16. This graph consists of 6 vertices (labeled 0 through 5) connected by weighted edges. The weights represent, for example, distances in kilometers between cities or travel time in minutes.
+
+The graph structure is defined using an adjacency list, where each vertex maintains a map of its neighbors and the corresponding edge weights:
+
+    Vertex 0 is connected to: vertex 1 (weight 48.3), vertex 2 (40.7), vertex 5 (25.4)
+
+    Vertex 1 is connected to: vertex 0 (48.3), vertex 2 (37.5), vertex 3 (29.8)
+
+    Vertex 2 is connected to: vertex 0 (40.7), vertex 1 (37.5), vertex 3 (34.9), vertex 5 (29.8)
+
+    Vertex 3 is connected to: vertex 1 (29.8), vertex 2 (34.9), vertex 4 (25.4)
+
+    Vertex 4 is connected to: vertex 3 (25.4), vertex 5 (34.9)
+
+    Vertex 5 is connected to: vertex 0 (25.4), vertex 2 (29.8), vertex 4 (34.9)
+
+In JavaScript, we represent this graph as an object:
+
+[source,javascript]
+
+const graph = {
+0: { 1: 48.3, 2: 40.7, 5: 25.4 },
+1: { 0: 48.3, 2: 37.5, 3: 29.8 },
+2: { 0: 40.7, 1: 37.5, 3: 34.9, 5: 29.8 },
+3: { 1: 29.8, 2: 34.9, 4: 25.4 },
+4: { 3: 25.4, 5: 34.9 },
+5: { 0: 25.4, 2: 29.8, 4: 34.9 }
+};
+
+This representation is both intuitive and efficient for implementing Dijkstra's algorithm, as it allows us to quickly iterate over all neighbors of a given vertex.
+
+=== How the Algorithm Works
+
+At the heart of the algorithm lies a simple yet powerful idea: iteratively build the set of vertices for which the shortest path is already known, and use them to discover shorter paths to the remaining vertices.
+
+To track its progress, the algorithm maintains three essential data structures:
+
+    Distance array (d) — For each vertex *v*, we store the current length of the shortest known path from the start vertex *s* to *v*. Initially, we set:
+
+        *d[s] = 0* (the distance from the start to itself is zero)
+
+        d[v] = ∞ (infinity) for all other vertices, indicating that we haven't found any path yet
+
+    Visited array (a) — A marker array where *a[v] = 1* indicates that we have found the optimal (shortest possible) path to vertex *v*, and *a[v] = 0* means the vertex is still unprocessed. Initially, all vertices are unvisited (*a[v] = 0* for all *v*).
+
+Imagine you are exploring a network of cities connected by roads of different lengths. You start at your home city (vertex *s*). Initially, you know the distance to your own city is zero, but all other cities are mysteries — their distances are "infinity".
+
+You begin by looking at the closest unvisited city (the one with the smallest known distance). When you "visit" it, you examine all roads leading from it. For each neighboring city, you ask: "Is it shorter to go directly to this neighbor through the current city than any path I knew before?" If yes, you update your map with this new, shorter route.
+
+You continue this process, always picking the nearest unvisited city next, until you have explored all reachable cities. The magic of Dijkstra's algorithm is that by always choosing the vertex with the smallest current distance, you guarantee that when you visit a vertex, you have already found its optimal path.
+
+=== Mind Map of Dijkstra's Algorithm
+
+Having examined the internal logic of the algorithm and its implementation in JavaScript, we now turn to observing it in action. Through interactive visualization, you can follow step by step how the algorithm relaxes edges, updates distances, and marks visited vertices — precisely mirroring the behavior of our relaxEdges and markVertexVisited functions. This visualization will not only reinforce your understanding of Dijkstra's algorithm but also provide insights into its efficiency and practical applications.
+
+A mind map of Dijkstra's algorithm logic is shown in Figure 9.16:
+
+[.text-center]
+image::{imagesdir}/Fig9_15_Dijkstra_classic.svg[width=80%]
+
+[.text-center]
+Figure 9.16. Mind map of Dijkstra's algorithm logic
+
+=== DRAKON-Diagrams of Dijkstra's Algorithm Implementation
+
+The DRAKON-diagrams below illustrate the control flow of the Dijkstra algorithm as implemented in the accompanying JavaScript code. The diagrams decompose the algorithm into discrete steps, highlighting key operations such as initialization, edge relaxation, and vertex visitation. Each diagram corresponds to a specific function in the implementation, providing a visual representation of the algorithm's logic and its execution path. The diagrams are designed to enhance understanding of how the algorithm processes the graph, updates distances, and determines the shortest paths from the source vertex to all other vertices.
+
+The central function of the Dijkstra algorithm — dijkstra(graph, start) — is responsible for initializing the necessary data structures and managing the main loop of the algorithm. It sequentially selects the nearest unvisited vertex, marks it as visited, and performs relaxation on all its neighbors (Figure 9.17).
+
+[.text-center]
+image::{imagesdir}/Fig9_16_dijkstra.svg[width=80%]
+
+[.text-center]
+Figure 9.17. DRAKON-diagram of Dijkstra's algorithm implementation
+
+The function getVerticesList(graph) extracts a list of all vertices from the graph, which allows initializing the distance and visited arrays (Figure 9.18).
+
+[.text-center]
+image::{imagesdir}/Fig9_17_init.svg[width=80%]
+
+[.text-center]
+Figure 9.18. DRAKON-diagram of the initialization function for Dijkstra's algorithm
+
+The central function of the algorithm is findMinDistanceVertex(graph, distances, visited), which at each stage selects the unvisited vertex with the minimum distance from the source vertex. This ensures the optimal choice of the next vertex for processing (Figure 9.19).
+
+[.text-center]
+image::{imagesdir}/Fig9_18_findMinDistanceVertex.svg[width=80%]
+
+[.text-center]
+Figure 9.19. DRAKON-diagram of the findMinDistanceVertex function
+
+In the function markVertexVisited(graph, vertex, visited), a vertex is marked as visited, which prevents its reprocessing in the future (Figure 9.20).
+
+[.text-center]
+image::{imagesdir}/Fig9_19_markVertexVisited.svg[width=80%]
+
+[.text-center]
+Figure 9.20. DRAKON-diagram of the markVertexVisited function
+
+Finally, the function relaxEdges(graph, vertex, distances, visited) performs relaxation on all neighbors of the current vertex. It checks whether the known distances to neighboring vertices can be improved via the current vertex and updates them if necessary (Figure 9.21).
+
+[.text-center]
+image::{imagesdir}/Fig9_20_relaxEdges.svg[width=80%]
+
+[.text-center]
+Figure 9.21. DRAKON-diagram of the relaxEdges function
+
+== Conclusion
+
+This section has established the essential foundations of graph theory and graph algorithms, from basic terminology and representation methods to systematic traversal techniques, exhaustive path enumeration via recursive backtracking, and the classic shortest-path solution provided by Dijkstra's algorithm. Armed with these tools, you can now model and solve a wide range of practical problems involving networks, routes, and relationships.
+
+Yet, for all the ground we have covered, we have only scratched the surface. Beyond the boundaries of this section lie some of the most fascinating and intellectually rich problems in all of computer science — problems that continue to challenge researchers and practitioners alike. How do we find the shortest path in a graph that contains negative edge weights (the Bellman–Ford algorithm)? What if we need the shortest path between every pair of vertices (the Floyd–Warshall algorithm)? How do we compute the maximum flow that a network can sustain from a source to a sink (the Ford–Fulkerson method)? When should we use a heuristic like A* to navigate massive graphs where exhaustive search is impossible? And what about graphs that change over time, or graphs so large they cannot fit into a single computer's memory?
+
+These are not merely academic exercises. They are the very algorithms that power global navigation systems, optimize internet routing, schedule airline fleets, uncover communities in social networks, and even help decode the human genome. Each of these problems builds directly upon the concepts introduced in this section — graphs, traversal, weights, and paths — but elevates them to new levels of complexity, elegance, and practical impact.
+
+Thus, consider this section not as an end, but as a beginning — a gateway to a richer, deeper world of graph algorithms that awaits your exploration.

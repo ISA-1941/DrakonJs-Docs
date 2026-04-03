@@ -1,0 +1,247 @@
+:imagesdir: ../assets/images
+
+[.text-justify]
+:figure-caption!:
+
+== Section 6. Basic Search Algorithms
+
+Searching is one of the most important algorithms for processing data structures. Search algorithms are designed to check the presence of an element or extract an element from any data structure in which it is stored. More strictly, the search problem can be formulated as follows: find one or more elements in a set, where the elements sought must have a certain property. This property can be absolute or relative. A relative property characterizes an element with respect to other elements: for example, a minimum element in a set of numbers.
+
+There are many search algorithms. Their complexity varies from simple sequential search algorithms to extremely efficient but limited binary search algorithms. Of particular note are algorithms based on presenting the core set of data in a different, more searchable form, which are used in real-world applications for processing data sets in huge databases.
+
+There is no single algorithm to solve all search problems. Some algorithms run faster than others but require additional RAM to run. Others run very quickly but can only be used for pre-sorted arrays. At the same time, the analysis of search algorithms is somewhat different from sorting algorithms. In particular, there is no stability problem for them. However, there may be situations that require the introduction of new criteria of complexity and its assessment. In general, all algorithms are reduced to the following steps:
+
+    Establishing the property of the elements of the source set; in most cases, these are the values of the elements.
+
+    Matching the value of the element with the reference property (for absolute properties) or comparing the properties of two elements (for relative properties).
+
+    Traversing the elements of the set.
+
+In principle, search algorithms differ between search methods and search strategies. Based on the type of search operation, these algorithms are usually classified into two categories:
+
+    Sequential Search: The list or array is traversed sequentially and each element is checked.
+
+    Interval Search: These algorithms are specifically designed for searching in sorted data structures. These types of search algorithms are much more efficient than linear search because they repeatedly target the center of the search structure and divide the search space in half.
+
+This section examines the primary algorithms used for searching data structures. To enhance the understanding of the practical applications of these algorithms, DRAKON-diagrams are provided along with assessments of their time and space complexity.
+
+== List of Figures
+
+|===
+| Figure | Title | Description
+
+| 6.1 | Linear Search | DRAKON-diagram of the Linear Search Algorithm
+| 6.2 | Sorted Data Search | DRAKON-diagram of the Search in a Sorted Array
+| 6.3 | Binary Search | DRAKON-diagram of the Binary Search Algorithm
+| 6.4a | Main Function | Entry Point for Linked List Operations
+| 6.4b | PushFront / PushBack | Adding New Items to the List
+| 6.4c | SearchData | Searching for an Element in a Linked List
+| 6.4d | RemoveVal | Deleting a Node by Value
+| 6.4e | PushVal / NodeWithVal | Inserting by Value and Locating Node by Value
+| 6.4f | RemoveDupli | Removing Duplicate Nodes
+| 6.5a | Hash Table Creation | Creating a Hash Table Structure
+| 6.5b | Hash Table Search | Searching for an Element by Key
+| 6.5c | Hash Table Traversal | Traversing Hash Table Items
+| 6.5d | Hash Table Deletion | Deleting an Element by Key
+|===
+
+[NOTE]
+====
+All illustrations in this section are provided in the SVG format.
+Click on any image to open it in a separate window for detailed viewing.
+====
+
+=== 6.1. Linear Data Searching
+
+a) Linear Search of Unsorted Data
+
+In the case of a linear search for an element in an unordered dataset, for example, in an array or in a slice, the simplest algorithm is to examine all elements until the desired value is found (Figure 6.1).
+
+image::{imagesdir}/Fig6_1_searchElement.png[width=50%, link="{imagesdir}/Fig6_1_searchElement.svg", window="_blank"]
+
+[.text-center]
+Figure 6.1. DRAKON-diagram of the Linear Search Algorithm
+
+This algorithm is not very efficient, but it works on arbitrary collections. Time complexity: O(n). In the worst case (the desired element is in the last position), to find the element you need to traverse all elements. Here "n" is the size of the slice. Space complexity: O(1). No additional memory is required to accommodate the slice. Another worst-case scenario is the absence of the required element.
+
+b) Linear Search of Sorted Data
+
+If the elements of the dataset are sorted in ascending or descending order, finding the desired element is much more efficient than in an unordered linear search. In many cases, you do not have to traverse the whole list. For example, when traversing an ascending sorted list, if an element with a higher value than the search key is encountered, the search is stopped. This approach saves time and increases productivity. Figure 6.2 shows the DRAKON-diagram of this algorithm.
+
+image::{imagesdir}/Fig6_2_dataSorted.png[width=50%, link="{imagesdir}/Fig6_2_dataSorted.svg", window="_blank"]
+
+[.text-center]
+Figure 6.2. DRAKON-diagram of the Search in a Sorted Array
+
+=== 6.2. Binary Search for Data in a Sorted Structure
+
+Binary search is performed as follows:
+
+    Determine the value of the element in the middle of the data structure. The resulting value is compared to the value being searched for.
+
+    If the search value is less than the middle value, the search is carried out in the first half of the elements; otherwise, in the second half.
+
+    The search continues by determining the value of the middle element in the selected half and comparing it to the key.
+
+    The process continues until an element with the search value is found or the search interval is empty.
+
+The DRAKON-diagram of the binary search algorithm is represented in Figure 6.3 (the main() module is similar to the previous algorithm):
+
+image::{imagesdir}/Fig6_3_searchValue.png[width=50%, link="{imagesdir}/Fig6_3_searchValue.svg", window="_blank"]
+
+[.text-center]
+Figure 6.3. DRAKON-diagram of the Binary Search Algorithm
+
+Time complexity of the binary search algorithm belongs to class O(log n). This means that the asymptotic increase in the time taken by the function to process an input set of size n will not exceed log n. Space complexity: O(1) — no extra space is required.
+
+=== 6.3. Searching in a Singly Linked List
+
+There are three possibilities for a singly linked list. First, the desired value is missing from the list. Second, the desired value appears once. Third, the desired value appears multiple times. You can also set the task of removing duplicates — nodes that are redundant. To solve these problems, it is necessary to create a singly linked list whose items contain values "Smith A.", "Shafler B.", "Wiley D.", "Brown G.", "Black H.". In this list you should delete the entry "Brown G." and then add a new entry "Singer B." placing it after the entry "Wiley D.". After that, you should delete duplicates of the entry "Shafler B." leaving only one. The corresponding DRAKON-diagrams are presented in Figure 6.4.
+
+a) Function main()
+
+image::{imagesdir}/Fig6_4a_main.png[width=50%, link="{imagesdir}/Fig6_4a_main.svg", window="_blank"]
+
+b) Functions for Pushing New Items (pushFront(list, val) and pushBack(list, val))
+
+image::{imagesdir}/Fig6_4b_pushFront.png[width=50%, link="{imagesdir}/Fig6_4b_pushFront.svg", window="_blank"]
+image::{imagesdir}/Fig6_4b_pushBack.png[width=50%, link="{imagesdir}/Fig6_4b_pushBack.svg", window="_blank"]
+
+c) Function for Searching (searchData(val))
+
+image::{imagesdir}/Fig6_4c_searchData.png[width=50%, link="{imagesdir}/Fig6_4c_searchData.svg", window="_blank"]
+
+d) Function for Deletion (removeVal(val))
+
+image::{imagesdir}/Fig6_4d_removeVal.png[width=50%, link="{imagesdir}/Fig6_4d_removeVal.svg", window="_blank"]
+
+e) Function for Inserting by Value (pushVal and nodeWithVal)
+
+image::{imagesdir}/Fig6_4e_pushVal.png[width=50%, link="{imagesdir}/Fig6_4e_pushVal.svg", window="_blank"]
+image::{imagesdir}/Fig6_4e_nodeWithVal.png[width=50%, link="{imagesdir}/Fig6_4e_nodeWithVal.svg", window="_blank"]
+
+f) Function for Removing Duplicates (removeDupli)
+
+image::{imagesdir}/Fig6_4f_removeDupli.png[width=75%, link="{imagesdir}/Fig6_4f_RemoveDupli.svg", window="_blank"]
+
+[.text-center]
+Figure 6.4. DRAKON-diagrams of linked list algorithms: deletion, search, insertion by value, and duplicate deletion
+
+=== 6.4. Hashing
+
+The search time for an item in a data set depends on the number of element value comparisons. To reduce search times and thus improve computational efficiency, fewer comparisons are needed. This can be achieved by converting a larger data set into a smaller range — a process called hashing — resulting in hash tables.
+
+From the perspective of abstract data type (ADT) theory, a hash table is a data structure that implements the interface of an associative array, allowing you to store key-value pairs and perform three basic operations: adding a new pair, searching for a key, and deleting a key-value pair.
+
+From a programming perspective, a hash table is a collection of items containing key-value pairs, where the key is computed by a special function called a hash function. A hash table, in turn, consists of buckets — sets of elements with matching or close hash values. There are different methods of constructing a hash function, the simplest of which is the remainder method, where the hash function is defined as the remainder of the division of two numbers (x, m), where x is the item of the set and m is the number of buckets. In JavaScript, the hash function for this method is: h = x % m.
+
+We will conduct a detailed analysis of the hash table creation process utilizing the JavaScript programming language within DrakonTech. First, a variable of the Node type is created, defined as a structure consisting of two fields: the element value (Value) and the next element address (Next). In fact, this is a singly linked list (see Section 1).
+go
+
+type Node struct {
+    Value int
+    Next  *Node
+}
+
+Then, a hash table is created through a structure that has two fields: the first field (Table) is a map that relates the integer (hash index) to the associated list (Node), and the second field (Size) is of type int:
+go
+
+type HashTable struct {
+    Table map[int]*Node
+    Size  int
+}
+
+As a result, this hash table would have as many singly linked lists (buckets) as specified by the Size constant. In the example below, the number of slots is 15.
+
+Consider constructing a hash table of size m = 15 for a collection of integers from 0 to 120. The hash table slots are initially empty:
+
+|===
+0	1	2	3	4	5	6	7	8	9	10	11	12	13	14
+===														
+
+A hash function that establishes a relationship between an element and its corresponding slot must accept any element from the dataset (specifically ranging from 0 to 120) and return an integer that corresponds to a slot number between 0 and 14. The algorithm implementing the remainder method sequentially processes each element from the original set, dividing it by 15 and returning the remainder as the hash value. This can be expressed as h(item) = item mod 15. For instance, the hash code for the element 119 is calculated as 119 mod 15 = 14 (since 119 - 15 × 7 = 14), thus placing the value 119 into the corresponding slot.
+
+|===
+| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14
+| - | - | - | - | - | - | - | - | - | - | - | - | - | - | 119
+|===
+
+The algorithm then identifies slots for other elements, gradually filling them. When the algorithm encounters element 104 in the loop, the remainder of the division is 104 % 15 = 14, so this element will also be included in the 14th slot. In this way, each slot will accumulate corresponding elements with the same hash index. For example, for a hash index of 8, the slot will consist of these elements: 113, 98, 83, 68, 53, 38, 23, 8. The entire hash table will be as follows (Table 6.1):
+
+Table 6.1. Hash table of 15 slots
+
+|===
+| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14
+| 105 | 106 | 107 | 108 | 109 | 110 | 111 | 112 | 113 | 114 | 115 | 116 | 117 | 118 | 119
+| 90 | 91 | 92 | 93 | 94 | 95 | 96 | 97 | 98 | 99 | 100 | 101 | 102 | 103 | 104
+| 75 | 76 | 77 | 78 | 79 | 80 | 81 | 82 | 83 | 84 | 85 | 86 | 87 | 88 | 89
+| 60 | 61 | 62 | 63 | 64 | 65 | 66 | 67 | 68 | 69 | 70 | 71 | 72 | 73 | 74
+| 45 | 46 | 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54 | 55 | 56 | 57 | 58 | 59
+| 30 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44
+| 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29
+| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14
+|===
+
+Thus, the remainder method converts a collection of 120 integers into a hash table of 15 slots. The search for an element is now greatly accelerated as it takes two steps: first, the hash function h = (x % m) computes the hash index, and then the search is performed within a bucket (approximately 7–8 elements). The algorithm based on the remainder method is represented by the following DRAKON-diagrams (Figure 6.5). Here hInsert is the module for filling slots with elements using the hash function, hLookup is the module for searching for an element in the hash table, and hTraverse is the module for traversing the hash table.
+
+The implementation of the basic hash table functions using the hash function is as follows:
+
+    Create a HashTable structure of size m to store objects.
+
+    Compute the object's hash code by passing it through the hash function.
+
+    Obtain the bucket hash indices where the objects will be stored.
+
+    Store these objects in the designated bucket.
+
+DRAKON-diagrams of algorithms for implementing the main functions of working with hash tables are shown in Figure 6.5.
+
+a) Hash Table Creation Function (hInsert)
+
+image::{imagesdir}/Fig6_5a_hashInsert.png[width=50%, link="{imagesdir}/Fig6_5a_hashInsert.svg", window="_blank"]
+
+b) Hash Table Search Function (hLookup)
+
+image::{imagesdir}/Fig6_5b_searchHash.png[width=50%, link="{imagesdir}/Fig6_5b_searchHash.svg", window="_blank"]
+
+c) Hash Table Traversal Function (hTraverse)
+
+image::{imagesdir}/Fig6_5c_hashTraverse.png[width=50%, link="{imagesdir}/Fig6_5c_hashTraverse.svg", window="_blank"]
+
+d) Hash Table Deletion Function (hRemove)
+
+Consider the algorithm for removing an element from the hash table. Suppose we delete element 74. First, the bucket containing the item to be removed is determined. Then, the algorithm traverses the elements of this bucket, where after each node.Value == value check, the current element is stored in the nodePrev variable. If the condition is met, the nodePrev.nextNode field is changed to skip the deleted element (Figure 6.5d):
+
+image::{imagesdir}/Fig6_5d_hashRemove.png[width=75%, link="{imagesdir}/Fig6_5d_hashRemove.svg", window="_blank"]
+
+[.text-center]
+Figure 6.5. DRAKON-diagrams of hash table algorithms
+
+Another example of a "good" hash function for use with integer key values is the mean square method. The mean square method squares the key value and then extracts the middle digits of the result, giving a value in the range from 0 to M. A software implementation of a hash function algorithm in Go would involve using built-in functions for converting integers to strings (strconv.Atoi(i)) and vice versa (strconv.Itoa(i)). For example, for any four-digit number, the hash function is:
+go
+
+func hFunc(i int) int {
+    var j int
+    var s string
+    i = i * i
+    s = strconv.Itoa(i)
+    s = s[3:5]
+    j, _ = strconv.Atoi(s)
+    return j
+}
+
+==== Topics Beyond the Scope of This Book
+
+This section has focused on the fundamental principles of hashing and the implementation of a hash table using separate chaining. However, several important and advanced aspects of modern hashing remain outside the scope of this book:
+
+    Open addressing techniques — linear probing, quadratic probing, and double hashing.
+
+    Dynamic resizing of hash tables when the load factor exceeds a threshold.
+
+    Cryptographic hash functions (MD5, SHA family, etc.) used for data integrity and security rather than indexing.
+
+    Perfect hashing and minimal perfect hashing, which eliminate collisions entirely but require complex precomputation.
+
+    Distributed hash tables (DHTs) — used in peer-to-peer networks and blockchain architectures.
+
+These topics will be explored in future works devoted to large-scale data management, high-performance systems, and secure information storage.

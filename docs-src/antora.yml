@@ -1,7 +1,4 @@
-name: drakonjs-docs
-version: 3.1.10
+name: ROOT
+title: DRAKON JavaScript Docs
 nav:
   - modules/ROOT/nav.adoc
-start_page: ROOT::index.adoc
-
- 
