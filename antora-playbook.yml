@@ -1,12 +1,12 @@
 site:
   title: DRAKON JavaScript Docs
   url: https://ISA-1941.github.io/DrakonJs-Docs/
-  start_page: ROOT::index.adoc
+  start_page: drakonjs-docs::index.adoc
 
 content:
   sources:
     - url: .
-      branches: HEAD
+      branches: main
       start_path: docs-src
 
 ui:
