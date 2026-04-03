@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: DRAKON JavaScript Docs</title>
+    <link rel="canonical" href="https://ISA-1941.github.io/DrakonJs-Docs/drakonjs-docs/3.1.10/section-3.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://ISA-1941.github.io/DrakonJs-Docs">DRAKON JavaScript Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="drakonjs-docs" data-version="3.1.10">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">DRAKON JavaScript Docs</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="section-1.html">Section 1. Abstract Data Types</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="section-2.html">Section 2. JavaScript Overview</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="section-3.html">Section 3. DRAKON Visual Language</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="section-4.html">Section 4. Implementation of ADTs in JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="section-5.html">Section 5. Complexity Analysis</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="section-6.html">Section 6. Sorting Algorithms</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="section-7.html">Section 7. Search Algorithms</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="section-8.html">Section 8. Binary Tree Algorithms</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="section-9.html">Section 9. Graphs and Graph Algorithms</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">DRAKON JavaScript Docs</span>
+    <span class="version">3.1.10</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="index.html">DRAKON JavaScript Docs</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">3.1.10</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">DRAKON JavaScript Docs</a></li>
+    <li><a href="section-3.html">Section 3. DRAKON Visual Language</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/ISA-1941/DrakonJs-Docs/edit/main/docs-src/modules/ROOT/pages/section-3.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1 text-justify">
+<h2 id="_section_3_implementation_of_basic_abstract_data_types_in_javascript"><a class="anchor" href="#_section_3_implementation_of_basic_abstract_data_types_in_javascript"></a>Section 3. Implementation of Basic Abstract Data Types in JavaScript</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_3_1_data_structuring_features"><a class="anchor" href="#_3_1_data_structuring_features"></a>3.1. Data Structuring Features</h3>
+<div class="quoteblock abstract">
+<blockquote>
+This section delves into the practical implementation of basic Abstract Data Types (ADTs) within the JavaScript programming language. ADTs, as mathematical models with defined operators, provide a foundation for algorithm development. However, translating these conceptual models into executable code requires representing ADTs using the data types and methods available in JavaScript. We will explore how to bridge the gap between abstract data structures and their concrete JavaScript implementations, demonstrating techniques to effectively utilize JavaScript&#8217;s features to realize fundamental ADTs. This section will equip readers with the knowledge to translate theoretical ADT concepts into functional JavaScript code, laying the groundwork for more complex data structure and algorithm implementations.
+</blockquote>
+</div>
+<div class="paragraph">
+<p>In practical terms, a data structure is a collection of data structured in such a way as to ensure efficient use by users. This requires a certain ordering of data, primarily at the level of storage in computer memory. Reducing space and increasing organization in conjunction with reducing the time complexity of different tasks is the main objective of working with data structures.</p>
+</div>
+<div class="paragraph">
+<p>Considerable experience in the development of computer technology and computing technology has made it possible to classify data structures into different categories. First, simple and integrated structures are distinguished by complexity. The criterion of simplicity is indivisibility — that is, in a computer implementation, a simple chain of bits. Simple, basic structures include variables of different types: integers, real numbers, booleans, strings.</p>
+</div>
+<div class="paragraph">
+<p>Integrated (composite, complex) structures are data structures whose component parts are other data structures, including simple and integrated. Many basic integrated data structures are predefined by a specific programming language: arrays, slices, structures, etc. Such structures can be created by users for a specific problem, using basic integrated structures.</p>
+</div>
+<div class="paragraph">
+<p>By way of presentation, data structures are divided into logical and physical. The logical structure is an abstract data layout that the user or programmer envisions. The physical structure is a method (schema) of specific data placement in computer memory. In general, the logical and physical structures of the same data do not coincide. In a logical (abstract) structure, data tend to be adjacent to each other, while in a computer implementation these data may be located in different memory regions.</p>
+</div>
+<div class="paragraph">
+<p>An important feature of a data structure is the existence of links between its elements. On this basis, we distinguish disconnected and connected structures. Disconnected structures are characterized by a lack of linkages between the elements, while connected structures are characterized by linkages. Disconnected structures include arrays, strings, stacks, queues, and linked lists. In many cases, data can be characterized by variability — that is, a change in the number of elements and/or the relationships between elements of the structure. Arrays, sets, records, tables fall under the category of static data; stacks, queues, trees fall under semi-static data; linked lists and graphs fall under dynamic data.</p>
+</div>
+<div class="paragraph">
+<p>Linear and non-linear data structures are distinguished by structural order. Linear structures are divided into structures with sequential distribution of elements in memory (vectors, strings, arrays, stacks, queues) and structures with arbitrary connected distribution of elements in memory, depending on the nature of the reciprocal arrangement of elements in memory (singly linked and doubly linked linear lists). Nonlinear structures are multi-linked lists, trees, graphs.</p>
+</div>
+<div class="paragraph">
+<p>One of the defining features of data structures is how to access data. In the access method, a search mechanism is important — an algorithm that determines the access path possible within a given memory structure, and the number of steps along that path to find the sought data. There are two main groups of data access methods: sequential and direct.</p>
+</div>
+<div class="paragraph">
+<p>Sequential access means that a group of elements is accessed in a predefined ordered sequence. An example of sequential access is a singly linked list. The various elements of the data structure are directly accessed by providing a unique address for these elements.</p>
+</div>
+<div class="paragraph">
+<p>Finally, one characteristic of data structures is homogeneity. Homogeneous structures contain a set of simple data of the same type (numeric, boolean, string, etc.). Heterogeneous structures combine data of different types. Examples of homogeneous structures are arrays, slices, and stacks. Heterogeneous structures include records and sets.</p>
+</div>
+<div class="paragraph">
+<p>The presence of a large number of data structure features has predetermined various attempts to classify them. From a programming point of view, the main features are: linearity/non-linearity, data access, and data homogeneity/heterogeneity. This section covers the JavaScript implementation of linear abstract data types such as arrays/slices, maps, linked lists, stacks, and queues.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_2_linear_data_structures"><a class="anchor" href="#_3_2_linear_data_structures"></a>3.2. Linear Data Structures</h3>
+<div class="paragraph">
+<p>Linear data structures are structures in which data elements are arranged in sequence. Linear structures can be distinguished by the way the individual elements of a data collection are accessed and by the homogeneity of the data (homogeneous and heterogeneous).</p>
+</div>
+<div class="sect3">
+<h4 id="_3_2_1_arrays_in_javascript"><a class="anchor" href="#_3_2_1_arrays_in_javascript"></a>3.2.1. Arrays in JavaScript</h4>
+<div class="paragraph">
+<p>An array is a collection of data where each element is stored at a specific index. Arrays allow efficient storage and manipulation of multiple values in a single variable.</p>
+</div>
+<div class="paragraph">
+<p>For example, the collection of integers [24, 12, 36, 6, 47, 11] forms an array (Figure 3.1).</p>
+</div>
+<div class="imageblock text-center unresolved text-center">
+<div class="content">
+<img src="_images/Fig3_1_Array.jpg" alt="Fig3 1 Array" width="400" height="200">
+</div>
+<div class="title">Figure 3.1. One-dimensional array</div>
+</div>
+<div class="paragraph">
+<p>Declaring Arrays in JavaScript</p>
+</div>
+<div class="paragraph">
+<p>JavaScript arrays are dynamic, meaning they can grow and shrink as needed. Unlike some other languages, JavaScript allows mixing different types within an array, but best practice is to keep arrays homogeneous (storing values of the same type).</p>
+</div>
+<div class="paragraph">
+<p>🔹 Creating Arrays</p>
+</div>
+<div class="paragraph">
+<p>Arrays in JavaScript can be declared in different ways:</p>
+</div>
+<div class="paragraph">
+<p>1️⃣ Using [] (Recommended)
+javascript</p>
+</div>
+<div class="paragraph">
+<p>let numbers = [24, 12, 36, 6, 47, 11];</p>
+</div>
+<div class="paragraph">
+<p>2️⃣ Using the Array Constructor
+javascript</p>
+</div>
+<div class="paragraph">
+<p>let numbers = new Array(24, 12, 36, 6, 47, 11);</p>
+</div>
+<div class="paragraph">
+<p>This method is rarely used in modern JavaScript.</p>
+</div>
+<div class="paragraph">
+<p>🔹 Multidimensional Arrays</p>
+</div>
+<div class="paragraph">
+<p>JavaScript supports multidimensional arrays by storing arrays inside arrays.
+javascript</p>
+</div>
+<div class="paragraph">
+<p>let matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];</p>
+</div>
+<div class="paragraph">
+<p>console.log(matrix[1][2]); // Output: 6</p>
+</div>
+<div class="paragraph">
+<p>Here, matrix[1][2] accesses the second row, third column (6).</p>
+</div>
+<div class="paragraph">
+<p>Summary:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Feature</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JavaScript Equivalent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Declaring an array</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">let arr = [item1, item2, &#8230;&#8203;];</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Using the Array constructor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">let arr = new Array(item1, item2, &#8230;&#8203;);</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accessing elements</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">arr[index]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multidimensional arrays</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">let matrix = [[&#8230;&#8203;], [&#8230;&#8203;]];</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_3_2_2_slices"><a class="anchor" href="#_3_2_2_slices"></a>3.2.2. Slices</h4>
+<div class="paragraph">
+<p>A slice is a variable-length data collection that stores elements of a homogeneous type. A slice can be thought of as a "slice" of an array. Slice syntax in JavaScript is [] or [value1, value2, value3, &#8230;&#8203;, valueN].</p>
+</div>
+<div class="paragraph">
+<p>In JavaScript, slices are implemented dynamically. To create a slice (array) in JavaScript, you can use an array literal or the Array constructor. For example, creating parentSlice would look like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let parentSlice = new Array(20).fill(0); // Creating an array of 20 elements, filled with zeros</code></pre>
+</div>
+</div>
+<div class="imageblock text-center unresolved text-center">
+<div class="content">
+<img src="_images/Fig3_2_Slice.jpg" alt="Fig3 2 Slice" width="600" height="200">
+</div>
+<div class="title">Figure 3.2. Creating different slices sliceA and sliceB</div>
+</div>
+<div class="paragraph">
+<p>The length property indicates the number of elements in the slice (array). In JavaScript there is no explicit concept of "capacity". Multiple "slices" can be created from a single array using the slice() method or destructuring. For example, to create sliceA and sliceB from parentSlice:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let sliceA = parentSlice.slice(0, 4); // sliceA contains the first 5 elements
+let sliceB = parentSlice.slice(12, 14); // sliceB contains 3 elements from index 12 to 14</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In JavaScript, sliceA will contain elements from index 0 to 4, and sliceB will contain elements from index 12 to 13.</p>
+</div>
+<div class="paragraph">
+<p>The following functions and methods are used to work with slices (arrays) in JavaScript:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>push(): Adds elements to the end of the array. If the array size is insufficient, it automatically increases.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>length: Property that returns the number of elements in the array.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>slice(): Creates a new array containing a "slice" of the original array.</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_2_3_objects_in_javascript"><a class="anchor" href="#_3_2_3_objects_in_javascript"></a>3.2.3. Objects in JavaScript</h4>
+<div class="paragraph">
+<p>In JavaScript, objects serve the same purpose as structures in other programming languages. They allow us to store multiple related values (properties) in a single entity. Objects in JavaScript are flexible and support various ways of creation and manipulation.</p>
+</div>
+<div class="paragraph">
+<p>JavaScript objects are defined using curly braces {} and consist of key-value pairs.</p>
+</div>
+<div class="paragraph">
+<p>🔹 Creating an Object with Named Properties</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let employee1 = {
+firstName: "Peter",
+lastName: "Wolf",
+age: 35,
+salary: 20000
+};</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>console.log("Employee 1:", employee1);</p>
+</div>
+<div class="paragraph">
+<p>🔹 Alternative Way: Object Constructor</p>
+</div>
+<div class="paragraph">
+<p>Another way to create an object is by using the Object constructor.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let employee2 = new Object();
+employee2.firstName = "Nick";
+employee2.lastName = "Smith";
+employee2.age = 49;
+employee2.salary = 35000;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>console.log("Employee 2:", employee2);</p>
+</div>
+<div class="paragraph">
+<p>Key Differences:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>The first approach (object literal {}) is more common and recommended.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>The second approach (new Object()) is used when objects need to be created dynamically.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>🔹 Creating an Object with a Factory Function</p>
+</div>
+<div class="paragraph">
+<p>A factory function is a regular function that creates and returns an object.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">function createEmployee(firstName, lastName, age, salary) {
+return {
+firstName,
+lastName,
+age,
+salary
+};
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>let emp1 = createEmployee("Peter", "Wolf", 35, 20000);
+let emp2 = createEmployee("Nick", "Smith", 49, 35000);</p>
+</div>
+<div class="paragraph">
+<p>console.log("Employee 1:", emp1);
+console.log("Employee 2:", emp2);</p>
+</div>
+<div class="paragraph">
+<p>Output:
+text</p>
+</div>
+<div class="paragraph">
+<p>Employee 1: { firstName: 'Peter', lastName: 'Wolf', age: 35, salary: 20000 }
+Employee 2: { firstName: 'Nick', lastName: 'Smith', age: 49, salary: 35000 }</p>
+</div>
+<div class="paragraph">
+<p>🔹 Adding Methods to a Factory Function</p>
+</div>
+<div class="paragraph">
+<p>An object can contain methods (functions inside the object).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">function createEmployee(firstName, lastName, age, salary) {
+return {
+getFullName: () =&gt; ${firstName} ${lastName},
+getSalary: () =&gt; salary, // You can read salary
+setSalary: (newSalary) =&gt; salary = newSalary // You can change salary
+};
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>let emp5 = createEmployee("Bob", "Anderson", 50, 30000);</p>
+</div>
+<div class="paragraph">
+<p>console.log(emp5.getFullName()); // "Bob Anderson"
+console.log(emp5.getSalary()); // 30000</p>
+</div>
+<div class="paragraph">
+<p>emp5.setSalary(35000);
+console.log(emp5.getSalary()); // 35000</p>
+</div>
+<div class="paragraph">
+<p>Output:
+text</p>
+</div>
+<div class="paragraph">
+<p>Bob Anderson
+30000
+35000</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_2_4_map_in_javascript"><a class="anchor" href="#_3_2_4_map_in_javascript"></a>3.2.4. Map in JavaScript</h4>
+<div class="paragraph">
+<p>In JavaScript, Maps are collections that store unordered key-value pairs, where each key is unique and maps to a corresponding value. Maps are particularly useful in data retrieval algorithms because they offer efficient lookups.</p>
+</div>
+<div class="paragraph">
+<p>Unlike arrays, which use numeric indexes, Maps allow keys of any data type, making them more flexible (Figure 3.3).</p>
+</div>
+<div class="imageblock text-center unresolved text-center">
+<div class="content">
+<img src="_images/Fig3_3_Map.jpg" alt="Fig3 3 Map" width="400" height="200">
+</div>
+<div class="title">Figure 3.3. Map</div>
+</div>
+<div class="paragraph">
+<p>In JavaScript, we use the Map object to create a map. The syntax is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let myMap = new Map();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here, myMap is an empty Map ready to store key-value pairs.</p>
+</div>
+<div class="paragraph">
+<p>🔹 Declaring a Map Where Keys Are Strings and Values Are Numbers</p>
+</div>
+<div class="paragraph">
+<p>We use the .set() method:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let studentScores = new Map();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>studentScores.set("Alice", 95);
+studentScores.set("Bob", 88);
+studentScores.set("Charlie", 92);</p>
+</div>
+<div class="paragraph">
+<p>console.log(studentScores);</p>
+</div>
+<div class="paragraph">
+<p>Now, studentScores contains:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>"Alice" → 95</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>"Bob" → 88</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>"Charlie" → 92</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>🔹 Accessing Values in a Map</p>
+</div>
+<div class="paragraph">
+<p>To retrieve a value from a map, use .get(key):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">console.log(studentScores.get("Alice")); // Output: 95
+console.log(studentScores.get("Bob")); // Output: 88</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the key does not exist, .get() returns undefined.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_2_5_linked_list"><a class="anchor" href="#_3_2_5_linked_list"></a>3.2.5. Linked List</h4>
+<div class="paragraph">
+<p>A linked list is a dynamic data structure where each element, called a node, consists of two parts (Figure 3.4):</p>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/Fig3_4_LL.jpg" alt="Fig3 4 LL" width="100%">
+</div>
+<div class="title">Figure 3.4. Singly linked list structure</div>
+</div>
+<div class="paragraph">
+<p>1️⃣ Data (which can be any primitive or complex data type)
+2️⃣ A reference (pointer) to the next node in the list</p>
+</div>
+<div class="paragraph">
+<p>Unlike arrays, where elements are stored in contiguous memory locations, linked lists store elements at different memory addresses and connect them via references.</p>
+</div>
+<div class="paragraph">
+<p>They are widely used in memory management, file systems, and queue implementations.</p>
+</div>
+<div class="paragraph">
+<p>In JavaScript, we represent a linked list node using an object.</p>
+</div>
+<div class="paragraph">
+<p>🔹 Creating a Node</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">function createNode(data) {
+return {
+data,
+next: null
+};
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Each node has:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>data – stores the value</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>next – stores the reference to the next node (initially null)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>🔹 Creating a Linked List</p>
+</div>
+<div class="paragraph">
+<p>A linked list needs:</p>
+</div>
+<div class="paragraph">
+<p>1️⃣ A reference to the first node (head)
+2️⃣ A counter (size) to track the number of elements</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">function createLinkedList() {
+return {
+head: null,
+size: 0
+};
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here head points to the first node, and size stores the length of the list.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_2_6_stack_and_queue_as_data_structures"><a class="anchor" href="#_3_2_6_stack_and_queue_as_data_structures"></a>3.2.6. Stack and Queue as Data Structures</h4>
+<div class="paragraph">
+<p>a) Stack</p>
+</div>
+<div class="paragraph">
+<p>A stack is an abstract data type that contains elements with two basic operations: push, which adds an item to the collection, and pop, which deletes the last item added. From a technological point of view, a stack is memory where data values are loaded and retrieved according to the "last in - first out" (LIFO - Last-In-First-Out) strategy. Data enters the stack from only one side, called the top of the stack (Figure 3.5).</p>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/Fig3_5_Stack.jpg" alt="Fig3 5 Stack" width="100%">
+</div>
+<div class="title">Figure 3.5. Last-in, first-out stack operation</div>
+</div>
+<div class="paragraph">
+<p>A stack supports two primary operations:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Push(item) – adds an element to the top of the stack</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Pop() – removes the top element from the stack</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>From a conceptual point of view, a stack can be compared to a stack of plates: you can only remove the top plate. To access a plate further down, you must remove all plates above it.</p>
+</div>
+<div class="paragraph">
+<p>This structure is commonly used in:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Undo (Ctrl+Z) functionality in text editors</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Managing function calls in recursion (function calls are stored in a stack)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>🔹 Declaring a Stack in JavaScript</p>
+</div>
+<div class="paragraph">
+<p>JavaScript does not have a built-in stack data type, but it can be implemented using arrays, as they provide push() and pop() methods.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">function createStack() {
+let data = []; // Internal storage for stack elements</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>return {
+push(item) {
+data.push(item);
+},</p>
+</div>
+<div class="paragraph">
+<p>pop() {
+if (data.length === 0) return undefined;
+return data.pop();
+},</p>
+</div>
+<div class="paragraph">
+<p>peek() {
+return data[data.length - 1]; // View the top element
+},</p>
+</div>
+<div class="paragraph">
+<p>size() {
+return data.length;
+},</p>
+</div>
+<div class="paragraph">
+<p>isEmpty() {
+return data.length === 0;
+}
+};
+}</p>
+</div>
+<div class="paragraph">
+<p>b) Queue</p>
+</div>
+<div class="paragraph">
+<p>A queue is a linear data structure that follows the First-In-First-Out (FIFO) principle. This means that the first element added to the queue is the first one to be removed (Figure 3.6).</p>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/Fig3_6_Queue.jpg" alt="Fig3 6 Queue" width="100%">
+</div>
+<div class="title">Figure 3.6. First-In-First-Out queue operation</div>
+</div>
+<div class="paragraph">
+<p>A queue supports two primary operations:</p>
+</div>
+<div class="paragraph">
+<p>1️⃣ enqueue(item) – Adds an element to the back of the queue
+2️⃣ dequeue() – Removes an element from the front of the queue</p>
+</div>
+<div class="paragraph">
+<p>Queues are widely used in:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Task scheduling (CPU scheduling, print queue)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Breadth-First Search (BFS) algorithms</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Message processing systems</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_2_7_representation_of_binary_trees_in_javascript"><a class="anchor" href="#_3_2_7_representation_of_binary_trees_in_javascript"></a>3.2.7. Representation of Binary Trees in JavaScript</h4>
+<div class="paragraph">
+<p>Binary trees as an abstract data type were discussed in Section 1. Here we will discuss the computer implementation of this type of data structure using the visual algorithmic language DRAKON and JavaScript. Before we continue, let&#8217;s review the key terms associated with binary trees (Figure 3.7).</p>
+</div>
+<div class="imageblock text-center unresolved text-center">
+<div class="content">
+<img src="_images/Fig3_7_Term.jpg" alt="Fig3 7 Term" width="70%" height="40%">
+</div>
+<div class="title">Figure 3.7. Basic terminology of the tree</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Root: The root of the tree is the only node with no incoming edges. It is the top node in the tree.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Node: The basic element of the tree. Each node has data and two references that can point to zero or more descendants.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Edge: A fundamental part of the tree used to connect two nodes.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Path: An ordered list of nodes connected by edges.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Leaf: A leaf node is a node that has no descendants.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Tree height: The number of edges on the longest path between the root and a leaf.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Node level: The number of edges on the path from the root node to that node.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The binary tree&#8217;s information structure is set up as follows (Figure 3.8):</p>
+</div>
+<div class="imageblock text-center unresolved text-center">
+<div class="content">
+<img src="_images/Fig3_8_BST.jpg" alt="Fig3 8 BST" width="50%" height="30%">
+</div>
+<div class="title">Figure 3.8. Binary tree structure (value - value (key), N - NULL)</div>
+</div>
+<div class="paragraph">
+<p>The declaration of the basic elements of binary trees in JavaScript is conveniently performed using a factory function:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">function createNode(value) {
+return {
+value,
+left: null,
+right: null
+};
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Each node has:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>value – Stores the data</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>left – Reference to the left child (initially null)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>right – Reference to the right child (initially null)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A binary tree should have:</p>
+</div>
+<div class="paragraph">
+<p>1️⃣ A reference to the root node
+2️⃣ Methods to insert values into the tree
+3️⃣ Methods to traverse the tree</p>
+</div>
+<div class="paragraph">
+<p>The structure of a binary tree in JavaScript is declared in a simplified way:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">function createTreeNode(value, parent) {
+return {
+left: null,
+right: null,
+parent: parent,
+value: value,
+};
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Several types of binary trees are discussed in the literature, the most important of which is classification based on node values:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Binary Search Tree (BST)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>AVL Tree</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Red-Black Tree</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Binary Search Tree (BST)</p>
+</div>
+<div class="paragraph">
+<p>Node Structure: Each node has a value, a left child, and a right child. In JavaScript, this can be represented with objects.</p>
+</div>
+<div class="paragraph">
+<p>Insertion: New nodes are placed based on their value relative to the current node. Smaller values go left, larger values go right.</p>
+</div>
+<div class="paragraph">
+<p>AVL Tree</p>
+</div>
+<div class="paragraph">
+<p>Self-Balancing: Maintains balance by ensuring the height difference between left and right subtrees of any node is at most 1.</p>
+</div>
+<div class="paragraph">
+<p>Balancing Mechanism: Uses rotations (single and double) to restore balance after insertions or deletions.</p>
+</div>
+<div class="paragraph">
+<p>Implementation Notes: Requires tracking node heights and implementing rotation functions.</p>
+</div>
+<div class="paragraph">
+<p>Red-Black Tree</p>
+</div>
+<div class="paragraph">
+<p>Self-Balancing: Uses color attributes (red or black) for nodes and follows specific rules to maintain balance.</p>
+</div>
+<div class="paragraph">
+<p>Rules:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Root and leaves are black</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Red nodes have black children</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>All paths from a node to its descendant leaves contain the same number of black nodes</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Balancing Mechanism: Uses recoloring and rotations to restore balance after modifications.</p>
+</div>
+<div class="paragraph">
+<p>Performance: Often faster than AVL trees for insertions and deletions.</p>
+</div>
+<div class="paragraph">
+<p>Implementation Notes: Requires tracking node colors and implementing recoloring and rotation functions.</p>
+</div>
+<div class="paragraph">
+<p>Algorithms implementing the basic tree manipulation functions are presented in Section 8.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_2_8_representation_of_graphs_in_javascript"><a class="anchor" href="#_3_2_8_representation_of_graphs_in_javascript"></a>3.2.8. Representation of Graphs in JavaScript</h4>
+<div class="paragraph">
+<p>Recall that a graph G is given by a set of vertices {V} and a set of edges {E} connecting all or part of these vertices. Thus, a graph G is completely defined as {V, E}.</p>
+</div>
+<div class="paragraph">
+<p>Types of Graphs (Figure 3.9):</p>
+</div>
+<div class="paragraph">
+<p>1️⃣ Undirected Graph – Edges have no direction (e.g., friendships in social media)
+2️⃣ Directed Graph (Digraph) – Edges have direction (e.g., roads, dependencies)</p>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/Fig3_9_Graphes.jpg" alt="Fig3 9 Graphes" width="100%">
+</div>
+<div class="title">Figure 3.9. The view of (a) undirected and (b) directed graphs</div>
+</div>
+<div class="paragraph">
+<p>🔹 Graph Representation in JavaScript</p>
+</div>
+<div class="paragraph">
+<p>A graph can be represented using an adjacency list, where:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Each node (vertex) stores a list of neighbors</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Directed graphs store one-way connections</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Undirected graphs store two-way connections</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>🔹 Creating a Graph in JavaScript</p>
+</div>
+<div class="paragraph">
+<p>We will use a factory function to create a graph.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">function createGraph(isDirected = false) {
+let adjacencyList = new Map();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>function addVertex(vertex) { // adds a new node
+if (!adjacencyList.has(vertex)) {
+adjacencyList.set(vertex, []);
+}
+}</p>
+</div>
+<div class="paragraph">
+<p>function addEdge(vertex1, vertex2) { // connects two nodes
+if (!adjacencyList.has(vertex1)) {
+addVertex(vertex1);
+}
+if (!adjacencyList.has(vertex2)) {
+addVertex(vertex2);
+}
+adjacencyList.get(vertex1).push(vertex2);</p>
+</div>
+<div class="paragraph">
+<p>if (!isDirected) {
+adjacencyList.get(vertex2).push(vertex1);
+}
+}</p>
+</div>
+<div class="paragraph">
+<p>function getAdjacencyList() { // returns the full graph structure
+return adjacencyList;
+}</p>
+</div>
+<div class="paragraph">
+<p>return { addVertex, addEdge, getAdjacencyList };
+}</p>
+</div>
+<div class="paragraph">
+<p>Algorithms implementing basic graph manipulation functions are presented in Section 9.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

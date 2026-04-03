@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Section 9. Graphs and Graph Algorithms :: DRAKON JavaScript Docs</title>
+    <link rel="canonical" href="https://ISA-1941.github.io/DrakonJs-Docs/drakonjs-docs/3.1.10/section-9.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://ISA-1941.github.io/DrakonJs-Docs">DRAKON JavaScript Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="drakonjs-docs" data-version="3.1.10">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">DRAKON JavaScript Docs</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="section-1.html">Section 1. Abstract Data Types</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="section-2.html">Section 2. JavaScript Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="section-3.html">Section 3. DRAKON Visual Language</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="section-4.html">Section 4. Implementation of ADTs in JavaScript</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="section-5.html">Section 5. Complexity Analysis</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="section-6.html">Section 6. Sorting Algorithms</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="section-7.html">Section 7. Search Algorithms</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="section-8.html">Section 8. Binary Tree Algorithms</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="section-9.html">Section 9. Graphs and Graph Algorithms</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">DRAKON JavaScript Docs</span>
+    <span class="version">3.1.10</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="index.html">DRAKON JavaScript Docs</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">3.1.10</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">DRAKON JavaScript Docs</a></li>
+    <li><a href="section-9.html">Section 9. Graphs and Graph Algorithms</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/ISA-1941/DrakonJs-Docs/edit/main/docs-src/modules/ROOT/pages/section-9.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Section 9. Graphs and Graph Algorithms</h1>
+<div class="sect1">
+<h2 id="_9_1_general_information_basic_terminology"><a class="anchor" href="#_9_1_general_information_basic_terminology"></a>9.1. General Information. Basic Terminology</h2>
+<div class="sectionbody">
+<div class="sidebarblock right">
+<div class="content">
+<div class="title">Core Terminology</div>
+Glossary of Basic Graph Terms
+</div>
+</div>
+<div class="paragraph">
+<p>Before we dive into the algorithms, let us align our terminology. In the context of engineering data structures, these terms have precise meanings:</p>
+</div>
+<div class="paragraph">
+<p>Vertex (Node): The fundamental unit of a graph, representing an entity (e.g., a city, a router, or a data object).</p>
+</div>
+<div class="paragraph">
+<p>Edge (Arc): A connection between two vertices. In directed graphs, an edge is often called an Arc.</p>
+</div>
+<div class="paragraph">
+<p>Incident: An edge is incident to a vertex if the vertex is one of the edge&#8217;s two endpoints.</p>
+</div>
+<div class="paragraph">
+<p>Adjacent: Two vertices are adjacent if they are connected by a common edge.</p>
+</div>
+<div class="paragraph">
+<p>Degree (deg(v)): The count of edges incident to vertex v.</p>
+</div>
+<div class="paragraph">
+<p>Loop: An edge that connects a vertex to itself.</p>
+</div>
+<div class="paragraph">
+<p>Path: A sequence of edges that allows you to travel from one vertex to another.</p>
+</div>
+<div class="paragraph">
+<p>Cycle: A path that starts and ends at the same vertex.</p>
+</div>
+<div class="paragraph">
+<p>This section discusses data structures such as graphs. In mathematics, a graph is a structure consisting of vertices (nodes) and edges (connections) that connect these vertices.</p>
+</div>
+<div class="paragraph">
+<p>In general, graphs share many similarities with trees, and one can consider trees as a special case of graphs. However, the practical value of graphs in solving real-world problems is much greater. Many tasks can be reduced to considering a set of objects whose properties are described by the relationships between them.</p>
+</div>
+<div class="paragraph">
+<p>Such objects include:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Electrical and electronic circuits</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Circuit boards</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Road maps</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Aviation routes</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Descriptions of constructions</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Games</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Among the tasks that can be solved using graphs are:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Finding the shortest path between two vertices</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Solving the problem of maximum capacity of pipelines, road networks, or computer networks</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Distributing N workers to perform M different types of work</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Choosing the most efficient method of problem solving, among others</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A graph is a mathematical structure defined by two sets:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>A set of vertices (also known as nodes)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>A set of edges that connect pairs of these vertices</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Formally, a graph is denoted as G = (V, E), where V is the set of vertices and E is the set of edges connecting them.</p>
+</div>
+<div class="sect2">
+<h3 id="_directed_and_undirected_graphs"><a class="anchor" href="#_directed_and_undirected_graphs"></a>Directed and Undirected Graphs</h3>
+<div class="paragraph">
+<p>Graphs as data structures can be represented in two primary forms: undirected and directed. In undirected graphs, there are no "inputs" or "outputs"; there is only the objective fact of a connection. In directed graphs (or digraphs), direction matters, and a connection from vertex u to vertex v is not equivalent to a connection from v to u (Figure 9.1).</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Undirected Graph</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In these graphs, there are no "inputs" or "outputs"; there is only the objective fact of a connection.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Vertex Degree (deg(v)): This is the total number of edges incident to a given vertex.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Loops: This is a critical point for this textbook. In an undirected graph, a loop is counted twice (+2 to the degree). Why? Because both ends of the loop-edge are "plugged into" the same vertex, and each end contributes to the degree.</pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Directed Graph (Digraph)</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Here, the logic becomes more nuanced as direction matters. The degree is split into two distinct components:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>In-degree (deg⁻(v)): The number of edges entering (incident into) the vertex.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Out-degree (deg⁺(v)): The number of edges leaving (incident from) the vertex.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Total Degree: The sum of the in-degree and out-degree.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Loops in a Digraph: In this case, a loop is counted exactly once for the in-degree and once for the out-degree. It does not "double" the total degree in the same way as in an undirected graph; instead, it is honestly distributed between the two directions.</pre>
+</div>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/Fig9_1_example_Graph.svg" alt="Fig9 1 example Graph" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 9.1. The view of (a) undirected; (b) directed</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_adjacency_incidence_and_degree"><a class="anchor" href="#_adjacency_incidence_and_degree"></a>Adjacency, Incidence, and Degree</h3>
+<div class="paragraph">
+<p>A vertex and an edge are incident if the vertex is one of the endpoints of the edge.</p>
+</div>
+<div class="paragraph">
+<p>Refined Terms for Directed Graphs (Digraphs)</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>In-degree (deg⁻(v)): The number of edges directed into the vertex. In flow-based models, this represents the "input" capacity.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Out-degree (deg⁺(v)): The number of edges directed away from the vertex. In state machines, this represents the number of possible transitions.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Total Degree: The sum of in-degree and out-degree.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Self-Loop (Digraph): A special case where an edge starts and ends at the same vertex. It contributes exactly 1 to the in-degree and exactly 1 to the out-degree.</pre>
+</div>
+</div>
+<div class="imageblock text-center unresolved text-center">
+<div class="content">
+<img src="_images/Figure_9.2_Basic_graph_parameters.svg" alt="Figure 9.2 Basic graph parameters" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 9.2. Basic graph parameters</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_9_2_graph_representation_methods"><a class="anchor" href="#_9_2_graph_representation_methods"></a>9.2. Graph Representation Methods</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Solving problems related to processing a data set organized in the form of graphs requires modeling them in computer programs. In practice, two structures are typically used to model the structure of a graph: the adjacency matrix and the adjacency list.</p>
+</div>
+<div class="sect2">
+<h3 id="_adjacency_matrix"><a class="anchor" href="#_adjacency_matrix"></a>Adjacency Matrix</h3>
+<div class="paragraph">
+<p>An adjacency matrix is a two-dimensional array that indicates the existence of a relationship between two vertices. If the graph has V vertices, then the adjacency matrix is a V × V array. In an undirected graph, the adjacency relationship is symmetric: if vertex <strong>u</strong> is adjacent to <strong>v</strong>, then <strong>v</strong> is also adjacent to <strong>u</strong>. This symmetry is reflected in the adjacency matrix, which is always symmetric about its main diagonal.</p>
+</div>
+<div class="paragraph">
+<p>In contrast, for a directed graph (or digraph), the relationship is not necessarily symmetric. An edge (u, v) means vertex <strong>v</strong> is adjacent from vertex <strong>u</strong>, and this is indicated in the matrix by a '1' at position A[u][v] only.</p>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/Fig9_3_AdjMatrix.jpg" alt="Fig9 3 AdjMatrix" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 9.3. Adjacency matrix for undirected and directed graphs</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_adjacency_list"><a class="anchor" href="#_adjacency_list"></a>Adjacency List</h3>
+<div class="paragraph">
+<p>In some cases, a more memory-efficient way to represent a graph is to use an adjacency list. This method involves an array of linked lists (or arrays), where each individual list contains information about which vertices are adjacent to a given one.</p>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/Fig9_4_AdjList.jpg" alt="Fig9 4 AdjList" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 9.4. Adjacency list representation</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_comparison_and_complexity"><a class="anchor" href="#_comparison_and_complexity"></a>Comparison and Complexity</h3>
+<div class="paragraph">
+<p>The space complexity of representing a graph depends heavily on the chosen data structure:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Adjacency Matrix: Requires O(V²) memory. This is memory-intensive, especially for large, sparse graphs (graphs with relatively few edges). It also often requires knowing the number of vertices in advance.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Adjacency List: Requires O(V + E) memory, where E is the number of edges. This is much more efficient for sparse graphs, which are common in real-world applications.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In practice, the choice between these representations is a trade-off. An adjacency matrix is often preferable for dense graphs (graphs where the number of edges approaches V²) and when frequent edge lookups are required (O(1) complexity). An adjacency list is generally better for sparse graphs.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_weighted_graphs"><a class="anchor" href="#_weighted_graphs"></a>Weighted Graphs</h3>
+<div class="paragraph">
+<p>Many real-life problems require modeling graphs with numerical values associated with edges, such as distance, cost, or travel time. Such graphs are called weighted graphs. In an adjacency matrix, the weight is stored as the value of the matrix element (instead of '1'), and a special value (like ∞ or '0') can represent the absence of an edge. In an adjacency list, each element in the list is typically a structure containing both the adjacent vertex ID and the edge weight.</p>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/Fig9_5_WeightField.svg" alt="Fig9 5 WeightField" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 9.5. Adjacency list with a 'weight' field</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_graph_representation_in_javascript"><a class="anchor" href="#_graph_representation_in_javascript"></a>Graph Representation in JavaScript</h3>
+<div class="paragraph">
+<p>Since JavaScript is a dynamic language, we rely on the flexibility of Objects, Arrays, and built-in collections like Map and Set.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Adjacency Matrix in JavaScript</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>A two-dimensional array is used, where vertices correspond to array indices.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const numVertices = 3;
+const adjMatrix = Array(numVertices).fill().map(() =&gt; Array(numVertices).fill(0));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>function addEdgeMatrix(u, v) {
+adjMatrix[u][v] = 1;
+adjMatrix[v][u] = 1; // For undirected graph
+}</p>
+</div>
+<div class="paragraph">
+<p>addEdgeMatrix(0, 1);
+addEdgeMatrix(1, 2);</p>
+</div>
+<div class="paragraph">
+<p>console.log(adjMatrix[0][1]); // 1</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Adjacency List in JavaScript</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This is the most popular representation for most tasks in JS. It is typically implemented as an array of arrays.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const numVertices = 3;
+const adjList = Array(numVertices).fill().map(() =&gt; []);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>function addEdgeList(u, v) {
+adjList[u].push(v);
+adjList[v].push(u); // For undirected graph
+}</p>
+</div>
+<div class="paragraph">
+<p>addEdgeList(0, 1);
+addEdgeList(1, 2);</p>
+</div>
+<div class="paragraph">
+<p>console.log(adjList[0].includes(1)); // true</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Weighted Graph in JavaScript</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For weighted graphs, we store objects containing the neighbor vertex and the weight.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const weightedAdjList = Array(numVertices).fill().map(() =&gt; []);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>function addWeightedEdge(u, v, weight) {
+weightedAdjList[u].push({ node: v, weight });
+weightedAdjList[v].push({ node: u, weight }); // For undirected weighted graph
+}</p>
+</div>
+<div class="paragraph">
+<p>addWeightedEdge(0, 1, 5);
+addWeightedEdge(1, 2, 10);</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_9_3_fundamentals_of_graph_traversal"><a class="anchor" href="#_9_3_fundamentals_of_graph_traversal"></a>9.3. Fundamentals of Graph Traversal</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Once a graph structure is established, the next logical task is to systematically visit all its vertices. This process is called graph traversal. There are two primary techniques: Depth-First Search (DFS) and Breadth-First Search (BFS).</p>
+</div>
+<div class="paragraph">
+<p>The fundamental difference between DFS and BFS lies in the order in which they explore the graph, which stems from the underlying data structure they use to manage yet-to-be-visited vertices:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Depth-First Search (DFS) uses a stack (often implemented via recursion) to explore as deep as possible along each branch before backtracking. While DFS does not inherently find shortest paths, it is indispensable for tasks like detecting cycles, topological sorting, and exploring a graph when its overall structure is not known in advance.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Breadth-First Search (BFS) uses a queue to explore the graph level by level. It visits all direct neighbors of the starting vertex, then all of their neighbors, and so on. BFS is guaranteed to find the shortest path (in terms of the number of edges) in an unweighted graph.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The step-by-step process for each algorithm is shown in the tables below for the example graph, starting from vertex V₀.</p>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/Fig9_6_baseGraph.svg" alt="Fig9 6 baseGraph" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 9.6. A simple graph for demonstrating DFS and BFS traversals</p>
+</div>
+<div class="paragraph">
+<p>The following directed graph serves as the reference structure for the DFS and BFS traces presented in Tables 9.1 and 9.2. The traversal begins at vertex V₀.</p>
+</div>
+<div class="sect2">
+<h3 id="_depth_first_search_dfs_using_stack_lifo"><a class="anchor" href="#_depth_first_search_dfs_using_stack_lifo"></a>Depth-First Search (DFS) — Using Stack (LIFO)</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 4.7619%;">
+<col style="width: 9.5238%;">
+<col style="width: 14.2857%;">
+<col style="width: 19.0476%;">
+<col style="width: 23.8095%;">
+<col style="width: 28.5715%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Step</th>
+<th class="tableblock halign-left valign-top">Action</th>
+<th class="tableblock halign-left valign-top">Current Vertex</th>
+<th class="tableblock halign-left valign-top">Unvisited Neighbors</th>
+<th class="tableblock halign-left valign-top">Stack Content (LIFO)</th>
+<th class="tableblock halign-left valign-top">Visited Order</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Start</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1, 3]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1, 3]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pop from stack</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[2, 3, 4]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[3, 2, 4]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0, 1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pop from stack</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[5]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[3, 4, 5]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0, 1, 2]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pop from stack</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[4]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[3, 4]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0, 1, 2, 5]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pop from stack</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0, 3] (0 already visited) → [3]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[3]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0, 1, 2, 5, 4]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pop from stack</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[5] (5 already visited) → []</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0, 1, 2, 5, 4, 3]</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Key Principle of DFS</div>
+<div class="literalblock">
+<div class="content">
+<pre>Stack operates on LIFO (Last In, First Out)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>The algorithm goes deep until the end of a branch before backtracking</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>New neighbors are pushed to the top of the stack
+====</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>=== Breadth-First Search (BFS) — Using Queue (FIFO)</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 4.7619%;">
+<col style="width: 9.5238%;">
+<col style="width: 14.2857%;">
+<col style="width: 19.0476%;">
+<col style="width: 23.8095%;">
+<col style="width: 28.5715%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Step</th>
+<th class="tableblock halign-left valign-top">Action</th>
+<th class="tableblock halign-left valign-top">Current Vertex</th>
+<th class="tableblock halign-left valign-top">Unvisited Neighbors</th>
+<th class="tableblock halign-left valign-top">Queue Content (FIFO)</th>
+<th class="tableblock halign-left valign-top">Visited Order</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Start</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1, 3]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1, 3]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dequeue from front</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[2, 3, 4]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[3, 2, 4]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0, 1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dequeue from front</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[5]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[2, 4, 5]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0, 1, 3]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dequeue from front</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[5]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[4, 5]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0, 1, 3, 2]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dequeue from front</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0, 3] (0 and 3 already visited) → []</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[5]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0, 1, 3, 2, 4]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dequeue from front</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[4] (4 already visited) → []</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0, 1, 3, 2, 4, 5]</p></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Queue operates on FIFO (First In, First Out)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>The algorithm expands like a wave — all neighbors first, then their neighbors</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>New neighbors are added to the end of the queue
+====</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_comparison_stack_vs_queue"><a class="anchor" href="#_comparison_stack_vs_queue"></a>Comparison: Stack vs. Queue</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 33.3333%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Feature</th>
+<th class="tableblock halign-left valign-top">DFS (Stack)</th>
+<th class="tableblock halign-left valign-top">BFS (Queue)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Structure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stack (LIFO)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Queue (FIFO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Traversal Order</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0 → 1 → 2 → 5 → 4 → 3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0 → 1 → 3 → 2 → 4 → 5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Strategy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Depth-first" — explores as deep as possible</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Breadth-first" — explores level by level</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">How neighbors are added</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pushed to the top of the stack</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enqueued to the end of the queue</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When vertex is processed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Immediately after being popped</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Immediately after being dequeued</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Visualization</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">🟠 Orange edges (the path taken)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">🟠🟢🔵 Colors by level/distance</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_visual_representation"><a class="anchor" href="#_visual_representation"></a>Visual Representation</h3>
+<div class="paragraph">
+<p>Stack (DFS) — LIFO
+text</p>
+</div>
+<div class="paragraph">
+<p>Step 1: Stack [1, 3]     → pop 1 (last added)
+Step 2: Stack [3, 4, 2]  → pop 2 (last added!)
+Step 3: Stack [3, 4, 5]  → pop 5
+Step 4: Stack [3, 4]     → pop 4
+Step 5: Stack [3]        → pop 3</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Vertex 3 was added first but processed last!
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Queue (BFS) — FIFO
+text</p>
+</div>
+<div class="paragraph">
+<p>Step 1: Queue [1, 3]   → dequeue 1 (first added)
+Step 2: Queue [3, 2, 4] → dequeue 3 (first in queue)
+Step 3: Queue [2, 4, 5] → dequeue 2
+Step 4: Queue [4, 5]    → dequeue 4
+Step 5: Queue [5]       → dequeue 5</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Order of addition = order of processing!
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_summary_of_traversal_comparison"><a class="anchor" href="#_summary_of_traversal_comparison"></a>Summary of Traversal Comparison</h3>
+<div class="paragraph">
+<p>These tables clearly demonstrate that:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>DFS (with Stack) "dives deep" — vertex 3, added first, is processed last</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>BFS (with Queue) processes vertices in the order they are discovered — the wave expands evenly</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is the fundamental difference between the two graph traversal algorithms! 🎯</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_drakon_diagrams_for_dfs_and_bfs"><a class="anchor" href="#_drakon_diagrams_for_dfs_and_bfs"></a>DRAKON-Diagrams for DFS and BFS</h3>
+<div class="paragraph">
+<p>Before analyzing the practical considerations for selecting an appropriate traversal strategy, it is instructive to examine the algorithmic logic encoded in the implementation. The Drakon-diagrams below provide a visual representation of the control flow for both Depth-First Search (DFS) and Breadth-First Search (BFS) algorithms as they are implemented in the accompanying code examples.</p>
+</div>
+<div class="paragraph">
+<p>These diagrams decompose the traversal process into discrete decision points and operations, illustrating how the choice of underlying data structure — a stack for DFS versus a queue for BFS — fundamentally shapes the execution path. Each diagram follows the same logical structure: initialization of the data structure with the starting vertex, iterative processing until no vertices remain, and systematic exploration of the graph while maintaining a visited set to prevent redundant processing.</p>
+</div>
+<div class="paragraph">
+<p>The following Drakon-diagram illustrates the DFS_stack(graph, start) function. The LIFO (Last-In-First-Out) behavior of the stack drives deep exploration, forcing the algorithm to exhaust each branch before backtracking to previously discovered vertices.</p>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/Fig9_6a_DFS_stack.svg" alt="Fig9 6a DFS stack" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 9.7a. Drakon-diagram illustrating the control flow of DFS (Depth-First Search)</p>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/Fig9_6b_BFS_queue.svg" alt="Fig9 6b BFS queue" width="75%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 9.7b. Drakon-diagram illustrating the control flow of BFS (Breadth-First Search)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_choosing_between_dfs_and_bfs"><a class="anchor" href="#_choosing_between_dfs_and_bfs"></a>Choosing Between DFS and BFS</h3>
+<div class="paragraph">
+<p>In practice, the choice between DFS and BFS depends on the specific problem:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Task</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recommended Algorithm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reason</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shortest path (unweighted)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BFS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Minimum number of edges</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Graph connectivity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DFS or BFS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Any traversal works</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cycle detection</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DFS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Easy to track the call stack</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Topological sorting</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DFS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Works naturally with recursion</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Finding connected components</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DFS or BFS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Any traversal works</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Solving puzzles/mazes (any path)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DFS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Requires less memory on average</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_9_4_calculation_of_paths_and_travel_costs_from_a_given_vertex_to_all_other_vertices"><a class="anchor" href="#_9_4_calculation_of_paths_and_travel_costs_from_a_given_vertex_to_all_other_vertices"></a>9.4. Calculation of Paths and Travel Costs from a Given Vertex to All Other Vertices</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This subsection examines the implementation of an algorithm for finding all possible routes between two vertices in a graph, as well as calculating their cost characteristics — distance (in kilometers) and travel price (in arbitrary units).</p>
+</div>
+<div class="paragraph">
+<p>The graph represents a transportation network, where vertices correspond to settlements and edges represent roads between them. Each edge is characterized by two parameters: length and travel cost.</p>
+</div>
+<div class="paragraph">
+<p>To solve this problem, an all-paths search algorithm based on recursive backtracking was implemented. Unlike classical graph traversal algorithms (BFS, DFS), which find a single path or vertex visitation order, this approach enables:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Finding all possible routes between given vertices</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Accounting for weighted characteristics of each edge</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Calculating total distance and cost for each route</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Selecting optimal routes according to different criteria</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The implementation also includes BFS_queue and DFS_stack functions, which demonstrate classical graph traversal algorithms (breadth-first and depth-first search). However, these are not used for finding all weighted paths, as they do not provide exhaustive enumeration of all possible routes while accounting for edge weights.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>At the core of the implemented algorithm lies the method of exponential backtracking. This approach systematically traverses all possible paths through the graph, maintaining cumulative information about the current route. Upon reaching the target vertex, the path is saved; after fully exploring each branch, a backtracking step reverts to the previous state, enabling the search to proceed with alternative routes. In the worst-case scenario, the number of paths considered grows exponentially with the number of vertices — an inherent cost of exhaustive enumeration.</p>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/Fig9_7_searchContext.svg" alt="Fig9 7 searchContext" width="80%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 9.8. Context Object: from structure creation (a) to data population (b)
+(a) — function creates an empty container with the required structure for storing search parameters and results.
+(b) — the container is populated with data during the search process, accumulating information.</p>
+</div>
+<div class="paragraph">
+<p>A visual representation of the function structure, their relationships, and operational logic is presented in the mind map (Figure 9.9).</p>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/Fig9_8_viewAlgorithmGraph.svg" alt="Fig9 8 viewAlgorithmGraph" width="80%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 9.9. Mind map of path search functions</p>
+</div>
+<div class="sect2">
+<h3 id="_description_of_key_functions"><a class="anchor" href="#_description_of_key_functions"></a>Description of Key Functions</h3>
+<div class="sect3">
+<h4 id="_initpathsearchgraph_source_target"><a class="anchor" href="#_initpathsearchgraph_source_target"></a>initPathSearch(graph, source, target)</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Initializes the search for all paths from source vertex to target vertex. Creates a search context, resets parameters, and initiates recursive graph traversal.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameters</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>graph – graph object containing adjacency matrix and edge weights; source – source vertex identifier; target – target vertex identifier</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Value</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Array allPaths containing all discovered paths as pathInfo objects</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Operations</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Step</th>
+<th class="tableblock halign-left valign-top">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Creates an empty allPaths array</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Initializes search context with starting values: currentPath – string with source vertex, totalDistance – 0, totalPrice – 0, visited – array for tracking visited vertices</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Marks the source vertex as visited</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Invokes recursive function findPathWithContext(source, context)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Returns the allPaths array for subsequent analysis</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/iFig9_9_initPathSearch.svg" alt="iFig9 9 initPathSearch" width="80%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 9.10. Drakon-diagram of the initialization function for path search</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_findpathwithcontextcurrent_context"><a class="anchor" href="#_findpathwithcontextcurrent_context"></a>findPathWithContext(current, context)</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The core recursive function that sequentially enumerates all neighbors of the current vertex, updates accumulated parameters (path, distance, cost), and persists the discovered route upon reaching the target vertex.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameters</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>current – current vertex identifier; context – search state object containing target, graph, currentPath, totalDistance, totalPrice, visited, allPaths</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Value</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>void – results are stored in context.allPaths</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Operations</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Step</th>
+<th class="tableblock halign-left valign-top">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Checks if the target vertex has been reached. If so, invokes handleFoundPath(context) and terminates the current recursive call</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Iterates through all neighbors of the current vertex using the adjacency matrix</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>For each unvisited neighbor: invokes prepareMoveToNeighbor to prepare transition data</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Recursively invokes findPathWithContext(neighbor, context)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Upon returning from recursion, invokes backtrackFromNeighbor to restore the previous state</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/iFig9_10_findPathWithContext.svg" alt="iFig9 10 findPathWithContext" width="80%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 9.11. Drakon-diagram of the recursive path search function</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_handlefoundpathcontext"><a class="anchor" href="#_handlefoundpathcontext"></a>handleFoundPath(context)</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Invoked when a complete path from source to target vertex is discovered during recursive traversal. Creates a structured record of the found path, stores it in the collection, and logs results to the console.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameters</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>context – search state object containing fields: currentPath (string), totalDistance (number), totalPrice (number), allPaths (array)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Value</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>pathInfo object with fields path, vertices, distance, price</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>pathInfo Data Structure</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">path</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>String representation of the path with vertices joined by " - " (example: "1 - 3 - 5 - 7")</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vertices</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Array&lt;number&gt;</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Numeric array of vertex identifiers for programmatic access (example: [1, 3, 5, 7])</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">distance</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Total path length in kilometers</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">price</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Total path cost in monetary units (y.e.)</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Operations</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Step</th>
+<th class="tableblock halign-left valign-top">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Constructs a pathInfo object from context data</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Appends pathInfo to the context.allPaths array</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Logs the path, distance, and price to the console</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Returns pathInfo for use by the caller</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/iFig9_11_handleFoundPath.svg" alt="iFig9 11 handleFoundPath" width="80%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 9.12. Drakon-diagram of the path handler function</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_preparemovetoneighborcontext_current_neighbor"><a class="anchor" href="#_preparemovetoneighborcontext_current_neighbor"></a>prepareMoveToNeighbor(context, current, neighbor)</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Prepares data for transitioning to a neighboring vertex: computes edge distance and traversal cost, persists the current state for subsequent backtracking.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameters</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>context – search state object; current – current vertex identifier; neighbor – neighboring vertex identifier</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Value</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>oldState object containing the previous state (oldPath, oldDistance, oldPrice) for later restoration</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Operations</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Step</th>
+<th class="tableblock halign-left valign-top">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Retrieves edge distance and price between current and neighbor from the graph</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Persists the current state in an oldState object (previous path, distance, price)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Updates context.currentPath by appending neighbor</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Increments context.totalDistance by the edge distance</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Increments context.totalPrice by the edge price</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Marks neighbor as visited</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Returns oldState for use in backtrackFromNeighbor</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/iFig9_12_prepareMoveToNeighbor.svg" alt="iFig9 12 prepareMoveToNeighbor" width="80%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 9.13. Drakon-diagram of the transition preparation function</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_backtrackfromneighborcontext_neighbor_oldstate"><a class="anchor" href="#_backtrackfromneighborcontext_neighbor_oldstate"></a>backtrackFromNeighbor(context, neighbor, oldState)</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Performs backtracking to the previous state after processing a neighboring vertex. Resets the visited flag, restores the path and accumulated sums. This mechanism ensures exhaustive enumeration of all possible routes.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameters</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>context – search state object; neighbor – vertex being processed; oldState – object containing the previous state (oldPath, oldDistance, oldPrice)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return Value</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>void – context state is restored</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Operations</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Step</th>
+<th class="tableblock halign-left valign-top">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Unmarks the neighbor vertex as visited</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Restores context.currentPath from oldState.oldPath</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Restores context.totalDistance from oldState.oldDistance</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Restores context.totalPrice from oldState.oldPrice</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/iFig9_13_backtrackFromNeighbor.svg" alt="iFig9 13 backtrackFromNeighbor" width="80%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 9.14. Drakon-diagram of the backtracking function</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_algorithmic_complexity_analysis"><a class="anchor" href="#_algorithmic_complexity_analysis"></a>Algorithmic Complexity Analysis</h3>
+<div class="paragraph">
+<p>The implemented backtracking algorithm has a time complexity of O(V!) in the worst case, as it explores all possible paths without revisiting vertices. This is acceptable for small to medium-sized graphs (up to 10–12 vertices) but becomes impractical for dense graphs with many vertices. Space complexity is O(V) for storing the current path and visited vertices during recursion.</p>
+</div>
+<div class="paragraph">
+<p>Classical BFS and DFS algorithms, while not suitable for all-paths enumeration in weighted graphs, demonstrate O(V + E) time complexity and are included for pedagogical purposes to illustrate fundamental graph traversal techniques.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_program_execution_example"><a class="anchor" href="#_program_execution_example"></a>Program Execution Example</h3>
+<div class="paragraph">
+<p>As an example, we will calculate all possible paths and travel costs between several pairs of vertices in the given graph (Figure 9.15).</p>
+</div>
+<div class="paragraph">
+<p>When the main() function executes, it searches for all paths for three vertex pairs: (0 → 5), (1 → 6), and (2 → 3). For each case, all found routes are displayed with their distance and cost. Subsequently, for the pair (0 → 5), the shortest route by distance and the cheapest route are additionally identified and displayed.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_find_all_paths_from_0_to_5"><a class="anchor" href="#_find_all_paths_from_0_to_5"></a>Find all paths from 0 to 5</h3>
+<div class="paragraph">
+<p>Path Vertices: 0-1-4-3-5
+Distance: 101.28 km
+Price: 31.80 u.</p>
+</div>
+<div class="paragraph">
+<p>Path Vertices: 0-6-3-5
+Distance: 94.21 km
+Price: 21.60 u.</p>
+</div>
+<div class="paragraph">
+<p>Thus, the developed software module enables not only finding all possible routes in a graph but also performing their quantitative and qualitative analysis, which can be applied to transportation logistics problems and route optimization tasks.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_9_5_dijkstras_algorithm"><a class="anchor" href="#_9_5_dijkstras_algorithm"></a>9.5. Dijkstra&#8217;s Algorithm</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Dijkstra algorithm is designed to find the shortest paths from a given vertex to all other vertices in a graph, provided that all edge weights are non-negative. This condition is essential for the algorithm to work correctly and guarantees that the found paths are indeed the shortest possible.</p>
+</div>
+<div class="paragraph">
+<p>The algorithm is named after the renowned Dutch computer scientist Edsger W. Dijkstra, who first conceived it in 1956. Interestingly, according to Dijkstra himself, the algorithm was devised in just 20 minutes while he was sitting at a café with his fiancée — a brilliant example of how simple ideas can change the world.</p>
+</div>
+<div class="paragraph">
+<p>Today, Dijkstra&#8217;s algorithm finds wide application across various fields of science, technology, and everyday life:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>In GPS navigation systems: it is the core technology behind finding the fastest routes, taking into account distance, traffic conditions, and other factors.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>In telecommunications networks: the algorithm helps determine the optimal path for data transmission from source to destination (used in routing protocols such as OSPF and IS-IS).</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>In robotics: it is used for path planning, enabling robots to reach their goals in the most efficient and safe manner.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>In computer games: the algorithm powers character and object navigation through complex game worlds.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>In logistics and transportation planning: it helps find optimal delivery routes, minimizing costs and improving efficiency.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this section, we will not only implement Dijkstra&#8217;s algorithm in JavaScript but also visualize its logic, allowing us to see, step by step, how the computer finds the shortest paths through the graph.</p>
+</div>
+<div class="sect2">
+<h3 id="_graph_representation_for_dijkstras_algorithm"><a class="anchor" href="#_graph_representation_for_dijkstras_algorithm"></a>Graph Representation for Dijkstra&#8217;s Algorithm</h3>
+<div class="paragraph">
+<p>For our demonstration of Dijkstra&#8217;s algorithm, we will use the graph shown in Figure 9.16. This graph consists of 6 vertices (labeled 0 through 5) connected by weighted edges. The weights represent, for example, distances in kilometers between cities or travel time in minutes.</p>
+</div>
+<div class="paragraph">
+<p>The graph structure is defined using an adjacency list, where each vertex maintains a map of its neighbors and the corresponding edge weights:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Vertex 0 is connected to: vertex 1 (weight 48.3), vertex 2 (40.7), vertex 5 (25.4)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Vertex 1 is connected to: vertex 0 (48.3), vertex 2 (37.5), vertex 3 (29.8)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Vertex 2 is connected to: vertex 0 (40.7), vertex 1 (37.5), vertex 3 (34.9), vertex 5 (29.8)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Vertex 3 is connected to: vertex 1 (29.8), vertex 2 (34.9), vertex 4 (25.4)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Vertex 4 is connected to: vertex 3 (25.4), vertex 5 (34.9)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Vertex 5 is connected to: vertex 0 (25.4), vertex 2 (29.8), vertex 4 (34.9)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In JavaScript, we represent this graph as an object:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const graph = {
+0: { 1: 48.3, 2: 40.7, 5: 25.4 },
+1: { 0: 48.3, 2: 37.5, 3: 29.8 },
+2: { 0: 40.7, 1: 37.5, 3: 34.9, 5: 29.8 },
+3: { 1: 29.8, 2: 34.9, 4: 25.4 },
+4: { 3: 25.4, 5: 34.9 },
+5: { 0: 25.4, 2: 29.8, 4: 34.9 }
+};</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This representation is both intuitive and efficient for implementing Dijkstra&#8217;s algorithm, as it allows us to quickly iterate over all neighbors of a given vertex.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_the_algorithm_works"><a class="anchor" href="#_how_the_algorithm_works"></a>How the Algorithm Works</h3>
+<div class="paragraph">
+<p>At the heart of the algorithm lies a simple yet powerful idea: iteratively build the set of vertices for which the shortest path is already known, and use them to discover shorter paths to the remaining vertices.</p>
+</div>
+<div class="paragraph">
+<p>To track its progress, the algorithm maintains three essential data structures:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Distance array (d) — For each vertex *v*, we store the current length of the shortest known path from the start vertex *s* to *v*. Initially, we set:</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>*d[s] = 0* (the distance from the start to itself is zero)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>d[v] = ∞ (infinity) for all other vertices, indicating that we haven't found any path yet</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Visited array (a) — A marker array where *a[v] = 1* indicates that we have found the optimal (shortest possible) path to vertex *v*, and *a[v] = 0* means the vertex is still unprocessed. Initially, all vertices are unvisited (*a[v] = 0* for all *v*).</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Imagine you are exploring a network of cities connected by roads of different lengths. You start at your home city (vertex <strong>s</strong>). Initially, you know the distance to your own city is zero, but all other cities are mysteries — their distances are "infinity".</p>
+</div>
+<div class="paragraph">
+<p>You begin by looking at the closest unvisited city (the one with the smallest known distance). When you "visit" it, you examine all roads leading from it. For each neighboring city, you ask: "Is it shorter to go directly to this neighbor through the current city than any path I knew before?" If yes, you update your map with this new, shorter route.</p>
+</div>
+<div class="paragraph">
+<p>You continue this process, always picking the nearest unvisited city next, until you have explored all reachable cities. The magic of Dijkstra&#8217;s algorithm is that by always choosing the vertex with the smallest current distance, you guarantee that when you visit a vertex, you have already found its optimal path.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mind_map_of_dijkstras_algorithm"><a class="anchor" href="#_mind_map_of_dijkstras_algorithm"></a>Mind Map of Dijkstra&#8217;s Algorithm</h3>
+<div class="paragraph">
+<p>Having examined the internal logic of the algorithm and its implementation in JavaScript, we now turn to observing it in action. Through interactive visualization, you can follow step by step how the algorithm relaxes edges, updates distances, and marks visited vertices — precisely mirroring the behavior of our relaxEdges and markVertexVisited functions. This visualization will not only reinforce your understanding of Dijkstra&#8217;s algorithm but also provide insights into its efficiency and practical applications.</p>
+</div>
+<div class="paragraph">
+<p>A mind map of Dijkstra&#8217;s algorithm logic is shown in Figure 9.16:</p>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/Fig9_15_Dijkstra_classic.svg" alt="Fig9 15 Dijkstra classic" width="80%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 9.16. Mind map of Dijkstra&#8217;s algorithm logic</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_drakon_diagrams_of_dijkstras_algorithm_implementation"><a class="anchor" href="#_drakon_diagrams_of_dijkstras_algorithm_implementation"></a>DRAKON-Diagrams of Dijkstra&#8217;s Algorithm Implementation</h3>
+<div class="paragraph">
+<p>The DRAKON-diagrams below illustrate the control flow of the Dijkstra algorithm as implemented in the accompanying JavaScript code. The diagrams decompose the algorithm into discrete steps, highlighting key operations such as initialization, edge relaxation, and vertex visitation. Each diagram corresponds to a specific function in the implementation, providing a visual representation of the algorithm&#8217;s logic and its execution path. The diagrams are designed to enhance understanding of how the algorithm processes the graph, updates distances, and determines the shortest paths from the source vertex to all other vertices.</p>
+</div>
+<div class="paragraph">
+<p>The central function of the Dijkstra algorithm — dijkstra(graph, start) — is responsible for initializing the necessary data structures and managing the main loop of the algorithm. It sequentially selects the nearest unvisited vertex, marks it as visited, and performs relaxation on all its neighbors (Figure 9.17).</p>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/Fig9_16_dijkstra.svg" alt="Fig9 16 dijkstra" width="80%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 9.17. DRAKON-diagram of Dijkstra&#8217;s algorithm implementation</p>
+</div>
+<div class="paragraph">
+<p>The function getVerticesList(graph) extracts a list of all vertices from the graph, which allows initializing the distance and visited arrays (Figure 9.18).</p>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/Fig9_17_init.svg" alt="Fig9 17 init" width="80%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 9.18. DRAKON-diagram of the initialization function for Dijkstra&#8217;s algorithm</p>
+</div>
+<div class="paragraph">
+<p>The central function of the algorithm is findMinDistanceVertex(graph, distances, visited), which at each stage selects the unvisited vertex with the minimum distance from the source vertex. This ensures the optimal choice of the next vertex for processing (Figure 9.19).</p>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/Fig9_18_findMinDistanceVertex.svg" alt="Fig9 18 findMinDistanceVertex" width="80%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 9.19. DRAKON-diagram of the findMinDistanceVertex function</p>
+</div>
+<div class="paragraph">
+<p>In the function markVertexVisited(graph, vertex, visited), a vertex is marked as visited, which prevents its reprocessing in the future (Figure 9.20).</p>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/Fig9_19_markVertexVisited.svg" alt="Fig9 19 markVertexVisited" width="80%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 9.20. DRAKON-diagram of the markVertexVisited function</p>
+</div>
+<div class="paragraph">
+<p>Finally, the function relaxEdges(graph, vertex, distances, visited) performs relaxation on all neighbors of the current vertex. It checks whether the known distances to neighboring vertices can be improved via the current vertex and updates them if necessary (Figure 9.21).</p>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<img src="_images/Fig9_20_relaxEdges.svg" alt="Fig9 20 relaxEdges" width="80%">
+</div>
+</div>
+<div class="paragraph text-center">
+<p>Figure 9.21. DRAKON-diagram of the relaxEdges function</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion"><a class="anchor" href="#_conclusion"></a>Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section has established the essential foundations of graph theory and graph algorithms, from basic terminology and representation methods to systematic traversal techniques, exhaustive path enumeration via recursive backtracking, and the classic shortest-path solution provided by Dijkstra&#8217;s algorithm. Armed with these tools, you can now model and solve a wide range of practical problems involving networks, routes, and relationships.</p>
+</div>
+<div class="paragraph">
+<p>Yet, for all the ground we have covered, we have only scratched the surface. Beyond the boundaries of this section lie some of the most fascinating and intellectually rich problems in all of computer science — problems that continue to challenge researchers and practitioners alike. How do we find the shortest path in a graph that contains negative edge weights (the Bellman–Ford algorithm)? What if we need the shortest path between every pair of vertices (the Floyd–Warshall algorithm)? How do we compute the maximum flow that a network can sustain from a source to a sink (the Ford–Fulkerson method)? When should we use a heuristic like A* to navigate massive graphs where exhaustive search is impossible? And what about graphs that change over time, or graphs so large they cannot fit into a single computer&#8217;s memory?</p>
+</div>
+<div class="paragraph">
+<p>These are not merely academic exercises. They are the very algorithms that power global navigation systems, optimize internet routing, schedule airline fleets, uncover communities in social networks, and even help decode the human genome. Each of these problems builds directly upon the concepts introduced in this section — graphs, traversal, weights, and paths — but elevates them to new levels of complexity, elegance, and practical impact.</p>
+</div>
+<div class="paragraph">
+<p>Thus, consider this section not as an end, but as a beginning — a gateway to a richer, deeper world of graph algorithms that awaits your exploration.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
