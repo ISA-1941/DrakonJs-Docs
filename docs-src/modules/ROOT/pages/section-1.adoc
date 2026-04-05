@@ -28,7 +28,7 @@ According to Steve McConnell, the author of *“Code Complete”*, abstract data
 
 A simplified classification of data structures can be presented as follows:
 
-image::section_1/Fig1_1_class.svg[width=50%, link=self, window="_blank"]
+image::section_1/Fig1_1_class.svg[width=100%, link=self, window="_blank"]
 [.text-center]
 .Figure 1.1. Classification of Data Structures
 
