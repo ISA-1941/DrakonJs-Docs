@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивный визуализатор Красно-черного дерева</title>
+    <!-- Tailwind CSS link REMOVED to prevent conflicts -->
+    <style>
+        /* --- GLOBAL STYLES (Simple Reset/Base) --- */
+        :root {
+            font-family: Arial, sans-serif; /* Fallback from Inter */
+        }
+        body {
+            background-color: #f9fafb; /* bg-gray-50 */
+            color: #1f2937; /* text-gray-800 */
+            padding: 16px;
+            margin: 0;
+        }
+        .main-container {
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1 {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 0.875rem; /* text-sm */
+            color: #4b5563; /* text-gray-600 */
+            margin-bottom: 1rem;
+        }
+
+        /* --- TREE VISUALIZATION --- */
+        #tree-svg-container {
+            min-height: 400px;
+            overflow-x: auto;
+            background-color: white;
+            padding: 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .node-circle {
+            transition: r 0.3s, fill 0.3s, stroke 0.3s;
+        }
+        .node-text {
+            user-select: none;
+            pointer-events: none;
+            font-weight: 500;
+        }
+        .black-node { fill: #374151; stroke: #1F2937; }
+        .red-node { fill: #EF4444; stroke: #B91C1C; }
+
+        /* --- CONTROLS AND DIAGNOSTICS (Targeted for visibility) --- */
+        #diagnostic-check {
+            padding: 8px;
+            margin-bottom: 8px;
+            background-color: #fef08a; /* bg-yellow-200 */
+            color: #854d0e; /* text-yellow-900 */
+            font-weight: bold;
+            border-radius: 0.25rem;
+            /* Aggressive inline styles carried over for assurance */
+            display: block !important; 
+            visibility: visible !important;
+            z-index: 1000 !important;
+        }
+
+        #controls-container {
+            padding: 1rem;
+            background-color: #fef3c7; /* Light Yellow/Cream */
+            border: 2px solid #f59e0b; /* Orange border */
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+            
+            display: flex; /* Simplified flex */
+            gap: 12px;
+            flex-wrap: wrap; 
+            align-items: center;
+            
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-lg */
+            /* Force visibility for external environments */
+            visibility: visible !important;
+            z-index: 1000 !important;
+        }
+
+        #keyInput {
+            flex-grow: 1; /* flex-grow */
+            min-width: 150px;
+            padding: 8px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            outline: none;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+        #keyInput:focus {
+            border-color: #ef4444; /* focus:border-red-500 */
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.5); /* focus:ring-red-500 */
+        }
+
+        .rb-button {
+            padding: 8px 16px;
+            font-weight: 600; /* font-semibold */
+            border-radius: 0.375rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            color: white;
+        }
+
+        #insertBtn {
+            background-color: #dc2626; /* bg-red-600 */
+        }
+        #insertBtn:hover {
+            background-color: #b91c1c; /* hover:bg-red-700 */
+        }
+        #insertBtn:disabled {
+            background-color: #9ca3af; /* disabled:bg-gray-400 */
+            cursor: not-allowed;
+        }
+
+        #resetBtn {
+            background-color: #6b7280; /* bg-gray-500 */
+        }
+        #resetBtn:hover {
+            background-color: #4b5563; /* hover:bg-gray-600 */
+        }
+
+        /* --- STATUS BAR --- */
+        #status {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            font-size: 0.875rem;
+            border-left: 4px solid;
+            border-radius: 0.25rem;
+        }
+        #status.hidden { display: none; }
+        #status.bg-blue-100 { background-color: #dbeafe; color: #1e40af; border-left-color: #3b82f6; }
+        #status.bg-red-100 { background-color: #fee2e2; color: #991b1b; border-left-color: #ef4444; }
+
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <h1>Интерактивный визуализатор Красно-черного дерева</h1>
+        <p>Введите число для вставки и наблюдайте за автоматической балансировкой и перекрашиванием узлов.</p>
+
+        <!-- DIAGNOSTIC: Check if this element is visible. If yes, the HTML path is correct. -->
+        <div id="diagnostic-check">
+            ДИАГНОСТИКА: Если вы видите это желтое поле, HTML загружается корректно. Элементы управления должны появиться ниже.
+        </div>
+        
+        <!-- Insertion Controls - Now using simple CSS for robustness -->
+        <div id="controls-container">
+            <input 
+                type="number" 
+                id="keyInput" 
+                placeholder="Введите ключ" 
+                min="1"
+                max="999"
+            >
+            <button 
+                id="insertBtn" 
+                class="rb-button"
+            >
+                Вставить узел
+            </button>
+            <button 
+                id="resetBtn" 
+                class="rb-button"
+            >
+                Сбросить дерево
+            </button>
+        </div>
+
+        <!-- Tree Visualization Container -->
+        <div id="tree-svg-container">
+            <svg id="tree-svg" width="100%" height="400" viewBox="0 0 800 400" preserveAspectRatio="xMinYMin meet"></svg>
+        </div>
+
+        <!-- Status and Logging -->
+        <div id="status" class="hidden bg-blue-100">
+            Ожидание ввода...
+        </div>
+    </div>
+
+    <script>
+        // --- 1. Red-Black Tree Logic (Functional/Procedural style) ---
+
+        // Diagnostic message: Checking if the script loads
+        console.log("RB Tree Visualizer Script Loaded.");
+
+        const NODE_RADIUS = 15; // Node radius for visualization
+        const H_SPACING = 50;  // Default horizontal space between nodes
+        const V_SPACING = 80;  // Vertical space between levels
+
+        function makeNode(key = null, color = "B", left = null, right = null, parent = null) {
+            return { key, color, left, right, parent, x: 0, y: 0, visualKey: key }; 
+        }
+
+        function makeRBTree() {
+            const nullNode = makeNode(null, "B", null, null, null);
+            nullNode.left = nullNode;
+            nullNode.right = nullNode;
+            nullNode.parent = nullNode;
+            nullNode.visualKey = "NIL"; 
+            
+            return { root: nullNode, nullNode };
+        }
+
+        function bstInsert(tree, key) {
+            let y = tree.nullNode;
+            let x = tree.root;
+
+            while (x !== tree.nullNode) {
+                y = x;
+                if (key < x.key) x = x.left;
+                else x = x.right;
+            }
+
+            const newNode = makeNode(key, "R", tree.nullNode, tree.nullNode, y);
+            
+            if (y === tree.nullNode) {
+                tree.root = newNode;
+            } else if (key < y.key) {
+                y.left = newNode;
+            } else {
+                y.right = newNode;
+            }
+
+            return newNode;
+        }
+
+        function rotateLeft(tree, x) {
+            const y = x.right;
+            x.right = y.left;
+            if (y.left !== tree.nullNode) y.left.parent = x;
+            y.parent = x.parent;
+            
+            if (x.parent === tree.nullNode) tree.root = y;
+            else if (x === x.parent.left) x.parent.left = y;
+            else x.parent.right = y;
+            
+            y.left = x;
+            x.parent = y;
+        }
+
+        function rotateRight(tree, x) {
+            const y = x.left;
+            x.left = y.right;
+            if (y.right !== tree.nullNode) y.right.parent = x;
+            y.parent = x.parent;
+            
+            if (x.parent === tree.nullNode) tree.root = y;
+            else if (x === x.parent.right) x.parent.right = y;
+            else x.parent.left = y;
+            
+            y.right = x;
+            x.parent = y;
+        }
+
+        function fixCase1(tree, node) { return tree; }
+
+        function fixCase2(tree, node) {
+            const parent = node.parent;
+            const grand = parent.parent;
+            const uncle = (parent === grand.left) ? grand.right : grand.left;
+
+            parent.color = 'B';
+            uncle.color = 'B';
+            grand.color = 'R';
+
+            return fixInsert(tree, grand);
+        }
+
+        function fixCase3(tree, node) {
+            let parent = node.parent;
+            let grand = parent.parent;
+
+            if (node === parent.right && parent === grand.left) {
+                rotateLeft(tree, parent);
+                node = node.left; 
+            } else if (node === parent.left && parent === grand.right) {
+                rotateRight(tree, parent);
+                node = node.right; 
+            }
+
+            parent = node.parent;
+            grand = parent.parent;
+
+            parent.color = 'B';
+            grand.color = 'R';
+
+            if (node === parent.left && parent === grand.left) {
+                rotateRight(tree, grand);
+            } else {
+                rotateLeft(tree, grand);
+            }
+
+            return tree;
+        }
+
+        function fixInsert(tree, node) {
+            const parent = node.parent;
+
+            if (parent === tree.nullNode) {
+                tree.root.color = 'B';
+                return tree;
+            }
+
+            if (parent.color === 'B') {
+                return fixCase1(tree, node);
+            }
+            
+            const grand = parent.parent;
+            const uncle = (parent === grand.left) ? grand.right : grand.left;
+
+            if (uncle.color === 'R') {
+                return fixCase2(tree, node);
+            }
+
+            return fixCase3(tree, node);
+        }
+
+        function insert(tree, key) {
+            const node = bstInsert(tree, key);
+            fixInsert(tree, node);
+            tree.root.color = 'B';
+            return tree;
+        }
+
+
+        // --- 2. SVG Visualization Logic ---
+
+        let rbtree;
+        let x_counter; 
+
+        const svg = document.getElementById('tree-svg');
+        const keyInput = document.getElementById('keyInput');
+        const insertBtn = document.getElementById('insertBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const statusDiv = document.getElementById('status');
+        
+        function calculatePositions(node, depth) {
+            if (node === rbtree.nullNode) return;
+            node.y = depth * V_SPACING + NODE_RADIUS + 20;
+            calculatePositions(node.left, depth + 1);
+            node.x = x_counter * H_SPACING + NODE_RADIUS;
+            x_counter++;
+            calculatePositions(node.right, depth + 1);
+        }
+
+        function renderTree() {
+            svg.innerHTML = '';
+            
+            if (rbtree.root === rbtree.nullNode) {
+                const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                text.setAttribute('x', '50%');
+                text.setAttribute('y', '50%');
+                text.setAttribute('text-anchor', 'middle');
+                text.setAttribute('fill', '#9CA3AF');
+                text.textContent = 'Дерево пусто';
+                svg.appendChild(text);
+                return;
+            }
+            
+            x_counter = 1;
+            calculatePositions(rbtree.root, 0);
+
+            let maxX = 0;
+            let maxDepth = 0;
+            
+            const findMax = (node) => {
+                if (node === rbtree.nullNode) return;
+                maxX = Math.max(maxX, node.x);
+                maxDepth = Math.max(maxDepth, node.y);
+                findMax(node.left);
+                findMax(node.right);
+            };
+            findMax(rbtree.root);
+            
+            const newWidth = maxX + H_SPACING + NODE_RADIUS;
+            const newHeight = maxDepth + V_SPACING;
+
+            svg.setAttribute('width', newWidth);
+            svg.setAttribute('height', newHeight);
+            svg.setAttribute('viewBox', `0 0 ${newWidth} ${newHeight}`);
+            
+            const drawNode = (node) => {
+                if (node === rbtree.nullNode) return;
+
+                if (node.left !== rbtree.nullNode) {
+                    drawLine(node, node.left);
+                }
+                if (node.right !== rbtree.nullNode) {
+                    drawLine(node, node.right);
+                }
+
+                drawCircle(node);
+
+                drawNode(node.left);
+                drawNode(node.right);
+            };
+
+            drawNode(rbtree.root);
+        }
+
+        function drawLine(parent, child) {
+            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            line.setAttribute('x1', parent.x);
+            line.setAttribute('y1', parent.y);
+            line.setAttribute('x2', child.x);
+            line.setAttribute('y2', child.y);
+            line.setAttribute('stroke', '#6B7280');
+            line.setAttribute('stroke-width', 2);
+            svg.appendChild(line);
+        }
+
+        function drawCircle(node) {
+            const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+            g.setAttribute('transform', `translate(${node.x}, ${node.y})`);
+
+            const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            circle.setAttribute('r', NODE_RADIUS);
+            circle.setAttribute('class', `node-circle ${node.color === 'R' ? 'red-node' : 'black-node'}`);
+            circle.setAttribute('stroke-width', 2);
+            g.appendChild(circle);
+
+            const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+            text.setAttribute('text-anchor', 'middle');
+            text.setAttribute('dominant-baseline', 'central');
+            text.setAttribute('font-size', '12px');
+            text.setAttribute('fill', node.color === 'R' ? 'white' : 'white');
+            text.setAttribute('class', 'node-text');
+            text.textContent = node.visualKey === "NIL" ? 'NIL' : node.visualKey;
+            g.appendChild(text);
+
+            svg.appendChild(g);
+        }
+
+        // --- 3. Event Handlers ---
+
+        function updateStatus(message, isError = false) {
+            statusDiv.textContent = message;
+            statusDiv.classList.remove('hidden', 'bg-red-100', 'text-red-800', 'border-red-500', 'bg-blue-100', 'text-blue-800', 'border-blue-500');
+            if (isError) {
+                statusDiv.classList.add('bg-red-100');
+                statusDiv.classList.remove('bg-blue-100');
+            } else {
+                statusDiv.classList.add('bg-blue-100');
+                statusDiv.classList.remove('bg-red-100');
+            }
+            setTimeout(() => {
+                statusDiv.classList.add('hidden');
+            }, 5000);
+        }
+
+        function handleInsert() {
+            const key = parseInt(keyInput.value);
+
+            if (isNaN(key) || key <= 0) {
+                updateStatus("Пожалуйста, введите корректное положительное число.", true);
+                return;
+            }
+            
+            let currentNode = rbtree.root;
+            while(currentNode !== rbtree.nullNode) {
+                if (currentNode.key === key) {
+                     updateStatus(`Ключ ${key} уже существует. Дубликаты не допускаются.`, true);
+                     return;
+                }
+                currentNode = key < currentNode.key ? currentNode.left : currentNode.right;
+            }
+
+            try {
+                insert(rbtree, key);
+                renderTree();
+                updateStatus(`Узел с ключом ${key} успешно вставлен, и дерево сбалансировано.`, false);
+                keyInput.value = '';
+            } catch (error) {
+                console.error("Insertion error:", error);
+                updateStatus("Произошла ошибка при вставке. Пожалуйста, сбросьте дерево.", true);
+            }
+        }
+
+        function handleReset() {
+            rbtree = makeRBTree();
+            renderTree();
+            updateStatus("Красно-черное дерево сброшено. Начните вставку ключей.", false);
+            keyInput.value = '';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Diagnostic message: Checking that DOMContentLoaded fired
+            console.log("RB Tree Visualizer Script Loaded.");
+            
+            const controls = document.getElementById('controls-container');
+            if (controls) {
+                // Log computed style to help diagnose external CSS conflicts
+                console.log("Controls container found in DOM. Display style (computed):", window.getComputedStyle(controls).display, "Z-Index:", window.getComputedStyle(controls).zIndex);
+            } else {
+                console.error("Controls container NOT found in DOM.");
+            }
+
+            handleReset();
+            
+            insertBtn.addEventListener('click', handleInsert);
+            resetBtn.addEventListener('click', handleReset);
+            
+            keyInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    handleInsert();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

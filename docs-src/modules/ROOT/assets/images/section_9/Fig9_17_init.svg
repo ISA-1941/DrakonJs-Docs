@@ -1,0 +1,2642 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.2"
+   width="226.754mm"
+   height="99.787003mm"
+   viewBox="0 0 22675.4 9978.7"
+   preserveAspectRatio="xMidYMid"
+   fill-rule="evenodd"
+   stroke-width="28.222"
+   stroke-linejoin="round"
+   xml:space="preserve"
+   id="svg409"
+   sodipodi:docname="Fig9_18_init.svg"
+   inkscape:version="1.4.3 (fcd0343856, 2026-01-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:ooo="http://xml.openoffice.org/svg/export"><sodipodi:namedview
+   id="namedview409"
+   pagecolor="#505050"
+   bordercolor="#eeeeee"
+   borderopacity="1"
+   inkscape:showpageshadow="0"
+   inkscape:pageopacity="0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#505050"
+   inkscape:document-units="mm"
+   inkscape:zoom="1.1085051"
+   inkscape:cx="398.73519"
+   inkscape:cy="311.22996"
+   inkscape:window-width="1920"
+   inkscape:window-height="1152"
+   inkscape:window-x="0"
+   inkscape:window-y="25"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg409" />
+ <defs
+   class="ClipPathGroup"
+   id="defs2">
+  <clipPath
+   id="presentation_clip_path"
+   clipPathUnits="userSpaceOnUse">
+   <rect
+   x="0"
+   y="0"
+   width="29752"
+   height="21052"
+   id="rect1" />
+  </clipPath>
+  <clipPath
+   id="presentation_clip_path_shrink"
+   clipPathUnits="userSpaceOnUse">
+   <rect
+   x="29"
+   y="21"
+   width="29693"
+   height="21010"
+   id="rect2" />
+  </clipPath>
+ </defs>
+ <defs
+   id="defs41">
+  <font
+   id="EmbeddedFont_1"
+   horiz-adv-x="2048"
+   horiz-origin-x="0"
+   horiz-origin-y="0"
+   vert-origin-x="512"
+   vert-origin-y="768"
+   vert-adv-y="1024">
+   <font-face
+   font-family="Consolas embedded"
+   units-per-em="2048"
+   font-weight="normal"
+   font-style="normal"
+   ascent="1879"
+   descent="476"
+   id="font-face2" />
+   <missing-glyph
+   horiz-adv-x="2048"
+   d="M 0,0 L 2047,0 2047,2047 0,2047 0,0 Z"
+   id="missing-glyph2" />
+   <glyph
+   unicode="ц"
+   horiz-adv-x="991"
+   d="M 1118,150 L 1118,-286 968,-286 968,0 124,0 124,1120 308,1120 308,150 794,150 794,1120 978,1120 978,150 1118,150 Z"
+   id="glyph2" />
+   <glyph
+   unicode="о"
+   horiz-adv-x="956"
+   d="M 616,991 C 523,991 452,955 404,882 356,809 332,702 332,559 332,417 356,310 404,237 452,164 523,127 616,127 710,127 781,164 829,237 877,310 901,417 901,559 901,702 877,809 829,882 781,955 710,991 616,991 Z M 616,1147 C 771,1147 890,1097 973,996 1055,895 1096,750 1096,559 1096,368 1055,222 973,122 891,21 772,-29 616,-29 461,-29 342,21 260,122 178,222 137,368 137,559 137,750 178,895 260,996 342,1097 461,1147 616,1147 Z"
+   id="glyph3" />
+   <glyph
+   unicode="н"
+   horiz-adv-x="853"
+   d="M 866,515 L 379,515 379,0 195,0 195,1120 379,1120 379,665 866,665 866,1120 1050,1120 1050,0 866,0 866,515 Z"
+   id="glyph4" />
+   <glyph
+   unicode="е"
+   horiz-adv-x="986"
+   d="M 1112,606 L 1112,516 315,516 315,510 C 315,388 347,294 411,227 474,160 564,127 680,127 739,127 800,136 864,155 928,174 996,202 1069,240 L 1069,57 C 999,28 932,7 867,-8 802,-22 739,-29 678,-29 504,-29 368,23 270,128 172,232 123,376 123,559 123,738 171,880 267,987 363,1094 491,1147 651,1147 794,1147 906,1099 989,1002 1071,905 1112,773 1112,606 Z M 928,659 C 925,767 900,850 852,906 803,963 734,991 643,991 554,991 481,962 424,903 367,844 333,763 322,659 L 928,659 Z"
+   id="glyph5" />
+   <glyph
+   unicode="К"
+   horiz-adv-x="1084"
+   d="M 137,1493 L 340,1493 340,829 971,1493 1208,1493 627,883 1225,0 981,0 494,748 340,584 340,0 137,0 137,1493 Z"
+   id="glyph6" />
+   <glyph
+   unicode="}"
+   horiz-adv-x="789"
+   d="M 221,-190 L 289,-190 C 383,-190 444,-175 473,-146 502,-117 516,-55 516,39 L 516,287 C 516,391 531,467 561,514 591,561 643,594 717,612 644,629 592,661 562,708 531,755 516,831 516,936 L 516,1184 C 516,1278 502,1340 473,1369 444,1398 383,1413 289,1413 L 221,1413 221,1556 283,1556 C 449,1556 560,1532 616,1483 672,1434 700,1335 700,1188 L 700,948 C 700,848 718,779 754,741 789,703 854,684 948,684 L 1012,684 1012,541 948,541 C 854,541 789,522 754,483 718,444 700,375 700,274 L 700,35 C 700,-112 672,-211 616,-260 560,-309 449,-334 283,-334 L 221,-334 221,-190 Z"
+   id="glyph7" />
+   <glyph
+   unicode="{"
+   horiz-adv-x="789"
+   d="M 1012,-190 L 1012,-334 948,-334 C 782,-334 671,-309 615,-260 558,-211 530,-112 530,35 L 530,274 C 530,375 512,444 477,483 441,522 376,541 283,541 L 221,541 221,684 283,684 C 377,684 442,703 477,741 512,779 530,848 530,948 L 530,1188 C 530,1335 558,1434 615,1483 671,1532 782,1556 948,1556 L 1012,1556 1012,1413 942,1413 C 849,1413 788,1399 760,1370 731,1341 717,1279 717,1184 L 717,936 C 717,831 702,755 672,708 641,661 589,629 516,612 590,594 642,561 672,514 702,467 717,391 717,287 L 717,39 C 717,-56 731,-118 760,-147 788,-176 849,-190 942,-190 L 1012,-190 Z"
+   id="glyph8" />
+   <glyph
+   unicode="z"
+   horiz-adv-x="835"
+   d="M 227,1122 L 1040,1122 1040,954 397,150 1040,150 1040,0 203,0 203,170 846,975 227,975 227,1122 Z"
+   id="glyph9" />
+   <glyph
+   unicode="y"
+   horiz-adv-x="1045"
+   d="M 858,360 C 827,282 788,179 741,52 675,-124 631,-231 608,-270 577,-322 539,-361 493,-387 447,-413 393,-426 332,-426 L 184,-426 184,-272 293,-272 C 347,-272 389,-256 420,-225 451,-194 490,-113 537,18 L 104,1120 299,1120 631,244 958,1120 1153,1120 858,360 Z"
+   id="glyph10" />
+   <glyph
+   unicode="x"
+   horiz-adv-x="1077"
+   d="M 1118,1120 L 717,584 1157,0 944,0 616,449 289,0 76,0 516,584 115,1120 319,1120 616,715 911,1120 1118,1120 Z"
+   id="glyph11" />
+   <glyph
+   unicode="v"
+   horiz-adv-x="1030"
+   d="M 100,1120 L 291,1120 616,180 942,1120 1133,1120 735,0 498,0 100,1120 Z"
+   id="glyph12" />
+   <glyph
+   unicode="u"
+   horiz-adv-x="854"
+   d="M 195,424 L 195,1118 379,1118 379,424 C 379,323 397,249 433,202 468,155 523,131 598,131 685,131 751,162 797,223 843,284 866,371 866,485 L 866,1118 1051,1118 1051,0 866,0 866,168 C 833,103 789,54 733,21 676,-12 610,-29 535,-29 420,-29 335,9 279,84 223,159 195,272 195,424 Z"
+   id="glyph13" />
+   <glyph
+   unicode="t"
+   horiz-adv-x="898"
+   d="M 614,1438 L 614,1120 1032,1120 1032,977 614,977 614,369 C 614,286 630,229 661,196 692,163 747,147 825,147 L 1032,147 1032,0 807,0 C 669,0 572,28 515,83 458,138 430,234 430,369 L 430,977 131,977 131,1120 430,1120 430,1438 614,1438 Z"
+   id="glyph14" />
+   <glyph
+   unicode="s"
+   horiz-adv-x="815"
+   d="M 973,1081 L 973,901 C 920,932 867,955 814,970 761,985 706,993 651,993 568,993 506,980 465,953 424,926 403,884 403,829 403,779 418,742 449,717 480,692 556,668 678,645 L 752,631 C 843,614 913,579 960,527 1007,475 1030,407 1030,324 1030,213 991,127 912,65 833,2 724,-29 584,-29 529,-29 471,-23 410,-12 349,0 284,18 213,41 L 213,231 C 282,196 347,169 410,152 473,134 532,125 588,125 669,125 732,142 777,175 822,208 844,254 844,313 844,398 762,457 599,490 L 591,492 522,506 C 416,527 339,562 290,611 241,660 217,726 217,811 217,918 253,1001 326,1060 399,1118 502,1147 637,1147 697,1147 755,1142 810,1131 865,1120 920,1103 973,1081 Z"
+   id="glyph15" />
+   <glyph
+   unicode="r"
+   horiz-adv-x="790"
+   d="M 1155,889 C 1116,920 1076,942 1035,956 994,970 950,977 901,977 786,977 699,941 638,869 577,797 547,693 547,557 L 547,0 362,0 362,1120 547,1120 547,901 C 578,980 625,1041 689,1084 752,1126 828,1147 915,1147 960,1147 1003,1141 1042,1130 1081,1119 1119,1101 1155,1077 L 1155,889 Z"
+   id="glyph16" />
+   <glyph
+   unicode="p"
+   horiz-adv-x="915"
+   d="M 375,141 L 375,-426 190,-426 190,1120 375,1120 375,977 C 406,1032 447,1075 498,1104 549,1133 607,1147 674,1147 809,1147 916,1095 993,990 1070,885 1108,740 1108,555 1108,373 1069,230 992,127 915,23 809,-29 674,-29 606,-29 547,-14 496,15 445,44 404,86 375,141 Z M 915,559 C 915,702 893,809 848,882 803,955 736,991 647,991 558,991 490,955 444,882 398,809 375,701 375,559 375,418 398,310 444,237 490,164 558,127 647,127 736,127 803,163 848,236 893,309 915,416 915,559 Z"
+   id="glyph17" />
+   <glyph
+   unicode="o"
+   horiz-adv-x="956"
+   d="M 616,991 C 523,991 452,955 404,882 356,809 332,702 332,559 332,417 356,310 404,237 452,164 523,127 616,127 710,127 781,164 829,237 877,310 901,417 901,559 901,702 877,809 829,882 781,955 710,991 616,991 Z M 616,1147 C 771,1147 890,1097 973,996 1055,895 1096,750 1096,559 1096,368 1055,222 973,122 891,21 772,-29 616,-29 461,-29 342,21 260,122 178,222 137,368 137,559 137,750 178,895 260,996 342,1097 461,1147 616,1147 Z"
+   id="glyph18" />
+   <glyph
+   unicode="n"
+   horiz-adv-x="854"
+   d="M 1051,694 L 1051,0 866,0 866,694 C 866,795 848,869 813,916 778,963 722,987 647,987 561,987 495,957 449,896 402,835 379,747 379,633 L 379,0 195,0 195,1120 379,1120 379,952 C 412,1016 456,1065 512,1098 568,1131 634,1147 711,1147 825,1147 910,1110 967,1035 1023,960 1051,846 1051,694 Z"
+   id="glyph19" />
+   <glyph
+   unicode="l"
+   horiz-adv-x="871"
+   d="M 639,406 C 639,323 654,261 685,219 715,177 760,156 819,156 L 1034,156 1034,0 801,0 C 691,0 606,35 546,106 485,177 455,277 455,406 L 455,1423 160,1423 160,1567 639,1567 639,406 Z"
+   id="glyph20" />
+   <glyph
+   unicode="i"
+   horiz-adv-x="911"
+   d="M 256,1120 L 727,1120 727,143 1092,143 1092,0 178,0 178,143 543,143 543,977 256,977 256,1120 Z M 543,1556 L 727,1556 727,1323 543,1323 543,1556 Z"
+   id="glyph21" />
+   <glyph
+   unicode="h"
+   horiz-adv-x="854"
+   d="M 1051,694 L 1051,0 866,0 866,694 C 866,795 848,869 813,916 778,963 722,987 647,987 561,987 495,957 449,896 402,835 379,747 379,633 L 379,0 195,0 195,1556 379,1556 379,952 C 412,1016 456,1065 512,1098 568,1131 634,1147 711,1147 825,1147 910,1110 967,1035 1023,960 1051,846 1051,694 Z"
+   id="glyph22" />
+   <glyph
+   unicode="g"
+   horiz-adv-x="916"
+   d="M 858,569 C 858,707 836,812 791,884 746,955 680,991 594,991 504,991 435,955 388,884 341,812 317,707 317,569 317,431 341,326 389,254 436,181 505,145 596,145 681,145 746,181 791,254 836,327 858,432 858,569 Z M 1042,72 C 1042,-96 1002,-223 923,-310 844,-397 727,-440 573,-440 522,-440 469,-435 414,-426 359,-417 303,-403 248,-385 L 248,-203 C 313,-234 373,-256 426,-271 479,-286 528,-293 573,-293 672,-293 745,-266 790,-212 835,-158 858,-72 858,45 L 858,53 858,178 C 829,115 789,69 738,38 687,7 626,-8 553,-8 422,-8 318,44 240,149 162,254 123,394 123,569 123,745 162,885 240,990 318,1095 422,1147 553,1147 625,1147 686,1133 736,1104 786,1075 827,1031 858,971 L 858,1116 1042,1116 1042,72 Z"
+   id="glyph23" />
+   <glyph
+   unicode="f"
+   horiz-adv-x="866"
+   d="M 1063,1556 L 1063,1403 854,1403 C 788,1403 742,1390 717,1363 691,1336 678,1288 678,1219 L 678,1120 1063,1120 1063,977 678,977 678,0 494,0 494,977 195,977 195,1120 494,1120 494,1198 C 494,1321 522,1411 579,1469 635,1527 723,1556 842,1556 L 1063,1556 Z"
+   id="glyph24" />
+   <glyph
+   unicode="e"
+   horiz-adv-x="986"
+   d="M 1112,606 L 1112,516 315,516 315,510 C 315,388 347,294 411,227 474,160 564,127 680,127 739,127 800,136 864,155 928,174 996,202 1069,240 L 1069,57 C 999,28 932,7 867,-8 802,-22 739,-29 678,-29 504,-29 368,23 270,128 172,232 123,376 123,559 123,738 171,880 267,987 363,1094 491,1147 651,1147 794,1147 906,1099 989,1002 1071,905 1112,773 1112,606 Z M 928,659 C 925,767 900,850 852,906 803,963 734,991 643,991 554,991 481,962 424,903 367,844 333,763 322,659 L 928,659 Z"
+   id="glyph25" />
+   <glyph
+   unicode="d"
+   horiz-adv-x="916"
+   d="M 858,977 L 858,1556 1042,1556 1042,0 858,0 858,141 C 827,86 787,44 736,15 685,-14 626,-29 559,-29 424,-29 317,24 240,129 162,234 123,378 123,563 123,745 162,888 240,992 318,1095 424,1147 559,1147 626,1147 686,1133 737,1104 788,1075 829,1032 858,977 Z M 317,559 C 317,416 340,309 385,236 430,163 497,127 586,127 675,127 742,164 789,237 835,310 858,418 858,559 858,701 835,809 789,882 742,955 675,991 586,991 497,991 430,955 385,882 340,809 317,702 317,559 Z"
+   id="glyph26" />
+   <glyph
+   unicode="c"
+   horiz-adv-x="864"
+   d="M 1061,57 C 1012,28 961,7 909,-8 856,-22 803,-29 748,-29 575,-29 439,23 342,127 244,231 195,375 195,559 195,743 244,887 342,991 439,1095 575,1147 748,1147 802,1147 855,1140 906,1126 957,1112 1009,1090 1061,1061 L 1061,868 C 1012,911 964,943 915,962 866,981 810,991 748,991 633,991 544,954 482,879 420,804 389,698 389,559 389,421 420,315 483,240 545,165 633,127 748,127 812,127 869,137 920,157 971,176 1018,207 1061,248 L 1061,57 Z"
+   id="glyph27" />
+   <glyph
+   unicode="a"
+   horiz-adv-x="923"
+   d="M 702,563 L 641,563 C 534,563 453,544 399,507 344,469 317,413 317,338 317,271 337,218 378,181 419,144 475,125 547,125 648,125 728,160 786,231 844,301 873,398 874,522 L 874,563 702,563 Z M 1059,639 L 1059,0 874,0 874,166 C 835,99 785,50 726,19 666,-13 593,-29 508,-29 394,-29 303,3 235,68 167,132 133,218 133,326 133,451 175,545 259,610 342,675 465,707 627,707 L 874,707 874,736 C 873,825 851,890 806,931 761,971 690,991 592,991 529,991 466,982 402,964 338,946 276,920 215,885 L 215,1069 C 283,1095 348,1115 411,1128 473,1141 533,1147 592,1147 685,1147 764,1133 830,1106 895,1079 948,1038 989,983 1014,950 1032,909 1043,860 1054,811 1059,737 1059,639 Z"
+   id="glyph28" />
+   <glyph
+   unicode="]"
+   horiz-adv-x="423"
+   d="M 770,1556 L 770,-270 346,-270 346,-127 586,-127 586,1413 346,1413 346,1556 770,1556 Z"
+   id="glyph29" />
+   <glyph
+   unicode="["
+   horiz-adv-x="424"
+   d="M 463,1556 L 887,1556 887,1413 647,1413 647,-127 887,-127 887,-270 463,-270 463,1556 Z"
+   id="glyph30" />
+   <glyph
+   unicode="V"
+   horiz-adv-x="1115"
+   d="M 616,170 L 967,1493 1176,1493 739,0 494,0 57,1493 266,1493 616,170 Z"
+   id="glyph31" />
+   <glyph
+   unicode="P"
+   horiz-adv-x="942"
+   d="M 399,1327 L 399,766 633,766 C 726,766 799,791 852,840 904,889 930,958 930,1047 930,1136 904,1205 852,1254 800,1303 727,1327 633,1327 L 399,1327 Z M 197,1493 L 633,1493 C 800,1493 926,1455 1012,1380 1098,1304 1141,1193 1141,1047 1141,900 1098,788 1013,713 927,638 800,600 633,600 L 399,600 399,0 197,0 197,1493 Z"
+   id="glyph32" />
+   <glyph
+   unicode="I"
+   horiz-adv-x="827"
+   d="M 201,1493 L 1030,1493 1030,1323 717,1323 717,170 1030,170 1030,0 201,0 201,170 514,170 514,1323 201,1323 201,1493 Z"
+   id="glyph33" />
+   <glyph
+   unicode="D"
+   horiz-adv-x="966"
+   d="M 436,166 C 606,166 725,208 792,292 859,375 893,526 893,745 893,966 860,1118 793,1202 726,1285 607,1327 436,1327 L 340,1327 340,166 436,166 Z M 440,1493 C 668,1493 836,1432 944,1311 1052,1190 1106,1001 1106,745 1106,490 1052,303 944,182 836,61 668,0 440,0 L 137,0 137,1493 440,1493 Z"
+   id="glyph34" />
+   <glyph
+   unicode="="
+   horiz-adv-x="1054"
+   d="M 88,524 L 1145,524 1145,352 88,352 88,524 Z M 88,930 L 1145,930 1145,760 88,760 88,930 Z"
+   id="glyph35" />
+   <glyph
+   unicode="&lt;"
+   horiz-adv-x="1054"
+   d="M 1145,961 L 295,641 1145,324 1145,141 88,559 88,725 1145,1143 1145,961 Z"
+   id="glyph36" />
+   <glyph
+   unicode=";"
+   horiz-adv-x="352"
+   d="M 502,303 L 754,303 754,96 557,-287 403,-287 502,96 502,303 Z M 489,1063 L 741,1063 741,760 489,760 489,1063 Z"
+   id="glyph37" />
+   <glyph
+   unicode="0"
+   horiz-adv-x="964"
+   d="M 483,750 C 483,787 496,818 522,845 547,872 578,885 614,885 651,885 683,872 710,845 737,818 750,787 750,750 750,713 737,681 711,655 684,629 652,616 614,616 577,616 546,629 521,654 496,679 483,711 483,750 Z M 616,1360 C 522,1360 452,1309 406,1208 359,1107 336,952 336,745 336,538 359,384 406,283 452,182 522,131 616,131 711,131 781,182 828,283 874,384 897,538 897,745 897,952 874,1107 828,1208 781,1309 711,1360 616,1360 Z M 616,1520 C 775,1520 896,1455 978,1324 1059,1193 1100,1000 1100,745 1100,490 1059,298 978,167 896,36 775,-29 616,-29 457,-29 336,36 255,167 174,298 133,490 133,745 133,1000 174,1193 255,1324 336,1455 457,1520 616,1520 Z"
+   id="glyph38" />
+   <glyph
+   unicode="."
+   horiz-adv-x="253"
+   d="M 489,305 L 741,305 741,0 489,0 489,305 Z"
+   id="glyph39" />
+   <glyph
+   unicode=","
+   horiz-adv-x="352"
+   d="M 502,303 L 754,303 754,96 557,-287 403,-287 502,96 502,303 Z"
+   id="glyph40" />
+   <glyph
+   unicode="+"
+   horiz-adv-x="1054"
+   d="M 700,1171 L 700,727 1145,727 1145,557 700,557 700,113 532,113 532,557 88,557 88,727 532,727 532,1171 700,1171 Z"
+   id="glyph41" />
+  </font>
+ </defs>
+ <defs
+   class="TextShapeIndex"
+   id="defs42">
+  <g
+   ooo:slide="id1"
+   ooo:id-list="id3"
+   id="g41" />
+ </defs>
+ <defs
+   class="EmbeddedBulletChars"
+   id="defs51">
+  <g
+   id="bullet-char-template-57356"
+   transform="matrix(4.8828125e-4,0,0,-4.8828125e-4,0,0)">
+   <path
+   d="M 580,1141 1163,571 580,0 -4,571 Z"
+   id="path42" />
+  </g>
+  <g
+   id="bullet-char-template-57354"
+   transform="matrix(4.8828125e-4,0,0,-4.8828125e-4,0,0)">
+   <path
+   d="M 8,1128 H 1137 V 0 H 8 Z"
+   id="path43" />
+  </g>
+  <g
+   id="bullet-char-template-10146"
+   transform="matrix(4.8828125e-4,0,0,-4.8828125e-4,0,0)">
+   <path
+   d="M 174,0 602,739 174,1481 1456,739 Z M 1358,739 309,1346 659,739 Z"
+   id="path44" />
+  </g>
+  <g
+   id="bullet-char-template-10132"
+   transform="matrix(4.8828125e-4,0,0,-4.8828125e-4,0,0)">
+   <path
+   d="M 2015,739 1276,0 H 717 l 543,543 H 174 v 393 h 1086 l -543,545 h 557 z"
+   id="path45" />
+  </g>
+  <g
+   id="bullet-char-template-10007"
+   transform="matrix(4.8828125e-4,0,0,-4.8828125e-4,0,0)">
+   <path
+   d="m 0,-2 c -7,16 -16,29 -25,39 l 381,530 c -94,256 -141,385 -141,387 0,25 13,38 40,38 9,0 21,-2 34,-5 21,4 42,12 65,25 l 27,-13 111,-251 280,301 64,-25 24,25 c 21,-10 41,-24 62,-43 C 886,937 835,863 770,784 769,783 710,716 594,584 L 774,223 c 0,-27 -21,-55 -63,-84 l 16,-20 C 717,90 699,76 672,76 641,76 570,178 457,381 L 164,-76 c -22,-34 -53,-51 -92,-51 -42,0 -63,17 -64,51 -7,9 -10,24 -10,44 0,9 1,19 2,30 z"
+   id="path46" />
+  </g>
+  <g
+   id="bullet-char-template-10004"
+   transform="matrix(4.8828125e-4,0,0,-4.8828125e-4,0,0)">
+   <path
+   d="M 285,-33 C 182,-33 111,30 74,156 52,228 41,333 41,471 c 0,78 14,145 41,201 34,71 87,106 158,106 53,0 88,-31 106,-94 l 23,-176 c 8,-64 28,-97 59,-98 l 735,706 c 11,11 33,17 66,17 42,0 63,-15 63,-46 V 965 c 0,-36 -10,-64 -30,-84 L 442,47 C 390,-6 338,-33 285,-33 Z"
+   id="path47" />
+  </g>
+  <g
+   id="bullet-char-template-9679"
+   transform="matrix(4.8828125e-4,0,0,-4.8828125e-4,0,0)">
+   <path
+   d="M 813,0 C 632,0 489,54 383,161 276,268 223,411 223,592 c 0,181 53,324 160,431 106,107 249,161 430,161 179,0 323,-54 432,-161 108,-107 162,-251 162,-431 0,-180 -54,-324 -162,-431 C 1136,54 992,0 813,0 Z"
+   id="path48" />
+  </g>
+  <g
+   id="bullet-char-template-8226"
+   transform="matrix(4.8828125e-4,0,0,-4.8828125e-4,0,0)">
+   <path
+   d="m 346,457 c -73,0 -137,26 -191,78 -54,51 -81,114 -81,188 0,73 27,136 81,188 54,52 118,78 191,78 73,0 134,-26 185,-79 51,-51 77,-114 77,-187 0,-75 -25,-137 -76,-188 -50,-52 -112,-78 -186,-78 z"
+   id="path49" />
+  </g>
+  <g
+   id="bullet-char-template-8211"
+   transform="matrix(4.8828125e-4,0,0,-4.8828125e-4,0,0)">
+   <path
+   d="M -4,459 H 1135 V 606 H -4 Z"
+   id="path50" />
+  </g>
+  <g
+   id="bullet-char-template-61548"
+   transform="matrix(4.8828125e-4,0,0,-4.8828125e-4,0,0)">
+   <path
+   d="m 173,740 c 0,163 58,303 173,419 116,115 255,173 419,173 163,0 302,-58 418,-173 116,-116 174,-256 174,-419 0,-163 -58,-303 -174,-418 C 1067,206 928,148 765,148 601,148 462,206 346,322 231,437 173,577 173,740 Z"
+   id="path51" />
+  </g>
+ </defs>
+ <g
+   id="g51"
+   transform="translate(-6341.1499,-4200.8529)">
+  <g
+   id="id2"
+   class="Master_Slide">
+   <g
+   id="bg-id2"
+   class="Background" />
+   <g
+   id="bo-id2"
+   class="BackgroundObjects" />
+  </g>
+ </g>
+ <g
+   class="SlideGroup"
+   id="g409"
+   transform="scale(0.90331334,0.87301586)">
+  <g
+   id="g408">
+   <g
+   id="container-id1">
+    <g
+   id="id1"
+   class="Slide"
+   clip-path="url(#presentation_clip_path)">
+     <g
+   class="Page"
+   id="g407">
+      <g
+   class="Graphic"
+   id="g406">
+       <g
+   id="id3">
+        <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="0"
+   y="0"
+   width="29752"
+   height="21052"
+   id="rect51" />
+        <path
+   fill="#202020"
+   stroke="none"
+   d="M 393,26 H 8013 V 9635 H 393 Z"
+   id="path52" />
+        <path
+   fill="#dddd90"
+   stroke="none"
+   d="m 3192,855 h 34 v 1159 h -34 z"
+   id="path53" />
+        <path
+   fill="#dddd90"
+   stroke="none"
+   d="m 3192,2014 h 34 v 994 h -34 z"
+   id="path54" />
+        <path
+   fill="#dddd90"
+   stroke="none"
+   d="m 3192,3008 h 34 v 994 h -34 z"
+   id="path55" />
+        <path
+   fill="#dddd90"
+   stroke="none"
+   d="m 3192,4002 h 34 v 994 h -34 z"
+   id="path56" />
+        <path
+   fill="#dddd90"
+   stroke="none"
+   d="m 3192,4996 h 34 v 994 h -34 z"
+   id="path57" />
+        <path
+   fill="#dddd90"
+   stroke="none"
+   d="m 3192,5990 h 34 v 994 h -34 z"
+   id="path58" />
+        <path
+   fill="#dddd90"
+   stroke="none"
+   d="m 3192,6984 h 34 v 994 h -34 z"
+   id="path59" />
+        <path
+   fill="#dddd90"
+   stroke="none"
+   d="m 3192,7978 h 34 v 994 h -34 z"
+   id="path60" />
+        <path
+   fill="none"
+   stroke="#dddd90"
+   stroke-width="26"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="M 3217,863 H 6696"
+   id="path61" />
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 2712,9303 c -58,0 -115,-15 -166,-44 -50,-29 -92,-71 -121,-121 -29,-51 -44,-108 -44,-166 0,-58 15,-115 44,-166 29,-50 71,-92 121,-121 51,-29 108,-44 166,-44 h 994 c 58,0 115,15 166,44 50,29 92,71 121,121 29,51 44,108 44,166 0,58 -15,115 -44,166 -29,50 -71,92 -121,121 -51,29 -108,44 -166,44 z"
+   id="path62" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="26"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 2720,9312 v 0 c -58,0 -115,-16 -165,-45 -51,-29 -93,-71 -122,-121 -29,-50 -44,-107 -44,-166 0,-58 15,-115 44,-165 29,-51 71,-92 122,-122 50,-29 107,-44 165,-44 h 994 v 0 0 c 58,0 116,15 166,44 50,30 92,71 121,122 29,50 45,107 45,165 0,59 -16,116 -45,166 -29,50 -71,92 -121,121 -50,29 -108,45 -166,45 z"
+   id="path63" />
+        <text
+   class="SVGTextShape"
+   id="text65"><tspan
+     class="TextParagraph"
+     id="tspan65"><tspan
+       class="TextPosition"
+       x="2862"
+       y="9041"
+       id="tspan64"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan63">Конец</tspan></tspan></tspan></text>
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 724,1683 h 4970 v 663 H 724 Z"
+   id="path65" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="26"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 732,1691 h 4970 v 663 H 732 Z"
+   id="path66" />
+        <text
+   class="SVGTextShape"
+   id="text68"><tspan
+     class="TextParagraph"
+     id="tspan68"><tspan
+       class="TextPosition"
+       x="891"
+       y="2084"
+       id="tspan67"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan66">distances</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text71"><tspan
+     class="TextParagraph"
+     id="tspan71"><tspan
+       class="TextPosition"
+       x="2283"
+       y="2084"
+       id="tspan70"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan69">=</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text74"><tspan
+     class="TextParagraph"
+     id="tspan74"><tspan
+       class="TextPosition"
+       x="2548"
+       y="2084"
+       id="tspan73"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan72">{</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text77"><tspan
+     class="TextParagraph"
+     id="tspan77"><tspan
+       class="TextPosition"
+       x="2680"
+       y="2084"
+       id="tspan76"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan75">}</tspan></tspan></tspan></text>
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 641,5659 h 5136 v 331 l -332,332 H 972 L 641,5990 Z"
+   id="path77" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="26"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 649,5667 h 5136 v 331 l -331,332 H 981 L 649,5998 Z"
+   id="path78" />
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 641,3340 v -332 l 331,-331 h 4473 l 332,331 v 332 z"
+   id="path79" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="26"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 649,3348 v -332 l 332,-331 h 4473 l 331,331 v 332 z"
+   id="path80" />
+        <text
+   class="SVGTextShape"
+   id="text82"><tspan
+     class="TextParagraph"
+     id="tspan82"><tspan
+       class="TextPosition"
+       x="891"
+       y="3078"
+       id="tspan81"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan80">i</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text85"><tspan
+     class="TextParagraph"
+     id="tspan85"><tspan
+       class="TextPosition"
+       x="1156"
+       y="3078"
+       id="tspan84"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan83">=</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text88"><tspan
+     class="TextParagraph"
+     id="tspan88"><tspan
+       class="TextPosition"
+       x="1421"
+       y="3078"
+       id="tspan87"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan86">0</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text91"><tspan
+     class="TextParagraph"
+     id="tspan91"><tspan
+       class="TextPosition"
+       x="1554"
+       y="3078"
+       id="tspan90"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan89">;</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text94"><tspan
+     class="TextParagraph"
+     id="tspan94"><tspan
+       class="TextPosition"
+       x="1819"
+       y="3078"
+       id="tspan93"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan92">i</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text97"><tspan
+     class="TextParagraph"
+     id="tspan97"><tspan
+       class="TextPosition"
+       x="2084"
+       y="3078"
+       id="tspan96"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan95">&lt;</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text100"><tspan
+     class="TextParagraph"
+     id="tspan100"><tspan
+       class="TextPosition"
+       x="2349"
+       y="3078"
+       id="tspan99"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan98">vertices</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text103"><tspan
+     class="TextParagraph"
+     id="tspan103"><tspan
+       class="TextPosition"
+       x="3459"
+       y="3078"
+       id="tspan102"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan101">.</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text106"><tspan
+     class="TextParagraph"
+     id="tspan106"><tspan
+       class="TextPosition"
+       x="3591"
+       y="3078"
+       id="tspan105"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan104">length</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text109"><tspan
+     class="TextParagraph"
+     id="tspan109"><tspan
+       class="TextPosition"
+       x="4420"
+       y="3078"
+       id="tspan108"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan107">;</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text112"><tspan
+     class="TextParagraph"
+     id="tspan112"><tspan
+       class="TextPosition"
+       x="4685"
+       y="3078"
+       id="tspan111"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan110">i</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text115"><tspan
+     class="TextParagraph"
+     id="tspan115"><tspan
+       class="TextPosition"
+       x="4817"
+       y="3078"
+       id="tspan114"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan113">++</tspan></tspan></tspan></text>
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 724,3671 h 4970 v 663 H 724 Z"
+   id="path115" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="26"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 732,3679 h 4970 v 663 H 732 Z"
+   id="path116" />
+        <text
+   class="SVGTextShape"
+   id="text118"><tspan
+     class="TextParagraph"
+     id="tspan118"><tspan
+       class="TextPosition"
+       x="891"
+       y="4072"
+       id="tspan117"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan116">vertex</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text121"><tspan
+     class="TextParagraph"
+     id="tspan121"><tspan
+       class="TextPosition"
+       x="1852"
+       y="4072"
+       id="tspan120"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan119">=</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text124"><tspan
+     class="TextParagraph"
+     id="tspan124"><tspan
+       class="TextPosition"
+       x="2117"
+       y="4072"
+       id="tspan123"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan122">vertices</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text127"><tspan
+     class="TextParagraph"
+     id="tspan127"><tspan
+       class="TextPosition"
+       x="3227"
+       y="4072"
+       id="tspan126"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan125">[</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text130"><tspan
+     class="TextParagraph"
+     id="tspan130"><tspan
+       class="TextPosition"
+       x="3360"
+       y="4072"
+       id="tspan129"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan128">i</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text133"><tspan
+     class="TextParagraph"
+     id="tspan133"><tspan
+       class="TextPosition"
+       x="3492"
+       y="4072"
+       id="tspan132"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan131">]</tspan></tspan></tspan></text>
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 724,4665 h 4970 v 663 H 724 Z"
+   id="path133" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="26"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 732,4673 h 4970 v 663 H 732 Z"
+   id="path134" />
+        <text
+   class="SVGTextShape"
+   id="text136"><tspan
+     class="TextParagraph"
+     id="tspan136"><tspan
+       class="TextPosition"
+       x="891"
+       y="5066"
+       id="tspan135"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan134">distances</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text139"><tspan
+     class="TextParagraph"
+     id="tspan139"><tspan
+       class="TextPosition"
+       x="2150"
+       y="5066"
+       id="tspan138"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan137">[</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text142"><tspan
+     class="TextParagraph"
+     id="tspan142"><tspan
+       class="TextPosition"
+       x="2283"
+       y="5066"
+       id="tspan141"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan140">vertex</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text145"><tspan
+     class="TextParagraph"
+     id="tspan145"><tspan
+       class="TextPosition"
+       x="3111"
+       y="5066"
+       id="tspan144"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan143">]</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text148"><tspan
+     class="TextParagraph"
+     id="tspan148"><tspan
+       class="TextPosition"
+       x="3376"
+       y="5066"
+       id="tspan147"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan146">=</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text151"><tspan
+     class="TextParagraph"
+     id="tspan151"><tspan
+       class="TextPosition"
+       x="3641"
+       y="5066"
+       id="tspan150"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan149">Infinity</tspan></tspan></tspan></text>
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 724,7647 h 4970 v 662 H 724 Z"
+   id="path151" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="26"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 732,7655 h 4970 v 663 H 732 Z"
+   id="path152" />
+        <text
+   class="SVGTextShape"
+   id="text154"><tspan
+     class="TextParagraph"
+     id="tspan154"><tspan
+       class="TextPosition"
+       x="891"
+       y="8047"
+       id="tspan153"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#80ff80"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan152">return</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text157"><tspan
+     class="TextParagraph"
+     id="tspan157"><tspan
+       class="TextPosition"
+       x="1852"
+       y="8047"
+       id="tspan156"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan155">distances</tspan></tspan></tspan></text>
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 724,6653 h 4970 v 662 H 724 Z"
+   id="path157" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="26"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 732,6661 h 4970 v 663 H 732 Z"
+   id="path158" />
+        <text
+   class="SVGTextShape"
+   id="text160"><tspan
+     class="TextParagraph"
+     id="tspan160"><tspan
+       class="TextPosition"
+       x="891"
+       y="7054"
+       id="tspan159"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan158">distances</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text163"><tspan
+     class="TextParagraph"
+     id="tspan163"><tspan
+       class="TextPosition"
+       x="2150"
+       y="7054"
+       id="tspan162"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan161">[</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text166"><tspan
+     class="TextParagraph"
+     id="tspan166"><tspan
+       class="TextPosition"
+       x="2283"
+       y="7054"
+       id="tspan165"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan164">startVertex</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text169"><tspan
+     class="TextParagraph"
+     id="tspan169"><tspan
+       class="TextPosition"
+       x="3807"
+       y="7054"
+       id="tspan168"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan167">]</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text172"><tspan
+     class="TextParagraph"
+     id="tspan172"><tspan
+       class="TextPosition"
+       x="4072"
+       y="7054"
+       id="tspan171"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan170">=</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text175"><tspan
+     class="TextParagraph"
+     id="tspan175"><tspan
+       class="TextPosition"
+       x="4337"
+       y="7054"
+       id="tspan174"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan173">0</tspan></tspan></tspan></text>
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 1387,1186 v 0 c -59,0 -116,-15 -166,-45 -50,-29 -92,-70 -121,-121 -29,-50 -45,-107 -45,-165 0,-59 16,-116 45,-166 29,-50 71,-92 121,-121 50,-29 107,-45 166,-45 h 3644 v 0 0 c 58,0 116,16 166,45 50,29 92,71 121,121 29,50 45,107 45,166 0,58 -16,115 -45,165 -29,51 -71,92 -121,121 -50,30 -108,45 -166,45 z"
+   id="path175" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="26"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 1395,1194 v 0 c -58,0 -115,-15 -166,-44 -50,-29 -92,-71 -121,-121 -29,-51 -44,-108 -44,-166 0,-58 15,-115 44,-166 29,-50 71,-92 121,-121 51,-29 108,-44 166,-44 h 3645 v 0 0 c 58,0 115,15 165,44 51,29 92,71 122,121 29,51 44,108 44,166 0,58 -15,115 -44,166 -30,50 -71,92 -122,121 -50,29 -107,44 -165,44 z"
+   id="path176" />
+        <text
+   class="SVGTextShape"
+   id="text178"><tspan
+     class="TextParagraph"
+     id="tspan178"><tspan
+       class="TextPosition"
+       x="1504"
+       y="957"
+       id="tspan177"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="298px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan176">initializeDistances</tspan></tspan></tspan></text>
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 5694,358 h 1988 v 994 H 5694 Z"
+   id="path178" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="26"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 5702,366 h 1988 v 994 H 5702 Z"
+   id="path179" />
+        <text
+   class="SVGTextShape"
+   id="text181"><tspan
+     class="TextParagraph"
+     id="tspan181"><tspan
+       class="TextPosition"
+       x="5861"
+       y="792"
+       id="tspan180"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan179">vertices,</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text184"><tspan
+     class="TextParagraph"
+     id="tspan184"><tspan
+       class="TextPosition"
+       x="5994"
+       y="1057"
+       id="tspan183"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="232px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan182">startVertex</tspan></tspan></tspan></text>
+        <path
+   fill="#202020"
+   stroke="none"
+   d="m 8332,26 h 8726 V 9583 H 8332 Z"
+   id="path184" />
+        <path
+   fill="#dddd90"
+   stroke="none"
+   d="m 11762,791 h 40 v 1147 h -40 z"
+   id="path185" />
+        <path
+   fill="#dddd90"
+   stroke="none"
+   d="m 11762,1938 h 40 v 1146 h -40 z"
+   id="path186" />
+        <path
+   fill="#dddd90"
+   stroke="none"
+   d="m 11762,3084 h 40 v 1147 h -40 z"
+   id="path187" />
+        <path
+   fill="#dddd90"
+   stroke="none"
+   d="m 11762,4231 h 40 v 1147 h -40 z"
+   id="path188" />
+        <path
+   fill="#dddd90"
+   stroke="none"
+   d="m 11762,5378 h 40 v 1147 h -40 z"
+   id="path189" />
+        <path
+   fill="#dddd90"
+   stroke="none"
+   d="m 11762,6525 h 40 v 1147 h -40 z"
+   id="path190" />
+        <path
+   fill="#dddd90"
+   stroke="none"
+   d="m 11762,7672 h 40 v 1146 h -40 z"
+   id="path191" />
+        <path
+   fill="none"
+   stroke="#dddd90"
+   stroke-width="27"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 11792,800 h 3855"
+   id="path192" />
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 11173,9201 c -71,0 -141,-18 -203,-52 -61,-33 -113,-81 -148,-140 -36,-58 -55,-124 -55,-191 0,-67 19,-133 55,-191 35,-58 87,-106 148,-140 62,-33 132,-51 203,-51 h 1218 c 71,0 141,18 203,51 62,34 113,82 148,140 36,58 55,124 55,191 0,67 -19,133 -55,191 -35,59 -86,107 -148,140 -62,34 -132,52 -203,52 z"
+   id="path193" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="27"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 11183,9210 v 0 c -71,0 -141,-18 -203,-51 -61,-34 -113,-82 -148,-140 -36,-58 -55,-124 -55,-191 0,-67 19,-133 55,-191 35,-58 87,-107 148,-140 62,-34 132,-51 203,-51 h 1218 v 0 0 c 71,0 141,17 203,51 62,33 113,82 149,140 35,58 54,124 54,191 0,67 -19,133 -54,191 -36,58 -87,106 -149,140 -62,33 -132,51 -203,51 z"
+   id="path194" />
+        <text
+   class="SVGTextShape"
+   id="text196"><tspan
+     class="TextParagraph"
+     id="tspan196"><tspan
+       class="TextPosition"
+       x="11357"
+       y="8900"
+       id="tspan195"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan194">Конец</tspan></tspan></tspan></text>
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 8738,1555 h 6088 v 765 H 8738 Z"
+   id="path196" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="27"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 8748,1565 h 6089 v 764 H 8748 Z"
+   id="path197" />
+        <text
+   class="SVGTextShape"
+   id="text199"><tspan
+     class="TextParagraph"
+     id="tspan199"><tspan
+       class="TextPosition"
+       x="8943"
+       y="2020"
+       id="tspan198"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan197">visited</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text202"><tspan
+     class="TextParagraph"
+     id="tspan202"><tspan
+       class="TextPosition"
+       x="10302"
+       y="2020"
+       id="tspan201"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan200">=</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text205"><tspan
+     class="TextParagraph"
+     id="tspan205"><tspan
+       class="TextPosition"
+       x="10626"
+       y="2020"
+       id="tspan204"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan203">{</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text208"><tspan
+     class="TextParagraph"
+     id="tspan208"><tspan
+       class="TextPosition"
+       x="10789"
+       y="2020"
+       id="tspan207"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan206">}</tspan></tspan></tspan></text>
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 8636,6142 h 6291 v 383 l -405,382 H 9042 l -406,-382 z"
+   id="path208" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="27"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 8646,6152 h 6291 v 382 l -405,383 H 9052 l -406,-383 z"
+   id="path209" />
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 8636,3467 v -383 l 406,-382 h 5480 l 405,382 v 383 z"
+   id="path210" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="27"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 8646,3476 v -382 l 406,-382 h 5480 l 405,382 v 382 z"
+   id="path211" />
+        <text
+   class="SVGTextShape"
+   id="text213"><tspan
+     class="TextParagraph"
+     id="tspan213"><tspan
+       class="TextPosition"
+       x="8943"
+       y="3167"
+       id="tspan212"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan211">i</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text216"><tspan
+     class="TextParagraph"
+     id="tspan216"><tspan
+       class="TextPosition"
+       x="9268"
+       y="3167"
+       id="tspan215"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan214">=</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text219"><tspan
+     class="TextParagraph"
+     id="tspan219"><tspan
+       class="TextPosition"
+       x="9592"
+       y="3167"
+       id="tspan218"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan217">0</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text222"><tspan
+     class="TextParagraph"
+     id="tspan222"><tspan
+       class="TextPosition"
+       x="9755"
+       y="3167"
+       id="tspan221"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan220">;</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text225"><tspan
+     class="TextParagraph"
+     id="tspan225"><tspan
+       class="TextPosition"
+       x="10079"
+       y="3167"
+       id="tspan224"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan223">i</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text228"><tspan
+     class="TextParagraph"
+     id="tspan228"><tspan
+       class="TextPosition"
+       x="10403"
+       y="3167"
+       id="tspan227"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan226">&lt;</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text231"><tspan
+     class="TextParagraph"
+     id="tspan231"><tspan
+       class="TextPosition"
+       x="10728"
+       y="3167"
+       id="tspan230"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan229">vertices</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text234"><tspan
+     class="TextParagraph"
+     id="tspan234"><tspan
+       class="TextPosition"
+       x="12088"
+       y="3167"
+       id="tspan233"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan232">.</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text237"><tspan
+     class="TextParagraph"
+     id="tspan237"><tspan
+       class="TextPosition"
+       x="12250"
+       y="3167"
+       id="tspan236"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan235">length</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text240"><tspan
+     class="TextParagraph"
+     id="tspan240"><tspan
+       class="TextPosition"
+       x="13265"
+       y="3167"
+       id="tspan239"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan238">;</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text243"><tspan
+     class="TextParagraph"
+     id="tspan243"><tspan
+       class="TextPosition"
+       x="13590"
+       y="3167"
+       id="tspan242"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan241">i</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text246"><tspan
+     class="TextParagraph"
+     id="tspan246"><tspan
+       class="TextPosition"
+       x="13752"
+       y="3167"
+       id="tspan245"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan244">++</tspan></tspan></tspan></text>
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 8738,3849 h 6088 v 764 H 8738 Z"
+   id="path246" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="27"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 8748,3858 h 6089 v 765 H 8748 Z"
+   id="path247" />
+        <text
+   class="SVGTextShape"
+   id="text249"><tspan
+     class="TextParagraph"
+     id="tspan249"><tspan
+       class="TextPosition"
+       x="8943"
+       y="4313"
+       id="tspan248"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan247">vertex</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text252"><tspan
+     class="TextParagraph"
+     id="tspan252"><tspan
+       class="TextPosition"
+       x="10120"
+       y="4313"
+       id="tspan251"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan250">=</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text255"><tspan
+     class="TextParagraph"
+     id="tspan255"><tspan
+       class="TextPosition"
+       x="10444"
+       y="4313"
+       id="tspan254"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan253">vertices</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text258"><tspan
+     class="TextParagraph"
+     id="tspan258"><tspan
+       class="TextPosition"
+       x="11804"
+       y="4313"
+       id="tspan257"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan256">[</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text261"><tspan
+     class="TextParagraph"
+     id="tspan261"><tspan
+       class="TextPosition"
+       x="11966"
+       y="4313"
+       id="tspan260"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan259">i</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text264"><tspan
+     class="TextParagraph"
+     id="tspan264"><tspan
+       class="TextPosition"
+       x="12128"
+       y="4313"
+       id="tspan263"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan262">]</tspan></tspan></tspan></text>
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 8738,4996 h 6088 v 764 H 8738 Z"
+   id="path264" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="27"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 8748,5005 h 6089 v 765 H 8748 Z"
+   id="path265" />
+        <text
+   class="SVGTextShape"
+   id="text267"><tspan
+     class="TextParagraph"
+     id="tspan267"><tspan
+       class="TextPosition"
+       x="8943"
+       y="5460"
+       id="tspan266"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan265">visited</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text270"><tspan
+     class="TextParagraph"
+     id="tspan270"><tspan
+       class="TextPosition"
+       x="10140"
+       y="5460"
+       id="tspan269"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan268">[</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text273"><tspan
+     class="TextParagraph"
+     id="tspan273"><tspan
+       class="TextPosition"
+       x="10302"
+       y="5460"
+       id="tspan272"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan271">vertex</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text276"><tspan
+     class="TextParagraph"
+     id="tspan276"><tspan
+       class="TextPosition"
+       x="11317"
+       y="5460"
+       id="tspan275"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan274">]</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text279"><tspan
+     class="TextParagraph"
+     id="tspan279"><tspan
+       class="TextPosition"
+       x="11641"
+       y="5460"
+       id="tspan278"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan277">=</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text282"><tspan
+     class="TextParagraph"
+     id="tspan282"><tspan
+       class="TextPosition"
+       x="11966"
+       y="5460"
+       id="tspan281"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#80ff80"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan280">false</tspan></tspan></tspan></text>
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 8738,7289 h 6088 v 765 H 8738 Z"
+   id="path282" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="27"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 8748,7299 h 6089 v 764 H 8748 Z"
+   id="path283" />
+        <text
+   class="SVGTextShape"
+   id="text285"><tspan
+     class="TextParagraph"
+     id="tspan285"><tspan
+       class="TextPosition"
+       x="8943"
+       y="7753"
+       id="tspan284"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#80ff80"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan283">return</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text288"><tspan
+     class="TextParagraph"
+     id="tspan288"><tspan
+       class="TextPosition"
+       x="10120"
+       y="7753"
+       id="tspan287"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan286">visited</tspan></tspan></tspan></text>
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 9753,1173 v 0 c -72,0 -142,-18 -203,-51 -62,-34 -113,-82 -149,-140 -36,-58 -54,-124 -54,-191 0,-67 18,-133 54,-191 36,-58 87,-107 149,-140 61,-34 131,-52 203,-52 h 4059 v 0 0 c 71,0 141,18 203,52 61,33 113,82 148,140 36,58 55,124 55,191 0,67 -19,133 -55,191 -35,58 -87,106 -148,140 -62,33 -132,51 -203,51 z"
+   id="path288" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="27"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 9763,1183 v 0 c -72,0 -142,-18 -203,-52 -62,-33 -113,-81 -149,-140 -35,-58 -54,-124 -54,-191 0,-67 19,-133 54,-191 36,-58 87,-106 149,-140 61,-33 131,-51 203,-51 h 4059 v 0 0 c 71,0 141,18 203,51 61,34 113,82 148,140 36,58 55,124 55,191 0,67 -19,133 -55,191 -35,59 -87,107 -148,140 -62,34 -132,52 -203,52 z"
+   id="path289" />
+        <text
+   class="SVGTextShape"
+   id="text291"><tspan
+     class="TextParagraph"
+     id="tspan291"><tspan
+       class="TextPosition"
+       x="9917"
+       y="911"
+       id="tspan290"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="344px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan289">initializeVisited</tspan></tspan></tspan></text>
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 14623,408 h 2029 v 765 h -2029 z"
+   id="path291" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="27"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 14634,418 h 2028 v 765 h -2028 z"
+   id="path292" />
+        <text
+   class="SVGTextShape"
+   id="text294"><tspan
+     class="TextParagraph"
+     id="tspan294"><tspan
+       class="TextPosition"
+       x="14828"
+       y="873"
+       id="tspan293"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="268px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan292">vertices</tspan></tspan></tspan></text>
+        <path
+   fill="#202020"
+   stroke="none"
+   d="m 17428,26 h 7284 v 9396 h -7284 z"
+   id="path294" />
+        <path
+   fill="#dddd90"
+   stroke="none"
+   d="m 20291,778 h 34 v 1127 h -34 z"
+   id="path295" />
+        <path
+   fill="#dddd90"
+   stroke="none"
+   d="m 20291,1905 h 34 v 1128 h -34 z"
+   id="path296" />
+        <path
+   fill="#dddd90"
+   stroke="none"
+   d="m 20291,3033 h 34 v 1127 h -34 z"
+   id="path297" />
+        <path
+   fill="#dddd90"
+   stroke="none"
+   d="m 20291,4160 h 34 v 1128 h -34 z"
+   id="path298" />
+        <path
+   fill="#dddd90"
+   stroke="none"
+   d="m 20291,5288 h 34 v 1127 h -34 z"
+   id="path299" />
+        <path
+   fill="#dddd90"
+   stroke="none"
+   d="m 20291,6415 h 34 v 1127 h -34 z"
+   id="path300" />
+        <path
+   fill="#dddd90"
+   stroke="none"
+   d="m 20291,7542 h 34 v 1128 h -34 z"
+   id="path301" />
+        <path
+   fill="none"
+   stroke="#dddd90"
+   stroke-width="25"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 20316,787 h 3219"
+   id="path302" />
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 19800,9046 c -60,0 -118,-18 -170,-51 -51,-33 -94,-80 -124,-137 -29,-57 -45,-122 -45,-188 0,-66 16,-131 45,-188 30,-57 73,-105 124,-138 52,-33 110,-50 170,-50 h 1016 c 59,0 118,17 169,50 52,33 95,81 124,138 30,57 46,122 46,188 0,66 -16,131 -46,188 -29,57 -72,104 -124,137 -51,33 -110,51 -169,51 z"
+   id="path303" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="25"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 19808,9055 v 0 c -59,0 -118,-17 -169,-50 -52,-33 -95,-81 -124,-138 -30,-57 -46,-122 -46,-188 0,-66 16,-130 46,-188 29,-57 72,-104 124,-137 51,-33 110,-50 169,-50 h 1016 v 0 0 c 60,0 118,17 170,50 51,33 94,80 124,137 30,58 45,122 45,188 0,66 -15,131 -45,188 -30,57 -73,105 -124,138 -52,33 -110,50 -170,50 z"
+   id="path304" />
+        <text
+   class="SVGTextShape"
+   id="text306"><tspan
+     class="TextParagraph"
+     id="tspan306"><tspan
+       class="TextPosition"
+       x="19948"
+       y="8750"
+       id="tspan305"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan304">Конец</tspan></tspan></tspan></text>
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 17767,1529 h 5082 v 752 h -5082 z"
+   id="path306" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="25"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 17776,1539 h 5081 v 751 h -5081 z"
+   id="path307" />
+        <text
+   class="SVGTextShape"
+   id="text309"><tspan
+     class="TextParagraph"
+     id="tspan309"><tspan
+       class="TextPosition"
+       x="17933"
+       y="1986"
+       id="tspan308"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan307">previous</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text312"><tspan
+     class="TextParagraph"
+     id="tspan312"><tspan
+       class="TextPosition"
+       x="19203"
+       y="1986"
+       id="tspan311"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan310">=</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text315"><tspan
+     class="TextParagraph"
+     id="tspan315"><tspan
+       class="TextPosition"
+       x="19474"
+       y="1986"
+       id="tspan314"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan313">{</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text318"><tspan
+     class="TextParagraph"
+     id="tspan318"><tspan
+       class="TextPosition"
+       x="19610"
+       y="1986"
+       id="tspan317"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan316">}</tspan></tspan></tspan></text>
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 17682,6039 h 5251 v 376 l -339,376 h -4573 l -339,-376 z"
+   id="path318" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="25"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 17691,6049 h 5251 v 375 l -339,376 h -4573 l -339,-376 z"
+   id="path319" />
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 17682,3409 v -376 l 339,-376 h 4573 l 339,376 v 376 z"
+   id="path320" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="25"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 17691,3418 v -376 l 339,-376 h 4573 l 339,376 v 376 z"
+   id="path321" />
+        <text
+   class="SVGTextShape"
+   id="text323"><tspan
+     class="TextParagraph"
+     id="tspan323"><tspan
+       class="TextPosition"
+       x="17933"
+       y="3113"
+       id="tspan322"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan321">i</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text326"><tspan
+     class="TextParagraph"
+     id="tspan326"><tspan
+       class="TextPosition"
+       x="18204"
+       y="3113"
+       id="tspan325"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan324">=</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text329"><tspan
+     class="TextParagraph"
+     id="tspan329"><tspan
+       class="TextPosition"
+       x="18475"
+       y="3113"
+       id="tspan328"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan327">0</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text332"><tspan
+     class="TextParagraph"
+     id="tspan332"><tspan
+       class="TextPosition"
+       x="18610"
+       y="3113"
+       id="tspan331"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan330">;</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text335"><tspan
+     class="TextParagraph"
+     id="tspan335"><tspan
+       class="TextPosition"
+       x="18881"
+       y="3113"
+       id="tspan334"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan333">i</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text338"><tspan
+     class="TextParagraph"
+     id="tspan338"><tspan
+       class="TextPosition"
+       x="19152"
+       y="3113"
+       id="tspan337"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan336">&lt;</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text341"><tspan
+     class="TextParagraph"
+     id="tspan341"><tspan
+       class="TextPosition"
+       x="19423"
+       y="3113"
+       id="tspan340"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan339">vertices</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text344"><tspan
+     class="TextParagraph"
+     id="tspan344"><tspan
+       class="TextPosition"
+       x="20558"
+       y="3113"
+       id="tspan343"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan342">.</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text347"><tspan
+     class="TextParagraph"
+     id="tspan347"><tspan
+       class="TextPosition"
+       x="20694"
+       y="3113"
+       id="tspan346"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan345">length</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text350"><tspan
+     class="TextParagraph"
+     id="tspan350"><tspan
+       class="TextPosition"
+       x="21541"
+       y="3113"
+       id="tspan349"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan348">;</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text353"><tspan
+     class="TextParagraph"
+     id="tspan353"><tspan
+       class="TextPosition"
+       x="21812"
+       y="3113"
+       id="tspan352"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan351">i</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text356"><tspan
+     class="TextParagraph"
+     id="tspan356"><tspan
+       class="TextPosition"
+       x="21947"
+       y="3113"
+       id="tspan355"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan354">++</tspan></tspan></tspan></text>
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 17767,3784 h 5082 v 752 h -5082 z"
+   id="path356" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="25"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 17776,3794 h 5081 v 751 h -5081 z"
+   id="path357" />
+        <text
+   class="SVGTextShape"
+   id="text359"><tspan
+     class="TextParagraph"
+     id="tspan359"><tspan
+       class="TextPosition"
+       x="17933"
+       y="4241"
+       id="tspan358"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan357">vertex</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text362"><tspan
+     class="TextParagraph"
+     id="tspan362"><tspan
+       class="TextPosition"
+       x="18915"
+       y="4241"
+       id="tspan361"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan360">=</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text365"><tspan
+     class="TextParagraph"
+     id="tspan365"><tspan
+       class="TextPosition"
+       x="19186"
+       y="4241"
+       id="tspan364"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan363">vertices</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text368"><tspan
+     class="TextParagraph"
+     id="tspan368"><tspan
+       class="TextPosition"
+       x="20321"
+       y="4241"
+       id="tspan367"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan366">[</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text371"><tspan
+     class="TextParagraph"
+     id="tspan371"><tspan
+       class="TextPosition"
+       x="20457"
+       y="4241"
+       id="tspan370"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan369">i</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text374"><tspan
+     class="TextParagraph"
+     id="tspan374"><tspan
+       class="TextPosition"
+       x="20592"
+       y="4241"
+       id="tspan373"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan372">]</tspan></tspan></tspan></text>
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 17767,4912 h 5082 v 751 h -5082 z"
+   id="path374" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="25"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 17776,4921 h 5081 v 752 h -5081 z"
+   id="path375" />
+        <text
+   class="SVGTextShape"
+   id="text377"><tspan
+     class="TextParagraph"
+     id="tspan377"><tspan
+       class="TextPosition"
+       x="17933"
+       y="5368"
+       id="tspan376"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan375">previous</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text380"><tspan
+     class="TextParagraph"
+     id="tspan380"><tspan
+       class="TextPosition"
+       x="19068"
+       y="5368"
+       id="tspan379"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan378">[</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text383"><tspan
+     class="TextParagraph"
+     id="tspan383"><tspan
+       class="TextPosition"
+       x="19203"
+       y="5368"
+       id="tspan382"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan381">vertex</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text386"><tspan
+     class="TextParagraph"
+     id="tspan386"><tspan
+       class="TextPosition"
+       x="20050"
+       y="5368"
+       id="tspan385"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan384">]</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text389"><tspan
+     class="TextParagraph"
+     id="tspan389"><tspan
+       class="TextPosition"
+       x="20321"
+       y="5368"
+       id="tspan388"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#95dcfc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan387">=</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text392"><tspan
+     class="TextParagraph"
+     id="tspan392"><tspan
+       class="TextPosition"
+       x="20592"
+       y="5368"
+       id="tspan391"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#80ff80"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan390">null</tspan></tspan></tspan></text>
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 17767,7167 h 5082 v 751 h -5082 z"
+   id="path392" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="25"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 17776,7176 h 5081 v 752 h -5081 z"
+   id="path393" />
+        <text
+   class="SVGTextShape"
+   id="text395"><tspan
+     class="TextParagraph"
+     id="tspan395"><tspan
+       class="TextPosition"
+       x="17933"
+       y="7622"
+       id="tspan394"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#80ff80"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan393">return</tspan></tspan></tspan></text>
+        <text
+   class="SVGTextShape"
+   id="text398"><tspan
+     class="TextParagraph"
+     id="tspan398"><tspan
+       class="TextPosition"
+       x="18915"
+       y="7622"
+       id="tspan397"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan396">previous</tspan></tspan></tspan></text>
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 18614,1154 v 0 c -60,0 -118,-18 -169,-51 -52,-33 -95,-80 -124,-137 -30,-57 -46,-122 -46,-188 0,-66 16,-131 46,-188 29,-57 72,-105 124,-138 51,-33 109,-50 169,-50 h 3388 v 0 0 c 59,0 118,17 169,50 52,33 94,81 124,138 30,57 45,122 45,188 0,66 -15,131 -45,188 -30,57 -72,104 -124,137 -51,33 -110,51 -169,51 z"
+   id="path398" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="25"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 18622,1163 v 0 c -59,0 -117,-17 -169,-50 -51,-33 -94,-81 -124,-138 -30,-57 -45,-122 -45,-188 0,-66 15,-131 45,-188 30,-57 73,-104 124,-137 52,-33 110,-51 169,-51 h 3388 v 0 0 c 60,0 118,18 169,51 52,33 95,80 124,137 30,57 46,122 46,188 0,66 -16,131 -46,188 -29,57 -72,105 -124,138 -51,33 -109,50 -169,50 z"
+   id="path399" />
+        <text
+   class="SVGTextShape"
+   id="text401"><tspan
+     class="TextParagraph"
+     id="tspan401"><tspan
+       class="TextPosition"
+       x="18661"
+       y="896"
+       id="tspan400"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="338px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan399">initializePrevious</tspan></tspan></tspan></text>
+        <path
+   fill="#000000"
+   stroke="none"
+   d="m 22679,402 h 1694 v 752 h -1694 z"
+   id="path401" />
+        <path
+   fill="none"
+   stroke="#98984d"
+   stroke-width="25"
+   stroke-linejoin="miter"
+   stroke-linecap="round"
+   d="m 22688,411 h 1693 v 752 h -1693 z"
+   id="path402" />
+        <text
+   class="SVGTextShape"
+   id="text404"><tspan
+     class="TextParagraph"
+     id="tspan404"><tspan
+       class="TextPosition"
+       x="22845"
+       y="859"
+       id="tspan403"><tspan
+         font-family="Consolas, sans-serif"
+         font-size="263px"
+         font-weight="400"
+         fill="#ffffcc"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan402">vertices</tspan></tspan></tspan></text>
+        <path
+   fill="#ffff14"
+   stroke="none"
+   d="m 3150,10863 c -21,0 -42,-2 -63,-5 -21,-4 -41,-10 -58,-20 -17,-10 -31,-24 -42,-42 -11,-18 -16,-40 -16,-68 0,-32 9,-58 26,-77 18,-20 41,-33 68,-42 27,-9 55,-13 84,-13 15,0 30,1 45,3 15,2 29,4 43,8 v -20 c 0,-16 -3,-32 -8,-46 -5,-15 -15,-26 -30,-35 -14,-10 -36,-15 -65,-15 -26,0 -49,2 -69,6 -19,4 -34,7 -43,10 l -7,-52 c 9,-4 25,-8 48,-12 23,-4 48,-6 75,-6 41,0 73,7 96,20 24,13 41,31 51,54 10,22 15,48 15,78 v 258 c -18,3 -41,7 -68,10 -27,4 -55,6 -82,6 z m -4,-55 c 20,0 38,0 53,-2 16,-2 29,-4 38,-6 v -136 c -10,-3 -22,-6 -37,-9 -14,-2 -30,-4 -47,-4 -18,0 -37,2 -55,7 -18,5 -33,12 -45,23 -11,12 -17,27 -17,47 0,30 10,51 29,63 20,12 46,17 81,17 z m 368,205 -37,-50 c 38,-32 69,-65 94,-100 25,-36 44,-74 57,-114 13,-40 20,-81 20,-123 0,-44 -6,-84 -17,-121 -11,-38 -30,-74 -55,-110 -24,-36 -57,-73 -98,-111 l 36,-49 c 43,34 79,72 108,114 29,42 50,87 65,133 15,46 22,93 22,141 0,48 -8,95 -22,142 -15,47 -37,92 -66,134 -29,42 -65,80 -107,114 z"
+   id="path404" />
+        <path
+   fill="#ffff14"
+   stroke="none"
+   d="m 11882,10880 c -22,0 -43,-1 -61,-3 -18,-3 -35,-6 -49,-9 -14,-4 -26,-7 -36,-10 v -591 l 64,-11 v 225 c 7,-5 20,-11 37,-17 18,-7 38,-10 61,-10 38,0 70,9 97,28 27,17 48,43 63,74 14,32 22,68 22,110 0,45 -9,83 -26,115 -16,31 -40,56 -69,73 -30,17 -64,26 -103,26 z m -11,-56 c 44,0 79,-14 105,-40 25,-27 38,-66 38,-117 0,-28 -4,-55 -12,-78 -8,-24 -21,-43 -39,-57 -18,-13 -41,-20 -70,-20 -18,0 -36,3 -54,11 -18,7 -31,15 -39,23 v 267 c 12,4 24,6 36,8 12,2 24,3 35,3 z m 398,206 -37,-50 c 38,-32 69,-65 94,-101 25,-35 44,-73 57,-113 13,-40 20,-81 20,-124 0,-43 -6,-83 -17,-120 -11,-38 -30,-75 -55,-110 -24,-36 -57,-73 -98,-111 l 36,-50 c 43,35 79,73 108,115 29,42 50,87 65,133 15,45 22,93 22,141 0,48 -8,95 -22,142 -15,47 -37,92 -66,134 -29,41 -65,79 -107,114 z"
+   id="path405" />
+        <path
+   fill="#ffff14"
+   stroke="none"
+   d="m 20200,10747 c -41,0 -78,-7 -111,-23 -34,-15 -60,-38 -80,-69 -20,-32 -30,-72 -30,-120 0,-38 6,-71 18,-98 13,-28 30,-50 52,-66 21,-17 46,-30 73,-37 27,-8 54,-13 83,-13 18,0 38,2 58,5 20,3 41,7 64,14 l -14,55 c -23,-8 -42,-12 -59,-14 -17,-1 -33,-2 -48,-2 -26,0 -52,5 -77,15 -25,10 -45,26 -62,49 -15,22 -23,53 -23,92 0,37 7,66 22,89 15,23 35,40 60,50 25,10 53,15 83,15 20,0 39,0 56,-2 17,-2 37,-7 60,-15 l 8,53 c -14,5 -28,9 -43,13 -15,4 -29,6 -44,8 -15,1 -30,1 -46,1 z m 332,150 -36,-50 c 37,-32 68,-65 93,-100 25,-36 45,-73 57,-114 13,-40 20,-81 20,-122 0,-44 -6,-84 -17,-122 -11,-38 -30,-74 -55,-110 -24,-36 -57,-73 -98,-111 l 36,-49 c 44,34 79,72 108,114 29,43 51,87 65,133 15,47 22,94 22,142 0,47 -8,94 -22,141 -15,47 -37,92 -66,134 -29,42 -65,80 -107,114 z"
+   id="path406" />
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

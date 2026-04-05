@@ -1,0 +1,134 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "45",
+            "content": "The simplest options"
+        },
+        "8": {
+            "type": "action",
+            "one": "30",
+            "content": "console.log(\n    `Current Descriptor\n                            \n                            : [${clusterString}]`\n)"
+        },
+        "9": {
+            "type": "branch",
+            "one": "40",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "25": {
+            "type": "action",
+            "one": "8",
+            "content": "clusterMap = wrapper.nodes"
+        },
+        "30": {
+            "type": "question",
+            "one": "48",
+            "two": "35",
+            "flag1": 1,
+            "content": "clusterString == \"r:B\" || clusterString ==\n\"r:R\" || clusterString == \"z:R\""
+        },
+        "35": {
+            "type": "branch",
+            "branchId": 2,
+            "one": "51",
+            "content": "Full cluster Descriptor"
+        },
+        "36": {
+            "type": "action",
+            "one": "37",
+            "two": "",
+            "content": "case2_1 = \"z:B;z<P;P:B;s:B,s>P;s.l:B;s.r:B\"\ncase2_2 = \"z:B;z>P;P:B;s:B,s<P;s.l:B;s.r:B\"\ncase2_3 = \"z:B;z<P;P:R;s:B,s>P;s.l:B;s.r:B\"\ncase2_4 = \"z:B;z>P;P:R;s:B,s<P;s.l:B;s.r:B\""
+        },
+        "37": {
+            "type": "question",
+            "one": "38",
+            "two": "9",
+            "flag1": 1,
+            "content": "clusterString == case2_1 || case2_2 || case2_3\n|| case2_4"
+        },
+        "38": {
+            "type": "action",
+            "one": "9",
+            "two": "",
+            "content": "handlepropagateDeficiency(tree, wrapper)"
+        },
+        "40": {
+            "type": "question",
+            "one": "41",
+            "two": "1",
+            "flag1": 1,
+            "content": "clusterString.includes(\"s.l:R\") || clusterString\n.includes(\"s.r:R\")"
+        },
+        "41": {
+            "type": "action",
+            "one": "1",
+            "content": "handleDirectCapture(tree, wrapper)"
+        },
+        "43": {
+            "type": "question",
+            "one": "44",
+            "two": "36",
+            "flag1": 1,
+            "content": "clusterString == case1_1 || case1_2"
+        },
+        "44": {
+            "type": "action",
+            "one": "36",
+            "content": "handleSiblingRotation(tree, wrapper)"
+        },
+        "45": {
+            "type": "question",
+            "one": "46",
+            "two": "47",
+            "flag1": 0,
+            "content": "wrapper == null "
+        },
+        "46": {
+            "type": "action",
+            "one": "25",
+            "content": "clusterString = wrapper.description"
+        },
+        "47": {
+            "type": "action",
+            "one": "25",
+            "content": "return "
+        },
+        "48": {
+            "type": "question",
+            "one": "49",
+            "two": "35",
+            "flag1": 1,
+            "content": "clusterMap.z"
+        },
+        "49": {
+            "type": "action",
+            "one": "50",
+            "content": "clusterMap.z.color = 'B'"
+        },
+        "50": {
+            "type": "action",
+            "one": "35",
+            "content": "return "
+        },
+        "51": {
+            "type": "action",
+            "one": "43",
+            "content": "case1_1 = \"z:B;z<P;P:B;s:R,s>P;s.l:B;s.r:B\"\ncase1_2 = \"z:B;z>P;P:B;s:R,s<P;s.l:B;s.r:B\""
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "tree, wrapper"
+}

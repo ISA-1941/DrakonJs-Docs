@@ -1,0 +1,134 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "25",
+            "content": "Ветка1"
+        },
+        "3": {
+            "type": "action",
+            "one": "9",
+            "content": "nullNode = tree.nullNode"
+        },
+        "4": {
+            "type": "action",
+            "one": "10",
+            "content": "P = node.parent"
+        },
+        "7": {
+            "type": "action",
+            "one": "28",
+            "content": "parts = []"
+        },
+        "9": {
+            "type": "action",
+            "one": "24",
+            "content": "wrapper = {description: \"\", nodes: {}}"
+        },
+        "10": {
+            "type": "action",
+            "one": "12",
+            "content": "parts.push(`z:${node.color}`)"
+        },
+        "11": {
+            "type": "branch",
+            "one": "22",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "12": {
+            "type": "branch",
+            "one": "13",
+            "branchId": 2,
+            "content": "Ветка2"
+        },
+        "13": {
+            "type": "question",
+            "one": "14",
+            "two": "21",
+            "flag1": 1,
+            "content": "P !== tree.nullNode"
+        },
+        "14": {
+            "type": "action",
+            "one": "15",
+            "content": "wrapper.nodes.P = P"
+        },
+        "15": {
+            "type": "action",
+            "one": "16",
+            "content": "isLeft = (node === P.left)"
+        },
+        "16": {
+            "type": "action",
+            "one": "17",
+            "content": "s = isLeft ? P.right: P.left"
+        },
+        "17": {
+            "type": "action",
+            "one": "18",
+            "content": "wrapper.nodes.s = s\nwrapper.nodes.s_L = s.left\nwrapper.nodes.s_R = s.right"
+        },
+        "18": {
+            "type": "action",
+            "one": "11",
+            "content": "parts.push(isLeft ? \"z←P\": \"z→P\")\nparts.push(`P:${P.color}`)\nparts.push(\n    `s:${s.color}, ${isLeft ? \"s→P\" : \"s←P\"}`\n)\nparts.push(\n    `s_L:${wrapper.nodes.s_L.color}`\n)\nparts.push(\n    `s_R:${wrapper.nodes.s_R.color}`\n)"
+        },
+        "21": {
+            "type": "action",
+            "one": "11",
+            "content": "wrapper.description = `r:${node.color}`\nreturn wrapper"
+        },
+        "22": {
+            "type": "action",
+            "one": "23",
+            "content": "wrapper.description = parts.join(\";\")"
+        },
+        "23": {
+            "type": "action",
+            "one": "1",
+            "content": "return wrapper"
+        },
+        "24": {
+            "type": "action",
+            "one": "7",
+            "content": "nodes = {z: node, P: P}"
+        },
+        "25": {
+            "type": "question",
+            "one": "26",
+            "two": "3",
+            "flag1": 1,
+            "content": "!node"
+        },
+        "26": {
+            "type": "action",
+            "one": "27",
+            "content": "console.error(\"Warning: undefined узла\")"
+        },
+        "27": {
+            "type": "action",
+            "one": "3",
+            "content": "return null "
+        },
+        "28": {
+            "type": "action",
+            "one": "4",
+            "content": "console.log(\n    \"Node analyze:\",\n    node ? node.key: \"UNDEFINED\"\n)"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "tree, node"
+}

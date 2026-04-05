@@ -1,0 +1,107 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "Branch1"
+        },
+        "3": {
+            "type": "action",
+            "one": "26",
+            "content": "tree = makeRBTree()"
+        },
+        "8": {
+            "type": "branch",
+            "one": "1",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "9": {
+            "type": "branch",
+            "one": "11",
+            "branchId": 2,
+            "content": "Branch2"
+        },
+        "11": {
+            "type": "action",
+            "one": "13",
+            "content": "console.log(\n    \"\\nTree after inserts !!!:\\n\"\n)\n//console.log(\"tree.root = \", tree.root)\nprintTree(tree, tree.root);"
+        },
+        "12": {
+            "type": "soutput",
+            "one": "8",
+            "content": "return tree"
+        },
+        "13": {
+            "type": "action",
+            "one": "14",
+            "content": "deleteNode(tree, values[4])"
+        },
+        "14": {
+            "type": "action",
+            "one": "15",
+            "content": "console.log(\n    '\\nTree after delete node  (FIXED):\\n'\n)"
+        },
+        "15": {
+            "type": "action",
+            "one": "12",
+            "content": "printTree(tree, tree.root)"
+        },
+        "26": {
+            "type": "action",
+            "one": "27",
+            "content": "values = []\ncount = 10\nmin = 1\nmax = 100"
+        },
+        "27": {
+            "type": "action",
+            "one": "29",
+            "content": "uniqueValues = new Set()"
+        },
+        "28": {
+            "type": "question",
+            "one": "34",
+            "two": "30",
+            "flag1": 0,
+            "content": "uniqueValues.size < count"
+        },
+        "29": {
+            "type": "arrow-loop",
+            "one": "28"
+        },
+        "30": {
+            "type": "action",
+            "one": "29",
+            "content": "randomVal = Math.floor(\n    Math.random() * (max - min + 1)\n) + min\nuniqueValues.add(randomVal)"
+        },
+        "31": {
+            "type": "loopend",
+            "one": "9",
+            "content": ""
+        },
+        "32": {
+            "type": "loopbegin",
+            "one": "33",
+            "content": "val; values"
+        },
+        "33": {
+            "type": "action",
+            "one": "31",
+            "content": "rbInsert(tree, val)"
+        },
+        "34": {
+            "type": "action",
+            "one": "35",
+            "content": "values = Array.from(uniqueValues)"
+        },
+        "35": {
+            "type": "action",
+            "one": "32",
+            "content": "console.log('value :', values)"
+        }
+    }
+}

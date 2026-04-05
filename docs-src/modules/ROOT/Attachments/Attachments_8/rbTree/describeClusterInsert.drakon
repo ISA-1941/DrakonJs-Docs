@@ -1,0 +1,105 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "4",
+            "content": "New node & Parent"
+        },
+        "3": {
+            "type": "action",
+            "one": "5",
+            "content": "parts = []\nnodes = {x: node}"
+        },
+        "4": {
+            "type": "action",
+            "one": "3",
+            "content": "nullNode = tree.nullNode"
+        },
+        "5": {
+            "type": "action",
+            "one": "6",
+            "content": "x = node;\nparts.push(`x:${x.color}`);"
+        },
+        "6": {
+            "type": "action",
+            "one": "16",
+            "content": "P = x.parent\nnodes.P = P"
+        },
+        "15": {
+            "type": "branch",
+            "one": "24",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "16": {
+            "type": "branch",
+            "one": "17",
+            "branchId": 2,
+            "content": "Cluster Descriptor"
+        },
+        "17": {
+            "type": "question",
+            "one": "18",
+            "two": "15",
+            "flag1": 1,
+            "content": "P !== nullNode"
+        },
+        "18": {
+            "type": "action",
+            "one": "19",
+            "two": "",
+            "content": "xToP = (x === P.left) ? 'x<P': 'x>P'\nparts.push(`${xToP}; P:${P.color}`)\nG = P.parent\nnodes.G = G"
+        },
+        "19": {
+            "type": "question",
+            "one": "20",
+            "two": "15",
+            "flag1": 1,
+            "content": "G !== nullNode"
+        },
+        "20": {
+            "type": "action",
+            "one": "21",
+            "two": "",
+            "content": "pToG = (P === G.left) ? 'P<G': 'P>G'\nparts.push(`${pToG}; G:${G.color}`)\nU = (P === G.left) ? G.right: G.left\nnodes.U = U"
+        },
+        "21": {
+            "type": "question",
+            "one": "22",
+            "two": "23",
+            "flag1": 1,
+            "content": "U !== nullNode"
+        },
+        "22": {
+            "type": "action",
+            "one": "15",
+            "two": "",
+            "content": "parts.push(`U:${U.color}`)"
+        },
+        "23": {
+            "type": "action",
+            "one": "15",
+            "two": "",
+            "content": "parts.push('U:null')"
+        },
+        "24": {
+            "type": "action",
+            "one": "1",
+            "content": "return {\n    description: parts.join(';'),\n    nodes: nodes\n};"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "tree, node"
+}

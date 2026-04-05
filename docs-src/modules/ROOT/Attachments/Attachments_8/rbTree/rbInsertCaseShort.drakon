@@ -1,0 +1,137 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "22",
+            "content": "Case 1 and Case 2"
+        },
+        "6": {
+            "type": "branch",
+            "one": "67",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "7": {
+            "type": "branch",
+            "one": "61",
+            "branchId": 2,
+            "content": "Case 3. Case 4, Case5"
+        },
+        "22": {
+            "type": "question",
+            "one": "23",
+            "two": "53",
+            "flag1": 1,
+            "content": "!node || node.key === undefined || node.key\n=== null"
+        },
+        "23": {
+            "type": "action",
+            "one": "53",
+            "content": "return 'Error: No valid node provided'"
+        },
+        "42": {
+            "type": "action",
+            "one": "62",
+            "content": "isParentLeft = parent === grand.left;\nisNodeLeft = node === parent.left;"
+        },
+        "53": {
+            "type": "action",
+            "one": "54",
+            "content": "parent = node.parent"
+        },
+        "54": {
+            "type": "question",
+            "one": "55",
+            "two": "56",
+            "flag1": 1,
+            "content": "!parent || parent === tree.nullNode"
+        },
+        "55": {
+            "type": "action",
+            "one": "56",
+            "content": "return 'Case 1: Node is root - x:B'"
+        },
+        "56": {
+            "type": "question",
+            "one": "57",
+            "two": "58",
+            "flag1": 1,
+            "content": "parent.color === 'B'"
+        },
+        "57": {
+            "type": "action",
+            "one": "58",
+            "content": "return 'Case 2: P:B - no fix needed'"
+        },
+        "58": {
+            "type": "action",
+            "one": "59",
+            "content": "grand = parent.parent"
+        },
+        "59": {
+            "type": "question",
+            "one": "60",
+            "two": "7",
+            "flag1": 1,
+            "content": "!grand"
+        },
+        "60": {
+            "type": "action",
+            "one": "7",
+            "content": "return 'No grandparent found'"
+        },
+        "61": {
+            "type": "action",
+            "one": "42",
+            "content": "uncle = parent === grand.left ? grand.right:\ngrand.left"
+        },
+        "62": {
+            "type": "question",
+            "one": "63",
+            "two": "64",
+            "flag1": 1,
+            "content": "uncle && uncle.color === 'R'"
+        },
+        "63": {
+            "type": "action",
+            "one": "64",
+            "content": "return 'Case 3: P:R and U:R - recolor'"
+        },
+        "64": {
+            "type": "question",
+            "one": "65",
+            "two": "69",
+            "flag1": 1,
+            "content": "isParentLeft && !isNodeLeft || !isParentLeft\n&& isNodeLeft"
+        },
+        "65": {
+            "type": "action",
+            "one": "69",
+            "content": "return 'Case 4: U:B, x and P in <- -> - rotate parent'"
+        },
+        "67": {
+            "type": "action",
+            "one": "1",
+            "content": "return 'Unknown insert case'"
+        },
+        "69": {
+            "type": "action",
+            "one": "6",
+            "content": "return 'Case 5: U:B, x -> -> - rotate grandparent'"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "tree, node"
+}

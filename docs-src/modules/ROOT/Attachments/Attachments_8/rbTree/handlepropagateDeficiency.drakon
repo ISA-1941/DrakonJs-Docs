@@ -1,0 +1,61 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "8",
+            "content": "clusterMap = wrapper.nodes"
+        },
+        "4": {
+            "type": "action",
+            "one": "5",
+            "content": "clusterMap.s.color = 'R'"
+        },
+        "5": {
+            "type": "question",
+            "one": "6",
+            "two": "7",
+            "flag1": 1,
+            "content": "clusterMap.P.color === 'R'"
+        },
+        "6": {
+            "type": "action",
+            "one": "1",
+            "content": "clusterMap.P.color = 'B'"
+        },
+        "7": {
+            "type": "action",
+            "one": "1",
+            "content": "fixDelete(\n    tree,\n    describeClusterDelete(\n        tree,\n        clusterMap.P\n    )\n)"
+        },
+        "8": {
+            "type": "question",
+            "one": "9",
+            "two": "4",
+            "flag1": 1,
+            "content": "!clusterMap.P || !clusterMap.s"
+        },
+        "9": {
+            "type": "action",
+            "one": "4",
+            "content": "return "
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "tree, wrapper"
+}

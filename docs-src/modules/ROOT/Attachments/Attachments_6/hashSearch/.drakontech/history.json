@@ -1,0 +1,60 @@
+{
+    "history": [
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\hashSearch\\main.drakon",
+            "whenOpened": "2025-11-05T16:12:51.453Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\hashSearch\\hashInsert.drakon",
+            "whenOpened": "2025-11-04T17:32:11.369Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\hashSearch\\createHashTable.drakon",
+            "whenOpened": "2025-11-04T17:32:06.590Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\hashSearch\\hashFunc.drakon",
+            "whenOpened": "2025-11-04T14:18:08.914Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\hashSearch\\main.drakon",
+            "whenOpened": "2025-11-04T14:15:13.698Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\hashSearch\\hashFuncSHA256.drakon",
+            "whenOpened": "2025-11-04T14:14:59.012Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\hashSearch\\hashGet.drakon",
+            "whenOpened": "2025-11-04T13:59:10.091Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\hashSearch\\createNode.drakon",
+            "whenOpened": "2025-11-04T13:59:03.653Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\hashSearch\\hashLookupByValue.drakon",
+            "whenOpened": "2025-11-03T14:03:25.652Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\hashSearch\\hashTraverse.drakon",
+            "whenOpened": "2025-11-02T15:44:43.999Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\hashSearch\\module.drakon",
+            "whenOpened": "2025-11-01T21:02:15.523Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\hashSearch\\hashRemove.drakon",
+            "whenOpened": "2025-10-30T18:58:07.370Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\hashSearch\\searchHash.drakon",
+            "whenOpened": "2025-10-30T18:53:39.510Z"
+        },
+        {
+            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-6\\attachments\\hashSearch\\printHashTable.drakon",
+            "whenOpened": "2025-10-30T15:42:46.974Z"
+        }
+    ]
+}

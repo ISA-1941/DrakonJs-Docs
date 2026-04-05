@@ -1,0 +1,82 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "9",
+            "content": ""
+        },
+        "8": {
+            "type": "loopend",
+            "one": "1",
+            "content": ""
+        },
+        "9": {
+            "type": "loopbegin",
+            "one": "10",
+            "content": "i = 0; i < arr.length; i++"
+        },
+        "10": {
+            "type": "action",
+            "one": "12",
+            "content": "min = i"
+        },
+        "11": {
+            "type": "loopend",
+            "one": "15",
+            "content": ""
+        },
+        "12": {
+            "type": "loopbegin",
+            "one": "13",
+            "content": "j = i + 1; j < arr.length; j++"
+        },
+        "13": {
+            "type": "question",
+            "one": "14",
+            "two": "11",
+            "flag1": 1,
+            "content": "arr[j] < arr[min]"
+        },
+        "14": {
+            "type": "action",
+            "one": "11",
+            "content": "min = j"
+        },
+        "15": {
+            "type": "question",
+            "one": "16",
+            "two": "8",
+            "flag1": 1,
+            "content": "min !== i"
+        },
+        "16": {
+            "type": "action",
+            "one": "17",
+            "content": "temp = arr[i]"
+        },
+        "17": {
+            "type": "action",
+            "one": "18",
+            "content": "arr[i] = arr[min]"
+        },
+        "18": {
+            "type": "action",
+            "one": "8",
+            "content": "arr[min] = temp"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "arr"
+}

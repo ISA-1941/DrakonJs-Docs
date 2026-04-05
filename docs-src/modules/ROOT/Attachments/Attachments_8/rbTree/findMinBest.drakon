@@ -1,0 +1,93 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "4",
+            "content": "Branch1"
+        },
+        "4": {
+            "type": "question",
+            "one": "5",
+            "two": "9",
+            "flag1": 1,
+            "content": "!tree || !node || node === nullNode || node\n=== undefined"
+        },
+        "5": {
+            "type": "action",
+            "one": "6",
+            "content": "console.log(\n    \"findMin: Invalid input, returning nullNode\"\n)"
+        },
+        "6": {
+            "type": "action",
+            "one": "9",
+            "content": "return nullNode"
+        },
+        "8": {
+            "type": "branch",
+            "one": "16",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "9": {
+            "type": "branch",
+            "one": "11",
+            "branchId": 2,
+            "content": "Starting with node"
+        },
+        "10": {
+            "type": "action",
+            "one": "13",
+            "content": "current = node"
+        },
+        "11": {
+            "type": "action",
+            "one": "10",
+            "content": "console.log(\n    `findMin: starting with node ${node.key}`\n)"
+        },
+        "12": {
+            "type": "question",
+            "one": "8",
+            "two": "14",
+            "flag1": 0,
+            "content": "current && current !== nullNode && current\n!== undefined && current.left && current.left\n!== nullNode && current.left !== undefined"
+        },
+        "13": {
+            "type": "arrow-loop",
+            "one": "12"
+        },
+        "14": {
+            "type": "action",
+            "one": "15",
+            "content": "console.log(\n    `findMin: moving from ${current.key} to ${current.left.key}`\n)"
+        },
+        "15": {
+            "type": "action",
+            "one": "13",
+            "content": "current = current.left"
+        },
+        "16": {
+            "type": "action",
+            "one": "17",
+            "content": "onsole.log(\n    `findMin: returning ${current.key}`\n)"
+        },
+        "17": {
+            "type": "action",
+            "one": "1",
+            "content": "return current"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "tree, node"
+}

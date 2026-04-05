@@ -1,0 +1,110 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "21",
+            "content": "Align to Line"
+        },
+        "4": {
+            "type": "question",
+            "one": "5",
+            "two": "6",
+            "flag1": 1,
+            "content": "clusterString.includes('x>P;P<G')"
+        },
+        "5": {
+            "type": "action",
+            "one": "6",
+            "content": "rotateLeft(tree, P)"
+        },
+        "6": {
+            "type": "question",
+            "one": "7",
+            "two": "14",
+            "flag1": 1,
+            "content": "clusterString.includes('x<P;P>G')"
+        },
+        "7": {
+            "type": "action",
+            "one": "14",
+            "content": "rotateRight(tree, P)"
+        },
+        "8": {
+            "type": "branch",
+            "one": "17",
+            "branchId": 3,
+            "content": "Balance line"
+        },
+        "14": {
+            "type": "branch",
+            "branchId": 2,
+            "one": "16",
+            "content": "Recolor Parent and Grandfather"
+        },
+        "15": {
+            "type": "action",
+            "one": "8",
+            "content": "clusterMap.G.color = 'R'"
+        },
+        "16": {
+            "type": "action",
+            "one": "15",
+            "content": "clusterMap.P.color = 'B'"
+        },
+        "17": {
+            "type": "question",
+            "one": "18",
+            "two": "19",
+            "flag1": 1,
+            "content": "clusterString.includes('P<G')"
+        },
+        "18": {
+            "type": "action",
+            "one": "19",
+            "two": "",
+            "content": "rotateRight(tree, G)"
+        },
+        "19": {
+            "type": "question",
+            "one": "20",
+            "two": "1",
+            "flag1": 1,
+            "content": "clusterString.includes('P>G')"
+        },
+        "20": {
+            "type": "action",
+            "one": "1",
+            "two": "",
+            "content": "rotateLeft(tree, G)"
+        },
+        "21": {
+            "type": "action",
+            "one": "22",
+            "content": "clusterString = wrapper.description"
+        },
+        "22": {
+            "type": "action",
+            "one": "24",
+            "content": "clusterMap = wrapper.nodes"
+        },
+        "24": {
+            "type": "action",
+            "one": "4",
+            "content": "P = wrapper.nodes.P\nG = wrapper.nodes.G\nU = wrapper.nodes.U\nx = wrapper.nodes.x"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "tree, wrapper"
+}
