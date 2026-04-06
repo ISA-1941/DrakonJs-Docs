@@ -277,7 +277,7 @@ E ⊂ V×V (directed edges)
 
 [.text-center]
 Figure 1.6. Tree Structure Taxonomy
-image::section_1/Fig1_6_Tree.svg[width=75%, height=34%, align=center]
+image::section_1/Fig1_6_Tree.svg[width=100%, link=self, window="_blank"]
 
 
 ===== Fundamental Properties
@@ -325,7 +325,7 @@ A graph is a pair G = (V, E) where:
 
 [.text-center]
 Figure 1.7. Graph Variant Visualization
-image::section_1/Fig1_7_Graph.svg[width=75%, height=34%, align=center]
+image::section_1/Fig1_7_Graph.svg[width=100%, link=self, window="_blank"]
 
 
 ===== Typological Spectrum
