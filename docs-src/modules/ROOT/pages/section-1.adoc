@@ -98,39 +98,30 @@ A set is a linear abstract data type that stores a collection of unique values. 
 Characteristics of Sets:
 
     Unique Elements: Each value can appear only once in the collection.
-
     Ordered Insertion: In modern implementations (like JavaScript's Set), elements are iterated in the order they were added.
-
     Dynamic Size: Unlike traditional arrays, sets can grow dynamically as new unique values are inserted.
 
 Main Operations on Sets:
 
     Add(value): Inserts a new element if it does not already exist.
-
     Has(value): A highly optimized check for the existence of an element.
-
     Delete(value): Removes a specific element from the collection.
-
     Size: Returns the total count of unique elements.
 
 Advantages of Sets:
 
     Efficient Deduplication: Eliminates the need for manual checks when collecting unique data (e.g., generating unique keys for a Red-Black Tree).
-
     Fast Membership Testing: Searching for an element is generally faster than in a standard array or linked list.
 
 Limitations of Sets:
 
     No Indexed Access: Unlike arrays, you cannot typically access the "third" element directly via set[2]; you must iterate through the collection.
-
     Single Type of Logic: Only stores values, not the key-value pairs found in associative arrays.
 
 🔹 Applications of Sets:
 
     Data Preprocessing: Ensuring that input data (like keys for tree structures) contains no duplicates before processing.
-
     Filtering: Removing redundant entries from a stream of information.
-
     Tracking Visited Nodes: Used in algorithms like Breadth-First Search (BFS) to avoid infinite loops by storing already processed vertices.
 
 ==== 1.2.3. Linked Lists
