@@ -172,11 +172,9 @@ A **stack** is a **Last-In-First-Out (LIFO)** structure where elements are added
 
 [.text-center]
 .Figure 1.4. Stack Structure 
-image::section_1/Fig1_4_Stack.svg[width=100%, link=self, window="_blank"]
+image::section_1/Fig1_4_Stack.svg[width=75%, link=self, window="_blank"]
 
 A **queue** is a **First-In-First-Out (FIFO)** structure where elements are added at the back and removed from the front.
-
-image::_images/Fig1_5_Queue.jpg[width=50%, height=30%, align=center]
 
 [.text-center]
 .Figure 1.5. Queue Structure
