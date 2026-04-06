@@ -277,7 +277,7 @@ E ⊂ V×V (directed edges)
 
 [.text-center]
 .Figure 1.6. Tree Structure Taxonomy
-image::section_1/Fig1_6_Tree.svg[width=100%, link=self, window="_blank"]
+image::section_1/Fig1_6_Tree.svg[width=50%, link=self, window="_blank"]
 
 
 ===== Fundamental Properties
