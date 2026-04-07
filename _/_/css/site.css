@@ -1,0 +1,12 @@
+@import "../../_/css/site.css";
+
+/* 1. Масштабирование изображений */
+.doc img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* 2. Смягчение фона (чтобы не резало глаза) */
+.doc {
+    background-color: #fdfdfd !important;
+}
