@@ -13,7 +13,13 @@ ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
+  # ВОТ ЭТА СТРОКА НИЖЕ ВКЛЮЧАЕТ ВАШИ ПРАВКИ:
+  supplemental_files: ./supplemental-ui
 
 output:
   dir: ./public
   clean: true
+
+
+
+
