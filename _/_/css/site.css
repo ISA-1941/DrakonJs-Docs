@@ -1,10 +1,9 @@
-/* ТЕСТОВЫЙ РЕЖИМ */
-body {
-    background-color: red !important;
+/* Яркий тест: если контакт есть, страница станет серо-голубой */
+.doc {
+    background-color: #e3f2fd !important;
 }
 
-.doc img {
-    max-width: 100% !important;
-    height: auto !important;
-    border: 5px solid green !important;
+/* Сделаем заголовки красными для верности */
+.doc h1 {
+    color: red !important;
 }
