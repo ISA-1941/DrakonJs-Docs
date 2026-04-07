@@ -1,0 +1,29 @@
+/* Подключаем стандартные стили из архива, чтобы ничего не сломалось */
+@import "../../_/css/site.css";
+
+/* --- А здесь начинаются ваши личные настройки --- */
+
+/* 1. Настройка страницы: мягкий фон и четкий шрифт */
+.doc {
+    font-family: "Liberation Sans", Arial, sans-serif;
+    background-color: #fdfdfd; /* Цвет бумаги */
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* 2. АВТОМАТИЧЕСКОЕ МАСШТАБИРОВАНИЕ */
+/* Изображения теперь сами вписываются в текст */
+.doc img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto; /* Центрирование */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Легкая тень для красоты */
+}
+
+/* 3. Подписи к рисункам (Figure 1.x) */
+.doc .imageblock .title {
+    font-style: italic;
+    color: #555;
+    text-align: center;
+}
