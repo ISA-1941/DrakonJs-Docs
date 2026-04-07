@@ -1,12 +1,10 @@
-@import "../../_/css/site.css";
+/* ТЕСТОВЫЙ РЕЖИМ */
+body {
+    background-color: red !important;
+}
 
-/* 1. Масштабирование изображений */
 .doc img {
     max-width: 100% !important;
     height: auto !important;
-}
-
-/* 2. Смягчение фона (чтобы не резало глаза) */
-.doc {
-    background-color: #fdfdfd !important;
+    border: 5px solid green !important;
 }
