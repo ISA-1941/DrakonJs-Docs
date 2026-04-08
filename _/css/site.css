@@ -1,21 +1,21 @@
-/* 1. Возвращаем стандартные шрифты (ваши любимые) */
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Merriweather&family=JetBrains+Mono&display=swap');
+/* Подключаем шрифты */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&family=JetBrains+Mono&display=swap');
 
-body, .doc {
+/* Только шрифты для текста */
+body, .doc, .doc p {
     font-family: 'Inter', sans-serif !important;
     font-size: 18px !important;
+    line-height: 1.7 !important;
 }
 
-/* 2. УБИРАЕМ МУСОР, НО НЕ ТРОГАЕМ СЕТКУ */
-.navbar { display: none !important; }
-.toolbar { display: none !important; }
+/* Только шрифты для заголовков */
+.doc h1, .doc h2, .doc h3, .doc h4 {
+    font-family: 'Merriweather', serif !important;
+    font-weight: 600 !important;
+}
 
-/* 3. ГЛАВНЫЙ СЕКРЕТ: Запрещаем Antora прятать правое оглавление */
-@media screen and (min-width: 1024px) {
-    .toc.sidebar {
-        display: block !important;
-        position: sticky !important;
-        top: 2rem !important;
-        height: 100vh !important;
-    }
+/* Только шрифты для кода */
+.doc pre, .doc code {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 15px !important;
 }
