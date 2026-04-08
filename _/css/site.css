@@ -69,3 +69,64 @@ body, .doc, .doc p, .doc .paragraph {
         font-size: 13px !important;
     }
 }
+
+/* ============================================
+   КОМПОНОВКА: Оглавление книги (слева) и раздела (справа)
+   ============================================ */
+
+/* 1. Левое оглавление (Навигация по всей книге) */
+.nav-container {
+    flex: 0 0 300px !important; /* Фиксированная ширина слева */
+    background: #f8f9fa !important;
+    border-right: 1px solid #e1e4e8 !important;
+}
+
+/* 2. Правое оглавление (Содержание текущего раздела) */
+/* В Antora оно называется .toc */
+@media screen and (min-width: 1024px) {
+    .toc {
+        order: 3 !important;
+        flex: 0 0 250px !important; /* Ширина правого поля */
+        position: sticky !important;
+        top: 4rem !important;
+        height: calc(100vh - 4rem) !important;
+        overflow-y: auto !important;
+        padding: 1rem !important;
+        background: transparent !important;
+        border-left: 1px solid #e1e4e8 !important;
+    }
+
+    /* Основной текст книги (по центру) */
+    .doc {
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        max-width: 800px !important; /* Ограничиваем ширину для удобства чтения */
+        margin: 0 auto !important;
+        padding: 2rem !important;
+    }
+
+    /* Контейнер, который держит всё вместе */
+    .main {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+    }
+}
+
+/* Скрываем правое оглавление на маленьких экранах, чтобы не мешало */
+@media screen and (max-width: 1023px) {
+    .toc {
+        display: none !important;
+    }
+}
+
+/* Оформление ссылок в оглавлениях */
+.nav-link, .toc-menu a {
+    font-size: 15px !important;
+    color: #4a4a4a !important;
+    text-decoration: none !important;
+}
+
+.nav-link:hover, .toc-menu a:hover {
+    color: #0056b3 !important;
+}
