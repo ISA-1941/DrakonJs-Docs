@@ -1,40 +1,21 @@
-/* ============================================
-   СТРОГАЯ ГЕОМЕТРИЯ КНИГИ
-   ============================================ */
+/* 1. Возвращаем стандартные шрифты (ваши любимые) */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Merriweather&family=JetBrains+Mono&display=swap');
 
-/* Контейнер всей страницы */
-.main {
-    display: flex !important;
-    justify-content: center !important;
-    width: 100% !important;
-    position: relative !important;
+body, .doc {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 18px !important;
 }
 
-.nav-container {
-    top: 0 !important;
-    height: 100vh !important;
-    /* остальное без изменений */
-}
+/* 2. УБИРАЕМ МУСОР, НО НЕ ТРОГАЕМ СЕТКУ */
+.navbar { display: none !important; }
+.toolbar { display: none !important; }
 
-.toc {
-    top: 0 !important;
-    height: 100vh !important;
-    /* остальное без изменений */
-}
-
-/* 3. ЦЕНТРАЛЬНОЕ ПОЛЕ: Текст (Книга) */
-.doc {
-    margin-left: 320px !important; /* Отступ от левого меню */
-    margin-right: 300px !important; /* Отступ от правого меню */
-    max-width: 850px !important; /* Ширина строки для чтения */
-    padding: 2rem 4rem !important;
-    flex-grow: 1 !important;
-}
-
-/* Убираем стандартные мобильные «пряталки», чтобы оглавление не убегало */
+/* 3. ГЛАВНЫЙ СЕКРЕТ: Запрещаем Antora прятать правое оглавление */
 @media screen and (min-width: 1024px) {
     .toc.sidebar {
         display: block !important;
-        visibility: visible !important;
+        position: sticky !important;
+        top: 2rem !important;
+        height: 100vh !important;
     }
 }
