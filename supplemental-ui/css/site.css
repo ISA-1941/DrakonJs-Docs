@@ -1,9 +1,25 @@
-/* Яркий тест: если контакт есть, страница станет серо-голубой */
+/* Тест 1: Общий фон */
 .doc {
     background-color: #e3f2fd !important;
 }
 
-/* Сделаем заголовки красными для верности */
-.doc h1 {
+/* Тест 2: Все возможные варианты заголовков */
+.doc h1,
+.doc .page,
+article.doc h1,
+main.doc h1,
+h1,
+h1.page {
     color: red !important;
+}
+
+/* Тест 3: Инспекционный — обводка вокруг h1 */
+h1 {
+    border: 5px solid green !important;
+}
+
+/* Тест 4: Посмотрим, есть ли другие заголовки */
+h1, h2, h3, h4, h5, h6 {
+    border-left: 10px solid orange !important;
+    padding-left: 10px !important;
 }
