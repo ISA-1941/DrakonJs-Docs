@@ -1,17 +1,20 @@
-/* Яркий тест: все возможные заголовки получат разный цвет */
-.doc { background-color: #e3f2fd !important; }
+/* База - фон работает */
+.doc {
+    background-color: #e3f2fd !important;
+}
 
-/* Заголовок 1 уровня — красный */
-.doc h1 { color: red !important; }
+/* Рабочий селектор для заголовков - используем то, что сработало */
+.doc :is(h1, h2, h3, h4, h5, h6) {
+    color: red !important;
+}
 
-/* Заголовок 2 уровня — зелёный */
-.doc h2 { color: green !important; }
+/* Убираем оранжевый маркер, который был для теста */
+.doc :is(h1, h2, h3, h4, h5, h6) {
+    border-left: none !important;
+    padding-left: 0 !important;
+}
 
-/* Заголовок 3 уровня — синий */
-.doc h3 { color: blue !important; }
-
-/* Любой текст внутри .doc — проверим, есть ли заголовок вообще */
-.doc :is(h1, h2, h3, h4, h5, h6) { 
-    background-color: yellow !important;
-    font-size: 30px !important;
+/* Но если хотите оставить стилизацию для всех заголовков */
+.doc h1, .doc h2, .doc h3 {
+    /* ваш дизайн здесь */
 }
