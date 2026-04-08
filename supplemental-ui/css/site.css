@@ -1,25 +1,71 @@
-/* ДИАГНОСТИКА: показываем ВСЕ блоки с классами toc */
-.toc,
-.sidebarblock,
-div[class*="toc"],
-nav[class*="toc"] {
-    border: 3px solid red !important;
-    background: lightyellow !important;
-    margin: 10px !important;
-    padding: 10px !important;
-    display: block !important;
-    position: relative !important;
-    z-index: 9999 !important;
+/* ============================================
+   ТОЛЬКО ТИПОГРАФИКА - без изменения расположения
+   Оглавления там, где их размещает Antora по умолчанию
+   ============================================ */
+
+/* Подключаем современные шрифты */
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* Основной текст */
+body, .doc, .doc p, .doc .paragraph {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 18px !important;
+    line-height: 1.7 !important;
+    color: #1a1a1a !important;
 }
 
-/* Подписываем каждый блок */
-.toc::before,
-.sidebarblock::before {
-    content: "🔍 БЛОК: " attr(class) " | ID: " attr(id) " | Заголовок: " attr(title);
-    display: block;
-    background: black;
-    color: white;
-    font-size: 10px;
-    padding: 2px;
-    margin-bottom: 5px;
+/* Заголовки - другой шрифт для солидности */
+.doc h1, .doc h2, .doc h3, .doc h4, .doc h5, .doc h6 {
+    font-family: 'Merriweather', Georgia, 'Times New Roman', serif !important;
+    font-weight: 600 !important;
+    color: #1a1a1a !important;
+}
+
+/* Размеры заголовков */
+.doc h1 { font-size: 2.2rem !important; margin-top: 2rem !important; }
+.doc h2 { font-size: 1.8rem !important; margin-top: 1.5rem !important; }
+.doc h3 { font-size: 1.5rem !important; margin-top: 1.25rem !important; }
+.doc h4 { font-size: 1.3rem !important; margin-top: 1rem !important; }
+
+/* Код и моноширинный текст */
+.doc pre, .doc code, .doc .monospaced {
+    font-family: 'JetBrains Mono', 'Courier New', monospace !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+}
+
+/* Блоки кода */
+.doc pre {
+    background: #f6f8fa !important;
+    border-radius: 8px !important;
+    padding: 1rem !important;
+    overflow-x: auto !important;
+}
+
+/* Код внутри строки */
+.doc code {
+    background: #f0f0f0 !important;
+    padding: 0.2rem 0.4rem !important;
+    border-radius: 4px !important;
+    color: #d14 !important;
+}
+
+/* Таблицы - чуть крупнее */
+.doc table {
+    font-size: 16px !important;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    body, .doc, .doc p {
+        font-size: 16px !important;
+    }
+    
+    .doc h1 { font-size: 1.8rem !important; }
+    .doc h2 { font-size: 1.5rem !important; }
+    .doc h3 { font-size: 1.3rem !important; }
+    
+    .doc pre, .doc code {
+        font-size: 13px !important;
+    }
 }
