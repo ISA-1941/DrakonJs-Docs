@@ -1,132 +1,59 @@
 /* ============================================
-   ТОЛЬКО ТИПОГРАФИКА - без изменения расположения
-   Оглавления там, где их размещает Antora по умолчанию
+   ТИПОГРАФИКА И ФИКСИРОВАННАЯ КОМПОНОВКА
    ============================================ */
 
-/* Подключаем современные шрифты */
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
 
-/* Основной текст */
+/* 1. Возвращаем стандартную сетку Antora */
+.body {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+/* Левая навигация (Книга) - фиксируем */
+.nav-container {
+    position: sticky !important;
+    top: 4rem !important;
+    height: calc(100vh - 4rem) !important;
+}
+
+/* Правое оглавление (Раздел) - фиксируем */
+.toc {
+    position: fixed !important;
+    right: 0 !important;
+    top: 4rem !important;
+    width: 15rem !important; /* Стандартная ширина */
+    height: calc(100vh - 4rem) !important;
+    overflow-y: auto !important;
+    padding: 1rem !important;
+}
+
+/* Центральный блок с текстом */
+.doc {
+    max-width: 50rem !important; /* Оптимально для чтения */
+    margin: 0 auto !important;
+    padding: 2rem !important;
+}
+
+/* 2. Ваша типографика (без изменений) */
 body, .doc, .doc p, .doc .paragraph {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-family: 'Inter', sans-serif !important;
     font-size: 18px !important;
     line-height: 1.7 !important;
     color: #1a1a1a !important;
 }
 
-/* Заголовки - другой шрифт для солидности */
-.doc h1, .doc h2, .doc h3, .doc h4, .doc h5, .doc h6 {
-    font-family: 'Merriweather', Georgia, 'Times New Roman', serif !important;
+.doc h1, .doc h2, .doc h3, .doc h4 {
+    font-family: 'Merriweather', serif !important;
     font-weight: 600 !important;
-    color: #1a1a1a !important;
 }
 
-/* Размеры заголовков */
-.doc h1 { font-size: 2.2rem !important; margin-top: 2rem !important; }
-.doc h2 { font-size: 1.8rem !important; margin-top: 1.5rem !important; }
-.doc h3 { font-size: 1.5rem !important; margin-top: 1.25rem !important; }
-.doc h4 { font-size: 1.3rem !important; margin-top: 1rem !important; }
-
-/* Код и моноширинный текст */
-.doc pre, .doc code, .doc .monospaced {
-    font-family: 'JetBrains Mono', 'Courier New', monospace !important;
+.doc pre, .doc code {
+    font-family: 'JetBrains Mono', monospace !important;
     font-size: 15px !important;
-    line-height: 1.5 !important;
 }
 
-/* Блоки кода */
-.doc pre {
-    background: #f6f8fa !important;
-    border-radius: 8px !important;
-    padding: 1rem !important;
-    overflow-x: auto !important;
-}
-
-/* Код внутри строки */
-.doc code {
-    background: #f0f0f0 !important;
-    padding: 0.2rem 0.4rem !important;
-    border-radius: 4px !important;
-    color: #d14 !important;
-}
-
-/* Таблицы - чуть крупнее */
-.doc table {
-    font-size: 16px !important;
-}
-
-/* Адаптация для мобильных */
-@media (max-width: 768px) {
-    body, .doc, .doc p {
-        font-size: 16px !important;
-    }
-    
-    .doc h1 { font-size: 1.8rem !important; }
-    .doc h2 { font-size: 1.5rem !important; }
-    .doc h3 { font-size: 1.3rem !important; }
-    
-    .doc pre, .doc code {
-        font-size: 13px !important;
-    }
-}
-
-/* ============================================
-   КОМПОНОВКА: Оглавление книги (слева) и раздела (справа)
-   ============================================ */
-
-/* 1. Левое оглавление (Навигация по всей книге) */
-.nav-container {
-    flex: 0 0 300px !important; /* Фиксированная ширина слева */
-    background: #f8f9fa !important;
-    border-right: 1px solid #e1e4e8 !important;
-}
-
-/* 2. Правое оглавление (Содержание текущего раздела) */
-/* В Antora оно называется .toc */
-@media screen and (min-width: 1024px) {
-    .toc {
-        order: 3 !important;
-        flex: 0 0 250px !important; /* Ширина правого поля */
-        position: sticky !important;
-        top: 4rem !important;
-        height: calc(100vh - 4rem) !important;
-        overflow-y: auto !important;
-        padding: 1rem !important;
-        background: transparent !important;
-        border-left: 1px solid #e1e4e8 !important;
-    }
-
-    /* Основной текст книги (по центру) */
-    .doc {
-        flex: 1 1 auto !important;
-        min-width: 0 !important;
-        max-width: 800px !important; /* Ограничиваем ширину для удобства чтения */
-        margin: 0 auto !important;
-        padding: 2rem !important;
-    }
-
-    /* Контейнер, который держит всё вместе */
-    .main {
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: center !important;
-    }
-}
-
-/* Скрываем правое оглавление на маленьких экранах, чтобы не мешало */
-@media screen and (max-width: 1023px) {
-    .toc {
-        display: none !important;
-    }
-}
-
-/* Оформление ссылок в оглавлениях */
-.nav-link, .toc-menu a {
-    font-size: 15px !important;
-    color: #4a4a4a !important;
-    text-decoration: none !important;
-}
-
-.nav-link:hover, .toc-menu a:hover {
-    color: #0056b3 !important;
+/* Убираем лишние отступы, которые могут «выталкивать» колонки */
+html {
+    scroll-padding-top: 4rem !important;
 }
