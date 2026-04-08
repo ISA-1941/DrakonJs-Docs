@@ -1,16 +1,25 @@
-/* ТОЛЬКО ОГЛАВЛЕНИЕ РАЗДЕЛА — СПРАВА */
-/* Ищем блок, который содержит пункты 7.1, 7.2 и т.д. */
-.toc:has(a[href*="7.1"]),
-.sidebarblock:has(a[href*="7."]),
-div.toc:has(.sectlevel2) {
-    position: fixed !important;
-    top: 100px !important;
-    right: 20px !important;
-    left: auto !important;
-    width: 280px !important;
-    background: white !important;
-    border: 2px solid blue !important;
-    z-index: 10000 !important;
+/* ДИАГНОСТИКА: показываем ВСЕ блоки с классами toc */
+.toc,
+.sidebarblock,
+div[class*="toc"],
+nav[class*="toc"] {
+    border: 3px solid red !important;
+    background: lightyellow !important;
+    margin: 10px !important;
+    padding: 10px !important;
+    display: block !important;
+    position: relative !important;
+    z-index: 9999 !important;
 }
 
-/* ВСЁ ОСТАЛЬНОЕ НЕ ТРОГАЕМ */
+/* Подписываем каждый блок */
+.toc::before,
+.sidebarblock::before {
+    content: "🔍 БЛОК: " attr(class) " | ID: " attr(id) " | Заголовок: " attr(title);
+    display: block;
+    background: black;
+    color: white;
+    font-size: 10px;
+    padding: 2px;
+    margin-bottom: 5px;
+}
