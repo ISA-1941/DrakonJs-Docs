@@ -1,59 +1,40 @@
 /* ============================================
-   ТИПОГРАФИКА И ФИКСИРОВАННАЯ КОМПОНОВКА
+   СТРОГАЯ ГЕОМЕТРИЯ КНИГИ
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
-
-/* 1. Возвращаем стандартную сетку Antora */
-.body {
+/* Контейнер всей страницы */
+.main {
     display: flex !important;
     justify-content: center !important;
+    width: 100% !important;
+    position: relative !important;
 }
 
-/* Левая навигация (Книга) - фиксируем */
 .nav-container {
-    position: sticky !important;
-    top: 4rem !important;
-    height: calc(100vh - 4rem) !important;
+    top: 0 !important;
+    height: 100vh !important;
+    /* остальное без изменений */
 }
 
-/* Правое оглавление (Раздел) - фиксируем */
 .toc {
-    position: fixed !important;
-    right: 0 !important;
-    top: 4rem !important;
-    width: 15rem !important; /* Стандартная ширина */
-    height: calc(100vh - 4rem) !important;
-    overflow-y: auto !important;
-    padding: 1rem !important;
+    top: 0 !important;
+    height: 100vh !important;
+    /* остальное без изменений */
 }
 
-/* Центральный блок с текстом */
+/* 3. ЦЕНТРАЛЬНОЕ ПОЛЕ: Текст (Книга) */
 .doc {
-    max-width: 50rem !important; /* Оптимально для чтения */
-    margin: 0 auto !important;
-    padding: 2rem !important;
+    margin-left: 320px !important; /* Отступ от левого меню */
+    margin-right: 300px !important; /* Отступ от правого меню */
+    max-width: 850px !important; /* Ширина строки для чтения */
+    padding: 2rem 4rem !important;
+    flex-grow: 1 !important;
 }
 
-/* 2. Ваша типографика (без изменений) */
-body, .doc, .doc p, .doc .paragraph {
-    font-family: 'Inter', sans-serif !important;
-    font-size: 18px !important;
-    line-height: 1.7 !important;
-    color: #1a1a1a !important;
-}
-
-.doc h1, .doc h2, .doc h3, .doc h4 {
-    font-family: 'Merriweather', serif !important;
-    font-weight: 600 !important;
-}
-
-.doc pre, .doc code {
-    font-family: 'JetBrains Mono', monospace !important;
-    font-size: 15px !important;
-}
-
-/* Убираем лишние отступы, которые могут «выталкивать» колонки */
-html {
-    scroll-padding-top: 4rem !important;
+/* Убираем стандартные мобильные «пряталки», чтобы оглавление не убегало */
+@media screen and (min-width: 1024px) {
+    .toc.sidebar {
+        display: block !important;
+        visibility: visible !important;
+    }
 }
