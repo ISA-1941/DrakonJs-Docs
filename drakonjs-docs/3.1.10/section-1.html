@@ -312,35 +312,27 @@ This section introduces the concept of Abstract Data Types (ADTs) and explores b
 <p>A set is a linear abstract data type that stores a collection of unique values. While it shares similarities with arrays in terms of being a sequential collection, its defining characteristic is the uniqueness invariant — it automatically prevents the storage of duplicate elements.</p>
 </div>
 <div class="paragraph">
-<p>Characteristics of Sets:
+<p><code>Characteristics of Sets:</code>
     Unique Elements: Each value can appear only once in the collection.
     Ordered Insertion: In modern implementations (like JavaScript&#8217;s Set), elements are iterated in the order they were added.
     Dynamic Size: Unlike traditional arrays, sets can grow dynamically as new unique values are inserted.</p>
 </div>
 <div class="paragraph">
-<p>Main Operations on Sets:
+<p><code>Main Operations on Sets:</code>
     Add(value): Inserts a new element if it does not already exist.
     Has(value): A highly optimized check for the existence of an element.
     Delete(value): Removes a specific element from the collection.
     Size: Returns the total count of unique elements.</p>
 </div>
 <div class="paragraph">
-<p>Advantages of Sets:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Efficient Deduplication: Eliminates the need for manual checks when collecting unique data (e.g., generating unique keys for a Red-Black Tree).
-Fast Membership Testing: Searching for an element is generally faster than in a standard array or linked list.</pre>
-</div>
+<p><code>Advantages of Sets:</code>
+    Efficient Deduplication: Eliminates the need for manual checks when collecting unique data (e.g., generating unique keys for a Red-Black Tree).
+    Fast Membership Testing: Searching for an element is generally faster than in a standard array or linked list.</p>
 </div>
 <div class="paragraph">
-<p>Limitations of Sets:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>No Indexed Access: Unlike arrays, you cannot typically access the "third" element directly via set[2]; you must iterate through the collection.
-Single Type of Logic: Only stores values, not the key-value pairs found in associative arrays.</pre>
-</div>
+<p><code>Limitations of Sets:</code>
+    No Indexed Access: Unlike arrays, you cannot typically access the "third" element directly via set[2]; you must iterate through the collection.
+    Single Type of Logic: Only stores values, not the key-value pairs found in associative arrays.</p>
 </div>
 <div class="paragraph">
 <p>🔹 Applications of Sets:</p>
