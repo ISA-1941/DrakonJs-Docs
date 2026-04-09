@@ -80,7 +80,7 @@ image::section_1/Fig1_2_Array.svg[width=50%, link=self, window="_blank"]
 
 To overcome these limitations, **dynamic data structures** such as **slices** were introduced.
 
-🔹 Applications of Arrays:
+##### **Applications of Arrays:**
 
 *  Storing fixed-size collections of elements of the same type: Example: list of days of the week, months of the year, tabular data.
 
