@@ -95,14 +95,13 @@ To overcome these limitations, **dynamic data structures** such as **slices** we
 === 1.2.2. Sets
 
 A set is a linear abstract data type that stores a collection of unique values. While it shares similarities with arrays in terms of being a sequential collection, its defining characteristic is the uniqueness invariant — it automatically prevents the storage of duplicate elements.
-Characteristics of Sets:
 
+Characteristics of Sets:
     Unique Elements: Each value can appear only once in the collection.
     Ordered Insertion: In modern implementations (like JavaScript's Set), elements are iterated in the order they were added.
     Dynamic Size: Unlike traditional arrays, sets can grow dynamically as new unique values are inserted.
 
 Main Operations on Sets:
-
     Add(value): Inserts a new element if it does not already exist.
     Has(value): A highly optimized check for the existence of an element.
     Delete(value): Removes a specific element from the collection.
