@@ -309,26 +309,20 @@ This section introduces the concept of Abstract Data Types (ADTs) and explores b
 <div class="sect2">
 <h3 id="_1_2_2_sets"><a class="anchor" href="#_1_2_2_sets"></a>1.2.2. Sets</h3>
 <div class="paragraph">
-<p>A set is a linear abstract data type that stores a collection of unique values. While it shares similarities with arrays in terms of being a sequential collection, its defining characteristic is the uniqueness invariant — it automatically prevents the storage of duplicate elements.
-Characteristics of Sets:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Unique Elements: Each value can appear only once in the collection.
-Ordered Insertion: In modern implementations (like JavaScript's Set), elements are iterated in the order they were added.
-Dynamic Size: Unlike traditional arrays, sets can grow dynamically as new unique values are inserted.</pre>
-</div>
+<p>A set is a linear abstract data type that stores a collection of unique values. While it shares similarities with arrays in terms of being a sequential collection, its defining characteristic is the uniqueness invariant — it automatically prevents the storage of duplicate elements.</p>
 </div>
 <div class="paragraph">
-<p>Main Operations on Sets:</p>
+<p>Characteristics of Sets:
+    Unique Elements: Each value can appear only once in the collection.
+    Ordered Insertion: In modern implementations (like JavaScript&#8217;s Set), elements are iterated in the order they were added.
+    Dynamic Size: Unlike traditional arrays, sets can grow dynamically as new unique values are inserted.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>Add(value): Inserts a new element if it does not already exist.
-Has(value): A highly optimized check for the existence of an element.
-Delete(value): Removes a specific element from the collection.
-Size: Returns the total count of unique elements.</pre>
-</div>
+<div class="paragraph">
+<p>Main Operations on Sets:
+    Add(value): Inserts a new element if it does not already exist.
+    Has(value): A highly optimized check for the existence of an element.
+    Delete(value): Removes a specific element from the collection.
+    Size: Returns the total count of unique elements.</p>
 </div>
 <div class="paragraph">
 <p>Advantages of Sets:</p>
