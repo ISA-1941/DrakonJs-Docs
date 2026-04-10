@@ -12,3 +12,11 @@
 .doc code {
     font-size: 1rem; 
 }
+
+.doc img {
+    max-width: 600px; /* Ограничивает слишком широкие схемы */
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Центрирует иллюстрацию по горизонтали */
+}
