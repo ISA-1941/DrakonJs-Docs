@@ -20,3 +20,8 @@
     margin-left: auto;
     margin-right: auto; /* Центрирует иллюстрацию по горизонтали */
 }
+
+.small-img img {
+    width: 25% !important;
+    height: auto !important;
+}
