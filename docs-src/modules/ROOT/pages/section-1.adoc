@@ -50,7 +50,7 @@ An **array** is a fundamental data structure that stores a fixed-size collection
 
 [.text-center]
 .Figure 1.2. Representation of an Array
-image::section_1/Fig1_2_Array.svg[width=75%, link=self, window="_blank"]
+image::section_1/Fig1_2_Array.svg[width=50%, link=self, window="_blank"]
 
 
 ##### **Characteristics of Arrays:**
