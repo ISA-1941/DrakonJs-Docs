@@ -1,12 +1,12 @@
-/* Исправленный импорт Roboto напрямую из Google Fonts */
-@import url('https://www.google.com/search?q=https://fonts.googleapis.com/css2%3Ffamily%3DRoboto:ital,wght%400,400%3B0,700%3B1,400%26display%3Dswap');
+/* Исправленный импорт Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
 
-/* Глобальное принудительное перекрытие фона для всех элементов Antora */
+/* Глобальное перекрытие фона */
 html, body, .main, .body, .doc, article {
-background-color: #1a1a1a !important;
-color: #e0e0e0 !important;
-font-family: "Roboto", "Verdana", sans-serif;
-margin: 0;
+    background-color: #1a1a1a !important;
+    color: #e0e0e0 !important;
+    font-family: "Roboto", "Verdana", sans-serif;
+    margin: 0;
 }
 
 /* Основной контейнер статьи */
@@ -42,15 +42,15 @@ margin-bottom: 0.8rem;
 margin-bottom: 0.4rem;
 }
 
-/* Оформление блоков кода — контрастный и "активный" вид /
+/* Блоки кода — исправленный комментарий */
 .doc code, .doc pre, .listingblock pre {
-font-family: "Courier New", monospace !important;
-font-size: 1.05rem;
-background-color: #000000 !important; / Глубокий черный фон /
-color: #ffd700 !important; / Золотой текст */
-border: 1px solid #444 !important;
-border-radius: 4px;
-padding: 0.2rem 0.5rem;
+    font-family: "Courier New", monospace !important;
+    font-size: 1.05rem;
+    background-color: #000000 !important;
+    color: #ffd700 !important;
+    border: 1px solid #444 !important;
+    border-radius: 4px;
+    padding: 0.2rem 0.5rem;
 }
 
 /* Специально для блоков листинга (кода) */
