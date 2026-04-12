@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
-<!-- Принудительный белый фон -->
-<rect width="800" height="400" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="50 30 700 250">
+<!-- Принудительный белый фон, растянутый с запасом -->
+<rect x="0" y="0" width="1000" height="1000" fill="#ffffff"/>
 
 <g id="array-illustration" font-family="'Times New Roman', Times, serif" fill="#000000" stroke="#000000" stroke-width="0">
 <!-- Заголовок схемы -->
-<text x="400" y="50" text-anchor="middle" font-size="20" font-weight="bold" stroke="none">Logical View of an Array</text>
+<text x="400" y="60" text-anchor="middle" font-size="20" font-weight="bold" stroke="none">Logical View of an Array</text>
 
 <!-- Отрисовка ячеек массива -->
 <g id="cells" stroke-width="2" fill="#ffffff">
