@@ -1,14 +1,59 @@
-/* Увеличиваем шрифт только для основного текста статьи */
-.doc {
-    font-size: 1.15rem; /* Стандарт обычно 1rem, здесь мы увеличиваем на 15% */
-    line-height: 1.6;   /* Увеличиваем межстрочный интервал для легкости чтения */
+/* Импорт Roboto, если он не установлен локально */
+@import url('https://www.google.com/search?q=https://fonts.googleapis.com/css2%3Ffamily%3DRoboto:ital,wght%400,400%3B0,700%3B1,400%26display%3Dswap');
+
+/* Глобальные настройки темной темы /
+body {
+background-color: #1a1a1a;
+color: #e0e0e0;
+/ Приоритет: Roboto, если нет - Verdana, если нет - системный sans-serif */
+font-family: "Roboto", "Verdana", sans-serif;
+margin: 0;
 }
 
-/* Если нужно увеличить и заголовки */
-.doc h1.page { font-size: 2.4rem; }
-.doc h2 { font-size: 1.8rem; }
+/* Настройки основного текста статьи /
+.doc {
+font-size: 1.15rem;
+line-height: 1.6;
+max-width: 900px; / Ограничение ширины строки для удобства чтения */
+margin: 0 auto;
+padding: 2rem;
+}
 
-/* Шрифт для кода (ваши алгоритмы) */
+/* Заголовки */
+.doc h1.page {
+font-size: 2.6rem;
+color: #ffffff;
+border-bottom: 1px solid #333;
+padding-bottom: 0.5rem;
+}
+
+.doc h2 {
+font-size: 1.9rem;
+color: #4da6ff; /* Приятный синий акцент для подзаголовков */
+margin-top: 2rem;
+}
+
+/* Компактные списки и параграфы */
+.doc p {
+margin-bottom: 0.8rem;
+}
+
+.doc .ulist > ul > li {
+margin-bottom: 0.4rem;
+}
+
+/* Оформление блоков кода /
 .doc code {
-    font-size: 1rem; 
+font-family: "Courier New", monospace;
+font-size: 1.05rem;
+background-color: #2d2d2d;
+padding: 0.2rem 0.4rem;
+border-radius: 4px;
+color: #ffcc66; / Песочный цвет для выделения кода в тексте */
+}
+
+/* Убираем лишние отступы у изображений */
+.imageblock {
+margin: 1.5rem 0;
+text-align: center;
 }

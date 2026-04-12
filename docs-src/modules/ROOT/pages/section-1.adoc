@@ -231,8 +231,6 @@ An associative array that follows these rules:
 
 - a single key can only map to one unique value.
 
-image::_images/Fig1_6_AssociativeArray.jpg[width=75]
-
 Associative array provides basic operations: 
 
 - insert(key, value) - adds a key-value pair;
