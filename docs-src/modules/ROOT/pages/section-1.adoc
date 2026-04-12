@@ -50,7 +50,7 @@ An **array** is a fundamental data structure that stores a fixed-size collection
 
 [.text-center]
 .Figure 1.2. Representation of an Array
-image::section_1/Fig1_2_Array.svg[width=100%, link=self, window="_blank"]
+image::section_1/Fig1_2_Array.svg[width=80%, link=self, window="_blank"]
 
 
 ##### **Characteristics of Arrays:**
@@ -127,7 +127,7 @@ A **linked list** is an ordered collection of elements where each element (node)
 
 [.text-center]
 .Figure 1.3. Representation of a Linked List
-image::section_1/Fig1_3_LL.svg[width=75%,link=self, window="_blank"]
+image::section_1/Fig1_3_LL.svg[width=100%,link=self, window="_blank"]
 
 
 ##### **Types of Linked Lists:**
