@@ -9,14 +9,14 @@ font-family: "Roboto", "Verdana", sans-serif;
 margin: 0;
 }
 
-/* Основной контейнер статьи в Antora /
+/* Основной контейнер статьи в Antora */
 .doc {
 font-size: 1.15rem;
 line-height: 1.6;
 max-width: 900px;
 margin: 0 auto;
 padding: 2rem;
-background-color: #1a1a1a; / Дублируем для надежности */
+background-color: #1a1a1a !important;
 }
 
 /* Заголовки */
@@ -42,14 +42,16 @@ margin-bottom: 0.8rem;
 margin-bottom: 0.4rem;
 }
 
-/* Оформление блоков кода /
+/* Оформление блоков кода — сделано более контрастным и активным /
 .doc code {
 font-family: "Courier New", monospace;
 font-size: 1.05rem;
-background-color: #2d2d2d;
-padding: 0.2rem 0.4rem;
+background-color: #000000; / Глубокий черный фон для контраста /
+padding: 0.2rem 0.5rem;
 border-radius: 4px;
-color: #ffcc66; / Песочный цвет */
+color: #ffd700; / Яркий золотой цвет (Gold) /
+border: 1px solid #444; / Тонкая рамка для выделения /
+box-shadow: 0 0 5px rgba(255, 215, 0, 0.1); / Легкое свечение */
 }
 
 /* Изображения */
@@ -58,8 +60,7 @@ margin: 1.5rem 0;
 text-align: center;
 }
 
-/* Принудительная инверсия для системных элементов Antora (навигация слева),
-если вы хотите, чтобы весь интерфейс стал темным: */
+/* Принудительная инверсия для системных элементов Antora (навигация слева) */
 .nav-container, .toolbar, .footer {
 background-color: #121212 !important;
 border-color: #333 !important;
@@ -67,4 +68,8 @@ border-color: #333 !important;
 
 .nav-list a {
 color: #b0b0b0 !important;
+}
+
+.nav-list a:hover {
+color: #4da6ff !important;
 }
