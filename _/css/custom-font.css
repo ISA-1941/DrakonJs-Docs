@@ -1,15 +1,15 @@
-/* Импорт Roboto напрямую из Google Fonts API */
+/* Исправленный импорт Roboto напрямую из Google Fonts */
 @import url('https://www.google.com/search?q=https://fonts.googleapis.com/css2%3Ffamily%3DRoboto:ital,wght%400,400%3B0,700%3B1,400%26display%3Dswap');
 
-/* Глобальные настройки для всей страницы (включая фон подложки) */
-html, body {
+/* Глобальное принудительное перекрытие фона для всех элементов Antora */
+html, body, .main, .body, .doc, article {
 background-color: #1a1a1a !important;
 color: #e0e0e0 !important;
 font-family: "Roboto", "Verdana", sans-serif;
 margin: 0;
 }
 
-/* Основной контейнер статьи в Antora */
+/* Основной контейнер статьи */
 .doc {
 font-size: 1.15rem;
 line-height: 1.6;
@@ -19,57 +19,76 @@ padding: 2rem;
 background-color: #1a1a1a !important;
 }
 
-/* Заголовки */
-.doc h1.page {
+/* Заголовки с белым цветом для максимального контраста */
+.doc h1.page, .doc h1, .doc .title, .page-title {
 font-size: 2.6rem;
-color: #ffffff;
-border-bottom: 1px solid #333;
+color: #ffffff !important;
+border-bottom: 1px solid #333 !important;
 padding-bottom: 0.5rem;
 }
 
-.doc h2 {
+.doc h2, .doc h3, .doc h4 {
 font-size: 1.9rem;
-color: #4da6ff; /* Синий акцент */
+color: #4da6ff !important; /* Яркий синий акцент */
 margin-top: 2rem;
 }
 
-/* Уплотняем параграфы и списки */
+/* Оформление обычного текста и списков */
 .doc p {
 margin-bottom: 0.8rem;
 }
 
-.doc .ulist > ul > li {
+.doc .ulist > ul > li, .doc li {
 margin-bottom: 0.4rem;
 }
 
-/* Оформление блоков кода — сделано более контрастным и активным */
-.doc code {
-font-family: "Courier New", monospace;
+/* Оформление блоков кода — контрастный и "активный" вид /
+.doc code, .doc pre, .listingblock pre {
+font-family: "Courier New", monospace !important;
 font-size: 1.05rem;
-background-color: #000000; / Глубокий черный фон для контраста /
-padding: 0.2rem 0.5rem;
+background-color: #000000 !important; / Глубокий черный фон /
+color: #ffd700 !important; / Золотой текст */
+border: 1px solid #444 !important;
 border-radius: 4px;
-color: #ffd700; / Яркий золотой цвет (Gold) /
-border: 1px solid #444; / Тонкая рамка для выделения /
-box-shadow: 0 0 5px rgba(255, 215, 0, 0.1); 
+padding: 0.2rem 0.5rem;
 }
 
-/* Изображения */
+/* Специально для блоков листинга (кода) */
+.listingblock pre {
+padding: 1rem !important;
+line-height: 1.4;
+}
+
+/* Стилизация изображений */
 .imageblock {
-margin: 1.5rem 0;
+margin: 2rem 0;
 text-align: center;
 }
 
-/* Принудительная инверсия для системных элементов Antora (навигация слева) */
-.nav-container, .toolbar, .footer {
+/* Темная навигация, тулбар и футер Antora */
+.nav-container, .toolbar, .footer, .navbar, .nav {
 background-color: #121212 !important;
 border-color: #333 !important;
 }
 
-.nav-list a {
+.nav-list a, .nav-menu a, .navbar-item, .breadcrumb li {
 color: #b0b0b0 !important;
 }
 
-.nav-list a:hover {
+.nav-list a:hover, .navbar-item:hover {
+background-color: #252525 !important;
 color: #4da6ff !important;
+}
+
+/* Кастомные скроллбары для темного режима */
+::-webkit-scrollbar {
+width: 10px;
+background-color: #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+background-color: #444;
+border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+background-color: #555;
 }
