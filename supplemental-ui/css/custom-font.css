@@ -42,7 +42,7 @@ margin-bottom: 0.8rem;
 margin-bottom: 0.4rem;
 }
 
-/* Оформление блоков кода — сделано более контрастным и активным /
+/* Оформление блоков кода — сделано более контрастным и активным */
 .doc code {
 font-family: "Courier New", monospace;
 font-size: 1.05rem;
@@ -51,7 +51,7 @@ padding: 0.2rem 0.5rem;
 border-radius: 4px;
 color: #ffd700; / Яркий золотой цвет (Gold) /
 border: 1px solid #444; / Тонкая рамка для выделения /
-box-shadow: 0 0 5px rgba(255, 215, 0, 0.1); / Легкое свечение */
+box-shadow: 0 0 5px rgba(255, 215, 0, 0.1); 
 }
 
 /* Изображения */
