@@ -1,58 +1,62 @@
-/* 1. ШРИФТЫ И ОСНОВА */
-@import url('[https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap](https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap)');
-
+/* Базовые цвета темы */
 :root {
-    --body-bg: #1a1a1a;
-    --panel-bg: #121212;
-    --text-main: #e0e0e0;
-    --accent: #4da6ff;
-    --border: #333;
+    --body-background: #1a1a1a;
+    --panel-background: #121212;
+    --nav-background: #121212;
+    --text-color: #e0e0e0;
+    --secondary-text-color: #b0b0b0;
+    --link-color: #4da6ff;
+    --border-color: #333;
+    --code-background: #000;
 }
 
-html, body {
-    background-color: var(--body-bg) !important;
-    color: var(--text-main) !important;
-    font-family: "Roboto", sans-serif;
+/* Фон и основной текст */
+html, body, .main, .doc {
+    background-color: var(--body-background) !important;
+    color: var(--text-color) !important;
 }
 
-/* 2. СЕТКА (Grid) */
-@media screen and (min-width: 1024px) {
-    .body {
-        display: grid !important;
-        /* Лево: 300px, Центр: гибко, Право: 280px */
-        grid-template-columns: 300px 1fr 280px !important;
-        grid-template-areas: "nav main toc" !important;
-        background-color: var(--body-bg) !important;
-    }
-
-    .nav-container { 
-        grid-area: nav !important; 
-        position: sticky !important; 
-        top: 4rem !important; 
-        height: calc(100vh - 4rem) !important;
-    }
-
-    .main { 
-        grid-area: main !important; 
-        padding: 0 3rem !important; 
-    }
-
-    /* ПРАВАЯ ПАНЕЛЬ (Оглавление разделов) */
-    /* Используем несколько селекторов для надежности */
-    aside.toc.sidebar, .toc-sidebar, .article-toc, aside.toc {
-        grid-area: toc !important;
-        order: 3 !important; /* Выталкиваем в третью колонку */
-        position: sticky !important;
-        top: 5rem !important;
-        height: fit-content !important;
-        max-height: calc(100vh - 6rem) !important;
-        display: block !important;
-        border-left: 1px solid var(--border) !important;
-        padding-left: 1.5rem !important;
-    }
+/* Увеличение шрифта в контенте */
+.doc {
+    font-size: 1.25rem !important; /* Увеличиваем размер */
+    line-height: 1.8 !important;   /* Увеличиваем межстрочный интервал */
 }
 
-/* 3. ОФОРМЛЕНИЕ */
-h1, h2, h3 { color: #ffffff !important; }
-.doc h2 { color: var(--accent) !important; border-bottom: 1px solid var(--border); }
-.doc code { background: #000; color: #ffd700; padding: 0.2rem; border-radius: 4px; }
+/* Заголовки */
+.doc h1, .doc h2, .doc h3, .doc h4 {
+    color: #ffffff !important;
+}
+
+/* Левое меню (Книга) */
+.nav-container, .nav {
+    background-color: var(--nav-background) !important;
+    border-right: 1px solid var(--border-color) !important;
+}
+
+/* Правое меню (Оглавление разделов) */
+/* В стандартной Antora оно плавающее (sticky) справа */
+.toc {
+    background-color: transparent !important;
+}
+
+.toc .toc-menu, .toc.sidebar {
+    background-color: var(--panel-background) !important;
+    border-left: 1px solid var(--border-color) !important;
+    padding: 1rem !important;
+}
+
+/* Ссылки */
+a { color: var(--link-color) !important; }
+
+/* Код */
+code {
+    background-color: var(--code-background) !important;
+    color: #ffd700 !important;
+    padding: 0.2rem 0.4rem !important;
+}
+
+/* Верхняя панель (Navbar) */
+.navbar {
+    background-color: var(--panel-background) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
