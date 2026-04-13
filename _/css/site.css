@@ -7,70 +7,52 @@
     --text-main: #e0e0e0;
     --accent: #4da6ff;
     --border: #333;
-    --code-bg: #000;
 }
 
 html, body {
     background-color: var(--body-bg) !important;
     color: var(--text-main) !important;
     font-family: "Roboto", sans-serif;
-    margin: 0;
 }
 
-/* 2. СЕТКА (Предотвращает наложение) */
+/* 2. СЕТКА (Grid) */
 @media screen and (min-width: 1024px) {
     .body {
         display: grid !important;
+        /* Лево: 300px, Центр: гибко, Право: 280px */
         grid-template-columns: 300px 1fr 280px !important;
         grid-template-areas: "nav main toc" !important;
-        min-height: calc(100vh - 4.1rem);
         background-color: var(--body-bg) !important;
     }
 
-    .nav-container {
-        grid-area: nav !important;
-        position: sticky !important;
-        top: 4.1rem !important;
-        height: calc(100vh - 4.1rem) !important;
-        background-color: var(--panel-bg) !important;
-        border-right: 1px solid var(--border) !important;
-        z-index: 10;
+    .nav-container { 
+        grid-area: nav !important; 
+        position: sticky !important; 
+        top: 4rem !important; 
+        height: calc(100vh - 4rem) !important;
     }
 
-    .main {
-        grid-area: main !important;
-        background-color: var(--body-bg) !important;
-        padding: 0 3rem !important;
-        min-width: 0 !important;
+    .main { 
+        grid-area: main !important; 
+        padding: 0 3rem !important; 
     }
 
-    .toc.sidebar {
+    /* ПРАВАЯ ПАНЕЛЬ (Оглавление разделов) */
+    /* Используем несколько селекторов для надежности */
+    aside.toc.sidebar, .toc-sidebar, .article-toc, aside.toc {
         grid-area: toc !important;
+        order: 3 !important; /* Выталкиваем в третью колонку */
         position: sticky !important;
         top: 5rem !important;
         height: fit-content !important;
         max-height: calc(100vh - 6rem) !important;
+        display: block !important;
         border-left: 1px solid var(--border) !important;
         padding-left: 1.5rem !important;
     }
 }
 
-/* 3. ТИПОГРАФИКА */
-.doc {
-    font-size: 1.2rem !important;
-    line-height: 1.75 !important;
-    max-width: 850px !important;
-    margin: 0 auto !important;
-}
-
+/* 3. ОФОРМЛЕНИЕ */
 h1, h2, h3 { color: #ffffff !important; }
-
-.doc h2 { color: var(--accent) !important; }
-
-/* 4. КОД */
-.doc code {
-    background-color: var(--code-bg) !important;
-    color: #ffd700 !important;
-    padding: 0.2rem 0.4rem;
-    border-radius: 4px;
-}
+.doc h2 { color: var(--accent) !important; border-bottom: 1px solid var(--border); }
+.doc code { background: #000; color: #ffd700; padding: 0.2rem; border-radius: 4px; }
