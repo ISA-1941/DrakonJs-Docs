@@ -1,112 +1,112 @@
 /* Импорт шрифта Roboto */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
 
-/* Глобальное перекрытие фона */
-html, body, .main, .body, .doc, article {
+/* Глобальное перекрытие фона — используем стандартную каскадность Antora */
+html, body {
 background-color: #1a1a1a !important;
 color: #e0e0e0 !important;
 font-family: "Roboto", "Verdana", sans-serif;
-margin: 0;
 }
 
-/* Основной макет Antora — обеспечиваем выравнивание колонок */
-.main {
-display: flex !important;
-justify-content: center !important;
-background-color: #1a1a1a !important;
-}
-
-/* Основной контейнер статьи /
+/* Настройка основного текстового блока /
 .doc {
-font-size: 1.15rem;
-line-height: 1.6;
-max-width: 800px; / Оптимально для чтения при наличии двух панелей */
-margin: 0 auto;
-padding: 2rem;
-background-color: #1a1a1a !important;
-flex-grow: 1;
+font-size: 1.2rem !important; / Увеличиваем для комфортного чтения */
+line-height: 1.7 !important;
+color: #e0e0e0 !important;
+padding: 2rem !important;
 }
 
-/* ЛЕВАЯ ПАНЕЛЬ: Оглавление книги (Navigation) /
+/* ОГЛАВЛЕНИЕ КНИГИ (СЛЕВА) */
+.nav {
+background-color: #121212 !important;
+}
+
 .nav-container {
 position: sticky !important;
-top: 4rem !important; / Отступ от верхнего тулбара */
+top: 4rem !important;
 height: calc(100vh - 4rem) !important;
-flex: 0 0 300px !important;
-background-color: #121212 !important;
 border-right: 1px solid #333 !important;
-overflow-y: auto;
 }
 
-/* ПРАВАЯ ПАНЕЛЬ: Оглавление разделов (TOC) /
+/* ОГЛАВЛЕНИЕ РАЗДЕЛА (СПРАВА) /
 .toc {
-position: sticky !important;
-top: 4rem !important; / На уровне заголовка раздела /
-height: fit-content !important;
-max-height: calc(100vh - 4rem) !important;
-flex: 0 0 250px !important;
-padding: 1rem !important;
-order: 3; / Ставим в конец после .doc */
-background-color: #1a1a1a !important;
+background-color: transparent !important;
+order: 3 !important; / Гарантируем положение справа */
 }
 
-/* Стили заголовка TOC */
+/* Делаем правое оглавление фиксированным */
+@media screen and (min-width: 1024px) {
+.toc.sidebar {
+position: sticky !important;
+top: 5rem !important;
+height: fit-content !important;
+max-height: calc(100vh - 6rem) !important;
+}
+}
+
 .toc .toc-title {
 color: #4da6ff !important;
-font-weight: bold;
-margin-bottom: 0.5rem;
-font-size: 0.9rem;
-text-transform: uppercase;
+font-size: 0.9rem !important;
 }
 
-/* Заголовки статьи /
-.doc h1.page, .doc h1, .doc .title, .page-title {
-font-size: 2.6rem;
+/* ИЛЛЮСТРАЦИИ (SVG) /
+.imageblock img, .imageblock svg {
+max-width: 80% !important; / Ограничиваем, чтобы не занимали весь экран */
+height: auto !important;
+margin: 1rem auto !important;
+display: block !important;
+}
+
+/* ЗАГОЛОВКИ */
+.doc h1.page {
+font-size: 2.8rem !important;
 color: #ffffff !important;
-border-bottom: 1px solid #333 !important;
-padding-bottom: 0.5rem;
-margin-top: 0; / Чтобы заголовок был вровень с панелями */
+margin-top: 0 !important;
 }
 
-.doc h2, .doc h3, .doc h4 {
-font-size: 1.9rem;
+.doc h2 {
+font-size: 2rem !important;
 color: #4da6ff !important;
-margin-top: 2rem;
+border-bottom: 1px solid #333 !important;
+padding-bottom: 0.3rem !important;
 }
 
-/* Оформление блоков кода */
-.doc code, .doc pre, .listingblock pre {
+/* БЛОКИ КОДА */
+.doc code {
 font-family: "Courier New", monospace !important;
-font-size: 1.05rem;
 background-color: #000000 !important;
 color: #ffd700 !important;
+padding: 0.2rem 0.4rem !important;
+border-radius: 4px !important;
 border: 1px solid #444 !important;
-border-radius: 4px;
-padding: 0.2rem 0.5rem;
 }
 
-/* Навигационные ссылки */
-.nav-list a, .toc a {
+.listingblock pre {
+background-color: #000000 !important;
+border: 1px solid #333 !important;
+padding: 1rem !important;
+}
+
+/* ССЫЛКИ */
+.nav-list a, .toc a, .breadcrumb a {
 color: #b0b0b0 !important;
-text-decoration: none;
-font-size: 0.95rem;
 }
 
 .nav-list a:hover, .toc a:hover {
 color: #4da6ff !important;
 }
 
-/* Активный пункт в TOC */
-.toc .is-active a {
-color: #ffffff !important;
-font-weight: bold;
+/* Тулбар и навигация */
+.navbar, .toolbar {
+background-color: #121212 !important;
+border-bottom: 1px solid #333 !important;
 }
 
-/* Скрытие TOC на мобильных устройствах, если мешает */
-@media screen and (max-width: 1024px) {
-.toc { display: none !important; }
+.breadcrumb li::after {
+color: #555 !important;
 }
 
 /* Кастомные скроллбары */
-::-webkit-scrollbar { width: 8px; background-color: #1a1a1a; }
-::-webkit-scrollbar-thumb { background-color: #333; border-radius: 4px; }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #1a1a1a; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
