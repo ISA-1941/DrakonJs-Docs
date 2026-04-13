@@ -1,60 +1,65 @@
 /* Импорт шрифта Roboto */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
 
-/* Глобальное перекрытие фона — используем стандартную каскадность Antora */
-html, body {
+/* Глобальное перекрытие фона для всей структуры Antora */
+html, body, .main, .body, .doc, article {
 background-color: #1a1a1a !important;
 color: #e0e0e0 !important;
 font-family: "Roboto", "Verdana", sans-serif;
+margin: 0;
 }
 
-/* Настройка основного текстового блока /
+/* Настройка основного текстового блока */
 .doc {
-font-size: 1.2rem !important; / Увеличиваем для комфортного чтения */
+font-size: 1.2rem !important;
 line-height: 1.7 !important;
 color: #e0e0e0 !important;
 padding: 2rem !important;
+background-color: #1a1a1a !important;
 }
 
-/* ОГЛАВЛЕНИЕ КНИГИ (СЛЕВА) */
+/* ОГЛАВЛЕНИЕ КНИГИ (ЛЕВАЯ ПАНЕЛЬ) /
+.nav-container {
+position: sticky !important;
+top: 4.1rem !important; / Отступ под тулбар */
+height: calc(100vh - 4.1rem) !important;
+background-color: #121212 !important;
+border-right: 1px solid #333 !important;
+z-index: 100 !important;
+}
+
 .nav {
 background-color: #121212 !important;
 }
 
-.nav-container {
-position: sticky !important;
-top: 4rem !important;
-height: calc(100vh - 4rem) !important;
-border-right: 1px solid #333 !important;
-}
-
-/* ОГЛАВЛЕНИЕ РАЗДЕЛА (СПРАВА) /
-.toc {
-background-color: transparent !important;
-order: 3 !important; / Гарантируем положение справа */
-}
-
-/* Делаем правое оглавление фиксированным */
-@media screen and (min-width: 1024px) {
+/* ОГЛАВЛЕНИЕ РАЗДЕЛА (ПРАВАЯ ПАНЕЛЬ - TOC) /
+/ В Antora TOC обычно находится внутри .doc или как .toc.sidebar /
 .toc.sidebar {
 position: sticky !important;
-top: 5rem !important;
+top: 5rem !important; / На уровне заголовка страницы */
 height: fit-content !important;
 max-height: calc(100vh - 6rem) !important;
-}
+background-color: transparent !important;
+padding-left: 1rem !important;
+border-left: 1px solid #333 !important;
+z-index: 90 !important;
 }
 
 .toc .toc-title {
 color: #4da6ff !important;
 font-size: 0.9rem !important;
+font-weight: bold;
+text-transform: uppercase;
+margin-bottom: 0.5rem;
 }
 
-/* ИЛЛЮСТРАЦИИ (SVG) /
+/* ИЛЛЮСТРАЦИИ (SVG) */
 .imageblock img, .imageblock svg {
-max-width: 80% !important; / Ограничиваем, чтобы не занимали весь экран */
+max-width: 80% !important;
 height: auto !important;
-margin: 1rem auto !important;
+margin: 1.5rem auto !important;
 display: block !important;
+background-color: transparent !important;
 }
 
 /* ЗАГОЛОВКИ */
@@ -87,26 +92,42 @@ border: 1px solid #333 !important;
 padding: 1rem !important;
 }
 
-/* ССЫЛКИ */
+/* ССЫЛКИ В НАВИГАЦИИ И ОГЛАВЛЕНИИ */
 .nav-list a, .toc a, .breadcrumb a {
 color: #b0b0b0 !important;
+text-decoration: none;
 }
 
 .nav-list a:hover, .toc a:hover {
 color: #4da6ff !important;
 }
 
+/* Активный пункт в оглавлении разделов */
+.toc .is-active a {
+color: #ffffff !important;
+font-weight: bold;
+}
+
 /* Тулбар и навигация */
 .navbar, .toolbar {
 background-color: #121212 !important;
 border-bottom: 1px solid #333 !important;
+position: sticky !important;
+top: 0;
+z-index: 200 !important;
 }
 
-.breadcrumb li::after {
-color: #555 !important;
+/* Кастомные скроллбары для темного режима */
+::-webkit-scrollbar {
+width: 8px;
 }
-
-/* Кастомные скроллбары */
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #1a1a1a; }
-::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+::-webkit-scrollbar-track {
+background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+background: #444;
+border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
