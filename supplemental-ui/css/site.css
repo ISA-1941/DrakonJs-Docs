@@ -33,7 +33,7 @@ background-color: #121212 !important;
 }
 
 /* ОГЛАВЛЕНИЕ РАЗДЕЛА (ПРАВАЯ ПАНЕЛЬ - TOC) */
-/ В Antora TOC обычно находится внутри .doc или как .toc.sidebar /
+/* В Antora TOC обычно находится внутри .doc или как .toc.sidebar */
 .toc.sidebar {
 position: sticky !important;
 top: 5rem !important; / На уровне заголовка страницы */
