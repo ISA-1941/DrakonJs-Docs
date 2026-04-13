@@ -92,3 +92,21 @@ border-radius: 5px;
 ::-webkit-scrollbar-thumb:hover {
 background-color: #555;
 }
+/* Принудительно показываем левую навигацию и правое оглавление */
+.nav-container, .toc {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Убеждаемся, что они зафиксированы */
+.nav-container {
+    position: sticky !important;
+    top: 0 !important;
+    align-self: start !important;
+}
+
+.toc {
+    position: sticky !important;
+    top: 0 !important;
+}
