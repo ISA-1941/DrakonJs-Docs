@@ -18,7 +18,7 @@ padding: 2rem !important;
 background-color: #1a1a1a !important;
 }
 
-/* ОГЛАВЛЕНИЕ КНИГИ (ЛЕВАЯ ПАНЕЛЬ) /
+/* ОГЛАВЛЕНИЕ КНИГИ (ЛЕВАЯ ПАНЕЛЬ) */
 .nav-container {
 position: sticky !important;
 top: 4.1rem !important; / Отступ под тулбар */
@@ -32,7 +32,7 @@ z-index: 100 !important;
 background-color: #121212 !important;
 }
 
-/* ОГЛАВЛЕНИЕ РАЗДЕЛА (ПРАВАЯ ПАНЕЛЬ - TOC) /
+/* ОГЛАВЛЕНИЕ РАЗДЕЛА (ПРАВАЯ ПАНЕЛЬ - TOC) */
 / В Antora TOC обычно находится внутри .doc или как .toc.sidebar /
 .toc.sidebar {
 position: sticky !important;
