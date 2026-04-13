@@ -1,133 +1,76 @@
-/* Импорт шрифта Roboto */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+/* 1. ШРИФТЫ И ОСНОВА */
+@import url('[https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap](https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap)');
 
-/* Глобальное перекрытие фона для всей структуры Antora */
-html, body, .main, .body, .doc, article {
-background-color: #1a1a1a !important;
-color: #e0e0e0 !important;
-font-family: "Roboto", "Verdana", sans-serif;
-margin: 0;
+:root {
+    --body-bg: #1a1a1a;
+    --panel-bg: #121212;
+    --text-main: #e0e0e0;
+    --accent: #4da6ff;
+    --border: #333;
+    --code-bg: #000;
 }
 
-/* Настройка основного текстового блока */
+html, body {
+    background-color: var(--body-bg) !important;
+    color: var(--text-main) !important;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+/* 2. СЕТКА (Предотвращает наложение) */
+@media screen and (min-width: 1024px) {
+    .body {
+        display: grid !important;
+        grid-template-columns: 300px 1fr 280px !important;
+        grid-template-areas: "nav main toc" !important;
+        min-height: calc(100vh - 4.1rem);
+        background-color: var(--body-bg) !important;
+    }
+
+    .nav-container {
+        grid-area: nav !important;
+        position: sticky !important;
+        top: 4.1rem !important;
+        height: calc(100vh - 4.1rem) !important;
+        background-color: var(--panel-bg) !important;
+        border-right: 1px solid var(--border) !important;
+        z-index: 10;
+    }
+
+    .main {
+        grid-area: main !important;
+        background-color: var(--body-bg) !important;
+        padding: 0 3rem !important;
+        min-width: 0 !important;
+    }
+
+    .toc.sidebar {
+        grid-area: toc !important;
+        position: sticky !important;
+        top: 5rem !important;
+        height: fit-content !important;
+        max-height: calc(100vh - 6rem) !important;
+        border-left: 1px solid var(--border) !important;
+        padding-left: 1.5rem !important;
+    }
+}
+
+/* 3. ТИПОГРАФИКА */
 .doc {
-font-size: 1.2rem !important;
-line-height: 1.7 !important;
-color: #e0e0e0 !important;
-padding: 2rem !important;
-background-color: #1a1a1a !important;
+    font-size: 1.2rem !important;
+    line-height: 1.75 !important;
+    max-width: 850px !important;
+    margin: 0 auto !important;
 }
 
-/* ОГЛАВЛЕНИЕ КНИГИ (ЛЕВАЯ ПАНЕЛЬ) */
-.nav-container {
-position: sticky !important;
-top: 4.1rem !important; / Отступ под тулбар */
-height: calc(100vh - 4.1rem) !important;
-background-color: #121212 !important;
-border-right: 1px solid #333 !important;
-z-index: 100 !important;
-}
+h1, h2, h3 { color: #ffffff !important; }
 
-.nav {
-background-color: #121212 !important;
-}
+.doc h2 { color: var(--accent) !important; }
 
-/* ОГЛАВЛЕНИЕ РАЗДЕЛА (ПРАВАЯ ПАНЕЛЬ - TOC) */
-/* В Antora TOC обычно находится внутри .doc или как .toc.sidebar */
-.toc.sidebar {
-position: sticky !important;
-top: 5rem !important; / На уровне заголовка страницы */
-height: fit-content !important;
-max-height: calc(100vh - 6rem) !important;
-background-color: transparent !important;
-padding-left: 1rem !important;
-border-left: 1px solid #333 !important;
-z-index: 90 !important;
-}
-
-.toc .toc-title {
-color: #4da6ff !important;
-font-size: 0.9rem !important;
-font-weight: bold;
-text-transform: uppercase;
-margin-bottom: 0.5rem;
-}
-
-/* ИЛЛЮСТРАЦИИ (SVG) */
-.imageblock img, .imageblock svg {
-max-width: 80% !important;
-height: auto !important;
-margin: 1.5rem auto !important;
-display: block !important;
-background-color: transparent !important;
-}
-
-/* ЗАГОЛОВКИ */
-.doc h1.page {
-font-size: 2.8rem !important;
-color: #ffffff !important;
-margin-top: 0 !important;
-}
-
-.doc h2 {
-font-size: 2rem !important;
-color: #4da6ff !important;
-border-bottom: 1px solid #333 !important;
-padding-bottom: 0.3rem !important;
-}
-
-/* БЛОКИ КОДА */
+/* 4. КОД */
 .doc code {
-font-family: "Courier New", monospace !important;
-background-color: #000000 !important;
-color: #ffd700 !important;
-padding: 0.2rem 0.4rem !important;
-border-radius: 4px !important;
-border: 1px solid #444 !important;
-}
-
-.listingblock pre {
-background-color: #000000 !important;
-border: 1px solid #333 !important;
-padding: 1rem !important;
-}
-
-/* ССЫЛКИ В НАВИГАЦИИ И ОГЛАВЛЕНИИ */
-.nav-list a, .toc a, .breadcrumb a {
-color: #b0b0b0 !important;
-text-decoration: none;
-}
-
-.nav-list a:hover, .toc a:hover {
-color: #4da6ff !important;
-}
-
-/* Активный пункт в оглавлении разделов */
-.toc .is-active a {
-color: #ffffff !important;
-font-weight: bold;
-}
-
-/* Тулбар и навигация */
-.navbar, .toolbar {
-background-color: #121212 !important;
-border-bottom: 1px solid #333 !important;
-position: sticky !important;
-top: 0;
-z-index: 200 !important;
-}
-
-/* Кастомные скроллбары для темного режима */
-::-webkit-scrollbar {
-width: 8px;
-}
-::-webkit-scrollbar-track {
-background: #1a1a1a;
-}
-::-webkit-scrollbar-thumb {
-background: #444;
-border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-background: #555;
+    background-color: var(--code-bg) !important;
+    color: #ffd700 !important;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
 }
