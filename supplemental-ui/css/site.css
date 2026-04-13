@@ -1,4 +1,4 @@
-/* 1. БАЗОВЫЕ ЦВЕТА И ТЕМА */
+/* 1. БАЗОВЫЕ ЦВЕТА */
 :root {
     --body-background: #1a1a1a;
     --panel-background: #121212;
@@ -15,7 +15,7 @@ html, body {
     padding: 0;
 }
 
-/* 2. ЛЕВОЕ МЕНЮ (КНИГА) — ШИРИНА И ПРИЖАТИЕ ТЕКСТА КЛЕВА */
+/* 2. ЛЕВОЕ МЕНЮ (КНИГА) — ПРИЖАТИЕ ВЛЕВО */
 .nav-container {
     position: fixed !important;
     top: 4rem !important;
@@ -26,35 +26,45 @@ html, body {
     border-right: 1px solid var(--border-color) !important;
     z-index: 100;
     overflow-y: auto;
+    /* Убираем внешние отступы самого контейнера */
+    padding: 0 !important; 
 }
 
-/* Убираем лишние отступы внутри левого меню, чтобы текст был ближе к краю */
-.nav {
-    padding-left: 0.5rem !important;
-}
-
-.nav-menu {
+/* СБРОС ВСЕХ ВНУТРЕННИХ ОТСТУПОВ ЛЕВОЙ ПАНЕЛИ */
+.nav, .nav-menu, .nav-list, .nav-item, .nav-item-toggle {
     margin-left: 0 !important;
-    padding-left: 1rem !important;
+    padding-left: 0 !important;
+}
+
+/* Прижимаем ссылки к самому левому краю, как в TOC */
+.nav-link, .nav-text {
+    padding-left: 1rem !important; 
+    margin-left: 0 !important;
+    display: block !important;
+}
+
+/* Небольшой отступ только для вложенных уровней, чтобы была видна иерархия */
+.nav-list .nav-list {
+    padding-left: 1.2rem !important;
 }
 
 /* 3. ОСНОВНОЙ КОНТЕНТ (ЦЕНТР) */
 .main {
-    margin-left: 340px !important;  /* Отступ под расширенное левое меню */
-    margin-right: 300px !important; /* Отступ под правое меню */
+    margin-left: 340px !important; 
+    margin-right: 300px !important;
     padding: 2rem !important;
     background-color: var(--body-background) !important;
     min-height: 100vh;
 }
 
 .doc {
-    max-width: 1000px !important;   /* Оптимальная ширина для длинных строк */
+    max-width: 1100px !important;  /* Увеличили для читаемости */
     margin: 0 auto !important;
-    font-size: 1.3rem !important;   /* Увеличенный шрифт */
+    font-size: 1.3rem !important;
     line-height: 1.8 !important;
 }
 
-/* 4. ПРАВОЕ МЕНЮ (РАЗДЕЛЫ) — ПРИНУДИТЕЛЬНАЯ ФИКСАЦИЯ СПРАВА */
+/* 4. ПРАВОЕ МЕНЮ (РАЗДЕЛЫ) */
 aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
     position: fixed !important;
     top: 4rem !important;
@@ -67,25 +77,15 @@ aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
     padding: 1.5rem !important;
     z-index: 100;
     display: block !important;
-    overflow-y: auto;
 }
 
-/* Оформление заголовка оглавления */
 .toc-title {
     color: var(--accent-color) !important;
     font-weight: bold;
     margin-bottom: 1rem;
 }
 
-/* 5. СКРЫТИЕ ЛИШНЕГО В NAVBAR И ФИКСАЦИЯ ШИРИНЫ БРЕНДА */
-.navbar-item.has-dropdown, 
-.navbar-item:not(.has-dropdown):not(.search) {
-    display: none !important;
-}
-.navbar-brand .navbar-item:first-child {
-    display: flex !important;
-    width: 340px !important;       /* Фиксируем ширину зоны заголовка в шапке */
-}
+/* 5. ШАПКА (NAVBAR) */
 .navbar {
     background-color: var(--panel-background) !important;
     border-bottom: 1px solid var(--border-color) !important;
@@ -93,6 +93,17 @@ aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
     width: 100%;
     top: 0;
     z-index: 200;
+}
+
+.navbar-brand .navbar-item:first-child {
+    display: flex !important;
+    width: 340px !important; /* Соответствует ширине левого меню */
+}
+
+/* Скрываем мусор из стандартного бандла */
+.navbar-item.has-dropdown, 
+.navbar-item:not(.has-dropdown):not(.search) {
+    display: none !important;
 }
 
 /* 6. ОФОРМЛЕНИЕ ТЕКСТА */
