@@ -10,6 +10,17 @@
     --code-background: #000;
 }
 
+/* СКРЫТИЕ ЛИШНИХ ПУНКТОВ NAVBAR (Home, Products, Services) */
+/* Если вы не хотите видеть стандартные ссылки бандла, используйте это: */
+.navbar-item.has-dropdown, 
+.navbar-item:not(.has-dropdown):not(.search) {
+    display: none !important;
+}
+/* Оставляем только название сайта и поиск (если есть) */
+.navbar-brand .navbar-item:first-child {
+    display: flex !important;
+}
+
 /* Фон и основной текст */
 html, body, .main, .doc {
     background-color: var(--body-background) !important;
@@ -18,8 +29,8 @@ html, body, .main, .doc {
 
 /* Увеличение шрифта в контенте */
 .doc {
-    font-size: 1.25rem !important; /* Увеличиваем размер */
-    line-height: 1.8 !important;   /* Увеличиваем межстрочный интервал */
+    font-size: 1.25rem !important;
+    line-height: 1.8 !important;
 }
 
 /* Заголовки */
@@ -34,11 +45,6 @@ html, body, .main, .doc {
 }
 
 /* Правое меню (Оглавление разделов) */
-/* В стандартной Antora оно плавающее (sticky) справа */
-.toc {
-    background-color: transparent !important;
-}
-
 .toc .toc-menu, .toc.sidebar {
     background-color: var(--panel-background) !important;
     border-left: 1px solid var(--border-color) !important;
