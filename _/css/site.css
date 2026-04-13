@@ -31,21 +31,20 @@ html, body {
 /* 3. ОСНОВНОЙ КОНТЕНТ (ЦЕНТР) */
 .main {
     margin-left: 300px !important;  /* Отступ под левое меню */
-    margin-right: 300px !important; /* Отступ под правое меню */
+    margin-right: 320px !important; /* Отступ под правое меню + запас */
     padding: 2rem !important;
     background-color: var(--body-background) !important;
     min-height: 100vh;
 }
 
 .doc {
-    max-width: 800px !important;
+    max-width: 1000px !important;   /* Увеличенная ширина для лучшей читаемости */
     margin: 0 auto !important;
     font-size: 1.3rem !important;   /* Увеличенный шрифт */
     line-height: 1.8 !important;
 }
 
 /* 4. ПРАВОЕ МЕНЮ (РАЗДЕЛЫ) — ПРИНУДИТЕЛЬНАЯ ФИКСАЦИЯ СПРАВА */
-/* Мы используем самые сильные селекторы, чтобы вырвать его из текста */
 aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
     position: fixed !important;
     top: 4rem !important;
@@ -61,7 +60,7 @@ aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
     overflow-y: auto;
 }
 
-/* Скрываем заголовок "Contents" если он дублируется, или оформляем его */
+/* Оформление заголовка оглавления */
 .toc-title {
     color: var(--accent-color) !important;
     font-weight: bold;
