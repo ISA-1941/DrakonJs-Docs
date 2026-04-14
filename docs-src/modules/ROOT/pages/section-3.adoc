@@ -1,6 +1,7 @@
 :imagesdir: docs-src/modules/section-3/assets/images
 [.text-justify]
 :figure-caption!:
+
 == Section 3. Implementation of Basic Abstract Data Types in JavaScript
 
 === 3.1. Data Structuring Features
@@ -40,7 +41,7 @@ For example, the collection of integers [24, 12, 36, 6, 47, 11] forms an array (
 
 [.text-center]
 .Figure 3.1. One-dimensional array
-image::{imagesdir}/Fig3_1_Array.jpg[width=400,height=200,align=center]
+image::section_3//Fig3_1_Array.jpg[width=400,height=200,align=center]
 
 Declaring Arrays in JavaScript
 
