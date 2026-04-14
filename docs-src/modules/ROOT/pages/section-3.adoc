@@ -41,7 +41,7 @@ For example, the collection of integers [24, 12, 36, 6, 47, 11] forms an array (
 
 [.text-center]
 .Figure 3.1. One-dimensional array
-image::section_3//Fig3_1_Array.svg[width=400,height=200,align=center]
+image::section_3/Fig3_1_Array.svg[width=400,height=200,align=center]
 
 Declaring Arrays in JavaScript
 
@@ -100,7 +100,7 @@ let parentSlice = new Array(20).fill(0); // Creating an array of 20 elements, fi
 
 [.text-center]
 .Figure 3.2. Creating different slices sliceA and sliceB
-image::{imagesdir}/Fig3_2_Slice.jpg[width=600,height=200,align=center]
+image::section_3/Fig3_2_Slice.svg[width=600,height=200,align=center]
 
 The length property indicates the number of elements in the slice (array). In JavaScript there is no explicit concept of "capacity". Multiple "slices" can be created from a single array using the slice() method or destructuring. For example, to create sliceA and sliceB from parentSlice:
 
