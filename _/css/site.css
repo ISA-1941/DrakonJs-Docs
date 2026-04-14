@@ -117,3 +117,29 @@ code {
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
 }
+
+/* 8. ТАБЛИЦЫ (Видимость границ и сетки) */
+.doc table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    margin: 2rem 0 !important;
+    border: 1px solid #444 !important; /* Внешняя граница таблицы */
+}
+
+.doc th, .doc td {
+    border: 1px solid #444 !important; /* Цвет разделительных линий */
+    padding: 0.75rem !important;
+    text-align: left !important;
+}
+
+/* Окраска заголовков таблиц для лучшей читаемости */
+.doc th {
+    background-color: #252525 !important;
+    color: var(--accent-color) !important;
+    font-weight: bold !important;
+}
+
+/* Зебра (чередование строк) для удобства глаз */
+.doc tr:nth-child(even) {
+    background-color: #222 !important;
+}
