@@ -1,0 +1,28 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
+  <diagram name="Page-1" id="0SeOAc9lDC9HHOlrZqU7">
+    <mxGraphModel dx="1426" dy="984" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="CCy_y7fBEV_6wNp4mpu0-1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="510" y="500" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="CCy_y7fBEV_6wNp4mpu0-2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="650" y="520" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="CCy_y7fBEV_6wNp4mpu0-3" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="530" y="600" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="CCy_y7fBEV_6wNp4mpu0-4" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="710" y="620" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="CCy_y7fBEV_6wNp4mpu0-5" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="540" y="680" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="CCy_y7fBEV_6wNp4mpu0-6" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="680" y="700" width="40" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
