@@ -41,7 +41,7 @@ For example, the collection of integers [24, 12, 36, 6, 47, 11] forms an array (
 
 [.text-center]
 .Figure 3.1. One-dimensional array
-image::section_3/Fig3_1_Array.svg[width=400,height=200,align=center]
+image::section_3/Fig3_1_Array.svg[width=200%, link=self, window="_blank"]
 
 Declaring Arrays in JavaScript
 
@@ -100,7 +100,7 @@ let parentSlice = new Array(20).fill(0); // Creating an array of 20 elements, fi
 
 [.text-center]
 .Figure 3.2. Creating different slices sliceA and sliceB
-image::section_3/Fig3_2_Slice.svg[width=600,height=200,align=center]
+image::section_3/Fig3_2_Slice.svg[width=200%, link=self, window="_blank"]
 
 The length property indicates the number of elements in the slice (array). In JavaScript there is no explicit concept of "capacity". Multiple "slices" can be created from a single array using the slice() method or destructuring. For example, to create sliceA and sliceB from parentSlice:
 
@@ -222,7 +222,7 @@ Unlike arrays, which use numeric indexes, Maps allow keys of any data type, maki
 
 [.text-center]
 .Figure 3.3. Map
-image::{imagesdir}/Fig3_3_Map.jpg[width=400,height=200,align=center]
+image::section_3/Fig3_3_Map.jpg[width=200%, link=self, window="_blank"]
 
 In JavaScript, we use the Map object to create a map. The syntax is:
 
@@ -271,7 +271,7 @@ A linked list is a dynamic data structure where each element, called a node, con
 
 [.text-center]
 .Figure 3.4. Singly linked list structure
-image::{imagesdir}/Fig3_4_LL.jpg[width=100%]
+image::section_3/Fig3_4_LL.jpg[width=200%, link=self, window="_blank"]
 
 1️⃣ Data (which can be any primitive or complex data type)
 2️⃣ A reference (pointer) to the next node in the list
@@ -325,7 +325,7 @@ A stack is an abstract data type that contains elements with two basic operation
 
 [.text-center]
 .Figure 3.5. Last-in, first-out stack operation
-image::{imagesdir}/Fig3_5_Stack.jpg[width=100%]
+image::section_3/Fig3_5_Stack.jpg[width=200%, link=self, window="_blank"]
 
 A stack supports two primary operations:
 
@@ -380,7 +380,7 @@ A queue is a linear data structure that follows the First-In-First-Out (FIFO) pr
 
 [.text-center]
 .Figure 3.6. First-In-First-Out queue operation
-image::{imagesdir}/Fig3_6_Queue.jpg[width=100%]
+image::section_3/Fig3_6_Queue.jpg[width=200%, link=self, window="_blank"]
 
 A queue supports two primary operations:
 
@@ -401,7 +401,7 @@ Binary trees as an abstract data type were discussed in Section 1. Here we will 
 
 [.text-center]
 .Figure 3.7. Basic terminology of the tree
-image::{imagesdir}/Fig3_7_Term.jpg[width=70%, height=40%, align=center]
+image::section_3/Fig3_7_Term.jpg[width=70%, height=40%, align=center]
 
     Root: The root of the tree is the only node with no incoming edges. It is the top node in the tree.
 
@@ -421,7 +421,7 @@ The binary tree's information structure is set up as follows (Figure 3.8):
 
 [.text-center]
 .Figure 3.8. Binary tree structure (value - value (key), N - NULL)
-image::{imagesdir}/Fig3_8_BST.jpg[width=50%, height=30%, align=center]
+image::section_3/Fig3_8_BST.jpg[width=200%, link=self, window="_blank"]
 
 The declaration of the basic elements of binary trees in JavaScript is conveniently performed using a factory function:
 
@@ -515,7 +515,7 @@ Types of Graphs (Figure 3.9):
 
 [.text-center]
 .Figure 3.9. The view of (a) undirected and (b) directed graphs
-image::{imagesdir}/Fig3_9_Graphes.jpg[width=100%]
+image::section_3/Fig3_9_Graphes.jpg[width=100%]
 
 🔹 Graph Representation in JavaScript
 
