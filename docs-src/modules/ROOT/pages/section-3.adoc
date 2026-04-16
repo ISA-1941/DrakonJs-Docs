@@ -515,7 +515,7 @@ Types of Graphs (Figure 3.9):
 
 [.text-center]
 .Figure 3.9. The view of (a) undirected and (b) directed graphs
-image::section_3/Fig3_9_Graphes.jpg[width=100%, link=self, window="_blank"]
+image::section_3/Fig3_9_graph.svg[width=100%, link=self, window="_blank"]
 
 🔹 Graph Representation in JavaScript
 
