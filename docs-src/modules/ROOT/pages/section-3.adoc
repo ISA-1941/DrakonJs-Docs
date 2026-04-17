@@ -53,11 +53,17 @@ Arrays in JavaScript can be declared in different ways:
 
 1️⃣ Using [] (Recommended)
 
+[source, javascript]
+----
 let numbers = [24, 12, 36, 6, 47, 11];
+----
 
 2️⃣ Using the Array Constructor
 
+[source, javascript]
+----
 let numbers = new Array(24, 12, 36, 6, 47, 11);
+----
 
 This method is rarely used in modern JavaScript.
 
@@ -65,6 +71,8 @@ This method is rarely used in modern JavaScript.
 
 JavaScript supports multidimensional arrays by storing arrays inside arrays.
 
+[source, javascript]
+----
 let matrix = [
     [1, 2, 3],
     [4, 5, 6],
@@ -72,6 +80,7 @@ let matrix = [
 ];
 
 console.log(matrix[1][2]); // Output: 6
+----
 
 Here, matrix[1][2] accesses the second row, third column (6).
 
@@ -92,8 +101,9 @@ A slice is a variable-length data collection that stores elements of a homogeneo
 In JavaScript, slices are implemented dynamically. To create a slice (array) in JavaScript, you can use an array literal or the Array constructor. For example, creating parentSlice would look like this:
 
 [source, javascript]
-
+----
 let parentSlice = new Array(20).fill(0); // Creating an array of 20 elements, filled with zeros
+----
 
 [.text-center]
 .Figure 3.2. Creating different slices sliceA and sliceB
@@ -102,9 +112,10 @@ image::section_3/Fig3_2_Slice.svg[width=100%, link=self, window="_blank"]
 The length property indicates the number of elements in the slice (array). In JavaScript there is no explicit concept of "capacity". Multiple "slices" can be created from a single array using the slice() method or destructuring. For example, to create sliceA and sliceB from parentSlice:
 
 [source, javascript]
-
+----
 let sliceA = parentSlice.slice(0, 4); // sliceA contains the first 5 elements
 let sliceB = parentSlice.slice(12, 14); // sliceB contains 3 elements from index 12 to 14
+----
 
 In JavaScript, sliceA will contain elements from index 0 to 4, and sliceB will contain elements from index 12 to 13.
 
@@ -125,22 +136,22 @@ JavaScript objects are defined using curly braces {} and consist of key-value pa
 🔹 Creating an Object with Named Properties
 
 [source, javascript]
-
+----
 let employee1 = {
 firstName: "Peter",
 lastName: "Wolf",
 age: 35,
 salary: 20000
 };
-
 console.log("Employee 1:", employee1);
+----
 
 🔹 Alternative Way: Object Constructor
 
 Another way to create an object is by using the Object constructor.
 
 [source, javascript]
-
+----
 let employee2 = new Object();
 employee2.firstName = "Nick";
 employee2.lastName = "Smith";
@@ -148,6 +159,7 @@ employee2.age = 49;
 employee2.salary = 35000;
 
 console.log("Employee 2:", employee2);
+----
 
 Key Differences:
 
@@ -160,7 +172,7 @@ Key Differences:
 A factory function is a regular function that creates and returns an object.
 
 [source, javascript]
-
+----
 function createEmployee(firstName, lastName, age, salary) {
 return {
 firstName,
@@ -175,22 +187,24 @@ let emp2 = createEmployee("Nick", "Smith", 49, 35000);
 
 console.log("Employee 1:", emp1);
 console.log("Employee 2:", emp2);
+----
 
 Output:
-text
-
+[source, text]
+----
 Employee 1: { firstName: 'Peter', lastName: 'Wolf', age: 35, salary: 20000 }
 Employee 2: { firstName: 'Nick', lastName: 'Smith', age: 49, salary: 35000 }
+----
 
 🔹 Adding Methods to a Factory Function
 
 An object can contain methods (functions inside the object).
 
 [source, javascript]
-
+----
 function createEmployee(firstName, lastName, age, salary) {
 return {
-getFullName: () => ${firstName} ${lastName},
+getFullName: () => `${firstName} ${lastName}`,
 getSalary: () => salary, // You can read salary
 setSalary: (newSalary) => salary = newSalary // You can change salary
 };
@@ -203,13 +217,15 @@ console.log(emp5.getSalary()); // 30000
 
 emp5.setSalary(35000);
 console.log(emp5.getSalary()); // 35000
+----
 
 Output:
-text
-
+[source, text]
+----
 Bob Anderson
 30000
 35000
+----
 
 ==== 3.2.4. Map in JavaScript
 
@@ -224,8 +240,9 @@ image::section_3/Fig3_3_Map.svg[width=100%, link=self, window="_blank"]
 In JavaScript, we use the Map object to create a map. The syntax is:
 
 [source, javascript]
-
+----
 let myMap = new Map();
+----
 
 Here, myMap is an empty Map ready to store key-value pairs.
 
@@ -234,7 +251,7 @@ Here, myMap is an empty Map ready to store key-value pairs.
 We use the .set() method:
 
 [source, javascript]
-
+----
 let studentScores = new Map();
 
 studentScores.set("Alice", 95);
@@ -242,6 +259,7 @@ studentScores.set("Bob", 88);
 studentScores.set("Charlie", 92);
 
 console.log(studentScores);
+----
 
 Now, studentScores contains:
 
@@ -256,9 +274,10 @@ Now, studentScores contains:
 To retrieve a value from a map, use .get(key):
 
 [source, javascript]
-
+----
 console.log(studentScores.get("Alice")); // Output: 95
 console.log(studentScores.get("Bob")); // Output: 88
+----
 
 If the key does not exist, .get() returns undefined.
 
@@ -282,13 +301,14 @@ In JavaScript, we represent a linked list node using an object.
 🔹 Creating a Node
 
 [source, javascript]
-
+----
 function createNode(data) {
 return {
 data,
 next: null
 };
 }
+----
 
 Each node has:
 
@@ -304,13 +324,14 @@ A linked list needs:
 2️⃣ A counter (size) to track the number of elements
 
 [source, javascript]
-
+----
 function createLinkedList() {
 return {
 head: null,
 size: 0
 };
 }
+----
 
 Here head points to the first node, and size stores the length of the list.
 
@@ -343,7 +364,7 @@ This structure is commonly used in:
 JavaScript does not have a built-in stack data type, but it can be implemented using arrays, as they provide push() and pop() methods.
 
 [source, javascript]
-
+----
 function createStack() {
 let data = []; // Internal storage for stack elements
 
@@ -370,6 +391,7 @@ return data.length === 0;
 }
 };
 }
+----
 
 b) Queue
 
@@ -394,170 +416,4 @@ Queues are widely used in:
 
 ==== 3.2.7. Representation of Binary Trees in JavaScript
 
-Binary trees as an abstract data type were discussed in Section 1. Here we will discuss the computer implementation of this type of data structure using the visual algorithmic language DRAKON and JavaScript. Before we continue, let's review the key terms associated with binary trees (Figure 3.7).
-
-[.text-center]
-.Figure 3.7. Basic terminology of the tree
-image::section_3/Fig3_7_Term.svg[width=100%, height=40%, align=center]
-
-    Root: The root of the tree is the only node with no incoming edges. It is the top node in the tree.
-
-    Node: The basic element of the tree. Each node has data and two references that can point to zero or more descendants.
-
-    Edge: A fundamental part of the tree used to connect two nodes.
-
-    Path: An ordered list of nodes connected by edges.
-
-    Leaf: A leaf node is a node that has no descendants.
-
-    Tree height: The number of edges on the longest path between the root and a leaf.
-
-    Node level: The number of edges on the path from the root node to that node.
-
-The binary tree's information structure is set up as follows (Figure 3.8):
-
-[.text-center]
-.Figure 3.8. Binary tree structure (value - value (key), N - NULL)
-image::section_3/Fig3_8_BST.svg[width=100%, link=self, window="_blank"]
-
-The declaration of the basic elements of binary trees in JavaScript is conveniently performed using a factory function:
-
-[source, javascript]
-
-function createNode(value) {
-return {
-value,
-left: null,
-right: null
-};
-}
-
-Each node has:
-
-    value – Stores the data
-
-    left – Reference to the left child (initially null)
-
-    right – Reference to the right child (initially null)
-
-A binary tree should have:
-
-1️⃣ A reference to the root node
-2️⃣ Methods to insert values into the tree
-3️⃣ Methods to traverse the tree
-
-The structure of a binary tree in JavaScript is declared in a simplified way:
-
-[source, javascript]
-
-function createTreeNode(value, parent) {
-return {
-left: null,
-right: null,
-parent: parent,
-value: value,
-};
-}
-
-Several types of binary trees are discussed in the literature, the most important of which is classification based on node values:
-
-    Binary Search Tree (BST)
-
-    AVL Tree
-
-    Red-Black Tree
-
-Binary Search Tree (BST)
-
-Node Structure: Each node has a value, a left child, and a right child. In JavaScript, this can be represented with objects.
-
-Insertion: New nodes are placed based on their value relative to the current node. Smaller values go left, larger values go right.
-
-AVL Tree
-
-Self-Balancing: Maintains balance by ensuring the height difference between left and right subtrees of any node is at most 1.
-
-Balancing Mechanism: Uses rotations (single and double) to restore balance after insertions or deletions.
-
-Implementation Notes: Requires tracking node heights and implementing rotation functions.
-
-Red-Black Tree
-
-Self-Balancing: Uses color attributes (red or black) for nodes and follows specific rules to maintain balance.
-
-Rules:
-
-    Root and leaves are black
-
-    Red nodes have black children
-
-    All paths from a node to its descendant leaves contain the same number of black nodes
-
-Balancing Mechanism: Uses recoloring and rotations to restore balance after modifications.
-
-Performance: Often faster than AVL trees for insertions and deletions.
-
-Implementation Notes: Requires tracking node colors and implementing recoloring and rotation functions.
-
-Algorithms implementing the basic tree manipulation functions are presented in Section 8.
-
-==== 3.2.8. Representation of Graphs in JavaScript
-
-Recall that a graph G is given by a set of vertices {V} and a set of edges {E} connecting all or part of these vertices. Thus, a graph G is completely defined as {V, E}.
-
-Types of Graphs (Figure 3.9):
-
-1️⃣ Undirected Graph – Edges have no direction (e.g., friendships in social media)
-2️⃣ Directed Graph (Digraph) – Edges have direction (e.g., roads, dependencies)
-
-[.text-center]
-.Figure 3.9. The view of (a) undirected and (b) directed graphs
-image::section_3/Fig3_9_graph.svg[width=100%, link=self, window="_blank"]
-
-🔹 Graph Representation in JavaScript
-
-A graph can be represented using an adjacency list, where:
-
-    Each node (vertex) stores a list of neighbors
-
-    Directed graphs store one-way connections
-
-    Undirected graphs store two-way connections
-
-🔹 Creating a Graph in JavaScript
-
-We will use a factory function to create a graph.
-
-[source, javascript]
-
-function createGraph(isDirected = false) {
-let adjacencyList = new Map();
-
-function addVertex(vertex) { // adds a new node
-if (!adjacencyList.has(vertex)) {
-adjacencyList.set(vertex, []);
-}
-}
-
-function addEdge(vertex1, vertex2) { // connects two nodes
-if (!adjacencyList.has(vertex1)) {
-addVertex(vertex1);
-}
-if (!adjacencyList.has(vertex2)) {
-addVertex(vertex2);
-}
-adjacencyList.get(vertex1).push(vertex2);
-
-if (!isDirected) {
-adjacencyList.get(vertex2).push(vertex1);
-}
-}
-
-function getAdjacencyList() { // returns the full graph structure
-return adjacencyList;
-}
-
-return { addVertex, addEdge, getAdjacencyList };
-}
-
-Algorithms implementing basic graph manipulation functions are presented in Section 9.
+Binary trees as an abstract data type were discussed in Section 1. Here we will discuss the computer implementation of this type of data structure using the visual algorithmic language DRAKON and JavaScript. Before we continue, let's
