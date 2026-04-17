@@ -246,3 +246,61 @@ pre.highlight {
     border: 1px solid #333 !important;
     border-radius: 6px;
 }
+
+/* --- ДОПОЛНЕНИЯ ОТ [ТЕКУЩАЯ ДАТА] --- */
+
+/* 1. КОНТРАСТНОСТЬ МЕНЮ */
+/* Левое меню (Навигация по книге) */
+.nav-link, .nav-text, .nav-item a {
+    color: #ffffff !important; /* Яркий белый текст */
+    opacity: 1 !important;
+}
+
+/* Правое меню (Оглавление статьи) */
+.toc-menu a, .article-toc a, aside.toc.sidebar a {
+    color: #dddddd !important; /* Светло-серый текст */
+}
+
+.toc-title {
+    color: var(--accent-color) !important; /* Заголовок "В этой статье" выделяем цветом */
+}
+
+/* 2. ПОЗИЦИОНИРОВАНИЕ МЕТКИ ЯЗЫКА И КНОПКИ COPY */
+.listingblock {
+    position: relative;
+    padding-top: 1.5rem !important; /* Место для "шапки" блока кода */
+}
+
+/* Текст "javascript" сверху справа */
+.listingblock:before {
+    content: "javascript";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #333;
+    color: #aaa;
+    padding: 0 10px;
+    font-size: 0.75rem;
+    font-family: monospace;
+    border-radius: 0 4px 0 4px;
+    text-transform: lowercase;
+}
+
+/* Кнопка копирования - смещаем влево от надписи javascript */
+.copy-button {
+    position: absolute !important;
+    top: 0 !important;
+    right: 80px !important; /* Отодвигаем от правого края, чтобы не было наложения */
+    background: transparent !important;
+    border: none !important;
+    color: var(--accent-color) !important;
+    font-size: 0.8rem !important;
+    text-transform: uppercase;
+}
+
+/* Убираем возможные белые пятна под иконкой внутри кнопки */
+.copy-button img {
+    background: transparent !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+}
