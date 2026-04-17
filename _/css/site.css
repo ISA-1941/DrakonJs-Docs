@@ -61,9 +61,10 @@ html, body {
     line-height: 1.8 !important;
 }
 
-/* 4. ИЛЛЮСТРАЦИИ (Только для реальных картинок контента) */
-/* Мы добавляем :not(), чтобы не красить иконки интерфейса в белый цвет */
-.doc img:not(.icon) {
+/* 4. ИЛЛЮСТРАЦИИ (Ваши схемы и рисунки) */
+/* Применяем белый фон только к изображениям, которые являются непосредственной частью контента */
+.doc .imageblock img, 
+.doc .inline-image img {
     max-width: 100% !important;
     height: auto !important;
     background-color: #ffffff !important; 
@@ -72,6 +73,32 @@ html, body {
     display: block;
     margin: 2rem auto !important;
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* КРИТИЧЕСКОЕ ИСПРАВЛЕНИЕ: Сброс для иконок интерфейса и кнопки Copy */
+.doc img.copy-icon,
+.copy-button img,
+.copy-button svg,
+span.copy-icon img {
+    background-color: transparent !important; /* Убираем белый фон */
+    padding: 0 !important;                /* Убираем лишние отступы */
+    margin: 0 !important;                 /* Убираем лишние зазоры */
+    box-shadow: none !important;          /* Убираем тень */
+    display: inline-block !important;     /* Возвращаем в строку с текстом */
+    width: 16px !important;               /* Ограничиваем размер иконки */
+}
+
+/* Оформление самой кнопки, чтобы она была темной и аккуратной */
+.copy-button {
+    background-color: #333 !important;
+    border: 1px solid #555 !important;
+    color: #e0e0e0 !important;
+    padding: 2px 6px !important;
+    cursor: pointer;
+}
+
+.copy-button:hover {
+    background-color: var(--accent-color) !important;
 }
 
 /* 5. ПРАВОЕ МЕНЮ (РАЗДЕЛЫ) */
