@@ -15,7 +15,7 @@ html, body {
     padding: 0;
 }
 
-/* 2. ЛЕВОЕ МЕНЮ (КНИГА) — ШИРИНА 340px И ПРИЖАТИЕ ВЛЕВО */
+/* 2. ЛЕВОЕ МЕНЮ (КНИГА) */
 .nav-container {
     position: fixed !important;
     top: 4rem !important;
@@ -26,421 +26,138 @@ html, body {
     border-right: 1px solid var(--border-color) !important;
     z-index: 100;
     overflow-y: auto;
-    padding: 0 !important; 
 }
 
-/* Сброс всех внутренних отступов для выравнивания по левому краю */
-.nav, .nav-menu, .nav-list, .nav-item, .nav-item-toggle {
-    margin-left: 0 !important;
-    padding-left: 0 !important;
-}
-
-.nav-link, .nav-text {
-    padding-left: 1rem !important; 
-    margin-left: 0 !important;
+.nav-link, .nav-text, .nav-item a {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    padding-left: 1rem !important;
     display: block !important;
 }
 
-.nav-list .nav-list {
-    padding-left: 1.2rem !important; /* Небольшой отступ для иерархии вложенных глав */
+/* 3. ПРАВОЕ МЕНЮ (ОГЛАВЛЕНИЕ РАЗДЕЛА) */
+aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
+    position: fixed !important;
+    top: 4rem !important;
+    right: 0 !important;
+    width: 300px !important;
+    background-color: var(--panel-background) !important;
+    border-left: 1px solid var(--border-color) !important;
+    padding: 1.5rem !important;
 }
 
-/* 3. ОСНОВНОЙ КОНТЕНТ (ЦЕНТР) */
+.toc-menu a, .article-toc a, aside.toc.sidebar a {
+    color: #dddddd !important;
+}
+
+.toc-title {
+    color: var(--accent-color) !important;
+}
+
+/* 4. ОСНОВНОЙ КОНТЕНТ */
 .main {
-    margin-left: 340px !important; 
+    margin-left: 340px !important;
     margin-right: 300px !important;
     padding: 2rem !important;
     background-color: var(--body-background) !important;
-    min-height: 100vh;
 }
 
 .doc {
-    max-width: 1000px !important;   /* Оптимальная ширина для чтения */
+    max-width: 1000px !important;
     margin: 0 auto !important;
     font-size: 1.3rem !important;
     line-height: 1.8 !important;
 }
 
-/* 4. ИЛЛЮСТРАЦИИ (Ваши схемы и рисунки) */
-/* Применяем белый фон только к изображениям, которые являются непосредственной частью контента */
-.doc .imageblock img, 
-.doc .inline-image img {
+/* 5. ИЛЛЮСТРАЦИИ (Белый фон только для схем) */
+.doc .imageblock img, .doc .inline-image img {
     max-width: 100% !important;
-    height: auto !important;
-    background-color: #ffffff !important; 
+    background-color: #ffffff !important;
     padding: 15px !important;
     border-radius: 4px;
     display: block;
     margin: 2rem auto !important;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
-/* КРИТИЧЕСКОЕ ИСПРАВЛЕНИЕ: Сброс для иконок интерфейса и кнопки Copy */
-.doc img.copy-icon,
-.copy-button img,
-.copy-button svg,
-span.copy-icon img {
-    background-color: transparent !important; /* Убираем белый фон */
-    padding: 0 !important;                /* Убираем лишние отступы */
-    margin: 0 !important;                 /* Убираем лишние зазоры */
-    box-shadow: none !important;          /* Убираем тень */
-    display: inline-block !important;     /* Возвращаем в строку с текстом */
-    width: 16px !important;               /* Ограничиваем размер иконки */
-}
-
-/* Оформление самой кнопки, чтобы она была темной и аккуратной */
-.copy-button {
-    background-color: #333 !important;
-    border: 1px solid #555 !important;
-    color: #e0e0e0 !important;
-    padding: 2px 6px !important;
-    cursor: pointer;
-}
-
-.copy-button:hover {
-    background-color: var(--accent-color) !important;
-}
-
-/* 5. ПРАВОЕ МЕНЮ (РАЗДЕЛЫ) */
-aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
-    position: fixed !important;
-    top: 4rem !important;
-    right: 0 !important;           
-    left: auto !important;         
-    width: 300px !important;       
-    height: calc(100vh - 4rem) !important;
-    background-color: var(--panel-background) !important;
-    border-left: 1px solid var(--border-color) !important;
-    padding: 1.5rem !important;
-    z-index: 100;
-}
-
-/* 6. ШАПКА (NAVBAR) */
-.navbar {
-    background-color: var(--panel-background) !important;
-    border-bottom: 1px solid var(--border-color) !important;
-    position: fixed !important;
-    width: 100%;
-    top: 0;
-    z-index: 200;
-}
-
-.navbar-brand .navbar-item:first-child {
-    display: flex !important;
-    width: 340px !important; /* Совпадает с шириной левого меню */
-}
-
-/* Скрываем стандартные элементы-заглушки Antora */
-.navbar-item.has-dropdown, 
-.navbar-item:not(.has-dropdown):not(.search) {
-    display: none !important;
-}
-
-/* 7. ТЕКСТ И КОД (Исправление кнопки Copy) */
-.listingblock {
-    position: relative; /* Чтобы кнопка была внутри блока кода */
-}
-
-/* Скрываем громоздкую надпись "Copied", оставляем только иконку или делаем её компактной */
-.copy-button {
-    background-color: #333 !important;
-    color: #eee !important;
-    border: 1px solid #555 !important;
-    border-radius: 4px;
-    padding: 2px 8px !important;
-    font-size: 0.8rem !important;
-    opacity: 0.7;
-}
-
-.copy-button:hover {
-    opacity: 1;
-    background-color: var(--accent-color) !important;
-}
-
-/* Убираем белый фон, который случайно применился к иконке копирования */
-.copy-button img, .copy-button svg {
-    background-color: transparent !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    box-shadow: none !important;
-    display: inline-block !important;
-    width: 16px;
-}
-
-code {
-    background-color: var(--code-background) !important;
-    color: #ffd700 !important;
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
-}
-
-/* 8. ТАБЛИЦЫ (Видимость границ и сетки) */
+/* 6. ТАБЛИЦЫ */
 .doc table {
     border-collapse: collapse !important;
     width: 100% !important;
-    margin: 2rem 0 !important;
-    border: 1px solid #444 !important; /* Внешняя граница таблицы */
+    border: 1px solid #444 !important;
 }
 
-.doc th, .doc td {
-    border: 1px solid #444 !important; /* Цвет разделительных линий */
-    padding: 0.75rem !important;
-    text-align: left !important;
-}
-
-/* Окраска заголовков таблиц для лучшей читаемости */
 .doc th {
     background-color: #252525 !important;
     color: var(--accent-color) !important;
-    font-weight: bold !important;
 }
 
-/* Зебра (чередование строк) для удобства глаз */
-.doc tr:nth-child(even) {
-    background-color: #222 !important;
+.doc td, .doc th {
+    border: 1px solid #444 !important;
+    padding: 0.75rem !important;
 }
 
-/* 9. ПОДСВЕТКА СИНТАКСИСА JAVASCRIPT */
-
-/* Ключевые слова: function, let, const, return, if */
-.hljs-keyword, .hljs-selector-tag {
-    color: #ff79c6 !important; /* Ярко-розовый */
-    font-weight: bold;
-}
-
-/* Строки: "текст" */
-.hljs-string {
-    color: #f1fa8c !important; /* Светло-желтый */
-}
-
-/* Названия функций и методов */
-.hljs-title, .hljs-section, .hljs-function {
-    color: #50fa7b !important; /* Неоново-зеленый */
-}
-
-/* Комментарии: // текст */
-.hljs-comment, .hljs-quote {
-    color: #6272a4 !important; /* Серо-голубой (приглушенный) */
-    font-style: italic;
-}
-
-/* Числа и булевы значения: 10, true, false */
-.hljs-number, .hljs-literal {
-    color: #bd93f9 !important; /* Светло-фиолетовый */
-}
-
-/* Переменные и параметры */
-.hljs-variable, .hljs-params, .hljs-attr {
-    color: #8be9fd !important; /* Голубой */
-}
-
-/* Операторы и знаки препинания: +, =, { } */
-.hljs-operator, .hljs-punctuation {
-    color: #e0e0e0 !important;
-}
-
-/* Фон самого блока с кодом (на всякий случай) */
-pre.highlight {
-    background-color: #000000 !important;
-    padding: 1rem !important;
-    border: 1px solid #333 !important;
-    border-radius: 6px;
-}
-
-/* --- ДОПОЛНЕНИЯ ОТ [ТЕКУЩАЯ ДАТА] --- */
-
-/* 1. КОНТРАСТНОСТЬ МЕНЮ */
-/* Левое меню (Навигация по книге) */
-.nav-link, .nav-text, .nav-item a {
-    color: #ffffff !important; /* Яркий белый текст */
-    opacity: 1 !important;
-}
-
-/* Правое меню (Оглавление статьи) */
-.toc-menu a, .article-toc a, aside.toc.sidebar a {
-    color: #dddddd !important; /* Светло-серый текст */
-}
-
-.toc-title {
-    color: var(--accent-color) !important; /* Заголовок "В этой статье" выделяем цветом */
-}
-
-/* 2. ПОЗИЦИОНИРОВАНИЕ МЕТКИ ЯЗЫКА И КНОПКИ COPY */
+/* 7. БЛОКИ КОДА (ФУНДАМЕНТАЛЬНАЯ НАСТРОЙКА) */
 .listingblock {
     position: relative;
-    padding-top: 1.5rem !important; /* Место для "шапки" блока кода */
-}
-
-/* Текст "javascript" сверху справа */
-.listingblock:before {
-    content: "javascript";
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: #fff;
-    color: #fff;
-    padding: 0 10px;
-    font-size: 0.75rem;
-    font-family: monospace;
-    border-radius: 0 4px 0 4px;
-    text-transform: lowercase;
-}
-
-/* Кнопка копирования - смещаем влево от надписи javascript */
-.copy-button {
-    position: absolute !important;
-    top: 0 !important;
-    right: 80px !important; /* Отодвигаем от правого края, чтобы не было наложения */
-    background: transparent !important;
-    border: none !important;
-    color: var(--accent-color) !important;
-    font-size: 0.8rem !important;
-    text-transform: uppercase;
-}
-
-/* Убираем возможные белые пятна под иконкой внутри кнопки */
-.copy-button img {
-    background: transparent !important;
-    padding: 0 !important;
-    box-shadow: none !important;
-}
-
-/* --- ПОЛНОЕ УДАЛЕНИЕ НАДПИСИ JAVASCRIPT НАД КОДОМ --- */
-
-/* Удаляем стандартную плашку с названием языка */
-.listingblock .content .highlight .code:before,
-.listingblock .content pre:before,
-.listingblock .code-label,
-.listingblock[class*="language-"]:before {
-    content: none !important;
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    padding: 0 !important;
-}
-
-/* На всякий случай скрываем заголовок блока кода, если он дублирует язык */
-.listingblock > .title {
-    display: none !important;
-}
-
-/* --- ГАРМОНИЗАЦИЯ БЛОКА КОДА: ЯЗЫК СЛЕВА, КНОПКА СПРАВА --- */
-
-.listingblock {
-    position: relative;
-    padding-top: 1.8rem !important; /* Увеличиваем отступ сверху для "шапки" */
-    background-color: #000 !important; /* Глубокий черный фон для кода */
+    padding-top: 2rem !important; /* Место под шапку */
+    background-color: var(--code-background) !important;
+    margin: 1.5rem 0 !important;
     border-radius: 6px;
-    margin-top: 1.5rem !important;
+    border: 1px solid #333;
 }
 
-/* Метка языка (javascript) - ТЕПЕРЬ СЛЕВА */
-.listingblock:before {
-    content: "javascript" !important;
-    display: block !important;
-    position: absolute;
-    top: 0;
-    left: 0; /* Прижимаем к левому краю */
-    background: #252525 !important; /* Чуть светлее фона, чтобы выделить зону */
-    color: #888 !important; /* Приглушенный текст */
-    padding: 2px 15px !important;
-    font-size: 0.75rem !important;
-    font-family: monospace;
-    border-radius: 6px 0 4px 0; /* Скругление только внешнего угла */
-    text-transform: lowercase;
-}
-/* Скрываем метку для всех остальных типов блоков (например, text или консольный вывод) */
-.listingblock:not(.language-javascript):before {
-    content: none !important;
-    display: none !important;
-}
-
-/* Кнопка копирования - ОСТАЕТСЯ СПРАВА */
-.copy-button {
-    position: absolute !important;
-    top: 0 !important;
-    right: 0 !important; /* Прижимаем к правому краю */
-    background: transparent !important;
-    border: none !important;
-    color: var(--accent-color) !important;
-    padding: 4px 12px !important;
-    font-size: 0.75rem !important;
-    text-transform: uppercase;
-    cursor: pointer;
-    opacity: 0.7;
-}
-
-.copy-button:hover {
-    opacity: 1;
-    color: #fff !important;
-}
-
-/* Убираем все лишние "заводские" надписи, которые могут дублироваться */
-.listingblock .code-label, 
-.highlight .code:after {
-    display: none !important;
-}
-
-/* --- ГАРМОНИЗАЦИЯ БЛОКА КОДА: ЯЗЫК СЛЕВА, КНОПКА СПРАВА --- */
-
-.listingblock {
-    position: relative;
-    padding-top: 1.8rem !important; /* Увеличиваем отступ сверху для "шапки" */
-    background-color: #000 !important; /* Глубокий черный фон для кода */
-    border-radius: 6px;
-    margin-top: 1.5rem !important;
-}
-
-/* 1. ПОЛНЫЙ СБРОС ЗАВОДСКИХ МЕТОК (Убираем "мусор") */
+/* СБРОС: Убираем ВСЕ системные надписи Antora (и сверху, и снизу) */
 .listingblock:before, 
 .listingblock:after,
-.listingblock .code-label {
+.listingblock .code-label,
+.highlight .code:after {
     content: none !important;
     display: none !important;
 }
 
-/* 2. СОЗДАНИЕ ЧИСТОЙ МЕТКИ (Только там, где нужно) */
-/* Если хотите ВООБЩЕ УДАЛИТЬ надпись javascript — просто не добавляйте блок ниже */
-
+/* СОЗДАНИЕ ЧИСТОЙ МЕТКИ ЯЗЫКА СЛЕВА */
 .listingblock.language-javascript:before {
     content: "javascript" !important;
     display: block !important;
     position: absolute;
     top: 0;
     left: 0;
-    
-    /* Стили для четкости */
     background: #333 !important;
-    color: var(--accent-color) !important; /* Используем ваш акцентный цвет для четкости */
-    padding: 2px 12px !important;
-    font-size: 0.75rem !important;
+    color: var(--accent-color) !important;
+    padding: 2px 15px !important;
+    font-size: 0.8rem !important;
     font-family: monospace;
-    border-radius: 4px 0 4px 0;
-    z-index: 5;
+    border-radius: 6px 0 4px 0;
 }
 
-/* Кнопка копирования - ОСТАЕТСЯ СПРАВА */
+/* КНОПКА КОПИРОВАНИЯ СПРАВА */
 .copy-button {
     position: absolute !important;
     top: 0 !important;
-    right: 0 !important; /* Прижимаем к правому краю */
+    right: 0 !important;
     background: transparent !important;
     border: none !important;
-    color: var(--accent-color) !important;
+    color: #888 !important;
     padding: 4px 12px !important;
-    font-size: 0.75rem !important;
-    text-transform: uppercase;
     cursor: pointer;
-    opacity: 0.7;
 }
 
 .copy-button:hover {
-    opacity: 1;
     color: #fff !important;
 }
 
-/* Убираем все лишние "заводские" надписи, которые могут дублироваться */
-.listingblock .code-label, 
-.highlight .code:after {
-    display: none !important;
+/* Убираем белый фон у иконки внутри кнопки */
+.copy-button img, .copy-button svg {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    width: 16px;
 }
+
+/* 8. ПОДСВЕТКА СИНТАКСИСА (КРАТКО) */
+.hljs-keyword { color: #ff79c6 !important; font-weight: bold; }
+.hljs-string { color: #f1fa8c !important; }
+.hljs-title { color: #50fa7b !important; }
+.hljs-comment { color: #6272a4 !important; font-style: italic; }
+.hljs-number { color: #bd93f9 !important; }
+code { color: #ffd700 !important; background: transparent !important; }
