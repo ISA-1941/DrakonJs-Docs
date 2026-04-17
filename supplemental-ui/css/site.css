@@ -391,20 +391,32 @@ pre.highlight {
     margin-top: 1.5rem !important;
 }
 
-/* Метка языка (javascript) - ТЕПЕРЬ СЛЕВА */
-.listingblock:before {
+/* 1. ПОЛНЫЙ СБРОС ЗАВОДСКИХ МЕТОК (Убираем "мусор") */
+.listingblock:before, 
+.listingblock:after,
+.listingblock .code-label {
+    content: none !important;
+    display: none !important;
+}
+
+/* 2. СОЗДАНИЕ ЧИСТОЙ МЕТКИ (Только там, где нужно) */
+/* Если хотите ВООБЩЕ УДАЛИТЬ надпись javascript — просто не добавляйте блок ниже */
+
+.listingblock.language-javascript:before {
     content: "javascript" !important;
     display: block !important;
     position: absolute;
     top: 0;
-    left: 0; /* Прижимаем к левому краю */
-    background: #252525 !important; /* Чуть светлее фона, чтобы выделить зону */
-    color: #888 !important; /* Приглушенный текст */
-    padding: 2px 15px !important;
+    left: 0;
+    
+    /* Стили для четкости */
+    background: #333 !important;
+    color: var(--accent-color) !important; /* Используем ваш акцентный цвет для четкости */
+    padding: 2px 12px !important;
     font-size: 0.75rem !important;
     font-family: monospace;
-    border-radius: 6px 0 4px 0; /* Скругление только внешнего угла */
-    text-transform: lowercase;
+    border-radius: 4px 0 4px 0;
+    z-index: 5;
 }
 
 /* Кнопка копирования - ОСТАЕТСЯ СПРАВА */
