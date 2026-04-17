@@ -277,8 +277,8 @@ pre.highlight {
     position: absolute;
     top: 0;
     right: 0;
-    background: #333;
-    color: #aaa;
+    background: #fff;
+    color: #fff;
     padding: 0 10px;
     font-size: 0.75rem;
     font-family: monospace;
