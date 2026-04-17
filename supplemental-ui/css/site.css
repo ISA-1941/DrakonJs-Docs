@@ -304,3 +304,74 @@ pre.highlight {
     padding: 0 !important;
     box-shadow: none !important;
 }
+
+/* --- ПОЛНОЕ УДАЛЕНИЕ НАДПИСИ JAVASCRIPT НАД КОДОМ --- */
+
+/* Удаляем стандартную плашку с названием языка */
+.listingblock .content .highlight .code:before,
+.listingblock .content pre:before,
+.listingblock .code-label,
+.listingblock[class*="language-"]:before {
+    content: none !important;
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    padding: 0 !important;
+}
+
+/* На всякий случай скрываем заголовок блока кода, если он дублирует язык */
+.listingblock > .title {
+    display: none !important;
+}
+
+/* --- ГАРМОНИЗАЦИЯ БЛОКА КОДА: ЯЗЫК СЛЕВА, КНОПКА СПРАВА --- */
+
+.listingblock {
+    position: relative;
+    padding-top: 1.8rem !important; /* Увеличиваем отступ сверху для "шапки" */
+    background-color: #000 !important; /* Глубокий черный фон для кода */
+    border-radius: 6px;
+    margin-top: 1.5rem !important;
+}
+
+/* Метка языка (javascript) - ТЕПЕРЬ СЛЕВА */
+.listingblock:before {
+    content: "javascript" !important;
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0; /* Прижимаем к левому краю */
+    background: #252525 !important; /* Чуть светлее фона, чтобы выделить зону */
+    color: #888 !important; /* Приглушенный текст */
+    padding: 2px 15px !important;
+    font-size: 0.75rem !important;
+    font-family: monospace;
+    border-radius: 6px 0 4px 0; /* Скругление только внешнего угла */
+    text-transform: lowercase;
+}
+
+/* Кнопка копирования - ОСТАЕТСЯ СПРАВА */
+.copy-button {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important; /* Прижимаем к правому краю */
+    background: transparent !important;
+    border: none !important;
+    color: var(--accent-color) !important;
+    padding: 4px 12px !important;
+    font-size: 0.75rem !important;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.copy-button:hover {
+    opacity: 1;
+    color: #fff !important;
+}
+
+/* Убираем все лишние "заводские" надписи, которые могут дублироваться */
+.listingblock .code-label, 
+.highlight .code:after {
+    display: none !important;
+}
