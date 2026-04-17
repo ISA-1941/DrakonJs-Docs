@@ -161,3 +161,17 @@ aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
 .hljs-comment { color: #6272a4 !important; font-style: italic; }
 .hljs-number { color: #bd93f9 !important; }
 code { color: #ffd700 !important; background: transparent !important; }
+
+/* Прямой запрет на вывод текста после содержимого кода */
+.listingblock code:after, 
+.listingblock pre:after,
+.listingblock .highlight:after {
+    content: none !important;
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Удаление любых подписей под блоком */
+.listingblock + .paragraph {
+    margin-top: 0.5rem !important;
+}
