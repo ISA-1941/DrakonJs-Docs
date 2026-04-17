@@ -204,14 +204,18 @@ This section delves into the practical implementation of basic Abstract Data Typ
 <div class="paragraph">
 <p>1️⃣ Using [] (Recommended)</p>
 </div>
-<div class="paragraph">
-<p>let numbers = [24, 12, 36, 6, 47, 11];</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let numbers = [24, 12, 36, 6, 47, 11];</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p>2️⃣ Using the Array Constructor</p>
 </div>
-<div class="paragraph">
-<p>let numbers = new Array(24, 12, 36, 6, 47, 11);</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let numbers = new Array(24, 12, 36, 6, 47, 11);</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p>This method is rarely used in modern JavaScript.</p>
@@ -222,15 +226,16 @@ This section delves into the practical implementation of basic Abstract Data Typ
 <div class="paragraph">
 <p>JavaScript supports multidimensional arrays by storing arrays inside arrays.</p>
 </div>
-<div class="paragraph">
-<p>let matrix = [
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let matrix = [
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9]
-];</p>
+];
+
+console.log(matrix[1][2]); // Output: 6</code></pre>
 </div>
-<div class="paragraph">
-<p>console.log(matrix[1][2]); // Output: 6</p>
 </div>
 <div class="paragraph">
 <p>Here, matrix[1][2] accesses the second row, third column (6).</p>
@@ -335,11 +340,9 @@ firstName: "Peter",
 lastName: "Wolf",
 age: 35,
 salary: 20000
-};</code></pre>
+};
+console.log("Employee 1:", employee1);</code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>console.log("Employee 1:", employee1);</p>
 </div>
 <div class="paragraph">
 <p>🔹 Alternative Way: Object Constructor</p>
@@ -353,11 +356,10 @@ salary: 20000
 employee2.firstName = "Nick";
 employee2.lastName = "Smith";
 employee2.age = 49;
-employee2.salary = 35000;</code></pre>
+employee2.salary = 35000;
+
+console.log("Employee 2:", employee2);</code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>console.log("Employee 2:", employee2);</p>
 </div>
 <div class="paragraph">
 <p>Key Differences:</p>
@@ -387,24 +389,23 @@ lastName,
 age,
 salary
 };
-}</code></pre>
+}
+
+let emp1 = createEmployee("Peter", "Wolf", 35, 20000);
+let emp2 = createEmployee("Nick", "Smith", 49, 35000);
+
+console.log("Employee 1:", emp1);
+console.log("Employee 2:", emp2);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>let emp1 = createEmployee("Peter", "Wolf", 35, 20000);
-let emp2 = createEmployee("Nick", "Smith", 49, 35000);</p>
+<p>Output:</p>
 </div>
-<div class="paragraph">
-<p>console.log("Employee 1:", emp1);
-console.log("Employee 2:", emp2);</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">Employee 1: { firstName: 'Peter', lastName: 'Wolf', age: 35, salary: 20000 }
+Employee 2: { firstName: 'Nick', lastName: 'Smith', age: 49, salary: 35000 }</code></pre>
 </div>
-<div class="paragraph">
-<p>Output:
-text</p>
-</div>
-<div class="paragraph">
-<p>Employee 1: { firstName: 'Peter', lastName: 'Wolf', age: 35, salary: 20000 }
-Employee 2: { firstName: 'Nick', lastName: 'Smith', age: 49, salary: 35000 }</p>
 </div>
 <div class="paragraph">
 <p>🔹 Adding Methods to a Factory Function</p>
@@ -416,32 +417,30 @@ Employee 2: { firstName: 'Nick', lastName: 'Smith', age: 49, salary: 35000 }</p>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">function createEmployee(firstName, lastName, age, salary) {
 return {
-getFullName: () =&gt; ${firstName} ${lastName},
+getFullName: () =&gt; `${firstName} ${lastName}`,
 getSalary: () =&gt; salary, // You can read salary
 setSalary: (newSalary) =&gt; salary = newSalary // You can change salary
 };
-}</code></pre>
+}
+
+let emp5 = createEmployee("Bob", "Anderson", 50, 30000);
+
+console.log(emp5.getFullName()); // "Bob Anderson"
+console.log(emp5.getSalary()); // 30000
+
+emp5.setSalary(35000);
+console.log(emp5.getSalary()); // 35000</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>let emp5 = createEmployee("Bob", "Anderson", 50, 30000);</p>
+<p>Output:</p>
 </div>
-<div class="paragraph">
-<p>console.log(emp5.getFullName()); // "Bob Anderson"
-console.log(emp5.getSalary()); // 30000</p>
-</div>
-<div class="paragraph">
-<p>emp5.setSalary(35000);
-console.log(emp5.getSalary()); // 35000</p>
-</div>
-<div class="paragraph">
-<p>Output:
-text</p>
-</div>
-<div class="paragraph">
-<p>Bob Anderson
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">Bob Anderson
 30000
-35000</p>
+35000</code></pre>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -477,16 +476,14 @@ text</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let studentScores = new Map();</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>studentScores.set("Alice", 95);
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">let studentScores = new Map();
+
+studentScores.set("Alice", 95);
 studentScores.set("Bob", 88);
-studentScores.set("Charlie", 92);</p>
+studentScores.set("Charlie", 92);
+
+console.log(studentScores);</code></pre>
 </div>
-<div class="paragraph">
-<p>console.log(studentScores);</p>
 </div>
 <div class="paragraph">
 <p>Now, studentScores contains:</p>
@@ -648,37 +645,32 @@ size: 0
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">function createStack() {
-let data = []; // Internal storage for stack elements</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>return {
+let data = []; // Internal storage for stack elements
+
+return {
 push(item) {
 data.push(item);
-},</p>
-</div>
-<div class="paragraph">
-<p>pop() {
+},
+
+pop() {
 if (data.length === 0) return undefined;
 return data.pop();
-},</p>
-</div>
-<div class="paragraph">
-<p>peek() {
+},
+
+peek() {
 return data[data.length - 1]; // View the top element
-},</p>
-</div>
-<div class="paragraph">
-<p>size() {
+},
+
+size() {
 return data.length;
-},</p>
-</div>
-<div class="paragraph">
-<p>isEmpty() {
+},
+
+isEmpty() {
 return data.length === 0;
 }
 };
-}</p>
+}</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p>b) Queue</p>
@@ -721,274 +713,7 @@ return data.length === 0;
 <div class="sect3">
 <h4 id="_3_2_7_representation_of_binary_trees_in_javascript"><a class="anchor" href="#_3_2_7_representation_of_binary_trees_in_javascript"></a>3.2.7. Representation of Binary Trees in JavaScript</h4>
 <div class="paragraph">
-<p>Binary trees as an abstract data type were discussed in Section 1. Here we will discuss the computer implementation of this type of data structure using the visual algorithmic language DRAKON and JavaScript. Before we continue, let&#8217;s review the key terms associated with binary trees (Figure 3.7).</p>
-</div>
-<div class="imageblock text-center text-center">
-<div class="content">
-<img src="_images/section_3/Fig3_7_Term.svg" alt="Fig3 7 Term" width="100%" height="40%">
-</div>
-<div class="title">Figure 3.7. Basic terminology of the tree</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Root: The root of the tree is the only node with no incoming edges. It is the top node in the tree.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Node: The basic element of the tree. Each node has data and two references that can point to zero or more descendants.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Edge: A fundamental part of the tree used to connect two nodes.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Path: An ordered list of nodes connected by edges.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Leaf: A leaf node is a node that has no descendants.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Tree height: The number of edges on the longest path between the root and a leaf.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Node level: The number of edges on the path from the root node to that node.</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The binary tree&#8217;s information structure is set up as follows (Figure 3.8):</p>
-</div>
-<div class="imageblock text-center">
-<div class="content">
-<a class="image" href="_images/section_3/Fig3_8_BST.svg" target="_blank" rel="noopener"><img src="_images/section_3/Fig3_8_BST.svg" alt="Fig3 8 BST" width="100%"></a>
-</div>
-<div class="title">Figure 3.8. Binary tree structure (value - value (key), N - NULL)</div>
-</div>
-<div class="paragraph">
-<p>The declaration of the basic elements of binary trees in JavaScript is conveniently performed using a factory function:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">function createNode(value) {
-return {
-value,
-left: null,
-right: null
-};
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Each node has:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>value – Stores the data</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>left – Reference to the left child (initially null)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>right – Reference to the right child (initially null)</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>A binary tree should have:</p>
-</div>
-<div class="paragraph">
-<p>1️⃣ A reference to the root node
-2️⃣ Methods to insert values into the tree
-3️⃣ Methods to traverse the tree</p>
-</div>
-<div class="paragraph">
-<p>The structure of a binary tree in JavaScript is declared in a simplified way:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">function createTreeNode(value, parent) {
-return {
-left: null,
-right: null,
-parent: parent,
-value: value,
-};
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Several types of binary trees are discussed in the literature, the most important of which is classification based on node values:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Binary Search Tree (BST)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>AVL Tree</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Red-Black Tree</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Binary Search Tree (BST)</p>
-</div>
-<div class="paragraph">
-<p>Node Structure: Each node has a value, a left child, and a right child. In JavaScript, this can be represented with objects.</p>
-</div>
-<div class="paragraph">
-<p>Insertion: New nodes are placed based on their value relative to the current node. Smaller values go left, larger values go right.</p>
-</div>
-<div class="paragraph">
-<p>AVL Tree</p>
-</div>
-<div class="paragraph">
-<p>Self-Balancing: Maintains balance by ensuring the height difference between left and right subtrees of any node is at most 1.</p>
-</div>
-<div class="paragraph">
-<p>Balancing Mechanism: Uses rotations (single and double) to restore balance after insertions or deletions.</p>
-</div>
-<div class="paragraph">
-<p>Implementation Notes: Requires tracking node heights and implementing rotation functions.</p>
-</div>
-<div class="paragraph">
-<p>Red-Black Tree</p>
-</div>
-<div class="paragraph">
-<p>Self-Balancing: Uses color attributes (red or black) for nodes and follows specific rules to maintain balance.</p>
-</div>
-<div class="paragraph">
-<p>Rules:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Root and leaves are black</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Red nodes have black children</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>All paths from a node to its descendant leaves contain the same number of black nodes</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Balancing Mechanism: Uses recoloring and rotations to restore balance after modifications.</p>
-</div>
-<div class="paragraph">
-<p>Performance: Often faster than AVL trees for insertions and deletions.</p>
-</div>
-<div class="paragraph">
-<p>Implementation Notes: Requires tracking node colors and implementing recoloring and rotation functions.</p>
-</div>
-<div class="paragraph">
-<p>Algorithms implementing the basic tree manipulation functions are presented in Section 8.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_3_2_8_representation_of_graphs_in_javascript"><a class="anchor" href="#_3_2_8_representation_of_graphs_in_javascript"></a>3.2.8. Representation of Graphs in JavaScript</h4>
-<div class="paragraph">
-<p>Recall that a graph G is given by a set of vertices {V} and a set of edges {E} connecting all or part of these vertices. Thus, a graph G is completely defined as {V, E}.</p>
-</div>
-<div class="paragraph">
-<p>Types of Graphs (Figure 3.9):</p>
-</div>
-<div class="paragraph">
-<p>1️⃣ Undirected Graph – Edges have no direction (e.g., friendships in social media)
-2️⃣ Directed Graph (Digraph) – Edges have direction (e.g., roads, dependencies)</p>
-</div>
-<div class="imageblock text-center">
-<div class="content">
-<a class="image" href="_images/section_3/Fig3_9_graph.svg" target="_blank" rel="noopener"><img src="_images/section_3/Fig3_9_graph.svg" alt="Fig3 9 graph" width="100%"></a>
-</div>
-<div class="title">Figure 3.9. The view of (a) undirected and (b) directed graphs</div>
-</div>
-<div class="paragraph">
-<p>🔹 Graph Representation in JavaScript</p>
-</div>
-<div class="paragraph">
-<p>A graph can be represented using an adjacency list, where:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Each node (vertex) stores a list of neighbors</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Directed graphs store one-way connections</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Undirected graphs store two-way connections</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>🔹 Creating a Graph in JavaScript</p>
-</div>
-<div class="paragraph">
-<p>We will use a factory function to create a graph.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">function createGraph(isDirected = false) {
-let adjacencyList = new Map();</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>function addVertex(vertex) { // adds a new node
-if (!adjacencyList.has(vertex)) {
-adjacencyList.set(vertex, []);
-}
-}</p>
-</div>
-<div class="paragraph">
-<p>function addEdge(vertex1, vertex2) { // connects two nodes
-if (!adjacencyList.has(vertex1)) {
-addVertex(vertex1);
-}
-if (!adjacencyList.has(vertex2)) {
-addVertex(vertex2);
-}
-adjacencyList.get(vertex1).push(vertex2);</p>
-</div>
-<div class="paragraph">
-<p>if (!isDirected) {
-adjacencyList.get(vertex2).push(vertex1);
-}
-}</p>
-</div>
-<div class="paragraph">
-<p>function getAdjacencyList() { // returns the full graph structure
-return adjacencyList;
-}</p>
-</div>
-<div class="paragraph">
-<p>return { addVertex, addEdge, getAdjacencyList };
-}</p>
-</div>
-<div class="paragraph">
-<p>Algorithms implementing basic graph manipulation functions are presented in Section 9.</p>
+<p>Binary trees as an abstract data type were discussed in Section 1. Here we will discuss the computer implementation of this type of data structure using the visual algorithmic language DRAKON and JavaScript. Before we continue, let&#8217;s</p>
 </div>
 </div>
 </div>
