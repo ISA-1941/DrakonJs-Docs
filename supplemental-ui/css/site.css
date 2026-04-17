@@ -199,3 +199,50 @@ code {
 .doc tr:nth-child(even) {
     background-color: #222 !important;
 }
+
+/* 9. ПОДСВЕТКА СИНТАКСИСА JAVASCRIPT */
+
+/* Ключевые слова: function, let, const, return, if */
+.hljs-keyword, .hljs-selector-tag {
+    color: #ff79c6 !important; /* Ярко-розовый */
+    font-weight: bold;
+}
+
+/* Строки: "текст" */
+.hljs-string {
+    color: #f1fa8c !important; /* Светло-желтый */
+}
+
+/* Названия функций и методов */
+.hljs-title, .hljs-section, .hljs-function {
+    color: #50fa7b !important; /* Неоново-зеленый */
+}
+
+/* Комментарии: // текст */
+.hljs-comment, .hljs-quote {
+    color: #6272a4 !important; /* Серо-голубой (приглушенный) */
+    font-style: italic;
+}
+
+/* Числа и булевы значения: 10, true, false */
+.hljs-number, .hljs-literal {
+    color: #bd93f9 !important; /* Светло-фиолетовый */
+}
+
+/* Переменные и параметры */
+.hljs-variable, .hljs-params, .hljs-attr {
+    color: #8be9fd !important; /* Голубой */
+}
+
+/* Операторы и знаки препинания: +, =, { } */
+.hljs-operator, .hljs-punctuation {
+    color: #e0e0e0 !important;
+}
+
+/* Фон самого блока с кодом (на всякий случай) */
+pre.highlight {
+    background-color: #000000 !important;
+    padding: 1rem !important;
+    border: 1px solid #333 !important;
+    border-radius: 6px;
+}
