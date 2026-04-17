@@ -271,7 +271,7 @@ pre.highlight {
     padding-top: 1.5rem !important; /* Место для "шапки" блока кода */
 }
 
-/* Текст "javascript" сверху справа */
+/* Текст "javascript" сверху справа 
 .listingblock:before {
     content: "javascript";
     position: absolute;
@@ -285,7 +285,7 @@ pre.highlight {
     border-radius: 0 4px 0 4px;
     text-transform: lowercase;
 }
-
+*/
 /* Кнопка копирования - смещаем влево от надписи javascript */
 .copy-button {
     position: absolute !important;
