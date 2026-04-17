@@ -349,6 +349,11 @@ pre.highlight {
     border-radius: 6px 0 4px 0; /* Скругление только внешнего угла */
     text-transform: lowercase;
 }
+/* Скрываем метку для всех остальных типов блоков (например, text или консольный вывод) */
+.listingblock:not(.language-javascript):before {
+    content: none !important;
+    display: none !important;
+}
 
 /* Кнопка копирования - ОСТАЕТСЯ СПРАВА */
 .copy-button {
