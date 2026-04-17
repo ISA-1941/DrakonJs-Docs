@@ -175,3 +175,29 @@ code { color: #ffd700 !important; background: transparent !important; }
 .listingblock + .paragraph {
     margin-top: 0.5rem !important;
 }
+
+/* --- ПОЛНОЕ И ОКОНЧАТЕЛЬНОЕ УДАЛЕНИЕ "ХВОСТОВ" ВНИЗУ БЛОКА --- */
+
+/* 1. Скрываем все псевдоэлементы ПОСЛЕ контента во всех частях блока */
+.listingblock:after,
+.listingblock .content:after,
+.listingblock pre:after,
+.listingblock code:after,
+.listingblock .highlight:after {
+    content: none !important;
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+}
+
+/* 2. Скрываем подрисуночные подписи для блоков кода, если Antora их генерирует */
+.listingblock .title, 
+.listingblock .caption {
+    display: none !important;
+}
+
+/* 3. Убираем "призрачные" отступы, которые могут создаваться этими элементами */
+.listingblock .content {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
