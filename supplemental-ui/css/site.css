@@ -61,16 +61,17 @@ html, body {
     line-height: 1.8 !important;
 }
 
-/* 4. ИЛЛЮСТРАЦИИ (Решение проблем прозрачности и обрезки) */
-.doc img {
-    max-width: 100% !important;     /* Защита от обрезания: не шире текстового поля */
-    height: auto !important;        /* Сохранение пропорций */
-    background-color: #ffffff !important; /* БЕЛАЯ ПОДЛОЖКА для прозрачных SVG */
-    padding: 15px !important;       /* Отступ картинки от края белого фона */
-    border-radius: 4px;             /* Аккуратные углы подложки */
+/* 4. ИЛЛЮСТРАЦИИ (Только для реальных картинок контента) */
+/* Мы добавляем :not(), чтобы не красить иконки интерфейса в белый цвет */
+.doc img:not(.icon) {
+    max-width: 100% !important;
+    height: auto !important;
+    background-color: #ffffff !important; 
+    padding: 15px !important;
+    border-radius: 4px;
     display: block;
-    margin: 2rem auto !important;   /* Центрирование иллюстрации */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5); /* Тень для объема на темном фоне */
+    margin: 2rem auto !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
 /* 5. ПРАВОЕ МЕНЮ (РАЗДЕЛЫ) */
@@ -108,9 +109,37 @@ aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
     display: none !important;
 }
 
-/* 7. ТЕКСТ И КОД */
-h1, h2, h3 { color: #ffffff !important; }
-a { color: var(--accent-color) !important; text-decoration: none; }
+/* 7. ТЕКСТ И КОД (Исправление кнопки Copy) */
+.listingblock {
+    position: relative; /* Чтобы кнопка была внутри блока кода */
+}
+
+/* Скрываем громоздкую надпись "Copied", оставляем только иконку или делаем её компактной */
+.copy-button {
+    background-color: #333 !important;
+    color: #eee !important;
+    border: 1px solid #555 !important;
+    border-radius: 4px;
+    padding: 2px 8px !important;
+    font-size: 0.8rem !important;
+    opacity: 0.7;
+}
+
+.copy-button:hover {
+    opacity: 1;
+    background-color: var(--accent-color) !important;
+}
+
+/* Убираем белый фон, который случайно применился к иконке копирования */
+.copy-button img, .copy-button svg {
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    display: inline-block !important;
+    width: 16px;
+}
+
 code {
     background-color: var(--code-background) !important;
     color: #ffd700 !important;
