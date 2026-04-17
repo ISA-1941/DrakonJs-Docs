@@ -52,12 +52,10 @@ JavaScript arrays are dynamic, meaning they can grow and shrink as needed. Unlik
 Arrays in JavaScript can be declared in different ways:
 
 1️⃣ Using [] (Recommended)
-javascript
 
 let numbers = [24, 12, 36, 6, 47, 11];
 
 2️⃣ Using the Array Constructor
-javascript
 
 let numbers = new Array(24, 12, 36, 6, 47, 11);
 
@@ -66,7 +64,6 @@ This method is rarely used in modern JavaScript.
 🔹 Multidimensional Arrays
 
 JavaScript supports multidimensional arrays by storing arrays inside arrays.
-javascript
 
 let matrix = [
     [1, 2, 3],
