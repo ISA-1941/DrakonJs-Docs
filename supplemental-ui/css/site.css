@@ -15,7 +15,7 @@ html, body {
     padding: 0;
 }
 
-/* 2. ЛЕВОЕ МЕНЮ (КНИГА) */
+/* 2. ЛЕВОЕ МЕНЮ (НАВИГАЦИЯ КНИГИ) */
 .nav-container {
     position: fixed !important;
     top: 4rem !important;
@@ -30,12 +30,12 @@ html, body {
 
 .nav-link, .nav-text, .nav-item a {
     color: #ffffff !important;
-    opacity: 1 !important;
     padding-left: 1rem !important;
     display: block !important;
+    text-decoration: none;
 }
 
-/* 3. ПРАВОЕ МЕНЮ (ОГЛАВЛЕНИЕ РАЗДЕЛА) */
+/* 3. ПРАВОЕ МЕНЮ (ОГЛАВЛЕНИЕ СТАТЬИ) */
 aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
     position: fixed !important;
     top: 4rem !important;
@@ -44,10 +44,7 @@ aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
     background-color: var(--panel-background) !important;
     border-left: 1px solid var(--border-color) !important;
     padding: 1.5rem !important;
-}
-
-.toc-menu a, .article-toc a, aside.toc.sidebar a {
-    color: #dddddd !important;
+    z-index: 100;
 }
 
 .toc-title {
@@ -59,7 +56,6 @@ aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
     margin-left: 340px !important;
     margin-right: 300px !important;
     padding: 2rem !important;
-    background-color: var(--body-background) !important;
 }
 
 .doc {
@@ -69,8 +65,8 @@ aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
     line-height: 1.8 !important;
 }
 
-/* 5. ИЛЛЮСТРАЦИИ (Белый фон только для схем) */
-.doc .imageblock img, .doc .inline-image img {
+/* 5. ИЛЛЮСТРАЦИИ (Белый фон для схем) */
+.doc .imageblock img {
     max-width: 100% !important;
     background-color: #ffffff !important;
     padding: 15px !important;
@@ -79,7 +75,70 @@ aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
     margin: 2rem auto !important;
 }
 
-/* 6. ТАБЛИЦЫ */
+/* 6. БЛОКИ КОДА (ГАРМОНИЗАЦИЯ: ЯЗЫК И COPY В ОДНОЙ СТРОКЕ) */
+
+/* Общий контейнер блока */
+.listingblock {
+    position: relative;
+    padding-top: 2.2rem !important; /* Место для верхней панели с кнопками */
+    background-color: var(--code-background) !important;
+    margin: 1.5rem 0 !important;
+    border-radius: 6px;
+    border: 1px solid #333;
+}
+
+/* СБРОС: Скрываем все автоматические надписи Antora (особенно снизу!) */
+.listingblock:after, 
+.listingblock .content:after,
+.listingblock .code-label,
+.highlight .code:after {
+    content: none !important;
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* НАЗВАНИЕ ЯЗЫКА (Справа в углу) */
+.listingblock.language-javascript:before {
+    content: "javascript" !important;
+    display: block !important;
+    position: absolute;
+    top: 6px !important;
+    right: 12px !important; /* Прижимаем к правому краю */
+    
+    color: #666 !important; /* Неброский серый цвет */
+    font-size: 0.75rem !important;
+    font-family: monospace;
+    text-transform: lowercase;
+    z-index: 10;
+}
+
+/* КНОПКА КОПИРОВАНИЯ (Левее от названия языка) */
+.copy-button {
+    position: absolute !important;
+    top: 4px !important;
+    right: 95px !important; /* Сдвиг влево, чтобы не накладываться на "javascript" */
+    
+    background: transparent !important;
+    border: none !important;
+    color: var(--accent-color) !important;
+    font-size: 0.75rem !important;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 11;
+}
+
+.copy-button:hover {
+    color: #fff !important;
+}
+
+/* Убираем лишние фоны у иконки Copy */
+.copy-button img, .copy-button svg {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+/* 7. ТАБЛИЦЫ */
 .doc table {
     border-collapse: collapse !important;
     width: 100% !important;
@@ -96,108 +155,11 @@ aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
     padding: 0.75rem !important;
 }
 
-/* 7. БЛОКИ КОДА (ФУНДАМЕНТАЛЬНАЯ НАСТРОЙКА) */
-.listingblock {
-    position: relative;
-    padding-top: 2rem !important; /* Место под шапку */
-    background-color: var(--code-background) !important;
-    margin: 1.5rem 0 !important;
-    border-radius: 6px;
-    border: 1px solid #333;
-}
-
-/* СБРОС: Убираем ВСЕ системные надписи Antora (и сверху, и снизу) */
-.listingblock:before, 
-.listingblock:after,
-.listingblock .code-label,
-.highlight .code:after {
-    content: none !important;
-    display: none !important;
-}
-
-/* СОЗДАНИЕ ЧИСТОЙ МЕТКИ ЯЗЫКА СЛЕВА */
-.listingblock.language-javascript:before {
-    content: "javascript" !important;
-    display: block !important;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #333 !important;
-    color: var(--accent-color) !important;
-    padding: 2px 15px !important;
-    font-size: 0.8rem !important;
-    font-family: monospace;
-    border-radius: 6px 0 4px 0;
-}
-
-/* КНОПКА КОПИРОВАНИЯ СПРАВА */
-.copy-button {
-    position: absolute !important;
-    top: 0 !important;
-    right: 0 !important;
-    background: transparent !important;
-    border: none !important;
-    color: #888 !important;
-    padding: 4px 12px !important;
-    cursor: pointer;
-}
-
-.copy-button:hover {
-    color: #fff !important;
-}
-
-/* Убираем белый фон у иконки внутри кнопки */
-.copy-button img, .copy-button svg {
-    background-color: transparent !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    width: 16px;
-}
-
-/* 8. ПОДСВЕТКА СИНТАКСИСА (КРАТКО) */
+/* 8. ПОДСВЕТКА СИНТАКСИСА */
 .hljs-keyword { color: #ff79c6 !important; font-weight: bold; }
 .hljs-string { color: #f1fa8c !important; }
 .hljs-title { color: #50fa7b !important; }
 .hljs-comment { color: #6272a4 !important; font-style: italic; }
 .hljs-number { color: #bd93f9 !important; }
 code { color: #ffd700 !important; background: transparent !important; }
-
-/* Прямой запрет на вывод текста после содержимого кода */
-.listingblock code:after, 
-.listingblock pre:after,
-.listingblock .highlight:after {
-    content: none !important;
-    display: none !important;
-    visibility: hidden !important;
-}
-
-/* Удаление любых подписей под блоком */
-.listingblock + .paragraph {
-    margin-top: 0.5rem !important;
-}
-
-/* --- ПОЛНОЕ И ОКОНЧАТЕЛЬНОЕ УДАЛЕНИЕ "ХВОСТОВ" ВНИЗУ БЛОКА --- */
-
-/* 1. Скрываем все псевдоэлементы ПОСЛЕ контента во всех частях блока */
-.listingblock:after,
-.listingblock .content:after,
-.listingblock pre:after,
-.listingblock code:after,
-.listingblock .highlight:after {
-    content: none !important;
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-}
-
-/* 2. Скрываем подрисуночные подписи для блоков кода, если Antora их генерирует */
-.listingblock .title, 
-.listingblock .caption {
-    display: none !important;
-}
-
-/* 3. Убираем "призрачные" отступы, которые могут создаваться этими элементами */
-.listingblock .content {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-}
+pre.highlight { background: var(--code-background) !important; padding: 1rem !important; }
