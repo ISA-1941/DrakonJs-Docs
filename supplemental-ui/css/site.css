@@ -51,6 +51,31 @@ aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
     color: var(--accent-color) !important;
 }
 
+/* Ссылки в правом меню */
+.toc.sidebar a,
+.article-toc a,
+aside.toc.sidebar a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 0.85rem !important;
+    display: block !important;
+    padding: 0.25rem 0 !important;
+}
+
+/* При наведении */
+.toc.sidebar a:hover,
+.article-toc a:hover,
+aside.toc.sidebar a:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Активная секция */
+.toc.sidebar .is-active,
+.article-toc .is-active {
+    color: var(--accent-color) !important;
+    font-weight: bold !important;
+}
+
 /* 4. ОСНОВНОЙ КОНТЕНТ */
 .main {
     margin-left: 340px !important;
