@@ -11,83 +11,41 @@
 html, body {
     background-color: var(--body-background) !important;
     color: var(--text-color) !important;
-    margin: 0;
-    padding: 0;
 }
 
-/* 2. ЛЕВОЕ МЕНЮ (НАВИГАЦИЯ КНИГИ) - ИЗМЕНЕНО */
+/* 2. ЛЕВОЕ МЕНЮ - ТОЛЬКО ЦВЕТ И РАЗМЕР ШРИФТА */
 .nav-container {
-    position: fixed !important;
-    top: 4rem !important;
-    left: 0 !important;
-    width: 13rem !important; /* Уменьшено с 340px до 13rem */
-    height: calc(100vh - 4rem) !important;
     background-color: var(--panel-background) !important;
-    border-right: 1px solid var(--border-color) !important; /* Изменено с border-left */
-    z-index: 100;
-    overflow-y: auto;
+    border-right: 1px solid var(--border-color) !important;
 }
 
-/* Уменьшаем отступы внутри меню */
+/* Уменьшаем размер шрифта в левом меню */
 .nav {
-    padding: 0.5rem 0 0 0 !important;
+    font-size: 0.85rem !important;  /* Было стандартно около 1rem */
 }
 
-/* Уменьшаем отступы у элементов меню */
-.nav .item,
-.nav .nav-item {
-    padding-left: 0 !important;
-}
-
-/* Уменьшаем расстояние между маркером и текстом */
-.nav .nav-item .nav-link::before {
-    margin-right: 0.25rem !important;
-}
-
-/* Настройка ссылок меню */
+/* Подвигаем текст меню влево */
 .nav-link, .nav-text, .nav-item a {
-    color: #ffffff !important;
-    padding-left: 0.5rem !important; /* Уменьшено с 1rem */
-    display: block !important;
-    text-decoration: none;
+    padding-left: 0.5rem !important;  /* Уменьшаем отступ слева */
 }
 
-/* Убираем лишние отступы у вложенных списков */
-.nav ul {
-    padding-left: 0.75rem !important;
-}
-
-/* 3. ПРАВОЕ МЕНЮ (ОГЛАВЛЕНИЕ СТАТЬИ) */
+/* 3. ПРАВОЕ МЕНЮ - ТОЛЬКО ЦВЕТ (ПОКА НЕ ТРОГАЕМ) */
 aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
-    position: fixed !important;
-    top: 4rem !important;
-    right: 0 !important;
-    width: 300px !important;
     background-color: var(--panel-background) !important;
     border-left: 1px solid var(--border-color) !important;
-    padding: 1.5rem !important;
-    z-index: 100;
 }
 
 .toc-title {
     color: var(--accent-color) !important;
 }
 
-/* 4. ОСНОВНОЙ КОНТЕНТ - ИЗМЕНЕНО */
-.main {
-    margin-left: 13rem !important; /* Изменено с 340px */
-    margin-right: 300px !important;
-    padding: 2rem !important;
-}
-
+/* 4. ОСНОВНОЙ КОНТЕНТ - БЕЗ ИЗМЕНЕНИЙ ПОЗИЦИОНИРОВАНИЯ */
 .doc {
-    max-width: none !important; /* Убираем ограничение ширины */
-    margin: 0 auto !important;
     font-size: 1.3rem !important;
     line-height: 1.8 !important;
 }
 
-/* 5. ИЛЛЮСТРАЦИИ (Белый фон для схем) */
+/* 5. ИЛЛЮСТРАЦИИ */
 .doc .imageblock img {
     max-width: 100% !important;
     background-color: #ffffff !important;
@@ -97,19 +55,16 @@ aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
     margin: 2rem auto !important;
 }
 
-/* 6. БЛОКИ КОДА (ГАРМОНИЗАЦИЯ: ЯЗЫК И COPY В ОДНОЙ СТРОКЕ) */
-
-/* Общий контейнер блока */
+/* 6. БЛОКИ КОДА */
 .listingblock {
     position: relative;
-    padding-top: 2.2rem !important; /* Место для верхней панели с кнопками */
+    padding-top: 2.2rem !important;
     background-color: var(--code-background) !important;
     margin: 1.5rem 0 !important;
     border-radius: 6px;
     border: 1px solid #333;
 }
 
-/* СБРОС: Скрываем все автоматические надписи Antora (особенно снизу!) */
 .listingblock:after, 
 .listingblock .content:after,
 .listingblock .code-label,
@@ -119,12 +74,10 @@ aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
     visibility: hidden !important;
 }
 
-/* КНОПКА КОПИРОВАНИЯ (Левее от названия языка) */
 .copy-button {
     position: absolute !important;
     top: 4px !important;
-    right: 95px !important; /* Сдвиг влево, чтобы не накладываться на "javascript" */
-    
+    right: 95px !important;
     background: transparent !important;
     border: none !important;
     color: var(--accent-color) !important;
@@ -138,7 +91,6 @@ aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
     color: #fff !important;
 }
 
-/* Убираем лишние фоны у иконки Copy */
 .copy-button img, .copy-button svg {
     background-color: transparent !important;
     box-shadow: none !important;
@@ -170,14 +122,3 @@ aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
 .hljs-number { color: #bd93f9 !important; }
 code { color: #ffd700 !important; background: transparent !important; }
 pre.highlight { background: var(--code-background) !important; padding: 1rem !important; }
-
-/* 9. АДАПТИВНОСТЬ ДЛЯ РАЗНЫХ ЭКРАНОВ */
-@media screen and (min-width: 1024px) {
-    .nav-container {
-        width: 14rem !important;
-    }
-    
-    .main {
-        margin-left: 14rem !important;
-    }
-}
