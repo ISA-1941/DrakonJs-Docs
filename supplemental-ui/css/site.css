@@ -1,8 +1,9 @@
 /* 1. БАЗОВЫЕ ЦВЕТА И ТЕМА */
+
 :root {
     --body-background: #1a1a1a;
     --panel-background: #121212;
-    --text-color: #e0e0e0;
+    --text-color: #f0f0f0;        /* Было #e0e0e0 - сделал светлее */
     --accent-color: #4da6ff;
     --border-color: #333;
     --code-background: #000;
