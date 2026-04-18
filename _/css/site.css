@@ -19,15 +19,31 @@ html, body {
     border-right: 1px solid var(--border-color) !important;
 }
 
-/* Уменьшаем размер шрифта в левом меню */
-.nav {
-    font-size: 0.85rem !important;  /* Было стандартно около 1rem */
+/* Цвет текста для ссылок меню */
+.nav-container a {
+    color: var(--text-color) !important;
 }
 
-/* Подвигаем текст меню влево */
-.nav-link, .nav-text, .nav-item a {
-    padding-left: 0.5rem !important;  /* Уменьшаем отступ слева */
+/* Цвет текста при наведении */
+.nav-container a:hover {
+    color: var(--accent-color) !important;
 }
+
+/* Цвет для активного/текущего раздела */
+.nav-container .is-active {
+    color: var(--accent-color) !important;
+    font-weight: bold !important;
+}
+
+/* Уменьшаем размер шрифта и отступы */
+.nav {
+    font-size: 0.85rem !important;
+}
+
+.nav-link, .nav-text, .nav-item a {
+    padding-left: 0.5rem !important;
+}
+
 
 /* 3. ПРАВОЕ МЕНЮ - ТОЛЬКО ЦВЕТ (ПОКА НЕ ТРОГАЕМ) */
 aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
