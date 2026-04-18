@@ -1,9 +1,9 @@
 /* 1. БАЗОВЫЕ ЦВЕТА И ТЕМА */
 :root {
     --body-background: #1a1a1a;
-    --panel-background: #121212;
+    --panel-background: #cacda6;
     --text-color: #e0e0e0;
-    --accent-color: #4da6ff;
+    --accent-color: #cacda6;
     --border-color: #333;
     --code-background: #000;
 }
@@ -35,7 +35,7 @@ html, body {
     text-decoration: none;
 }
 
-/* 3. ПРАВОЕ МЕНЮ (ОГЛАВЛЕНИЕ СТАТЬИ) */
+/* 3. ПРАВОЕ МЕНЮ (ОГЛАВЛЕНИЕ РАЗДЕЛА) */
 aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
     position: fixed !important;
     top: 4rem !important;
