@@ -97,21 +97,6 @@ aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
     visibility: hidden !important;
 }
 
-/* НАЗВАНИЕ ЯЗЫКА (Справа в углу) */
-.listingblock.language-javascript:before {
-    content: "javascript" !important;
-    display: block !important;
-    position: absolute;
-    top: 6px !important;
-    right: 12px !important; /* Прижимаем к правому краю */
-    
-    color: #666 !important; /* Неброский серый цвет */
-    font-size: 0.75rem !important;
-    font-family: monospace;
-    text-transform: lowercase;
-    z-index: 10;
-}
-
 /* КНОПКА КОПИРОВАНИЯ (Левее от названия языка) */
 .copy-button {
     position: absolute !important;
