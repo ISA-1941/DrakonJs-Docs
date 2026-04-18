@@ -1,65 +1,140 @@
 /* 1. БАЗОВЫЕ ЦВЕТА И ТЕМА */
-
 :root {
     --body-background: #1a1a1a;
     --panel-background: #121212;
-    --text-color: #e6e6e6;        /* Было #e0e0e0 - сделал светлее */
+    --text-color: #e0e0e0;
     --accent-color: #4da6ff;
     --border-color: #333;
     --code-background: #000;
+    --nav-width: 280px;      /* Ширина левого меню */
+    --toc-width: 280px;      /* Ширина правого меню */
+    --header-height: 4rem;   /* Высота верхней панели */
 }
 
 html, body {
     background-color: var(--body-background) !important;
     color: var(--text-color) !important;
+    margin: 0;
+    padding: 0;
 }
 
-/* 2. ЛЕВОЕ МЕНЮ - ТОЛЬКО ЦВЕТ И РАЗМЕР ШРИФТА */
+/* 2. ЛЕВОЕ МЕНЮ - ФИКСИРОВАННОЕ */
 .nav-container {
+    position: fixed !important;
+    top: var(--header-height) !important;
+    left: 0 !important;
+    width: var(--nav-width) !important;
+    height: calc(100vh - var(--header-height)) !important;
     background-color: var(--panel-background) !important;
     border-right: 1px solid var(--border-color) !important;
+    overflow-y: auto !important;
+    z-index: 100 !important;
 }
 
-/* Цвет текста для ссылок меню */
-.nav-container a {
-    color: var(--text-color) !important;
+/* Настройка текста левого меню - ПРИЖИМАЕМ К ЛЕВОМУ КРАЮ */
+.nav-container .nav {
+    padding-left: 0 !important;
 }
 
-/* Цвет текста при наведении */
+.nav-container .nav-link,
+.nav-container .nav-text,
+.nav-container .nav-item a {
+    padding-left: 0.5rem !important;
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+/* Убираем лишние отступы у списков */
+.nav-container ul {
+    padding-left: 0.75rem !important;
+    margin-left: 0 !important;
+}
+
+/* Уменьшаем отступ перед маркером (точкой) */
+.nav-container li {
+    list-style-position: inside !important;
+}
+
+/* Цвет ссылок при наведении */
 .nav-container a:hover {
     color: var(--accent-color) !important;
 }
 
-/* Цвет для активного/текущего раздела */
+/* Активный раздел */
 .nav-container .is-active {
     color: var(--accent-color) !important;
     font-weight: bold !important;
 }
 
-/* Уменьшаем размер шрифта и отступы */
-.nav {
+/* Размер шрифта */
+.nav-container .nav {
     font-size: 0.85rem !important;
 }
 
-.nav-link, .nav-text, .nav-item a {
-    padding-left: 0.5rem !important;
-}
-
-
-/* 3. ПРАВОЕ МЕНЮ - ТОЛЬКО ЦВЕТ (ПОКА НЕ ТРОГАЕМ) */
-aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
+/* 3. ПРАВОЕ МЕНЮ (ОГЛАВЛЕНИЕ) - ФИКСИРОВАННОЕ */
+aside.toc.sidebar,
+.toc.sidebar,
+.article-toc,
+.toc-menu {
+    position: fixed !important;
+    top: var(--header-height) !important;
+    right: 0 !important;
+    width: var(--toc-width) !important;
+    height: calc(100vh - var(--header-height)) !important;
     background-color: var(--panel-background) !important;
     border-left: 1px solid var(--border-color) !important;
+    padding: 1rem !important;
+    overflow-y: auto !important;
+    z-index: 100 !important;
 }
 
+/* Заголовок правого меню */
 .toc-title {
+    color: var(--accent-color) !important;
+    font-size: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Ссылки в правом меню */
+.toc.sidebar a,
+.article-toc a {
+    color: var(--text-color) !important;
+    text-decoration: none !important;
+    font-size: 0.85rem !important;
+    display: block !important;
+    padding: 0.25rem 0 !important;
+}
+
+.toc.sidebar a:hover,
+.article-toc a:hover {
     color: var(--accent-color) !important;
 }
 
-/* 4. ОСНОВНОЙ КОНТЕНТ - БЕЗ ИЗМЕНЕНИЙ ПОЗИЦИОНИРОВАНИЯ */
+/* Активная секция в оглавлении */
+.toc.sidebar .is-active,
+.article-toc .is-active {
+    color: var(--accent-color) !important;
+    font-weight: bold !important;
+}
+
+/* 4. ОСНОВНОЙ КОНТЕНТ - С УЧЕТОМ ФИКСИРОВАННЫХ МЕНЮ */
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.main {
+    margin-left: var(--nav-width) !important;
+    margin-right: var(--toc-width) !important;
+    padding: 2rem !important;
+    min-height: 100vh !important;
+}
+
 .doc {
-    font-size: 1.3rem !important;
-    line-height: 1.8 !important;
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+    font-size: 1.2rem !important;
+    line-height: 1.7 !important;
 }
 
 /* 5. ИЛЛЮСТРАЦИИ */
@@ -88,7 +163,6 @@ aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
 .highlight .code:after {
     content: none !important;
     display: none !important;
-    visibility: hidden !important;
 }
 
 .copy-button {
@@ -106,12 +180,6 @@ aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
 
 .copy-button:hover {
     color: #fff !important;
-}
-
-.copy-button img, .copy-button svg {
-    background-color: transparent !important;
-    box-shadow: none !important;
-    padding: 0 !important;
 }
 
 /* 7. ТАБЛИЦЫ */
@@ -139,3 +207,24 @@ aside.toc.sidebar, .toc.sidebar, .article-toc, .toc-menu {
 .hljs-number { color: #bd93f9 !important; }
 code { color: #ffd700 !important; background: transparent !important; }
 pre.highlight { background: var(--code-background) !important; padding: 1rem !important; }
+
+/* 9. АДАПТАЦИЯ ДЛЯ УЗКИХ ЭКРАНОВ */
+@media screen and (max-width: 1024px) {
+    .nav-container {
+        width: 240px !important;
+    }
+    .main {
+        margin-left: 240px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-container,
+    .toc.sidebar {
+        display: none !important;
+    }
+    .main {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
