@@ -41,7 +41,7 @@ html, body {
 
 /* Уменьшаем расстояние между маркером и текстом */
 .nav .nav-item .nav-link::before {
-    margin-right: 0.10 rem !important;
+    margin-right: 0.25rem !important;
 }
 
 /* Настройка ссылок меню */
