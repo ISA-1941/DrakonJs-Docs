@@ -102,16 +102,29 @@ aside.toc.sidebar a:hover {
     margin: 2rem auto !important;
 }
 
-/* 6. БЛОКИ КОДА (ГАРМОНИЗАЦИЯ: ЯЗЫК И COPY В ОДНОЙ СТРОКЕ) */
-
-/* Общий контейнер блока */
+/* 6. БЛОКИ КОДА */
 .listingblock {
     position: relative;
-    padding-top: 2.2rem !important; /* Место для верхней панели с кнопками */
-    background-color: var(--code-background) !important;
+    padding-top: 2.2rem !important;
+    
+    /* ИЗМЕНЕНИЕ: Делаем фон чуть светлее основного (#1a1a1a) */
+    background-color: #222222 !important; 
+    
     margin: 1.5rem 0 !important;
     border-radius: 6px;
-    border: 1px solid #333;
+    
+    /* ИЗМЕНЕНИЕ: Делаем рамку более выраженной */
+    border: 1px solid #3a3a3a !important;
+    
+    /* ДОБАВЛЕНИЕ: Легкая тень для объема */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Обязательно меняем фон и внутри самого элемента pre, чтобы не было черных пятен */
+pre.highlight {
+    background-color: #222222 !important; 
+    padding: 1rem !important;
+    margin: 0 !important;
 }
 
 /* СБРОС: Скрываем все автоматические надписи Antora (особенно снизу!) */
