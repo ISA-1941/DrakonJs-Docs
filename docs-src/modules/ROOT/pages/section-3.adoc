@@ -1,4 +1,7 @@
 :imagesdir: docs-src/modules/section-3/assets/images
+
+:page-toclevels: 3
+
 [.text-justify]
 :figure-caption!:
 
