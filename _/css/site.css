@@ -114,7 +114,7 @@ aside.toc.sidebar a:hover {
     border-radius: 6px;
     
     /* ИЗМЕНЕНИЕ: Делаем рамку более выраженной */
-    border: 1px solid #3a3a3a !important;
+    border: 2px solid #ededed !important;
     
     /* ДОБАВЛЕНИЕ: Легкая тень для объема */
     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
