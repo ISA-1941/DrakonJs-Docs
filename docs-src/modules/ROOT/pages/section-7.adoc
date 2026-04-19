@@ -1,6 +1,7 @@
 :imagesdir: docs-src/modules/section-7/assets/images
 [.text-justify]
 :figure-caption!:
+:page-toclevels: 3
 
 == Section 7. Basic Sorting Algorithms
 
