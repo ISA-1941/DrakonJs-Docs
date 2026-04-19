@@ -1,5 +1,5 @@
 :imagesdir: docs-src/modules/section-3/assets/images
-:page-toclevels: 3
+:page-toclevels: 2
 [.text-justify]
 :figure-caption!:
 == Section 3. Implementation of Basic Abstract Data Types in JavaScript
