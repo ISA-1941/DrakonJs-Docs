@@ -107,48 +107,23 @@ pre.highlight {
 }
 
 /* ==========================================================================
-   7. ПОДСВЕТКА СИНТАКСИСА (ЯРКАЯ ГАММА)
+   7. ПОДСВЕТКА СИНТАКСИСА (ТЕПЛАЯ ГАММА)
    ========================================================================== */
 
-/* КОММЕНТАРИИ: Сделали значительно светлее и добавили мягкий тон */
-.hljs-comment, .hljs-quote { 
-    color: #a6b2c0 !important; /* Светло-серый с голубым оттенком */
-    font-style: italic !important;
-    opacity: 1 !important; 
-}
+/* КОММЕНТАРИИ: Светло-серый, чтобы не отвлекали */
+.hljs-comment { color: #bbbbbb !important; font-style: italic !important; }
 
-/* КЛЮЧЕВЫЕ СЛОВА: Насыщенный розовый/пурпурный */
-.hljs-keyword, .hljs-selector-tag, .hljs-subst { 
-    color: #ff2e97 !important; 
-    font-weight: bold !important; 
-}
+/* КЛЮЧЕВЫЕ СЛОВА: Насыщенный красный или коралловый */
+.hljs-keyword { color: #ff5f5f !important; font-weight: bold !important; }
 
-/* СТРОКИ: Яркий лимонный/салатовый */
-.hljs-string, .hljs-type, .hljs-symbol { 
-    color: #e6ff00 !important; 
-}
+/* СТРОКИ: Теплый желтый или песочный */
+.hljs-string { color: #ffe082 !important; }
 
-/* НАЗВАНИЯ ФУНКЦИЙ И КЛАССОВ: Сочный аквамарин */
-.hljs-title, .hljs-section, .hljs-name { 
-    color: #00ffcc !important; 
-    font-weight: bold !important;
-}
+/* ФУНКЦИИ: Оранжевый */
+.hljs-title { color: #ffb74d !important; }
 
-/* ПЕРЕМЕННЫЕ И ПАРАМЕТРЫ: Небесно-голубой */
-.hljs-variable, .hljs-template-variable, .hljs-attr, .hljs-params { 
-    color: #79d4ff !important; 
-}
+/* ЧИСЛА: Ярко-белый или золотистый */
+.hljs-number { color: #ffffff !important; }
 
-/* ЧИСЛА И БУЛЕВЫ ЗНАЧЕНИЯ: Насыщенный фиолетовый */
-.hljs-number, .hljs-literal, .hljs-bullet { 
-    color: #ae81ff !important; 
-}
-
-/* ТЕКСТ ВНУТРИ `code` (инлайновый) */
-:not(pre) > code {
-    background-color: #333333 !important;
-    color: #ffffff !important;
-    padding: 0.2rem 0.5rem !important;
-    border-radius: 4px;
-    font-weight: 500;
-}
+/* ПЕРЕМЕННЫЕ: Светло-оранжевый или кремовый */
+.hljs-variable, .hljs-params { color: #ffd180 !important; }
