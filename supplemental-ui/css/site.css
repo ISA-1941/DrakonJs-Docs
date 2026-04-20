@@ -69,89 +69,86 @@ aside.toc, .toc, .article-toc, .toc-sidebar {
 }
 
 /* ==========================================================================
-   6. БЛОКИ КОДА И СНИППЕТЫ (УЛУЧШЕННЫЙ JS СТИЛЬ)
+   6. БЛОКИ КОДА (КОНТРАСТНЫЙ ДИЗАЙН)
    ========================================================================== */
 .listingblock {
     position: relative;
-    background-color: #222222 !important;
+    background-color: #1e1e1e !important; /* Глубокий черный для контраста */
     border: 2px solid #ededed !important;
     border-radius: 8px;
     margin: 2.5rem 0 !important;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.6);
 }
 
 pre.highlight {
-    background-color: #222222 !important;
+    background-color: #1e1e1e !important;
     padding: 1.5rem !important;
     margin: 0 !important;
-    overflow-x: auto;
 }
 
-/* Название языка в углу */
+/* Название языка (Маркер JS) */
 .listingblock.language-javascript:before {
-    content: "JS";
+    content: "JavaScript";
     position: absolute;
     top: 8px;
     right: 15px;
-    color: #f1fa8c; /* Желтоватый цвет JS */
-    font-size: 0.7rem;
+    color: #ffd700; /* Яркий золотой */
+    font-size: 0.75rem;
     font-family: 'Fira Code', monospace;
     font-weight: bold;
-    border: 1px solid rgba(241, 250, 140, 0.3);
-    padding: 1px 5px;
-    border-radius: 4px;
-    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
 }
 
-/* Стилизация кнопки копирования */
-.copy-button {
-    position: absolute !important;
-    top: 8px;
-    right: 55px; /* Смещаем левее маркера JS */
-    background: #333 !important;
-    border: 1px solid #555 !important;
-    color: #4da6ff !important;
-    font-size: 0.7rem !important;
-    border-radius: 4px;
-    padding: 2px 8px !important;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.copy-button:hover {
-    background: #444 !important;
-    color: #fff !important;
-}
-
-/* Маркер "Copied" (появляется при успешном копировании) */
-/* Если ваш скрипт вешает класс .copied на кнопку после нажатия */
-.copy-button.copied::after {
-    content: "✓ COPIED";
-    position: absolute;
-    right: 0;
-    top: -25px;
-    color: #50fa7b; /* Зеленый цвет успеха */
-    font-weight: bold;
-    font-size: 0.7rem;
+/* Удаляем всё, что связано с кнопкой и маркером копирования */
+.copy-button, .copy-to-clipboard-button, .copied {
+    display: none !important;
 }
 
 /* ==========================================================================
-   7. ПОДСВЕТКА СИНТАКСИСА (DRACULA-INSPIRED)
+   7. ПОДСВЕТКА СИНТАКСИСА (ЯРКАЯ ГАММА)
    ========================================================================== */
-.hljs-keyword, .hljs-selector-tag { color: #ff79c6 !important; font-weight: bold; } /* pink */
-.hljs-string, .hljs-doctag { color: #f1fa8c !important; } /* yellow */
-.hljs-title, .hljs-section, .hljs-selector-id { color: #50fa7b !important; } /* green */
-.hljs-variable, .hljs-template-variable { color: #8be9fd !important; } /* cyan */
-.hljs-comment, .hljs-quote { color: #6272a4 !important; font-style: italic; } /* comment blue */
-.hljs-number, .hljs-literal { color: #bd93f9 !important; } /* purple */
-.hljs-function .hljs-title { color: #50fa7b !important; }
-.hljs-params { color: #e0e0e0 !important; }
 
-/* Инлайновый код внутри текста `code` */
+/* КОММЕНТАРИИ: Сделали значительно светлее и добавили мягкий тон */
+.hljs-comment, .hljs-quote { 
+    color: #a6b2c0 !important; /* Светло-серый с голубым оттенком */
+    font-style: italic !important;
+    opacity: 1 !important; 
+}
+
+/* КЛЮЧЕВЫЕ СЛОВА: Насыщенный розовый/пурпурный */
+.hljs-keyword, .hljs-selector-tag, .hljs-subst { 
+    color: #ff2e97 !important; 
+    font-weight: bold !important; 
+}
+
+/* СТРОКИ: Яркий лимонный/салатовый */
+.hljs-string, .hljs-type, .hljs-symbol { 
+    color: #e6ff00 !important; 
+}
+
+/* НАЗВАНИЯ ФУНКЦИЙ И КЛАССОВ: Сочный аквамарин */
+.hljs-title, .hljs-section, .hljs-name { 
+    color: #00ffcc !important; 
+    font-weight: bold !important;
+}
+
+/* ПЕРЕМЕННЫЕ И ПАРАМЕТРЫ: Небесно-голубой */
+.hljs-variable, .hljs-template-variable, .hljs-attr, .hljs-params { 
+    color: #79d4ff !important; 
+}
+
+/* ЧИСЛА И БУЛЕВЫ ЗНАЧЕНИЯ: Насыщенный фиолетовый */
+.hljs-number, .hljs-literal, .hljs-bullet { 
+    color: #ae81ff !important; 
+}
+
+/* ТЕКСТ ВНУТРИ `code` (инлайновый) */
 :not(pre) > code {
-    background-color: #333 !important;
-    color: #ffb86c !important; /* Оранжевый для выделения в тексте */
-    padding: 0.2rem 0.4rem !important;
+    background-color: #333333 !important;
+    color: #ffffff !important;
+    padding: 0.2rem 0.5rem !important;
     border-radius: 4px;
-    font-family: 'Fira Code', monospace;
+    font-weight: 500;
 }
