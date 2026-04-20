@@ -1,100 +1,88 @@
-/* 1. ГЛОБАЛЬНЫЙ ФОН - ПРЯМЫЕ ЦВЕТА */
-html, body, .body {
+/* 1. ГЛОБАЛЬНЫЙ ФОН И ТЕЛО */
+html, body {
     background-color: #1a1a1a !important;
     color: #e0e0e0 !important;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
-/* 2. ЛЕВОЕ МЕНЮ - БЕЛОЕ НА ТЕМНОМ */
+/* 2. ШАПКА САЙТА (NAVBAR) — Фиксируем сверху */
+.navbar {
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    z-index: 101;
+}
+
+/* 3. ЛЕВОЕ МЕНЮ — ТЕПЕРЬ ОНО БУДЕТ СТОЯТЬ НА МЕСТЕ */
 .nav-container {
+    position: fixed !important;
+    top: 4rem !important; /* Сразу под шапкой */
+    left: 0 !important;
+    width: 340px !important;
+    height: calc(100vh - 4rem) !important;
     background-color: #121212 !important;
     border-right: 1px solid #333 !important;
+    z-index: 100;
+    overflow-y: auto; /* Позволяет крутить меню, если оно длинное */
 }
 
-/* Красим все ссылки и текст в левом меню в белый */
-.nav-menu a, 
-.nav-menu span, 
-.nav-menu strong, 
-.nav-link, 
-.nav-text {
+/* Белый цвет текста в меню */
+.nav-menu a, .nav-link, .nav-text, .nav-item {
     color: #ffffff !important;
-    font-size: 0.95rem !important;
     text-decoration: none !important;
 }
 
-/* Подсветка активного раздела */
-.is-active > a, 
-.is-active > .nav-link {
+.is-active > a, .is-active > .nav-link {
     color: #4da6ff !important;
     font-weight: bold !important;
-    background-color: rgba(77, 166, 255, 0.1) !important;
 }
 
-/* 3. УДАЛЯЕМ ПРАВОЕ МЕНЮ */
-aside.toc, .toc, .article-toc {
-    display: none !important;
-}
-
-/* 4. РАСШИРЯЕМ ТЕКСТ (ОСНОВНОЙ КОНТЕНТ) */
+/* 4. ОСНОВНОЙ КОНТЕНТ — УБИРАЕМ ПРЫЖКИ ВНИЗ */
 .main {
-    margin-left: 340px !important;
+    position: relative !important;
+    margin-left: 340px !important; /* Отступ под ширину меню */
     margin-right: 0 !important;
+    padding: 0 !important; /* Убираем лишние внешние отступы */
     background-color: #1a1a1a !important;
 }
 
+/* Сама статья */
 .doc {
     max-width: 1000px !important;
     margin: 0 auto !important;
+    padding: 2rem !important; /* Внутренний отступ текста от краев */
     font-size: 1.25rem !important;
-    text-align: justify;
 }
 
-/* 5. БЛОКИ КОДА (СЕРЫЕ С РАМКОЙ) */
+/* Чтобы заголовок первого уровня не улетал вниз */
+.doc h1.page:first-child, 
+.doc > h2:first-child {
+    margin-top: 1rem !important;
+}
+
+/* 5. УДАЛЯЕМ ПРАВОЕ МЕНЮ */
+aside.toc, .toc, .article-toc, .toc-sidebar {
+    display: none !important;
+}
+
+/* 6. БЛОКИ КОДА (ВАШ ДИЗАЙН) */
 .listingblock {
     background-color: #222222 !important;
     border: 2px solid #ededed !important;
     border-radius: 8px;
     margin: 2rem 0 !important;
-    position: relative;
 }
 
 pre.highlight {
     background-color: #222222 !important;
-    padding: 1rem !important;
-    margin: 0 !important;
+    padding: 1.2rem !important;
 }
 
-/* Подпись javascript сверху справа */
-.listingblock.language-javascript:before {
-    content: "javascript";
-    position: absolute;
-    top: 5px;
-    right: 15px;
-    color: #888;
-    font-size: 0.8rem;
-    font-family: monospace;
-}
-
-/* 6. ИЛЛЮСТРАЦИИ (БЕЛЫЙ ФОН) */
+/* 7. КОРРЕКЦИЯ ДЛЯ ИЗОБРАЖЕНИЙ */
 .doc .imageblock img {
     background-color: #ffffff !important;
     padding: 15px !important;
-    border: 1px solid #ddd;
-}
-
-/* 7. ТАБЛИЦЫ */
-.doc table {
-    width: 100%;
-    border: 1px solid #444;
-    background-color: #252525;
-}
-
-.doc td, .doc th {
-    border: 1px solid #444 !important;
-    padding: 0.8rem !important;
-}
-
-/* 8. КНОПКА КОПИРОВАНИЯ */
-.copy-button {
-    color: #4da6ff !important;
-    font-weight: bold;
 }
