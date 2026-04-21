@@ -152,3 +152,25 @@ pre.highlight {
     overflow: visible !important; /* Важнейшая строка! */
     width: 100% !important;
 }
+
+.doc .imageblock img {
+  display: block !important;
+  /* ГЛАВНОЕ ИСПРАВЛЕНИЕ */
+  box-sizing: border-box !important; 
+  
+  width: 100% !important; 
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 0 auto !important;
+  
+  /* Оформление */
+  background-color: transparent !important;
+  filter: invert(1) hue-rotate(180deg) !important;
+  opacity: 0.9;
+  padding: 20px !important; /* Увеличим внутренний отступ, чтобы текст не прилипал к краю */
+}
+
+.doc .imageblock {
+  text-align: center !important;
+  overflow: visible !important;
+}
