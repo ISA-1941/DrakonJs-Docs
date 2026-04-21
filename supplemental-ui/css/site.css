@@ -127,3 +127,32 @@ pre.highlight {
 
 /* ПЕРЕМЕННЫЕ: Светло-оранжевый или кремовый */
 .hljs-variable, .hljs-params { color: #ffd180 !important; }
+
+/* Центрирование контейнера изображения и его подписи */
+.doc .imageblock {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin: 2rem auto !important;
+}
+
+/* Центрирование самой картинки */
+.doc .imageblock img {
+    max-width: 100% !important;
+    background-color: #ffffff !important; /* Ваш белый фон для SVG */
+    padding: 15px !important;
+    border-radius: 4px;
+    /* Убираем возможные смещения */
+    margin: 0 auto !important; 
+    display: block !important;
+}
+
+/* Центрирование подписи (Figure 3.1...) */
+.doc .imageblock .title {
+    text-align: center !important;
+    width: 100% !important;
+    margin-top: 0.8rem !important;
+    color: #888 !important; /* Серый цвет для подписи */
+    font-style: italic !important;
+}
