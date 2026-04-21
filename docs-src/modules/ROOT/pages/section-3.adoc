@@ -235,7 +235,7 @@ Unlike arrays, which use numeric indexes, Maps allow keys of any data type, maki
 
 [.text-center]
 .Figure 3.3. Map
-image::section_3/Fig3_3_Map.svg[width=100%, align="center", link=self, window="_blank"]
+image::section_3/Fig3_3_Map.svg[width=50%, align="center", link=self, window="_blank"]
 
 In JavaScript, we use the Map object to create a map. The syntax is:
 
