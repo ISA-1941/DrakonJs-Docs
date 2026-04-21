@@ -43,7 +43,6 @@ html, body {
 .main {
     position: relative !important;
     margin-left: 340px !important;
-    margin-right: 0 !important;
     padding: 0 !important;
     background-color: #1a1a1a !important;
 }
@@ -53,21 +52,47 @@ html, body {
     margin: 0 auto !important;
     padding: 2rem !important;
     font-size: 1.25rem !important;
-    /* Гарантируем, что контент не "выдавливает" картинки */
     box-sizing: border-box !important; 
 }
 
 /* 5. УДАЛЯЕМ ПРАВОЕ МЕНЮ */
 aside.toc, .toc, .article-toc, .toc-sidebar { display: none !important; }
 
-/* 6. БЛОКИ КОДА */
+/* 6. БЛОКИ КОДА И КНОПКА КОПИРОВАНИЯ */
 .listingblock {
-    position: relative;
+    position: relative !important;
     background-color: #1e1e1e !important;
     border: 2px solid #ededed !important;
     border-radius: 8px;
     margin: 2.5rem 0 !important;
-    box-shadow: 0 12px 24px rgba(0,0,0,0.6);
+}
+
+/* Убираем лишние иконки (дискеты/клиппи) */
+.copy-button, .copy-to-clipboard-button, .octicon-clippy {
+    display: none !important;
+}
+
+/* Возвращаем надписи JavaScript и Copied в правый верхний угол */
+.listingblock.language-javascript:before {
+    content: "JavaScript";
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    color: #ffd700;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Эффект при наведении — показываем "Copied" */
+.listingblock:active:after {
+    content: "Copied";
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    color: #4da6ff;
+    font-size: 0.75rem;
+    font-weight: bold;
 }
 
 pre.highlight {
@@ -84,30 +109,21 @@ pre.highlight {
 .hljs-number { color: #ffffff !important; }
 .hljs-variable, .hljs-params { color: #ffd180 !important; }
 
-/* ==========================================================================
-   8. ИЛЛЮСТРАЦИИ (БЕЗ ОБРЕЗКИ И С ИНВЕРСИЕЙ)
-   ========================================================================== */
-
-/* Контейнер для изображения */
+/* 8. ИЛЛЮСТРАЦИИ (БЕЗ ОБРЕЗКИ) */
 .doc .imageblock {
     text-align: center !important;
     margin: 2rem 0 !important;
     width: 100% !important;
-    /* Позволяет элементам "дышать", если они чуть больше контейнера */
     overflow: visible !important; 
-    display: block !important;
 }
 
-/* Сама картинка */
 .doc .imageblock img {
     display: inline-block !important;
-    /* Чтобы не обрезалось, ставим 98% вместо 100% — даем запас по бокам */
-    max-width: 98% !important; 
+    /* Оставляем запас 5%, чтобы левый край не резало */
+    max-width: 95% !important; 
     height: auto !important;
-    
-    /* Заставляем отступы считаться ВНУТРИ ширины */
     box-sizing: border-box !important;
-    padding: 15px !important; 
+    padding: 10px !important; 
     
     /* Инверсия для темной темы */
     background-color: transparent !important;
