@@ -7,7 +7,7 @@ html, body {
     height: 100%;
 }
 
-/* 2. ШАПКА САЙТА (NAVBAR) — Фиксируем сверху */
+/* 2. ШАПКА САЙТА (NAVBAR) */
 .navbar {
     position: fixed !important;
     top: 0;
@@ -16,20 +16,19 @@ html, body {
     z-index: 101;
 }
 
-/* 3. ЛЕВОЕ МЕНЮ — ТЕПЕРЬ ОНО БУДЕТ СТОЯТЬ НА МЕСТЕ */
+/* 3. ЛЕВОЕ МЕНЮ */
 .nav-container {
     position: fixed !important;
-    top: 4rem !important; /* Сразу под шапкой */
+    top: 4rem !important;
     left: 0 !important;
     width: 340px !important;
     height: calc(100vh - 4rem) !important;
     background-color: #121212 !important;
     border-right: 1px solid #333 !important;
     z-index: 100;
-    overflow-y: auto; /* Позволяет крутить меню, если оно длинное */
+    overflow-y: auto;
 }
 
-/* Белый цвет текста в меню */
 .nav-menu a, .nav-link, .nav-text, .nav-item {
     color: #ffffff !important;
     text-decoration: none !important;
@@ -40,40 +39,31 @@ html, body {
     font-weight: bold !important;
 }
 
-/* 4. ОСНОВНОЙ КОНТЕНТ — УБИРАЕМ ПРЫЖКИ ВНИЗ */
+/* 4. ОСНОВНОЙ КОНТЕНТ */
 .main {
     position: relative !important;
-    margin-left: 340px !important; /* Отступ под ширину меню */
+    margin-left: 340px !important;
     margin-right: 0 !important;
-    padding: 0 !important; /* Убираем лишние внешние отступы */
+    padding: 0 !important;
     background-color: #1a1a1a !important;
 }
 
-/* Сама статья */
 .doc {
     max-width: 1000px !important;
     margin: 0 auto !important;
-    padding: 2rem !important; /* Внутренний отступ текста от краев */
+    padding: 2rem !important;
     font-size: 1.25rem !important;
-}
-
-/* Чтобы заголовок первого уровня не улетал вниз */
-.doc h1.page:first-child, 
-.doc > h2:first-child {
-    margin-top: 1rem !important;
+    /* Гарантируем, что контент не "выдавливает" картинки */
+    box-sizing: border-box !important; 
 }
 
 /* 5. УДАЛЯЕМ ПРАВОЕ МЕНЮ */
-aside.toc, .toc, .article-toc, .toc-sidebar {
-    display: none !important;
-}
+aside.toc, .toc, .article-toc, .toc-sidebar { display: none !important; }
 
-/* ==========================================================================
-   6. БЛОКИ КОДА (КОНТРАСТНЫЙ ДИЗАЙН)
-   ========================================================================== */
+/* 6. БЛОКИ КОДА */
 .listingblock {
     position: relative;
-    background-color: #1e1e1e !important; /* Глубокий черный для контраста */
+    background-color: #1e1e1e !important;
     border: 2px solid #ededed !important;
     border-radius: 8px;
     margin: 2.5rem 0 !important;
@@ -86,91 +76,41 @@ pre.highlight {
     margin: 0 !important;
 }
 
-/* Название языка (Маркер JS) */
-.listingblock.language-javascript:before {
-    content: "JavaScript";
-    position: absolute;
-    top: 8px;
-    right: 15px;
-    color: #ffd700; /* Яркий золотой */
-    font-size: 0.75rem;
-    font-family: 'Fira Code', monospace;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 0.9;
-}
-
-/* Удаляем всё, что связано с кнопкой и маркером копирования */
-.copy-button, .copy-to-clipboard-button, .copied {
-    display: none !important;
-}
-
-/* ==========================================================================
-   7. ПОДСВЕТКА СИНТАКСИСА (ТЕПЛАЯ ГАММА)
-   ========================================================================== */
-
-/* КОММЕНТАРИИ: Светло-серый, чтобы не отвлекали */
+/* 7. ПОДСВЕТКА СИНТАКСИСА */
 .hljs-comment { color: #bbbbbb !important; font-style: italic !important; }
-
-/* КЛЮЧЕВЫЕ СЛОВА: Насыщенный красный или коралловый */
 .hljs-keyword { color: #ff5f5f !important; font-weight: bold !important; }
-
-/* СТРОКИ: Теплый желтый или песочный */
 .hljs-string { color: #ffe082 !important; }
-
-/* ФУНКЦИИ: Оранжевый */
 .hljs-title { color: #ffb74d !important; }
-
-/* ЧИСЛА: Ярко-белый или золотистый */
 .hljs-number { color: #ffffff !important; }
-
-/* ПЕРЕМЕННЫЕ: Светло-оранжевый или кремовый */
 .hljs-variable, .hljs-params { color: #ffd180 !important; }
 
-/* Центрирование контейнера изображения и его подписи */
-/* ЕДИНЫЙ БЛОК ДЛЯ ИЛЛЮСТРАЦИЙ */
-.doc .imageblock img {
-    /* 1. Масштабирование: позволяем картинке быть большой, но не вылезать за экран */
-    display: block !important;
-    max-width: 100% !important; 
-    height: auto !important;
-    margin: 0 auto !important;
+/* ==========================================================================
+   8. ИЛЛЮСТРАЦИИ (БЕЗ ОБРЕЗКИ И С ИНВЕРСИЕЙ)
+   ========================================================================== */
 
-    /* 2. Оформление темной темы */
-    background-color: transparent !important; /* Убираем белый фон */
-    filter: invert(1) hue-rotate(180deg) !important; /* Инверсия */
-    opacity: 0.9;
-    
-    /* 3. Отступы, чтобы края не прилипали к рамке обрезки */
-    padding: 5px !important;
-}
-
-/* ИСПРАВЛЕНИЕ КОНТЕЙНЕРА (чтобы не резало левый край) */
+/* Контейнер для изображения */
 .doc .imageblock {
     text-align: center !important;
-    overflow: visible !important; /* Важнейшая строка! */
+    margin: 2rem 0 !important;
     width: 100% !important;
+    /* Позволяет элементам "дышать", если они чуть больше контейнера */
+    overflow: visible !important; 
+    display: block !important;
 }
 
+/* Сама картинка */
 .doc .imageblock img {
-  display: block !important;
-  /* ГЛАВНОЕ ИСПРАВЛЕНИЕ */
-  box-sizing: border-box !important; 
-  
-  width: 100% !important; 
-  max-width: 100% !important;
-  height: auto !important;
-  margin: 0 auto !important;
-  
-  /* Оформление */
-  background-color: transparent !important;
-  filter: invert(1) hue-rotate(180deg) !important;
-  opacity: 0.9;
-  padding: 20px !important; /* Увеличим внутренний отступ, чтобы текст не прилипал к краю */
-}
-
-.doc .imageblock {
-  text-align: center !important;
-  overflow: visible !important;
+    display: inline-block !important;
+    /* Чтобы не обрезалось, ставим 98% вместо 100% — даем запас по бокам */
+    max-width: 98% !important; 
+    height: auto !important;
+    
+    /* Заставляем отступы считаться ВНУТРИ ширины */
+    box-sizing: border-box !important;
+    padding: 15px !important; 
+    
+    /* Инверсия для темной темы */
+    background-color: transparent !important;
+    filter: invert(1) hue-rotate(180deg) !important;
+    opacity: 0.9;
 }
