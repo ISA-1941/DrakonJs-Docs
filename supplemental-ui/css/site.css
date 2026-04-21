@@ -129,51 +129,26 @@ pre.highlight {
 .hljs-variable, .hljs-params { color: #ffd180 !important; }
 
 /* Центрирование контейнера изображения и его подписи */
+/* ЕДИНЫЙ БЛОК ДЛЯ ИЛЛЮСТРАЦИЙ */
+.doc .imageblock img {
+    /* 1. Масштабирование: позволяем картинке быть большой, но не вылезать за экран */
+    display: block !important;
+    max-width: 100% !important; 
+    height: auto !important;
+    margin: 0 auto !important;
+
+    /* 2. Оформление темной темы */
+    background-color: transparent !important; /* Убираем белый фон */
+    filter: invert(1) hue-rotate(180deg) !important; /* Инверсия */
+    opacity: 0.9;
+    
+    /* 3. Отступы, чтобы края не прилипали к рамке обрезки */
+    padding: 5px !important;
+}
+
+/* ИСПРАВЛЕНИЕ КОНТЕЙНЕРА (чтобы не резало левый край) */
 .doc .imageblock {
     text-align: center !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    margin: 2rem auto !important;
-}
-
-/* Центрирование самой картинки */
-.doc .imageblock img {
-    max-width: 100% !important;
-    background-color: #ffffff !important; /* Ваш белый фон для SVG */
-    padding: 15px !important;
-    border-radius: 4px;
-    /* Убираем возможные смещения */
-    margin: 0 auto !important; 
-    display: block !important;
-}
-
-/* Центрирование подписи (Figure 3.1...) */
-.doc .imageblock .title {
-    text-align: center !important;
+    overflow: visible !important; /* Важнейшая строка! */
     width: 100% !important;
-    margin-top: 0.8rem !important;
-    color: #888 !important; /* Серый цвет для подписи */
-    font-style: italic !important;
-}
-
-.doc .imageblock img {
-    /* 1. Убираем белый фон, который мы ставили раньше */
-    background-color: transparent !important; 
-    
-    /* 2. Инвертируем цвета: черное станет белым, а белое - черным */
-    filter: invert(1) hue-rotate(180deg) !important;
-    
-    /* 3. Немного приглушаем яркость, чтобы белый не "резал" глаз */
-    opacity: 0.85; 
-    
-    padding: 10px !important;
-}
-
-.doc .imageblock img {
-    /* Добавьте эти строки в существующий блок */
-    max-width: none !important; /* Снимаем ограничение, если оно мешает */
-    width: 100% !important;
-    height: auto !important; /* Сохраняем пропорции, чтобы не сплющило */
-    object-fit: contain !important; /* Умное вписывание в блок */
 }
