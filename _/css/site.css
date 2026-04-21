@@ -169,3 +169,11 @@ pre.highlight {
     
     padding: 10px !important;
 }
+
+.doc .imageblock img {
+    /* Добавьте эти строки в существующий блок */
+    max-width: none !important; /* Снимаем ограничение, если оно мешает */
+    width: 100% !important;
+    height: auto !important; /* Сохраняем пропорции, чтобы не сплющило */
+    object-fit: contain !important; /* Умное вписывание в блок */
+}
