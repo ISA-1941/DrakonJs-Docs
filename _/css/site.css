@@ -156,3 +156,16 @@ pre.highlight {
     color: #888 !important; /* Серый цвет для подписи */
     font-style: italic !important;
 }
+
+.doc .imageblock img {
+    /* 1. Убираем белый фон, который мы ставили раньше */
+    background-color: transparent !important; 
+    
+    /* 2. Инвертируем цвета: черное станет белым, а белое - черным */
+    filter: invert(1) hue-rotate(180deg) !important;
+    
+    /* 3. Немного приглушаем яркость, чтобы белый не "резал" глаз */
+    opacity: 0.85; 
+    
+    padding: 10px !important;
+}
