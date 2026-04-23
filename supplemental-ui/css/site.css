@@ -132,7 +132,7 @@ pre.highlight {
     /* --- ВОТ ЗДЕСЬ МЕНЯЕМ ЦВЕТ --- */
     
     /* 1. Фон подложки (сейчас темно-стальной) */
-    background-color: #2b303b !important; 
+    background-color: #1e2d24 !important; 
     
     /* 2. Рамка (чуть светлее фона) */
     border: 1px solid #4f5b66 !important;
