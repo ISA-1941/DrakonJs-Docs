@@ -1,4 +1,4 @@
-== INTRODUCTION
+== Introduction
 
 All the things we know and understand are made up of something called
 data. Data is like a bunch of unstructured information that helps us
