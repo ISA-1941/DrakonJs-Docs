@@ -143,3 +143,14 @@ pre.highlight {
     /* 4. Прозрачность (делает всю картинку менее агрессивной) */
     opacity: 0.85;
 }
+
+/* Скрыть демонстрационное меню шаблона (Products, Services и т.д.) */
+.navbar-item.has-dropdown, 
+.navbar-item:not(.has-dropdown) {
+    display: none !important;
+}
+
+/* Оставить только ваше меню книги */
+.nav-container {
+    display: block !important;
+}
