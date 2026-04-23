@@ -109,25 +109,37 @@ pre.highlight {
 .hljs-number { color: #ffffff !important; }
 .hljs-variable, .hljs-params { color: #ffd180 !important; }
 
-/* 8. ИЛЛЮСТРАЦИИ (БЕЗ ОБРЕЗКИ) */
+/* ==========================================================================
+   8. ИЛЛЮСТРАЦИИ (БЕЗ ОБРЕЗКИ)
+   ========================================================================== */
+
 .doc .imageblock {
     text-align: center !important;
     margin: 2rem 0 !important;
     width: 100% !important;
     overflow: visible !important; 
+    display: block !important;
 }
 
 .doc .imageblock img {
-    /* ... (оставляем размеры те же) ... */
+    display: inline-block !important;
+    max-width: 95% !important; 
+    height: auto !important;
+    box-sizing: border-box !important;
+    padding: 15px !important;
+    border-radius: 8px; /* Скруглим углы для мягкости */
+
+    /* --- ВОТ ЗДЕСЬ МЕНЯЕМ ЦВЕТ --- */
     
-    background-color: #1a2a3a !important; /* Глубокий темно-синий */
-    filter: invert(1) sepia(1) hue-rotate(190deg) saturate(2);
-    border: 1px solid #2e4a66;
-    padding: 20px !important;
-}
+    /* 1. Фон подложки (сейчас темно-стальной) */
+    background-color: #2b303b !important; 
     
-    /* Инверсия для темной темы */
-    background-color: transparent !important;
-    filter: invert(1) hue-rotate(180deg) !important;
-    opacity: 0.9;
+    /* 2. Рамка (чуть светлее фона) */
+    border: 1px solid #4f5b66 !important;
+    
+    /* 3. Фильтр (делает линии мягко-светлыми, не "вырвиглаз") */
+    filter: invert(0.9) hue-rotate(180deg) brightness(1.1) contrast(0.9) !important;
+    
+    /* 4. Прозрачность (делает всю картинку менее агрессивной) */
+    opacity: 0.85;
 }
