@@ -21,7 +21,7 @@ html, body {
     position: fixed !important;
     top: 4rem !important;
     left: 0 !important;
-    width: 340px !important;
+    width: 15rem !important; /* Можно чуть сузить */
     height: calc(100vh - 4rem) !important;
     background-color: #121212 !important;
     border-right: 1px solid #333 !important;
