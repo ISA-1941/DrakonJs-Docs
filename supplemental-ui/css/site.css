@@ -23,7 +23,7 @@ html, body {
     left: 0 !important;
     width: 340px !important;
     height: calc(100vh - 4rem) !important;
-    background-color: #121212 !important;
+    background-color: #40297e !important;
     border-right: 1px solid #333 !important;
     z-index: 100;
     overflow-y: auto;
