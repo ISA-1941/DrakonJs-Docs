@@ -27,16 +27,23 @@ html, body {
 /* 4. ТАБЛИЦЫ (ВОЗВРАЩАЕМ ГРАНИЦЫ) */
 .doc table {
     border-collapse: collapse !important;
-    border: 2px solid #555 !important; /* Усилил границу */
-    width: 100%; margin: 1.5rem 0;
-    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 3px solid #b0b0b0 !important; /* Светло-серый, почти стальной цвет */
+    width: 100%; 
+    margin: 1.5rem 0;
+    background-color: rgba(255, 255, 255, 0.07) !important;
 }
-.doc table th, .doc table td {
-    border: 2px solid #555 !important; /* Четкие рамки ячеек */
-    padding: 10px !important;
-}
-.doc table thead { background-color: rgba(77, 166, 255, 0.2) !important; }
 
+/* Внутренние линии ячеек — без них таблица кажется пустой */
+.doc table th, 
+.doc table td {
+    border: 1px solid #888888 !important; /* Четкие внутренние перегородки */
+    padding: 12px !important;
+}
+
+/* Сделаем заголовок чуть ярче для наглядности */
+.doc table thead {
+    border-bottom: 3px solid #4da6ff !important; /* Синяя черта под заголовком */
+}
 /* 5. ИЛЛЮСТРАЦИИ (ТОЧЕЧНОЕ УПРАВЛЕНИЕ) */
 .doc .imageblock { text-align: center !important; margin: 2rem 0 !important; }
 
