@@ -1,6 +1,8 @@
-= Section 9. Graphs and Graph Algorithms
+:imagesdir: docs-src/modules/section-9/assets/images
+[.text-justify]
+:figure-caption!:
 
-:imagesdir: ./assets/images
+= Section 9. Graphs and Graph Algorithms
 
 == 9.1. General Information. Basic Terminology
 
@@ -91,10 +93,8 @@ Here, the logic becomes more nuanced as direction matters. The degree is split i
     Loops in a Digraph: In this case, a loop is counted exactly once for the in-degree and once for the out-degree. It does not "double" the total degree in the same way as in an undirected graph; instead, it is honestly distributed between the two directions.
 
 [.text-center]
-image::{imagesdir}/Fig9_1_example_Graph.svg[width=75%]
-
-[.text-center]
-Figure 9.1. The view of (a) undirected; (b) directed
+.Figure 9.1. The view of (a) undirected; (b) directed
+image::section_9/Fig9_1_example_Graph.svg[width=80%, link=self, window="_blank"]
 
 === Adjacency, Incidence, and Degree
 
