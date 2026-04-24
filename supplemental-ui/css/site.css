@@ -154,3 +154,11 @@ pre.highlight {
 .nav-container {
     display: block !important;
 }
+
+/* Улучшаем вид картинок с белым фоном */
+.doc img {
+    background-color: rgba(255, 255, 255, 0.9) !important; /* Делаем белый фон чуть мягче */
+    border-radius: 8px !important;    /* Скругляем углы */
+    padding: 10px !important;         /* Даем тексту внутри картинки "вздохнуть" */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5) !important; /* Добавляем глубину */
+}
