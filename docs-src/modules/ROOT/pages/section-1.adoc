@@ -1,7 +1,8 @@
-:imagesdir: docs-src/modules/section-1/assets/images
 [.text-justify]
 :figure-caption!:
 == SECTION 1. Abstract Data Types
+
+
 
 [abstract]
 This section introduces the concept of Abstract Data Types (ADTs) and explores both linear and non-linear data structures. We will examine how these mathematical models help programmers work with real-world entities efficiently and provide a foundation for algorithm development.
