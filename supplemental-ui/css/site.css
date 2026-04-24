@@ -56,6 +56,26 @@ html, body {
     background-color: transparent !important; /* <--- ДОБАВИТЬ ЭТО */
 }
 
+/* ВОЗВРАЩАЕМ ГРАНИЦЫ ТАБЛИЦАМ */
+.doc table {
+    border-collapse: collapse !important;
+    border: 1px solid #555 !important; /* Серый цвет рамки */
+    width: 100%;
+    margin-bottom: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.05) !important; /* Легкая подсветка фона */
+}
+
+.doc table th, .doc table td {
+    border: 1px solid #555 !important; /* Рамки ячеек */
+    padding: 0.75rem !important;
+    color: #e0e0e0 !important;
+}
+
+/* Выделяем заголовок таблицы */
+.doc table thead {
+    background-color: rgba(77, 166, 255, 0.2) !important; /* Прозрачно-синий заголовок */
+}
+
 /* 5. УДАЛЯЕМ ПРАВОЕ МЕНЮ */
 aside.toc, .toc, .article-toc, .toc-sidebar { display: none !important; }
 
