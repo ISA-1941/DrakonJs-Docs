@@ -121,27 +121,18 @@ pre.highlight {
     display: block !important;
 }
 
-.doc .imageblock img {
-    display: inline-block !important;
-    max-width: 95% !important; 
-    height: auto !important;
-    box-sizing: border-box !important;
-    padding: 15px !important;
-    border-radius: 8px; /* Скруглим углы для мягкости */
+/* 1. Сначала убираем всю "грязь" и фоны */
+.doc .imageblock img, 
+.doc img {
+    background-color: transparent !important; /* УБИРАЕМ 0.85 И БЕЛЫЙ ЦВЕТ ТУТ */
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
 
-    /* --- ВОТ ЗДЕСЬ МЕНЯЕМ ЦВЕТ --- */
-    
-    /* 1. Фон подложки (сейчас темно-стальной) */
-    background-color: #1e2d24 !important; 
-    
-    /* 2. Рамка (чуть светлее фона) */
-    border: 1px solid #4f5b66 !important;
-    
-    /* 3. Фильтр (делает линии мягко-светлыми, не "вырвиглаз") */
-    filter: invert(0.9) hue-rotate(180deg) brightness(1.1) contrast(0.9) !important;
-    
-    /* 4. Прозрачность (делает всю картинку менее агрессивной) */
-    opacity: 0.85;
+/* 2. Затем зажигаем свет на чертежах */
+.doc img[src$=".svg"] {
+    filter: invert(0.9) brightness(1.5) !important;
 }
 
 /* Скрыть демонстрационное меню шаблона (Products, Services и т.д.) */
