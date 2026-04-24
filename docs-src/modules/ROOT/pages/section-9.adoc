@@ -94,7 +94,7 @@ Here, the logic becomes more nuanced as direction matters. The degree is split i
 
 [.text-center]
 .Figure 9.1. The view of (a) undirected; (b) directed
-image::section_9/Fig9_1_example_Graph.svg[width=80%, link=self, window="_blank"]
+image::section_9/Fig9_1_exampleGraph.svg[width=80%, link=self, window="_blank"]
 
 === Adjacency, Incidence, and Degree
 
