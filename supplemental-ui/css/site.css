@@ -53,6 +53,7 @@ html, body {
     padding: 2rem !important;
     font-size: 1.25rem !important;
     box-sizing: border-box !important; 
+    background-color: transparent !important; /* <--- ДОБАВИТЬ ЭТО */
 }
 
 /* 5. УДАЛЯЕМ ПРАВОЕ МЕНЮ */
