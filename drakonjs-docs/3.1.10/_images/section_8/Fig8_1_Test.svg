@@ -21,7 +21,7 @@
      id="namedview83"
      pagecolor="#505050"
      bordercolor="#eeeeee"
-     borderopacity="0.84705882"
+     borderopacity="0.49803922"
      inkscape:showpageshadow="0"
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
@@ -37,14 +37,6 @@
      inkscape:current-layer="svg83" />
   <defs
      id="defs1" />
-  <rect
-     fill="#ffffff"
-     style="fill: light-dark(#ffffff, var(--ge-dark-color, #121212));"
-     width="100%"
-     height="100%"
-     x="0"
-     y="0"
-     id="rect1" />
   <g
      id="g83">
     <g
