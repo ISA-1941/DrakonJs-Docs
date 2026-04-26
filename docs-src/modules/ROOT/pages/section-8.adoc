@@ -11,7 +11,7 @@ Binary trees as an abstract data type were discussed in Section 1. Here we will 
 
 [.text-center]
 .Figure 8.1. Basic tree terminology
-image::section_8/Fig8_1_Test.svg[width=50%, link=self, window="_blank"]
+image::section_8/Fig8_1_Term.svg[width=50%, link=self, window="_blank"]
 
 
     *Root*: The root of the tree is the only node with no incoming edges. It is the top node in the tree.
