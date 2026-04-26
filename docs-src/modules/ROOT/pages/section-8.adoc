@@ -10,7 +10,7 @@ A binary tree is a hierarchical data structure in which each node has at most tw
 Binary trees as an abstract data type were discussed in Section 1. Here we will discuss the computer implementation of this type of data structure using the visual algorithmic language DRAKON and the JavaScript programming language. Recall the basic terminology of binary trees (Figure 8.1):
 
 [.text-center]
-Figure 8.1. Basic tree terminology
+.Figure 8.1. Basic tree terminology
 image::section_8/Fig8_1_Test.svg[width=50%, link=self, window="_blank"]
 
 
