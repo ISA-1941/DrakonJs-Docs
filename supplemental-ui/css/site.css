@@ -55,6 +55,30 @@ html, body {
     mix-blend-mode: normal !important;
 }
 
+/* ИЛЛЮСТРАЦИИ: СОЗДАЕМ СВЕТЛЫЙ ПОДВИЖНЫЙ ФОН */
+.doc .imageblock img, 
+.doc img {
+    /* 1. Тот самый светлый фон (5% белого) */
+    background-color: rgba(255, 255, 255, 0.05) !important; 
+    
+    /* 2. Добавляем рамку, чтобы границы были четкими */
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    
+    /* 3. Обязательно отступы, чтобы схема не «прилипала» к рамке */
+    padding: 20px !important;
+    
+    /* 4. Скругление углов для красоты */
+    border-radius: 8px !important;
+    
+    /* Убираем тени и лишние эффекты */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+}
+
+/* Оставляем инверсию цветов для SVG */
+.doc img[src$=".svg"] {
+    filter: invert(0.9) brightness(1.5) !important;
+}
+
 /* Инверсия для SVG (светлые линии на темном фоне) */
 .doc img[src$=".svg"] {
     filter: invert(0.9) brightness(1.5) !important;
