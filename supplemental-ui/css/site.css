@@ -59,10 +59,10 @@ html, body {
 .doc .imageblock img, 
 .doc img {
     /* 1. Тот самый светлый фон (5% белого) */
-    background-color: rgba(255, 255, 255, 0.2) !important; 
+    background-color: rgba(89, 126, 156, 0.2) !important; 
     
     /* 2. Добавляем рамку, чтобы границы были четкими */
-    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    /*border: 1px solid rgba(255, 255, 255, 0.05) !important;*/
     
     /* 3. Обязательно отступы, чтобы схема не «прилипала» к рамке */
     padding: 20px !important;
