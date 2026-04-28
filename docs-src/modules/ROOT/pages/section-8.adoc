@@ -32,7 +32,7 @@ The information structure of a binary tree is organized as follows (Figure 8.2):
 
 [.text-center]
 .Figure 8.2. Binary tree structure 
-image::section_8/Fig8_2_BSTree.svg[width=100%, link=self, window="_blank"]
+image::section_8/Fig8_2_BSTree.svg[width=75%, link=self, window="_blank"]
 
 Several types of binary trees are discussed in the literature, the most important classification being based on node values:
 
