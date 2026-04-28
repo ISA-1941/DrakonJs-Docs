@@ -55,23 +55,26 @@ html, body {
     mix-blend-mode: normal !important;
 }
 
-/* ИЛЛЮСТРАЦИИ: СОЗДАЕМ СВЕТЛЫЙ ПОДВИЖНЫЙ ФОН */
+/* Эффект светлой подложки для всех схем */
 .doc .imageblock img, 
 .doc img {
-    /* 1. Тот самый светлый фон (5% белого) */
-    background-color: rgba(89, 126, 156, 0.2) !important; 
+    /* Цвет: белый, но прозрачный на 5%, что на синем фоне даст мягкий светлый оттенок */
+    background-color: rgba(255, 255, 255, 0.05) !important; 
     
-    /* 2. Добавляем рамку, чтобы границы были четкими */
-    /*border: 1px solid rgba(255, 255, 255, 0.05) !important;*/
+    /* Тонкая рамка, чтобы отделить подложку от фона страницы */
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
     
-    /* 3. Обязательно отступы, чтобы схема не «прилипала» к рамке */
-    padding: 20px !important;
+    /* Внутренние поля (воздух), чтобы схема не касалась краев */
+    padding: 25px !important;
     
-    /* 4. Скругление углов для красоты */
-    border-radius: 8px !important;
+    /* Скругление углов для современного вида */
+    border-radius: 12px !important;
     
-    /* Убираем тени и лишние эффекты */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+    /* Небольшая тень для объема */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4) !important;
+    
+    display: block;
+    margin: 1em auto;
 }
 
 /* Оставляем инверсию цветов для SVG */
