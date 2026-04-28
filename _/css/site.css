@@ -44,49 +44,37 @@ html, body {
 .doc table thead {
     border-bottom: 3px solid #4da6ff !important; /* Синяя черта под заголовком */
 }
-/* 5. ИЛЛЮСТРАЦИИ (ТОЧЕЧНОЕ УПРАВЛЕНИЕ) */
-.doc .imageblock { text-align: center !important; margin: 2rem 0 !important; }
 
-/* Убираем рамки ТОЛЬКО у картинок, чтобы не портить таблицы */
-.doc img {
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    mix-blend-mode: normal !important;
+/* 5. ИЛЛЮСТРАЦИИ (ФИНАЛЬНЫЙ ИСПРАВЛЕННЫЙ ВАРИАНТ) */
+.doc .imageblock { 
+    text-align: center !important; 
+    margin: 2rem 0 !important; 
 }
 
-/* Эффект светлой подложки для всех схем */
 .doc .imageblock img, 
 .doc img {
-    /* Цвет: белый, но прозрачный на 5%, что на синем фоне даст мягкий светлый оттенок */
-    background-color: rgba(255, 255, 255, 0.05) !important; 
+    /* 1. ПОДЛОЖКА: увеличил до 0.15, чтобы вы её ТОЧНО увидели */
+    background-color: rgba(255, 255, 255, 0.15) !important; 
     
-    /* Тонкая рамка, чтобы отделить подложку от фона страницы (можно отключить, если кажется лишней) */
-    /* border: 1px solid rgba(255, 255, 255, 0.15) !important; */
+    /* 2. РАМКА: стальная, чтобы зафиксировать границы */
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
     
-    /* Внутренние поля (воздух), чтобы схема не касалась краев */
-    padding: 25px !important;
-    
-    /* Скругление углов для современного вида */
+    /* 3. ВОЗДУХ: большие отступы */
+    padding: 30px !important;
     border-radius: 12px !important;
-    
-    /* Небольшая тень для объема */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
     
     display: block;
     margin: 1em auto;
 }
 
-/* Оставляем инверсию цветов для SVG */
+/* СПЕЦИАЛЬНО ДЛЯ SVG: ЧТОБЫ БЫЛИ ВИДНЫ РЕБРА */
 .doc img[src$=".svg"] {
-    filter: invert(0.9) brightness(1.5) !important;
+    /* Убираем invert! Он делает линии белыми, и они сливаются с подложкой.
+       Используем brightness, чтобы просто сделать черное темно-серым и четким. */
+    filter: brightness(1.2) contrast(1.1) !important;
+    mix-blend-mode: normal !important;
 }
-
-/* Инверсия для SVG (светлые линии на темном фоне) */
-.doc img[src$=".svg"] {
-    filter: invert(0.9) brightness(1.5) !important;
-}
-
 /* 6. БЛОКИ КОДА */
 .listingblock {
     position: relative !important; background-color: #1e1e1e !important;
