@@ -1,0 +1,108 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "Left Left & Right Right cases"
+        },
+        "3": {
+            "type": "action",
+            "one": "6",
+            "content": "updateHeight(node)"
+        },
+        "4": {
+            "type": "branch",
+            "one": "17",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "5": {
+            "type": "branch",
+            "one": "11",
+            "branchId": 2,
+            "content": "Left Right & Right Left cases"
+        },
+        "6": {
+            "type": "action",
+            "one": "7",
+            "content": "balance = getBalance(node)"
+        },
+        "7": {
+            "type": "question",
+            "one": "8",
+            "two": "9",
+            "flag1": 1,
+            "content": "balance > 1 && value < node.left.value"
+        },
+        "8": {
+            "type": "action",
+            "one": "9",
+            "content": "return rotateRight(node)"
+        },
+        "9": {
+            "type": "question",
+            "one": "10",
+            "two": "5",
+            "flag1": 1,
+            "content": "balance < -1 && value > node.right.value"
+        },
+        "10": {
+            "type": "action",
+            "one": "5",
+            "content": "return rotateLeft(node)"
+        },
+        "11": {
+            "type": "question",
+            "one": "12",
+            "two": "14",
+            "flag1": 1,
+            "content": "balance > 1 && value > node.left.value"
+        },
+        "12": {
+            "type": "action",
+            "one": "13",
+            "content": "node.left = rotateLeft(node.left)"
+        },
+        "13": {
+            "type": "action",
+            "one": "14",
+            "content": "return rotateRight(node)"
+        },
+        "14": {
+            "type": "question",
+            "one": "15",
+            "two": "4",
+            "flag1": 1,
+            "content": "balance < -1 && value < node.right.value"
+        },
+        "15": {
+            "type": "action",
+            "one": "16",
+            "content": "node.right = rotateRight(node.right)"
+        },
+        "16": {
+            "type": "action",
+            "one": "4",
+            "content": "return rotateLeft(node)"
+        },
+        "17": {
+            "type": "action",
+            "one": "1",
+            "content": "return node"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "node, value"
+}

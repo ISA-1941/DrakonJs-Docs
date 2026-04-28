@@ -1,0 +1,42 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "y = nd.left\nt2 = y.right"
+        },
+        "4": {
+            "type": "action",
+            "one": "5",
+            "content": "y.right = nd\nnd.left = t2"
+        },
+        "5": {
+            "type": "action",
+            "one": "6",
+            "content": "updateHeight(nd)\nupdateHeight(y)"
+        },
+        "6": {
+            "type": "action",
+            "one": "1",
+            "content": "return y"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "nd"
+}

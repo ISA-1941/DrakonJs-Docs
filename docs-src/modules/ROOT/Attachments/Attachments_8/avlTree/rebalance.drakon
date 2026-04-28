@@ -1,0 +1,111 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "4",
+            "content": "Determining the balancing ratio"
+        },
+        "4": {
+            "type": "question",
+            "one": "5",
+            "two": "6",
+            "flag1": 1,
+            "content": "!node"
+        },
+        "5": {
+            "type": "action",
+            "one": "6",
+            "content": "return null"
+        },
+        "6": {
+            "type": "action",
+            "one": "8",
+            "content": "balance = getBalance(node)"
+        },
+        "7": {
+            "type": "branch",
+            "one": "18",
+            "branchId": 4,
+            "content": "Exit"
+        },
+        "8": {
+            "type": "branch",
+            "one": "9",
+            "branchId": 2,
+            "content": "Balance ratio greater than 1"
+        },
+        "9": {
+            "type": "question",
+            "one": "10",
+            "two": "13",
+            "flag1": 1,
+            "content": "balance > 1"
+        },
+        "10": {
+            "type": "question",
+            "one": "11",
+            "two": "12",
+            "flag1": 1,
+            "content": "getBalance(node.left) < 0"
+        },
+        "11": {
+            "type": "action",
+            "one": "12",
+            "content": "node.left = rotateLeft(node.left)"
+        },
+        "12": {
+            "type": "action",
+            "one": "13",
+            "content": "return rotateRight(node)"
+        },
+        "13": {
+            "type": "branch",
+            "branchId": 3,
+            "one": "14",
+            "content": "Balance ratio less than -1"
+        },
+        "14": {
+            "type": "question",
+            "one": "15",
+            "two": "7",
+            "flag1": 1,
+            "content": "balance < -1"
+        },
+        "15": {
+            "type": "question",
+            "one": "16",
+            "two": "17",
+            "flag1": 1,
+            "content": "getBalance(node.right) > 0"
+        },
+        "16": {
+            "type": "action",
+            "one": "17",
+            "content": "node.right = rotateRight(node.right)"
+        },
+        "17": {
+            "type": "action",
+            "one": "7",
+            "content": "return rotateLeft(node)"
+        },
+        "18": {
+            "type": "action",
+            "one": "1",
+            "content": "return node;"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "node"
+}
