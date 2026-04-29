@@ -38,9 +38,9 @@ Several types of binary trees are discussed in the literature, the most importan
 
     - Binary Search Tree (BST);
 
-    - AVL Tree;
+    - AVL Tree (Adelson-Velsky and Landis Tree);
 
-    - Red-Black Treeю
+    - Red-Black Tree.
 
 === 8.2. Binary Search Tree
 
@@ -58,10 +58,10 @@ If the tree is organized such that, for each node, all node values of its left s
 
     The value of each node is greater than that of its left child but less than that of its right child.
 
-A binary search tree is built according to a specific algorithm. Consider the sequence of integers {11, 5, 17, 15, 1, 8, 19, 13, 21}, represented as a slice of numbers. First the root node {11} is formed, then in a loop for each node the method insert(tree, value) is called recursively (Figure 8.3a), which in turn calls the method createNode(value), which creates a new node (Figure 8.3b).
+A binary search tree is built according to a specific algorithm. Consider the sequence of integers {11, 5, 17, 15, 1, 8, 19, 13, 21}, represented as a slice of numbers. First the root node {11} is formed, then in a loop for each node the method insertNode(tree, value) is called recursively (Figure 8.3a), which in turn calls the method createNode(value), which creates a new node (Figure 8.3b) в созданном дереве (Figure 8.3c).
 
-image::section_8/Fig8_3a_insert.png[width=100%, link="section_8/Fig8_3a_insert.svg", window="_blank"]
-image::section_8/Fig8_3b_createNode.png[width=75%, link="section_8/Fig8_3b_createNode.svg", window="_blank"]
+image::section_8/Fig8_3a_insert.svg[width=100%, link="section_8/Fig8_3a_insert.svg", window="_blank"]
+image::section_8/Fig8_3b_createNode.svg[width=75%, link="section_8/Fig8_3b_createNode.svg", window="_blank"]
 
 [.text-center]
 Figure 8.3. Binary tree DRAKON-diagrams: a) building a tree by insert(node, value); b) creating a node
@@ -92,7 +92,7 @@ Option a): Node (21) has no descendants (Figure 8.6).
 
 In this case, this node is removed by changing the value of node = null in the parent node. Figure 8.6 shows the process of deleting node (21) and the corresponding DRAKON-diagram fragment.
 
-image::section_8/Fig8_6_del21.png[width=75%]
+image::section_8/Fig8_6_del21_.svg[width=75%]
 
 [.text-center]
 Figure 8.6. Deleting a node without children

@@ -1,28 +1,44 @@
 {
     "history": [
         {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/removeNode.drakon",
+            "whenOpened": "2026-04-29T08:04:45.129Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/preOrder.drakon",
+            "whenOpened": "2026-04-29T08:04:19.259Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/postOrder.drakon",
+            "whenOpened": "2026-04-29T08:03:24.711Z"
+        },
+        {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/insertNode.drakon",
-            "whenOpened": "2026-04-28T18:39:16.652Z"
+            "whenOpened": "2026-04-29T07:25:26.454Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/inOrder.drakon",
+            "whenOpened": "2026-04-29T07:24:53.443Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/findNode.drakon",
+            "whenOpened": "2026-04-29T07:24:06.731Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/findMin.drakon",
+            "whenOpened": "2026-04-29T07:22:32.330Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/createBstTree.drakon",
+            "whenOpened": "2026-04-29T07:21:28.957Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/createNode.drakon",
             "whenOpened": "2026-04-28T18:38:48.240Z"
         },
         {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/createBstTree.drakon",
-            "whenOpened": "2026-04-28T18:24:41.943Z"
-        },
-        {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/main.drakon",
             "whenOpened": "2026-04-28T18:24:13.595Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/findMin.drakon",
-            "whenOpened": "2026-04-28T18:20:41.190Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/findNode.drakon",
-            "whenOpened": "2026-04-28T17:55:58.906Z"
         }
     ]
 }
