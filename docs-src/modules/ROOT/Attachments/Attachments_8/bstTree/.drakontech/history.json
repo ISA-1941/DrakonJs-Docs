@@ -2,7 +2,11 @@
     "history": [
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/removeNode.drakon",
-            "whenOpened": "2026-04-29T08:04:45.129Z"
+            "whenOpened": "2026-04-30T10:43:19.902Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/insertNode.drakon",
+            "whenOpened": "2026-04-30T10:43:00.972Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/preOrder.drakon",
@@ -11,10 +15,6 @@
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/postOrder.drakon",
             "whenOpened": "2026-04-29T08:03:24.711Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/insertNode.drakon",
-            "whenOpened": "2026-04-29T07:25:26.454Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/inOrder.drakon",
