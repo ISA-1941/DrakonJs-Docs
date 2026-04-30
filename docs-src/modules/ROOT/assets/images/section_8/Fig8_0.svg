@@ -9,7 +9,7 @@
    id="svg1"
    xml:space="preserve"
    inkscape:version="1.4.3 (fcd0343856, 2026-01-01)"
-   sodipodi:docname="Fig8_6_del21_new.svg"
+   sodipodi:docname="Fig8_0.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -670,11 +670,10 @@
          id="tspan21-8"
          style="stroke-width:0.991198;stroke:#f8f5f6;stroke-opacity:1"
          x="226.62764"
-         y="28.824797">After</tspan></text><path
-       style="font-variation-settings:'wght' 360;opacity:0.76;fill:#333333;fill-opacity:0.682291;stroke:#f8f5f6;stroke-width:1.77309;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
-       d=""
-       id="path22"
-       transform="scale(0.26458333)" /><path
-       style="font-variation-settings:'wght' 360;opacity:0.76;fill:#333333;fill-opacity:0.682291;stroke:#f8f5f6;stroke-width:0.46913;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
-       d="m 198.42891,21.891556 c -4.10829,-1.237024 -5.45103,-5.474336 -2.72028,-8.584482 1.12839,-1.28517 2.35364,-1.808538 4.23392,-1.808538 2.95747,0 5.19046,1.968877 5.42376,4.782266 0.16071,1.937847 -0.25503,2.99479 -1.68669,4.288218 -1.5553,1.405119 -3.41815,1.874328 -5.25071,1.322536 z m 4.48836,-1.528117 c 2.71785,-2.073007 2.30462,-6.201535 -0.76968,-7.68978 -4.66454,-2.258063 -9.29412,3.063709 -6.03484,6.937138 1.07596,1.278704 2.23172,1.728273 4.16018,1.618223 1.23032,-0.07021 1.88064,-0.283083 2.64434,-0.865581 z"
-       id="path23" /></g></svg>
+         y="28.824797">After</tspan></text><ellipse
+       style="font-variation-settings:'wght' 360;opacity:0.76;fill:#333333;fill-opacity:0.682291;stroke:#f8f5f6;stroke-width:0.430001;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       id="path21"
+       cx="199.31721"
+       cy="17.553795"
+       rx="6.0213599"
+       ry="5.715189" /></g></svg>
