@@ -60,7 +60,7 @@ If the tree is organized such that, for each node, all node values of its left s
 
 A binary search tree is built according to a specific algorithm. Consider the sequence of integers {11, 5, 17, 15, 1, 8, 19, 13, 21}, represented as a slice of numbers. First the root node {11} is formed, then in a loop for each node the method insertNode(tree, value) is called recursively (Figure 8.3a), which in turn calls the method createNode(value), which creates a new node (Figure 8.3b) в созданном дереве (Figure 8.3c).
 
-image::section_8/Fig8_3a_insert.svg[width=100%, link=self, window="_blank"]
+image::section_8/Fig8_3a_insertNode.svg[width=100%, link=self, window="_blank"]
 image::section_8/Fig8_3b_createNode.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
@@ -68,7 +68,7 @@ Figure 8.3. Binary tree DRAKON-diagrams: a) building a tree by insert(node, valu
 
 The complete process of creating a binary tree is shown in Figure 8.4. The first number 11 is written to the root of the tree. The second number 5 is less than the value in the tree root, so it is written to the left subtree. The next number 17 is greater than the root number, so it is written to the right subtree. Then the number 15 is greater than the value at the root of the tree, so it is written to the right subtree, but the right subtree is already built. The number 15 is compared to the number 17 at the root of the right subtree. Since the value to be added is less than the value in the root of the right subtree, we add the left subtree to this node. The final result is a binary search tree with three variants: node 5 is the parent of two children (1, 8), node 15 has only a left child, and node 19 has only a right child. This arrangement of nodes is chosen to demonstrate the node removal function, which will be discussed later.
 
-image::section_8/Fig8_4_treeProcess.jpg[width=125%, link=self, window="_blank"]
+image::section_8/Fig8_4_treeProcess.svg[width=125%, link=self, window="_blank"]
 
 [.text-center]
 Figure 8.4. Building a binary tree
@@ -77,7 +77,7 @@ Figure 8.4. Building a binary tree
 
 Another basic operation is the findNode(value) function. This function uses a JavaScript construct that recursively compares the value of val with the values of other nodes as it traverses the tree. The DRAKON-diagram of the findNode(node, value) function is shown in Figure 8.5.
 
-image::section_8/Fig8_5_findNode.png[width=100%, link=self, window="_blank"]
+image::section_8/Fig8_5_findNode.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 Figure 8.5. DRAKON-diagram of the node finding algorithm
