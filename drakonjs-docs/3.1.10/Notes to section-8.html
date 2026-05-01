@@ -371,6 +371,87 @@ case2_2 = "z:B;z&gt;P;P:B;s:B,s&lt;P;s.l:B;s.r:B"
 case2_3 = "z:B;z&lt;P;P:R;s:B,s&gt;P;s.l:B;s.r:B"
 case2_4 = "z:B;z&gt;P;P:R;s:B,s&lt;P;s.l:B;s.r:B"</p>
 </div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>digraph G {
+    // nodesep еще сильнее уменьшен для узости
+    // ranksep увеличен до 0.8 для выраженной высоты
+    graph [bgcolor="transparent", nodesep=0.15, ranksep=0.4];</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>node [shape=circle,
+      style=filled,
+      fillcolor="black",
+      color="white",
+      penwidth=2.5,        // Сделал кольцо чуть жирнее для лучшей видимости
+      peripheries=1,
+      fontcolor="white",
+      fontname="Arial",
+      fontsize=12,
+      width=0.4,
+      fixedsize=true];</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>edge [color="black", arrowhead=none, penwidth=1.5];</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>{ rank = same; "11"; "11r"; }</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>// --- ЛЕВОЕ ДЕРЕВО ---
+"21" [fillcolor="red"];</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>"11" -&gt; "5";
+"11" -&gt; "17";
+"5"  -&gt; "2";
+"5"  -&gt; "8";
+"2"  -&gt; "1";
+"17" -&gt; "15";
+"17" -&gt; "19";
+"15" -&gt; "13";
+"19" -&gt; "21";</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>// --- ПРАВОЕ ДЕРЕВО ---
+"11r" [label="11"];
+"5r"  [label="5"];
+"17r" [label="17"];
+"2r"  [label="2"];
+"8r"  [label="8"];
+"1r"  [label="1"];
+"15r" [label="15"];
+"19r" [label="19"];
+"13r" [label="13"];</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    "11r" -&gt; "5r";
+    "11r" -&gt; "17r";
+    "5r"  -&gt; "2r";
+    "5r"  -&gt; "8r";
+    "2r"  -&gt; "1r";
+    "17r" -&gt; "15r";
+    "17r" -&gt; "19r";
+    "15r" -&gt; "13r";
+}</pre>
+</div>
+</div>
+</div>
+</div>
 </article>
   </div>
 </main>
