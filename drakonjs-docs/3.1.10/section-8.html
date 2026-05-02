@@ -286,7 +286,7 @@
 <p>Let us analyze in more detail the order in which nodes are moved in these variants.</p>
 </div>
 <div class="paragraph">
-<p>Option a): Node (21) has no descendants (Figure 8.6).</p>
+<p><strong>Option a)</strong>: Node (21) has no descendants (Figure 8.6).</p>
 </div>
 <div class="paragraph">
 <p>In this case, this node is removed by changing the value of node = null in the parent node. Figure 8.6 shows the process of deleting node (21) and the corresponding DRAKON-diagram fragment.</p>
@@ -298,43 +298,37 @@
 <div class="title">Figure 8.6. Deleting a node without children</div>
 </div>
 <div class="paragraph">
-<p>Option b): Node (19) has a right-hand descendant (Figure 8.7).</p>
+<p><strong>Option b)</strong>: Node (19) has a right-hand descendant (Figure 8.7).</p>
 </div>
 <div class="paragraph">
 <p>In this case, node (19) is removed from the tree by replacing its address in the parent node (17) with the address of its only descendant node (21). Figure 8.7 shows the process of removing node (19) and the corresponding DRAKON-diagram fragment.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="_images/section_8/Fig8_7_del19.png" alt="Fig8 7 del19" width="75%">
+<img src="_images/section_8/Fig8_7_del19.svg" alt="Fig8 7 del19" width="75%">
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 8.7. Deleting node (19) with a right-hand descendant</p>
+<div class="title">Figure 8.7. Deleting node (19) with a right-hand descendant</div>
 </div>
 <div class="paragraph">
-<p>Option c): Node (8) has a left-hand child (Figure 8.8).</p>
+<p><strong>Option c)</strong>: Node (8) has a left-hand child (Figure 8.8).</p>
 </div>
 <div class="paragraph">
 <p>In this case, node (8) is removed from the tree by replacing its address in parent node (5) with the address of its only left child node (6). Figure 8.8 shows the process of removing node (8) and the corresponding DRAKON-diagram fragment.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
 <img src="_images/section_8/Fig8_8_del8.png" alt="Fig8 8 del8" width="75%">
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 8.8. Deleting node (8) with a left-hand child</p>
+<div class="title">Figure 8.8. Deleting node (8) with a left-hand child</div>
 </div>
 <div class="paragraph">
-<p>Option d): Node (5) has two descendants (Figure 8.9). In this case the binary search tree is rearranged: node (2) moves to the place of node (5).</p>
+<p><strong>Option d)</strong>: Node (5) has two descendants (Figure 8.9). In this case the binary search tree is rearranged: node (2) moves to the place of node (5).</p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
 <img src="_images/section_8/Fig8_9_del5.png" alt="Fig8 9 del5" width="75%">
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 8.9. Deleting node (5) with two children</p>
+<div class="title">Figure 8.9. Deleting node (5) with two children</div>
 </div>
 <div class="paragraph">
 <p>The DRAKON-diagram of the minimum value search method is shown in Figure 8.10.</p>
