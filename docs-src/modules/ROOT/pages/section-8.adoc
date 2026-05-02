@@ -87,7 +87,7 @@ The next basic operation is deleting a node with a specified value. The function
 
 Let us analyze in more detail the order in which nodes are moved in these variants.
 
-Option a): Node (21) has no descendants (Figure 8.6).
+*Option a)*: Node (21) has no descendants (Figure 8.6).
 
 In this case, this node is removed by changing the value of node = null in the parent node. Figure 8.6 shows the process of deleting node (21) and the corresponding DRAKON-diagram fragment.
 
@@ -96,30 +96,27 @@ In this case, this node is removed by changing the value of node = null in the p
 image::section_8/Fig8_6_del21.svg[width=75%, link=self, window="_blank"]
 
 
-Option b): Node (19) has a right-hand descendant (Figure 8.7).
+*Option b)*: Node (19) has a right-hand descendant (Figure 8.7).
 
 In this case, node (19) is removed from the tree by replacing its address in the parent node (17) with the address of its only descendant node (21). Figure 8.7 shows the process of removing node (19) and the corresponding DRAKON-diagram fragment.
 
-image::section_8/Fig8_7_del19.png[width=75%]
-
 [.text-center]
-Figure 8.7. Deleting node (19) with a right-hand descendant
+.Figure 8.7. Deleting node (19) with a right-hand descendant
+image::section_8/Fig8_7_del19.svg[width=75%]
 
-Option c): Node (8) has a left-hand child (Figure 8.8).
+*Option c)*: Node (8) has a left-hand child (Figure 8.8).
 
 In this case, node (8) is removed from the tree by replacing its address in parent node (5) with the address of its only left child node (6). Figure 8.8 shows the process of removing node (8) and the corresponding DRAKON-diagram fragment.
 
+[.text-center]
+.Figure 8.8. Deleting node (8) with a left-hand child
 image::section_8/Fig8_8_del8.png[width=75%]
 
+*Option d)*: Node (5) has two descendants (Figure 8.9). In this case the binary search tree is rearranged: node (2) moves to the place of node (5).
+
 [.text-center]
-Figure 8.8. Deleting node (8) with a left-hand child
-
-Option d): Node (5) has two descendants (Figure 8.9). In this case the binary search tree is rearranged: node (2) moves to the place of node (5).
-
+.Figure 8.9. Deleting node (5) with two children
 image::section_8/Fig8_9_del5.png[width=75%]
-
-[.text-center]
-Figure 8.9. Deleting node (5) with two children
 
 The DRAKON-diagram of the minimum value search method is shown in Figure 8.10.
 
