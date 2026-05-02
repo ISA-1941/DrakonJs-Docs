@@ -136,15 +136,13 @@ case2_4 = "z:B;z>P;P:R;s:B,s<P;s.l:B;s.r:B"
 ============================
 
 digraph G {
-    // nodesep еще сильнее уменьшен для узости
-    // ranksep увеличен до 0.8 для выраженной высоты
     graph [bgcolor="transparent", nodesep=0.15, ranksep=0.4];
     
     node [shape=circle, 
           style=filled, 
           fillcolor="black",   
           color="white",       
-          penwidth=2.5,        // Сделал кольцо чуть жирнее для лучшей видимости
+          penwidth=1.5,
           peripheries=1,       
           fontcolor="white", 
           fontname="Arial", 
@@ -152,46 +150,20 @@ digraph G {
           width=0.4, 
           fixedsize=true];
           
-    edge [color="black", arrowhead=none, penwidth=1.5];
+    edge [color="white", arrowhead=none, penwidth=1.5];
 
+    // Фиксируем уровень и добавляем невидимую "распорку"
     { rank = same; "11"; "11r"; }
+    "11" -> "11r" [style=invis, minlen=20]; // Увеличьте minlen для большего разрыва
 
     // --- ЛЕВОЕ ДЕРЕВО ---
     "21" [fillcolor="red"]; 
-
-    "11" -> "5";
-    "11" -> "17";
-    "5"  -> "2";
-    "5"  -> "8";
-    "2"  -> "1";
-    "17" -> "15";
-    "17" -> "19";
-    "15" -> "13";
-    "19" -> "21";
+    "11" -> "5"; "11" -> "17"; "5" -> "2"; "5" -> "8"; "2" -> "1";
+    "17" -> "15"; "17" -> "19"; "15" -> "13"; "19" -> "21";
 
     // --- ПРАВОЕ ДЕРЕВО ---
-    "11r" [label="11"];
-    "5r"  [label="5"];
-    "17r" [label="17"];
-    "2r"  [label="2"];
-    "8r"  [label="8"];
-    "1r"  [label="1"];
-    "15r" [label="15"];
-    "19r" [label="19"];
-    "13r" [label="13"];
-
-    "11r" -> "5r";
-    "11r" -> "17r";
-    "5r"  -> "2r";
-    "5r"  -> "8r";
-    "2r"  -> "1r";
-    "17r" -> "15r";
-    "17r" -> "19r";
-    "15r" -> "13r";
+    "11r" [label="11"]; "5r" [label="5"]; "17r" [label="17"]; "2r" [label="2"];
+    "8r" [label="8"]; "1r" [label="1"]; "15r" [label="15"]; "19r" [label="19"]; "13r" [label="13"];
+    "11r" -> "5r"; "11r" -> "17r"; "5r" -> "2r"; "5r" -> "8r"; "2r" -> "1r";
+    "17r" -> "15r"; "17r" -> "19r"; "15r" -> "13r";
 }
-
-
-
-
-
-
