@@ -70,7 +70,7 @@ The complete process of creating a binary tree is shown in Figure 8.4. The first
 
 [.text-center]
 .Figure 8.4. Building a binary tree
-image::section_8/Fig8_4_treeProcess.svg[width=100%, link=self, window="_blank"]
+image::section_8/Fig8_4.svg[width=100%, link=self, window="_blank"]
 
 ==== 8.2.2. Finding a Node Based on a Given Value
 
