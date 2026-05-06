@@ -110,7 +110,7 @@ In this case, node (8) is removed from the tree by replacing its address in pare
 
 [.text-center]
 .Figure 8.8. Deleting node (8) with a left-hand child
-image::section_8/Fig8_8_del8.png[width=75%]
+image::section_8/Fig8_8_del8.svg[width=75%]
 
 *Option d)*: Node (5) has two descendants (Figure 8.9). In this case the binary search tree is rearranged: node (2) moves to the place of node (5).
 
