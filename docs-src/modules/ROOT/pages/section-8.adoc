@@ -102,7 +102,7 @@ In this case, node (19) is removed from the tree by replacing its address in the
 
 [.text-center]
 .Figure 8.7. Deleting node (19) with a right-hand descendant
-image::section_8/Fig8_7_del19.svg[width=75%]
+image::section_8/Fig8_7_del19.svg[width=75%, , link=self, window="_blank"]
 
 *Option c)*: Node (8) has a left-hand child (Figure 8.8).
 
@@ -110,13 +110,13 @@ In this case, node (8) is removed from the tree by replacing its address in pare
 
 [.text-center]
 .Figure 8.8. Deleting node (8) with a left-hand child
-image::section_8/Fig8_8_del8.svg[width=75%]
+image::section_8/Fig8_8_del8.svg[width=75%, , link=self, window="_blank"]
 
 *Option d)*: Node (5) has two descendants (Figure 8.9). In this case the binary search tree is rearranged: node (2) moves to the place of node (5).
 
 [.text-center]
 .Figure 8.9. Deleting node (5) with two children
-image::section_8/Fig8_9_del5.png[width=75%]
+image::section_8/Fig8_9_del5.png[width=75%, link=self, window="_blank"]
 
 The DRAKON-diagram of the minimum value search method is shown in Figure 8.10.
 
