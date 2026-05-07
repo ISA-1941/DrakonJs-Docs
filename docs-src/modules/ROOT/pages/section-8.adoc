@@ -70,7 +70,7 @@ The complete process of creating a binary tree is shown in Figure 8.4. The first
 
 [.text-center]
 .Figure 8.4. Building a binary tree
-image::section_8/Fig8_4_1.svg[width=100%, link=self, window="_blank"]
+image::section_8/Fig8_4_Process.svg[width=100%, link=self, window="_blank"]
 
 ==== 8.2.2. Finding a Node Based on a Given Value
 
@@ -110,7 +110,7 @@ In this case, node (8) is removed from the tree by replacing its address in pare
 
 [.text-center]
 .Figure 8.8. Deleting node (8) with a left-hand child
-image::section_8/Fig8_8_del8.svg[width=75%, , link=self, window="_blank"]
+image::section_8/Fig8_del8.svg[width=75%, , link=self, window="_blank"] 
 
 *Option d)*: Node (5) has two descendants (Figure 8.9). In this case the binary search tree is rearranged: node (2) moves to the place of node (5).
 
