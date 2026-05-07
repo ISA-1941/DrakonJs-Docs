@@ -102,7 +102,7 @@ In this case, node (19) is removed from the tree by replacing its address in the
 
 [.text-center]
 .Figure 8.7. Deleting node (19) with a right-hand descendant
-image::section_8/Fig8_7_del19_.svg[width=75%, , link=self, window="_blank"]
+image::section_8/Fig8_7_del19.svg[width=75%, , link=self, window="_blank"]
 
 *Option c)*: Node (8) has a left-hand child (Figure 8.8).
 
