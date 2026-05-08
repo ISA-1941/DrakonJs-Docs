@@ -131,6 +131,8 @@ The complete DRAKON-diagram of node removal from a binary search tree is shown i
 .Figure 8.11. DRAKON-diagram of node removal
 image::section_8/Fig8_11_removeNode.svg[width=75%, , link=self, window="_blank"]
 
+image::section_8/Fig8__removeNode.svg[width=75%, , link=self, window="_blank"]
+
 ==== 8.2.4. Traversing the Binary Search Tree
 
 One of the basic tree operations is traversing tree nodes. Unlike linear data structures, where elements are traversed in a linear order, tree nodes can be traversed in a variety of ways.
