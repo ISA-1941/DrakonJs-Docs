@@ -120,7 +120,7 @@ image::section_8/Fig8_9_del5.svg[width=75%, link=self, window="_blank"]
 
 The DRAKON-diagram of the minimum value search method is shown in Figure 8.10.
 
-image::section_8/Fig8_10_findMin.png[width=75%]
+image::section_8/Fig8_10_findMin.svg[width=75%]
 
 [.text-center]
 Figure 8.10. DRAKON-diagram of the minimum value search method
