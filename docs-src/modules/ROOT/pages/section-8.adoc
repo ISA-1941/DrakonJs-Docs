@@ -127,10 +127,9 @@ Figure 8.10. DRAKON-diagram of the minimum value search method
 
 The complete DRAKON-diagram of node removal from a binary search tree is shown in Figure 8.11.
 
-image::section_8/Fig8_11_removeNode.svg[width=75%, , link=self, window="_blank"]
-
 [.text-center]
-Figure 8.11. DRAKON-diagram of node removal
+.Figure 8.11. DRAKON-diagram of node removal
+image::section_8/Fig8_11_removeNode.svg[width=75%, , link=self, window="_blank"]
 
 ==== 8.2.4. Traversing the Binary Search Tree
 
