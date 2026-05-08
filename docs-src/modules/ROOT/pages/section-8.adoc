@@ -116,7 +116,7 @@ image::section_8/Fig8_del8.svg[width=75%, , link=self, window="_blank"]
 
 [.text-center]
 .Figure 8.9. Deleting node (5) with two children
-image::section_8/Fig8_9_del5.png[width=75%, link=self, window="_blank"]
+image::section_8/Fig8_9_del5.svg[width=75%, link=self, window="_blank"]
 
 The DRAKON-diagram of the minimum value search method is shown in Figure 8.10.
 
