@@ -144,7 +144,7 @@ One of the basic tree operations is traversing tree nodes. Unlike linear data st
 All three cases, including the DRAKON diagrams, are shown in Figure 8.12.
 
 image::section_8/Fig8_12_Diag.svg[width=100%, , link=self, window="_blank"]
-image::section_8/Fig8_12b.svg[width=100%, , link=self, window="_blank"]
+image::section_8/Fig8_12a_Tree_2.svg[width=100%, , link=self, window="_blank"]
 [.text-center]
 Figure 8.12. Three classical tree traversals: Pre-, In-, and Post-order
 
