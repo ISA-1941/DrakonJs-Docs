@@ -5,7 +5,7 @@
    viewBox="0.00 0.00 445.00 303.00"
    version="1.1"
    id="svg28"
-   sodipodi:docname="Fig8_12a_Tree_2.svg"
+   sodipodi:docname="Fig8_12b_Tree.svg"
    inkscape:version="1.4.3 (fcd0343856, 2026-01-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -35,7 +35,7 @@
   <g
      id="node1"
      class="node"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title2">n11</title>
     <circle
@@ -59,7 +59,7 @@
   <g
      id="node2"
      class="node"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title3">n5</title>
     <circle
@@ -83,7 +83,7 @@
   <g
      id="edge1"
      class="edge"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title4">n11-&gt;n5</title>
     <path
@@ -96,7 +96,7 @@
   <g
      id="node3"
      class="node"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title5">n17</title>
     <circle
@@ -120,7 +120,7 @@
   <g
      id="edge2"
      class="edge"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title6">n11-&gt;n17</title>
     <path
@@ -133,7 +133,7 @@
   <g
      id="node4"
      class="node"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title7">n2</title>
     <circle
@@ -157,7 +157,7 @@
   <g
      id="edge3"
      class="edge"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title8">n5-&gt;n2</title>
     <path
@@ -170,7 +170,7 @@
   <g
      id="node5"
      class="node"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title9">n8</title>
     <circle
@@ -194,7 +194,7 @@
   <g
      id="edge4"
      class="edge"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title10">n5-&gt;n8</title>
     <path
@@ -207,7 +207,7 @@
   <g
      id="node6"
      class="node"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title11">n15</title>
     <circle
@@ -231,7 +231,7 @@
   <g
      id="edge5"
      class="edge"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title12">n17-&gt;n15</title>
     <path
@@ -244,7 +244,7 @@
   <g
      id="node7"
      class="node"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title13">n19</title>
     <circle
@@ -268,7 +268,7 @@
   <g
      id="edge6"
      class="edge"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title14">n17-&gt;n19</title>
     <path
@@ -281,7 +281,7 @@
   <g
      id="node8"
      class="node"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title15">n1</title>
     <circle
@@ -305,7 +305,7 @@
   <g
      id="edge7"
      class="edge"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title16">n2-&gt;n1</title>
     <path
@@ -318,7 +318,7 @@
   <g
      id="node9"
      class="node"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title17">n3</title>
     <circle
@@ -342,7 +342,7 @@
   <g
      id="edge8"
      class="edge"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title18">n2-&gt;n3</title>
     <path
@@ -355,7 +355,7 @@
   <g
      id="node10"
      class="node"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title19">n6</title>
     <circle
@@ -379,7 +379,7 @@
   <g
      id="edge9"
      class="edge"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title20">n8-&gt;n6</title>
     <path
@@ -392,7 +392,7 @@
   <g
      id="node11"
      class="node"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title21">n10</title>
     <circle
@@ -416,7 +416,7 @@
   <g
      id="edge10"
      class="edge"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title22">n8-&gt;n10</title>
     <path
@@ -429,7 +429,7 @@
   <g
      id="node12"
      class="node"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title23">n13</title>
     <circle
@@ -453,7 +453,7 @@
   <g
      id="edge11"
      class="edge"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title24">n15-&gt;n13</title>
     <path
@@ -466,7 +466,7 @@
   <g
      id="node13"
      class="node"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title25">n16</title>
     <circle
@@ -490,7 +490,7 @@
   <g
      id="edge12"
      class="edge"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title26">n15-&gt;n16</title>
     <path
@@ -503,7 +503,7 @@
   <g
      id="node14"
      class="node"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title27">n21</title>
     <circle
@@ -527,7 +527,7 @@
   <g
      id="edge13"
      class="edge"
-     transform="translate(4,299.2)">
+     transform="matrix(0.51207241,0,0,0.51207241,110.56338,227.18189)">
     <title
        id="title28">n19-&gt;n21</title>
     <path
