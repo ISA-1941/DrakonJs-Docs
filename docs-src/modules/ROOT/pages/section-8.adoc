@@ -181,7 +181,7 @@ The balancing algorithm in its most general form is presented in the following D
 
 [.text-center]
 .Figure 8.15. The balancing algorithm in its most general view
-image::section_8/Fig8_15_buildingAvlTree.svg[width=100%, link="section_8/Fig8_15_buildingAvlTree.svg", window="_blank"]
+image::section_8/Fig8_15_buildingAvlTree.png[width=100%, link="section_8/Fig8_15_buildingAvlTree.svg", window="_blank"]
 
 The balancing technique boils down to making circular movements of the nodes in four variants:
 
