@@ -161,10 +161,9 @@ In such practically "degenerate" trees, the complexity of operations is determin
 The left and right subtrees are unbalanced, which can be estimated by the balance factor (bf), which is equal to the difference between the heights of the left and right subtrees. 
 Recall that the height of a tree is defined as the length of the longest branch in a subtree (sum of edges). For an ideal binary search tree (a tree where the number of nodes in the left subtree equals the number of nodes in the right subtree), this factor is 0 (Figure 8.14).
 
-image::section_8/Fig8_14_idealTree.png[width=50%, link=self, window="_blank"]
-
 [.text-center]
-Figure 8.14. An ideal binary tree
+.Figure 8.14. An ideal binary tree
+image::section_8/Fig8_14_idealTree.png[width=50%, link=self, window="_blank"]
 
 In real life, ideal binary trees are almost never achieved. Programmers often try to build a tree where the height of the left subtree differs from the height of the right subtree by no more than 1. Such trees are called AVL trees; for these trees the complexity of operations is defined as O(log n), meaning the execution time of basic operations (search, delete) is significantly less than for BST trees.
 
@@ -180,10 +179,9 @@ The algorithms for such trees are based on the process of balancing the tree whe
 
 The balancing algorithm in its most general form is presented in the following DRAKON diagram (Figure 8.15):
 
-image::section_8/Fig8_15_buildingAvlTree.png[width=100%, link="section_8/Fig8_15_buildingAvlTree.svg", window="_blank"]
-
 [.text-center]
-Figure 8.15. The balancing algorithm in its most general view
+.Figure 8.15. The balancing algorithm in its most general view
+image::section_8/Fig8_15_buildingAvlTree.svg[width=100%, link="section_8/Fig8_15_buildingAvlTree.svg", window="_blank"]
 
 The balancing technique boils down to making circular movements of the nodes in four variants:
 
@@ -204,10 +202,9 @@ Figure 8.16. Right rotation
 
 Left rotation is performed when the root node has a balance factor bf = -2 and its right-hand descendant has a balance factor bf = -1 (Figure 8.17):
 
-image::section_8/Fig8_17_LL_turn.jpg[width=75%]
-
 [.text-center]
-Figure 8.17. Left rotation
+.Figure 8.17. Left rotation
+image::section_8/Fig8_17_LL_turn.jpg[width=75%]
 
 Right-left rotation is performed when the root node has a balance factor bf = -2 and its right-hand child has a balance factor bf = +1 (Figure 8.18):
 
