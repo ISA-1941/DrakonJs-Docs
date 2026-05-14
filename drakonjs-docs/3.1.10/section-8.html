@@ -404,13 +404,11 @@
 The left and right subtrees are unbalanced, which can be estimated by the balance factor (bf), which is equal to the difference between the heights of the left and right subtrees.
 Recall that the height of a tree is defined as the length of the longest branch in a subtree (sum of edges). For an ideal binary search tree (a tree where the number of nodes in the left subtree equals the number of nodes in the right subtree), this factor is 0 (Figure 8.14).</p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
 <a class="image" href="_images/section_8/Fig8_14_idealTree.png" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_14_idealTree.png" alt="Fig8 14 idealTree" width="50%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 8.14. An ideal binary tree</p>
+<div class="title">Figure 8.14. An ideal binary tree</div>
 </div>
 <div class="paragraph">
 <p>In real life, ideal binary trees are almost never achieved. Programmers often try to build a tree where the height of the left subtree differs from the height of the right subtree by no more than 1. Such trees are called AVL trees; for these trees the complexity of operations is defined as O(log n), meaning the execution time of basic operations (search, delete) is significantly less than for BST trees.</p>
@@ -441,13 +439,11 @@ Recall that the height of a tree is defined as the length of the longest branch 
 <div class="paragraph">
 <p>The balancing algorithm in its most general form is presented in the following DRAKON diagram (Figure 8.15):</p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<a class="image" href="section_8/Fig8_15_buildingAvlTree.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_15_buildingAvlTree.png" alt="Fig8 15 buildingAvlTree" width="100%"></a>
+<a class="image" href="section_8/Fig8_15_buildingAvlTree.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_15_buildingAvlTree.svg" alt="Fig8 15 buildingAvlTree" width="100%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 8.15. The balancing algorithm in its most general view</p>
+<div class="title">Figure 8.15. The balancing algorithm in its most general view</div>
 </div>
 <div class="paragraph">
 <p>The balancing technique boils down to making circular movements of the nodes in four variants:</p>
@@ -486,13 +482,11 @@ Recall that the height of a tree is defined as the length of the longest branch 
 <div class="paragraph">
 <p>Left rotation is performed when the root node has a balance factor bf = -2 and its right-hand descendant has a balance factor bf = -1 (Figure 8.17):</p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
 <img src="_images/section_8/Fig8_17_LL_turn.jpg" alt="Fig8 17 LL turn" width="75%">
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 8.17. Left rotation</p>
+<div class="title">Figure 8.17. Left rotation</div>
 </div>
 <div class="paragraph">
 <p>Right-left rotation is performed when the root node has a balance factor bf = -2 and its right-hand child has a balance factor bf = +1 (Figure 8.18):</p>
