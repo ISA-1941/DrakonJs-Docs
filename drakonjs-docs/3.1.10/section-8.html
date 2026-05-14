@@ -489,24 +489,20 @@ Recall that the height of a tree is defined as the length of the longest branch 
 <div class="paragraph">
 <p>Right-left rotation is performed when the root node has a balance factor bf = -2 and its right-hand child has a balance factor bf = +1 (Figure 8.18):</p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
 <a class="image" href="_images/section_8/Fig8_18_turnRL.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_18_turnRL.svg" alt="Fig8 18 turnRL" width="100%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 8.18. Right-left rotation</p>
+<div class="title">Figure 8.18. Right-left rotation</div>
 </div>
 <div class="paragraph">
 <p>Left-right rotation is performed when a node has a balance factor bf = +2 and its left child has a balance factor bf = -1 (Figure 8.19):</p>
 </div>
-<div class="imageblock unresolved">
+<div class="imageblock text-center">
 <div class="content">
-<a class="image" href="section_8/Fig8_19_turnLR.svg" target="_blank" rel="noopener"><img src="section_8/Fig8_19_turnLR.svg" alt="Fig8 19 turnLR" width="100%"></a>
+<a class="image" href="_images/section_8/Fig8_19_turnLR.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_19_turnLR.svg" alt="Fig8 19 turnLR" width="100%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 8.19. Left-right rotation</p>
+<div class="title">Figure 8.19. Left-right rotation</div>
 </div>
 <div class="paragraph">
 <p>Consider the balancing process in more detail with an example of tree formation when input data is received in this order: [1, 2, 5, 6, 8, 11, 13, 15, 17, 19, 21]. As shown above, such a tree is unbalanced.</p>
@@ -514,13 +510,11 @@ Recall that the height of a tree is defined as the length of the longest branch 
 <div class="paragraph">
 <p>Balance checks are started on the arrival of each new node using the insertNode(node, value) function, which determines the position of the new node in the left or right subtree relative to the root node. The choice of the balancing path is determined by the method rotateInsert(node, value). A DRAKON-diagram of the algorithms of the above methods is shown in Figure 8.20.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
 <a class="image" href="section_8/Fig8_20_insertNode.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_20_insertNode.png" alt="Fig8 20 insertNode" width="100%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 8.20. DRAKON-diagram depicting the method of inserting a node</p>
+<div class="title">Figure 8.20. DRAKON-diagram depicting the method of inserting a node</div>
 </div>
 <div class="paragraph">
 <p>The choice of one of the possible balancing paths (rotations) is determined by the rotateInsert(node, val) function (Figure 8.21).</p>
