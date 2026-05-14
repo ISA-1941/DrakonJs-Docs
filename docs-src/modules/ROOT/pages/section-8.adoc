@@ -207,26 +207,23 @@ image::section_8/Fig8_17_turnLL.svg[width=100%, link=self, window="_blank"]
 
 Right-left rotation is performed when the root node has a balance factor bf = -2 and its right-hand child has a balance factor bf = +1 (Figure 8.18):
 
-image::section_8/Fig8_18_turnRL.svg[width=100%, link=self, window="_blank"]
-
 [.text-center]
-Figure 8.18. Right-left rotation
+.Figure 8.18. Right-left rotation
+image::section_8/Fig8_18_turnRL.svg[width=100%, link=self, window="_blank"]
 
 Left-right rotation is performed when a node has a balance factor bf = +2 and its left child has a balance factor bf = -1 (Figure 8.19):
 
-image::section_8/Fig8_19_turnLR.svg[width=100%, link=self, window="_blank"]
-
 [.text-center]
-Figure 8.19. Left-right rotation
+.Figure 8.19. Left-right rotation
+image::section_8/Fig8_19_turnLR.svg[width=100%, link=self, window="_blank"]
 
 Consider the balancing process in more detail with an example of tree formation when input data is received in this order: [1, 2, 5, 6, 8, 11, 13, 15, 17, 19, 21]. As shown above, such a tree is unbalanced.
 
 Balance checks are started on the arrival of each new node using the insertNode(node, value) function, which determines the position of the new node in the left or right subtree relative to the root node. The choice of the balancing path is determined by the method rotateInsert(node, value). A DRAKON-diagram of the algorithms of the above methods is shown in Figure 8.20.
 
-image::section_8/Fig8_20_insertNode.png[width=100%, link="section_8/Fig8_20_insertNode.svg", window="_blank"]
-
 [.text-center]
-Figure 8.20. DRAKON-diagram depicting the method of inserting a node
+.Figure 8.20. DRAKON-diagram depicting the method of inserting a node
+image::section_8/Fig8_20_insertNode.png[width=100%, link="section_8/Fig8_20_insertNode.svg", window="_blank"]
 
 The choice of one of the possible balancing paths (rotations) is determined by the rotateInsert(node, val) function (Figure 8.21).
 
