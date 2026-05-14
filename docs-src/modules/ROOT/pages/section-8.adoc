@@ -148,18 +148,18 @@ image::section_8/Fig8_12_Diag.svg[width=100%, , link=self, window="_blank"]
 .Figure 8.12. Three classical tree traversals: Pre-, In-, and Post-order
 image::section_8/Fig8_12_Tree.svg[width=100%, , link=self, window="_blank"]
 
-
-
 === 8.3. Self-Balancing Binary Trees (AVL Trees)
 
-The efficiency of any tree operation depends substantially on the order in which the input data is received. For example, if an incoming sequence of numbers is partially sorted in ascending or descending order, the structure will no longer look like a tree (Figure 8.13).
-
-image::section_8/Fig8_13.png[width=25%]
+The efficiency of binary tree processing algorithms significantly depends on the order in which node values are provided during tree construction. 
+ In the most favorable sequence, the binary tree becomes balanced. In the worst-case sequence, the "tree" degenerates into a "branch". (Figure 8.13).
 
 [.text-center]
-Figure 8.13. Partially sorted input data
+.Figure 8.13. Partially sorted input data
+image::section_8/Fig8_13.png[width=25%]
 
-In such practically "degenerate" trees, the complexity of operations is determined by the number of nodes — that is, it is almost linear: O(n). The left and right subtrees are unbalanced, which can be estimated by the balance factor (bf), which is equal to the difference between the heights of the left and right subtrees. Recall that the height of a tree is defined as the length of the longest branch in a subtree (sum of edges). For an ideal binary search tree (a tree where the number of nodes in the left subtree equals the number of nodes in the right subtree), this factor is 0 (Figure 8.14).
+In such practically "degenerate" trees, the complexity of operations is determined by the number of nodes — that is, it is almost linear: O(n). 
+The left and right subtrees are unbalanced, which can be estimated by the balance factor (bf), which is equal to the difference between the heights of the left and right subtrees. 
+Recall that the height of a tree is defined as the length of the longest branch in a subtree (sum of edges). For an ideal binary search tree (a tree where the number of nodes in the left subtree equals the number of nodes in the right subtree), this factor is 0 (Figure 8.14).
 
 image::section_8/Fig8_14_treeIdeal.png[width=100%, link="section_8/Fig8_14_treeIdeal.svg", window="_blank"]
 
