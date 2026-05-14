@@ -181,7 +181,7 @@ The balancing algorithm in its most general form is presented in the following D
 
 [.text-center]
 .Figure 8.15. The balancing algorithm in its most general view
-image::section_8/Fig8_15_buildingAvlTree.png[width=100%, link="section_8/Fig8_15_buildingAvlTree.svg", window="_blank"]
+image::section_8/Fig8_15_buildingAvlTree.png[width=100%, link=self, window="_blank"]
 
 The balancing technique boils down to making circular movements of the nodes in four variants:
 
@@ -195,27 +195,26 @@ The balancing technique boils down to making circular movements of the nodes in 
 
 Right rotation is performed when the root node has a balance factor bf = +2 and its left-hand child has a balance factor bf = +1 (Figure 8.16):
 
-image::section_8/Fig8_16_RR_turn.jpg[width=100%]
-
 [.text-center]
-Figure 8.16. Right rotation
+.Figure 8.16. Right rotation
+image::section_8/Fig8_16_turnRR.svg[width=100%, link=self, window="_blank"]
 
 Left rotation is performed when the root node has a balance factor bf = -2 and its right-hand descendant has a balance factor bf = -1 (Figure 8.17):
 
 [.text-center]
 .Figure 8.17. Left rotation
-image::section_8/Fig8_17_LL_turn.jpg[width=75%]
+image::section_8/Fig8_17_turnLL.svg[width=100%, link=self, window="_blank"]
 
 Right-left rotation is performed when the root node has a balance factor bf = -2 and its right-hand child has a balance factor bf = +1 (Figure 8.18):
 
-image::section_8/Fig8_18_RL_turn.jpg[width=75%]
+image::section_8/Fig8_18_turnRL.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 Figure 8.18. Right-left rotation
 
 Left-right rotation is performed when a node has a balance factor bf = +2 and its left child has a balance factor bf = -1 (Figure 8.19):
 
-image::section_8/Fig8_19_LR_turn.jpg[width=75%]
+image::section_8/Fig8_19_turnLR.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 Figure 8.19. Left-right rotation
