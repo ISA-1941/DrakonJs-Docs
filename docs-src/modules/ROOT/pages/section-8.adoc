@@ -272,17 +272,16 @@ c) The node to be deleted has one descendant (left or right).
 
 As with the other methods, a node with a given value is first recursively identified and then one of the options presented is selected. A DRAKON-diagram of the algorithm for deleting a node with a specified value is shown in Figure 8.27.
 
-image::section_8/Fig8_27_deleteNode.png[width=75%, link="section_8/Fig8_27_deleteNode.svg", window="_blank"]
-
 [.text-center]
-Figure 8.27. DRAKON-diagram depicting an algorithm for removing a node with a specified value
+.Figure 8.27. DRAKON-diagram depicting an algorithm for removing a node with a specified value
+image::section_8/Fig8_27_deleteNode.svg[width=75%, link=self, window="_blank"]
 
 The main() program inputs an array of data, searches for a node with a specified value, and deletes a node with a specified value (Figure 8.28).
 
-image::section_8/Fig8_28_mainAVL.svg[width=75%, link="section_8/Fig8_28_mainFunction.svg", window="_blank"]
+image::section_8/Fig8_28_mainAVL.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
-Figure 8.28. DRAKON-diagram of the main function
+.Figure 8.28. DRAKON-diagram of the main function
 
 === 8.4. Red-Black Trees
 
