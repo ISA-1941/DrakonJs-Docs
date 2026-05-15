@@ -1,72 +1,72 @@
 {
     "history": [
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\main.drakon",
-            "whenOpened": "2025-05-29T18:22:31.430Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/updateHeight.drakon",
+            "whenOpened": "2026-05-15T07:10:19.212Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\insertNode.drakon",
-            "whenOpened": "2025-05-29T17:25:31.601Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/rotateRight.drakon",
+            "whenOpened": "2026-05-15T07:10:09.406Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\deleteNode.drakon",
-            "whenOpened": "2025-05-29T11:55:16.271Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/rotateLeft.drakon",
+            "whenOpened": "2026-05-15T07:10:02.450Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\rotateInsert.drakon",
-            "whenOpened": "2025-05-29T11:48:07.600Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/rotateInsert.drakon",
+            "whenOpened": "2026-05-15T07:09:54.327Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\rotateRight.drakon",
-            "whenOpened": "2025-05-29T11:48:04.719Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/rebalance.drakon",
+            "whenOpened": "2026-05-15T07:09:44.382Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\rotateLeft.drakon",
-            "whenOpened": "2025-05-29T11:48:03.274Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/module.drakon",
+            "whenOpened": "2026-05-15T07:09:42.762Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\rebalance.drakon",
-            "whenOpened": "2025-05-29T11:47:59.393Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/main.drakon",
+            "whenOpened": "2026-05-15T07:09:41.220Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\height.drakon",
-            "whenOpened": "2025-05-29T11:47:55.023Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/isLeaf.drakon",
+            "whenOpened": "2026-05-15T07:09:39.501Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\inOrder.drakon",
-            "whenOpened": "2025-05-29T11:47:52.265Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/insertNode.drakon",
+            "whenOpened": "2026-05-15T07:09:24.715Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\findNode.drakon",
-            "whenOpened": "2025-05-25T05:31:51.444Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/inOrder.drakon",
+            "whenOpened": "2026-05-15T07:09:20.640Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\findMin.drakon",
-            "whenOpened": "2025-05-25T05:31:48.268Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/height.drakon",
+            "whenOpened": "2026-05-15T07:09:16.815Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\module.drakon",
-            "whenOpened": "2025-05-17T16:30:36.964Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/getBalance.drakon",
+            "whenOpened": "2026-05-15T07:09:14.551Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\updateHeight.drakon",
-            "whenOpened": "2025-05-17T14:25:40.311Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/findNode.drakon",
+            "whenOpened": "2026-05-15T07:08:58.767Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\isLeaf.drakon",
-            "whenOpened": "2025-05-17T09:35:57.839Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/findMin.drakon",
+            "whenOpened": "2026-05-15T07:08:56.468Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\getBalance.drakon",
-            "whenOpened": "2025-05-14T08:41:53.411Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/deleteNode.drakon",
+            "whenOpened": "2026-05-15T07:07:06.168Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\createNode.drakon",
-            "whenOpened": "2025-05-13T17:02:58.568Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/createNode.drakon",
+            "whenOpened": "2026-05-15T07:07:03.709Z"
         },
         {
-            "path": "D:\\GitWorks\\DrakonJsLocal\\Project_Book\\docs-src\\modules\\section-8\\attachments\\avlTree\\createavlTree.drakon",
-            "whenOpened": "2025-05-13T17:02:57.043Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/createavlTree.drakon",
+            "whenOpened": "2026-05-15T07:07:01.512Z"
         }
     ]
 }

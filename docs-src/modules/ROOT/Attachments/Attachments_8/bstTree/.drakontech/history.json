@@ -1,12 +1,20 @@
 {
     "history": [
         {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/removeNode.drakon",
-            "whenOpened": "2026-05-07T14:37:33.433Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/findNode.drakon",
+            "whenOpened": "2026-05-15T06:58:54.692Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/inOrder.drakon",
+            "whenOpened": "2026-05-15T06:55:18.443Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/insertNode.drakon",
-            "whenOpened": "2026-04-30T10:43:00.972Z"
+            "whenOpened": "2026-05-15T06:48:56.035Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/removeNode.drakon",
+            "whenOpened": "2026-05-07T14:37:33.433Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/preOrder.drakon",
@@ -15,14 +23,6 @@
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/postOrder.drakon",
             "whenOpened": "2026-04-29T08:03:24.711Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/inOrder.drakon",
-            "whenOpened": "2026-04-29T07:24:53.443Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/findNode.drakon",
-            "whenOpened": "2026-04-29T07:24:06.731Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/findMin.drakon",
