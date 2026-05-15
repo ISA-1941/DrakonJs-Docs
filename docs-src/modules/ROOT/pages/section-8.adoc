@@ -279,7 +279,7 @@ Figure 8.27. DRAKON-diagram depicting an algorithm for removing a node with a sp
 
 The main() program inputs an array of data, searches for a node with a specified value, and deletes a node with a specified value (Figure 8.28).
 
-image::section_8/Fig8_28_mainFunction.svg[width=75%, link="section_8/Fig8_28_mainFunction.svg", window="_blank"]
+image::section_8/Fig8_28_mainAVL.svg[width=75%, link="section_8/Fig8_28_mainFunction.svg", window="_blank"]
 
 [.text-center]
 Figure 8.28. DRAKON-diagram of the main function

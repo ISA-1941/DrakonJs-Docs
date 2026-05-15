@@ -1,6 +1,10 @@
 {
     "history": [
         {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/main.drakon",
+            "whenOpened": "2026-05-15T09:24:16.923Z"
+        },
+        {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/rotateLeft.drakon",
             "whenOpened": "2026-05-15T08:03:56.336Z"
         },
@@ -23,10 +27,6 @@
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/module.drakon",
             "whenOpened": "2026-05-15T07:09:42.762Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/main.drakon",
-            "whenOpened": "2026-05-15T07:09:41.220Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/isLeaf.drakon",
