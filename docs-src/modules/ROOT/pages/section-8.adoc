@@ -223,7 +223,7 @@ Balance checks are started on the arrival of each new node using the insertNode(
 
 [.text-center]
 .Figure 8.20. DRAKON-diagram depicting the method of inserting a node
-image::section_8/Fig8_20_insertNode[width=100%, link=self, window="_blank"]
+image::section_8/Fig8_20_insertNode.svg[width=100%, link=self, window="_blank"]
 
 The choice of one of the possible balancing paths (rotations) is determined by the rotateInsert(node, val) function (Figure 8.21).
 
