@@ -223,21 +223,20 @@ Balance checks are started on the arrival of each new node using the insertNode(
 
 [.text-center]
 .Figure 8.20. DRAKON-diagram depicting the method of inserting a node
-image::section_8/Fig8_20_insertNode.png[width=100%, link="section_8/Fig8_20_insertNode.svg", window="_blank"]
+image::section_8/Fig8_20_insertNode[width=100%, link=self, window="_blank"]
 
 The choice of one of the possible balancing paths (rotations) is determined by the rotateInsert(node, val) function (Figure 8.21).
 
-image::section_8/Fig8_21_rotateInsert.png[width=100%, link="section_8/Fig8_21_rotateInsert.svg", window="_blank"]
-
 [.text-center]
-Figure 8.21. DRAKON-diagram depicting the rotation selection method
+.Figure 8.21. DRAKON-diagram depicting the rotation selection method
+image::section_8/Fig8_21_rotateInsert.svg[width=100%, link=self, window="_blank"]
 
 Depending on the location of the new node relative to the parent node and the balance factor values, the left-hand or right-hand rotation methods are performed (Figure 8.22):
 
+[.text-center]
+.Figure 8.22. Node rotation program codes
 image::section_8/Fig8_22_twoRotates.jpg[width=100%, link="section_8/Fig8_22_twoRotates.svg", window="_blank"]
 
-[.text-center]
-Figure 8.22. Node rotation program codes
 
 Let us examine the tree rebuilding process in detail as a result of using the rotateInsert(node, val) method on the example of entering the values of three nodes (5, 6, 8). After receiving the value of the last node (8), a "twig" appears instead of a tree that needs to be balanced. In this case the condition in the rotateInsert(node, val) method is met: the balancing factor is 2 and the value of node (8) is greater than the parent node (6), so the rotateLeft(node) method is called. The balancing process in this case is shown in Figure 8.23:
 
