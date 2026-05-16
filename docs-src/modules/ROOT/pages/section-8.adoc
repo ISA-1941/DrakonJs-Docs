@@ -246,10 +246,9 @@ image::section_8/Fig8_23_LL.svg[width=75%, link=self, window="_blank"]
 
 The process of new nodes arriving and rebuilding the resulting AVL tree by balancing for the input set [1, 2, 5, 6, 8, 11, 13, 15, 17, 19, 21] is shown in Figure 8.24.
 
-image::section_8/Fig8_24_avlTreeProcess.jpg[width=100%]
-
 [.text-center]
-Figure 8.24. Process of building a balanced AVL tree
+.Figure 8.24. Process of building a balanced AVL tree
+image::section_8/Fig8_24_avlTreeProcess.svg[width=75%, link=self, window="_blank"]
 
 The DRAKON-diagram of the AVL tree basic operation findNode(node, val) is shown in Figure 8.25:
 
