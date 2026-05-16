@@ -8174,37 +8174,40 @@
        inkscape:original-d="M 65.015641,10.091378 67.444292,6.6092617 70.439746,2.0536169"
        inkscape:path-effect="#path-effect7-8-9-7-3-0" />
     <g
-       id="g6-212-2-3-3-1"
-       transform="matrix(0.36861653,0,0,0.36861653,30.636267,178.98276)"
-       inkscape:transform-center-x="0.396875"
-       inkscape:transform-center-y="-0.52916666">
-      <circle
-         cx="115.01057"
-         cy="49.923065"
-         fill="#ffffff"
-         stroke="#000000"
-         stroke-width="1.35438"
-         pointer-events="all"
-         id="ellipse68-3-53-8-9-8-4"
-         r="9.0292082" />
-      <ellipse
-         style="fill:#030405;fill-opacity:1;stroke:#fefafb;stroke-width:3.92888;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:0.0531915"
-         id="path1-9-918-9-1-5-0"
-         cx="115.04971"
-         cy="50.020245"
-         rx="7.2759085"
-         ry="6.9294367" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.96335px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:#fafbf8;stroke-width:2.04198;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:0.0531915"
-         x="109.82047"
-         y="53.09029"
-         id="text5-0-870-6-9-2-4"><tspan
-           sodipodi:role="line"
-           id="tspan5-8-527-0-6-2-8"
-           style="stroke-width:2.04198"
+       id="g3">
+      <g
+         id="g6-212-2-3-3-1"
+         transform="matrix(0.36861653,0,0,0.36861653,30.636267,178.98276)"
+         inkscape:transform-center-x="0.396875"
+         inkscape:transform-center-y="-0.52916666">
+        <circle
+           cx="115.01057"
+           cy="49.923065"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="1.35438"
+           pointer-events="all"
+           id="ellipse68-3-53-8-9-8-4"
+           r="9.0292082" />
+        <ellipse
+           style="fill:#030405;fill-opacity:1;stroke:#fefafb;stroke-width:3.92888;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:0.0531915"
+           id="path1-9-918-9-1-5-0"
+           cx="115.04971"
+           cy="50.020245"
+           rx="7.2759085"
+           ry="6.9294367" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.96335px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:#fafbf8;stroke-width:2.04198;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:0.0531915"
            x="109.82047"
-           y="53.09029">19</tspan></text>
+           y="53.09029"
+           id="text5-0-870-6-9-2-4"><tspan
+             sodipodi:role="line"
+             id="tspan5-8-527-0-6-2-8"
+             style="stroke-width:2.04198"
+             x="109.82047"
+             y="53.09029">19</tspan></text>
+      </g>
     </g>
     <g
        id="g7-9-3-6-2-8-6"
