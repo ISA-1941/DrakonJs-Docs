@@ -2,7 +2,11 @@
     "history": [
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/main.drakon",
-            "whenOpened": "2026-05-15T09:24:16.923Z"
+            "whenOpened": "2026-05-15T09:41:18.287Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/createNode.drakon",
+            "whenOpened": "2026-05-15T09:40:12.951Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/rotateLeft.drakon",
@@ -59,10 +63,6 @@
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/deleteNode.drakon",
             "whenOpened": "2026-05-15T07:07:06.168Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/createNode.drakon",
-            "whenOpened": "2026-05-15T07:07:03.709Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/createavlTree.drakon",
