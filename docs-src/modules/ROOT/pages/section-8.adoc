@@ -259,7 +259,7 @@ Figure 8.25. DRAKON-diagram depicting the node finding method
 
 Another basic operation, deleting a node with a specified value, consists of the following steps. The node is searched from the root down through the branches to the node to be deleted. The following situations may occur (Figure 8.26):
 
-image::section_8/Fig8_26_varDelNode.jpg[width=100%, link=self, window="_blank"]
+image::section_8/Fig8_26_delVar.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 Figure 8.26. Cases for nodes to be removed
