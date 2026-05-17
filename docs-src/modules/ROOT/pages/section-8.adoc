@@ -409,7 +409,7 @@ Table 8.1. Balancing during insertion in RBT
 
 The visualizations of these distinct violation states — which serve as the 'Atlas' for insertion — are presented in Figures 8.33a-e.
 
-image::section_8/Fig8_33a_A_RedUncleViolationsvg[width=100%, link=self, window="_blank"]
+image::section_8/Fig8_33a_A_RedUncleViolation.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 a) Case A — Recoloring (Red Uncle Violation)
