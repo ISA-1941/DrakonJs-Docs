@@ -383,7 +383,7 @@ A new node is inserted into the red-black tree using the rbInsert(tree, key) fun
 
 [.text-center]
 .Figure 8.32. Mindmap of the insertion and balancing process
-image::section_8/Fig8_32_mapInsert.png[width=200%, link=self, window="_blank"]
+image::section_8/Fig8_32_mapInsert.png[width=150%, link=self, window="_blank"]
 
 To restore balance, the automaton analyzes the local C-Cluster. Based on the colors and positions of the nodes, it executes the required fix: recoloring (replacing balls) or rotation (rearranging connections). After a local fix, the problem is either resolved or propagates one level up the tree (e.g., a newly colored red ball now sits under a red parent), requiring the automaton to continue its work on the new cluster.
 
