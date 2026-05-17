@@ -351,7 +351,7 @@ To analyze the balancing process, we focus on a local C-Cluster of nodes. This n
 
 [.text-center]
 .Figure 8.31. Designation of "kinship" degrees of RB tree nodes (Cluster x, P, G, U, S)
-image::section_8/Fig8_31_clusterInfoInsert.svg[width=100%, link=self, window="_blank"]
+image::section_8/Fig8_31_clusterInfoInsert.svg[width=75%, link=self, window="_blank"]
 
 In this model:
 
