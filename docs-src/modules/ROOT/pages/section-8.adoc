@@ -287,7 +287,7 @@ A red-black tree is a variant of a self-balancing binary search tree in which th
 
 [.text-center]
 .Figure 8.29. Red-black tree example
-image::section_8/Fig8_29_redblackTree.svg[width=100%, link=self, window="_blank"]
+image::section_8/Fig8_29_redblackTree.svg[width=50%, link=self, window="_blank"]
 
 The nodes containing data (integers in this example) are called internal nodes. In addition, red-black trees contain imaginary "null" nodes associated with tree leaves, which are explicitly colored black (labeled "Null" in Figure 8.29). Red-black trees satisfy all properties of a binary search tree and must maintain the following specific invariants:
 
@@ -341,21 +341,20 @@ The entire lifecycle of the structure is managed by a virtual balancing automato
 
 To implement these operations, we define two custom data types: node and rbTree. A node includes fields for the key (numeric value), color (boolean: true for red, false for black), and pointers to left, right, and parent nodes. The rbTree structure is a reference-type variable that stores a pointer to the memory area containing the tree objects (Figure 8.30).
 
-|===
-| image::section_8/Fig8_30a_makeNode.png[width=100%] | image::section_8/Fig8_30b_makeRBTree.png[width=75%]
-|===
+image::section_8/Fig8_30a_makeNode.png[width=100%] | image::section_8/Fig8_30b_makeRBTree.png[width=75%]
 
 [.text-center]
-Figure 8.30. DRAKON-diagram of node and tree description
+.Figure 8.30. DRAKON-diagrams of node and tree description
+image::section_8/Fig8_30_makeNodeTree.svg[width=50%, link=self, window="_blank"] 
 
 ===== Cluster Node Notation
 
 To analyze the balancing process, we focus on a local C-Cluster of nodes. This notation is essential for understanding the transformations applied by the automaton. The following designations are used (Figure 8.31):
 
-image::section_8/Fig8_31_clusterInfoInsert.svg[width=75%]
+image::section_8/Fig8_31_clusterInfoInsert.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
-Figure 8.31. Designation of "kinship" degrees of RB tree nodes (Cluster x, P, G, U, S)
+.Figure 8.31. Designation of "kinship" degrees of RB tree nodes (Cluster x, P, G, U, S)
 
 In this model:
 
