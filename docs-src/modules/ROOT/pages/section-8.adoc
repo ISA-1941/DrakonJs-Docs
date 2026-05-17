@@ -93,7 +93,7 @@ In this case, this node is removed by changing the value of node = null in the p
 
 [.text-center]
 .Figure 8.6. Deleting a node without children
-image::section_8/Fig8_6_del21.svg[width=75%, link=self, window="_blank"]
+image::section_8/Fig8_6_del21.svg[width=50%, link=self, window="_blank", link=self, window="_blank"]
 
 
 *Option b)*: Node (19) has a right-hand descendant (Figure 8.7).
@@ -102,7 +102,7 @@ In this case, node (19) is removed from the tree by replacing its address in the
 
 [.text-center]
 .Figure 8.7. Deleting node (19) with a right-hand descendant
-image::section_8/Fig8_7_del19.svg[width=75%, , link=self, window="_blank"]
+image::section_8/Fig8_7_del19.svg[width=50%, link=self, window="_blank", , link=self, window="_blank"]
 
 *Option c)*: Node (8) has a left-hand child (Figure 8.8).
 
@@ -110,13 +110,13 @@ In this case, node (8) is removed from the tree by replacing its address in pare
 
 [.text-center]
 .Figure 8.8. Deleting node (8) with a left-hand child
-image::section_8/Fig8_del8.svg[width=75%, , link=self, window="_blank"] 
+image::section_8/Fig8_del8.svg[width=50%, link=self, window="_blank", , link=self, window="_blank"] 
 
 *Option d)*: Node (5) has two descendants (Figure 8.9). In this case the binary search tree is rearranged: node (2) moves to the place of node (5).
 
 [.text-center]
 .Figure 8.9. Deleting node (5) with two children
-image::section_8/Fig8_9_del5.svg[width=75%, link=self, window="_blank"]
+image::section_8/Fig8_9_del5.svg[width=50%, link=self, window="_blank", link=self, window="_blank"]
 
 The DRAKON-diagram of the minimum value search method is shown in Figure 8.10.
 
@@ -235,33 +235,33 @@ Depending on the location of the new node relative to the parent node and the ba
 
 [.text-center]
 .Figure 8.22. Node rotation program codes
-image::section_8/Fig8_22_twoRotates.svg[width=75%, link=self, window="_blank"]
+image::section_8/Fig8_22_twoRotates.svg[width=50%, link=self, window="_blank", link=self, window="_blank"]
 
 
 Let us examine the tree rebuilding process in detail as a result of using the `rotateInsert(node, val)` method on the example of entering the values of three nodes (5, 6, 8). After receiving the value of the last node (8), a "twig" appears instead of a tree that needs to be balanced. In this case the condition in the `rotateInsert(node, val)` method is met: the balancing factor is 2 (kb = 2) and the value of node (8) is greater than the parent node (6), so the `rotateLeft(node)` method is called. The balancing process in this case is shown in Figure 8.23:
 
 [.text-center]
 .Figure 8.23. Example of left-left rotation balancing
-image::section_8/Fig8_23_LL.svg[width=75%, link=self, window="_blank"]
+image::section_8/Fig8_23_LL.svg[width=50%, link=self, window="_blank", link=self, window="_blank"]
 
 The process of new nodes arriving and rebuilding the resulting AVL tree by balancing for the input set [1, 2, 5, 6, 8, 11, 13, 15, 17, 19, 21] is shown in Figure 8.24.
 
 [.text-center]
 .Figure 8.24. Process of building a balanced AVL tree
-image::section_8/Fig8_24_avlTreeProcess.svg[width=75%, link=self, window="_blank"]
+image::section_8/Fig8_24_avlTreeProcess.svg[width=50%, link=self, window="_blank", link=self, window="_blank"]
 
 The DRAKON-diagram of the AVL tree basic operation findNode(node, val) is shown in Figure 8.25:
 
-image::section_8/Fig8_25_findNode.svg[width=100%, link=self, window="_blank"]
-
 [.text-center]
-Figure 8.25. DRAKON-diagram depicting the node finding method
+.Figure 8.25. DRAKON-diagram depicting the node finding method
+image::section_8/Fig8_25_findNode.svg[width=100%, link=self, window="_blank"]
 
 Another basic operation, deleting a node with a specified value, consists of the following steps. The node is searched from the root down through the branches to the node to be deleted. The following situations may occur (Figure 8.26):
 
+image::section_8/Fig8_26_varDelNode.svg[width=50%, link=self, window="_blank", link=self, window="_blank"]
+
 [.text-center]
-.Figure 8.26. Cases for nodes to be removed
-image::section_8/Fig8_26_delVar.svg[width=100%, link=self, window="_blank"]
+Figure 8.26. Cases for nodes to be removed
 
 a) The node to be deleted has two non-empty descendants.
 b) The node to be deleted has no descendants.
@@ -271,13 +271,14 @@ As with the other methods, a node with a given value is first recursively identi
 
 [.text-center]
 .Figure 8.27. DRAKON-diagram depicting an algorithm for removing a node with a specified value
-image::section_8/Fig8_27_deleteNode.svg[width=100%, link=self, window="_blank"]
+image::section_8/Fig8_27_deleteNode.svg[width=50%, link=self, window="_blank", link=self, window="_blank"]
 
 The main() program inputs an array of data, searches for a node with a specified value, and deletes a node with a specified value (Figure 8.28).
 
+image::section_8/Fig8_28_mainAVL.svg[width=50%, link=self, window="_blank"]
+
 [.text-center]
 .Figure 8.28. DRAKON-diagram of the main function
-image::section_8/Fig8_28_mainAVL.svg[width=50%, link=self, window="_blank"]
 
 === 8.4. Red-Black Trees
 
@@ -287,7 +288,7 @@ A red-black tree is a variant of a self-balancing binary search tree in which th
 
 [.text-center]
 .Figure 8.29. Red-black tree example
-image::section_8/Fig8_29_redblackTree.svg[width=50%, link=self, window="_blank"]
+image::section_8/Fig8_29_redblackTree.jpg[width=50%, link=self, window="_blank"]
 
 The nodes containing data (integers in this example) are called internal nodes. In addition, red-black trees contain imaginary "null" nodes associated with tree leaves, which are explicitly colored black (labeled "Null" in Figure 8.29). Red-black trees satisfy all properties of a binary search tree and must maintain the following specific invariants:
 
@@ -342,8 +343,8 @@ The entire lifecycle of the structure is managed by a virtual balancing automato
 To implement these operations, we define two custom data types: node and rbTree. A node includes fields for the key (numeric value), color (boolean: true for red, false for black), and pointers to left, right, and parent nodes. The rbTree structure is a reference-type variable that stores a pointer to the memory area containing the tree objects (Figure 8.30).
 
 [.text-center]
-.Figure 8.30. DRAKON-diagrams of node and tree description
-image::section_8/Fig8_30_makeNodeTree.svg[width=75%, link=self, window="_blank"] 
+.Figure 8.30. DRAKON-diagram of node and tree description
+image::section_8/Fig8_30_makeNodeTree[width=50%, link=self, window="_blank"]
 
 ===== Cluster Node Notation
 
@@ -351,7 +352,7 @@ To analyze the balancing process, we focus on a local C-Cluster of nodes. This n
 
 [.text-center]
 .Figure 8.31. Designation of "kinship" degrees of RB tree nodes (Cluster x, P, G, U, S)
-image::section_8/Fig8_31_clusterInfoInsert.svg[width=75%, link=self, window="_blank"]
+image::section_8/Fig8_31_clusterInfoInsert.svg[width=50%, link=self, window="_blank"]
 
 In this model:
 
@@ -383,7 +384,7 @@ A new node is inserted into the red-black tree using the rbInsert(tree, key) fun
 
 [.text-center]
 .Figure 8.32. Mindmap of the insertion and balancing process
-image::section_8/Fig8_32_mapInsert.png[width=100%, link=self, window="_blank"]
+image::section_8/Fig8_32_mapInsert.png[width=50%, link=self, window="_blank"]
 
 To restore balance, the automaton analyzes the local C-Cluster. Based on the colors and positions of the nodes, it executes the required fix: recoloring (replacing balls) or rotation (rearranging connections). After a local fix, the problem is either resolved or propagates one level up the tree (e.g., a newly colored red ball now sits under a red parent), requiring the automaton to continue its work on the new cluster.
 
@@ -409,27 +410,27 @@ Table 8.1. Balancing during insertion in RBT
 
 The visualizations of these distinct violation states — which serve as the 'Atlas' for insertion — are presented in Figures 8.33a-e.
 
-image::section_8/Fig8_33a_A_RedUncleViolation.svg[width=50%, link=self, window="_blank"]
+image::section_8/Fig8_33a_A_Violation.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 a) Case A — Recoloring (Red Uncle Violation)
 
-image::section_8/Fig8_33b_B1_LL_Violation.svg[width=75%]
+image::section_8/Fig8_33b_B1_LL.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 b) Case B1 — Zig-Zig (LL Double Red Violation)
 
-image::section_8/Fig8_33c_B2_RR_Violation.svg[width=75%]
+image::section_8/Fig8_33c_B2_RR.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 c) Case B2 — Zig-Zig (RR Double Red Violation)
 
-image::section_8/Fig8_33d_B3_LR_Violation.svg[width=75%]
+image::section_8/Fig8_33d_B3_LR.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 d) Case B3 — Zig-Zag (LR Double Red Violation)
 
-image::section_8/Fig8_33e_B4_RL_Violation.svg[width=75%]
+image::section_8/Fig8_33e_B4_RL.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 e) Case B4 — Zig-Zag (RL Double Red Violation)
@@ -446,19 +447,19 @@ Figure 8.34. DRAKON-diagram of the function rbInsert(tree, data)
 
 The complete decision logic of the balancing process is mapped out in the master DRAKON-diagram shown in Figure 8.35.
 
-image::section_8/Fig8_35_fixInsert.svg[width=75%, link="section_8/Fig8_35_fixInsert.svg", window="_blank"]
+image::section_8/Fig8_35_fixInsert.svg[width=50%, link=self, window="_blank", link="section_8/Fig8_35_fixInsert.svg", window="_blank"]
 
 [.text-center]
 Figure 8.35. DRAKON-diagram of the tree balancing function fixInsert(tree, data)
 
 The internal logic for the recoloring handler (Case A, Red Uncle) is shown in Figure 8.36, while the logic for the rotation handlers (Cases B1-B4, Black Uncle) is detailed in Figure 8.37.
 
-image::section_8/Fig8_36_handleRecolorInsert.svg[width=75%, link="section_8/Fig8_36_handleRecolorInsert.svg", window="_blank"]
+image::section_8/Fig8_36_handleRecolorInsert.svg[width=50%, link=self, window="_blank", link="section_8/Fig8_36_handleRecolorInsert.svg", window="_blank"]
 
 [.text-center]
 Figure 8.36. DRAKON-diagram of the recoloring algorithm for a red uncle
 
-image::section_8/Fig8_37_handleRotateInsert.svg[width=75%, link="section_8/Fig8_37_handleRotateInsert.svg", window="_blank"]
+image::section_8/Fig8_37_handleRotateInsert.svg[width=50%, link=self, window="_blank", link="section_8/Fig8_37_handleRotateInsert.svg", window="_blank"]
 
 [.text-center]
 Figure 8.37. DRAKON-diagram of the rotation algorithms for a black uncle
