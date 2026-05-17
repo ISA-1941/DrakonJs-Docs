@@ -605,7 +605,7 @@ c) The node to be deleted has one descendant (left or right).</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<a class="image" href="_images/section_8/Fig8_29_redblackTree.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_29_redblackTree.svg" alt="Fig8 29 redblackTree" width="100%"></a>
+<a class="image" href="_images/section_8/Fig8_29_redblackTree.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_29_redblackTree.svg" alt="Fig8 29 redblackTree" width="50%"></a>
 </div>
 <div class="title">Figure 8.29. Red-black tree example</div>
 </div>
@@ -716,20 +716,16 @@ c) The node to be deleted has one descendant (left or right).</p>
 <div class="paragraph">
 <p>To implement these operations, we define two custom data types: node and rbTree. A node includes fields for the key (numeric value), color (boolean: true for red, false for black), and pointers to left, right, and parent nodes. The rbTree structure is a reference-type variable that stores a pointer to the memory area containing the tree objects (Figure 8.30).</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">image::section_8/Fig8_30a_makeNode.png[width=100%]</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">image::section_8/Fig8_30b_makeRBTree.png[width=75%]</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph text-center">
-<p>Figure 8.30. DRAKON-diagram of node and tree description</p>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="section_8/Fig8_30a_makeNode.png" alt="Fig8 30a makeNode" width="100%] | image::section_8/Fig8_30b_makeRBTree.png[width=75%">
+</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<a class="image" href="_images/section_8/Fig8_30_makeNodeTree.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_30_makeNodeTree.svg" alt="Fig8 30 makeNodeTree" width="50%"></a>
+</div>
+<div class="title">Figure 8.30. DRAKON-diagrams of node and tree description</div>
 </div>
 </div>
 <div class="sect4">
@@ -739,13 +735,11 @@ c) The node to be deleted has one descendant (left or right).</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="_images/section_8/Fig8_31_clusterInfoInsert.svg" alt="Fig8 31 clusterInfoInsert" width="75%">
+<a class="image" href="_images/section_8/Fig8_31_clusterInfoInsert.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_31_clusterInfoInsert.svg" alt="Fig8 31 clusterInfoInsert" width="50%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 8.31. Designation of "kinship" degrees of RB tree nodes (Cluster x, P, G, U, S)</p>
-</div>
-<div class="paragraph">
+<div class="title">Figure 8.31. Designation of "kinship" degrees of RB tree nodes (Cluster x, P, G, U, S)</div>
 <p>In this model:</p>
 </div>
 <div class="literalblock">
