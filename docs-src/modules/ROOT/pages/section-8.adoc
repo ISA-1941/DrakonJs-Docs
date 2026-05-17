@@ -341,17 +341,15 @@ The entire lifecycle of the structure is managed by a virtual balancing automato
 
 To implement these operations, we define two custom data types: node and rbTree. A node includes fields for the key (numeric value), color (boolean: true for red, false for black), and pointers to left, right, and parent nodes. The rbTree structure is a reference-type variable that stores a pointer to the memory area containing the tree objects (Figure 8.30).
 
-image::section_8/Fig8_30a_makeNode.png[width=100%] | image::section_8/Fig8_30b_makeRBTree.png[width=75%]
-
 [.text-center]
 .Figure 8.30. DRAKON-diagrams of node and tree description
-image::section_8/Fig8_30_makeNodeTree.svg[width=50%, link=self, window="_blank"] 
+image::section_8/Fig8_30_makeNodeTree.svg[width=75%, link=self, window="_blank"] 
 
 ===== Cluster Node Notation
 
 To analyze the balancing process, we focus on a local C-Cluster of nodes. This notation is essential for understanding the transformations applied by the automaton. The following designations are used (Figure 8.31):
 
-image::section_8/Fig8_31_clusterInfoInsert.svg[width=50%, link=self, window="_blank"]
+image::section_8/Fig8_31_clusterInfoInsert.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 .Figure 8.31. Designation of "kinship" degrees of RB tree nodes (Cluster x, P, G, U, S)
@@ -384,10 +382,9 @@ This concise notation significantly simplifies the balancing algorithms, making 
 
 A new node is inserted into the red-black tree using the rbInsert(tree, key) function, which follows standard BST rules and always adds a new red node. However, this addition may introduce a "Double Red" conflict (violating Property 4). The rebalancing process is summarized in the mindmap in Figure 8.32.
 
-image::section_8/Fig8_32_mapInsert.png[width=75%]
-
 [.text-center]
-Figure 8.32. Mindmap of the insertion and balancing process
+.Figure 8.32. Mindmap of the insertion and balancing process
+image::section_8/Fig8_32_mapInsert.png[width=50%, link=self, window="_blank"]
 
 To restore balance, the automaton analyzes the local C-Cluster. Based on the colors and positions of the nodes, it executes the required fix: recoloring (replacing balls) or rotation (rearranging connections). After a local fix, the problem is either resolved or propagates one level up the tree (e.g., a newly colored red ball now sits under a red parent), requiring the automaton to continue its work on the new cluster.
 
