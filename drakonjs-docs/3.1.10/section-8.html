@@ -716,14 +716,9 @@ c) The node to be deleted has one descendant (left or right).</p>
 <div class="paragraph">
 <p>To implement these operations, we define two custom data types: node and rbTree. A node includes fields for the key (numeric value), color (boolean: true for red, false for black), and pointers to left, right, and parent nodes. The rbTree structure is a reference-type variable that stores a pointer to the memory area containing the tree objects (Figure 8.30).</p>
 </div>
-<div class="imageblock unresolved">
-<div class="content">
-<img src="section_8/Fig8_30a_makeNode.png" alt="Fig8 30a makeNode" width="100%] | image::section_8/Fig8_30b_makeRBTree.png[width=75%">
-</div>
-</div>
 <div class="imageblock text-center">
 <div class="content">
-<a class="image" href="_images/section_8/Fig8_30_makeNodeTree.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_30_makeNodeTree.svg" alt="Fig8 30 makeNodeTree" width="50%"></a>
+<a class="image" href="_images/section_8/Fig8_30_makeNodeTree.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_30_makeNodeTree.svg" alt="Fig8 30 makeNodeTree" width="75%"></a>
 </div>
 <div class="title">Figure 8.30. DRAKON-diagrams of node and tree description</div>
 </div>
@@ -735,7 +730,7 @@ c) The node to be deleted has one descendant (left or right).</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<a class="image" href="_images/section_8/Fig8_31_clusterInfoInsert.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_31_clusterInfoInsert.svg" alt="Fig8 31 clusterInfoInsert" width="50%"></a>
+<a class="image" href="_images/section_8/Fig8_31_clusterInfoInsert.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_31_clusterInfoInsert.svg" alt="Fig8 31 clusterInfoInsert" width="100%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
@@ -798,13 +793,11 @@ c) The node to be deleted has one descendant (left or right).</p>
 <div class="paragraph">
 <p>A new node is inserted into the red-black tree using the rbInsert(tree, key) function, which follows standard BST rules and always adds a new red node. However, this addition may introduce a "Double Red" conflict (violating Property 4). The rebalancing process is summarized in the mindmap in Figure 8.32.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="_images/section_8/Fig8_32_mapInsert.png" alt="Fig8 32 mapInsert" width="75%">
+<a class="image" href="_images/section_8/Fig8_32_mapInsert.png" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_32_mapInsert.png" alt="Fig8 32 mapInsert" width="50%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 8.32. Mindmap of the insertion and balancing process</p>
+<div class="title">Figure 8.32. Mindmap of the insertion and balancing process</div>
 </div>
 <div class="paragraph">
 <p>To restore balance, the automaton analyzes the local C-Cluster. Based on the colors and positions of the nodes, it executes the required fix: recoloring (replacing balls) or rotation (rearranging connections). After a local fix, the problem is either resolved or propagates one level up the tree (e.g., a newly colored red ball now sits under a red parent), requiring the automaton to continue its work on the new cluster.</p>
