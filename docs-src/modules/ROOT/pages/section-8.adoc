@@ -285,10 +285,9 @@ image::section_8/Fig8_28_mainAVL.svg[width=50%, link=self, window="_blank"]
 
 A red-black tree is a variant of a self-balancing binary search tree in which the nodes are colored red or black according to a specific set of rules (Figure 8.29).
 
-image::section_8/Fig8_29_redblackTree.jpg[width=75%]
-
 [.text-center]
-Figure 8.29. Red-black tree example
+.Figure 8.29. Red-black tree example
+image::section_8/Fig8_29_redblackTree.jpg[width=50%, link=self, window="_blank"]
 
 The nodes containing data (integers in this example) are called internal nodes. In addition, red-black trees contain imaginary "null" nodes associated with tree leaves, which are explicitly colored black (labeled "Null" in Figure 8.29). Red-black trees satisfy all properties of a binary search tree and must maintain the following specific invariants:
 
