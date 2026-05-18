@@ -446,22 +446,19 @@ image::section_8/Fig8_34_rbInsert.svg[width=50%, link=self, window="_blank"]
 
 The complete decision logic of the balancing process is mapped out in the master DRAKON-diagram shown in Figure 8.35.
 
-image::section_8/Fig8_35_fixInsert.svg[width=75%, link=self, window="_blank"]
-
 [.text-center]
 Figure 8.35. DRAKON-diagram of the tree balancing function fixInsert(tree, data)
+image::section_8/Fig8_35_fixInsert.svg[width=75%, link=self, window="_blank"]
 
 The internal logic for the recoloring handler (Case A, Red Uncle) is shown in Figure 8.36, while the logic for the rotation handlers (Cases B1-B4, Black Uncle) is detailed in Figure 8.37.
 
-image::section_8/Fig8_36_handleRecolorInsert.svg[width=100%, link=self, window="_blank"]
+[.text-center]
+.Figure 8.36. DRAKON-diagram of the recoloring algorithm for a red uncle
+image::section_8/Fig8_36_handleRecolorInsert.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
-Figure 8.36. DRAKON-diagram of the recoloring algorithm for a red uncle
-
-image::section_8/Fig8_37_handleRotateInsert.svg[width=50%, link=self, window="_blank"]
-
-[.text-center]self
 Figure 8.37. DRAKON-diagram of the rotation algorithms for a black uncle
+image::section_8/Fig8_37_handleRotationInsert.svg[width=75%, link=self, window="_blank"]
 
 The fundamental rotation primitives used by these handlers — the "building blocks" of restructuring — are detailed in Figures 8.38a and 8.38b.
 
