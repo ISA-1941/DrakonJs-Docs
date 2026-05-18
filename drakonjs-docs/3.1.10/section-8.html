@@ -927,33 +927,22 @@ c) The node to be deleted has one descendant (left or right).</p>
 <div class="paragraph">
 <p>The complete decision logic of the balancing process is mapped out in the master DRAKON-diagram shown in Figure 8.35.</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<a class="image" href="_images/section_8/Fig8_35_fixInsert.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_35_fixInsert.svg" alt="Fig8 35 fixInsert" width="75%"></a>
-</div>
-</div>
 <div class="paragraph text-center">
-<p>Figure 8.35. DRAKON-diagram of the tree balancing function fixInsert(tree, data)</p>
+<p>Figure 8.35. DRAKON-diagram of the tree balancing function fixInsert(tree, data)
+image::section_8/Fig8_35_fixInsert.svg[width=75%, link=self, window="_blank"]</p>
 </div>
 <div class="paragraph">
 <p>The internal logic for the recoloring handler (Case A, Red Uncle) is shown in Figure 8.36, while the logic for the rotation handlers (Cases B1-B4, Black Uncle) is detailed in Figure 8.37.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<a class="image" href="_images/section_8/Fig8_36_handleRecolorInsert.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_36_handleRecolorInsert.svg" alt="Fig8 36 handleRecolorInsert" width="100%"></a>
+<a class="image" href="_images/section_8/Fig8_36_handleRecolorInsert.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_36_handleRecolorInsert.svg" alt="Fig8 36 handleRecolorInsert" width="75%"></a>
 </div>
+<div class="title">Figure 8.36. DRAKON-diagram of the recoloring algorithm for a red uncle</div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 8.36. DRAKON-diagram of the recoloring algorithm for a red uncle</p>
-</div>
-<div class="imageblock unresolved">
-<div class="content">
-<a class="image" href="section_8/Fig8_37_handleRotateInsert.svg" target="_blank" rel="noopener"><img src="section_8/Fig8_37_handleRotateInsert.svg" alt="Fig8 37 handleRotateInsert" width="50%"></a>
-</div>
-</div>
-<div class="paragraph">
-<p>[.text-center]self
-Figure 8.37. DRAKON-diagram of the rotation algorithms for a black uncle</p>
+<p>Figure 8.37. DRAKON-diagram of the rotation algorithms for a black uncle
+image::section_8/Fig8_37_handleRotationInsert.svg[width=75%, link=self, window="_blank"]</p>
 </div>
 <div class="paragraph">
 <p>The fundamental rotation primitives used by these handlers — the "building blocks" of restructuring — are detailed in Figures 8.38a and 8.38b.</p>
