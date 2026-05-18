@@ -384,7 +384,7 @@ A new node is inserted into the red-black tree using the rbInsert(tree, key) fun
 
 [.text-center]
 .Figure 8.32. Mindmap of the insertion and balancing process
-image::section_8/Fig8_32_mapInsert.png[width=75%, link=self, window="_blank"]
+image::section_8/Fig8_32_mapInsert.png[width=100%, link=self, window="_blank"]
 
 To restore balance, the automaton analyzes the local C-Cluster. Based on the colors and positions of the nodes, it executes the required fix: recoloring (replacing balls) or rotation (rearranging connections). After a local fix, the problem is either resolved or propagates one level up the tree (e.g., a newly colored red ball now sits under a red parent), requiring the automaton to continue its work on the new cluster.
 
@@ -410,27 +410,27 @@ Table 8.1. Balancing during insertion in RBT
 
 The visualizations of these distinct violation states — which serve as the 'Atlas' for insertion — are presented in Figures 8.33a-e.
 
-image::section_8/Fig8_33a_A_Violation.svg[width=50%, link=self, window="_blank"]
+image::section_8/Fig8_33a_redUncleViolation.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 a) Case A — Recoloring (Red Uncle Violation)
 
-image::section_8/Fig8_33b_B1_LL.svg[width=50%, link=self, window="_blank"]
+image::section_8/Fig8_33_B1_LL.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 b) Case B1 — Zig-Zig (LL Double Red Violation)
 
-image::section_8/Fig8_33c_B2_RR.svg[width=50%, link=self, window="_blank"]
+image::section_8/Fig8_33_B2_RR.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 c) Case B2 — Zig-Zig (RR Double Red Violation)
 
-image::section_8/Fig8_33d_B3_LR.svg[width=50%, link=self, window="_blank"]
+image::section_8/Fig8_33_B3_LR.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 d) Case B3 — Zig-Zag (LR Double Red Violation)
 
-image::section_8/Fig8_33e_B4_RL.svg[width=50%, link=self, window="_blank"]
+image::section_8/Fig8_33_B4_RL.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 e) Case B4 — Zig-Zag (RL Double Red Violation)
