@@ -505,17 +505,15 @@ The standard mechanical notation for the C-Cluster used in deletion operations i
 
     s.l, s.r: The left and right children of sibling *s* (the "nephews").
 
-image::section_8/Fig8_39_clusterInfoDelete.png[width=30%]
-
 [.text-center]
-Figure 8.39. Cluster deletion nodes and their designations (z, P, s, s.l, s.r)
+.Figure 8.39. Cluster deletion nodes and their designations (z, P, s, s.l, s.r)
+image::section_8/Fig8_39_clusterInfoDelete.svg[width=100%, link=self, window="_blank"]
 
 The complete deletion and rebalancing process is summarized in the mindmap in Figure 8.40.
 
-image::section_8/Fig8_40_mindmapfoDeletion.png[width=30%]
-
 [.text-center]
-Figure 8.40. Mindmap summarizing RB tree deletion operations
+.Figure 8.40. Mindmap summarizing RB tree deletion operations
+image::section_8/Fig8_40_mindmapfoDeletion.png[width=100%, link=self, window="_blank"]
 
 The operation consists of three primary steps:
 
