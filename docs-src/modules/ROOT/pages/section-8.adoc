@@ -235,20 +235,20 @@ Depending on the location of the new node relative to the parent node and the ba
 
 [.text-center]
 .Figure 8.22. Node rotation program codes
-image::section_8/Fig8_22_twoRotates.svg[width=50%, link=self, window="_blank", link=self, window="_blank"]
+image::section_8/Fig8_22_twoRotates.svg[width=50%, link=self, window="_blank"]
 
 
 Let us examine the tree rebuilding process in detail as a result of using the `rotateInsert(node, val)` method on the example of entering the values of three nodes (5, 6, 8). After receiving the value of the last node (8), a "twig" appears instead of a tree that needs to be balanced. In this case the condition in the `rotateInsert(node, val)` method is met: the balancing factor is 2 (kb = 2) and the value of node (8) is greater than the parent node (6), so the `rotateLeft(node)` method is called. The balancing process in this case is shown in Figure 8.23:
 
 [.text-center]
 .Figure 8.23. Example of left-left rotation balancing
-image::section_8/Fig8_23_LL.svg[width=50%, link=self, window="_blank", link=self, window="_blank"]
+image::section_8/Fig8_23_LL.svg[width=50%, link=self, window="_blank"]
 
 The process of new nodes arriving and rebuilding the resulting AVL tree by balancing for the input set [1, 2, 5, 6, 8, 11, 13, 15, 17, 19, 21] is shown in Figure 8.24.
 
 [.text-center]
 .Figure 8.24. Process of building a balanced AVL tree
-image::section_8/Fig8_24_avlTreeProcess.svg[width=50%, link=self, window="_blank", link=self, window="_blank"]
+image::section_8/Fig8_24_avlTreeProcess.svg[width=50%, link=self, window="_blank"]
 
 The DRAKON-diagram of the AVL tree basic operation findNode(node, val) is shown in Figure 8.25:
 
@@ -258,7 +258,7 @@ image::section_8/Fig8_25_findNode.svg[width=100%, link=self, window="_blank"]
 
 Another basic operation, deleting a node with a specified value, consists of the following steps. The node is searched from the root down through the branches to the node to be deleted. The following situations may occur (Figure 8.26):
 
-image::section_8/Fig8_26_varDelNode.svg[width=50%, link=self, window="_blank", link=self, window="_blank"]
+image::section_8/Fig8_26_delVar.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
 Figure 8.26. Cases for nodes to be removed
@@ -271,7 +271,7 @@ As with the other methods, a node with a given value is first recursively identi
 
 [.text-center]
 .Figure 8.27. DRAKON-diagram depicting an algorithm for removing a node with a specified value
-image::section_8/Fig8_27_deleteNode.svg[width=50%, link=self, window="_blank", link=self, window="_blank"]
+image::section_8/Fig8_27_deleteNode.svg[width=50%, link=self, window="_blank"]
 
 The main() program inputs an array of data, searches for a node with a specified value, and deletes a node with a specified value (Figure 8.28).
 
@@ -440,10 +440,9 @@ Figure 8.33. Atlas of options (violation states) for balancing after node insert
 
 The complete logic for red-black tree construction is encapsulated in the rbInsert function (Figure 8.34). It merges standard BST insertion with a call to the specialized fixInsert balancing routine to meticulously restore tree invariants.
 
-image::section_8/Fig8_34_rbInsert.svg[width=50%, link="section_8/Fig8_34_rbInsert.svg", window="_blank"]
-
 [.text-center]
-Figure 8.34. DRAKON-diagram of the function rbInsert(tree, data)
+.Figure 8.34. DRAKON-diagram of the function `rbInsert(tree, data)`
+image::section_8/Fig8_34_rbInsert.svg[width=50%, link=self, window="_blank"]
 
 The complete decision logic of the balancing process is mapped out in the master DRAKON-diagram shown in Figure 8.35.
 
