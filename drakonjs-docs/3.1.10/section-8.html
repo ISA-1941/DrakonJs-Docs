@@ -564,9 +564,9 @@ Recall that the height of a tree is defined as the length of the longest branch 
 <div class="paragraph">
 <p>Another basic operation, deleting a node with a specified value, consists of the following steps. The node is searched from the root down through the branches to the node to be deleted. The following situations may occur (Figure 8.26):</p>
 </div>
-<div class="imageblock unresolved">
+<div class="imageblock">
 <div class="content">
-<a class="image" href="section_8/Fig8_26_varDelNode.svg" target="_blank" rel="noopener"><img src="section_8/Fig8_26_varDelNode.svg" alt="Fig8 26 varDelNode" width="50%"></a>
+<a class="image" href="_images/section_8/Fig8_26_delVar.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_26_delVar.svg" alt="Fig8 26 delVar" width="75%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
@@ -918,13 +918,11 @@ c) The node to be deleted has one descendant (left or right).</p>
 <div class="paragraph">
 <p>The complete logic for red-black tree construction is encapsulated in the rbInsert function (Figure 8.34). It merges standard BST insertion with a call to the specialized fixInsert balancing routine to meticulously restore tree invariants.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<a class="image" href="section_8/Fig8_34_rbInsert.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_34_rbInsert.svg" alt="Fig8 34 rbInsert" width="50%"></a>
+<a class="image" href="_images/section_8/Fig8_34_rbInsert.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_34_rbInsert.svg" alt="Fig8 34 rbInsert" width="50%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 8.34. DRAKON-diagram of the function rbInsert(tree, data)</p>
+<div class="title">Figure 8.34. DRAKON-diagram of the function <code>rbInsert(tree, data)</code></div>
 </div>
 <div class="paragraph">
 <p>The complete decision logic of the balancing process is mapped out in the master DRAKON-diagram shown in Figure 8.35.</p>
