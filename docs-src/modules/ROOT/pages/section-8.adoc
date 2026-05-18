@@ -457,23 +457,23 @@ The internal logic for the recoloring handler (Case A, Red Uncle) is shown in Fi
 image::section_8/Fig8_36_handleRecolorInsert.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
-Figure 8.37. DRAKON-diagram of the rotation algorithms for a black uncle
+.Figure 8.37. DRAKON-diagram of the rotation algorithms for a black uncle
 image::section_8/Fig8_37_handleRotationInsert.svg[width=75%, link=self, window="_blank"]
 
 The fundamental rotation primitives used by these handlers — the "building blocks" of restructuring — are detailed in Figures 8.38a and 8.38b.
 
-image::section_8/Fig8_38a_rotateLeft.png[width=100%, link=self, window="_blank"]
+image::section_8/Fig8_38a_rotateLeft.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 a) Left-rotation primitive
 
-image::section_8/Fig8_38b_rotateRight.png[width=100%, link=self, window="_blank"]
+image::section_8/Fig8_38b_rotateRight.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 b) Right-rotation primitive
 
 [.text-center]
-Figure 8.38. DRAKON-diagrams of the fundamental rotation primitives
+.Figure 8.38. DRAKON-diagrams of the fundamental rotation primitives
 
 The following videos provide dynamic demonstrations of these transformations in action, showing how the C-Cluster evolves from the violation states in Figure 8.33 to the balanced configuration.
 
