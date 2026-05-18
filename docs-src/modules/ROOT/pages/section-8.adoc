@@ -446,31 +446,31 @@ image::section_8/Fig8_34_rbInsert.svg[width=50%, link=self, window="_blank"]
 
 The complete decision logic of the balancing process is mapped out in the master DRAKON-diagram shown in Figure 8.35.
 
-image::section_8/Fig8_35_fixInsert.svg[width=50%, link=self, window="_blank", link="section_8/Fig8_35_fixInsert.svg", window="_blank"]
+image::section_8/Fig8_35_fixInsert.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
 Figure 8.35. DRAKON-diagram of the tree balancing function fixInsert(tree, data)
 
 The internal logic for the recoloring handler (Case A, Red Uncle) is shown in Figure 8.36, while the logic for the rotation handlers (Cases B1-B4, Black Uncle) is detailed in Figure 8.37.
 
-image::section_8/Fig8_36_handleRecolorInsert.svg[width=50%, link=self, window="_blank", link="section_8/Fig8_36_handleRecolorInsert.svg", window="_blank"]
+image::section_8/Fig8_36_handleRecolorInsert.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 Figure 8.36. DRAKON-diagram of the recoloring algorithm for a red uncle
 
-image::section_8/Fig8_37_handleRotateInsert.svg[width=50%, link=self, window="_blank", link="section_8/Fig8_37_handleRotateInsert.svg", window="_blank"]
+image::section_8/Fig8_37_handleRotateInsert.svg[width=50%, link=self, window="_blank"]
 
-[.text-center]
+[.text-center]self
 Figure 8.37. DRAKON-diagram of the rotation algorithms for a black uncle
 
 The fundamental rotation primitives used by these handlers — the "building blocks" of restructuring — are detailed in Figures 8.38a and 8.38b.
 
-image::section_8/Fig8_38a_rotateLeft.png[width=100%, link="section_8/Fig8_38a_rotateLeft.svg", window="_blank"]
+image::section_8/Fig8_38a_rotateLeft.png[width=100%, link=self, window="_blank"]
 
 [.text-center]
 a) Left-rotation primitive
 
-image::section_8/Fig8_38b_rotateRight.png[width=100%, link="section_8/Fig8_38b_rotateRight.svg", window="_blank"]
+image::section_8/Fig8_38b_rotateRight.png[width=100%, link=self, window="_blank"]
 
 [.text-center]
 b) Right-rotation primitive
@@ -551,28 +551,28 @@ The "Double Black" Concept (The Weight Debt): The node that occupies the positio
 
 The atlas of options for removing a node from the RB tree is presented in Figure 8.41.
 
-image::section_8/Fig8_41_atlasDelete.svg[width=50%]
+image::section_8/Fig8_41_atlasDelete.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 Figure 8.41. Atlas of options for node deletion from the RB tree
 
 The DRAKON-diagram of the deleteNode function, which implements this complex structural logic, is shown in Figure 8.42.
 
-image::section_8/Fig8_42_deleteNode.svg[width=50%]
+image::section_8/Fig8_42_deleteNode.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 Figure 8.42. DRAKON-diagram of the function deleteNode(tree, data)
 
 To streamline rebalancing, a separate utility function analyzes the cluster state. The DRAKON-diagram for deleteClusterDescriptor, which generates the unique 'signature' string, is shown in Figure 8.43.
 
-image::section_8/Fig8_43_deleteClusterDescriptor.svg[width=50%]
+image::section_8/Fig8_43_deleteClusterDescriptor.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 Figure 8.43. DRAKON-diagram of the descriptor function deleteClusterDescriptor(tree, data)
 
 Once the cluster is analyzed, the balancing automaton function fixDelete(tree, data) acts upon the result. It makes all high-level balancing decisions based on the descriptor signature. Its DRAKON-diagram is presented in Figure 8.44.
 
-image::section_8/Fig8_44_fixDelete.svg[width=50%]
+image::section_8/Fig8_44_fixDelete.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 Figure 8.44. DRAKON-diagram of the automaton dispatcher function fixDelete(tree, data)
@@ -600,17 +600,17 @@ Goal: Find and capture a red resource (s.l or s.r) by performing rotations and r
 
 The complete DRAKON-diagrams detailing the internal logic of these three specialized functions are shown in Figures 8.45a, 8.45b, and 8.45c.
 
-image::section_8/Fig8_45a_handleSiblingRotation.svg[width=50%]
+image::section_8/Fig8_45a_handleSiblingRotation.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 a) handleSiblingRotation
 
-image::section_8/Fig8_45b_handlepropagateDeficiency.svg[width=50%]
+image::section_8/Fig8_45b_handlepropagateDeficiency.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 b) propagateDeficiency
 
-image::section_8/Fig8_45c_handleDirectCapture.svg[width=50%]
+image::section_8/Fig8_45c_handleDirectCapture.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 c) handleDirectCapture
