@@ -343,7 +343,7 @@ The entire lifecycle of the structure is managed by a virtual balancing automato
 To implement these operations, we define two custom data types: node and rbTree. A node includes fields for the key (numeric value), color (boolean: true for red, false for black), and pointers to left, right, and parent nodes. The rbTree structure is a reference-type variable that stores a pointer to the memory area containing the tree objects (Figure 8.30).
 
 [.text-center]
-.Figure 8.30. DRAKON-diagram of node and tree description
+.Figure 8.30. DRAKON-diagram of Node and rbTree description
 image::section_8/Fig8_30_makeNodeTree[width=75%, link=self, window="_blank"]
 
 ===== Cluster Node Notation
@@ -430,7 +430,7 @@ image::section_8/Fig8_33_B3_LR.svg[width=50%, link=self, window="_blank"]
 [.text-center]
 d) Case B3 — Zig-Zag (LR Double Red Violation)
 
-image::section_8/Fig8_33_B4_RL_2.svg[width=50%, link=self, window="_blank"]
+image::section_8/Fig8_33_B4_RL.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 e) Case B4 — Zig-Zag (RL Double Red Violation)
