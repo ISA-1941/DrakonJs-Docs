@@ -430,7 +430,7 @@ image::section_8/Fig8_33_B3_LR.svg[width=50%, link=self, window="_blank"]
 [.text-center]
 d) Case B3 — Zig-Zag (LR Double Red Violation)
 
-image::section_8/Fig8_33_B4_RL.svg[width=50%, link=self, window="_blank"]
+image::section_8/Fig8_33_B4_RL_2.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 e) Case B4 — Zig-Zag (RL Double Red Violation)
