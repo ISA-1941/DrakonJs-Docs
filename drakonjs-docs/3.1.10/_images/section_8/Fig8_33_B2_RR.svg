@@ -10,7 +10,7 @@
    stroke-linejoin="round"
    xml:space="preserve"
    id="svg102"
-   sodipodi:docname="Fig8_33_B2_LL.svg"
+   sodipodi:docname="Fig8_33_B2_RR.svg"
    inkscape:version="1.4.3 (fcd0343856, 2026-01-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -27,7 +27,7 @@
    inkscape:deskcolor="#505050"
    inkscape:document-units="mm"
    inkscape:zoom="0.82314815"
-   inkscape:cx="314.03825"
+   inkscape:cx="314.03824"
    inkscape:cy="404.54443"
    inkscape:window-width="1920"
    inkscape:window-height="1152"
@@ -715,17 +715,8 @@
    width="1688"
    height="1688"
    id="rect79" />
-        <path
-   fill="#000000"
-   stroke="none"
-   d="m 8002,8401 1180,1180 112,-113 168,618 -618,-168 113,-112 -1180,-1180 z"
-   id="path80" />
-        <path
-   fill="none"
-   stroke="#3465a4"
-   d="m 8002,8401 1180,1180 112,-113 168,618 -618,-168 113,-112 -1180,-1180 z"
-   id="path81"
-   style="stroke:#fcfffc;stroke-width:58.2;stroke-dasharray:none;stroke-opacity:1" />
+        
+        
        </g>
       </g>
       <g
