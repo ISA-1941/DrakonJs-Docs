@@ -513,7 +513,7 @@ The complete deletion and rebalancing process is summarized in the mindmap in Fi
 
 [.text-center]
 .Figure 8.40. Mindmap summarizing RB tree deletion operations
-image::section_8/Fig8_40_mindmapfoDeletion.png[width=100%, link=self, window="_blank"]
+image::section_8/Fig8_40_mindMapDeletion.png[width=100%, link=self, window="_blank"]
 
 The operation consists of three primary steps:
 
@@ -546,14 +546,14 @@ The "Double Black" Concept (The Weight Debt): The node that occupies the positio
 
 The atlas of options for removing a node from the RB tree is presented in Figure 8.41.
 
-image::section_8/Fig8_41_atlasDelete.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
-Figure 8.41. Atlas of options for node deletion from the RB tree
+.Figure 8.41. Atlas of options for node deletion from the RB tree
+image::section_8/Fig8_41_atlasDelete.svg[width=200%, link=self, window="_blank"]
 
 The DRAKON-diagram of the deleteNode function, which implements this complex structural logic, is shown in Figure 8.42.
 
-image::section_8/Fig8_42_deleteNode.svg[width=50%, link=self, window="_blank"]
+image::section_8/Fig8_42_deleteNode.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 Figure 8.42. DRAKON-diagram of the function deleteNode(tree, data)

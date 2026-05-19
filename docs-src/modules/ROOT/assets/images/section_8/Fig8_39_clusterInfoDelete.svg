@@ -26,15 +26,15 @@
    inkscape:pagecheckerboard="0"
    inkscape:deskcolor="#505050"
    inkscape:document-units="mm"
-   inkscape:zoom="1"
-   inkscape:cx="318.5"
+   inkscape:zoom="2"
+   inkscape:cx="318.75"
    inkscape:cy="204"
    inkscape:window-width="1920"
    inkscape:window-height="1152"
    inkscape:window-x="0"
    inkscape:window-y="25"
    inkscape:window-maximized="1"
-   inkscape:current-layer="svg79" />
+   inkscape:current-layer="g79" />
  <defs
    class="ClipPathGroup"
    id="defs2">
@@ -212,7 +212,7 @@
  <g
    class="SlideGroup"
    id="g79"
-   transform="translate(-3337.4724,-2330.5766)">
+   transform="translate(-3337.4724,-2343.8058)">
   <g
    id="g78">
    <g
@@ -522,11 +522,7 @@
         <g
    style="opacity:0.6"
    id="g35">
-         <path
-   fill="none"
-   stroke="#000000"
-   d="m 11169,4988 c 0,66 -18,132 -51,190 -34,58 -82,106 -140,140 -58,33 -124,51 -190,51 -67,0 -133,-18 -191,-51 -58,-34 -106,-82 -140,-140 -33,-58 -51,-124 -51,-190 0,-67 18,-133 51,-191 34,-58 82,-106 140,-140 58,-33 124,-51 191,-51 66,0 132,18 190,51 58,34 106,82 140,140 33,58 51,124 51,191 z"
-   id="path35" />
+         
         </g>
        </g>
       </g>
@@ -586,11 +582,7 @@
         <g
    style="opacity:0.6"
    id="g39">
-         <path
-   fill="none"
-   stroke="#000000"
-   d="m 13071,6590 c 0,66 -18,132 -51,190 -34,58 -82,106 -140,140 -58,33 -124,51 -190,51 -67,0 -133,-18 -191,-51 -58,-34 -106,-82 -140,-140 -33,-58 -51,-124 -51,-190 0,-67 18,-133 51,-191 34,-58 82,-106 140,-140 58,-33 124,-51 191,-51 66,0 132,18 190,51 58,34 106,82 140,140 33,58 51,124 51,191 z"
-   id="path39" />
+         
         </g>
        </g>
       </g>
@@ -787,7 +779,7 @@
    stroke="#000000"
    stroke-width="28"
    stroke-linejoin="round"
-   d="m 12419,6859 -459,961"
+   d="m 12604.21,6911.9167 -459,961"
    id="path51"
    style="stroke:#fefdff;stroke-width:48;stroke-dasharray:none;stroke-opacity:1" />
        </g>
@@ -1036,13 +1028,13 @@
    class="SVGTextShape"
    id="text70"
    style="stroke:#fdfefd;stroke-opacity:1"
-   x="277.8125"
+   x="-1111.25"
    y="119.0625"><tspan
      class="TextParagraph"
      id="tspan70"
      style="stroke:#fdfefd;stroke-opacity:1"><tspan
        class="TextPosition"
-       x="12417.812"
+       x="11028.749"
        y="8336.0625"
        id="tspan69"
        style="stroke:#fdfefd;stroke-opacity:1"><tspan
@@ -1134,7 +1126,7 @@
  </g><path
    fill="#d13a3a"
    stroke="none"
-   d="m 10828.036,5830.0575 c 0,66 -18,132 -51,190 -34,58 -82,106 -140,140 -58,33 -124,51 -190,51 -67,0 -133,-18 -191,-51 -58,-34 -106,-82 -140,-140 -33,-58 -51,-124 -51,-190 0,-67 18,-133 51,-191 34,-58 82,-106 140,-140 58,-33 124,-51 191,-51 66,0 132,18 190,51 58,34 106,82 140,140 33,58 51,124 51,191 z"
+   d="m 10669.285,5830.0575 c 0,66 -18,132 -51,190 -34,58 -82,106 -140,140 -58,33 -124,51 -190,51 -67,0 -133,-18 -191,-51 -58,-34 -105.9997,-82 -139.9997,-140 -32.9997,-58 -50.9997,-124 -50.9997,-190 0,-67 18,-133 50.9997,-191 34,-58 81.9997,-106 139.9997,-140 58,-33 124,-51 191,-51 66,0 132,18 190,51 58,34 106,82 140,140 33,58 51,124 51,191 z"
    id="path42-4"
    style="stroke:#fffffd;stroke-width:48.2;stroke-dasharray:none;stroke-opacity:1" /><path
    fill="#d13a3a"
