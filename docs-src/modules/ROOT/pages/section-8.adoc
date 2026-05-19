@@ -599,7 +599,6 @@ a) handleSiblingRotation
 image::section_8/Fig8_45b_handlepropagateDeficiency.svg[width=75%, link=self, window="_blank"]
 [.text-center]
 b) propagateDeficiency
-image::section_8/Fig8_45b_handlepropagateDeficiency.svg[width=75%, link=self, window="_blank"]
 
 image::section_8/Fig8_45c_handleDirectCapture.svg[width=75%, link=self, window="_blank"]
 [.text-center]
