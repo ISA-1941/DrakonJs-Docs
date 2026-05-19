@@ -212,7 +212,7 @@
  <g
    class="SlideGroup"
    id="g79"
-   transform="translate(-3072.8891,-2251.2016)">
+   transform="translate(-3337.4724,-2330.5766)">
   <g
    id="g78">
    <g
@@ -242,28 +242,9 @@
    fill="#729fcf"
    fill-opacity="0.2"
    stroke="none"
-   d="M 10731,9346 H 4539 V 3700 h 12383 v 5646 z"
-   id="path18" /><text
-   class="SVGTextShape"
-   id="text92"
-   style="fill:#ffffff;fill-opacity:1"
-   x="1250.3347"
-   y="74.861725"><tspan
-     class="TextParagraph"
-     id="tspan92-3"
-     style="fill:#ffffff;fill-opacity:1"><tspan
-       class="TextPosition"
-       x="8136.3354"
-       y="5457.8623"
-       id="tspan91-0"
-       style="fill:#ffffff;fill-opacity:1"><tspan
-         font-family="'Liberation Sans', sans-serif"
-         font-size="847px"
-         font-weight="400"
-         fill="rgb(0,0,0)"
-         stroke="none"
-         style="white-space:pre;fill:#ffffff;fill-opacity:1"
-         id="tspan90-7">Case B3: zig-zag (LR)</tspan></tspan></tspan></text>
+   d="M 11075.086,10519.609 H 3295.4583 V 3425.9747 H 18853.458 v 7093.6343 z"
+   id="path18"
+   style="stroke-width:35.4581" />
         <path
    fill="none"
    stroke="#6ce1b8"
