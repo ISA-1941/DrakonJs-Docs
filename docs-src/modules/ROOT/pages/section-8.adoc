@@ -344,7 +344,7 @@ To implement these operations, we define two custom data types: node and rbTree.
 
 [.text-center]
 .Figure 8.30. DRAKON-diagram of Node and rbTree description
-image::section_8/Fig8_30_makeNodeTree.svg[width=75%, link=self, window="_blank"]
+image::section_8/Fig8_30_makeNodeTree.svg[width=100%, link=self, window="_blank"]
 
 ===== Cluster Node Notation
 
