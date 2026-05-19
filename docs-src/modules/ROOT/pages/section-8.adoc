@@ -560,15 +560,14 @@ image::section_8/Fig8_42_deleteNode.svg[width=100%, link=self, window="_blank"]
 To streamline rebalancing, a separate utility function analyzes the cluster state. The DRAKON-diagram for deleteClusterDescriptor, which generates the unique 'signature' string, is shown in Figure 8.43.
 
 [.text-center]
-.Figure 8.43. DRAKON-diagram of the descriptor function deleteClusterDescriptor(tree, data)
+.Figure 8.43. DRAKON-diagram of the descriptor function `deleteClusterDescriptor(tree, data)`
 image::section_8/Fig8_43_deleteClusterDescriptor.svg[width=100%, link=self, window="_blank"]
 
 Once the cluster is analyzed, the balancing automaton function fixDelete(tree, data) acts upon the result. It makes all high-level balancing decisions based on the descriptor signature. Its DRAKON-diagram is presented in Figure 8.44.
 
-image::section_8/Fig8_44_fixDelete.svg[width=100%, link=self, window="_blank"]
-
 [.text-center]
-Figure 8.44. DRAKON-diagram of the automaton dispatcher function fixDelete(tree, data)
+.Figure 8.44. DRAKON-diagram of the automaton dispatcher function `fixDelete(tree, data)`
+image::section_8/Fig8_44_fixDelete.svg[width=100%, link=self, window="_blank"]
 
 As detailed in the mapping table below, the dispatcher fixDelete distributes tasks among three specialized "handlers." The names of these functions (handleSiblingRotation, propagateDeficiency, handleDirectCapture) precisely reflect the specific action of the control automaton.
 
@@ -593,12 +592,12 @@ Goal: Find and capture a red resource (s.l or s.r) by performing rotations and r
 
 The complete DRAKON-diagrams detailing the internal logic of these three specialized functions are shown in Figures 8.45a, 8.45b, and 8.45c.
 
-image::section_8/Fig8_45a_handleSiblingRotation.svg[width=100%, link=self, window="_blank"]
+image::section_8/Fig8_45a_handleSiblingRotation.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
 a) handleSiblingRotation
 
-image::section_8/Fig8_45b_handlepropagateDeficiency.svg[width=100%, link=self, window="_blank"]
+image::section_8/Fig8_45b_handlepropagateDeficiency.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
 b) propagateDeficiency
@@ -609,7 +608,7 @@ image::section_8/Fig8_45c_handleDirectCapture.svg[width=100%, link=self, window=
 c) handleDirectCapture
 
 [.text-center]
-Figure 8.45. DRAKON-diagrams of the three specialized handle-type functions for RB tree balancing
+.Figure 8.45. DRAKON-diagrams of the three specialized handle-type functions for RB tree balancing
 
 === 8.5. Comparison of Tree Structures
 
