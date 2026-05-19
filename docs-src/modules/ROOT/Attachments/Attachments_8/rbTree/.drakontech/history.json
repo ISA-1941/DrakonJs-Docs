@@ -1,12 +1,16 @@
 {
     "history": [
         {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/handleSiblingRotation.drakon",
-            "whenOpened": "2026-05-19T17:37:19.108Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/handleDirectCapture.drakon",
+            "whenOpened": "2026-05-19T17:46:53.399Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/handlepropagateDeficiency.drakon",
-            "whenOpened": "2026-05-19T17:36:13.325Z"
+            "whenOpened": "2026-05-19T17:44:24.696Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/handleSiblingRotation.drakon",
+            "whenOpened": "2026-05-19T17:37:19.108Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/makeRBTree.drakon",
