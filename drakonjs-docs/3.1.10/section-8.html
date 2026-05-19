@@ -1118,31 +1118,27 @@ image::section_8/Fig8_35_fixInsert.svg[width=75%, link=self, window="_blank"]</p
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<a class="image" href="_images/section_8/Fig8_41_atlasDelete.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_41_atlasDelete.svg" alt="Fig8 41 atlasDelete" width="200%"></a>
+<a class="image" href="_images/section_8/Fig8_41_atlasDelete.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_41_atlasDelete.svg" alt="Fig8 41 atlasDelete" width="150%"></a>
 </div>
 <div class="title">Figure 8.41. Atlas of options for node deletion from the RB tree</div>
 </div>
 <div class="paragraph">
 <p>The DRAKON-diagram of the deleteNode function, which implements this complex structural logic, is shown in Figure 8.42.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
 <a class="image" href="_images/section_8/Fig8_42_deleteNode.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_42_deleteNode.svg" alt="Fig8 42 deleteNode" width="100%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 8.42. DRAKON-diagram of the function deleteNode(tree, data)</p>
+<div class="title">Figure 8.42. DRAKON-diagram of the function <code>deleteNode(tree, data)</code></div>
 </div>
 <div class="paragraph">
 <p>To streamline rebalancing, a separate utility function analyzes the cluster state. The DRAKON-diagram for deleteClusterDescriptor, which generates the unique 'signature' string, is shown in Figure 8.43.</p>
 </div>
-<div class="imageblock unresolved">
+<div class="imageblock text-center">
 <div class="content">
-<a class="image" href="section_8/Fig8_43_deleteClusterDescriptor.svg" target="_blank" rel="noopener"><img src="section_8/Fig8_43_deleteClusterDescriptor.svg" alt="Fig8 43 deleteClusterDescriptor" width="100%"></a>
+<a class="image" href="_images/section_8/Fig8_43_deleteClusterDescriptor.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_43_deleteClusterDescriptor.svg" alt="Fig8 43 deleteClusterDescriptor" width="100%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 8.43. DRAKON-diagram of the descriptor function deleteClusterDescriptor(tree, data)</p>
+<div class="title">Figure 8.43. DRAKON-diagram of the descriptor function deleteClusterDescriptor(tree, data)</div>
 </div>
 <div class="paragraph">
 <p>Once the cluster is analyzed, the balancing automaton function fixDelete(tree, data) acts upon the result. It makes all high-level balancing decisions based on the descriptor signature. Its DRAKON-diagram is presented in Figure 8.44.</p>
