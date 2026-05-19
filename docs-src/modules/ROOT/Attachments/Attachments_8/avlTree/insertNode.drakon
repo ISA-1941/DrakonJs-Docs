@@ -1,5 +1,4 @@
 {
-    "type": "drakon",
     "items": {
         "1": {
             "type": "end"
@@ -69,13 +68,8 @@
             "content": "node.right = insertNode(\n    node.right,\n    value\n)"
         }
     },
-    "keywords": {
-        "function": true,
-        "machine": false,
-        "async": false,
-        "export": false,
-        "algoprop": false,
-        "lazy": false
-    },
-    "params": "node, value"
+    "params": "node, value",
+    "type": "drakon",
+    "id": "insertNode.drakon",
+    "style": "{\"background\":\"#b0b0b0\"}"
 }
