@@ -1138,18 +1138,16 @@ image::section_8/Fig8_35_fixInsert.svg[width=75%, link=self, window="_blank"]</p
 <div class="content">
 <a class="image" href="_images/section_8/Fig8_43_deleteClusterDescriptor.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_43_deleteClusterDescriptor.svg" alt="Fig8 43 deleteClusterDescriptor" width="100%"></a>
 </div>
-<div class="title">Figure 8.43. DRAKON-diagram of the descriptor function deleteClusterDescriptor(tree, data)</div>
+<div class="title">Figure 8.43. DRAKON-diagram of the descriptor function <code>deleteClusterDescriptor(tree, data)</code></div>
 </div>
 <div class="paragraph">
 <p>Once the cluster is analyzed, the balancing automaton function fixDelete(tree, data) acts upon the result. It makes all high-level balancing decisions based on the descriptor signature. Its DRAKON-diagram is presented in Figure 8.44.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
 <a class="image" href="_images/section_8/Fig8_44_fixDelete.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_44_fixDelete.svg" alt="Fig8 44 fixDelete" width="100%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 8.44. DRAKON-diagram of the automaton dispatcher function fixDelete(tree, data)</p>
+<div class="title">Figure 8.44. DRAKON-diagram of the automaton dispatcher function <code>fixDelete(tree, data)</code></div>
 </div>
 <div class="paragraph">
 <p>As detailed in the mapping table below, the dispatcher fixDelete distributes tasks among three specialized "handlers." The names of these functions (handleSiblingRotation, propagateDeficiency, handleDirectCapture) precisely reflect the specific action of the control automaton.</p>
@@ -1191,7 +1189,7 @@ Goal: Find and capture a red resource (s.l or s.r) by performing rotations and r
 </div>
 <div class="imageblock">
 <div class="content">
-<a class="image" href="_images/section_8/Fig8_45a_handleSiblingRotation.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_45a_handleSiblingRotation.svg" alt="Fig8 45a handleSiblingRotation" width="100%"></a>
+<a class="image" href="_images/section_8/Fig8_45a_handleSiblingRotation.svg" target="_blank" rel="noopener"><img src="_images/section_8/Fig8_45a_handleSiblingRotation.svg" alt="Fig8 45a handleSiblingRotation" width="75%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
@@ -1199,7 +1197,7 @@ Goal: Find and capture a red resource (s.l or s.r) by performing rotations and r
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="section_8/Fig8_45b_handlepropagateDeficiency.svg" target="_blank" rel="noopener"><img src="section_8/Fig8_45b_handlepropagateDeficiency.svg" alt="Fig8 45b handlepropagateDeficiency" width="100%"></a>
+<a class="image" href="section_8/Fig8_45b_handlepropagateDeficiency.svg" target="_blank" rel="noopener"><img src="section_8/Fig8_45b_handlepropagateDeficiency.svg" alt="Fig8 45b handlepropagateDeficiency" width="75%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
@@ -1213,14 +1211,12 @@ Goal: Find and capture a red resource (s.l or s.r) by performing rotations and r
 <div class="paragraph text-center">
 <p>c) handleDirectCapture</p>
 </div>
-<div class="paragraph text-center">
-<p>Figure 8.45. DRAKON-diagrams of the three specialized handle-type functions for RB tree balancing</p>
 </div>
 </div>
-</div>
-<div class="sect2">
+<div class="sect2 text-center">
 <h3 id="_8_5_comparison_of_tree_structures"><a class="anchor" href="#_8_5_comparison_of_tree_structures"></a>8.5. Comparison of Tree Structures</h3>
 <div class="paragraph">
+<div class="title">Figure 8.45. DRAKON-diagrams of the three specialized handle-type functions for RB tree balancing</div>
 <p>A clear comparison of the dynamic behavior of each tree structure is presented in Table 8.3. While standard BST implementations risk degrading into linear structures with O(n) complexity, self-balancing structures (AVL and red-black) guarantee O(log n) complexity, making them scalable for large datasets. Note that although red-black trees have dynamic complexities in insertions and deletions compared to BSTs, they eliminate the critical O(n) failure mode, providing a predictable O(log n) experience.</p>
 </div>
 <div class="paragraph">
