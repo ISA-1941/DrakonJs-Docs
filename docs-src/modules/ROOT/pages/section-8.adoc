@@ -592,17 +592,18 @@ Goal: Find and capture a red resource (s.l or s.r) by performing rotations and r
 
 The complete DRAKON-diagrams detailing the internal logic of these three specialized functions are shown in Figures 8.45a, 8.45b, and 8.45c.
 
+image::section_8/Fig8_45a_handleSiblingRotation.svg[width=75%, link=self, window="_blank"]
 [.text-center]
 a) handleSiblingRotation
-image::section_8/Fig8_45a_handleSiblingRotation.svg[width=75%, link=self, window="_blank"]
 
+image::section_8/Fig8_45b_handlepropagateDeficiency.svg[width=75%, link=self, window="_blank"]
 [.text-center]
 b) propagateDeficiency
 image::section_8/Fig8_45b_handlepropagateDeficiency.svg[width=75%, link=self, window="_blank"]
 
+image::section_8/Fig8_45c_handleDirectCapture.svg[width=75%, link=self, window="_blank"]
 [.text-center]
 c) handleDirectCapture
-image::section_8/Fig8_45c_handleDirectCapture.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
 .Figure 8.45. DRAKON-diagrams of the three specialized handle-type functions for RB tree balancing
