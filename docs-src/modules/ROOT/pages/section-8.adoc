@@ -549,21 +549,19 @@ The atlas of options for removing a node from the RB tree is presented in Figure
 
 [.text-center]
 .Figure 8.41. Atlas of options for node deletion from the RB tree
-image::section_8/Fig8_41_atlasDelete.svg[width=200%, link=self, window="_blank"]
+image::section_8/Fig8_41_atlasDelete.svg[width=150%, link=self, window="_blank"]
 
 The DRAKON-diagram of the deleteNode function, which implements this complex structural logic, is shown in Figure 8.42.
 
-image::section_8/Fig8_42_deleteNode.svg[width=100%, link=self, window="_blank"]
-
 [.text-center]
-Figure 8.42. DRAKON-diagram of the function deleteNode(tree, data)
+.Figure 8.42. DRAKON-diagram of the function `deleteNode(tree, data)`
+image::section_8/Fig8_42_deleteNode.svg[width=100%, link=self, window="_blank"]
 
 To streamline rebalancing, a separate utility function analyzes the cluster state. The DRAKON-diagram for deleteClusterDescriptor, which generates the unique 'signature' string, is shown in Figure 8.43.
 
-image::section_8/Fig8_43_deleteClusterDescriptor.svg[width=100%, link=self, window="_blank"]
-
 [.text-center]
-Figure 8.43. DRAKON-diagram of the descriptor function deleteClusterDescriptor(tree, data)
+.Figure 8.43. DRAKON-diagram of the descriptor function deleteClusterDescriptor(tree, data)
+image::section_8/Fig8_43_deleteClusterDescriptor.svg[width=100%, link=self, window="_blank"]
 
 Once the cluster is analyzed, the balancing automaton function fixDelete(tree, data) acts upon the result. It makes all high-level balancing decisions based on the descriptor signature. Its DRAKON-diagram is presented in Figure 8.44.
 
