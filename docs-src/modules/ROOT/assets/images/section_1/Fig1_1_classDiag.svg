@@ -243,9 +243,11 @@
         </g>
         <g
            data-cell-id="ChPY7ko9XQGG49CnnJZd-5"
-           id="g20">
+           id="g20"
+           style="fill:#ffffff;fill-opacity:1">
           <g
-             id="g17">
+             id="g17"
+             style="fill:#ffffff;fill-opacity:1">
             <ellipse
                cx="270"
                cy="50"
@@ -254,15 +256,19 @@
                fill="#ffffff"
                stroke="#000000"
                pointer-events="all"
-               style="fill: light-dark(#ffffff, var(--ge-dark-color, #121212)); stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"
+               style="fill:#ffffff;stroke:light-dark(rgb(0, 0, 0), rgb(255, 255, 255));fill-opacity:1"
                id="ellipse16" />
           </g>
           <g
-             id="g19">
+             id="g19"
+             style="fill:#ffffff;fill-opacity:1">
             <g
-               id="g18">
+               id="g18"
+               style="fill:#ffffff;fill-opacity:1">
               <switch
-                 id="switch17">
+                 id="switch17"
+                 style="fill:#0b0e09;fill-opacity:1"
+                 transform="translate(1.3419913,1.0064935)">
                 <foreignObject
                    style="overflow: visible; text-align: left;"
                    pointer-events="none"
@@ -285,10 +291,11 @@
                    font-family="Helvetica"
                    font-size="21px"
                    text-anchor="middle"
-                   id="text17">56</text>
+                   id="text17"
+                   style="fill:#0b0e09;fill-opacity:1">56</text>
                 <text
                    xml:space="preserve"
-                   style="font-size:30.2362px;font-family:'Nimbus Sans';-inkscape-font-specification:'Nimbus Sans, Normal';writing-mode:lr-tb;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.82173;stroke-linejoin:bevel"
+                   style="font-size:30.2362px;font-family:'Nimbus Sans';-inkscape-font-specification:'Nimbus Sans, Normal';writing-mode:lr-tb;direction:ltr;fill:#0b0e09;fill-opacity:1;stroke:#000000;stroke-width:1.82173;stroke-linejoin:bevel"
                    x="155.17099"
                    y="37.746754"
                    id="text2"><tspan
@@ -1032,51 +1039,64 @@
             </g>
           </g>
         </g>
-        <path
-           d="M 43.553491,35.418207 V 62.218511 H 132.92521 V 35.418207 Z"
-           style="fill:#ffffff;stroke:#000000;stroke-width:2.02869;stroke-linejoin:bevel"
-           id="path4" />
-        <switch
-           id="switch51-9"
-           transform="translate(-231.62612,13.241508)">
-          <foreignObject
-             style="overflow: visible; text-align: left;"
-             pointer-events="none"
-             width="100%"
-             height="100%"
-             requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-            <xhtml:div
-               style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 58px; height: 1px; padding-top: 35px; margin-left: 291px;">
-              <xhtml:div
-                 style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
+        <g
+           id="g87"
+           transform="translate(178.48485,74.261903)">
+          <g
+             id="g85"
+             transform="translate(-1.3419913,4.3614718)">
+            <path
+               d="M 46.237474,34.747211 V 61.547515 H 135.60919 V 34.747211 Z"
+               style="fill:#ffffff;stroke:#000000;stroke-width:2.02869;stroke-linejoin:bevel"
+               id="path4" />
+          </g>
+          <g
+             id="g86">
+            <switch
+               id="switch51-9"
+               transform="translate(-233.9746,13.577006)"
+               style="fill:#0b0e0f;fill-opacity:1">
+              <foreignObject
+                 style="overflow: visible; text-align: left;"
+                 pointer-events="none"
+                 width="100%"
+                 height="100%"
+                 requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
                 <xhtml:div
-                   style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                  <xhtml:font
-                     style="font-size: 15px;">Root</xhtml:font>
+                   style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 58px; height: 1px; padding-top: 35px; margin-left: 291px;">
+                  <xhtml:div
+                     style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
+                    <xhtml:div
+                       style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                      <xhtml:font
+                         style="font-size: 15px;">Root</xhtml:font>
+                    </xhtml:div>
+                  </xhtml:div>
                 </xhtml:div>
-              </xhtml:div>
-            </xhtml:div>
-          </foreignObject>
-          <text
-             x="320"
-             y="39"
-             fill="light-dark(#000000, #ffffff)"
-             font-family="Helvetica"
-             font-size="12px"
-             text-anchor="middle"
-             id="text51-3">DataStructures</text>
-        </switch>
+              </foreignObject>
+              <text
+                 x="324.02597"
+                 y="39"
+                 fill="light-dark(#000000, #ffffff)"
+                 font-family="Helvetica"
+                 font-size="12px"
+                 text-anchor="middle"
+                 id="text51-3"
+                 style="fill:#0b0e0f;fill-opacity:1">Data Structures</text>
+            </switch>
+          </g>
+        </g>
         <text
            xml:space="preserve"
-           style="font-size:30.2362px;font-family:'Nimbus Sans';-inkscape-font-specification:'Nimbus Sans, Normal';writing-mode:lr-tb;direction:ltr;white-space:pre;inline-size:73.3453;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.82173;stroke-linejoin:bevel"
+           style="font-size:30.2362px;font-family:'Nimbus Sans';-inkscape-font-specification:'Nimbus Sans, Normal';writing-mode:lr-tb;direction:ltr;white-space:pre;inline-size:73.3453;display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.82173;stroke-linejoin:bevel"
            x="123.6342"
            y="48.818184"
            id="text3"><tspan
              x="123.6342"
              y="48.818184"
-             id="tspan5"><tspan
+             id="tspan6"><tspan
                dx="0 16.055368 16.055368 16.05537 16.055367 16.055367 21.739822 21.73983 21.739815 21.739838"
-               id="tspan1">вввввыыыыы</tspan></tspan></text>
+               id="tspan3">вввввыыыыы</tspan></tspan></text>
         <text
            xml:space="preserve"
            style="font-size:30.2362px;font-family:'Nimbus Sans';-inkscape-font-specification:'Nimbus Sans, Normal';writing-mode:lr-tb;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.82173;stroke-linejoin:bevel"
