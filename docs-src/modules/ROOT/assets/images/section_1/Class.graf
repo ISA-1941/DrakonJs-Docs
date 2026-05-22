@@ -1,0 +1,14 @@
+{
+    "items": {
+        "1": {
+            "type": "line",
+            "left": 50,
+            "top": 35,
+            "x2": 5,
+            "y2": 50,
+            "zIndex": 0
+        }
+    },
+    "type": "graf",
+    "id": "Class.graf"
+}

@@ -1,0 +1,112 @@
+{
+    "items": {
+        "1": {
+            "type": "idea",
+            "content": "<p>Primitive Structures</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "2": {
+            "type": "idea",
+            "content": "<p>Non-primitive Structures</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "3": {
+            "type": "idea",
+            "content": "<p>Integer</p>",
+            "parent": "1",
+            "treeType": "treeview",
+            "ordinal": 0,
+            "w": 50
+        },
+        "4": {
+            "type": "idea",
+            "content": "<p>Real</p>",
+            "parent": "1",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "5": {
+            "type": "idea",
+            "content": "<p>String</p>",
+            "parent": "1",
+            "treeType": "treeview",
+            "ordinal": 2
+        },
+        "6": {
+            "type": "idea",
+            "content": "<p>Pointer</p>",
+            "parent": "1",
+            "treeType": "treeview",
+            "ordinal": 3
+        },
+        "8": {
+            "type": "idea",
+            "content": "<p>Linear</p>",
+            "parent": "2",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "9": {
+            "type": "idea",
+            "content": "<p>Non-Linear</p>",
+            "parent": "2",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "10": {
+            "type": "idea",
+            "content": "<p>Static</p>",
+            "parent": "9",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "11": {
+            "type": "idea",
+            "content": "<p>Dynamic</p>",
+            "parent": "9",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "12": {
+            "type": "idea",
+            "content": "<p>Array</p>",
+            "parent": "10",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "13": {
+            "type": "idea",
+            "content": "<p>Slice</p>",
+            "parent": "10",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "14": {
+            "type": "idea",
+            "content": "<p>Linked List</p>",
+            "parent": "11",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "15": {
+            "type": "idea",
+            "content": "<p>Stack</p>",
+            "parent": "11",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "16": {
+            "type": "idea",
+            "content": "<p>Queue</p>",
+            "parent": "11",
+            "treeType": "treeview",
+            "ordinal": 2
+        }
+    },
+    "type": "graf",
+    "id": "classDiagraph.graf"
+}
