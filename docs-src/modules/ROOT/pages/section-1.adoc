@@ -31,7 +31,7 @@ A simplified classification of data structures can be presented as follows:
 
 [.text-center]
 .Figure 1.1. Classification of Data Structures
-image::section_1/Fig1_1_classDiag.svg[width=100%, link=self, window="_blank"]
+image::section_1/Fig1_1_Term.svg[width=100%, link=self, window="_blank"]
 
 Each data structure has its own advantages and disadvantages, making it necessary to analyze them in terms of **memory efficiency** and **data access time**.
 
