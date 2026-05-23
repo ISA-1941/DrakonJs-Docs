@@ -26,15 +26,15 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
-     inkscape:zoom="2"
-     inkscape:cx="183.25"
-     inkscape:cy="155"
+     inkscape:zoom="2.9806452"
+     inkscape:cx="200.45995"
+     inkscape:cy="190.22727"
      inkscape:window-width="1920"
      inkscape:window-height="1152"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g82" />
+     inkscape:current-layer="g81" />
   <defs
      id="defs1" />
   <g
@@ -243,11 +243,9 @@
         </g>
         <g
            data-cell-id="ChPY7ko9XQGG49CnnJZd-5"
-           id="g20"
-           style="fill:#ffffff;fill-opacity:1">
+           id="g20">
           <g
-             id="g17"
-             style="fill:#ffffff;fill-opacity:1">
+             id="g17">
             <ellipse
                cx="270"
                cy="50"
@@ -256,19 +254,15 @@
                fill="#ffffff"
                stroke="#000000"
                pointer-events="all"
-               style="fill:#ffffff;stroke:light-dark(rgb(0, 0, 0), rgb(255, 255, 255));fill-opacity:1"
+               style="fill: light-dark(#ffffff, var(--ge-dark-color, #121212)); stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"
                id="ellipse16" />
           </g>
           <g
-             id="g19"
-             style="fill:#ffffff;fill-opacity:1">
+             id="g19">
             <g
-               id="g18"
-               style="fill:#ffffff;fill-opacity:1">
+               id="g18">
               <switch
-                 id="switch17"
-                 style="fill:#0b0e09;fill-opacity:1"
-                 transform="translate(1.3419913,1.0064935)">
+                 id="switch17">
                 <foreignObject
                    style="overflow: visible; text-align: left;"
                    pointer-events="none"
@@ -291,18 +285,7 @@
                    font-family="Helvetica"
                    font-size="21px"
                    text-anchor="middle"
-                   id="text17"
-                   style="fill:#0b0e09;fill-opacity:1">56</text>
-                <text
-                   xml:space="preserve"
-                   style="font-size:30.2362px;font-family:'Nimbus Sans';-inkscape-font-specification:'Nimbus Sans, Normal';writing-mode:lr-tb;direction:ltr;fill:#0b0e09;fill-opacity:1;stroke:#000000;stroke-width:1.82173;stroke-linejoin:bevel"
-                   x="155.17099"
-                   y="37.746754"
-                   id="text2"><tspan
-                     sodipodi:role="line"
-                     id="tspan2"
-                     x="155.17099"
-                     y="37.746754">56</tspan></text>
+                   id="text17">56</text>
               </switch>
             </g>
           </g>
@@ -508,17 +491,9 @@
         <g
            data-cell-id="ChPY7ko9XQGG49CnnJZd-12"
            id="g38"
-           transform="translate(1.0064935,1.0064935)">
+           transform="matrix(1.0345606,0,0,1.0345606,-6.4535907,-5.7624533)">
           <g
              id="g37">
-            <path
-               d="m 177.94676,137.35617 33.35114,51.53069"
-               fill="none"
-               stroke="#000000"
-               stroke-width="2.1956"
-               stroke-miterlimit="10"
-               pointer-events="stroke"
-               id="path36" />
             <path
                d="m 214.64,193.98 -7.7,-4.54 4.44,-0.5 2.27,-3.85 z"
                fill="#000000"
@@ -740,16 +715,16 @@
                stroke-miterlimit="10"
                stroke-dasharray="8 8"
                pointer-events="stroke"
-               style="stroke: light-dark(rgb(0, 0, 0), rgb(255, 89, 144));"
-               id="path54" />
+               id="path54"
+               style="stroke: light-dark(rgb(0, 0, 0), rgb(255, 89, 144));" />
             <path
                d="M 201.11 160.14 L 208.49 157.53 L 206.32 160.79 L 207.62 164.48 Z"
                fill="#000000"
                stroke="#000000"
                stroke-miterlimit="10"
                pointer-events="all"
-               style="fill: light-dark(rgb(0, 0, 0), rgb(255, 89, 144)); stroke: light-dark(rgb(0, 0, 0), rgb(255, 89, 144));"
-               id="path55" />
+               id="path55"
+               style="fill: light-dark(rgb(0, 0, 0), rgb(255, 89, 144)); stroke: light-dark(rgb(0, 0, 0), rgb(255, 89, 144));" />
           </g>
         </g>
         <g
@@ -973,6 +948,22 @@
           </g>
         </g>
         <g
+           data-cell-id="ChPY7ko9XQGG49CnnJZd-38"
+           id="g76">
+          <g
+             id="g75">
+            <path
+               d="M 20 240 L 50 180 L 110 120 L 170 80 L 240 50"
+               fill="none"
+               stroke="#000000"
+               stroke-miterlimit="10"
+               stroke-dasharray="3 3"
+               pointer-events="stroke"
+               style="stroke: light-dark(rgb(0, 0, 0), rgb(51, 255, 51));"
+               id="path74" />
+          </g>
+        </g>
+        <g
            data-cell-id="ChPY7ko9XQGG49CnnJZd-39"
            id="g80">
           <g
@@ -1023,82 +1014,16 @@
             </g>
           </g>
         </g>
-        <g
-           id="g87"
-           transform="translate(178.48485,74.261903)">
-          <g
-             id="g85"
-             transform="translate(-1.3419913,4.3614718)">
-            <path
-               d="M 46.237474,34.747211 V 61.547515 H 135.60919 V 34.747211 Z"
-               style="fill:#ffffff;stroke:#000000;stroke-width:2.02869;stroke-linejoin:bevel"
-               id="path4" />
-          </g>
-          <g
-             id="g86">
-            <switch
-               id="switch51-9"
-               transform="translate(-233.9746,13.577006)"
-               style="fill:#0b0e0f;fill-opacity:1">
-              <foreignObject
-                 style="overflow: visible; text-align: left;"
-                 pointer-events="none"
-                 width="100%"
-                 height="100%"
-                 requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                <xhtml:div
-                   style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 58px; height: 1px; padding-top: 35px; margin-left: 291px;">
-                  <xhtml:div
-                     style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-                    <xhtml:div
-                       style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                      <xhtml:font
-                         style="font-size: 15px;">Root</xhtml:font>
-                    </xhtml:div>
-                  </xhtml:div>
-                </xhtml:div>
-              </foreignObject>
-              <text
-                 x="324.02597"
-                 y="39"
-                 fill="light-dark(#000000, #ffffff)"
-                 font-family="Helvetica"
-                 font-size="12px"
-                 text-anchor="middle"
-                 id="text51-3"
-                 style="fill:#0b0e0f;fill-opacity:1">Data Structures</text>
-            </switch>
-          </g>
-        </g>
-        <text
-           xml:space="preserve"
-           style="font-size:30.2362px;font-family:'Nimbus Sans';-inkscape-font-specification:'Nimbus Sans, Normal';writing-mode:lr-tb;direction:ltr;white-space:pre;inline-size:73.3453;display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.82173;stroke-linejoin:bevel"
-           x="123.6342"
-           y="48.818184"
-           id="text3"><tspan
-             x="123.6342"
-             y="48.818184"
-             id="tspan5"><tspan
-               dx="0 16.055368 16.055368 16.05537 16.055367 16.055367 21.739822 21.73983 21.739815 21.739838"
-               id="tspan1">вввввыыыыы</tspan></tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-size:30.2362px;font-family:'Nimbus Sans';-inkscape-font-specification:'Nimbus Sans, Normal';writing-mode:lr-tb;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.82173;stroke-linejoin:bevel"
-           x="134.70563"
-           y="42.443722"
-           id="text4"><tspan
-             sodipodi:role="line"
-             id="tspan4"
-             x="134.70563"
-             y="42.443722" /></text>
+        <path
+           d="m 181.2217,139.12491 35.98453,57.1967"
+           fill="none"
+           stroke="#000000"
+           stroke-width="2"
+           stroke-miterlimit="10"
+           pointer-events="stroke"
+           id="path38-7"
+           sodipodi:nodetypes="cc" />
       </g>
-      <rect
-         style="fill:#ffffff;stroke:#000000;stroke-width:1.82173;stroke-linejoin:bevel;fill-opacity:1"
-         id="rect1"
-         width="79"
-         height="18.5"
-         x="91.5"
-         y="38.5" />
     </g>
   </g>
   <switch
