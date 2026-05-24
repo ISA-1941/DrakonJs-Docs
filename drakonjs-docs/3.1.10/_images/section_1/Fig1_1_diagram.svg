@@ -180,7 +180,7 @@
            stroke="#1a252f"
            stroke-width="2"
            id="rect19"
-           style="fill:#fcfdfd;fill-opacity:1;stroke:#000000;stroke-width:2.002;stroke-dasharray:none;stroke-opacity:1" />
+           style="fill:#030202;fill-opacity:1;stroke:#ffffff;stroke-width:2.002;stroke-dasharray:none;stroke-opacity:1" />
         <text
            x="59.5"
            y="-111.5"
@@ -197,7 +197,7 @@
            stroke="#3498db"
            stroke-width="2"
            id="rect20"
-           style="stroke:#000000;stroke-width:2.02626;stroke-dasharray:none;stroke-opacity:1" />
+           style="stroke:#ffffff;stroke-width:2.02626;stroke-dasharray:none;stroke-opacity:1;fill:#170b07" />
         <path
            id="text20"
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.7874px;font-family:Arial, sans-serif;-inkscape-font-specification:'Arial, sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1"
@@ -216,13 +216,13 @@
            stroke="#e67e22"
            stroke-width="2"
            id="rect21"
-           style="stroke:#000000;stroke-width:2.40947;stroke-dasharray:none;stroke-opacity:1" />
+           style="stroke:#ffffff;stroke-width:2.40947;stroke-dasharray:none;stroke-opacity:1;fill:#020d16" />
         <text
            x="434.5"
            y="-3.5"
            class="text-base level1-t"
            id="text21"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.7874px;font-family:Arial, sans-serif;-inkscape-font-specification:'Arial, sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1">Non-primitive Structures</text>
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.7874px;font-family:Arial, sans-serif;-inkscape-font-specification:&quot;Arial, sans-serif, Bold&quot;;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#ffffff;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1;fill:#d3c1af">Non-primitive Structures</text>
         <rect
            x="-580.5"
            y="75.5"
@@ -250,7 +250,7 @@
            stroke="#7f8c8d"
            stroke-width="1.5"
            id="rect23"
-           style="stroke:#000000;stroke-width:1.5015;stroke-dasharray:none;stroke-opacity:1" />
+           style="stroke:#ffffff;stroke-width:1.5015;stroke-dasharray:none;stroke-opacity:1;fill:#000000" />
         <text
            x="-405.5"
            y="105.5"
@@ -267,7 +267,7 @@
            stroke="#7f8c8d"
            stroke-width="1.5"
            id="rect24"
-           style="stroke:#000000;stroke-width:1.5015;stroke-dasharray:none;stroke-opacity:1" />
+           style="stroke:#ffffff;stroke-width:1.5015;stroke-dasharray:none;stroke-opacity:1;fill:#000000" />
         <text
            x="-275.5"
            y="105.5"
@@ -284,7 +284,7 @@
            stroke="#7f8c8d"
            stroke-width="1.5"
            id="rect25"
-           style="stroke:#000000;stroke-width:1.5015;stroke-dasharray:none;stroke-opacity:1" />
+           style="stroke:#ffffff;stroke-width:1.5015;stroke-dasharray:none;stroke-opacity:1;fill:#000000" />
         <text
            x="-145.5"
            y="105.5"
@@ -301,7 +301,7 @@
            stroke="#34495e"
            stroke-width="2"
            id="rect26"
-           style="stroke:#000000;stroke-width:2.002;stroke-dasharray:none;stroke-opacity:1" />
+           style="stroke:#ffffff;stroke-width:2.002;stroke-dasharray:none;stroke-opacity:1;fill:#070605" />
         <text
            x="189.5"
            y="106.5"
@@ -318,13 +318,13 @@
            stroke="#34495e"
            stroke-width="2"
            id="rect27"
-           style="stroke:#000000;stroke-width:2.002;stroke-dasharray:none;stroke-opacity:1" />
+           style="stroke:#ffffff;stroke-width:2.002;stroke-dasharray:none;stroke-opacity:1;fill:#070605" />
         <text
            x="629.5"
            y="106.5"
            class="text-base level2-t"
            id="text27"
-           style="stroke:#000000;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1;-inkscape-font-specification:'Arial, sans-serif, Bold';font-family:Arial, sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:20.78740157px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Non-linear</text>
+           style="stroke:#ffffff;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1;-inkscape-font-specification:&quot;Arial, sans-serif, Bold&quot;;font-family:Arial, sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:20.78740157px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d3c1af">Non-linear</text>
         <rect
            x="9.5"
            y="185.5"
@@ -335,7 +335,7 @@
            stroke="#2c3e50"
            stroke-width="1.5"
            id="rect28"
-           style="stroke:#000000;stroke-width:1.5015;stroke-dasharray:none;stroke-opacity:1" />
+           style="stroke:#ffffff;stroke-width:1.5015;stroke-dasharray:none;stroke-opacity:1;fill:#000000" />
         <text
            x="69.5"
            y="216.5"
@@ -352,7 +352,7 @@
            stroke="#2c3e50"
            stroke-width="1.5"
            id="rect29"
-           style="stroke:#000000;stroke-width:1.5015;stroke-dasharray:none;stroke-opacity:1" />
+           style="stroke:#ffffff;stroke-width:1.5015;stroke-dasharray:none;stroke-opacity:1;fill:#000000" />
         <text
            x="309.5"
            y="216.5"
@@ -369,13 +369,13 @@
            stroke="#7f8c8d"
            stroke-width="1.5"
            id="rect30"
-           style="stroke:#000000;stroke-width:1.5015;stroke-dasharray:none;stroke-opacity:1" />
+           style="stroke:#ffffff;stroke-width:1.5015;stroke-dasharray:none;stroke-opacity:1;fill:#000000" />
         <text
            x="569.5"
            y="215.5"
            class="text-base level3-t"
            id="text30"
-           style="stroke:#000000;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1;-inkscape-font-specification:'Arial, sans-serif, Bold';font-family:Arial, sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:20.78740157px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Tree</text>
+           style="stroke:#ffffff;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1;-inkscape-font-specification:&quot;Arial, sans-serif, Bold&quot;;font-family:Arial, sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:20.78740157px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cbb6a1">Tree</text>
         <rect
            x="649.5"
            y="185.5"
@@ -386,13 +386,13 @@
            stroke="#7f8c8d"
            stroke-width="1.5"
            id="rect31"
-           style="stroke:#000000;stroke-width:1.5015;stroke-dasharray:none;stroke-opacity:1" />
+           style="stroke:#ffffff;stroke-width:1.5015;stroke-dasharray:none;stroke-opacity:1;fill:#000000" />
         <text
            x="689.5"
            y="215.5"
            class="text-base level3-t"
            id="text31"
-           style="stroke:#000000;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1;-inkscape-font-specification:'Arial, sans-serif, Bold';font-family:Arial, sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:20.78740157px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Graph</text>
+           style="stroke:#ffffff;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1;-inkscape-font-specification:&quot;Arial, sans-serif, Bold&quot;;font-family:Arial, sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:20.78740157px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cbb6a1">Graph</text>
         <rect
            x="-25.5"
            y="295.5"
@@ -403,13 +403,13 @@
            stroke="#bdc3c7"
            stroke-width="1"
            id="rect32"
-           style="stroke:#000000;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1" />
+           style="stroke:#ffffff;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1;fill:#000000" />
         <text
            x="19.5"
            y="322.5"
            class="text-base level3-t"
            id="text32"
-           style="stroke:#000000;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1;-inkscape-font-specification:'Arial, sans-serif, Bold';font-family:Arial, sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:20.78740157px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Array</text>
+           style="stroke:#ffffff;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1;-inkscape-font-specification:&quot;Arial, sans-serif, Bold&quot;;font-family:Arial, sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:20.78740157px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cbb6a1">Array</text>
         <rect
            x="74.5"
            y="295.5"
@@ -420,7 +420,7 @@
            stroke="#bdc3c7"
            stroke-width="1"
            id="rect33"
-           style="stroke:#000000;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1" />
+           style="stroke:#ffffff;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1;fill:#000000" />
         <text
            x="119.5"
            y="322.5"
@@ -437,13 +437,13 @@
            stroke="#bdc3c7"
            stroke-width="1"
            id="rect34"
-           style="stroke:#000000;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1" />
+           style="stroke:#ffffff;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1;fill:#000000" />
         <text
            x="229.5"
            y="322.5"
            class="text-base level3-t"
            id="text34"
-           style="stroke:#000000;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1;-inkscape-font-specification:'Arial, sans-serif, Bold';font-family:Arial, sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:20.78740157px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Linked List</text>
+           style="stroke:#ffffff;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1;-inkscape-font-specification:&quot;Arial, sans-serif, Bold&quot;;font-family:Arial, sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:20.78740157px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cbb6a1">Linked List</text>
         <rect
            x="294.5"
            y="295.5"
@@ -454,13 +454,13 @@
            stroke="#bdc3c7"
            stroke-width="1"
            id="rect35"
-           style="stroke:#000000;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1" />
+           style="stroke:#ffffff;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1;fill:#000000" />
         <text
            x="334.5"
            y="322.5"
            class="text-base level3-t"
            id="text35"
-           style="stroke:#000000;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1;-inkscape-font-specification:'Arial, sans-serif, Bold';font-family:Arial, sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:20.78740157px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Stack</text>
+           style="stroke:#ffffff;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1;-inkscape-font-specification:&quot;Arial, sans-serif, Bold&quot;;font-family:Arial, sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:20.78740157px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cbb6a1">Stack</text>
         <rect
            x="384.5"
            y="295.5"
@@ -471,7 +471,7 @@
            stroke="#bdc3c7"
            stroke-width="1"
            id="rect36"
-           style="stroke:#000000;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1" />
+           style="stroke:#ffffff;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1;fill:#000000" />
         <text
            x="424.5"
            y="322.5"
