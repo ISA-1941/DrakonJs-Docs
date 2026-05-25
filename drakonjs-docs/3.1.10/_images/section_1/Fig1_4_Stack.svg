@@ -1,66 +1,287 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
-<!-- Фон страницы -->
-<rect width="800" height="600" fill="#ffffff"/>
-
-<g id="stack-illustration" font-family="Arial, sans-serif">
-<!-- Левая часть: PUSH -->
-<text x="100" y="80" font-size="24" font-weight="bold" fill="#000000" text-anchor="middle">PUSH</text>
-<rect x="40" y="100" width="120" height="40" stroke="#000000" stroke-width="2" fill="#ffffff"/>
-<text x="100" y="125" font-size="14" fill="#000000" text-anchor="middle">Item</text>
-<text x="100" y="170" font-size="18" fill="#000000" text-anchor="middle">Last Out</text>
-
-<!-- Изогнутая стрелка входа (PUSH) -->
-
-<!-- Путь: от правого края блока Item (160, 120) к верхней ячейке стека (280, 185) -->
-
-<path d="M 160 120 Q 220 120 270 180" stroke="#000000" stroke-width="2" fill="none"/>
-<path d="M 270 180 L 260 176 M 270 180 L 268 170" stroke="#000000" stroke-width="2" fill="none"/>
-
-<!-- Центральная часть: Стек -->
-
-<g id="stack-frames">
-
-<!-- Ячейки стека -->
-
-<!-- 1-я ячейка (верхняя) -->
-
-<rect x="280" y="170" width="160" height="50" stroke="#000000" stroke-width="2" fill="#ffffff"/>
-<text x="360" y="200" font-size="14" fill="#000000" text-anchor="middle">Item</text>
-
-<!-- 2-я ячейка -->
-
-<rect x="280" y="230" width="160" height="50" stroke="#000000" stroke-width="2" fill="#ffffff"/>
-<text x="360" y="260" font-size="14" fill="#000000" text-anchor="middle">Item</text>
-
-<!-- 3-я ячейка (средняя) -->
-
-<rect x="280" y="290" width="160" height="50" stroke="#000000" stroke-width="2" fill="#ffffff"/>
-<text x="360" y="320" font-size="14" fill="#000000" text-anchor="middle">............</text>
-
-<!-- 4-я ячейка -->
-
-<rect x="280" y="350" width="160" height="50" stroke="#000000" stroke-width="2" fill="#ffffff"/>
-<text x="360" y="380" font-size="14" fill="#000000" text-anchor="middle">Item</text>
-
-<!-- 5-я ячейка (нижняя) -->
-
-<rect x="280" y="410" width="160" height="50" stroke="#000000" stroke-width="2" fill="#ffffff"/>
-<text x="360" y="440" font-size="14" fill="#000000" text-anchor="middle">Item</text>
-</g>
-
-<!-- Изогнутая стрелка выхода (POP) -->
-
-<!-- Путь: от верхней ячейки стека (440, 185) к левому краю блока POP (560, 120) -->
-
-<path d="M 440 180 Q 500 120 560 120" stroke="#000000" stroke-width="2" fill="none"/>
-<path d="M 560 120 L 550 116 M 560 120 L 552 130" stroke="#000000" stroke-width="2" fill="none"/>
-
-<!-- Правая часть: POP -->
-
-<text x="620" y="80" font-size="24" font-weight="bold" fill="#000000" text-anchor="middle">POP</text>
-<rect x="560" y="100" width="120" height="40" stroke="#000000" stroke-width="2" fill="#ffffff"/>
-<text x="620" y="125" font-size="14" fill="#000000" text-anchor="middle">Item</text>
-<text x="620" y="170" font-size="18" fill="#000000" text-anchor="middle">First In</text>
-
-</g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 472.72726 327.27274"
+   version="1.1"
+   id="svg11"
+   sodipodi:docname="Fig1_4_Stack.svg"
+   width="472.72726"
+   height="327.27274"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     showguides="false"
+     inkscape:zoom="2"
+     inkscape:cx="236.75"
+     inkscape:cy="163.5"
+     inkscape:window-width="1920"
+     inkscape:window-height="1152"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg11" />
+  <defs
+     id="defs11" />
+  <!-- &#1060;&#1086;&#1085; &#1089;&#1090;&#1088;&#1072;&#1085;&#1080;&#1094;&#1099; -->
+  <rect
+     width="472.72726"
+     height="327.27274"
+     fill="#ffffff"
+     id="rect1"
+     style="fill:#ffffff;fill-opacity:0.1;stroke-width:0.567727"
+     x="0"
+     y="0" />
+  <g
+     id="stack-illustration"
+     font-family="Arial, sans-serif"
+     transform="matrix(0.59090909,0,0,0.54545455,1.9999922,-3.4999922)">
+    <!-- &#1051;&#1077;&#1074;&#1072;&#1103; &#1095;&#1072;&#1089;&#1090;&#1100;: PUSH -->
+    <text
+       x="100"
+       y="80"
+       font-size="24px"
+       font-weight="bold"
+       fill="#000000"
+       text-anchor="middle"
+       id="text1">PUSH</text>
+    <rect
+       x="40"
+       y="100"
+       width="120"
+       height="40"
+       stroke="#000000"
+       stroke-width="2"
+       fill="#ffffff"
+       id="rect2"
+       style="fill:#050000;fill-opacity:1;stroke:#ffffff" />
+    <text
+       x="94.654312"
+       y="135.58734"
+       font-size="25.8489px"
+       fill="#000000"
+       text-anchor="middle"
+       id="text2"
+       style="fill:#f8fdf7;fill-opacity:1;stroke-width:1.84635"
+       transform="scale(1.0546289,0.94820083)">Item</text>
+    <text
+       x="100"
+       y="170"
+       font-size="18px"
+       fill="#000000"
+       text-anchor="middle"
+       id="text3">Last Out</text>
+    <!-- &#1048;&#1079;&#1086;&#1075;&#1085;&#1091;&#1090;&#1072;&#1103; &#1089;&#1090;&#1088;&#1077;&#1083;&#1082;&#1072; &#1074;&#1093;&#1086;&#1076;&#1072; (PUSH) -->
+    <!-- &#1055;&#1091;&#1090;&#1100;: &#1086;&#1090; &#1087;&#1088;&#1072;&#1074;&#1086;&#1075;&#1086; &#1082;&#1088;&#1072;&#1103; &#1073;&#1083;&#1086;&#1082;&#1072; Item (160, 120) &#1082; &#1074;&#1077;&#1088;&#1093;&#1085;&#1077;&#1081; &#1103;&#1095;&#1077;&#1081;&#1082;&#1077; &#1089;&#1090;&#1077;&#1082;&#1072; (280, 185) -->
+    <path
+       d="m 160,120 q 60,0 110,60"
+       stroke="#000000"
+       stroke-width="2"
+       fill="none"
+       id="path3" />
+    <path
+       d="m 270,180 -10,-4 m 10,4 -2,-10"
+       stroke="#000000"
+       stroke-width="2"
+       fill="none"
+       id="path4" />
+    <!-- &#1062;&#1077;&#1085;&#1090;&#1088;&#1072;&#1083;&#1100;&#1085;&#1072;&#1103; &#1095;&#1072;&#1089;&#1090;&#1100;: &#1057;&#1090;&#1077;&#1082; -->
+    <g
+       id="stack-frames">
+      <!-- &#1071;&#1095;&#1077;&#1081;&#1082;&#1080; &#1089;&#1090;&#1077;&#1082;&#1072; -->
+      <!-- 1-&#1103; &#1103;&#1095;&#1077;&#1081;&#1082;&#1072; (&#1074;&#1077;&#1088;&#1093;&#1085;&#1103;&#1103;) -->
+      <rect
+         x="280"
+         y="170"
+         width="160"
+         height="50"
+         stroke="#000000"
+         stroke-width="2"
+         fill="#ffffff"
+         id="rect4"
+         style="fill:#000000;stroke:#ffffff" />
+      <text
+         x="360"
+         y="200"
+         font-size="14px"
+         fill="#000000"
+         text-anchor="middle"
+         id="text4">Item</text>
+      <!-- 2-&#1103; &#1103;&#1095;&#1077;&#1081;&#1082;&#1072; -->
+      <rect
+         x="280"
+         y="230"
+         width="160"
+         height="50"
+         stroke="#000000"
+         stroke-width="2"
+         fill="#ffffff"
+         id="rect5"
+         style="fill:#000000;stroke:#ffffff" />
+      <text
+         x="360"
+         y="260"
+         font-size="14px"
+         fill="#000000"
+         text-anchor="middle"
+         id="text5">Item</text>
+      <!-- 3-&#1103; &#1103;&#1095;&#1077;&#1081;&#1082;&#1072; (&#1089;&#1088;&#1077;&#1076;&#1085;&#1103;&#1103;) -->
+      <rect
+         x="280"
+         y="290"
+         width="160"
+         height="50"
+         stroke="#000000"
+         stroke-width="2"
+         fill="#ffffff"
+         id="rect6"
+         style="fill:#000000;stroke:#ffffff" />
+      <text
+         x="360"
+         y="320"
+         font-size="14px"
+         fill="#000000"
+         text-anchor="middle"
+         id="text6">............</text>
+      <!-- 4-&#1103; &#1103;&#1095;&#1077;&#1081;&#1082;&#1072; -->
+      <rect
+         x="280"
+         y="350"
+         width="160"
+         height="50"
+         stroke="#000000"
+         stroke-width="2"
+         fill="#ffffff"
+         id="rect7"
+         style="fill:#000000;stroke:#ffffff" />
+      <text
+         x="360"
+         y="380"
+         font-size="14px"
+         fill="#000000"
+         text-anchor="middle"
+         id="text7">Item</text>
+      <!-- 5-&#1103; &#1103;&#1095;&#1077;&#1081;&#1082;&#1072; (&#1085;&#1080;&#1078;&#1085;&#1103;&#1103;) -->
+      <rect
+         x="280"
+         y="410"
+         width="160"
+         height="50"
+         stroke="#000000"
+         stroke-width="2"
+         fill="#ffffff"
+         id="rect8"
+         style="fill:#000000;stroke:#ffffff" />
+      <text
+         x="360"
+         y="440"
+         font-size="14px"
+         fill="#000000"
+         text-anchor="middle"
+         id="text8">Item</text>
+    </g>
+    <!-- &#1048;&#1079;&#1086;&#1075;&#1085;&#1091;&#1090;&#1072;&#1103; &#1089;&#1090;&#1088;&#1077;&#1083;&#1082;&#1072; &#1074;&#1099;&#1093;&#1086;&#1076;&#1072; (POP) -->
+    <!-- &#1055;&#1091;&#1090;&#1100;: &#1086;&#1090; &#1074;&#1077;&#1088;&#1093;&#1085;&#1077;&#1081; &#1103;&#1095;&#1077;&#1081;&#1082;&#1080; &#1089;&#1090;&#1077;&#1082;&#1072; (440, 185) &#1082; &#1083;&#1077;&#1074;&#1086;&#1084;&#1091; &#1082;&#1088;&#1072;&#1102; &#1073;&#1083;&#1086;&#1082;&#1072; POP (560, 120) -->
+    <path
+       d="m 440,180 q 60,-60 120,-60"
+       stroke="#000000"
+       stroke-width="2"
+       fill="none"
+       id="path8" />
+    <path
+       d="m 560,120 -10,-4 m 10,4 -8,10"
+       stroke="#000000"
+       stroke-width="2"
+       fill="none"
+       id="path9" />
+    <!-- &#1055;&#1088;&#1072;&#1074;&#1072;&#1103; &#1095;&#1072;&#1089;&#1090;&#1100;: POP -->
+    <text
+       x="620"
+       y="80"
+       font-size="24px"
+       font-weight="bold"
+       fill="#000000"
+       text-anchor="middle"
+       id="text9">POP</text>
+    <rect
+       x="560"
+       y="100"
+       width="120"
+       height="40"
+       stroke="#000000"
+       stroke-width="2"
+       fill="#ffffff"
+       id="rect9"
+       style="fill:#000000;stroke:#ffffff" />
+    <text
+       x="594.92914"
+       y="134.8531"
+       font-size="25.8489px"
+       fill="#000000"
+       text-anchor="middle"
+       id="text2-9"
+       style="fill:#f8fdf7;fill-opacity:1;stroke-width:1.84635"
+       transform="scale(1.0546289,0.94820083)">Item</text>
+    <text
+       x="620"
+       y="170"
+       font-size="18px"
+       fill="#000000"
+       text-anchor="middle"
+       id="text11">First In</text>
+  </g>
+  <text
+     x="196.55209"
+     y="257.13022"
+     font-size="14.6751px"
+     fill="#000000"
+     text-anchor="middle"
+     id="text2-73"
+     style="fill:#f8fdf7;fill-opacity:1;stroke-width:1.04822"
+     transform="scale(1.0976926,0.91100188)">Item</text>
+  <text
+     x="197.00758"
+     y="224.19942"
+     font-size="14.6751px"
+     fill="#000000"
+     text-anchor="middle"
+     id="text2-77"
+     style="fill:#f8fdf7;fill-opacity:1;stroke-width:1.04822"
+     transform="scale(1.0976926,0.91100188)">Item</text>
+  <text
+     x="194.27457"
+     y="189.07326"
+     font-size="14.6751px"
+     fill="#000000"
+     text-anchor="middle"
+     id="text2-5"
+     style="fill:#f8fdf7;fill-opacity:1;stroke-width:1.04822"
+     transform="scale(1.0976926,0.91100188)">Item</text>
+  <text
+     x="193.81908"
+     y="152.84941"
+     font-size="14.6751px"
+     fill="#000000"
+     text-anchor="middle"
+     id="text2-1"
+     style="fill:#f8fdf7;fill-opacity:1;stroke-width:1.04822"
+     transform="scale(1.0976926,0.91100188)">Item</text>
+  <text
+     x="193.36359"
+     y="118.82095"
+     font-size="14.6751px"
+     fill="#000000"
+     text-anchor="middle"
+     id="text2-7"
+     style="fill:#f8fdf7;fill-opacity:1;stroke-width:1.04822"
+     transform="scale(1.0976926,0.91100188)">Item</text>
 </svg>
