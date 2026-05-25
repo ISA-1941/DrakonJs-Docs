@@ -37,9 +37,9 @@
      height="800"
      fill="#ffffff"
      id="rect1"
-     x="-10"
-     y="-13"
-     style="fill:#ffffff;fill-opacity:0.0459017" />
+     x="4"
+     y="-25"
+     style="fill:#0c080c;fill-opacity:0.03530113" />
   <!-- 2. Группировка с принудительными стилями: черный текст и черный контур -->
   <g
      id="linked-list-main"
@@ -47,7 +47,7 @@
      fill="#000000"
      stroke="#000000"
      stroke-width="0"
-     transform="translate(-3.00002,-2e-5)"
+     transform="translate(-1.00002,-2e-5)"
      style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984">
     <!-- Надпись Head и указатель -->
     <text
@@ -322,22 +322,22 @@
          fill="#ffffff"
          stroke-width="2"
          id="rect14"
-         style="fill:#ced1c1;fill-opacity:1;stroke:#252016;stroke-opacity:0.140984" />
+         style="fill:#000000;fill-opacity:1;stroke:#252016;stroke-opacity:0.140984" />
       <text
          x="251.25377"
          y="220.24844"
          id="text15-8"
          transform="scale(1.1338461,0.88195391)"
-         style="font-size:33.0493px;fill:#800000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:0.140984"><tspan
-           style="fill:#800000;stroke:#000003;stroke-opacity:0.140984"
+         style="font-size:33.0493px;fill:#fffef7;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:0.140984"><tspan
+           style="fill:#fffef7;fill-opacity:1;stroke:#000003;stroke-opacity:0.140984"
            id="tspan40">17</tspan></text>
       <text
          x="250.37183"
          y="131.80846"
          id="text15-5"
          transform="scale(1.1338461,0.88195391)"
-         style="font-size:33.0493px;fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:0.140984"><tspan
-           style="fill:#1a1a1a;stroke:#00000c;stroke-opacity:0.140984"
+         style="font-size:33.0493px;fill:#fffef7;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:0.140984"><tspan
+           style="fill:#fffef7;fill-opacity:1;stroke:#00000c;stroke-opacity:0.140984"
            id="tspan39">42</tspan></text>
       <g
          font-size="14px"
@@ -352,8 +352,8 @@
            y="39.684612"
            id="text15"
            transform="scale(1.1338461,0.88195393)"
-           style="font-size:33.0493px;fill:#14c8e1;fill-opacity:1;stroke:#000013;stroke-width:0;stroke-opacity:0.140984"><tspan
-             style="fill:#1a1a1a;stroke:#060006;stroke-opacity:0.140984"
+           style="font-size:33.0493px;fill:#fffef7;fill-opacity:1;stroke:#000013;stroke-width:0;stroke-opacity:0.140984"><tspan
+             style="fill:#fffef7;fill-opacity:1;stroke:#060006;stroke-opacity:0.140984"
              id="tspan38">11</tspan></text>
         <line
            x1="0"
@@ -470,24 +470,24 @@
          y="310.95615"
          id="text15-81"
          transform="scale(1.1338461,0.88195391)"
-         style="font-size:33.0493px;fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:0.140984"><tspan
-           style="fill:#1a1a1a;stroke:#000005;stroke-opacity:0.140984"
+         style="font-size:33.0493px;fill:#fffef7;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:0.140984"><tspan
+           style="fill:#fffef7;fill-opacity:1;stroke:#000005;stroke-opacity:0.140984"
            id="tspan41">23</tspan></text>
       <text
          x="254.78162"
          y="400.52997"
          id="text15-3"
          transform="scale(1.1338461,0.88195391)"
-         style="font-size:33.0493px;fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:0.140984"><tspan
-           style="fill:#1a1a1a;stroke:#000006;stroke-opacity:0.140984"
+         style="font-size:33.0493px;fill:#fffef7;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:0.140984"><tspan
+           style="fill:#fffef7;fill-opacity:1;stroke:#000006;stroke-opacity:0.140984"
            id="tspan42">19</tspan></text>
       <text
          x="250.37183"
          y="490.10382"
          id="text15-4"
          transform="scale(1.1338461,0.88195391)"
-         style="font-size:33.0493px;fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:0.140984"><tspan
-           style="fill:#1a1a1a;stroke:#fa0008;stroke-opacity:0.140984"
+         style="font-size:33.0493px;fill:#fffef7;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:0.140984"><tspan
+           style="fill:#fffef7;fill-opacity:1;stroke:#fa0008;stroke-opacity:0.140984"
            id="tspan43">33</tspan></text>
     </g>
   </g>
@@ -496,94 +496,97 @@
      y="657.30774"
      id="text14-3-1-90-0-61-2"
      transform="scale(1.0407347,0.96085967)"
-     style="font-size:19.0433px;stroke-width:0">14000000761340</text>
+     style="font-size:19.0433px;stroke-width:0;fill:#fcfefe;fill-opacity:0.68196702">14000000761340</text>
   <text
      x="540.79358"
      y="577.17114"
      id="text14-3-1-90-0-8-9"
      transform="scale(1.0407347,0.96085967)"
-     style="font-size:19.0433px;stroke-width:0">14000000761300</text>
+     style="font-size:19.0433px;stroke-width:0;fill:#fcfefe;fill-opacity:0.68196702">14000000761300</text>
   <text
      x="541.75439"
      y="493.91235"
      id="text14-3-1-90-0-7"
      transform="scale(1.0407347,0.96085967)"
-     style="font-size:19.0433px;stroke-width:0">14000000761260</text>
+     style="font-size:19.0433px;stroke-width:0;fill:#fcfefe;fill-opacity:0.68196702">14000000761260</text>
   <text
      x="540.79358"
      y="409.61285"
      id="text14-3-1-90-3"
      transform="scale(1.0407347,0.96085967)"
-     style="font-size:19.0433px;stroke-width:0">14000000761220</text>
+     style="font-size:19.0433px;stroke-width:0;fill:#fcfefe;fill-opacity:0.68196702">14000000761220</text>
   <text
      x="537.91101"
      y="326.3541"
      id="text14-3-1-7"
      transform="scale(1.0407347,0.96085967)"
-     style="font-size:19.0433px;stroke-width:0">14000000761180</text>
+     style="font-size:19.0433px;stroke-width:0;fill:#fcfefe;fill-opacity:0.68196702">14000000761180</text>
   <text
      x="535.02838"
      y="244.13605"
      id="text14-3-3-4"
      transform="scale(1.0407347,0.96085967)"
-     style="font-size:19.0433px;stroke-width:0">14000000761140</text>
+     style="font-size:19.0433px;stroke-width:0;fill:#fffef7;fill-opacity:1">14000000761140</text>
   <text
-     x="345.73901"
-     y="575.08966"
+     x="353.42587"
+     y="576.13037"
      id="text14-3-1-90-0-6"
      transform="scale(1.0407347,0.96085967)"
-     style="font-size:19.0433px;stroke-width:0">14000000761280</text>
+     style="font-size:19.0433px;fill:#fffffe;fill-opacity:0.681967;stroke-width:0">14000000761280</text>
   <text
-     x="346.69989"
-     y="492.87164"
+     x="354.38675"
+     y="493.91238"
      id="text14-3-1-90-8"
      transform="scale(1.0407347,0.96085967)"
-     style="font-size:19.0433px;stroke-width:0">14000000761240</text>
+     style="font-size:19.0433px;fill:#fffffe;fill-opacity:0.681967;stroke-width:0">14000000761240</text>
   <text
-     x="347.66074"
-     y="410.65359"
+     x="355.3476"
+     y="411.69434"
      id="text14-3-1-9"
      transform="scale(1.0407347,0.96085967)"
-     style="font-size:19.0433px;stroke-width:0">14000000761200</text>
+     style="font-size:19.0433px;fill:#fffffe;fill-opacity:0.681967;stroke-width:0">14000000761200</text>
   <text
-     x="344.77814"
-     y="199.38446"
+     x="352.465"
+     y="200.4252"
      id="text14-3-5"
      transform="scale(1.0407347,0.96085967)"
-     style="font-size:19.0433px;stroke-width:0">14000000761100</text>
+     style="font-size:19.0433px;fill:#fffffe;fill-opacity:0.681967;stroke-width:0">14000000761100</text>
   <text
-     x="343.81729"
-     y="242.0546"
+     x="351.50415"
+     y="243.09534"
      id="text14-3"
      transform="scale(1.0407347,0.96085967)"
-     style="font-size:19.0433px;stroke-width:0">14000000761120</text>
+     style="font-size:19.0433px;fill:#fffffe;fill-opacity:0.681967;stroke-width:0">14000000761120</text>
   <g
      id="svg37-6"
-     transform="translate(-10e-6,39.99997)">
+     transform="translate(7.99999,40.99997)"
+     style="fill:#fffffe;fill-opacity:0.681967">
     <text
        x="346.69989"
        y="241.01387"
        id="text14-3-3"
        transform="scale(1.0407347,0.96085967)"
-       style="font-size:19.0433px;stroke-width:0">14000000761140</text>
+       style="font-size:19.0433px;fill:#fffffe;fill-opacity:0.681967;stroke-width:0">14000000761140</text>
     <g
        id="svg37-9"
-       transform="translate(0,39)">
+       transform="translate(0,39)"
+       style="fill:#fffffe;fill-opacity:0.681967">
       <text
          x="346.69989"
          y="241.01387"
          id="text14-3-4"
          transform="scale(1.0407347,0.96085967)"
-         style="font-size:19.0433px;stroke-width:0">14000000761160</text>
+         style="font-size:19.0433px;fill:#fffffe;fill-opacity:0.681967;stroke-width:0">14000000761160</text>
       <g
          id="svg37-8"
-         transform="translate(28,40)">
+         transform="translate(28,40)"
+         style="fill:#fffffe;fill-opacity:0.681967">
         <text
            x="322.67841"
            y="245.1768"
            id="text14-3-1"
            transform="scale(1.0407347,0.96085967)"
-           style="font-size:19.0433px;stroke-width:0">14000000761180</text>
+           style="font-size:19.0433px;fill:#fffffe;fill-opacity:0.681967;stroke-width:0">14000000761180</text>
       </g>
     </g>
   </g>
@@ -625,42 +628,46 @@
      style="stroke-width:3.16222">Next</text>
   <g
      id="svg37-8-3"
-     transform="translate(24.99998,197.99998)">
+     transform="translate(32.99998,198.99998)"
+     style="fill:#fffffe;fill-opacity:0.681967">
     <text
        x="322.67841"
        y="245.1768"
        id="text14-3-1-90"
        transform="scale(1.0407347,0.96085967)"
-       style="font-size:19.0433px;stroke-width:0">14000000761220</text>
+       style="font-size:19.0433px;fill:#fffffe;fill-opacity:0.681967;stroke-width:0">14000000761220</text>
   </g>
   <g
      id="svg37-8-3-5"
-     transform="translate(26.99998,276.99998)">
+     transform="translate(34.99998,277.99998)"
+     style="fill:#fffffe;fill-opacity:0.681967">
     <text
        x="322.67841"
        y="245.1768"
        id="text14-3-1-90-0"
        transform="scale(1.0407347,0.96085967)"
-       style="font-size:19.0433px;stroke-width:0">14000000761260</text>
+       style="font-size:19.0433px;fill:#fffffe;fill-opacity:0.681967;stroke-width:0">14000000761260</text>
   </g>
   <g
      id="svg37-8-3-5-3"
-     transform="translate(27.99998,355.99998)">
+     transform="translate(35.99998,356.99998)"
+     style="fill:#fffffe;fill-opacity:0.681967">
     <text
        x="322.67841"
        y="245.1768"
        id="text14-3-1-90-0-8"
        transform="scale(1.0407347,0.96085967)"
-       style="font-size:19.0433px;stroke-width:0">14000000761300</text>
+       style="font-size:19.0433px;fill:#fffffe;fill-opacity:0.681967;stroke-width:0">14000000761300</text>
     <g
        id="svg37-8-3-5-5"
-       transform="translate(-2,38)">
+       transform="translate(-2,38)"
+       style="fill:#fffffe;fill-opacity:0.681967">
       <text
          x="322.67841"
          y="245.1768"
          id="text14-3-1-90-0-61"
          transform="scale(1.0407347,0.96085967)"
-         style="font-size:19.0433px;stroke-width:0">14000000761320</text>
+         style="font-size:19.0433px;fill:#fffffe;fill-opacity:0.681967;stroke-width:0">14000000761320</text>
     </g>
   </g>
   <text
