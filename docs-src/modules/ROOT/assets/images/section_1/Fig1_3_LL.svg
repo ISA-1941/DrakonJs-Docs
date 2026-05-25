@@ -1,111 +1,610 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800">
-<!-- 1. Жесткий белый фон. Если Antora делает фон черным, этот прямоугольник закроет его -->
-<rect width="1000" height="800" fill="#ffffff"/>
-
-<!-- 2. Группировка с принудительными стилями: черный текст и черный контур -->
-
-<g id="linked-list-main" font-family="'Times New Roman', Times, serif" fill="#000000" stroke="#000000" stroke-width="0">
-
-<!-- Надпись Head и указатель -->
-<text x="50" y="30" font-size="16" stroke="none">Head</text>
-<path d="M 60 40 L 60 75" stroke-width="2" fill="none"/>
-<path d="M 60 75 L 55 67 M 60 75 L 65 67" stroke-width="2" fill="none"/>
-
-<!-- Цепочка узлов -->
-<g id="nodes" stroke-width="2">
-  <!-- Узел 1 -->
-  <rect x="20" y="80" width="60" height="40" fill="#ffffff"/>
-  <text x="50" y="105" text-anchor="middle" font-size="14" stroke="none">11</text>
-  <rect x="80" y="80" width="80" height="40" fill="#ffffff"/>
-  <text x="120" y="105" text-anchor="middle" font-size="14" stroke="none">Next</text>
-  <path d="M 140 100 L 180 100" fill="none"/>
-  <path d="M 180 100 L 172 95 M 180 100 L 172 105" fill="none"/>
-
-  <!-- Узел 2 -->
-  <rect x="200" y="80" width="60" height="40" fill="#ffffff"/>
-  <text x="230" y="105" text-anchor="middle" font-size="14" stroke="none">42</text>
-  <rect x="260" y="80" width="80" height="40" fill="#ffffff"/>
-  <text x="300" y="105" text-anchor="middle" font-size="14" stroke="none">Next</text>
-  <path d="M 320 100 L 360 100" fill="none"/>
-  <path d="M 360 100 L 352 95 M 360 100 L 352 105" fill="none"/>
-
-  <!-- Узел 3 -->
-  <rect x="380" y="80" width="60" height="40" fill="#ffffff"/>
-  <text x="410" y="105" text-anchor="middle" font-size="14" stroke="none">17</text>
-  <rect x="440" y="80" width="80" height="40" fill="#ffffff"/>
-  <text x="480" y="105" text-anchor="middle" font-size="14" stroke="none">Next</text>
-  <path d="M 500 100 L 540 100" fill="none"/>
-  <path d="M 540 100 L 532 95 M 540 100 L 532 105" fill="none"/>
-
-  <!-- Узел 4 -->
-  <rect x="560" y="80" width="60" height="40" fill="#ffffff"/>
-  <text x="590" y="105" text-anchor="middle" font-size="14" stroke="none">23</text>
-  <rect x="620" y="80" width="80" height="40" fill="#ffffff"/>
-  <text x="660" y="105" text-anchor="middle" font-size="14" stroke="none">Next</text>
-  <path d="M 680 100 L 720 100" fill="none"/>
-  <path d="M 720 100 L 712 95 M 720 100 L 712 105" fill="none"/>
-
-  <!-- Узел 5 -->
-  <rect x="740" y="80" width="60" height="40" fill="#ffffff"/>
-  <text x="770" y="105" text-anchor="middle" font-size="14" stroke="none">19</text>
-  <rect x="800" y="80" width="80" height="40" fill="#ffffff"/>
-  <text x="840" y="105" text-anchor="middle" font-size="14" stroke="none">Next</text>
-  <path d="M 860 100 L 900 100" fill="none"/>
-  <path d="M 900 100 L 892 95 M 900 100 L 892 105" fill="none"/>
-
-  <!-- Узел 6 (Последний) -->
-  <rect x="920" y="80" width="60" height="40" fill="#ffffff"/>
-  <text x="950" y="105" text-anchor="middle" font-size="14" stroke="none">33</text>
-  <rect x="980" y="80" width="20" height="40" fill="#ffffff"/>
-  <line x1="980" y1="120" x2="1000" y2="80" />
-</g>
-
-<!-- Таблица распределения памяти -->
-<g id="memory" transform="translate(350, 160)">
-  <rect x="0" y="0" width="400" height="480" fill="#ffffff" stroke-width="2"/>
-  
-  <g font-size="14" stroke="none" text-anchor="middle">
-    <!-- Каждая строка данных -->
-    <text x="100" y="30">14000000761100</text> <text x="300" y="30">11</text>
-    <line x1="0" y1="45" x2="400" y2="45" stroke="#000000" stroke-width="1"/>
-    
-    <text x="100" y="70">14000000761120</text> <text x="300" y="70">14000000761140</text>
-    <line x1="0" y1="85" x2="400" y2="85" stroke="#000000" stroke-width="1"/>
-    
-    <text x="100" y="110">14000000761140</text> <text x="300" y="110">42</text>
-    <line x1="0" y1="125" x2="400" y2="125" stroke="#000000" stroke-width="1"/>
-    
-    <text x="100" y="150">14000000761160</text> <text x="300" y="150">14000000761180</text>
-    <line x1="0" y1="165" x2="400" y2="165" stroke="#000000" stroke-width="1"/>
-    
-    <text x="100" y="190">14000000761180</text> <text x="300" y="190">17</text>
-    <line x1="0" y1="205" x2="400" y2="205" stroke="#000000" stroke-width="1"/>
-    
-    <text x="100" y="230">14000000761200</text> <text x="300" y="230">14000000761220</text>
-    <line x1="0" y1="245" x2="400" y2="245" stroke="#000000" stroke-width="1"/>
-    
-    <text x="100" y="270">14000000761220</text> <text x="300" y="270">23</text>
-    <line x1="0" y1="285" x2="400" y2="285" stroke="#000000" stroke-width="1"/>
-    
-    <text x="100" y="310">14000000761240</text> <text x="300" y="310">14000000761260</text>
-    <line x1="0" y1="325" x2="400" y2="325" stroke="#000000" stroke-width="1"/>
-    
-    <text x="100" y="350">14000000761260</text> <text x="300" y="350">19</text>
-    <line x1="0" y1="365" x2="400" y2="365" stroke="#000000" stroke-width="1"/>
-    
-    <text x="100" y="390">14000000761280</text> <text x="300" y="390">14000000761280</text>
-    <line x1="0" y1="405" x2="400" y2="405" stroke="#000000" stroke-width="1"/>
-    
-    <text x="100" y="430">14000000761300</text> <text x="300" y="430">33</text>
-    <line x1="0" y1="445" x2="400" y2="445" stroke="#000000" stroke-width="1"/>
-    
-    <text x="100" y="470">14000000761320</text> <text x="300" y="470">14000000761320</text>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1001 800"
+   version="1.1"
+   id="svg37"
+   sodipodi:docname="Fig1_3_LL.svg"
+   width="1001"
+   height="800"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs37" />
+  <sodipodi:namedview
+     id="namedview37"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="1"
+     inkscape:cx="499.5"
+     inkscape:cy="400"
+     inkscape:window-width="1920"
+     inkscape:window-height="1152"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg37" />
+  <!-- 1. Жесткий белый фон. Если Antora делает фон черным, этот прямоугольник закроет его -->
+  <rect
+     width="1000"
+     height="800"
+     fill="#ffffff"
+     id="rect1"
+     x="1"
+     y="-6"
+     style="fill:#ffffff;fill-opacity:0.0459017" />
+  <!-- 2. Группировка с принудительными стилями: черный текст и черный контур -->
+  <g
+     id="linked-list-main"
+     font-family="'Times New Roman', Times, serif"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="0">
+    <!-- Надпись Head и указатель -->
+    <text
+       x="29.879438"
+       y="36.891296"
+       font-size="29.7947px"
+       stroke="none"
+       id="text1"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-opacity:1"
+       transform="scale(1.0885932,0.91861684)"><tspan
+         style="fill:#ffffff;fill-opacity:1;stroke:#fefefd;stroke-width:0;stroke-opacity:1"
+         id="tspan37">Head</tspan></text>
+    <path
+       d="M 60,40 V 75"
+       stroke-width="2"
+       fill="none"
+       id="path1"
+       style="stroke:#fcfdfe;stroke-opacity:1;stroke-width:3;stroke-dasharray:none" />
+    <path
+       d="m 60,75 -5,-8 m 5,8 5,-8"
+       stroke-width="2"
+       fill="none"
+       id="path2"
+       style="stroke:#fcfcfd;stroke-opacity:1" />
+    <!-- Цепочка узлов -->
+    <g
+       id="nodes"
+       stroke-width="2">
+      <!-- Узел 1 -->
+      <rect
+         x="20"
+         y="80"
+         width="60"
+         height="40"
+         fill="#ffffff"
+         id="rect2" />
+      <text
+         x="68.798805"
+         y="80.914825"
+         text-anchor="middle"
+         font-size="19.2522px"
+         stroke="none"
+         id="text2"
+         transform="scale(0.74313055,1.3456586)"
+         style="stroke-width:2.75032">11</text>
+      <rect
+         x="80"
+         y="80"
+         width="80"
+         height="40"
+         fill="#ffffff"
+         id="rect3" />
+      <text
+         x="106.60905"
+         y="118.24708"
+         text-anchor="middle"
+         font-size="22.1355px"
+         stroke="none"
+         id="text3"
+         transform="scale(1.1057203,0.90438785)"
+         style="stroke-width:3.16222">Next</text>
+      <path
+         d="m 140,100 h 40"
+         fill="none"
+         id="path3" />
+      <path
+         d="m 180,100 -8,-5 m 8,5 -8,5"
+         fill="none"
+         id="path4" />
+      <!-- Узел 2 -->
+      <rect
+         x="200"
+         y="80"
+         width="60"
+         height="40"
+         fill="#ffffff"
+         id="rect4" />
+      <text
+         x="308.25391"
+         y="81.657959"
+         text-anchor="middle"
+         font-size="19.2522px"
+         stroke="none"
+         id="text4"
+         transform="scale(0.74313055,1.3456586)"
+         style="stroke-width:2.75032">42</text>
+      <rect
+         x="260"
+         y="80"
+         width="80"
+         height="40"
+         fill="#ffffff"
+         id="rect5" />
+      <path
+         d="m 320,100 h 40"
+         fill="none"
+         id="path5" />
+      <path
+         d="m 360,100 -8,-5 m 8,5 -8,5"
+         fill="none"
+         id="path6" />
+      <!-- Узел 3 -->
+      <rect
+         x="380"
+         y="80"
+         width="60"
+         height="40"
+         fill="#ffffff"
+         id="rect6" />
+      <text
+         x="553.09167"
+         y="81.657959"
+         text-anchor="middle"
+         font-size="19.2522px"
+         stroke="none"
+         id="text6"
+         transform="scale(0.74313055,1.3456586)"
+         style="stroke-width:2.75032">17</text>
+      <rect
+         x="440"
+         y="80"
+         width="80"
+         height="40"
+         fill="#ffffff"
+         id="rect7" />
+      <path
+         d="m 500,100 h 40"
+         fill="none"
+         id="path7" />
+      <path
+         d="m 540,100 -8,-5 m 8,5 -8,5"
+         fill="none"
+         id="path8" />
+      <!-- Узел 4 -->
+      <rect
+         x="560"
+         y="80"
+         width="60"
+         height="40"
+         fill="#ffffff"
+         id="rect8" />
+      <text
+         x="796.58374"
+         y="80.914825"
+         text-anchor="middle"
+         font-size="19.2522px"
+         stroke="none"
+         id="text8"
+         transform="scale(0.74313056,1.3456586)"
+         style="stroke-width:2.75032">23</text>
+      <rect
+         x="620"
+         y="80"
+         width="80"
+         height="40"
+         fill="#ffffff"
+         id="rect9" />
+      <path
+         d="m 680,100 h 40"
+         fill="none"
+         id="path9" />
+      <path
+         d="m 720,100 -8,-5 m 8,5 -8,5"
+         fill="none"
+         id="path10" />
+      <!-- Узел 5 -->
+      <rect
+         x="740"
+         y="80"
+         width="60"
+         height="40"
+         fill="#ffffff"
+         id="rect10" />
+      <text
+         x="1037.3845"
+         y="80.1717"
+         text-anchor="middle"
+         font-size="19.2522px"
+         stroke="none"
+         id="text10"
+         transform="scale(0.74313055,1.3456586)"
+         style="stroke-width:2.75032">19</text>
+      <rect
+         x="800"
+         y="80"
+         width="80"
+         height="40"
+         fill="#ffffff"
+         id="rect11" />
+      <path
+         d="m 860,100 h 40"
+         fill="none"
+         id="path11" />
+      <path
+         d="m 900,100 -8,-5 m 8,5 -8,5"
+         fill="none"
+         id="path12" />
+      <!-- Узел 6 (Последний) -->
+      <rect
+         x="920"
+         y="80"
+         width="60"
+         height="40"
+         fill="#ffffff"
+         id="rect12" />
+      <text
+         x="1282.2223"
+         y="80.1717"
+         text-anchor="middle"
+         font-size="19.2522px"
+         stroke="none"
+         id="text12"
+         transform="scale(0.74313055,1.3456586)"
+         style="stroke-width:2.75032">33</text>
+      <rect
+         x="980"
+         y="80"
+         width="20"
+         height="40"
+         fill="#ffffff"
+         id="rect13" />
+      <line
+         x1="980"
+         y1="120"
+         x2="1000"
+         y2="80"
+         id="line13" />
+      <circle
+         id="path37"
+         style="fill:#ffffff;stroke:#fcfdfe"
+         cx="119"
+         cy="198"
+         r="1.5102882" />
+    </g>
+    <!-- Таблица распределения памяти -->
+    <g
+       id="memory"
+       transform="translate(350,160)">
+      <rect
+         x="0"
+         y="0"
+         width="400"
+         height="480"
+         fill="#ffffff"
+         stroke-width="2"
+         id="rect14" />
+      <text
+         x="251.25377"
+         y="220.24844"
+         id="text15-8"
+         transform="scale(1.1338461,0.88195391)"
+         style="font-size:33.0493px;stroke-width:0">17</text>
+      <text
+         x="250.37183"
+         y="131.80846"
+         id="text15-5"
+         transform="scale(1.1338461,0.88195391)"
+         style="font-size:33.0493px;stroke-width:0">42</text>
+      <g
+         font-size="14px"
+         stroke="none"
+         text-anchor="middle"
+         id="g37"
+         transform="translate(0,2)">
+        <!-- Каждая строка данных -->
+        <text
+           x="264.2981"
+           y="39.684612"
+           id="text15"
+           transform="scale(1.1338461,0.88195393)"
+           style="font-size:33.0493px;stroke-width:0">11</text>
+        <line
+           x1="0"
+           y1="45"
+           x2="400"
+           y2="45"
+           stroke="#000000"
+           stroke-width="1"
+           id="line15" />
+        <line
+           x1="0"
+           y1="85"
+           x2="400"
+           y2="85"
+           stroke="#000000"
+           stroke-width="1"
+           id="line17" />
+        <line
+           x1="0"
+           y1="125"
+           x2="400"
+           y2="125"
+           stroke="#000000"
+           stroke-width="1"
+           id="line19" />
+        <line
+           x1="0"
+           y1="165"
+           x2="400"
+           y2="165"
+           stroke="#000000"
+           stroke-width="1"
+           id="line21" />
+        <line
+           x1="0"
+           y1="205"
+           x2="400"
+           y2="205"
+           stroke="#000000"
+           stroke-width="1"
+           id="line23" />
+        <line
+           x1="0"
+           y1="245"
+           x2="400"
+           y2="245"
+           stroke="#000000"
+           stroke-width="1"
+           id="line25" />
+        <line
+           x1="0"
+           y1="285"
+           x2="400"
+           y2="285"
+           stroke="#000000"
+           stroke-width="1"
+           id="line27" />
+        <line
+           x1="0"
+           y1="325"
+           x2="400"
+           y2="325"
+           stroke="#000000"
+           stroke-width="1"
+           id="line29" />
+        <line
+           x1="0"
+           y1="365"
+           x2="400"
+           y2="365"
+           stroke="#000000"
+           stroke-width="1"
+           id="line31" />
+        <line
+           x1="0"
+           y1="405"
+           x2="400"
+           y2="405"
+           stroke="#000000"
+           stroke-width="1"
+           id="line33" />
+        <line
+           x1="0"
+           y1="445"
+           x2="400"
+           y2="445"
+           stroke="#000000"
+           stroke-width="1"
+           id="line35" />
+      </g>
+      <!-- Вертикальная линия -->
+      <line
+         x1="200"
+         y1="0"
+         x2="200"
+         y2="480"
+         stroke="#000000"
+         stroke-width="1.5"
+         id="line37" />
+      <text
+         x="253.01768"
+         y="310.95615"
+         id="text15-81"
+         transform="scale(1.1338461,0.88195391)"
+         style="font-size:33.0493px;stroke-width:0">23</text>
+      <text
+         x="254.78162"
+         y="400.52997"
+         id="text15-3"
+         transform="scale(1.1338461,0.88195391)"
+         style="font-size:33.0493px;stroke-width:0">19</text>
+      <text
+         x="250.37183"
+         y="490.10382"
+         id="text15-4"
+         transform="scale(1.1338461,0.88195391)"
+         style="font-size:33.0493px;stroke-width:0">33</text>
+    </g>
   </g>
-  
-  <!-- Вертикальная линия -->
-  <line x1="200" y1="0" x2="200" y2="480" stroke="#000000" stroke-width="1.5"/>
-</g>
-
-
-</g>
+  <text
+     x="543.67615"
+     y="656.26703"
+     id="text14-3-1-90-0-61-2"
+     transform="scale(1.0407347,0.96085967)"
+     style="font-size:19.0433px;stroke-width:0">14000000761340</text>
+  <text
+     x="543.67615"
+     y="576.13043"
+     id="text14-3-1-90-0-8-9"
+     transform="scale(1.0407347,0.96085967)"
+     style="font-size:19.0433px;stroke-width:0">14000000761300</text>
+  <text
+     x="544.63696"
+     y="492.87164"
+     id="text14-3-1-90-0-7"
+     transform="scale(1.0407347,0.96085967)"
+     style="font-size:19.0433px;stroke-width:0">14000000761260</text>
+  <text
+     x="543.67615"
+     y="408.57214"
+     id="text14-3-1-90-3"
+     transform="scale(1.0407347,0.96085967)"
+     style="font-size:19.0433px;stroke-width:0">14000000761220</text>
+  <text
+     x="540.79358"
+     y="325.31339"
+     id="text14-3-1-7"
+     transform="scale(1.0407347,0.96085967)"
+     style="font-size:19.0433px;stroke-width:0">14000000761180</text>
+  <text
+     x="537.91095"
+     y="243.09534"
+     id="text14-3-3-4"
+     transform="scale(1.0407347,0.96085967)"
+     style="font-size:19.0433px;stroke-width:0">14000000761140</text>
+  <text
+     x="348.62161"
+     y="574.04895"
+     id="text14-3-1-90-0-6"
+     transform="scale(1.0407347,0.96085967)"
+     style="font-size:19.0433px;stroke-width:0">14000000761280</text>
+  <text
+     x="349.58249"
+     y="491.83093"
+     id="text14-3-1-90-8"
+     transform="scale(1.0407347,0.96085967)"
+     style="font-size:19.0433px;stroke-width:0">14000000761240</text>
+  <text
+     x="350.54333"
+     y="409.61288"
+     id="text14-3-1-9"
+     transform="scale(1.0407347,0.96085967)"
+     style="font-size:19.0433px;stroke-width:0">14000000761200</text>
+  <text
+     x="347.66074"
+     y="198.34373"
+     id="text14-3-5"
+     transform="scale(1.0407347,0.96085967)"
+     style="font-size:19.0433px;stroke-width:0">14000000761100</text>
+  <text
+     x="346.69989"
+     y="241.01387"
+     id="text14-3"
+     transform="scale(1.0407347,0.96085967)"
+     style="font-size:19.0433px;stroke-width:0">14000000761120</text>
+  <g
+     id="svg37-6"
+     transform="translate(3.00001,38.99999)">
+    <text
+       x="346.69989"
+       y="241.01387"
+       id="text14-3-3"
+       transform="scale(1.0407347,0.96085967)"
+       style="font-size:19.0433px;stroke-width:0">14000000761140</text>
+    <g
+       id="svg37-9"
+       transform="translate(0,39)">
+      <text
+         x="346.69989"
+         y="241.01387"
+         id="text14-3-4"
+         transform="scale(1.0407347,0.96085967)"
+         style="font-size:19.0433px;stroke-width:0">14000000761160</text>
+      <g
+         id="svg37-8"
+         transform="translate(28,40)">
+        <text
+           x="322.67841"
+           y="245.1768"
+           id="text14-3-1"
+           transform="scale(1.0407347,0.96085967)"
+           style="font-size:19.0433px;stroke-width:0">14000000761180</text>
+      </g>
+    </g>
+  </g>
+  <text
+     x="752.54742"
+     y="116.75741"
+     text-anchor="middle"
+     font-size="22.1355px"
+     stroke="none"
+     id="text3-77"
+     transform="scale(1.1057203,0.90438785)"
+     style="stroke-width:3.16222">Next</text>
+  <text
+     x="587.04449"
+     y="117.86313"
+     text-anchor="middle"
+     font-size="22.1355px"
+     stroke="none"
+     id="text3-5"
+     transform="scale(1.1057203,0.90438785)"
+     style="stroke-width:3.16222">Next</text>
+  <text
+     x="426.06342"
+     y="118.96886"
+     text-anchor="middle"
+     font-size="22.1355px"
+     stroke="none"
+     id="text3-1"
+     transform="scale(1.1057203,0.90438785)"
+     style="stroke-width:3.16222">Next</text>
+  <text
+     x="265.0824"
+     y="117.86314"
+     text-anchor="middle"
+     font-size="22.1355px"
+     stroke="none"
+     id="text3-7"
+     transform="scale(1.1057203,0.90438785)"
+     style="stroke-width:3.16222">Next</text>
+  <g
+     id="svg37-8-3"
+     transform="translate(28,197)">
+    <text
+       x="322.67841"
+       y="245.1768"
+       id="text14-3-1-90"
+       transform="scale(1.0407347,0.96085967)"
+       style="font-size:19.0433px;stroke-width:0">14000000761220</text>
+  </g>
+  <g
+     id="svg37-8-3-5"
+     transform="translate(30,276)">
+    <text
+       x="322.67841"
+       y="245.1768"
+       id="text14-3-1-90-0"
+       transform="scale(1.0407347,0.96085967)"
+       style="font-size:19.0433px;stroke-width:0">14000000761260</text>
+  </g>
+  <g
+     id="svg37-8-3-5-3"
+     transform="translate(31,355)">
+    <text
+       x="322.67841"
+       y="245.1768"
+       id="text14-3-1-90-0-8"
+       transform="scale(1.0407347,0.96085967)"
+       style="font-size:19.0433px;stroke-width:0">14000000761300</text>
+    <g
+       id="svg37-8-3-5-5"
+       transform="translate(-2,38)">
+      <text
+         x="322.67841"
+         y="245.1768"
+         id="text14-3-1-90-0-61"
+         transform="scale(1.0407347,0.96085967)"
+         style="font-size:19.0433px;stroke-width:0">14000000761320</text>
+    </g>
+  </g>
 </svg>
