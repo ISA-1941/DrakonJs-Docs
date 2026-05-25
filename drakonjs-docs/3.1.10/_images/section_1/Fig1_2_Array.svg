@@ -18,9 +18,9 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
-     inkscape:zoom="2.53"
-     inkscape:cx="277.66798"
-     inkscape:cy="124.90119"
+     inkscape:zoom="2"
+     inkscape:cx="275.25"
+     inkscape:cy="124"
      inkscape:window-width="1920"
      inkscape:window-height="1152"
      inkscape:window-x="0"
@@ -38,6 +38,16 @@
      fill="#ffffff"
      id="rect1"
      style="fill:#24358a;fill-opacity:0.07380568" />
+  <text
+     x="640.68164"
+     y="67.748047"
+     id="text18-0"
+     style="fill:#fffcff;fill-opacity:1;stroke:#000000">17</text>
+  <text
+     x="652.08594"
+     y="142.90625"
+     id="text21-4"
+     style="fill:#fffcff;fill-opacity:1;stroke:#000000">33</text>
   <g
      id="array-illustration"
      font-family="'Times New Roman', Times, serif"
@@ -45,7 +55,7 @@
      stroke="#000000"
      stroke-width="0"
      style="fill:#fffcff;fill-opacity:1;stroke:#ffffff"
-     transform="translate(2.3715415,-0.0237154)">
+     transform="translate(2.8715415,-2.0237154)">
     <!-- &#1047;&#1072;&#1075;&#1086;&#1083;&#1086;&#1074;&#1086;&#1082; &#1089;&#1093;&#1077;&#1084;&#1099; -->
     <text
        x="400"
@@ -119,6 +129,14 @@
          height="60"
          id="rect9"
          style="fill:#fc9c8d;fill-opacity:1;stroke:#000000" />
+      <text
+         x="95.709183"
+         y="153.2487"
+         id="text20-5-5"
+         style="font-size:20.3958px;fill:#fffcff;fill-opacity:1;stroke:#000000;stroke-width:1.69965"
+         transform="scale(0.98740038,1.0127604)"
+         inkscape:transform-center-x="2.2869413"
+         inkscape:transform-center-y="1.8585536" />
       <rect
          x="139.60474"
          y="118.81423"
@@ -127,15 +145,15 @@
          id="rect10"
          style="fill:#fc9c8d;fill-opacity:1;stroke:#000000" />
       <rect
-         x="220.79051"
-         y="118.81423"
+         x="218.79051"
+         y="118.81424"
          width="80"
          height="60"
          id="rect11"
          style="fill:#fc9c8d;fill-opacity:1;stroke:#000000" />
       <rect
-         x="300.39526"
-         y="119.20949"
+         x="299.33795"
+         y="119.39923"
          width="80"
          height="60"
          id="rect12"
@@ -177,40 +195,35 @@
          id="g23"
          style="fill:#fffcff;fill-opacity:1">
         <text
-           x="100"
-           y="155"
+           x="107"
+           y="85"
            id="text16"
            style="fill:#fffcff;fill-opacity:1">11</text>
         <text
-           x="180"
-           y="155"
+           x="182"
+           y="84"
            id="text17"
            style="fill:#fffcff;fill-opacity:1">42</text>
         <text
-           x="260"
-           y="155"
+           x="263"
+           y="85"
            id="text18"
            style="fill:#fffcff;fill-opacity:1">17</text>
         <text
-           x="340"
-           y="155"
-           id="text19"
-           style="fill:#150709;fill-opacity:0.0383428">23</text>
-        <text
-           x="420"
-           y="155"
+           x="418.5"
+           y="88"
            id="text20"
            style="fill:#fffcff;fill-opacity:1">19</text>
         <text
-           x="500"
-           y="155"
+           x="501"
+           y="86.5"
            id="text21"
            style="fill:#fffcff;fill-opacity:1">33</text>
         <text
-           x="580"
-           y="155"
+           x="576"
+           y="79"
            id="text22"
-           style="fill:#fffcff;fill-opacity:1">08</text>
+           style="fill:#fffcff;fill-opacity:1">12</text>
         <text
            x="660"
            y="155"
@@ -278,4 +291,108 @@
        id="text32"
        style="fill:#fffcff;fill-opacity:1">Each element is accessed by an index and takes 4 bytes in memory.</text>
   </g>
+  <text
+     x="172.81471"
+     y="155.91858"
+     id="text20-5-0-9"
+     style="font-size:20.3958px;fill:#fffcff;fill-opacity:1;stroke:#000000;stroke-width:1.69965"
+     transform="scale(0.98740038,1.0127604)"
+     inkscape:transform-center-x="2.2869413"
+     inkscape:transform-center-y="1.8585536">42</text>
+  <text
+     x="255.5952"
+     y="154.21268"
+     id="text20-5-0"
+     style="font-size:20.3958px;fill:#fffcff;fill-opacity:1;stroke:#000000;stroke-width:1.69965"
+     transform="scale(0.98740038,1.0127604)"
+     inkscape:transform-center-x="2.2869413"
+     inkscape:transform-center-y="1.8585536">17</text>
+  <text
+     x="499.42993"
+     y="153.94379"
+     id="text20-5-7-1"
+     style="font-size:20.3958px;fill:#fffcff;fill-opacity:1;stroke:#000000;stroke-width:1.69965"
+     transform="scale(0.98740038,1.0127604)"
+     inkscape:transform-center-x="2.2869413"
+     inkscape:transform-center-y="1.8585536">33</text>
+  <text
+     x="658.43329"
+     y="150.98158"
+     id="text20-5-7-8"
+     style="font-size:20.3958px;fill:#fffcff;fill-opacity:1;stroke:#000000;stroke-width:1.69965"
+     transform="scale(0.98740038,1.0127604)"
+     inkscape:transform-center-x="2.2869413"
+     inkscape:transform-center-y="1.8585536">14</text>
+  <text
+     x="91.021652"
+     y="156.18748"
+     id="text20-5-7"
+     style="font-size:20.3958px;fill:#fffcff;fill-opacity:1;stroke:#000000;stroke-width:1.69965"
+     transform="scale(0.98740038,1.0127604)"
+     inkscape:transform-center-x="2.2869413"
+     inkscape:transform-center-y="1.8585536">11</text>
+  <text
+     x="334.74716"
+     y="154.46286"
+     id="text20-5"
+     style="font-size:20.3958px;fill:#fffcff;fill-opacity:1;stroke:#000000;stroke-width:1.69965"
+     transform="scale(0.98740039,1.0127604)"
+     inkscape:transform-center-x="2.2869413"
+     inkscape:transform-center-y="1.8585536">23</text>
+  <text
+     x="311.64853"
+     y="160.90765"
+     id="text20-4"
+     style="font-size:19.8026px;white-space:pre;inline-size:4.82488;fill:#000300;fill-opacity:1;stroke:#ffffff;stroke-width:1.65021"
+     transform="scale(1.0382412,0.96316731)"
+     xml:space="preserve"><tspan
+       x="311.64853"
+       y="160.90765"
+       id="tspan2"><tspan
+         dx="0 12.599018"
+         id="tspan1">23</tspan></tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-weight:bold;font-size:20.7874px;font-family:Monospace;-inkscape-font-specification:'Monospace, Bold';writing-mode:lr-tb;direction:ltr;fill:#fafbf1;fill-opacity:0.958006;stroke:#000000;stroke-width:2.2;stroke-linejoin:bevel;stroke-dasharray:none"
+     x="652"
+     y="140.5"
+     id="text33"><tspan
+       sodipodi:role="line"
+       id="tspan33"
+       x="652"
+       y="140.5" /></text>
+  <g
+     id="svg32-6"
+     transform="translate(472.26249,-7.27233)">
+    <text
+       x="100.1365"
+       y="159.14969"
+       id="text20-5-7-88"
+       style="font-size:20.3958px;fill:#fffcff;fill-opacity:1;stroke:#000000;stroke-width:1.69965"
+       transform="scale(0.98740038,1.0127604)"
+       inkscape:transform-center-x="2.2869413"
+       inkscape:transform-center-y="1.8585536">12</text>
+  </g>
+  <g
+     id="svg32-4"
+     transform="translate(320.26249,2.22767)">
+    <text
+       x="92.540794"
+       y="152.23788"
+       id="text20-5-7-9"
+       style="font-size:20.3958px;fill:#fffcff;fill-opacity:1;stroke:#000000;stroke-width:1.69965"
+       transform="scale(0.98740038,1.0127604)"
+       inkscape:transform-center-x="2.2869413"
+       inkscape:transform-center-y="1.8585536">19</text>
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-weight:bold;font-size:20.7874px;font-family:Monospace;-inkscape-font-specification:'Monospace, Bold';writing-mode:lr-tb;direction:ltr;fill:#fafbf1;fill-opacity:0.958006;stroke:#000000;stroke-width:2.2;stroke-linejoin:bevel;stroke-dasharray:none"
+     x="173"
+     y="139.5"
+     id="text36"><tspan
+       sodipodi:role="line"
+       id="tspan36"
+       x="173"
+       y="139.5" /></text>
 </svg>
