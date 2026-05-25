@@ -308,16 +308,6 @@
          cx="119"
          cy="198"
          r="1.5102882" />
-      <text
-         xml:space="preserve"
-         style="font-weight:bold;font-size:20.7874px;font-family:Monospace;-inkscape-font-specification:'Monospace, Bold';writing-mode:lr-tb;direction:ltr;fill:#1a1a1a;fill-opacity:1;stroke:#00000c;stroke-width:3.15;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:0.140984"
-         x="47.000019"
-         y="252.00002"
-         id="text45"><tspan
-           sodipodi:role="line"
-           id="tspan45"
-           x="47.000019"
-           y="252.00002">42</tspan></text>
     </g>
     <!-- Таблица распределения памяти -->
     <g
