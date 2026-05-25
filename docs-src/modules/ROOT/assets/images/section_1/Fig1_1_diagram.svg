@@ -25,8 +25,8 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
      inkscape:zoom="2.8284271"
-     inkscape:cx="348.07331"
-     inkscape:cy="280.36784"
+     inkscape:cx="889.01"
+     inkscape:cy="347.54298"
      inkscape:window-width="1920"
      inkscape:window-height="1152"
      inkscape:window-x="0"
@@ -64,7 +64,7 @@
            id="rect1"
            x="-640.5"
            y="-174.5"
-           style="fill:#ffffff;fill-opacity:0.0511559;stroke:#000000;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1" />
+           style="fill:#000000;fill-opacity:0.0511559;stroke:#ffffff;stroke-width:1.001;stroke-dasharray:none;stroke-opacity:1" />
         <style
            id="style1">
     .text-base { font-family: 'Arial', sans-serif; text-anchor: middle; }
@@ -150,17 +150,17 @@
            d="m 35.5,235.5 v 30 h -50 v 30"
            class="ortho-line"
            id="path15"
-           style="stroke:#000000;stroke-width:3;stroke-dasharray:none;stroke-opacity:1" />
+           style="stroke:#ffffff;stroke-width:3;stroke-dasharray:none;stroke-opacity:1" />
         <path
            d="m 35.5,265.5 h 50 v 30"
            class="ortho-line"
            id="path16"
-           style="stroke:#000000;stroke-width:3;stroke-dasharray:none;stroke-opacity:1" />
+           style="stroke:#ffffff;stroke-width:3;stroke-dasharray:none;stroke-opacity:1" />
         <path
            d="M 363.18669,235.81331 V 265.5 H 223.81331 v 29.68669"
            class="ortho-line"
            id="path17"
-           style="stroke:#000000;stroke-width:2.62863;stroke-dasharray:none;stroke-opacity:1" />
+           style="stroke:#ffffff;stroke-width:2.62863;stroke-dasharray:none;stroke-opacity:1" />
         <path
            d="m 363.5,265.5 v 0 30"
            class="ortho-line"
@@ -170,7 +170,7 @@
            d="m 363.5,265.5 h 80 v 30"
            class="ortho-line"
            id="path19"
-           style="stroke:#000000;stroke-width:3;stroke-dasharray:none;stroke-opacity:1" />
+           style="stroke:#ffffff;stroke-width:3;stroke-dasharray:none;stroke-opacity:1" />
         <rect
            x="-65.5"
            y="-144.5"
