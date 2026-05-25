@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   viewBox="0 0 1001 800"
+   viewBox="0 0 173.03905 13.839603"
    version="1.1"
    id="svg37"
    sodipodi:docname="Fig1_3_LL.svg"
-   width="1001"
-   height="800"
+   width="173.03905"
+   height="13.839603"
    inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -23,8 +23,8 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
      inkscape:zoom="1"
-     inkscape:cx="499.5"
-     inkscape:cy="400"
+     inkscape:cx="-68.5"
+     inkscape:cy="-124"
      inkscape:window-width="1920"
      inkscape:window-height="1152"
      inkscape:window-x="0"
@@ -37,8 +37,8 @@
      height="800"
      fill="#ffffff"
      id="rect1"
-     x="1"
-     y="-6"
+     x="-565"
+     y="-618"
      style="fill:#ffffff;fill-opacity:0.0459017" />
   <!-- 2. Группировка с принудительными стилями: черный текст и черный контур -->
   <g
@@ -46,7 +46,9 @@
      font-family="'Times New Roman', Times, serif"
      fill="#000000"
      stroke="#000000"
-     stroke-width="0">
+     stroke-width="0"
+     transform="translate(-568.00002,-617.00002)"
+     style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1">
     <!-- Надпись Head и указатель -->
     <text
        x="29.879438"
@@ -54,26 +56,27 @@
        font-size="29.7947px"
        stroke="none"
        id="text1"
-       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-opacity:1"
+       style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:0.14098361"
        transform="scale(1.0885932,0.91861684)"><tspan
-         style="fill:#ffffff;fill-opacity:1;stroke:#fefefd;stroke-width:0;stroke-opacity:1"
+         style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:0.14098361"
          id="tspan37">Head</tspan></text>
     <path
        d="M 60,40 V 75"
        stroke-width="2"
        fill="none"
        id="path1"
-       style="stroke:#fcfdfe;stroke-opacity:1;stroke-width:3;stroke-dasharray:none" />
+       style="stroke:#000000;stroke-width:3;stroke-dasharray:none;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
     <path
        d="m 60,75 -5,-8 m 5,8 5,-8"
        stroke-width="2"
        fill="none"
        id="path2"
-       style="stroke:#fcfcfd;stroke-opacity:1" />
+       style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
     <!-- Цепочка узлов -->
     <g
        id="nodes"
-       stroke-width="2">
+       stroke-width="2"
+       style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1">
       <!-- Узел 1 -->
       <rect
          x="20"
@@ -81,7 +84,8 @@
          width="60"
          height="40"
          fill="#ffffff"
-         id="rect2" />
+         id="rect2"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
       <text
          x="68.798805"
          y="80.914825"
@@ -90,31 +94,27 @@
          stroke="none"
          id="text2"
          transform="scale(0.74313055,1.3456586)"
-         style="stroke-width:2.75032">11</text>
+         style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-width:3.14999998;stroke-opacity:0.140984;stroke-dasharray:none"><tspan
+           style="fill:#1a1a1a;stroke-width:3.14999998;stroke-dasharray:none"
+           id="tspan44">11</tspan></text>
       <rect
          x="80"
          y="80"
          width="80"
          height="40"
          fill="#ffffff"
-         id="rect3" />
-      <text
-         x="106.60905"
-         y="118.24708"
-         text-anchor="middle"
-         font-size="22.1355px"
-         stroke="none"
-         id="text3"
-         transform="scale(1.1057203,0.90438785)"
-         style="stroke-width:3.16222">Next</text>
+         id="rect3"
+         style="stroke:#c90000;stroke-opacity:0.14098361;fill:#14c88a;fill-opacity:1" />
       <path
          d="m 140,100 h 40"
          fill="none"
-         id="path3" />
+         id="path3"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
       <path
          d="m 180,100 -8,-5 m 8,5 -8,5"
          fill="none"
-         id="path4" />
+         id="path4"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
       <!-- Узел 2 -->
       <rect
          x="200"
@@ -122,7 +122,8 @@
          width="60"
          height="40"
          fill="#ffffff"
-         id="rect4" />
+         id="rect4"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
       <text
          x="308.25391"
          y="81.657959"
@@ -131,22 +132,27 @@
          stroke="none"
          id="text4"
          transform="scale(0.74313055,1.3456586)"
-         style="stroke-width:2.75032">42</text>
+         style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-width:2.75032;stroke-opacity:0.140984"><tspan
+           style="fill:#28220b"
+           id="tspan46">42</tspan></text>
       <rect
          x="260"
          y="80"
          width="80"
          height="40"
          fill="#ffffff"
-         id="rect5" />
+         id="rect5"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8a8;fill-opacity:1" />
       <path
          d="m 320,100 h 40"
          fill="none"
-         id="path5" />
+         id="path5"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
       <path
          d="m 360,100 -8,-5 m 8,5 -8,5"
          fill="none"
-         id="path6" />
+         id="path6"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
       <!-- Узел 3 -->
       <rect
          x="380"
@@ -154,7 +160,8 @@
          width="60"
          height="40"
          fill="#ffffff"
-         id="rect6" />
+         id="rect6"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
       <text
          x="553.09167"
          y="81.657959"
@@ -163,22 +170,27 @@
          stroke="none"
          id="text6"
          transform="scale(0.74313055,1.3456586)"
-         style="stroke-width:2.75032">17</text>
+         style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-width:2.75032;stroke-opacity:0.140984"><tspan
+           style="fill:#28220b"
+           id="tspan47">17</tspan></text>
       <rect
          x="440"
          y="80"
          width="80"
          height="40"
          fill="#ffffff"
-         id="rect7" />
+         id="rect7"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8a6;fill-opacity:1" />
       <path
          d="m 500,100 h 40"
          fill="none"
-         id="path7" />
+         id="path7"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
       <path
          d="m 540,100 -8,-5 m 8,5 -8,5"
          fill="none"
-         id="path8" />
+         id="path8"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
       <!-- Узел 4 -->
       <rect
          x="560"
@@ -186,7 +198,8 @@
          width="60"
          height="40"
          fill="#ffffff"
-         id="rect8" />
+         id="rect8"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
       <text
          x="796.58374"
          y="80.914825"
@@ -195,22 +208,27 @@
          stroke="none"
          id="text8"
          transform="scale(0.74313056,1.3456586)"
-         style="stroke-width:2.75032">23</text>
+         style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-width:2.75032;stroke-opacity:0.140984"><tspan
+           style="fill:#28220b"
+           id="tspan48">23</tspan></text>
       <rect
          x="620"
          y="80"
          width="80"
          height="40"
          fill="#ffffff"
-         id="rect9" />
+         id="rect9"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8a4;fill-opacity:1" />
       <path
          d="m 680,100 h 40"
          fill="none"
-         id="path9" />
+         id="path9"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
       <path
          d="m 720,100 -8,-5 m 8,5 -8,5"
          fill="none"
-         id="path10" />
+         id="path10"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
       <!-- Узел 5 -->
       <rect
          x="740"
@@ -218,7 +236,8 @@
          width="60"
          height="40"
          fill="#ffffff"
-         id="rect10" />
+         id="rect10"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
       <text
          x="1037.3845"
          y="80.1717"
@@ -227,22 +246,27 @@
          stroke="none"
          id="text10"
          transform="scale(0.74313055,1.3456586)"
-         style="stroke-width:2.75032">19</text>
+         style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-width:2.75032;stroke-opacity:0.140984"><tspan
+           style="fill:#28220b"
+           id="tspan49">19</tspan></text>
       <rect
          x="800"
          y="80"
          width="80"
          height="40"
          fill="#ffffff"
-         id="rect11" />
+         id="rect11"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c89f;fill-opacity:1" />
       <path
          d="m 860,100 h 40"
          fill="none"
-         id="path11" />
+         id="path11"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
       <path
          d="m 900,100 -8,-5 m 8,5 -8,5"
          fill="none"
-         id="path12" />
+         id="path12"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
       <!-- Узел 6 (Последний) -->
       <rect
          x="920"
@@ -250,7 +274,8 @@
          width="60"
          height="40"
          fill="#ffffff"
-         id="rect12" />
+         id="rect12"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
       <text
          x="1282.2223"
          y="80.1717"
@@ -259,31 +284,46 @@
          stroke="none"
          id="text12"
          transform="scale(0.74313055,1.3456586)"
-         style="stroke-width:2.75032">33</text>
+         style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-width:2.75032;stroke-opacity:0.140984"><tspan
+           style="fill:#28220b"
+           id="tspan50">33</tspan></text>
       <rect
          x="980"
          y="80"
          width="20"
          height="40"
          fill="#ffffff"
-         id="rect13" />
+         id="rect13"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
       <line
          x1="980"
          y1="120"
          x2="1000"
          y2="80"
-         id="line13" />
+         id="line13"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
       <circle
          id="path37"
-         style="fill:#ffffff;stroke:#fcfdfe"
+         style="fill:#14c8e1;stroke:#000000;stroke-opacity:0.14098361;fill-opacity:1"
          cx="119"
          cy="198"
          r="1.5102882" />
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:20.7874px;font-family:Monospace;-inkscape-font-specification:'Monospace, Bold';writing-mode:lr-tb;direction:ltr;fill:#1a1a1a;fill-opacity:1;stroke:#00000c;stroke-width:3.15;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:0.140984"
+         x="47.000019"
+         y="252.00002"
+         id="text45"><tspan
+           sodipodi:role="line"
+           id="tspan45"
+           x="47.000019"
+           y="252.00002">42</tspan></text>
     </g>
     <!-- Таблица распределения памяти -->
     <g
        id="memory"
-       transform="translate(350,160)">
+       transform="translate(350,160)"
+       style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1">
       <rect
          x="0"
          y="0"
@@ -291,32 +331,40 @@
          height="480"
          fill="#ffffff"
          stroke-width="2"
-         id="rect14" />
+         id="rect14"
+         style="fill:#ced1c1;fill-opacity:1;stroke:#252016;stroke-opacity:0.14098361" />
       <text
          x="251.25377"
          y="220.24844"
          id="text15-8"
          transform="scale(1.1338461,0.88195391)"
-         style="font-size:33.0493px;stroke-width:0">17</text>
+         style="font-size:33.0493px;fill:#800000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:0.140984"><tspan
+           style="stroke:#000003;stroke-opacity:0.140984;fill:#800000"
+           id="tspan40">17</tspan></text>
       <text
          x="250.37183"
          y="131.80846"
          id="text15-5"
          transform="scale(1.1338461,0.88195391)"
-         style="font-size:33.0493px;stroke-width:0">42</text>
+         style="font-size:33.0493px;fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:0.140984"><tspan
+           style="fill:#1a1a1a;stroke:#00000c;stroke-opacity:0.140984"
+           id="tspan39">42</tspan></text>
       <g
          font-size="14px"
          stroke="none"
          text-anchor="middle"
          id="g37"
-         transform="translate(0,2)">
+         transform="translate(0,2)"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1">
         <!-- Каждая строка данных -->
         <text
            x="264.2981"
            y="39.684612"
            id="text15"
            transform="scale(1.1338461,0.88195393)"
-           style="font-size:33.0493px;stroke-width:0">11</text>
+           style="font-size:33.0493px;fill:#14c8e1;fill-opacity:1;stroke:#000013;stroke-width:0;stroke-opacity:0.140984"><tspan
+             style="fill:#1a1a1a;stroke:#060006;stroke-opacity:0.140984"
+             id="tspan38">11</tspan></text>
         <line
            x1="0"
            y1="45"
@@ -324,7 +372,8 @@
            y2="45"
            stroke="#000000"
            stroke-width="1"
-           id="line15" />
+           id="line15"
+           style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
         <line
            x1="0"
            y1="85"
@@ -332,7 +381,8 @@
            y2="85"
            stroke="#000000"
            stroke-width="1"
-           id="line17" />
+           id="line17"
+           style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
         <line
            x1="0"
            y1="125"
@@ -340,7 +390,8 @@
            y2="125"
            stroke="#000000"
            stroke-width="1"
-           id="line19" />
+           id="line19"
+           style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
         <line
            x1="0"
            y1="165"
@@ -348,7 +399,8 @@
            y2="165"
            stroke="#000000"
            stroke-width="1"
-           id="line21" />
+           id="line21"
+           style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
         <line
            x1="0"
            y1="205"
@@ -356,7 +408,8 @@
            y2="205"
            stroke="#000000"
            stroke-width="1"
-           id="line23" />
+           id="line23"
+           style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
         <line
            x1="0"
            y1="245"
@@ -364,7 +417,8 @@
            y2="245"
            stroke="#000000"
            stroke-width="1"
-           id="line25" />
+           id="line25"
+           style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
         <line
            x1="0"
            y1="285"
@@ -372,7 +426,8 @@
            y2="285"
            stroke="#000000"
            stroke-width="1"
-           id="line27" />
+           id="line27"
+           style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
         <line
            x1="0"
            y1="325"
@@ -380,7 +435,8 @@
            y2="325"
            stroke="#000000"
            stroke-width="1"
-           id="line29" />
+           id="line29"
+           style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
         <line
            x1="0"
            y1="365"
@@ -388,7 +444,8 @@
            y2="365"
            stroke="#000000"
            stroke-width="1"
-           id="line31" />
+           id="line31"
+           style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
         <line
            x1="0"
            y1="405"
@@ -396,7 +453,8 @@
            y2="405"
            stroke="#000000"
            stroke-width="1"
-           id="line33" />
+           id="line33"
+           style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
         <line
            x1="0"
            y1="445"
@@ -404,7 +462,8 @@
            y2="445"
            stroke="#000000"
            stroke-width="1"
-           id="line35" />
+           id="line35"
+           style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
       </g>
       <!-- Вертикальная линия -->
       <line
@@ -414,96 +473,103 @@
          y2="480"
          stroke="#000000"
          stroke-width="1.5"
-         id="line37" />
+         id="line37"
+         style="stroke:#000000;stroke-opacity:0.14098361;fill:#14c8e1;fill-opacity:1" />
       <text
          x="253.01768"
          y="310.95615"
          id="text15-81"
          transform="scale(1.1338461,0.88195391)"
-         style="font-size:33.0493px;stroke-width:0">23</text>
+         style="font-size:33.0493px;fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:0.140984"><tspan
+           style="fill:#1a1a1a;stroke:#000005;stroke-opacity:0.140984"
+           id="tspan41">23</tspan></text>
       <text
          x="254.78162"
          y="400.52997"
          id="text15-3"
          transform="scale(1.1338461,0.88195391)"
-         style="font-size:33.0493px;stroke-width:0">19</text>
+         style="font-size:33.0493px;fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:0.140984"><tspan
+           style="fill:#1a1a1a;stroke:#000006;stroke-opacity:0.140984"
+           id="tspan42">19</tspan></text>
       <text
          x="250.37183"
          y="490.10382"
          id="text15-4"
          transform="scale(1.1338461,0.88195391)"
-         style="font-size:33.0493px;stroke-width:0">33</text>
+         style="font-size:33.0493px;fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:0.140984"><tspan
+           style="fill:#1a1a1a;stroke:#fa0008;stroke-opacity:0.140984"
+           id="tspan43">33</tspan></text>
     </g>
   </g>
   <text
-     x="543.67615"
-     y="656.26703"
+     x="-2.0921595"
+     y="14.133699"
      id="text14-3-1-90-0-61-2"
      transform="scale(1.0407347,0.96085967)"
      style="font-size:19.0433px;stroke-width:0">14000000761340</text>
   <text
-     x="543.67615"
-     y="576.13043"
+     x="-2.0921595"
+     y="-66.002899"
      id="text14-3-1-90-0-8-9"
      transform="scale(1.0407347,0.96085967)"
      style="font-size:19.0433px;stroke-width:0">14000000761300</text>
   <text
-     x="544.63696"
-     y="492.87164"
+     x="-1.1313441"
+     y="-149.26169"
      id="text14-3-1-90-0-7"
      transform="scale(1.0407347,0.96085967)"
      style="font-size:19.0433px;stroke-width:0">14000000761260</text>
   <text
-     x="543.67615"
-     y="408.57214"
+     x="-2.0921595"
+     y="-233.56119"
      id="text14-3-1-90-3"
      transform="scale(1.0407347,0.96085967)"
      style="font-size:19.0433px;stroke-width:0">14000000761220</text>
   <text
-     x="540.79358"
-     y="325.31339"
+     x="-4.9747276"
+     y="-316.81995"
      id="text14-3-1-7"
      transform="scale(1.0407347,0.96085967)"
      style="font-size:19.0433px;stroke-width:0">14000000761180</text>
   <text
-     x="537.91095"
-     y="243.09534"
+     x="-7.857357"
+     y="-399.03799"
      id="text14-3-3-4"
      transform="scale(1.0407347,0.96085967)"
      style="font-size:19.0433px;stroke-width:0">14000000761140</text>
   <text
-     x="348.62161"
-     y="574.04895"
+     x="-197.1467"
+     y="-68.084381"
      id="text14-3-1-90-0-6"
      transform="scale(1.0407347,0.96085967)"
      style="font-size:19.0433px;stroke-width:0">14000000761280</text>
   <text
-     x="349.58249"
-     y="491.83093"
+     x="-196.18582"
+     y="-150.3024"
      id="text14-3-1-90-8"
      transform="scale(1.0407347,0.96085967)"
      style="font-size:19.0433px;stroke-width:0">14000000761240</text>
   <text
-     x="350.54333"
-     y="409.61288"
+     x="-195.22498"
+     y="-232.52045"
      id="text14-3-1-9"
      transform="scale(1.0407347,0.96085967)"
      style="font-size:19.0433px;stroke-width:0">14000000761200</text>
   <text
-     x="347.66074"
-     y="198.34373"
+     x="-198.10757"
+     y="-443.78958"
      id="text14-3-5"
      transform="scale(1.0407347,0.96085967)"
      style="font-size:19.0433px;stroke-width:0">14000000761100</text>
   <text
-     x="346.69989"
-     y="241.01387"
+     x="-199.06842"
+     y="-401.11945"
      id="text14-3"
      transform="scale(1.0407347,0.96085967)"
      style="font-size:19.0433px;stroke-width:0">14000000761120</text>
   <g
      id="svg37-6"
-     transform="translate(3.00001,38.99999)">
+     transform="translate(-565.00001,-578.00003)">
     <text
        x="346.69989"
        y="241.01387"
@@ -532,8 +598,8 @@
     </g>
   </g>
   <text
-     x="752.54742"
-     y="116.75741"
+     x="238.85512"
+     y="-565.47205"
      text-anchor="middle"
      font-size="22.1355px"
      stroke="none"
@@ -541,8 +607,8 @@
      transform="scale(1.1057203,0.90438785)"
      style="stroke-width:3.16222">Next</text>
   <text
-     x="587.04449"
-     y="117.86313"
+     x="81.491669"
+     y="-563.26062"
      text-anchor="middle"
      font-size="22.1355px"
      stroke="none"
@@ -550,8 +616,8 @@
      transform="scale(1.1057203,0.90438785)"
      style="stroke-width:3.16222">Next</text>
   <text
-     x="426.06342"
-     y="118.96886"
+     x="-82.202568"
+     y="-566.5777"
      text-anchor="middle"
      font-size="22.1355px"
      stroke="none"
@@ -559,8 +625,8 @@
      transform="scale(1.1057203,0.90438785)"
      style="stroke-width:3.16222">Next</text>
   <text
-     x="265.0824"
-     y="117.86314"
+     x="-242.27919"
+     y="-563.26062"
      text-anchor="middle"
      font-size="22.1355px"
      stroke="none"
@@ -569,7 +635,7 @@
      style="stroke-width:3.16222">Next</text>
   <g
      id="svg37-8-3"
-     transform="translate(28,197)">
+     transform="translate(-540.00002,-420.00002)">
     <text
        x="322.67841"
        y="245.1768"
@@ -579,7 +645,7 @@
   </g>
   <g
      id="svg37-8-3-5"
-     transform="translate(30,276)">
+     transform="translate(-538.00002,-341.00002)">
     <text
        x="322.67841"
        y="245.1768"
@@ -589,7 +655,7 @@
   </g>
   <g
      id="svg37-8-3-5-3"
-     transform="translate(31,355)">
+     transform="translate(-537.00002,-262.00002)">
     <text
        x="322.67841"
        y="245.1768"
@@ -607,4 +673,13 @@
          style="font-size:19.0433px;stroke-width:0">14000000761320</text>
     </g>
   </g>
+  <text
+     x="-404.16461"
+     y="-564.36627"
+     text-anchor="middle"
+     font-size="22.1355px"
+     stroke="none"
+     id="text3-7-7"
+     transform="scale(1.1057203,0.90438785)"
+     style="stroke-width:3.16222;fill:#28220b;fill-opacity:1">Next</text>
 </svg>
