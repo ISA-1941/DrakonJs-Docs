@@ -19,7 +19,7 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
      inkscape:zoom="2.53"
-     inkscape:cx="327.47036"
+     inkscape:cx="277.66798"
      inkscape:cy="124.90119"
      inkscape:window-width="1920"
      inkscape:window-height="1152"
@@ -37,15 +37,15 @@
      height="1000"
      fill="#ffffff"
      id="rect1"
-     style="fill:#000000;fill-opacity:0.0738057" />
+     style="fill:#24358a;fill-opacity:0.07380568" />
   <g
      id="array-illustration"
      font-family="'Times New Roman', Times, serif"
      fill="#000000"
      stroke="#000000"
      stroke-width="0"
-     style="fill:#ffffff;stroke:#ffffff"
-     transform="translate(0,-2.3952569)">
+     style="fill:#fffcff;fill-opacity:1;stroke:#ffffff"
+     transform="translate(2.3715415,-0.0237154)">
     <!-- &#1047;&#1072;&#1075;&#1086;&#1083;&#1086;&#1074;&#1086;&#1082; &#1089;&#1093;&#1077;&#1084;&#1099; -->
     <text
        x="400"
@@ -55,13 +55,13 @@
        font-weight="bold"
        stroke="none"
        id="text1"
-       style="fill:#ffffff">Logical View of an Array</text>
+       style="fill:#fffcff;fill-opacity:1">Logical View of an Array</text>
     <!-- &#1054;&#1090;&#1088;&#1080;&#1089;&#1086;&#1074;&#1082;&#1072; &#1103;&#1095;&#1077;&#1077;&#1082; &#1084;&#1072;&#1089;&#1089;&#1080;&#1074;&#1072; -->
     <g
        id="cells"
        stroke-width="2"
        fill="#ffffff"
-       style="fill:#000000;stroke:#000000">
+       style="fill:#fffcff;fill-opacity:1;stroke:#000000">
       <!-- &#1048;&#1085;&#1076;&#1077;&#1082;&#1089;&#1099; &#1085;&#1072;&#1076; &#1084;&#1072;&#1089;&#1089;&#1080;&#1074;&#1086;&#1084; -->
       <g
          font-size="14px"
@@ -69,47 +69,47 @@
          text-anchor="middle"
          fill="#000000"
          id="g9"
-         style="fill:#ffffff">
+         style="fill:#fffcff;fill-opacity:1">
         <text
            x="100"
            y="110"
            id="text2"
-           style="fill:#000000">0</text>
+           style="fill:#fffcff;fill-opacity:1">0</text>
         <text
            x="180"
            y="110"
            id="text3"
-           style="fill:#000000">1</text>
+           style="fill:#fffcff;fill-opacity:1">1</text>
         <text
            x="260"
            y="110"
            id="text4"
-           style="fill:#000000">2</text>
+           style="fill:#fffcff;fill-opacity:1">2</text>
         <text
            x="340"
            y="110"
            id="text5"
-           style="fill:#000000">3</text>
+           style="fill:#fffcff;fill-opacity:1">3</text>
         <text
            x="420"
            y="110"
            id="text6"
-           style="fill:#000000">4</text>
+           style="fill:#fffcff;fill-opacity:1">4</text>
         <text
            x="500"
            y="110"
            id="text7"
-           style="fill:#000000">5</text>
+           style="fill:#fffcff;fill-opacity:1">5</text>
         <text
            x="580"
            y="110"
            id="text8"
-           style="fill:#000000">6</text>
+           style="fill:#fffcff;fill-opacity:1">6</text>
         <text
            x="660"
            y="110"
            id="text9"
-           style="fill:#000000">7</text>
+           style="fill:#fffcff;fill-opacity:1">7</text>
       </g>
       <!-- &#1055;&#1088;&#1103;&#1084;&#1086;&#1091;&#1075;&#1086;&#1083;&#1100;&#1085;&#1080;&#1082;&#1080; &#1103;&#1095;&#1077;&#1077;&#1082; -->
       <rect
@@ -118,56 +118,56 @@
          width="80"
          height="60"
          id="rect9"
-         style="fill:#000000;stroke:#000000" />
+         style="fill:#fc9c8d;fill-opacity:1;stroke:#000000" />
       <rect
          x="139.60474"
          y="118.81423"
          width="80"
          height="60"
          id="rect10"
-         style="fill:#000000;stroke:#000000" />
+         style="fill:#fc9c8d;fill-opacity:1;stroke:#000000" />
       <rect
          x="220.79051"
          y="118.81423"
          width="80"
          height="60"
          id="rect11"
-         style="fill:#000000;stroke:#000000" />
+         style="fill:#fc9c8d;fill-opacity:1;stroke:#000000" />
       <rect
          x="300.39526"
          y="119.20949"
          width="80"
          height="60"
          id="rect12"
-         style="fill:#000000;stroke:#000000" />
+         style="fill:#fc9c8d;fill-opacity:1;stroke:#000000" />
       <rect
          x="380"
          y="120"
          width="80"
          height="60"
          id="rect13"
-         style="fill:#000000;stroke:#000000" />
+         style="fill:#fc9c8d;fill-opacity:1;stroke:#000000" />
       <rect
          x="460"
          y="120"
          width="80"
          height="60"
          id="rect14"
-         style="fill:#000000;stroke:#000000" />
+         style="fill:#fc9c8d;fill-opacity:1;stroke:#000000" />
       <rect
          x="540"
          y="120"
          width="80"
          height="60"
          id="rect15"
-         style="fill:#000000;stroke:#000000" />
+         style="fill:#fc9c8d;fill-opacity:1;stroke:#000000" />
       <rect
          x="620"
          y="120"
          width="80"
          height="60"
          id="rect16"
-         style="fill:#000000;stroke:#000000" />
+         style="fill:#fc9c8d;fill-opacity:1;stroke:#000000" />
       <!-- &#1044;&#1072;&#1085;&#1085;&#1099;&#1077; &#1074;&#1085;&#1091;&#1090;&#1088;&#1080; &#1103;&#1095;&#1077;&#1077;&#1082; -->
       <g
          font-size="18px"
@@ -175,47 +175,47 @@
          text-anchor="middle"
          fill="#000000"
          id="g23"
-         style="fill:#ffffff">
+         style="fill:#fffcff;fill-opacity:1">
         <text
            x="100"
            y="155"
            id="text16"
-           style="fill:#ffffff">11</text>
+           style="fill:#fffcff;fill-opacity:1">11</text>
         <text
            x="180"
            y="155"
            id="text17"
-           style="fill:#ffffff">42</text>
+           style="fill:#fffcff;fill-opacity:1">42</text>
         <text
            x="260"
            y="155"
            id="text18"
-           style="fill:#ffffff">17</text>
+           style="fill:#fffcff;fill-opacity:1">17</text>
         <text
            x="340"
            y="155"
            id="text19"
-           style="fill:#ffffff">23</text>
+           style="fill:#150709;fill-opacity:0.0383428">23</text>
         <text
            x="420"
            y="155"
            id="text20"
-           style="fill:#ffffff">19</text>
+           style="fill:#fffcff;fill-opacity:1">19</text>
         <text
            x="500"
            y="155"
            id="text21"
-           style="fill:#ffffff">33</text>
+           style="fill:#fffcff;fill-opacity:1">33</text>
         <text
            x="580"
            y="155"
            id="text22"
-           style="fill:#ffffff">08</text>
+           style="fill:#fffcff;fill-opacity:1">08</text>
         <text
            x="660"
            y="155"
            id="text23"
-           style="fill:#ffffff">54</text>
+           style="fill:#fc9c8d;fill-opacity:1">54</text>
       </g>
     </g>
     <!-- &#1054;&#1090;&#1088;&#1080;&#1089;&#1086;&#1074;&#1082;&#1072; &#1072;&#1076;&#1088;&#1077;&#1089;&#1086;&#1074; &#1087;&#1072;&#1084;&#1103;&#1090;&#1080; &#1087;&#1086;&#1076; &#1084;&#1072;&#1089;&#1089;&#1080;&#1074;&#1086;&#1084; -->
@@ -225,47 +225,47 @@
        stroke="none"
        text-anchor="middle"
        fill="#000000"
-       style="fill:#ffffff">
+       style="fill:#fffcff;fill-opacity:1">
       <text
          x="100"
          y="205"
          id="text24"
-         style="fill:#000000">0x761100</text>
+         style="fill:#fffcff;fill-opacity:1">0x761100</text>
       <text
          x="180"
          y="205"
          id="text25"
-         style="fill:#000000">0x761104</text>
+         style="fill:#fffcff;fill-opacity:1">0x761104</text>
       <text
          x="260"
          y="205"
          id="text26"
-         style="fill:#000000">0x761108</text>
+         style="fill:#fffcff;fill-opacity:1">0x761108</text>
       <text
          x="340"
          y="205"
          id="text27"
-         style="fill:#000000">0x76110C</text>
+         style="fill:#fffcff;fill-opacity:1">0x76110C</text>
       <text
          x="420"
          y="205"
          id="text28"
-         style="fill:#000000">0x761110</text>
+         style="fill:#fffcff;fill-opacity:1">0x761110</text>
       <text
          x="500"
          y="205"
          id="text29"
-         style="fill:#000000">0x761114</text>
+         style="fill:#fffcff;fill-opacity:1">0x761114</text>
       <text
          x="580"
          y="205"
          id="text30"
-         style="fill:#000000">0x761118</text>
+         style="fill:#fffcff;fill-opacity:1">0x761118</text>
       <text
          x="660"
          y="205"
          id="text31"
-         style="fill:#000000">0x76111C</text>
+         style="fill:#fffcff;fill-opacity:1">0x76111C</text>
     </g>
     <!-- &#1055;&#1086;&#1103;&#1089;&#1085;&#1077;&#1085;&#1080;&#1103; -->
     <text
@@ -276,6 +276,6 @@
        font-style="italic"
        stroke="none"
        id="text32"
-       style="fill:#ffffff">Each element is accessed by an index and takes 4 bytes in memory.</text>
+       style="fill:#fffcff;fill-opacity:1">Each element is accessed by an index and takes 4 bytes in memory.</text>
   </g>
 </svg>
