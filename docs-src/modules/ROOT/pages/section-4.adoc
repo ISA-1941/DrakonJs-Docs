@@ -85,7 +85,7 @@ The interface of Drakon.Tech is designed with a focus on visual clarity and ease
 
 [.text-center]
 .Figure 4.2. DrakonTech Interface
-image::section_4/Fig4_2_InterfaceDrakonTech.svg[width=100%, link=self, window="_blank"]
+image::section_4/Fig4_2_InterfaceDrakonTech.jpg[width=100%, link=self, window="_blank"]
 
 ==== 4.2.1. Core Principles
 
@@ -136,7 +136,7 @@ In summary, the Drakon.Tech interface prioritizes visual communication and struc
 The web application DrakonTech provides for the creation of two types of Drakon-diagrams; the choice is determined by the complexity of the algorithm (Figure 4.3):
 
 [.text-center]
-image::section_4/Fig4_3_primitive.jpg[width=100%, link=self, window="_blank"]
+image::section_4/Fig4_3_primitive.svg[width=100%, link=self, window="_blank"]
 a) Primitive
 
 [.text-center]
