@@ -28,7 +28,7 @@ The most common means of visualizing algorithmic constructions are flowcharts an
 An alternative to flowchart imaging is Drakon-based algorithm engineering, which results in Drakon-diagrams. Drakon-diagrams are suitable for formalized recording, automatic code retrieval, and execution on a computer. However, a more important aspect of Drakon technology is its cognitive difference from flowchart technology. While flowcharts do improve program clarity, this is not always the case, and improvements are limited. In addition, there are many cases where unsuccessful flowcharts confuse the case and make understanding difficult. In contrast, Drakon-diagrams are much better understood (Figure 4.1).
 
 [.text-center]
-image::{imagesdir}/Fig4_1_Drakon-diagram.jpg[width=400]
+image::{imagesdir}/Fig4_1_Drakon-diagram.svg[width=400]
 Figure 4.1. Comparison of a visual representation of an algorithm in the form of a flowchart and a Drakon-diagram
 
 ==== 4.1.2. Algorithmic Language Drakon
