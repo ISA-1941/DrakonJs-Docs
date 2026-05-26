@@ -1,4 +1,4 @@
-:imagesdir: docs-src/modules/section-4/assets/images
+
 [.text-justify]
 :figure-caption!:
 
@@ -28,8 +28,8 @@ The most common means of visualizing algorithmic constructions are flowcharts an
 An alternative to flowchart imaging is Drakon-based algorithm engineering, which results in Drakon-diagrams. Drakon-diagrams are suitable for formalized recording, automatic code retrieval, and execution on a computer. However, a more important aspect of Drakon technology is its cognitive difference from flowchart technology. While flowcharts do improve program clarity, this is not always the case, and improvements are limited. In addition, there are many cases where unsuccessful flowcharts confuse the case and make understanding difficult. In contrast, Drakon-diagrams are much better understood (Figure 4.1).
 
 [.text-center]
-image::{imagesdir}/Fig4_1_Drakon-diagram.svg[width=400]
-Figure 4.1. Comparison of a visual representation of an algorithm in the form of a flowchart and a Drakon-diagram
+.Figure 4.1. Comparison of a visual representation of an algorithm in the form of a flowchart and a Drakon-diagram
+image::section_4/Fig4_1_Drakon-diagram.svg[width=100%, link=self, window="_blank"]
 
 ==== 4.1.2. Algorithmic Language Drakon
 
@@ -84,8 +84,8 @@ In essence, Drakon's strength lies in its ability to bridge the gap between abst
 The interface of Drakon.Tech is designed with a focus on visual clarity and ease of use. Here is a general overview (Figure 4.2):
 
 [.text-center]
-image::{imagesdir}/Fig4_2_InterfaceDrakonTech.jpg[width=600,height=300,align=center]
-Figure 4.2. DrakonTech Interface
+.Figure 4.2. DrakonTech Interface
+image::section_4/Fig4_2_InterfaceDrakonTech.svg[width=100%, link=self, window="_blank"]
 
 ==== 4.2.1. Core Principles
 
@@ -136,20 +136,20 @@ In summary, the Drakon.Tech interface prioritizes visual communication and struc
 The web application DrakonTech provides for the creation of two types of Drakon-diagrams; the choice is determined by the complexity of the algorithm (Figure 4.3):
 
 [.text-center]
-image::{imagesdir}/Fig4_3_primitive.jpg[width=200,height=150,align=center]
+image::section_4/Fig4_3_primitive.jpg[width=100%, link=self, window="_blank"]
 a) Primitive
 
 [.text-center]
-image::{imagesdir}/Fig4_3_siluet.jpg[width=100%]
+image::section_4/Fig4_3_siluet.jpg[width=100%]
 b) Silhouette
 
-Figure 4.3. Two types of Drakon-diagrams
+.Figure 4.3. Two types of Drakon-diagrams
 
 To create a Drakon-diagram, the user chooses the necessary icons, filling them with the corresponding operators of the JavaScript programming language (Figure 4.4).
 
 [.text-center]
-image::{imagesdir}/Fig4_4_icons.jpg[width=75%]
-Figure 4.4. Set of DrakonTech icons
+.Figure 4.4. Set of DrakonTech icons
+image::section_4/Fig4_4_icons.jpg[width=75%]
 
 Creating a Drakon-diagram must follow certain rules. The selected icon is moved by the mouse to the vertical line (skewer in Drakon technology terms) in the right place. Creating a Drakon-diagram must follow certain rules:
 
@@ -158,7 +158,7 @@ Creating a Drakon-diagram must follow certain rules. The selected icon is moved 
     The diagram should have only one beginning and one end. The "end" graph is placed at the bottom of the diagram (Figure 4.5):
 
 [.text-center]
-image::{imagesdir}/Fig4_5_BeginEnd.jpg[width=15%]
+image::section_4/Fig4_5_BeginEnd.jpg[width=15%]
 Figure 4.5. Diagram start/end
 
     The action flow represented in the diagram should only go from top to bottom. This approach is more convenient because in our cultural area texts are read in this way.
@@ -170,7 +170,7 @@ Figure 4.5. Diagram start/end
     A top-down action prevents the use of arrows. The only exception is a while loop (Figure 4.6):
 
 [.text-center]
-image::{imagesdir}/Fig4_6_While.jpg[width=50%]
+image::section_4/Fig4_6_While.jpg[width=50%]
 Figure 4.6. while loop type
 
     When creating a Drakon-diagram, only straight vertical and horizontal lines should be used, as straight lines are easier to understand than curves.
@@ -196,7 +196,7 @@ c) Output result
 The graphical representation of the basic element of the linear structure in JavaScript is in the form of simple rectangles (Figure 4.7).
 
 [.text-center]
-image::{imagesdir}/Fig4_7_Linear.jpg[width=50%]
+image::section_4/Fig4_7_Linear.jpg[width=50%]
 Figure 4.7. Linear structure of a Drakon-diagram
 
 ==== 4.4.2. Basic Structures of Branched Structure
@@ -208,7 +208,7 @@ a) if-else Construction
 The Drakon snippet of the construction "if (condition), then (action) otherwise (action)" corresponds in programming languages to the if...else statement. An example of an if-else construction in a Drakon-diagram in an algorithm for finding minimum and maximum array values (Figure 4.8):
 
 [.text-center]
-image::{imagesdir}/Fig4_8_ifelse.jpg[width=75%]
+image::section_4/Fig4_8_ifelse.jpg[width=75%]
 Figure 4.8. Diagram snippet with if-else
 
 b) Select Construction (Switch Statement)
@@ -216,7 +216,7 @@ b) Select Construction (Switch Statement)
 The values to which the expression in the "Choose" graph will be compared are covered in the "Option" graphs. If there is no text in the extreme right, it means "all other values". Below is an example of how to branch a sorting algorithm (merge sort) (Figure 4.9).
 
 [.text-center]
-image::{imagesdir}/Fig4_9_Select.jpg[width=100%]
+image::section_4/Fig4_9_Select.jpg[width=100%]
 Figure 4.9. Branch selection snippet (Select statement)
 
 ==== 4.4.3. Basic Loop Constructions
@@ -228,7 +228,7 @@ a) Loop-For Construction
 "Loop-For" consists of three parts. In the first part, the loop initialization is fixed. In the second, the loop completion condition is checked. If true, the body operators of the loop are executed until the expression becomes false. If false, the loop ends and control is passed to the next operator. In the third part, the loop parameter increases. The snippet of the Drakon-diagram with the "Loop-For" design has the appearance shown in Figure 4.10:
 
 [.text-center]
-image::{imagesdir}/Fig4_10_forCycle.jpg[width=75%]
+image::section_4/Fig4_10_forCycle.jpg[width=75%]
 Figure 4.10. Drakon construction "Loop-For"
 
 b) Loop for each Construction
@@ -236,7 +236,7 @@ b) Loop for each Construction
 The "foreach" loop executes the operator or block of operators for each array element or data list (Figure 4.11):
 
 [.text-center]
-image::{imagesdir}/Fig4_11_foreach.jpg[width=100%]
+image::section_4/Fig4_11_foreach.jpg[width=100%]
 Figure 4.11. Drakon construction "Loop for each"
 
 c) Loop With Arrow Construction
@@ -244,7 +244,7 @@ c) Loop With Arrow Construction
 An example of a composite construction "Loop With Arrow" (Figure 4.12):
 
 [.text-center]
-image::{imagesdir}/Fig4_12_While.jpg[width=100%]
+image::section_4/Fig4_12_While.jpg[width=100%]
 Figure 4.12. Drakon construction "Do-Check loop"
 
 === 4.5. From Drakon-Diagram to Program Code
@@ -264,25 +264,25 @@ For example, let us take the number 12345:
 To solve the problem of finding the digital root of an integer, we will create four Drakon-diagrams: module, main, digRoot, and sumDigits (Figure 4.13).
 
 [.text-center]
-image::{imagesdir}/Fig4_13_fourFunctions.jpg[width=75%]
+image::section_4/Fig4_13_fourFunctions.jpg[width=75%]
 Figure 4.13. module, main, digRoot, and sumDigits
 
 The function module contains a call to the main() function. The main() function contains a call to the digroot function with an integer specified (Figure 4.14):
 
 [.text-center]
-image::{imagesdir}/Fig4_14_moduleMain.jpg[width=100%]
+image::section_4/Fig4_14_moduleMain.jpg[width=100%]
 Figure 4.14. Functions module and main
 
 The purpose of the function digRoot(n) is to organize a call to the function sumDigits(n) that calculates the sum of the digits of a given number. In turn, the sumDigits(n) function splits the string "12345" into individual characters, after which the sum of the corresponding integers converted by the parseInt(digit, 10) function is calculated in a loop (Figure 4.15).
 
 [.text-center]
-image::{imagesdir}/Fig4_15_digSum.jpg[width=100%]
+image::section_4/Fig4_15_digSum.jpg[width=100%]
 Figure 4.15. Functions digRoot and sumDigits
 
 After creating the Drakon diagrams, the program code for determining the digital root in JavaScript is automatically generated by activating the "wrench" icon (Figure 4.16).
 
 [.text-center]
-image::{imagesdir}/Fig4_16_wrench.jpg[width=100%]
+image::section_4/Fig4_16_wrench.jpg[width=100%]
 Figure 4.16. "Wrench icon" for generating program code
 
 The result of automatic code generation in JavaScript:
