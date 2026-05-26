@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   viewBox="0 0 1000 799.99998"
+   viewBox="0 0 982.04999 603.10155"
    version="1.1"
    id="svg37"
    sodipodi:docname="Fig1_3_LL.svg"
-   width="1000"
-   height="800"
+   width="982.04999"
+   height="603.10156"
    inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs37" />
   <sodipodi:namedview
      id="namedview37"
      pagecolor="#505050"
@@ -23,41 +21,35 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
      inkscape:zoom="1"
-     inkscape:cx="496.5"
-     inkscape:cy="298"
+     inkscape:cx="478.5"
+     inkscape:cy="337"
      inkscape:window-width="1920"
      inkscape:window-height="1152"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg37" />
-  <!-- 1. Жесткий белый фон. Если Antora делает фон черным, этот прямоугольник закроет его -->
-  <rect
-     width="1000"
-     height="800"
-     fill="#ffffff"
-     id="rect1"
-     x="4"
-     y="-25"
-     style="fill:#0c080c;fill-opacity:0.03530113" />
-  <!-- 2. Группировка с принудительными стилями: черный текст и черный контур -->
+  <defs
+     id="defs37" />
+  <!-- 1. &#1046;&#1077;&#1089;&#1090;&#1082;&#1080;&#1081; &#1073;&#1077;&#1083;&#1099;&#1081; &#1092;&#1086;&#1085;. &#1045;&#1089;&#1083;&#1080; Antora &#1076;&#1077;&#1083;&#1072;&#1077;&#1090; &#1092;&#1086;&#1085; &#1095;&#1077;&#1088;&#1085;&#1099;&#1084;, &#1101;&#1090;&#1086;&#1090; &#1087;&#1088;&#1103;&#1084;&#1086;&#1091;&#1075;&#1086;&#1083;&#1100;&#1085;&#1080;&#1082; &#1079;&#1072;&#1082;&#1088;&#1086;&#1077;&#1090; &#1077;&#1075;&#1086; -->
+  <!-- 2. &#1043;&#1088;&#1091;&#1087;&#1087;&#1080;&#1088;&#1086;&#1074;&#1082;&#1072; &#1089; &#1087;&#1088;&#1080;&#1085;&#1091;&#1076;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1084;&#1080; &#1089;&#1090;&#1080;&#1083;&#1103;&#1084;&#1080;: &#1095;&#1077;&#1088;&#1085;&#1099;&#1081; &#1090;&#1077;&#1082;&#1089;&#1090; &#1080; &#1095;&#1077;&#1088;&#1085;&#1099;&#1081; &#1082;&#1086;&#1085;&#1090;&#1091;&#1088; -->
   <g
      id="linked-list-main"
      font-family="'Times New Roman', Times, serif"
      fill="#000000"
      stroke="#000000"
      stroke-width="0"
-     transform="translate(-1.00002,-2e-5)"
+     transform="translate(-18.95,-37.898416)"
      style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984">
-    <!-- Надпись Head и указатель -->
+    <!-- &#1053;&#1072;&#1076;&#1087;&#1080;&#1089;&#1100; Head &#1080; &#1091;&#1082;&#1072;&#1079;&#1072;&#1090;&#1077;&#1083;&#1100; -->
     <text
-       x="29.879438"
-       y="36.891296"
+       x="27.123589"
+       y="61.92894"
        font-size="29.7947px"
        stroke="none"
        id="text1"
        style="fill:#fdfefb;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:0.140984"
-       transform="scale(1.0885932,0.91861684)"><tspan
+       transform="scale(1.0885932,0.91861682)"><tspan
          style="fill:#fdfefb;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:0.140984"
          id="tspan37">Head</tspan></text>
     <path
@@ -72,12 +64,12 @@
        fill="none"
        id="path2"
        style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
-    <!-- Цепочка узлов -->
+    <!-- &#1062;&#1077;&#1087;&#1086;&#1095;&#1082;&#1072; &#1091;&#1079;&#1083;&#1086;&#1074; -->
     <g
        id="nodes"
        stroke-width="2"
        style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984">
-      <!-- Узел 1 -->
+      <!-- &#1059;&#1079;&#1077;&#1083; 1 -->
       <rect
          x="20"
          y="80"
@@ -85,7 +77,7 @@
          height="40"
          fill="#ffffff"
          id="rect2"
-         style="fill:#fffdfb;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
+         style="fill:#000204;fill-opacity:1;stroke:#fafbff;stroke-width:2.1;stroke-dasharray:none;stroke-opacity:0.988525" />
       <text
          x="68.798805"
          y="80.914825"
@@ -94,8 +86,8 @@
          stroke="none"
          id="text2"
          transform="scale(0.74313055,1.3456586)"
-         style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-width:3.15;stroke-dasharray:none;stroke-opacity:0.140984"><tspan
-           style="fill:#1a1a1a;stroke-width:3.15;stroke-dasharray:none"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.2522px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3.15;stroke-dasharray:none;stroke-opacity:0.140984"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.2522px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:3.15;stroke-dasharray:none"
            id="tspan44">11</tspan></text>
       <rect
          x="80"
@@ -104,18 +96,13 @@
          height="40"
          fill="#ffffff"
          id="rect3"
-         style="fill:#fffdfb;fill-opacity:1;stroke:#c90000;stroke-opacity:0.140984" />
+         style="fill:#000204;fill-opacity:1;stroke:#ffffff;stroke-width:2.6;stroke-dasharray:none;stroke-opacity:1" />
       <path
-         d="m 140,100 h 40"
+         d="m 160,100 h 40"
          fill="none"
          id="path3"
-         style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
-      <path
-         d="m 180,100 -8,-5 m 8,5 -8,5"
-         fill="none"
-         id="path4"
-         style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
-      <!-- Узел 2 -->
+         style="fill:#eb371e;fill-opacity:1;stroke:#fafbff;stroke-width:2.1;stroke-dasharray:none;stroke-opacity:0.988525" />
+      <!-- &#1059;&#1079;&#1077;&#1083; 2 -->
       <rect
          x="200"
          y="80"
@@ -123,7 +110,7 @@
          height="40"
          fill="#ffffff"
          id="rect4"
-         style="fill:#fffdfb;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
+         style="fill:#000204;fill-opacity:1;stroke:#feffff;stroke-width:2.7;stroke-dasharray:none;stroke-opacity:0.999999" />
       <text
          x="308.25391"
          y="81.657959"
@@ -132,8 +119,8 @@
          stroke="none"
          id="text4"
          transform="scale(0.74313055,1.3456586)"
-         style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-width:2.75032;stroke-opacity:0.140984"><tspan
-           style="fill:#28220b"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.2522px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#eb371e;fill-opacity:1;stroke:#ffffff;stroke-width:2.75032;stroke-opacity:0.140984"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.2522px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d7ddf4;stroke:#000000"
            id="tspan46">42</tspan></text>
       <rect
          x="260"
@@ -142,18 +129,13 @@
          height="40"
          fill="#ffffff"
          id="rect5"
-         style="fill:#fffdfb;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
+         style="fill:#000204;fill-opacity:1;stroke:#feffff;stroke-opacity:0.999999" />
       <path
          d="m 320,100 h 40"
          fill="none"
          id="path5"
          style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
-      <path
-         d="m 360,100 -8,-5 m 8,5 -8,5"
-         fill="none"
-         id="path6"
-         style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
-      <!-- Узел 3 -->
+      <!-- &#1059;&#1079;&#1077;&#1083; 3 -->
       <rect
          x="380"
          y="80"
@@ -161,7 +143,7 @@
          height="40"
          fill="#ffffff"
          id="rect6"
-         style="fill:#fffdfb;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
+         style="fill:#000204;fill-opacity:1;stroke:#fdfdff;stroke-opacity:1" />
       <text
          x="553.09167"
          y="81.657959"
@@ -170,8 +152,8 @@
          stroke="none"
          id="text6"
          transform="scale(0.74313055,1.3456586)"
-         style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-width:2.75032;stroke-opacity:0.140984"><tspan
-           style="fill:#28220b"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.2522px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#eb371e;fill-opacity:1;stroke:#ffffff;stroke-width:2.75032;stroke-opacity:0.140984"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.2522px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d7ddf4;stroke:#000000"
            id="tspan47">17</tspan></text>
       <rect
          x="440"
@@ -180,18 +162,13 @@
          height="40"
          fill="#ffffff"
          id="rect7"
-         style="fill:#fcfdfe;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
+         style="fill:#030201;fill-opacity:1;stroke:#ffffff;stroke-opacity:1" />
       <path
          d="m 500,100 h 40"
          fill="none"
          id="path7"
          style="fill:#fffdfb;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
-      <path
-         d="m 540,100 -8,-5 m 8,5 -8,5"
-         fill="none"
-         id="path8"
-         style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
-      <!-- Узел 4 -->
+      <!-- &#1059;&#1079;&#1077;&#1083; 4 -->
       <rect
          x="560"
          y="80"
@@ -199,7 +176,7 @@
          height="40"
          fill="#ffffff"
          id="rect8"
-         style="fill:#fcfdfe;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
+         style="fill:#000104;fill-opacity:1;stroke:#ffffff;stroke-opacity:1" />
       <text
          x="796.58374"
          y="80.914825"
@@ -208,8 +185,8 @@
          stroke="none"
          id="text8"
          transform="scale(0.74313056,1.3456586)"
-         style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-width:2.75032;stroke-opacity:0.140984"><tspan
-           style="fill:#28220b"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.2522px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#eb371e;fill-opacity:1;stroke:#ffffff;stroke-width:2.75032;stroke-opacity:0.140984"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.2522px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d7ddf4;stroke:#000000"
            id="tspan48">23</tspan></text>
       <rect
          x="620"
@@ -218,18 +195,13 @@
          height="40"
          fill="#ffffff"
          id="rect9"
-         style="fill:#fffdfb;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
+         style="fill:#000204;fill-opacity:1;stroke:#ffffff;stroke-opacity:1" />
       <path
          d="m 680,100 h 40"
          fill="none"
          id="path9"
-         style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
-      <path
-         d="m 720,100 -8,-5 m 8,5 -8,5"
-         fill="none"
-         id="path10"
-         style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
-      <!-- Узел 5 -->
+         style="fill:#000104;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
+      <!-- &#1059;&#1079;&#1077;&#1083; 5 -->
       <rect
          x="740"
          y="80"
@@ -237,7 +209,7 @@
          height="40"
          fill="#ffffff"
          id="rect10"
-         style="fill:#fdfffd;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
+         style="fill:#000104;fill-opacity:1;stroke:#ffffff;stroke-width:2.1;stroke-dasharray:none;stroke-opacity:1" />
       <text
          x="1037.3845"
          y="80.1717"
@@ -246,8 +218,8 @@
          stroke="none"
          id="text10"
          transform="scale(0.74313055,1.3456586)"
-         style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-width:2.75032;stroke-opacity:0.140984"><tspan
-           style="fill:#28220b"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.2522px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#eb371e;fill-opacity:1;stroke:#ffffff;stroke-width:2.75032;stroke-opacity:0.140984"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.2522px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d7ddf4;stroke:#000000"
            id="tspan49">19</tspan></text>
       <rect
          x="800"
@@ -256,18 +228,13 @@
          height="40"
          fill="#ffffff"
          id="rect11"
-         style="fill:#f9fefd;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
+         style="fill:#000104;fill-opacity:1;stroke:#ffffff;stroke-width:2.1;stroke-dasharray:none;stroke-opacity:1" />
       <path
          d="m 860,100 h 40"
          fill="none"
          id="path11"
          style="fill:#fdfffd;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
-      <path
-         d="m 900,100 -8,-5 m 8,5 -8,5"
-         fill="none"
-         id="path12"
-         style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
-      <!-- Узел 6 (Последний) -->
+      <!-- &#1059;&#1079;&#1077;&#1083; 6 (&#1055;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1080;&#1081;) -->
       <rect
          x="920"
          y="80"
@@ -275,7 +242,7 @@
          height="40"
          fill="#ffffff"
          id="rect12"
-         style="fill:#fdfffd;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
+         style="fill:#000104;fill-opacity:1;stroke:#ffffff;stroke-opacity:1" />
       <text
          x="1282.2223"
          y="80.1717"
@@ -284,8 +251,8 @@
          stroke="none"
          id="text12"
          transform="scale(0.74313055,1.3456586)"
-         style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-width:2.75032;stroke-opacity:0.140984"><tspan
-           style="fill:#28220b"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.2522px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#eb371e;fill-opacity:1;stroke:#ffffff;stroke-width:2.75032;stroke-opacity:0.140984"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.2522px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d7ddf4;stroke:#000000"
            id="tspan50">33</tspan></text>
       <rect
          x="980"
@@ -294,7 +261,7 @@
          height="40"
          fill="#ffffff"
          id="rect13"
-         style="fill:#fffefd;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
+         style="fill:#000102;fill-opacity:1;stroke:#ffffff;stroke-opacity:1" />
       <line
          x1="971"
          y1="154"
@@ -309,7 +276,7 @@
          cy="198"
          r="1.5102882" />
     </g>
-    <!-- Таблица распределения памяти -->
+    <!-- &#1058;&#1072;&#1073;&#1083;&#1080;&#1094;&#1072; &#1088;&#1072;&#1089;&#1087;&#1088;&#1077;&#1076;&#1077;&#1083;&#1077;&#1085;&#1080;&#1103; &#1087;&#1072;&#1084;&#1103;&#1090;&#1080; -->
     <g
        id="memory"
        transform="translate(350,160)"
@@ -346,7 +313,7 @@
          id="g37"
          transform="translate(0,2)"
          style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984">
-        <!-- Каждая строка данных -->
+        <!-- &#1050;&#1072;&#1078;&#1076;&#1072;&#1103; &#1089;&#1090;&#1088;&#1086;&#1082;&#1072; &#1076;&#1072;&#1085;&#1085;&#1099;&#1093; -->
         <text
            x="264.2981"
            y="39.684612"
@@ -455,7 +422,7 @@
            id="line35"
            style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
       </g>
-      <!-- Вертикальная линия -->
+      <!-- &#1042;&#1077;&#1088;&#1090;&#1080;&#1082;&#1072;&#1083;&#1100;&#1085;&#1072;&#1103; &#1083;&#1080;&#1085;&#1080;&#1103; -->
       <line
          x1="200"
          y1="0"
@@ -464,7 +431,7 @@
          stroke="#000000"
          stroke-width="1.5"
          id="line37"
-         style="fill:#14c8e1;fill-opacity:1;stroke:#000000;stroke-opacity:0.140984" />
+         style="fill:#14c8e1;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;stroke-width:1.7;stroke-dasharray:none" />
       <text
          x="253.01768"
          y="310.95615"
@@ -491,75 +458,99 @@
            id="tspan43">33</tspan></text>
     </g>
   </g>
+  <path
+     d="m 862.05002,60.151604 h 40"
+     fill="none"
+     id="path3-1-8"
+     style="fill:#eb371e;fill-opacity:1;stroke:#fafbff;stroke-width:2.1;stroke-dasharray:none;stroke-opacity:0.988525" />
+  <path
+     d="m 682.05002,59.151604 h 40"
+     fill="none"
+     id="path3-1"
+     style="fill:#eb371e;fill-opacity:1;stroke:#fafbff;stroke-width:2.1;stroke-dasharray:none;stroke-opacity:0.988525" />
+  <path
+     d="m 500.05002,60.151604 h 40"
+     fill="none"
+     id="path3-6"
+     style="fill:#eb371e;fill-opacity:1;stroke:#fdfdff;stroke-width:2.1;stroke-dasharray:none;stroke-opacity:1" />
   <text
-     x="540.79358"
-     y="657.30774"
+     x="252.4662"
+     y="75.958115"
+     text-anchor="middle"
+     font-size="22.1355px"
+     stroke="none"
+     id="text3-7-7-5"
+     transform="scale(1.1057203,0.90438785)"
+     style="fill:#d7ddf4;fill-opacity:1;stroke-width:3.16222">Next</text>
+  <text
+     x="523.54614"
+     y="617.86554"
      id="text14-3-1-90-0-61-2"
      transform="scale(1.0407347,0.96085967)"
-     style="font-size:19.0433px;stroke-width:0;fill:#fcfefe;fill-opacity:0.68196702">14000000761340</text>
+     style="font-size:19.0433px;fill:#fcfefe;fill-opacity:0.681967;stroke-width:0">14000000761340</text>
   <text
-     x="540.79358"
-     y="577.17114"
+     x="523.54614"
+     y="537.72894"
      id="text14-3-1-90-0-8-9"
      transform="scale(1.0407347,0.96085967)"
-     style="font-size:19.0433px;stroke-width:0;fill:#fcfefe;fill-opacity:0.68196702">14000000761300</text>
+     style="font-size:19.0433px;fill:#fcfefe;fill-opacity:0.681967;stroke-width:0">14000000761300</text>
   <text
-     x="541.75439"
-     y="493.91235"
+     x="524.50696"
+     y="454.47018"
      id="text14-3-1-90-0-7"
      transform="scale(1.0407347,0.96085967)"
-     style="font-size:19.0433px;stroke-width:0;fill:#fcfefe;fill-opacity:0.68196702">14000000761260</text>
+     style="font-size:19.0433px;fill:#fcfefe;fill-opacity:0.681967;stroke-width:0">14000000761260</text>
   <text
-     x="540.79358"
-     y="409.61285"
+     x="523.54614"
+     y="370.17068"
      id="text14-3-1-90-3"
      transform="scale(1.0407347,0.96085967)"
-     style="font-size:19.0433px;stroke-width:0;fill:#fcfefe;fill-opacity:0.68196702">14000000761220</text>
+     style="font-size:19.0433px;fill:#fcfefe;fill-opacity:0.681967;stroke-width:0">14000000761220</text>
   <text
-     x="537.91101"
-     y="326.3541"
+     x="520.66357"
+     y="286.91193"
      id="text14-3-1-7"
      transform="scale(1.0407347,0.96085967)"
-     style="font-size:19.0433px;stroke-width:0;fill:#fcfefe;fill-opacity:0.68196702">14000000761180</text>
+     style="font-size:19.0433px;fill:#fcfefe;fill-opacity:0.681967;stroke-width:0">14000000761180</text>
   <text
-     x="535.02838"
-     y="244.13605"
+     x="517.78094"
+     y="204.69388"
      id="text14-3-3-4"
      transform="scale(1.0407347,0.96085967)"
-     style="font-size:19.0433px;stroke-width:0;fill:#fffef7;fill-opacity:1">14000000761140</text>
+     style="font-size:19.0433px;fill:#fffef7;fill-opacity:1;stroke-width:0">14000000761140</text>
   <text
-     x="353.42587"
-     y="576.13037"
+     x="336.17847"
+     y="536.68817"
      id="text14-3-1-90-0-6"
      transform="scale(1.0407347,0.96085967)"
      style="font-size:19.0433px;fill:#fffffe;fill-opacity:0.681967;stroke-width:0">14000000761280</text>
   <text
-     x="354.38675"
-     y="493.91238"
+     x="337.13934"
+     y="454.47021"
      id="text14-3-1-90-8"
      transform="scale(1.0407347,0.96085967)"
      style="font-size:19.0433px;fill:#fffffe;fill-opacity:0.681967;stroke-width:0">14000000761240</text>
   <text
-     x="355.3476"
-     y="411.69434"
+     x="338.10019"
+     y="372.25217"
      id="text14-3-1-9"
      transform="scale(1.0407347,0.96085967)"
      style="font-size:19.0433px;fill:#fffffe;fill-opacity:0.681967;stroke-width:0">14000000761200</text>
   <text
-     x="352.465"
-     y="200.4252"
+     x="335.21759"
+     y="160.98303"
      id="text14-3-5"
      transform="scale(1.0407347,0.96085967)"
      style="font-size:19.0433px;fill:#fffffe;fill-opacity:0.681967;stroke-width:0">14000000761100</text>
   <text
-     x="351.50415"
-     y="243.09534"
+     x="334.25674"
+     y="203.65317"
      id="text14-3"
      transform="scale(1.0407347,0.96085967)"
      style="font-size:19.0433px;fill:#fffffe;fill-opacity:0.681967;stroke-width:0">14000000761120</text>
   <g
      id="svg37-6"
-     transform="translate(7.99999,40.99997)"
+     transform="translate(-9.94999,3.1015743)"
      style="fill:#fffffe;fill-opacity:0.681967">
     <text
        x="346.69989"
@@ -590,45 +581,9 @@
       </g>
     </g>
   </g>
-  <text
-     x="749.83423"
-     y="117.8631"
-     text-anchor="middle"
-     font-size="22.1355px"
-     stroke="none"
-     id="text3-77"
-     transform="scale(1.1057203,0.90438785)"
-     style="stroke-width:3.16222">Next</text>
-  <text
-     x="592.47083"
-     y="120.07452"
-     text-anchor="middle"
-     font-size="22.1355px"
-     stroke="none"
-     id="text3-5"
-     transform="scale(1.1057203,0.90438785)"
-     style="stroke-width:3.16222">Next</text>
-  <text
-     x="428.77658"
-     y="116.75745"
-     text-anchor="middle"
-     font-size="22.1355px"
-     stroke="none"
-     id="text3-1"
-     transform="scale(1.1057203,0.90438785)"
-     style="stroke-width:3.16222">Next</text>
-  <text
-     x="268.69995"
-     y="120.07452"
-     text-anchor="middle"
-     font-size="22.1355px"
-     stroke="none"
-     id="text3-7"
-     transform="scale(1.1057203,0.90438785)"
-     style="stroke-width:3.16222">Next</text>
   <g
      id="svg37-8-3"
-     transform="translate(32.99998,198.99998)"
+     transform="translate(15.05,161.10158)"
      style="fill:#fffffe;fill-opacity:0.681967">
     <text
        x="322.67841"
@@ -639,7 +594,7 @@
   </g>
   <g
      id="svg37-8-3-5"
-     transform="translate(34.99998,277.99998)"
+     transform="translate(17.05,240.10158)"
      style="fill:#fffffe;fill-opacity:0.681967">
     <text
        x="322.67841"
@@ -650,7 +605,7 @@
   </g>
   <g
      id="svg37-8-3-5-3"
-     transform="translate(35.99998,356.99998)"
+     transform="translate(18.05,319.10158)"
      style="fill:#fffffe;fill-opacity:0.681967">
     <text
        x="322.67841"
@@ -671,19 +626,105 @@
     </g>
   </g>
   <text
-     x="106.81452"
-     y="118.96887"
+     x="90.58078"
+     y="77.06385"
      text-anchor="middle"
      font-size="22.1355px"
      stroke="none"
      id="text3-7-7"
      transform="scale(1.1057203,0.90438785)"
-     style="fill:#28220b;fill-opacity:1;stroke-width:3.16222">Next</text>
+     style="fill:#d7ddf4;fill-opacity:1;stroke-width:3.16222">Next</text>
   <rect
      style="fill:#14c89f;fill-opacity:1;stroke:#00000c;stroke-width:3.15;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:0.140984"
      id="rect50"
      width="6"
      height="2"
-     x="817"
-     y="344" />
+     x="799.05005"
+     y="306.10159" />
+  <text
+     x="417.06482"
+     y="75.958115"
+     text-anchor="middle"
+     font-size="22.1355px"
+     stroke="none"
+     id="text3-7-7-9"
+     transform="scale(1.1057203,0.90438785)"
+     style="fill:#d7ddf4;fill-opacity:1;stroke-width:3.16222">Next</text>
+  <text
+     x="579.85461"
+     y="75.958115"
+     text-anchor="middle"
+     font-size="22.1355px"
+     stroke="none"
+     id="text3-7-7-7"
+     transform="scale(1.1057203,0.90438785)"
+     style="fill:#d7ddf4;fill-opacity:1;stroke-width:3.16222">Next</text>
+  <text
+     x="748.9751"
+     y="78.169548"
+     text-anchor="middle"
+     font-size="22.1355px"
+     stroke="none"
+     id="text3-7-7-1"
+     transform="scale(1.1057203,0.90438785)"
+     style="fill:#d7ddf4;fill-opacity:1;stroke-width:3.16222">Next</text>
+  <path
+     d="m 320.05002,59.151604 h 40"
+     fill="none"
+     id="path3-8"
+     style="fill:#eb371e;fill-opacity:1;stroke:#fafbff;stroke-width:2.1;stroke-dasharray:none;stroke-opacity:0.988525" />
+  <text
+     x="691.04907"
+     y="215.16652"
+     text-anchor="middle"
+     font-size="22.1355px"
+     stroke="none"
+     id="text3-7-7-4"
+     transform="scale(1.1057203,0.90438785)"
+     style="fill:#d7ddf4;fill-opacity:1;stroke-width:3.16222">Next</text>
+  <text
+     x="689.2403"
+     y="303.62415"
+     text-anchor="middle"
+     font-size="22.1355px"
+     stroke="none"
+     id="text3-7-7-44"
+     transform="scale(1.1057203,0.90438785)"
+     style="fill:#d7ddf4;fill-opacity:1;stroke-width:3.16222">Next</text>
+  <text
+     x="689.2403"
+     y="392.08179"
+     text-anchor="middle"
+     font-size="22.1355px"
+     stroke="none"
+     id="text3-7-7-6"
+     transform="scale(1.1057203,0.90438785)"
+     style="fill:#d7ddf4;fill-opacity:1;stroke-width:3.16222">Next</text>
+  <text
+     x="689.2403"
+     y="483.85657"
+     text-anchor="middle"
+     font-size="22.1355px"
+     stroke="none"
+     id="text3-7-7-17"
+     transform="scale(1.1057203,0.90438785)"
+     style="fill:#d7ddf4;fill-opacity:1;stroke-width:3.16222">Next</text>
+  <text
+     x="692.85785"
+     y="566.78558"
+     text-anchor="middle"
+     font-size="22.1355px"
+     stroke="none"
+     id="text3-7-7-96"
+     transform="scale(1.1057203,0.90438785)"
+     style="fill:#d7ddf4;fill-opacity:1;stroke-width:3.16222">Next</text>
+  <text
+     x="693.76227"
+     y="650.82037"
+     text-anchor="middle"
+     font-size="22.1355px"
+     stroke="none"
+     id="text3-7-7-178"
+     transform="scale(1.1057203,0.90438785)"
+     style="fill:#d7ddf4;fill-opacity:1;stroke-width:3.16222">Next</text>
 </svg>
