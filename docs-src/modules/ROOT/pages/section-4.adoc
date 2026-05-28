@@ -163,11 +163,11 @@ image::section_4/Fig4_5_BeginEnd.jpg[width=50%, link=self, window="_blank"]
 
     The action flow represented in the diagram should only go from top to bottom. This approach is more convenient because in our cultural area texts are read in this way.
 
-    Avoid turning. The only case where lines have to change direction is where decisions are made. Turns are needed only when the algorithm requires making a choice between different actions. If there are no decisions, you need to go down. In any case, it is necessary to minimize the number of turns.
+        - Avoid turning. The only case where lines have to change direction is where decisions are made. Turns are needed only when the algorithm requires making a choice between different actions. If there are no decisions, you need to go down. In any case, it is necessary to minimize the number of turns.
 
-    Crossings of lines are absolutely not allowed. All attempts to apply crossings must be prevented. However, in case of an intersection, the editor will give an error.
+        - Crossings of lines are absolutely not allowed. All attempts to apply crossings must be prevented. However, in case of an intersection, the editor will give an error.
 
-    A top-down action prevents the use of arrows. The only exception is a while loop (Figure 4.6):
+        - A top-down action prevents the use of arrows. The only exception is a while loop (Figure 4.6):
 
 [.text-center]
 image::section_4/Fig4_6_While.jpg[width=50%]
@@ -247,7 +247,7 @@ An example of a composite construction "Loop With Arrow" (Figure 4.12):
 image::section_4/Fig4_12_While.jpg[width=100%]
 Figure 4.12. Drakon construction "Do-Check loop"
 
-=== 4.5. From Drakon-Diagram to Program Code
+=== 4.5. From Drakon-diagram to Program Code
 
 Each Drakon-diagram corresponds to a program module. Figure 4.13 shows the structure of the array sorting algorithm consisting of a series of separate modules (Drakon-diagrams) and the main Drakon-diagram containing the main program's main design.
 
