@@ -115,7 +115,6 @@ image::section_4/Fig4_2_InterfaceDrakonTech.jpg[width=100%, link=self, window="_
 
 In summary, the Drakon.Tech interface prioritizes visual communication and structured algorithm representation, making it a valuable tool for both programming and conceptual understanding of complex logical workflows.
 
-Ч
 
 === 4.3. Creating a Drakon-Diagram
 
