@@ -200,7 +200,7 @@ The values to which the expression in the "Choose" graph will be compared are co
 
 [.text-center]
 .Figure 4.9. Branch selection snippet (Select statement)
-image::section_4/Fig4_9_Select.svg[width=25%, link=self, window="_blank"]
+image::section_4/Fig4_9_Select.svg[width=100%, link=self, window="_blank"]
 
 ==== 4.4.3. Basic Loop Constructions
 
