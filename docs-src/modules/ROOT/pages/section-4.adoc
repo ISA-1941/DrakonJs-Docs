@@ -140,7 +140,7 @@ image::section_4/Fig4_3_primitive.svg[width=50%, link=self, window="_blank"]
 a) Primitive
 
 [.text-center]
-image::section_4/Fig4_3_siluet.svg[width=50%, link=self, window="_blank"]
+image::section_4/Fig4_3_siluet.svg[width=75%, link=self, window="_blank"]
 b) Silhouette
 
 .Figure 4.3. Two types of Drakon-diagrams
