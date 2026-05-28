@@ -151,16 +151,16 @@ image::section_4/Fig4_5_BeginEnd.jpg[width=25%, link=self, window="_blank"]
     - A top-down action prevents the use of arrows. The only exception is a while loop (Figure 4.6):
 
 [.text-center]
-image::section_4/Fig4_6_While.jpg[width=50%]
 .Figure 4.6. while loop type
+image::section_4/Fig4_6_While.jpg[width=50%]
 
-    When creating a Drakon-diagram, only straight vertical and horizontal lines should be used, as straight lines are easier to understand than curves.
+When creating a Drakon-diagram, only straight vertical and horizontal lines should be used, as straight lines are easier to understand than curves.
 
-    The distance between icons is set automatically.
+The distance between icons is set automatically.
 
-    Branching is done only to the right. Branching to the left should be excluded. Following this rule significantly increases the predictability and uniformity of charts.
+Branching is done only to the right. Branching to the left should be excluded. Following this rule significantly increases the predictability and uniformity of charts.
 
-    For convenience, the Drakon diagram can be moved around the work area using Shift + mouse wheel (horizontally) and using the mouse wheel (vertically).
+For convenience, the Drakon diagram can be moved around the work area using Shift + mouse wheel (horizontally) and using the mouse wheel (vertically).
 
 The reader may get the impression that creating Drakon-diagrams is a very complex process. It should be recalled once again that in the DrakonTech editor everything is quite simple and clear. The editor will not allow the violation of the stated rules, which is checked by the verify option.
 
