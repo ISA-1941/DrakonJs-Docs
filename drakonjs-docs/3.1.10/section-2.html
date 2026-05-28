@@ -210,8 +210,8 @@ This section provides a foundational overview of the JavaScript programming lang
 </div>
 </div>
 <div class="paragraph">
-<p>function main() {
-console.log("Hello, World!");
+<p>function main() {<br>
+console.log("Hello, World!");<br>
 }</p>
 </div>
 <div class="paragraph">
@@ -249,7 +249,7 @@ console.log("Hello, World!");
 </div>
 </div>
 <div class="paragraph">
-<p>main(); // Call the main function
+<p>main(); // Call the main function<br>
 }</p>
 </div>
 <div class="paragraph">
@@ -332,9 +332,9 @@ value = true; // Now a boolean</code></pre>
 <p>Variable names in JavaScript must follow certain rules:</p>
 </div>
 <div class="paragraph">
-<p>✅ Can contain letters, digits, $, and _ (but no spaces).
-✅ Cannot start with a digit.
-✅ Are case-sensitive (myVar and myvar are different).
+<p>✅ Can contain letters, digits, $, and _ (but no spaces).<br>
+✅ Cannot start with a digit.<br>
+✅ Are case-sensitive (myVar and myvar are different).<br>
 ✅ Use camelCase naming convention (userName, totalPrice).</p>
 </div>
 <div class="paragraph">
@@ -438,17 +438,17 @@ console.log(Salary of ${name} is $${salary});</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>const q = readline.createInterface({
-input: process.stdin,
-output: process.stdout
+<p>const q = readline.createInterface({<br>
+input: process.stdin,<br>
+output: process.stdout<br>
 });</p>
 </div>
 <div class="paragraph">
-<p>q.question("Enter last name: ", function(name) {
-q.question("Enter salary: ", function(salary) {
-console.log(Salary of ${name} is $${salary});
-q.close();
-});
+<p>q.question("Enter last name: ", function(name) {<br>
+q.question("Enter salary: ", function(salary) {<br>
+console.log(Salary of ${name} is $${salary});<br>
+q.close();<br>
+});<br>
 });</p>
 </div>
 <div class="paragraph">
@@ -541,12 +541,12 @@ q.close();
 </div>
 </div>
 <div class="paragraph">
-<p>if (ID === "Apple") {
-console.log("Enter your login and password");
-} else if (ID === "Google") {
-console.log("Your operating system is not supported");
-} else {
-console.log("Input error");
+<p>if (ID === "Apple") {<br>
+console.log("Enter your login and password");<br>
+} else if (ID === "Google") {<br>
+console.log("Your operating system is not supported");<br>
+} else {<br>
+console.log("Input error");<br>
 }</p>
 </div>
 <div class="paragraph">
@@ -605,15 +605,15 @@ default:
 </div>
 </div>
 <div class="paragraph">
-<p>switch (ID) {
-case "Apple":
-console.log("Enter your username and password");
-break;
-case "Google":
-console.log("Your operating system is not supported");
-break;
-default:
-console.log("Input error");
+<p>switch (ID) {<br>
+case "Apple":<br>
+console.log("Enter your username and password");<br>
+break;<br>
+case "Google":<br>
+console.log("Your operating system is not supported");<br>
+break;<br>
+default:<br>
+console.log("Input error");<br>
 }</p>
 </div>
 <div class="paragraph">
@@ -662,9 +662,9 @@ console.log(i);
 </div>
 </div>
 <div class="paragraph">
-<p>while (count &gt; 0) {
-console.log(count);
-count--;
+<p>while (count &gt; 0) {<br>
+console.log(count);<br>
+count--;<br>
 }</p>
 </div>
 <div class="paragraph">
@@ -679,9 +679,9 @@ count--;
 </div>
 </div>
 <div class="paragraph">
-<p>do {
-console.log(num);
-num--;
+<p>do {<br>
+console.log(num);<br>
+num--;<br>
 } while (num &gt; 0);</p>
 </div>
 <div class="paragraph">
@@ -753,8 +753,8 @@ let sum = 0;</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>for (let num of nums) {
-sum += num;
+<p>for (let num of nums) {<br>
+sum += num;<br>
 }</p>
 </div>
 <div class="paragraph">
@@ -772,10 +772,10 @@ sum += num;
 </div>
 </div>
 <div class="paragraph">
-<p>nums.forEach((num, index) &#8658; {
-if (num === 3) {
-console.log("Index:", index);
-}
+<p>nums.forEach((num, index) &#8658; {<br>
+if (num === 3) {<br>
+console.log("Index:", index);<br>
+}<br>
 });</p>
 </div>
 </div>
@@ -796,8 +796,8 @@ co: "France"
 </div>
 </div>
 <div class="paragraph">
-<p>for (let key in capitals) {
-console.log(${key} &#8594; ${capitals[key]});
+<p>for (let key in capitals) {<br>
+console.log(${key} &#8594; ${capitals[key]});<br>
 }</p>
 </div>
 </div>
@@ -818,8 +818,8 @@ console.log(${key} &#8594; ${capitals[key]});
 </div>
 </div>
 <div class="paragraph">
-<p>for (let [key, value] of capitals.entries()) {
-console.log(${key} &#8594; ${value});
+<p>for (let [key, value] of capitals.entries()) {<br>
+console.log(${key} &#8594; ${value});<br>
 }</p>
 </div>
 </div>
@@ -1206,7 +1206,7 @@ address: "Amarillo"
 </div>
 </div>
 <div class="paragraph">
-<p>console.log(Employee: ${employee.firstName} ${employee.lastName});
+<p>console.log(Employee: ${employee.firstName} ${employee.lastName});<br>
 console.log(Salary: $${employee.salary});</p>
 </div>
 <div class="paragraph">
@@ -1244,8 +1244,8 @@ console.log(employee);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>console.log(capitals.get("France")); // Access value by key
-capitals.set("Spain", "Madrid"); // Add new key-value pair
+<p>console.log(capitals.get("France")); // Access value by key<br>
+capitals.set("Spain", "Madrid"); // Add new key-value pair<br>
 console.log(capitals);</p>
 </div>
 <div class="paragraph">
@@ -1311,24 +1311,24 @@ console.log(capitals);</p>
 <p>🔹 Inheritance</p>
 </div>
 <div class="paragraph">
-<p>✅ Allows creating new classes (subclasses) based on existing ones (superclasses), inheriting their properties and methods.
-✅ Promotes code reuse and the creation of class hierarchies.
+<p>✅ Allows creating new classes (subclasses) based on existing ones (superclasses), inheriting their properties and methods.<br>
+✅ Promotes code reuse and the creation of class hierarchies.<br>
 ✅ In JavaScript, inheritance is implemented through prototypes or using classes (ES6).</p>
 </div>
 <div class="paragraph">
 <p>🔹 Encapsulation</p>
 </div>
 <div class="paragraph">
-<p>✅ Hides internal implementation details of a class and provides access to them only through public methods.
-✅ Protects data from unauthorized access and enhances code reliability.
+<p>✅ Hides internal implementation details of a class and provides access to them only through public methods.<br>
+✅ Protects data from unauthorized access and enhances code reliability.<br>
 ✅ In JavaScript, encapsulation is achieved through closures or modules.</p>
 </div>
 <div class="paragraph">
 <p>🔹 Polymorphism</p>
 </div>
 <div class="paragraph">
-<p>✅ Enables objects of different classes with a common interface to behave differently.
-✅ Makes code more flexible and adaptable to changes.
+<p>✅ Enables objects of different classes with a common interface to behave differently.<br>
+✅ Makes code more flexible and adaptable to changes.<br>
 ✅ In JavaScript, polymorphism is implemented through dynamic typing and method overriding.</p>
 </div>
 </div>
@@ -1351,25 +1351,25 @@ let _age = age; // private variable</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>return {
-getName: function() {
-return _name;
-},
-getAge: function() {
-return _age;
-},
-setAge: function(newAge) {
-if (newAge &gt; 0 &amp;&amp; newAge &lt; 150) {
-_age = newAge;
-}
-}
-};
+<p>return {<br>
+getName: function() {<br>
+return _name;<br>
+},<br>
+getAge: function() {<br>
+return _age;<br>
+},<br>
+setAge: function(newAge) {<br>
+if (newAge &gt; 0 &amp;&amp; newAge &lt; 150) {<br>
+_age = newAge;<br>
+}<br>
+}<br>
+};<br>
 }</p>
 </div>
 <div class="paragraph">
-<p>const person = createPerson("Ivan", 30);
-console.log(person.getName()); // Output: Ivan
-person.setAge(31);
+<p>const person = createPerson("Ivan", 30);<br>
+console.log(person.getName()); // Output: Ivan<br>
+person.setAge(31);<br>
 console.log(person.getAge()); // Output: 31</p>
 </div>
 <div class="paragraph">
@@ -1383,26 +1383,26 @@ bark: () =&gt; console.log("Woof!")
 </div>
 </div>
 <div class="paragraph">
-<p>const canWalk = (state) &#8658; ({
-walk: () &#8658; console.log("Walking&#8230;&#8203;")
+<p>const canWalk = (state) &#8658; ({<br>
+walk: () &#8658; console.log("Walking&#8230;&#8203;")<br>
 });</p>
 </div>
 <div class="paragraph">
-<p>const createDog = (name) &#8658; {
-let state = {
-name: name
-};
-return Object.assign(
-{},
-state,
-canBark(state),
-canWalk(state)
-);
+<p>const createDog = (name) &#8658; {<br>
+let state = {<br>
+name: name<br>
+};<br>
+return Object.assign(<br>
+{},<br>
+state,<br>
+canBark(state),<br>
+canWalk(state)<br>
+);<br>
 };</p>
 </div>
 <div class="paragraph">
-<p>const dog = createDog("Bobik");
-dog.bark(); // Output: Woof!
+<p>const dog = createDog("Bobik");<br>
+dog.bark(); // Output: Woof!<br>
 dog.walk(); // Output: Walking&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
@@ -1416,21 +1416,21 @@ calculateArea: () =&gt; Math.PI * radius * radius
 </div>
 </div>
 <div class="paragraph">
-<p>const createSquare = (side) &#8658; ({
-calculateArea: () &#8658; side * side
+<p>const createSquare = (side) &#8658; ({<br>
+calculateArea: () &#8658; side * side<br>
 });</p>
 </div>
 <div class="paragraph">
-<p>function printArea(shape) {
-console.log("Area:", shape.calculateArea());
+<p>function printArea(shape) {<br>
+console.log("Area:", shape.calculateArea());<br>
 }</p>
 </div>
 <div class="paragraph">
-<p>const circle = createCircle(5);
+<p>const circle = createCircle(5);<br>
 const square = createSquare(4);</p>
 </div>
 <div class="paragraph">
-<p>printArea(circle); // Output: Area: 78.53981633974483
+<p>printArea(circle); // Output: Area: 78.53981633974483<br>
 printArea(square); // Output: Area: 16</p>
 </div>
 </div>

@@ -437,13 +437,13 @@ const adjMatrix = Array(numVertices).fill().map(() =&gt; Array(numVertices).fill
 </div>
 </div>
 <div class="paragraph">
-<p>function addEdgeMatrix(u, v) {
-adjMatrix[u][v] = 1;
-adjMatrix[v][u] = 1; // For undirected graph
+<p>function addEdgeMatrix(u, v) {<br>
+adjMatrix[u][v] = 1;<br>
+adjMatrix[v][u] = 1; // For undirected graph<br>
 }</p>
 </div>
 <div class="paragraph">
-<p>addEdgeMatrix(0, 1);
+<p>addEdgeMatrix(0, 1);<br>
 addEdgeMatrix(1, 2);</p>
 </div>
 <div class="paragraph">
@@ -466,13 +466,13 @@ const adjList = Array(numVertices).fill().map(() =&gt; []);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>function addEdgeList(u, v) {
-adjList[u].push(v);
-adjList[v].push(u); // For undirected graph
+<p>function addEdgeList(u, v) {<br>
+adjList[u].push(v);<br>
+adjList[v].push(u); // For undirected graph<br>
 }</p>
 </div>
 <div class="paragraph">
-<p>addEdgeList(0, 1);
+<p>addEdgeList(0, 1);<br>
 addEdgeList(1, 2);</p>
 </div>
 <div class="paragraph">
@@ -494,13 +494,13 @@ addEdgeList(1, 2);</p>
 </div>
 </div>
 <div class="paragraph">
-<p>function addWeightedEdge(u, v, weight) {
-weightedAdjList[u].push({ node: v, weight });
-weightedAdjList[v].push({ node: u, weight }); // For undirected weighted graph
+<p>function addWeightedEdge(u, v, weight) {<br>
+weightedAdjList[u].push({ node: v, weight });<br>
+weightedAdjList[v].push({ node: u, weight }); // For undirected weighted graph<br>
 }</p>
 </div>
 <div class="paragraph">
-<p>addWeightedEdge(0, 1, 5);
+<p>addWeightedEdge(0, 1, 5);<br>
 addWeightedEdge(1, 2, 10);</p>
 </div>
 </div>
@@ -781,14 +781,14 @@ addWeightedEdge(1, 2, 10);</p>
 <div class="sect2">
 <h3 id="_visual_representation"><a class="anchor" href="#_visual_representation"></a>Visual Representation</h3>
 <div class="paragraph">
-<p>Stack (DFS) — LIFO
+<p>Stack (DFS) — LIFO<br>
 text</p>
 </div>
 <div class="paragraph">
-<p>Step 1: Stack [1, 3]     → pop 1 (last added)
-Step 2: Stack [3, 4, 2]  → pop 2 (last added!)
-Step 3: Stack [3, 4, 5]  → pop 5
-Step 4: Stack [3, 4]     → pop 4
+<p>Step 1: Stack [1, 3]     → pop 1 (last added)<br>
+Step 2: Stack [3, 4, 2]  → pop 2 (last added!)<br>
+Step 3: Stack [3, 4, 5]  → pop 5<br>
+Step 4: Stack [3, 4]     → pop 4<br>
 Step 5: Stack [3]        → pop 3</p>
 </div>
 <div class="admonitionblock note">
@@ -804,14 +804,14 @@ Vertex 3 was added first but processed last!
 </table>
 </div>
 <div class="paragraph">
-<p>Queue (BFS) — FIFO
+<p>Queue (BFS) — FIFO<br>
 text</p>
 </div>
 <div class="paragraph">
-<p>Step 1: Queue [1, 3]   → dequeue 1 (first added)
-Step 2: Queue [3, 2, 4] → dequeue 3 (first in queue)
-Step 3: Queue [2, 4, 5] → dequeue 2
-Step 4: Queue [4, 5]    → dequeue 4
+<p>Step 1: Queue [1, 3]   → dequeue 1 (first added)<br>
+Step 2: Queue [3, 2, 4] → dequeue 3 (first in queue)<br>
+Step 3: Queue [2, 4, 5] → dequeue 2<br>
+Step 4: Queue [4, 5]    → dequeue 4<br>
 Step 5: Queue [5]       → dequeue 5</p>
 </div>
 <div class="admonitionblock note">
@@ -981,8 +981,8 @@ Order of addition = order of processing!
 </div>
 </div>
 <div class="paragraph text-center">
-<p>Figure 9.8. Context Object: from structure creation (a) to data population (b)
-(a) — function creates an empty container with the required structure for storing search parameters and results.
+<p>Figure 9.8. Context Object: from structure creation (a) to data population (b)<br>
+(a) — function creates an empty container with the required structure for storing search parameters and results.<br>
 (b) — the container is populated with data during the search process, accumulating information.</p>
 </div>
 <div class="paragraph">
@@ -1517,13 +1517,13 @@ Order of addition = order of processing!
 <div class="sect2">
 <h3 id="_find_all_paths_from_0_to_5"><a class="anchor" href="#_find_all_paths_from_0_to_5"></a>Find all paths from 0 to 5</h3>
 <div class="paragraph">
-<p>Path Vertices: 0-1-4-3-5
-Distance: 101.28 km
+<p>Path Vertices: 0-1-4-3-5<br>
+Distance: 101.28 km<br>
 Price: 31.80 u.</p>
 </div>
 <div class="paragraph">
-<p>Path Vertices: 0-6-3-5
-Distance: 94.21 km
+<p>Path Vertices: 0-6-3-5<br>
+Distance: 94.21 km<br>
 Price: 21.60 u.</p>
 </div>
 <div class="paragraph">
