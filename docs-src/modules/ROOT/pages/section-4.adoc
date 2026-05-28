@@ -141,7 +141,7 @@ Creating a Drakon-diagram must follow certain rules. The selected icon is moved 
 - The diagram should have only one beginning and one end. The "end" graph is placed at the bottom of the diagram (Figure 4.5):
 
 [.text-center]
-.Figure 4.5. Diagram start/end
+.Figure 4.5. Drakon-diagram begin/end
 image::section_4/Fig4_5_BeginEnd.svg[width=20%, link=self, window="_blank"]
 
 The action flow represented in the diagram should only go from top to bottom. This approach is more convenient because in our cultural area texts are read in this way: from top to bottom. The top-down flow of actions is a fundamental principle of Drakon technology, which ensures that the algorithm's logic is easy to follow and understand.
