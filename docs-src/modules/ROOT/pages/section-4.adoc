@@ -140,7 +140,7 @@ image::section_4/Fig4_3_primitive.svg[width=50%, link=self, window="_blank"]
 a) Primitive
 
 [.text-center]
-image::section_4/Fig4_3_siluet.svg[width=75%, link=self, window="_blank"]
+image::section_4/Fig4_3_siluet.svg[width=100%, link=self, window="_blank"]
 b) Silhouette
 
 .Figure 4.3. Two types of Drakon-diagrams
@@ -149,17 +149,17 @@ To create a Drakon-diagram, the user chooses the necessary icons, filling them w
 
 [.text-center]
 .Figure 4.4. Set of DrakonTech icons
-image::section_4/Fig4_4_icons.jpg[width=75%, link=self, window="_blank"]
+image::section_4/Fig4_4_icons.png[width=75%, link=self, window="_blank"]
 
 Creating a Drakon-diagram must follow certain rules. The selected icon is moved by the mouse to the vertical line (skewer in Drakon technology terms) in the right place. Creating a Drakon-diagram must follow certain rules:
 
-    Creating a Drakon-diagram begins with a name that should reflect the purpose of the algorithm (function) and be located at the top.
+    - Creating a Drakon-diagram begins with a name that should reflect the purpose of the algorithm (function) and be located at the top.
 
-    The diagram should have only one beginning and one end. The "end" graph is placed at the bottom of the diagram (Figure 4.5):
+    - The diagram should have only one beginning and one end. The "end" graph is placed at the bottom of the diagram (Figure 4.5):
 
 [.text-center]
-image::section_4/Fig4_5_BeginEnd.jpg[width=15%]
-Figure 4.5. Diagram start/end
+.Figure 4.5. Diagram start/end
+image::section_4/Fig4_5_BeginEnd.jpg[width=50%, link=self, window="_blank"]
 
     The action flow represented in the diagram should only go from top to bottom. This approach is more convenient because in our cultural area texts are read in this way.
 
@@ -171,7 +171,7 @@ Figure 4.5. Diagram start/end
 
 [.text-center]
 image::section_4/Fig4_6_While.jpg[width=50%]
-Figure 4.6. while loop type
+.Figure 4.6. while loop type
 
     When creating a Drakon-diagram, only straight vertical and horizontal lines should be used, as straight lines are easier to understand than curves.
 
