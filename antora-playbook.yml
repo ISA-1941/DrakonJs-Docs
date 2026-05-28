@@ -9,7 +9,7 @@ content:
       start_path: docs-src
 asciidoc:
   attributes:
-    hardbreaks-option: ''      
+    hardbreaks-option: '@'      
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable

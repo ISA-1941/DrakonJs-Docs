@@ -159,7 +159,7 @@ Creating a Drakon-diagram must follow certain rules. The selected icon is moved 
 
 [.text-center]
 .Figure 4.5. Diagram start/end
-image::section_4/Fig4_5_BeginEnd.jpg[width=50%, link=self, window="_blank"]
+image::section_4/Fig4_5_BeginEnd.jpg[width=25%, link=self, window="_blank"]
 
     The action flow represented in the diagram should only go from top to bottom. This approach is more convenient because in our cultural area texts are read in this way.
 
