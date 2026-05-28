@@ -153,9 +153,9 @@ image::section_4/Fig4_4_icons.png[width=75%, link=self, window="_blank"]
 
 Creating a Drakon-diagram must follow certain rules. The selected icon is moved by the mouse to the vertical line (skewer in Drakon technology terms) in the right place. Creating a Drakon-diagram must follow certain rules:
 
-    - Creating a Drakon-diagram begins with a name that should reflect the purpose of the algorithm (function) and be located at the top.
+- Creating a Drakon-diagram begins with a name that should reflect the purpose of the algorithm (function) and be located at the top.
 
-    - The diagram should have only one beginning and one end. The "end" graph is placed at the bottom of the diagram (Figure 4.5):
+- The diagram should have only one beginning and one end. The "end" graph is placed at the bottom of the diagram (Figure 4.5):
 
 [.text-center]
 .Figure 4.5. Diagram start/end
@@ -163,11 +163,11 @@ image::section_4/Fig4_5_BeginEnd.jpg[width=25%, link=self, window="_blank"]
 
     The action flow represented in the diagram should only go from top to bottom. This approach is more convenient because in our cultural area texts are read in this way.
 
-        - Avoid turning. The only case where lines have to change direction is where decisions are made. Turns are needed only when the algorithm requires making a choice between different actions. If there are no decisions, you need to go down. In any case, it is necessary to minimize the number of turns.
+    - Avoid turning. The only case where lines have to change direction is where decisions are made. Turns are needed only when the algorithm requires making a choice between different actions. If there are no decisions, you need to go down. In any case, it is necessary to minimize the number of turns.
 
-        - Crossings of lines are absolutely not allowed. All attempts to apply crossings must be prevented. However, in case of an intersection, the editor will give an error.
+    - Crossings of lines are absolutely not allowed. All attempts to apply crossings must be prevented. However, in case of an intersection, the editor will give an error.
 
-        - A top-down action prevents the use of arrows. The only exception is a while loop (Figure 4.6):
+    - A top-down action prevents the use of arrows. The only exception is a while loop (Figure 4.6):
 
 [.text-center]
 image::section_4/Fig4_6_While.jpg[width=50%]
