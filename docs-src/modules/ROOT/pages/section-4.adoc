@@ -136,11 +136,11 @@ In summary, the Drakon.Tech interface prioritizes visual communication and struc
 The web application DrakonTech provides for the creation of two types of Drakon-diagrams; the choice is determined by the complexity of the algorithm (Figure 4.3):
 
 [.text-center]
-image::section_4/Fig4_3_primitive.svg[width=75%, link=self, window="_blank"]
+image::section_4/Fig4_3_primitive.svg[width=50%, link=self, window="_blank"]
 a) Primitive
 
 [.text-center]
-image::section_4/Fig4_3_siluet.svg[width=100%]
+image::section_4/Fig4_3_siluet.svg[width=50%, link=self, window="_blank"]
 b) Silhouette
 
 .Figure 4.3. Two types of Drakon-diagrams
@@ -149,7 +149,7 @@ To create a Drakon-diagram, the user chooses the necessary icons, filling them w
 
 [.text-center]
 .Figure 4.4. Set of DrakonTech icons
-image::section_4/Fig4_4_icons.svg[width=75%, link=self, window="_blank"]
+image::section_4/Fig4_4_icons.jpg[width=75%, link=self, window="_blank"]
 
 Creating a Drakon-diagram must follow certain rules. The selected icon is moved by the mouse to the vertical line (skewer in Drakon technology terms) in the right place. Creating a Drakon-diagram must follow certain rules:
 
