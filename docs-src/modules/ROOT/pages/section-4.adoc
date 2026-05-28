@@ -142,19 +142,19 @@ Creating a Drakon-diagram must follow certain rules. The selected icon is moved 
 
 [.text-center]
 .Figure 4.5. Diagram start/end
-image::section_4/Fig4_5_BeginEnd.jpg[width=25%, link=self, window="_blank"]
+image::section_4/Fig4_5_BeginEnd.svg[width=50%, link=self, window="_blank"]
 
-    The action flow represented in the diagram should only go from top to bottom. This approach is more convenient because in our cultural area texts are read in this way.
+The action flow represented in the diagram should only go from top to bottom. This approach is more convenient because in our cultural area texts are read in this way: from top to bottom. The top-down flow of actions is a fundamental principle of Drakon technology, which ensures that the algorithm's logic is easy to follow and understand.
 
-    - Avoid turning. The only case where lines have to change direction is where decisions are made. Turns are needed only when the algorithm requires making a choice between different actions. If there are no decisions, you need to go down. In any case, it is necessary to minimize the number of turns.
+* Avoid turning. The only case where lines have to change direction is where decisions are made. Turns are needed only when the algorithm requires making a choice between different actions. If there are no decisions, you need to go down. In any case, it is necessary to minimize the number of turns.
 
-    - Crossings of lines are absolutely not allowed. All attempts to apply crossings must be prevented. However, in case of an intersection, the editor will give an error.
+* Crossings of lines are absolutely not allowed. All attempts to apply crossings must be prevented. However, in case of an intersection, the editor will give an error.
 
-    - A top-down action prevents the use of arrows. The only exception is a while loop (Figure 4.6):
+* A top-down action prevents the use of arrows. The only exception is a while loop (Figure 4.6):
 
 [.text-center]
 .Figure 4.6. while loop type
-image::section_4/Fig4_6_While.jpg[width=50%]
+image::section_4/Fig4_6_While.jpg[width=25%, link=self, window="_blank"]
 
 When creating a Drakon-diagram, only straight vertical and horizontal lines should be used, as straight lines are easier to understand than curves.
 
