@@ -180,7 +180,7 @@ The graphical representation of the basic element of the linear structure in Jav
 
 [.text-center]
 .Figure 4.7. Linear structure of a Drakon-diagram
-image::section_4/Fig4_7_linear.svg[width=75%, link=self, window="_blank"]
+image::section_4/Fig4_7_linear.svg[width=50%, link=self, window="_blank"]
 
 ==== 4.4.2. Basic Structures of Branched Structure
 
@@ -192,7 +192,7 @@ The Drakon snippet of the construction "if (condition), then (action) otherwise 
 
 [.text-center]
 .Figure 4.8. Diagram snippet with `if-else` construction
-image::section_4/Fig4_8_ifelse.jpg[width=25%, link=self, window="_blank"]
+image::section_4/Fig4_8_ifelse.svg[width=50%, link=self, window="_blank"]
 
 b) Select Construction (Switch Statement)
 
@@ -200,7 +200,7 @@ The values to which the expression in the "Choose" graph will be compared are co
 
 [.text-center]
 .Figure 4.9. Branch selection snippet (Select statement)
-image::section_4/Fig4_9_Select.jpg[width=25%, link=self, window="_blank"]
+image::section_4/Fig4_9_Select.svg[width=25%, link=self, window="_blank"]
 
 ==== 4.4.3. Basic Loop Constructions
 
