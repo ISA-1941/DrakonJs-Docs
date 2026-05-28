@@ -37,13 +37,16 @@ Drakon.Tech is a visual programming language with a strong emphasis on clarity a
 
 Purpose:
 
-    Improving Algorithm Comprehension: Drakon technology uses visual diagrams to represent algorithms, making them easier to grasp than traditional text-based code. This visual approach helps to clarify the flow of logic and the relationships between different parts of an algorithm.
+****
+* **Improving Algorithm Comprehension: Drakon technology uses visual diagrams to represent algorithms, making them easier to grasp than traditional text-based code. This visual approach helps to clarify the flow of logic and the relationships between different parts of an algorithm.
 
-    Enhancing Communication: The standardized visual language facilitates communication between developers, as well as between developers and non-technical stakeholders. This is especially valuable in complex projects where clear communication is essential.
+* **Enhancing Communication: The standardized visual language facilitates communication between developers, as well as between developers and non-technical stakeholders. This is especially valuable in complex projects where clear communication is essential.
 
-    Increasing Software Reliability: By promoting clear and structured algorithms, Drakon technology helps to reduce errors and improve the reliability of software. This is particularly important in critical applications, such as those in aerospace or medical fields.
+* **Increasing Software Reliability: By promoting clear and structured algorithms, Drakon technology helps to reduce errors and improve the reliability of software. This is particularly important in critical applications, such as those in aerospace or medical fields.
 
-    Facilitating Learning: Drakon technology serves as an excellent tool for teaching and learning programming concepts, as it helps to visualize abstract ideas.
+* **Facilitating Learning: Drakon technology serves as an excellent tool for teaching and learning programming concepts, as it helps to visualize abstract ideas.
+
+****
 
 Potential for Developing Algorithmic Thinking:
 
