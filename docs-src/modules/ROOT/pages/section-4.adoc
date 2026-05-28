@@ -86,50 +86,36 @@ The interface of Drakon.Tech is designed with a focus on visual clarity and ease
 [.text-center]
 .Figure 4.2. DrakonTech Interface
 image::section_4/Fig4_2_InterfaceDrakonTech.jpg[width=100%, link=self, window="_blank"]
+=== 4.2.1. Core Principles
 
-==== 4.2.1. Core Principles
+* **Visual Flow:** The primary focus is on a graphical workspace where users construct algorithms using visual icons and connecting lines. This emphasizes the flow of control and data.
+* **Simplified Icons:** Drakon uses a limited set of standardized icons, each representing a specific action or decision. This keeps the diagrams clean and easy to interpret.
+* **Structured Layout:** The language enforces a structured layout, which helps to maintain consistency and readability. This is a key feature that distinguishes Drakon from free-form flowcharting tools.
 
-    Visual Flow: The primary focus is on a graphical workspace where users construct algorithms using visual icons and connecting lines. This emphasizes the flow of control and data.
+=== 4.2.2. Typical Interface Elements
 
-    Simplified Icons: Drakon uses a limited set of standardized icons, each representing a specific action or decision. This keeps the diagrams clean and easy to interpret.
+* **Canvas/Workspace:** This is the central area where users create and edit Drakon diagrams. Users can drag and drop icons, connect them with lines, and add text labels.
+* **Icon Palette/Toolbar:** This provides access to the various Drakon icons, such as:
+** Start and end points
+** Action boxes
+** Decision diamonds
+** Loop structures
+* **Properties/Inspector Panel:** This panel allows users to modify the properties of selected icons, such as:
+** Text labels
+** Conditions for decision points
+** Data values
+* **Code Generation/Output Panel:** In Drakon.Tech, which is designed for code generation, this area displays the generated code in the target programming language (e.g., JavaScript).
+* **Navigation and Zoom Controls:** These allow users to navigate large diagrams and zoom in or out for detailed editing.
 
-    Structured Layout: The language enforces a structured layout, which helps to maintain consistency and readability. This is a key feature that distinguishes Drakon from free-form flowcharting tools.
+==== Key Characteristics:
 
-==== 4.2.2. Typical Interface Elements
+* **Clarity:** The interface is designed to minimize visual clutter and maximize the clarity of the algorithm.
+* **Efficiency:** The tools and layout are optimized for efficient diagram creation and editing.
+* **Standardization:** The interface adheres to the Drakon language's standards, ensuring consistent and understandable diagrams.
 
-    Canvas/Workspace: This is the central area where users create and edit Drakon diagrams. Users can drag and drop icons, connect them with lines, and add text labels.
+In summary, the Drakon.Tech interface prioritizes visual communication and structured algorithm representation, making it a valuable tool for both programming and conceptual understanding of complex logical workflows.
 
-    Icon Palette/Toolbar: This provides access to the various Drakon icons, such as:
-
-        Start and end points
-
-        Action boxes
-
-        Decision diamonds
-
-        Loop structures
-
-    Properties/Inspector Panel: This panel allows users to modify the properties of selected icons, such as:
-
-        Text labels
-
-        Conditions for decision points
-
-        Data values
-
-    Code Generation/Output Panel: In Drakon.Tech, which is designed for code generation, this area displays the generated code in the target programming language (e.g., JavaScript).
-
-    Navigation and Zoom Controls: These allow users to navigate large diagrams and zoom in or out for detailed editing.
-
-Key Characteristics:
-
-    Clarity: The interface is designed to minimize visual clutter and maximize the clarity of the algorithm.
-
-    Efficiency: The tools and layout are optimized for efficient diagram creation and editing.
-
-    Standardization: The interface adheres to the Drakon language's standards, ensuring consistent and understandable diagrams.
-
-In summary, the Drakon.Tech interface prioritizes visual communication and structured algorithm representation, making it a valuable tool for both programming and conceptual understanding.
+Ч
 
 === 4.3. Creating a Drakon-Diagram
 
