@@ -29,7 +29,7 @@ An alternative to flowchart imaging is Drakon-based algorithm engineering, which
 
 [.text-center]
 .Figure 4.1. Comparison of a visual representation of an algorithm in the form of a flowchart and a Drakon-diagram
-image::section_4/Fig4_1_chartVSdiagram[width=100%, link=self, window="_blank"]
+image::section_4/Fig4_1_chartVSdiagram.png[width=100%, link=self, window="_blank"]
 
 ==== 4.1.2. Algorithmic Language Drakon
 
