@@ -146,20 +146,18 @@
 <div class="paragraph">
 <p>Once the algorithm is correct and finite, the most important characteristic of the algorithm is efficiency, which is achieved by meeting the following requirements:</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>The algorithm should effectively use the resources available to the system.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>The computational time (time taken to generate output data corresponding to particular input data) should be minimal.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>The memory used by the algorithm should also be as small as possible.</pre>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The algorithm should effectively use the resources available to the system.</p>
+</li>
+<li>
+<p>The computational time (time taken to generate output data corresponding to particular input data) should be minimal.</p>
+</li>
+<li>
+<p>The memory used by the algorithm should also be as small as possible.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>In most computational tasks, it is necessary to strive for a compromise between computation time and occupied memory. In other words, when choosing a method for solving a computational problem, you need to decide on priorities: what is more important — computation time or amount of memory occupied. It may seem that this is not so important for modern computers. However, when solving complex problems associated with the processing of huge amounts of data, for example, for artificial intelligence problems or for bioinformatics problems (e.g., genome decoding), the search for the optimal combination of computing time and computer memory becomes decisive. In this regard, we will define the term "algorithm complexity" as a measure of the amount of time and/or space required to solve a problem, depending on the size of the data.</p>
@@ -176,30 +174,24 @@
 <div class="paragraph">
 <p>Thus, when assessing the complexity of algorithms, they are evaluated on an abstract machine with random access to memory, which makes it possible to ignore the low-level parameters of the computing device (processor memory size, multitasking, etc.). The model of such a machine consists of memory and a processor, which work as follows:</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>Memory consists of cells, each of which has an address and can store one data element.</pre>
+<div class="ulist">
+<ul>
+<li>
+<p>Memory consists of cells, each of which has an address and can store one data element.</p>
+</li>
+<li>
+<p>Each memory call takes one unit of time, regardless of the number of the addressable cell.</p>
+</li>
+<li>
+<p>The amount of memory is sufficient to execute any algorithm.</p>
+</li>
+<li>
+<p>The processor performs any elementary operation in one time step.</p>
+</li>
+</ul>
 </div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Each memory call takes one unit of time, regardless of the number of the addressable cell.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>The amount of memory is sufficient to execute any algorithm.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>The processor performs any elementary operation in one time step.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Loops and functions are not considered elementary operations.</pre>
-</div>
+<div class="paragraph">
+<p>*Loops and functions are not considered elementary operations.</p>
 </div>
 <div class="paragraph">
 <p>The complexity T(n) of an algorithm associated with estimates of its complexity is determined by counting the number of operations performed. For example, consider the algorithm for finding the maximum element of an array:</p>
@@ -252,20 +244,18 @@ maxNumber = array[index];<br>
 <div class="paragraph">
 <p>Asymptotic notations such as Omega notation (Ω), Theta notation (Θ), and Big-O notation (O) that reflect the three time bounds of an algorithm (lower, middle, and upper) are used to quantify the complexity of algorithms.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>Omega notation (Ω) represents the lower bound of the algorithm's running time, which characterizes the best algorithm complexity in terms of achieving efficiency. For any value of n of the source data, the minimum time required by the algorithm is set to Ω(f(n)).</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Big-O notation (O) represents the upper bound on the execution time of the algorithm, which characterizes the worst complexity of the algorithm in terms of efficiency. In most practical cases, this notation is used to evaluate the effectiveness of algorithms, since it is the worst-case scenario of the computational process that the software developer must evaluate.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Theta notation (Θ) represents both an upper and lower bound on the execution time of algorithms and is used to analyze their average complexity.</pre>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Omega notation (Ω) represents the lower bound of the algorithm&#8217;s running time, which characterizes the best algorithm complexity in terms of achieving efficiency. For any value of n of the source data, the minimum time required by the algorithm is set to Ω(f(n)).</p>
+</li>
+<li>
+<p>Big-O notation (O) represents the upper bound on the execution time of the algorithm, which characterizes the worst complexity of the algorithm in terms of efficiency. In most practical cases, this notation is used to evaluate the effectiveness of algorithms, since it is the worst-case scenario of the computational process that the software developer must evaluate.</p>
+</li>
+<li>
+<p>Theta notation (Θ) represents both an upper and lower bound on the execution time of algorithms and is used to analyze their average complexity.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>Consider in more detail the Big-O notation that determines the upper bound of any algorithm — that is, the algorithm cannot take longer than the upper bound.</p>
@@ -415,13 +405,11 @@ pow = pow * i * j;<br>
 </div>
 <div class="imageblock unresolved text-center">
 <div class="content">
-<img src="_images/Fig5_1_Comparison.jpg" alt="Fig5 1 Comparison" width="100%">
+<img src="_images/Fig5_1_Comparison.png" alt="Fig5 1 Comparison" width="100%">
 </div>
 </div>
 <div class="paragraph">
-<p>Figure 5.1. Comparison of general complexities</p>
-</div>
-<div class="paragraph">
+<div class="title">Figure 5.1. Comparison of general complexities</div>
 <p>As shown in this table and graph, as the complexity of the function increases, the number of computations or the time required to perform the function can increase significantly. Next, the algorithms will be described with estimates of their complexity.</p>
 </div>
 </div>
@@ -430,15 +418,15 @@ pow = pow * i * j;<br>
 <div class="paragraph">
 <p>Another characteristic of the computational complexity of algorithms is space complexity, estimated by the amount of memory required by the algorithm in its life cycle. This space consists of a fixed part and a variable part.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>The fixed part is the space required to store simple variables and constants, as well as the program size, which is independent of the complexity of the task.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>The variable part is the space required by variables whose size depends entirely on the size of the task. For example, recursion stack space, dynamic memory allocation, etc.</pre>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The fixed part is the space required to store simple variables and constants, as well as the program size, which is independent of the complexity of the task.</p>
+</li>
+<li>
+<p>The variable part is the space required by variables whose size depends entirely on the size of the task. For example, recursion stack space, dynamic memory allocation, etc.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>Space complexity is evaluated as O(1) if only the input data set is used. If the problem requires auxiliary memory of the same size as the input memory (memory to store the original array), then the space complexity is evaluated as O(n). In the case of a two-dimensional array or matrix, space complexity may be O(n²).</p>
