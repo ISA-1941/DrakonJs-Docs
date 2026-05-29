@@ -126,6 +126,7 @@ a) Primitive
 image::section_4/Fig4_3_siluet.svg[width=100%, link=self, window="_blank"]
 b) Silhouette
 
+[.text-center]
 .Figure 4.3. Two types of Drakon-diagrams
 
 To create a Drakon-diagram, the user chooses the necessary icons, filling them with the corresponding operators of the JavaScript programming language (Figure 4.4).
