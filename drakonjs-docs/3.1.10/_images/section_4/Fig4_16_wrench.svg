@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="420"
+   height="340"
+   id="svg32"
+   sodipodi:docname="Fig4_16_wrench.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview32"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="2.7176471"
+     inkscape:cx="209.92424"
+     inkscape:cy="168.16017"
+     inkscape:window-width="1920"
+     inkscape:window-height="1152"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg32" />
+  <defs
+     id="defs1" />
+  <g
+     id="g32">
+    <rect
+       fill="#202020"
+       stroke="none"
+       x="0"
+       y="0"
+       width="420"
+       height="340"
+       id="rect1" />
+    <g
+       transform="translate(110,40)"
+       id="g31">
+      <rect
+         fill="#dddd90"
+         stroke="none"
+         x="-1"
+         y="0"
+         width="2"
+         height="60"
+         id="rect2" />
+      <rect
+         fill="#dddd90"
+         stroke="none"
+         x="-1"
+         y="60"
+         width="2"
+         height="60"
+         id="rect3" />
+      <rect
+         fill="#dddd90"
+         stroke="none"
+         x="-1"
+         y="120"
+         width="2"
+         height="60"
+         id="rect4" />
+      <path
+         fill="none"
+         stroke="#dddd90"
+         paint-order="fill stroke markers"
+         d="m 0.5,120.5 h 200"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         id="path4" />
+      <rect
+         fill="#dddd90"
+         stroke="none"
+         x="200"
+         y="120"
+         width="1"
+         height="60"
+         id="rect5" />
+      <rect
+         fill="#dddd90"
+         stroke="none"
+         x="200"
+         y="180"
+         width="1"
+         height="40"
+         id="rect6" />
+      <rect
+         fill="#dddd90"
+         stroke="none"
+         x="-1"
+         y="180"
+         width="2"
+         height="40"
+         id="rect7" />
+      <rect
+         fill="#dddd90"
+         stroke="none"
+         x="-1"
+         y="220"
+         width="2"
+         height="40"
+         id="rect8" />
+      <path
+         fill="none"
+         stroke="#dddd90"
+         paint-order="fill stroke markers"
+         d="m 0.5,220.5 h 200"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         id="path8" />
+      <path
+         fill="none"
+         stroke="#dddd90"
+         paint-order="fill stroke markers"
+         d="m 0.5,0.5 h 130"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         id="path9" />
+      <path
+         fill="#000000"
+         stroke="none"
+         paint-order="stroke fill markers"
+         d="m -30,280 a 20,20 0 0 1 0,-40 h 60 v 0 a 20,20 0 0 1 0,40 z"
+         id="path10" />
+      <path
+         fill="none"
+         stroke="#98984d"
+         paint-order="fill stroke markers"
+         d="m -29.5,280.5 a 20,20 0 0 1 0,-40 h 60 v 0 a 20,20 0 0 1 0,40 z"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         id="path11" />
+      <text
+         fill="#ffffcc"
+         stroke="none"
+         font-family="Consolas, Monaco, Cousine"
+         font-size="14px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="-13"
+         y="264"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text11">End</text>
+      <rect
+         fill="#000000"
+         stroke="none"
+         x="-90"
+         y="40"
+         width="180"
+         height="40"
+         id="rect11" />
+      <rect
+         fill="none"
+         stroke="#98984d"
+         x="-89.5"
+         y="40.5"
+         width="180"
+         height="40"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         id="rect12" />
+      <text
+         fill="#ffffcc"
+         stroke="none"
+         font-family="Consolas, Monaco, Cousine"
+         font-size="14px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="-80"
+         y="64"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text12">sum</text>
+      <text
+         fill="#95dcfc"
+         stroke="none"
+         font-family="Consolas, Monaco, Cousine"
+         font-size="14px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="-47"
+         y="64"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text13">=</text>
+      <text
+         fill="#ffffcc"
+         stroke="none"
+         font-family="Consolas, Monaco, Cousine"
+         font-size="14px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="-31"
+         y="64"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text14">sumDigits</text>
+      <text
+         fill="#95dcfc"
+         stroke="none"
+         font-family="Consolas, Monaco, Cousine"
+         font-size="14px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="45"
+         y="64"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text15">(</text>
+      <text
+         fill="#ffffcc"
+         stroke="none"
+         font-family="Consolas, Monaco, Cousine"
+         font-size="14px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="53"
+         y="64"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text16">n</text>
+      <text
+         fill="#95dcfc"
+         stroke="none"
+         font-family="Consolas, Monaco, Cousine"
+         font-size="14px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="61"
+         y="64"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text17">)</text>
+      <path
+         fill="#000000"
+         stroke="none"
+         paint-order="stroke fill markers"
+         d="m -92,120 20,-20 H 72 l 20,20 -20,20 H -72 Z"
+         id="path17" />
+      <path
+         fill="none"
+         stroke="#98984d"
+         paint-order="fill stroke markers"
+         d="m -91.5,120.5 20,-20 h 144 l 20,20 -20,20 h -144 z"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         id="path18" />
+      <text
+         fill="#ffffcc"
+         stroke="none"
+         font-family="Consolas, Monaco, Cousine"
+         font-size="14px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="-70"
+         y="124"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text18">sum</text>
+      <text
+         fill="#95dcfc"
+         stroke="none"
+         font-family="Consolas, Monaco, Cousine"
+         font-size="14px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="-37"
+         y="124"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text19">&lt;</text>
+      <text
+         fill="#ffffff"
+         stroke="none"
+         font-family="Consolas, Monaco, Cousine"
+         font-size="14px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="-21"
+         y="124"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text20">10</text>
+      <text
+         fill="#ffffcc"
+         stroke="none"
+         font-family="Consolas, Monaco, Cousine"
+         font-size="14px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="-33"
+         y="153"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text21">Yes</text>
+      <text
+         fill="#ffffcc"
+         stroke="none"
+         font-family="Consolas, Monaco, Cousine"
+         font-size="14px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="98"
+         y="113"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text22">No</text>
+      <rect
+         fill="#000000"
+         stroke="none"
+         x="-90"
+         y="160"
+         width="180"
+         height="40"
+         id="rect22" />
+      <rect
+         fill="none"
+         stroke="#98984d"
+         x="-89.5"
+         y="160.5"
+         width="180"
+         height="40"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         id="rect23" />
+      <text
+         fill="#80ff80"
+         stroke="none"
+         font-family="Consolas, Monaco, Cousine"
+         font-size="14px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="-80"
+         y="184"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text23">return</text>
+      <text
+         fill="#ffffcc"
+         stroke="none"
+         font-family="Consolas, Monaco, Cousine"
+         font-size="14px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="-22"
+         y="184"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text24">sum</text>
+      <rect
+         fill="#000000"
+         stroke="none"
+         x="110"
+         y="160"
+         width="180"
+         height="40"
+         id="rect24" />
+      <rect
+         fill="none"
+         stroke="#98984d"
+         x="110.5"
+         y="160.5"
+         width="180"
+         height="40"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         id="rect25" />
+      <text
+         fill="#80ff80"
+         stroke="none"
+         font-family="Consolas, Monaco, Cousine"
+         font-size="14px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="120"
+         y="184"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text25">return</text>
+      <text
+         fill="#ffffcc"
+         stroke="none"
+         font-family="Consolas, Monaco, Cousine"
+         font-size="14px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="178"
+         y="184"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text26">digRoot</text>
+      <text
+         fill="#95dcfc"
+         stroke="none"
+         font-family="Consolas, Monaco, Cousine"
+         font-size="14px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="237"
+         y="184"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text27">(</text>
+      <text
+         fill="#ffffcc"
+         stroke="none"
+         font-family="Consolas, Monaco, Cousine"
+         font-size="14px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="245"
+         y="184"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text28">sum</text>
+      <text
+         fill="#95dcfc"
+         stroke="none"
+         font-family="Consolas, Monaco, Cousine"
+         font-size="14px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="270"
+         y="184"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text29">)</text>
+      <path
+         fill="#000000"
+         stroke="none"
+         paint-order="stroke fill markers"
+         d="m -40,20 a 20,20 0 0 1 0,-40 h 80 v 0 a 20,20 0 0 1 0,40 z"
+         id="path29" />
+      <path
+         fill="none"
+         stroke="#98984d"
+         paint-order="fill stroke markers"
+         d="m -39.5,20.5 a 20,20 0 0 1 0,-40 h 80 v 0 a 20,20 0 0 1 0,40 z"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         id="path30" />
+      <text
+         fill="#ffffcc"
+         stroke="none"
+         font-family="Consolas, Monaco, Cousine"
+         font-size="18px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="-38"
+         y="6"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text30">digRoot</text>
+      <rect
+         fill="#000000"
+         stroke="none"
+         x="80"
+         y="-20"
+         width="100"
+         height="40"
+         id="rect30" />
+      <rect
+         fill="none"
+         stroke="#98984d"
+         x="80.5"
+         y="-19.5"
+         width="100"
+         height="40"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         id="rect31" />
+      <text
+         fill="#ffffcc"
+         stroke="none"
+         font-family="Consolas, Monaco, Cousine"
+         font-size="14px"
+         font-style="normal"
+         font-weight="normal"
+         text-decoration="normal"
+         x="90"
+         y="4"
+         text-anchor="start"
+         dominant-baseline="alphabetic"
+         id="text31">n</text>
+    </g>
+  </g>
+</svg>
