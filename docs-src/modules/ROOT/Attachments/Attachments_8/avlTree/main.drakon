@@ -27,7 +27,7 @@
         },
         "8": {
             "type": "action",
-            "one": "13",
+            "one": "6",
             "content": "tree.root = insertNode(tree.root, value)"
         },
         "10": {
@@ -44,11 +44,6 @@
             "type": "action",
             "one": "21",
             "content": "console.log(\"In-order:\", result)"
-        },
-        "13": {
-            "type": "action",
-            "one": "6",
-            "content": "// console.log(\"value = \", value)\n"
         },
         "20": {
             "type": "branch",

@@ -1,16 +1,16 @@
 {
     "history": [
         {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/removeNode.drakon",
+            "whenOpened": "2026-05-29T06:58:44.169Z"
+        },
+        {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/findNode.drakon",
             "whenOpened": "2026-05-28T18:43:22.983Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/insertNode.drakon",
             "whenOpened": "2026-05-28T18:43:20.404Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/removeNode.drakon",
-            "whenOpened": "2026-05-28T18:43:02.856Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/preOrder.drakon",

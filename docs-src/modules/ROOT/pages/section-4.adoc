@@ -212,7 +212,7 @@ a) Loop-For Construction
 
 [.text-center]
 .Figure 4.10. Drakon construction "Loop-For"
-image::section_4/Fig4_10_forCycle.jpg[width=25%, link=self, window="_blank"]
+image::section_4/Fig4_10_forCycle.svg[width=25%, link=self, window="_blank"]
 
 b) Loop for each Construction
 
@@ -220,7 +220,7 @@ The "foreach" loop executes the operator or block of operators for each array el
 
 [.text-center]
 .Figure 4.11. Drakon construction "Loop for each"
-image::section_4/Fig4_11_foreach.jpg[width=25%, link=self, window="_blank"]
+image::section_4/Fig4_11_foreach.svg[width=25%, link=self, window="_blank"]
 
 c) Loop With Arrow Construction
 
@@ -228,7 +228,7 @@ An example of a composite construction "Loop With Arrow" (Figure 4.12):
 
 [.text-center]
 .Figure 4.12. Drakon construction "Do-Check loop"
-image::section_4/Fig4_12_While.jpg[width=25%, link=self, window="_blank"]
+image::section_4/Fig4_12_While.svg[width=25%, link=self, window="_blank"]
 
 === 4.5. From Drakon-diagram to Program Code
 
