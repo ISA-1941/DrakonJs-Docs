@@ -86,8 +86,6 @@ Binary search is performed as follows:
 
 The DRAKON-diagram of the binary search algorithm is represented in Figure 6.3 (the main() module is similar to the previous algorithm):
 
-image::section_6/Fig6_3_searchValue.svg[width=50%, link=self, window="_blank"]
-
 [.text-center]
 .Figure 6.3. DRAKON-diagram of the Binary Search Algorithm
 image::section_6/Fig6_3_searchValue.svg[width=50%, link=self, window="_blank"]
@@ -98,36 +96,33 @@ Time complexity of the binary search algorithm belongs to class O(log n). This m
 
 There are three possibilities for a singly linked list. First, the desired value is missing from the list. Second, the desired value appears once. Third, the desired value appears multiple times. You can also set the task of removing duplicates — nodes that are redundant. To solve these problems, it is necessary to create a singly linked list whose items contain values "Smith A.", "Shafler B.", "Wiley D.", "Brown G.", "Black H.". In this list you should delete the entry "Brown G." and then add a new entry "Singer B." placing it after the entry "Wiley D.". After that, you should delete duplicates of the entry "Shafler B." leaving only one. The corresponding DRAKON-diagrams are presented in .Figure 6.4.
 
-image::section_6/Fig6_4a_main.png[width=50%, link=self, window="_blank"]
+image::section_6/Fig6_4a_main.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 a) Function main() as the Entry Point for Linked List Operations
 
-image::section_6/Fig6_4b_pushFront.png[width=50%, link=self, window="_blank"]
-image::section_6/Fig6_4b_pushBack.png[width=50%, link=self, window="_blank"]
+image::section_6/Fig6_4b_pushFront.svg[width=50%, link=self, window="_blank"]
+image::section_6/Fig6_4b_pushBack.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 b) Functions for Pushing New Items (pushFront(list, val) and pushBack(list, val))
 
-
-
-image::section_6/Fig6_4c_searchData.png[width=50%, link=self, window="_blank"]
+image::section_6/Fig6_4c_searchData.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 c) Function for Searching (searchData(val))
 
-image::section_6/Fig6_4d_removeVal.png[width=50%, link=self, window="_blank"]
+image::section_6/Fig6_4d_removeVal.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 d) Function for Deletion (removeVal(val))
 
-image::section_6/Fig6_4e_pushVal.png[width=50%, link=self, window="_blank"]
-image::section_6/Fig6_4e_nodeWithVal.png[width=50%, link=self, window="_blank"]
+image::section_6/Fig6_4e_nodeWithVal.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 e) Function for Inserting by Value (pushVal and nodeWithVal)
 
-image::section_6/Fig6_4f_removeDupli.png[width=75%, link=self, window="_blank"]
+image::section_6/Fig6_4f_removeDupli.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
 f) Function for Removing Duplicates (removeDupli)
