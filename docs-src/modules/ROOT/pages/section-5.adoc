@@ -150,7 +150,7 @@ Table 5.1. Comparison of general complexities
 Or in graphic form (Figure 5.1):
 
 [.text-center]
-image::{imagesdir}/Fig5_1_Comparison.png[width=100%]
+image::section_5/Fig5_1_Comparison.png[width=100%, link=self, window="_blank"]
 .Figure 5.1. Comparison of general complexities
 
 As shown in this table and graph, as the complexity of the function increases, the number of computations or the time required to perform the function can increase significantly. Next, the algorithms will be described with estimates of their complexity.
