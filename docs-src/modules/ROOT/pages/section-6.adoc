@@ -11,17 +11,17 @@ There are many search algorithms. Their complexity varies from simple sequential
 
 There is no single algorithm to solve all search problems. Some algorithms run faster than others but require additional RAM to run. Others run very quickly but can only be used for pre-sorted arrays. At the same time, the analysis of search algorithms is somewhat different from sorting algorithms. In particular, there is no stability problem for them. However, there may be situations that require the introduction of new criteria of complexity and its assessment. In general, all algorithms are reduced to the following steps:
 
-    Establishing the property of the elements of the source set; in most cases, these are the values of the elements.
+* Establishing the property of the elements of the source set; in most cases, these are the values of the elements.
 
-    Matching the value of the element with the reference property (for absolute properties) or comparing the properties of two elements (for relative properties).
+* Matching the value of the element with the reference property (for absolute properties) or comparing the properties of two elements (for relative properties).
 
-    Traversing the elements of the set.
+* Traversing the elements of the set.
 
 In principle, search algorithms differ between search methods and search strategies. Based on the type of search operation, these algorithms are usually classified into two categories:
 
-    Sequential Search: The list or array is traversed sequentially and each element is checked.
+* Sequential Search: The list or array is traversed sequentially and each element is checked.
 
-    Interval Search: These algorithms are specifically designed for searching in sorted data structures. These types of search algorithms are much more efficient than linear search because they repeatedly target the center of the search structure and divide the search space in half.
+Interval Search: These algorithms are specifically designed for searching in sorted data structures. These types of search algorithms are much more efficient than linear search because they repeatedly target the center of the search structure and divide the search space in half.
 
 This section examines the primary algorithms used for searching data structures. To enhance the understanding of the practical applications of these algorithms, DRAKON-diagrams are provided along with assessments of their time and space complexity.
 
@@ -57,7 +57,7 @@ a) Linear Search of Unsorted Data
 
 In the case of a linear search for an element in an unordered dataset, for example, in an array or in a slice, the simplest algorithm is to examine all elements until the desired value is found (Figure 6.1).
 
-image::{imagesdir}/Fig6_1_searchElement.png[width=50%, link="{imagesdir}/Fig6_1_searchElement.svg", window="_blank"]
+image::section_6/Fig6_1_searchElement.png[width=100%, link=self, window="_blank"]
 
 [.text-center]
 Figure 6.1. DRAKON-diagram of the Linear Search Algorithm
