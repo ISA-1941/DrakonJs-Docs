@@ -58,7 +58,7 @@ a) Linear Search of Unsorted Data
 In the case of a linear search for an element in an unordered dataset, for example, in an array or in a slice, the simplest algorithm is to examine all elements until the desired value is found (.Figure 6.1).
 
 [.text-center]
-..Figure 6.1. DRAKON-diagram of the Linear Search Algorithm
+.Figure 6.1. DRAKON-diagram of the Linear Search Algorithm
 image::section_6/Fig6_1_searchElement.svg[width=50%, link=self, window="_blank"]
 
 This algorithm is not very efficient, but it works on arbitrary collections. Time complexity: O(n). In the worst case (the desired element is in the last position), to find the element you need to traverse all elements. Here "n" is the size of the slice. Space complexity: O(1). No additional memory is required to accommodate the slice. Another worst-case scenario is the absence of the required element.
@@ -94,7 +94,7 @@ Time complexity of the binary search algorithm belongs to class O(log n). This m
 
 === 6.3. Searching in a Singly Linked List
 
-There are three possibilities for a singly linked list. First, the desired value is missing from the list. Second, the desired value appears once. Third, the desired value appears multiple times. You can also set the task of removing duplicates — nodes that are redundant. To solve these problems, it is necessary to create a singly linked list whose items contain values "Smith A.", "Shafler B.", "Wiley D.", "Brown G.", "Black H.". In this list you should delete the entry "Brown G." and then add a new entry "Singer B." placing it after the entry "Wiley D.". After that, you should delete duplicates of the entry "Shafler B." leaving only one. The corresponding DRAKON-diagrams are presented in .Figure 6.4.
+There are three possibilities for a singly linked list. First, the desired value is missing from the list. Second, the desired value appears once. Third, the desired value appears multiple times. You can also set the task of removing duplicates — nodes that are redundant. To solve these problems, it is necessary to create a singly linked list whose items contain values "Smith A.", "Shafler B.", "Wiley D.", "Brown G.", "Black H.". In this list you should delete the entry "Brown G." and then add a new entry "Singer B." placing it after the entry "Wiley D.". After that, you should delete duplicates of the entry "Shafler B." leaving only one. The corresponding DRAKON-diagrams are presented in Figure 6.4.
 
 image::section_6/Fig6_4a_main.svg[width=50%, link=self, window="_blank"]
 
@@ -160,7 +160,7 @@ Consider constructing a hash table of size m = 15 for a collection of integers f
 
 |===
 0	1	2	3	4	5	6	7	8	9	10	11	12	13	14
-===														
+|===														
 
 A hash function that establishes a relationship between an element and its corresponding slot must accept any element from the dataset (specifically ranging from 0 to 120) and return an integer that corresponds to a slot number between 0 and 14. The algorithm implementing the remainder method sequentially processes each element from the original set, dividing it by 15 and returning the remainder as the hash value. This can be expressed as h(item) = item mod 15. For instance, the hash code for the element 119 is calculated as 119 mod 15 = 14 (since 119 - 15 × 7 = 14), thus placing the value 119 into the corresponding slot.
 
@@ -185,37 +185,43 @@ Table 6.1. Hash table of 15 slots
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14
 |===
 
-Thus, the remainder method converts a collection of 120 integers into a hash table of 15 slots. The search for an element is now greatly accelerated as it takes two steps: first, the hash function h = (x % m) computes the hash index, and then the search is performed within a bucket (approximately 7–8 elements). The algorithm based on the remainder method is represented by the following DRAKON-diagrams (.Figure 6.5). Here hInsert is the module for filling slots with elements using the hash function, hLookup is the module for searching for an element in the hash table, and hTraverse is the module for traversing the hash table.
+Thus, the remainder method converts a collection of 120 integers into a hash table of 15 slots. The search for an element is now greatly accelerated as it takes two steps: first, the hash function h = (x % m) computes the hash index, and then the search is performed within a bucket (approximately 7–8 elements). The algorithm based on the remainder method is represented by the following DRAKON-diagrams (Figure 6.5). Here hInsert is the module for filling slots with elements using the hash function, hLookup is the module for searching for an element in the hash table, and hTraverse is the module for traversing the hash table.
 
 The implementation of the basic hash table functions using the hash function is as follows:
 
-    Create a HashTable structure of size m to store objects.
+* Create a HashTable structure of size m to store objects.
 
-    Compute the object's hash code by passing it through the hash function.
+* Compute the object's hash code by passing it through the hash function.
 
-    Obtain the bucket hash indices where the objects will be stored.
+* Obtain the bucket hash indices where the objects will be stored.
 
-    Store these objects in the designated bucket.
+* Store these objects in the designated bucket.
 
-DRAKON-diagrams of algorithms for implementing the main functions of working with hash tables are shown in .Figure 6.5.
+DRAKON-diagrams of algorithms for implementing the main functions of working with hash tables are shown in Figure 6.5.
 
+image::section_6/Fig6_5a_hashInsert.png[width=100%, link=self, window="_blank"]
+
+[.text-center]
 a) Hash Table Creation Function (hInsert)
 
-image::section_6/Fig6_5a_hashInsert.png[width=50%, link=self, window="_blank"]
+image::section_6/Fig6_5b_searchHash.svg[width=100%, link=self, window="_blank"]
 
+
+[.text-center]
 b) Hash Table Search Function (hLookup)
 
-image::section_6/Fig6_5b_searchHash.png[width=50%, link=self, window="_blank"]
+image::section_6/Fig6_5b_searchHash.svg[width=100%, link=self, window="_blank"]
 
+
+[.text-center]
 c) Hash Table Traversal Function (hTraverse)
 
-image::section_6/Fig6_5c_hashTraverse.png[width=50%, link=self, window="_blank"]
+image::section_6/Fig6_5c_hashTraverse.svg[width=100%, link=self, window="_blank"]
 
+[.text-center]
 d) Hash Table Deletion Function (hRemove)
 
-Consider the algorithm for removing an element from the hash table. Suppose we delete element 74. First, the bucket containing the item to be removed is determined. Then, the algorithm traverses the elements of this bucket, where after each node.Value == value check, the current element is stored in the nodePrev variable. If the condition is met, the nodePrev.nextNode field is changed to skip the deleted element (.Figure 6.5d):
-
-image::section_6/Fig6_5d_hashRemove.png[width=75%, link=self, window="_blank"]
+Consider the algorithm for removing an element from the hash table. Suppose we delete element 74. First, the bucket containing the item to be removed is determined. Then, the algorithm traverses the elements of this bucket, where after each node.Value == value check, the current element is stored in the nodePrev variable. If the condition is met, the nodePrev.nextNode field is changed to skip the deleted element (Figure 6.5d):
 
 [.text-center]
 .Figure 6.5. DRAKON-diagrams of hash table algorithms
