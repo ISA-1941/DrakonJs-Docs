@@ -279,13 +279,11 @@ Click on any image to open it in a separate window for detailed viewing.</p>
 <div class="paragraph">
 <p>In the case of a linear search for an element in an unordered dataset, for example, in an array or in a slice, the simplest algorithm is to examine all elements until the desired value is found (Figure 6.1).</p>
 </div>
-<div class="imageblock unresolved">
+<div class="imageblock text-center">
 <div class="content">
-<a class="image" href="section_6/Fig6_1_searchElement.png" target="_blank" rel="noopener"><img src="section_6/Fig6_1_searchElement.png" alt="Fig6 1 searchElement" width="100%"></a>
+<a class="image" href="_images/section_6/Fig6_1_searchElement.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_1_searchElement.svg" alt="Fig6 1 searchElement" width="50%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 6.1. DRAKON-diagram of the Linear Search Algorithm</p>
+<div class="title">Figure 6.1. DRAKON-diagram of the Linear Search Algorithm</div>
 </div>
 <div class="paragraph">
 <p>This algorithm is not very efficient, but it works on arbitrary collections. Time complexity: O(n). In the worst case (the desired element is in the last position), to find the element you need to traverse all elements. Here "n" is the size of the slice. Space complexity: O(1). No additional memory is required to accommodate the slice. Another worst-case scenario is the absence of the required element.</p>
@@ -296,9 +294,9 @@ Click on any image to open it in a separate window for detailed viewing.</p>
 <div class="paragraph">
 <p>If the elements of the dataset are sorted in ascending or descending order, finding the desired element is much more efficient than in an unordered linear search. In many cases, you do not have to traverse the whole list. For example, when traversing an ascending sorted list, if an element with a higher value than the search key is encountered, the search is stopped. This approach saves time and increases productivity. Figure 6.2 shows the DRAKON-diagram of this algorithm.</p>
 </div>
-<div class="imageblock unresolved">
+<div class="imageblock">
 <div class="content">
-<a class="image" href="_images/Fig6_2_dataSorted.svg" target="_blank" rel="noopener"><img src="_images/Fig6_2_dataSorted.png" alt="Fig6 2 dataSorted" width="50%"></a>
+<a class="image" href="_images/section_6/Fig6_2_dataSorted.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_2_dataSorted.svg" alt="Fig6 2 dataSorted" width="50%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
@@ -333,9 +331,9 @@ Click on any image to open it in a separate window for detailed viewing.</p>
 <div class="paragraph">
 <p>The DRAKON-diagram of the binary search algorithm is represented in Figure 6.3 (the main() module is similar to the previous algorithm):</p>
 </div>
-<div class="imageblock unresolved">
+<div class="imageblock">
 <div class="content">
-<a class="image" href="_images/Fig6_3_searchValue.svg" target="_blank" rel="noopener"><img src="_images/Fig6_3_searchValue.png" alt="Fig6 3 searchValue" width="50%"></a>
+<a class="image" href="_images/section_6/Fig6_3_searchValue.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_3_searchValue.svg" alt="Fig6 3 searchValue" width="50%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
@@ -353,59 +351,59 @@ Click on any image to open it in a separate window for detailed viewing.</p>
 <div class="paragraph">
 <p>a) Function main()</p>
 </div>
-<div class="imageblock unresolved">
+<div class="imageblock">
 <div class="content">
-<a class="image" href="_images/Fig6_4a_main.svg" target="_blank" rel="noopener"><img src="_images/Fig6_4a_main.png" alt="Fig6 4a main" width="50%"></a>
+<a class="image" href="section_6/Fig6_4a_main.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_4a_main.png" alt="Fig6 4a main" width="50%"></a>
 </div>
 </div>
 <div class="paragraph">
 <p>b) Functions for Pushing New Items (pushFront(list, val) and pushBack(list, val))</p>
 </div>
-<div class="imageblock unresolved">
+<div class="imageblock">
 <div class="content">
-<a class="image" href="_images/Fig6_4b_pushFront.svg" target="_blank" rel="noopener"><img src="_images/Fig6_4b_pushFront.png" alt="Fig6 4b pushFront" width="50%"></a>
+<a class="image" href="section_6/Fig6_4b_pushFront.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_4b_pushFront.png" alt="Fig6 4b pushFront" width="50%"></a>
 </div>
 </div>
-<div class="imageblock unresolved">
+<div class="imageblock">
 <div class="content">
-<a class="image" href="_images/Fig6_4b_pushBack.svg" target="_blank" rel="noopener"><img src="_images/Fig6_4b_pushBack.png" alt="Fig6 4b pushBack" width="50%"></a>
+<a class="image" href="section_6/Fig6_4b_pushBack.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_4b_pushBack.png" alt="Fig6 4b pushBack" width="50%"></a>
 </div>
 </div>
 <div class="paragraph">
 <p>c) Function for Searching (searchData(val))</p>
 </div>
-<div class="imageblock unresolved">
+<div class="imageblock">
 <div class="content">
-<a class="image" href="_images/Fig6_4c_searchData.svg" target="_blank" rel="noopener"><img src="_images/Fig6_4c_searchData.png" alt="Fig6 4c searchData" width="50%"></a>
+<a class="image" href="section_6/Fig6_4c_searchData.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_4c_searchData.png" alt="Fig6 4c searchData" width="50%"></a>
 </div>
 </div>
 <div class="paragraph">
 <p>d) Function for Deletion (removeVal(val))</p>
 </div>
-<div class="imageblock unresolved">
+<div class="imageblock">
 <div class="content">
-<a class="image" href="_images/Fig6_4d_removeVal.svg" target="_blank" rel="noopener"><img src="_images/Fig6_4d_removeVal.png" alt="Fig6 4d removeVal" width="50%"></a>
+<a class="image" href="section_6/Fig6_4d_removeVal.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_4d_removeVal.png" alt="Fig6 4d removeVal" width="50%"></a>
 </div>
 </div>
 <div class="paragraph">
 <p>e) Function for Inserting by Value (pushVal and nodeWithVal)</p>
 </div>
-<div class="imageblock unresolved">
+<div class="imageblock">
 <div class="content">
-<a class="image" href="_images/Fig6_4e_pushVal.svg" target="_blank" rel="noopener"><img src="_images/Fig6_4e_pushVal.png" alt="Fig6 4e pushVal" width="50%"></a>
+<a class="image" href="section_6/Fig6_4e_pushVal.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_4e_pushVal.png" alt="Fig6 4e pushVal" width="50%"></a>
 </div>
 </div>
-<div class="imageblock unresolved">
+<div class="imageblock">
 <div class="content">
-<a class="image" href="_images/Fig6_4e_nodeWithVal.svg" target="_blank" rel="noopener"><img src="_images/Fig6_4e_nodeWithVal.png" alt="Fig6 4e nodeWithVal" width="50%"></a>
+<a class="image" href="section_6/Fig6_4e_nodeWithVal.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_4e_nodeWithVal.png" alt="Fig6 4e nodeWithVal" width="50%"></a>
 </div>
 </div>
 <div class="paragraph">
 <p>f) Function for Removing Duplicates (removeDupli)</p>
 </div>
-<div class="imageblock unresolved">
+<div class="imageblock">
 <div class="content">
-<a class="image" href="_images/Fig6_4f_RemoveDupli.svg" target="_blank" rel="noopener"><img src="_images/Fig6_4f_removeDupli.png" alt="Fig6 4f removeDupli" width="75%"></a>
+<a class="image" href="section_6/Fig6_4f_RemoveDupli.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_4f_removeDupli.png" alt="Fig6 4f removeDupli" width="75%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
@@ -511,21 +509,21 @@ DRAKON-diagrams of algorithms for implementing the main functions of working wit
 <br>
 a) Hash Table Creation Function (hInsert)<br>
 <br>
-image::_images/Fig6_5a_hashInsert.png[width=50%, link="_images/Fig6_5a_hashInsert.svg", window="_blank"]<br>
+image::section_6/Fig6_5a_hashInsert.png[width=50%, link="section_6/Fig6_5a_hashInsert.svg", window="_blank"]<br>
 <br>
 b) Hash Table Search Function (hLookup)<br>
 <br>
-image::_images/Fig6_5b_searchHash.png[width=50%, link="_images/Fig6_5b_searchHash.svg", window="_blank"]<br>
+image::section_6/Fig6_5b_searchHash.png[width=50%, link="section_6/Fig6_5b_searchHash.svg", window="_blank"]<br>
 <br>
 c) Hash Table Traversal Function (hTraverse)<br>
 <br>
-image::_images/Fig6_5c_hashTraverse.png[width=50%, link="_images/Fig6_5c_hashTraverse.svg", window="_blank"]<br>
+image::section_6/Fig6_5c_hashTraverse.png[width=50%, link="section_6/Fig6_5c_hashTraverse.svg", window="_blank"]<br>
 <br>
 d) Hash Table Deletion Function (hRemove)<br>
 <br>
 Consider the algorithm for removing an element from the hash table. Suppose we delete element 74. First, the bucket containing the item to be removed is determined. Then, the algorithm traverses the elements of this bucket, where after each node.Value == value check, the current element is stored in the nodePrev variable. If the condition is met, the nodePrev.nextNode field is changed to skip the deleted element (Figure 6.5d):<br>
 <br>
-image::_images/Fig6_5d_hashRemove.png[width=75%, link="_images/Fig6_5d_hashRemove.svg", window="_blank"]<br>
+image::section_6/Fig6_5d_hashRemove.png[width=75%, link="section_6/Fig6_5d_hashRemove.svg", window="_blank"]<br>
 <br>
 [.text-center]<br>
 Figure 6.5. DRAKON-diagrams of hash table algorithms<br>
