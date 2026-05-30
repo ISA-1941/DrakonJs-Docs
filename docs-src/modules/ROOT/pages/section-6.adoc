@@ -55,76 +55,85 @@ Click on any image to open it in a separate window for detailed viewing.
 
 a) Linear Search of Unsorted Data
 
-In the case of a linear search for an element in an unordered dataset, for example, in an array or in a slice, the simplest algorithm is to examine all elements until the desired value is found (Figure 6.1).
+In the case of a linear search for an element in an unordered dataset, for example, in an array or in a slice, the simplest algorithm is to examine all elements until the desired value is found (.Figure 6.1).
 
 [.text-center]
-.Figure 6.1. DRAKON-diagram of the Linear Search Algorithm
+..Figure 6.1. DRAKON-diagram of the Linear Search Algorithm
 image::section_6/Fig6_1_searchElement.svg[width=50%, link=self, window="_blank"]
 
 This algorithm is not very efficient, but it works on arbitrary collections. Time complexity: O(n). In the worst case (the desired element is in the last position), to find the element you need to traverse all elements. Here "n" is the size of the slice. Space complexity: O(1). No additional memory is required to accommodate the slice. Another worst-case scenario is the absence of the required element.
 
 b) Linear Search of Sorted Data
 
-If the elements of the dataset are sorted in ascending or descending order, finding the desired element is much more efficient than in an unordered linear search. In many cases, you do not have to traverse the whole list. For example, when traversing an ascending sorted list, if an element with a higher value than the search key is encountered, the search is stopped. This approach saves time and increases productivity. Figure 6.2 shows the DRAKON-diagram of this algorithm.
+If the elements of the dataset are sorted in ascending or descending order, finding the desired element is much more efficient than in an unordered linear search. In many cases, you do not have to traverse the whole list. For example, when traversing an ascending sorted list, if an element with a higher value than the search key is encountered, the search is stopped. This approach saves time and increases productivity. .Figure 6.2 shows the DRAKON-diagram of this algorithm.
 
 image::section_6/Fig6_2_dataSorted.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
-Figure 6.2. DRAKON-diagram of the Search in a Sorted Array
+.Figure 6.2. DRAKON-diagram of the Search in a Sorted Array
 
 === 6.2. Binary Search for Data in a Sorted Structure
 
 Binary search is performed as follows:
 
-    Determine the value of the element in the middle of the data structure. The resulting value is compared to the value being searched for.
+* Determine the value of the element in the middle of the data structure. The resulting value is compared to the value being searched for.
 
-    If the search value is less than the middle value, the search is carried out in the first half of the elements; otherwise, in the second half.
+* If the search value is less than the middle value, the search is carried out in the first half of the elements; otherwise, in the second half.
 
-    The search continues by determining the value of the middle element in the selected half and comparing it to the key.
+* The search continues by determining the value of the middle element in the selected half and comparing it to the key.
 
-    The process continues until an element with the search value is found or the search interval is empty.
+* The process continues until an element with the search value is found or the search interval is empty.
 
 The DRAKON-diagram of the binary search algorithm is represented in Figure 6.3 (the main() module is similar to the previous algorithm):
 
 image::section_6/Fig6_3_searchValue.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
-Figure 6.3. DRAKON-diagram of the Binary Search Algorithm
+.Figure 6.3. DRAKON-diagram of the Binary Search Algorithm
+image::section_6/Fig6_3_searchValue.svg[width=50%, link=self, window="_blank"]
 
 Time complexity of the binary search algorithm belongs to class O(log n). This means that the asymptotic increase in the time taken by the function to process an input set of size n will not exceed log n. Space complexity: O(1) — no extra space is required.
 
 === 6.3. Searching in a Singly Linked List
 
-There are three possibilities for a singly linked list. First, the desired value is missing from the list. Second, the desired value appears once. Third, the desired value appears multiple times. You can also set the task of removing duplicates — nodes that are redundant. To solve these problems, it is necessary to create a singly linked list whose items contain values "Smith A.", "Shafler B.", "Wiley D.", "Brown G.", "Black H.". In this list you should delete the entry "Brown G." and then add a new entry "Singer B." placing it after the entry "Wiley D.". After that, you should delete duplicates of the entry "Shafler B." leaving only one. The corresponding DRAKON-diagrams are presented in Figure 6.4.
+There are three possibilities for a singly linked list. First, the desired value is missing from the list. Second, the desired value appears once. Third, the desired value appears multiple times. You can also set the task of removing duplicates — nodes that are redundant. To solve these problems, it is necessary to create a singly linked list whose items contain values "Smith A.", "Shafler B.", "Wiley D.", "Brown G.", "Black H.". In this list you should delete the entry "Brown G." and then add a new entry "Singer B." placing it after the entry "Wiley D.". After that, you should delete duplicates of the entry "Shafler B." leaving only one. The corresponding DRAKON-diagrams are presented in .Figure 6.4.
 
-a) Function main()
-
-image::section_6/Fig6_4a_main.png[width=50%, link="section_6/Fig6_4a_main.svg", window="_blank"]
-
-b) Functions for Pushing New Items (pushFront(list, val) and pushBack(list, val))
-
-image::section_6/Fig6_4b_pushFront.png[width=50%, link="section_6/Fig6_4b_pushFront.svg", window="_blank"]
-image::section_6/Fig6_4b_pushBack.png[width=50%, link="section_6/Fig6_4b_pushBack.svg", window="_blank"]
-
-c) Function for Searching (searchData(val))
-
-image::section_6/Fig6_4c_searchData.png[width=50%, link="section_6/Fig6_4c_searchData.svg", window="_blank"]
-
-d) Function for Deletion (removeVal(val))
-
-image::section_6/Fig6_4d_removeVal.png[width=50%, link="section_6/Fig6_4d_removeVal.svg", window="_blank"]
-
-e) Function for Inserting by Value (pushVal and nodeWithVal)
-
-image::section_6/Fig6_4e_pushVal.png[width=50%, link="section_6/Fig6_4e_pushVal.svg", window="_blank"]
-image::section_6/Fig6_4e_nodeWithVal.png[width=50%, link="section_6/Fig6_4e_nodeWithVal.svg", window="_blank"]
-
-f) Function for Removing Duplicates (removeDupli)
-
-image::section_6/Fig6_4f_removeDupli.png[width=75%, link="section_6/Fig6_4f_RemoveDupli.svg", window="_blank"]
+image::section_6/Fig6_4a_main.png[width=50%, link=self, window="_blank"]
 
 [.text-center]
-Figure 6.4. DRAKON-diagrams of linked list algorithms: deletion, search, insertion by value, and duplicate deletion
+a) Function main() as the Entry Point for Linked List Operations
+
+image::section_6/Fig6_4b_pushFront.png[width=50%, link=self, window="_blank"]
+image::section_6/Fig6_4b_pushBack.png[width=50%, link=self, window="_blank"]
+
+[.text-center]
+b) Functions for Pushing New Items (pushFront(list, val) and pushBack(list, val))
+
+
+
+image::section_6/Fig6_4c_searchData.png[width=50%, link=self, window="_blank"]
+
+[.text-center]
+c) Function for Searching (searchData(val))
+
+image::section_6/Fig6_4d_removeVal.png[width=50%, link=self, window="_blank"]
+
+[.text-center]
+d) Function for Deletion (removeVal(val))
+
+image::section_6/Fig6_4e_pushVal.png[width=50%, link=self, window="_blank"]
+image::section_6/Fig6_4e_nodeWithVal.png[width=50%, link=self, window="_blank"]
+
+[.text-center]
+e) Function for Inserting by Value (pushVal and nodeWithVal)
+
+image::section_6/Fig6_4f_removeDupli.png[width=75%, link=self, window="_blank"]
+
+[.text-center]
+f) Function for Removing Duplicates (removeDupli)
+
+[.text-center]
+.Figure 6.4. DRAKON-diagrams of linked list algorithms: deletion, search, insertion by value, and duplicate deletion
 
 === 6.4. Hashing
 
@@ -181,7 +190,7 @@ Table 6.1. Hash table of 15 slots
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14
 |===
 
-Thus, the remainder method converts a collection of 120 integers into a hash table of 15 slots. The search for an element is now greatly accelerated as it takes two steps: first, the hash function h = (x % m) computes the hash index, and then the search is performed within a bucket (approximately 7–8 elements). The algorithm based on the remainder method is represented by the following DRAKON-diagrams (Figure 6.5). Here hInsert is the module for filling slots with elements using the hash function, hLookup is the module for searching for an element in the hash table, and hTraverse is the module for traversing the hash table.
+Thus, the remainder method converts a collection of 120 integers into a hash table of 15 slots. The search for an element is now greatly accelerated as it takes two steps: first, the hash function h = (x % m) computes the hash index, and then the search is performed within a bucket (approximately 7–8 elements). The algorithm based on the remainder method is represented by the following DRAKON-diagrams (.Figure 6.5). Here hInsert is the module for filling slots with elements using the hash function, hLookup is the module for searching for an element in the hash table, and hTraverse is the module for traversing the hash table.
 
 The implementation of the basic hash table functions using the hash function is as follows:
 
@@ -193,28 +202,28 @@ The implementation of the basic hash table functions using the hash function is 
 
     Store these objects in the designated bucket.
 
-DRAKON-diagrams of algorithms for implementing the main functions of working with hash tables are shown in Figure 6.5.
+DRAKON-diagrams of algorithms for implementing the main functions of working with hash tables are shown in .Figure 6.5.
 
 a) Hash Table Creation Function (hInsert)
 
-image::section_6/Fig6_5a_hashInsert.png[width=50%, link="section_6/Fig6_5a_hashInsert.svg", window="_blank"]
+image::section_6/Fig6_5a_hashInsert.png[width=50%, link=self, window="_blank"]
 
 b) Hash Table Search Function (hLookup)
 
-image::section_6/Fig6_5b_searchHash.png[width=50%, link="section_6/Fig6_5b_searchHash.svg", window="_blank"]
+image::section_6/Fig6_5b_searchHash.png[width=50%, link=self, window="_blank"]
 
 c) Hash Table Traversal Function (hTraverse)
 
-image::section_6/Fig6_5c_hashTraverse.png[width=50%, link="section_6/Fig6_5c_hashTraverse.svg", window="_blank"]
+image::section_6/Fig6_5c_hashTraverse.png[width=50%, link=self, window="_blank"]
 
 d) Hash Table Deletion Function (hRemove)
 
-Consider the algorithm for removing an element from the hash table. Suppose we delete element 74. First, the bucket containing the item to be removed is determined. Then, the algorithm traverses the elements of this bucket, where after each node.Value == value check, the current element is stored in the nodePrev variable. If the condition is met, the nodePrev.nextNode field is changed to skip the deleted element (Figure 6.5d):
+Consider the algorithm for removing an element from the hash table. Suppose we delete element 74. First, the bucket containing the item to be removed is determined. Then, the algorithm traverses the elements of this bucket, where after each node.Value == value check, the current element is stored in the nodePrev variable. If the condition is met, the nodePrev.nextNode field is changed to skip the deleted element (.Figure 6.5d):
 
-image::section_6/Fig6_5d_hashRemove.png[width=75%, link="section_6/Fig6_5d_hashRemove.svg", window="_blank"]
+image::section_6/Fig6_5d_hashRemove.png[width=75%, link=self, window="_blank"]
 
 [.text-center]
-Figure 6.5. DRAKON-diagrams of hash table algorithms
+.Figure 6.5. DRAKON-diagrams of hash table algorithms
 
 Another example of a "good" hash function for use with integer key values is the mean square method. The mean square method squares the key value and then extracts the middle digits of the result, giving a value in the range from 0 to M. A software implementation of a hash function algorithm in Go would involve using built-in functions for converting integers to strings (strconv.Atoi(i)) and vice versa (strconv.Itoa(i)). For example, for any four-digit number, the hash function is:
 go
