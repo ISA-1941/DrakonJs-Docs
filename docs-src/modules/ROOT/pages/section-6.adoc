@@ -57,10 +57,9 @@ a) Linear Search of Unsorted Data
 
 In the case of a linear search for an element in an unordered dataset, for example, in an array or in a slice, the simplest algorithm is to examine all elements until the desired value is found (Figure 6.1).
 
-image::section_6/Fig6_1_searchElement.png[width=100%, link=self, window="_blank"]
-
 [.text-center]
-Figure 6.1. DRAKON-diagram of the Linear Search Algorithm
+.Figure 6.1. DRAKON-diagram of the Linear Search Algorithm
+image::section_6/Fig6_1_searchElement.svg[width=50%, link=self, window="_blank"]
 
 This algorithm is not very efficient, but it works on arbitrary collections. Time complexity: O(n). In the worst case (the desired element is in the last position), to find the element you need to traverse all elements. Here "n" is the size of the slice. Space complexity: O(1). No additional memory is required to accommodate the slice. Another worst-case scenario is the absence of the required element.
 
@@ -68,7 +67,7 @@ b) Linear Search of Sorted Data
 
 If the elements of the dataset are sorted in ascending or descending order, finding the desired element is much more efficient than in an unordered linear search. In many cases, you do not have to traverse the whole list. For example, when traversing an ascending sorted list, if an element with a higher value than the search key is encountered, the search is stopped. This approach saves time and increases productivity. Figure 6.2 shows the DRAKON-diagram of this algorithm.
 
-image::{imagesdir}/Fig6_2_dataSorted.png[width=50%, link="{imagesdir}/Fig6_2_dataSorted.svg", window="_blank"]
+image::section_6/Fig6_2_dataSorted.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 Figure 6.2. DRAKON-diagram of the Search in a Sorted Array
@@ -87,7 +86,7 @@ Binary search is performed as follows:
 
 The DRAKON-diagram of the binary search algorithm is represented in Figure 6.3 (the main() module is similar to the previous algorithm):
 
-image::{imagesdir}/Fig6_3_searchValue.png[width=50%, link="{imagesdir}/Fig6_3_searchValue.svg", window="_blank"]
+image::section_6/Fig6_3_searchValue.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 Figure 6.3. DRAKON-diagram of the Binary Search Algorithm
@@ -100,29 +99,29 @@ There are three possibilities for a singly linked list. First, the desired value
 
 a) Function main()
 
-image::{imagesdir}/Fig6_4a_main.png[width=50%, link="{imagesdir}/Fig6_4a_main.svg", window="_blank"]
+image::section_6/Fig6_4a_main.png[width=50%, link="section_6/Fig6_4a_main.svg", window="_blank"]
 
 b) Functions for Pushing New Items (pushFront(list, val) and pushBack(list, val))
 
-image::{imagesdir}/Fig6_4b_pushFront.png[width=50%, link="{imagesdir}/Fig6_4b_pushFront.svg", window="_blank"]
-image::{imagesdir}/Fig6_4b_pushBack.png[width=50%, link="{imagesdir}/Fig6_4b_pushBack.svg", window="_blank"]
+image::section_6/Fig6_4b_pushFront.png[width=50%, link="section_6/Fig6_4b_pushFront.svg", window="_blank"]
+image::section_6/Fig6_4b_pushBack.png[width=50%, link="section_6/Fig6_4b_pushBack.svg", window="_blank"]
 
 c) Function for Searching (searchData(val))
 
-image::{imagesdir}/Fig6_4c_searchData.png[width=50%, link="{imagesdir}/Fig6_4c_searchData.svg", window="_blank"]
+image::section_6/Fig6_4c_searchData.png[width=50%, link="section_6/Fig6_4c_searchData.svg", window="_blank"]
 
 d) Function for Deletion (removeVal(val))
 
-image::{imagesdir}/Fig6_4d_removeVal.png[width=50%, link="{imagesdir}/Fig6_4d_removeVal.svg", window="_blank"]
+image::section_6/Fig6_4d_removeVal.png[width=50%, link="section_6/Fig6_4d_removeVal.svg", window="_blank"]
 
 e) Function for Inserting by Value (pushVal and nodeWithVal)
 
-image::{imagesdir}/Fig6_4e_pushVal.png[width=50%, link="{imagesdir}/Fig6_4e_pushVal.svg", window="_blank"]
-image::{imagesdir}/Fig6_4e_nodeWithVal.png[width=50%, link="{imagesdir}/Fig6_4e_nodeWithVal.svg", window="_blank"]
+image::section_6/Fig6_4e_pushVal.png[width=50%, link="section_6/Fig6_4e_pushVal.svg", window="_blank"]
+image::section_6/Fig6_4e_nodeWithVal.png[width=50%, link="section_6/Fig6_4e_nodeWithVal.svg", window="_blank"]
 
 f) Function for Removing Duplicates (removeDupli)
 
-image::{imagesdir}/Fig6_4f_removeDupli.png[width=75%, link="{imagesdir}/Fig6_4f_RemoveDupli.svg", window="_blank"]
+image::section_6/Fig6_4f_removeDupli.png[width=75%, link="section_6/Fig6_4f_RemoveDupli.svg", window="_blank"]
 
 [.text-center]
 Figure 6.4. DRAKON-diagrams of linked list algorithms: deletion, search, insertion by value, and duplicate deletion
@@ -198,21 +197,21 @@ DRAKON-diagrams of algorithms for implementing the main functions of working wit
 
 a) Hash Table Creation Function (hInsert)
 
-image::{imagesdir}/Fig6_5a_hashInsert.png[width=50%, link="{imagesdir}/Fig6_5a_hashInsert.svg", window="_blank"]
+image::section_6/Fig6_5a_hashInsert.png[width=50%, link="section_6/Fig6_5a_hashInsert.svg", window="_blank"]
 
 b) Hash Table Search Function (hLookup)
 
-image::{imagesdir}/Fig6_5b_searchHash.png[width=50%, link="{imagesdir}/Fig6_5b_searchHash.svg", window="_blank"]
+image::section_6/Fig6_5b_searchHash.png[width=50%, link="section_6/Fig6_5b_searchHash.svg", window="_blank"]
 
 c) Hash Table Traversal Function (hTraverse)
 
-image::{imagesdir}/Fig6_5c_hashTraverse.png[width=50%, link="{imagesdir}/Fig6_5c_hashTraverse.svg", window="_blank"]
+image::section_6/Fig6_5c_hashTraverse.png[width=50%, link="section_6/Fig6_5c_hashTraverse.svg", window="_blank"]
 
 d) Hash Table Deletion Function (hRemove)
 
 Consider the algorithm for removing an element from the hash table. Suppose we delete element 74. First, the bucket containing the item to be removed is determined. Then, the algorithm traverses the elements of this bucket, where after each node.Value == value check, the current element is stored in the nodePrev variable. If the condition is met, the nodePrev.nextNode field is changed to skip the deleted element (Figure 6.5d):
 
-image::{imagesdir}/Fig6_5d_hashRemove.png[width=75%, link="{imagesdir}/Fig6_5d_hashRemove.svg", window="_blank"]
+image::section_6/Fig6_5d_hashRemove.png[width=75%, link="section_6/Fig6_5d_hashRemove.svg", window="_blank"]
 
 [.text-center]
 Figure 6.5. DRAKON-diagrams of hash table algorithms
