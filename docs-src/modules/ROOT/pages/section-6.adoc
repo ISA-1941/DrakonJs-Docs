@@ -102,7 +102,7 @@ image::section_6/Fig6_4a_main.svg[width=50%, link=self, window="_blank"]
 a) Function main() as the Entry Point for Linked List Operations
 
 image::section_6/Fig6_4b_pushFront.svg[width=50%, link=self, window="_blank"]
-image::section_6/Fig6_4b_pushBack.svg[width=50%, link=self, window="_blank"]
+image::section_6/Fig6_4b_pushBack.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
 b) Functions for Pushing New Items (pushFront(list, val) and pushBack(list, val))
