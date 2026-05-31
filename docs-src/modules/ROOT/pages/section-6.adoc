@@ -122,7 +122,7 @@ image::section_6/Fig6_4e_nodeWithVal.svg[width=100%, link=self, window="_blank"]
 [.text-center]
 e) Function for Inserting by Value (pushVal and nodeWithVal)
 
-image::section_6/Fig6_4f_removeDupli.svg[width=100%, link=self, window="_blank"]
+image::section_6/Fig6_4f_removeDuplicates.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 f) Function for Removing Duplicates (removeDupli)

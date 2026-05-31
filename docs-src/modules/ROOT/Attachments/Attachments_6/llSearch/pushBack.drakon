@@ -16,7 +16,7 @@
         },
         "10": {
             "type": "question",
-            "one": "11",
+            "one": "17",
             "two": "12",
             "flag1": 1,
             "content": "list.headNode === null"
@@ -51,6 +51,11 @@
             "type": "action",
             "one": "1",
             "content": "node.nextNode = newNode"
+        },
+        "17": {
+            "type": "action",
+            "one": "11",
+            "content": "list.headNode = newNode"
         }
     },
     "keywords": {

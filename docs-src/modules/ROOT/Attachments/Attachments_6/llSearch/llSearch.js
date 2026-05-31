@@ -90,7 +90,6 @@ function removeDuplicates(list) {
         }
     }
 }
-
 function searchData(list, val) {
     var node;
     list.n = 0;

@@ -1,0 +1,164 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "4",
+            "content": "Counting the frequencies of each value"
+        },
+        "3": {
+            "type": "action",
+            "one": "6",
+            "content": "counter = new Map()"
+        },
+        "4": {
+            "type": "question",
+            "one": "5",
+            "two": "3",
+            "flag1": 1,
+            "content": "!list.headNode"
+        },
+        "5": {
+            "type": "action",
+            "one": "3",
+            "content": "return "
+        },
+        "6": {
+            "type": "action",
+            "one": "8",
+            "content": "current = list.headNode"
+        },
+        "7": {
+            "type": "question",
+            "one": "12",
+            "two": "9",
+            "flag1": 0,
+            "content": "current !== null )"
+        },
+        "8": {
+            "type": "arrow-loop",
+            "one": "7"
+        },
+        "9": {
+            "type": "action",
+            "one": "10",
+            "content": "counter.set(\n    current.data,\n    (counter.get(current.data) || 0) + 1\n)"
+        },
+        "10": {
+            "type": "action",
+            "one": "8",
+            "content": "current = current.nextNode"
+        },
+        "11": {
+            "type": "branch",
+            "one": "21",
+            "branchId": 3,
+            "content": "Removing duplicates"
+        },
+        "12": {
+            "type": "branch",
+            "one": "13",
+            "branchId": 2,
+            "content": "Preparing for the second pass"
+        },
+        "13": {
+            "type": "action",
+            "one": "14",
+            "content": "seen = new Set()"
+        },
+        "14": {
+            "type": "action",
+            "one": "15",
+            "content": "prev = null "
+        },
+        "15": {
+            "type": "action",
+            "one": "11",
+            "content": "node = list.headNode"
+        },
+        "20": {
+            "type": "question",
+            "one": "1",
+            "two": "22",
+            "flag1": 0,
+            "content": "node !== null "
+        },
+        "21": {
+            "type": "arrow-loop",
+            "one": "20",
+            "two": ""
+        },
+        "22": {
+            "type": "action",
+            "one": "23",
+            "two": "",
+            "content": "val = node.data"
+        },
+        "23": {
+            "type": "question",
+            "one": "36",
+            "two": "28",
+            "flag1": 1,
+            "content": "counter.get(val) > 1 && seen.has(val)"
+        },
+        "28": {
+            "type": "question",
+            "one": "31",
+            "two": "29",
+            "flag1": 1,
+            "content": "counter.get(val) > 1"
+        },
+        "29": {
+            "type": "action",
+            "one": "30",
+            "content": "prev = node"
+        },
+        "30": {
+            "type": "action",
+            "one": "21",
+            "content": "node = node.nextNode"
+        },
+        "31": {
+            "type": "action",
+            "one": "29",
+            "content": "seen.add(val)"
+        },
+        "32": {
+            "type": "action",
+            "one": "21",
+            "content": "node = node.nextNode"
+        },
+        "36": {
+            "type": "question",
+            "one": "37",
+            "two": "38",
+            "flag1": 1,
+            "content": "prev === null "
+        },
+        "37": {
+            "type": "action",
+            "one": "32",
+            "two": "",
+            "content": "list.headNode = node.nextNode"
+        },
+        "38": {
+            "type": "action",
+            "one": "32",
+            "two": "",
+            "content": "prev.nextNode = node.nextNode"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "list"
+}
