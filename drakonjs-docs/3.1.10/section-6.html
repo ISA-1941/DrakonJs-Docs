@@ -427,8 +427,10 @@ Atallah N.</p>
 <p>6.4.1 Creating a Hash Table and Chain Nodes</p>
 </div>
 <div class="paragraph">
-<p>To implement a hash table using chaining, we need two helper structures: the table itself (an array of buckets) and a node for the linked list.<br>
-Creating the Hash Table</p>
+<p>To implement a hash table using chaining, we need two helper structures: the table itself (an array of buckets) and a node for the linked list.</p>
+</div>
+<div class="paragraph">
+<p><strong>Creating the Hash Table</strong></p>
 </div>
 <div class="paragraph">
 <p>The function <code>createHashTable(size)</code> initializes a new hash table instance. It takes one argument – the desired number of buckets. Internally, it does the following:</p>
@@ -446,41 +448,38 @@ Creating the Hash Table</p>
 </li>
 </ul>
 </div>
-<div class="imageblock text-center">
-<div class="content">
-<a class="image" href="_images/section_6/Fig6_5a_createHashTable.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_5a_createHashTable.svg" alt="Fig6 5a createHashTable" width="100%"></a>
-</div>
-<div class="title">Figure 6.5. DRAKON-diagrams of linked list algorithms: deletion, search, insertion by value, and duplicate deletion</div>
+<div class="paragraph text-center">
+<p>a) Function for Creating a Hash Table (createHashTable)<br>
+image::section_6/Fig6_5a_createHashTable.svg[width=100%, link=self, window="_blank"]</p>
 </div>
 <div class="paragraph">
 <p>In practice, the table object often also includes a count field (current number of elements) and a loadFactor (threshold for resizing). However, we start with a minimal version for simplicity.</p>
 </div>
 <div class="paragraph">
-<p>Creating a Node for the Chain</p>
+<p><strong>Creating a Node for the Chain</strong></p>
 </div>
 <div class="paragraph">
 <p>Because collisions are resolved with linked lists, each element in a bucket must store not only a key‑value pair but also a reference to the next element in the same chain.</p>
 </div>
 <div class="paragraph">
-<p>The function createNode(key, value, next = null) creates such a node. It:</p>
+<p>The function <code>createNode(key, value, next = null)</code> creates such a node. It:</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>Accepts a key, a value, and an optional reference to the next node (default null).</pre>
+<div class="ulist">
+<ul>
+<li>
+<p>Accepts a key, a value, and an optional reference to the next node (default null).</p>
+</li>
+<li>
+<p>For debugging, prints a message to the console indicating that a node has been created. In production code this log is usually removed, but in educational examples it helps trace the algorithm&#8217;s behavior.</p>
+</li>
+<li>
+<p>Returns an object with three fields: key, value, and next.</p>
+</li>
+</ul>
 </div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>For debugging, prints a message to the console indicating that a node has been created. In production code this log is usually removed, but in educational examples it helps trace the algorithm's behavior.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Returns an object with three fields: key, value, and next.</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Listing 6.6 – createNode (Drakon diagram Fig6_5b_createNodes)</p>
+<div class="paragraph text-center">
+<p>b) Function for Creating a node (createNode)<br>
+image::section_6/Fig6_5b_createNodes.svg[width=100%, link=self, window="_blank"]</p>
 </div>
 <div class="paragraph">
 <p>Note that the next reference allows us to build singly linked lists inside a bucket. If only one element exists in a bucket, its next is null. When we add a new element that hashes to the same index, we place it at the beginning (or end – depending on the strategy; our algorithm will add to the head for simplicity).</p>
@@ -740,10 +739,8 @@ Creating the Hash Table</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>Thus, the remainder method converts a collection of 120 integers into a hash table of 15 slots. The search for an element is now greatly accelerated as it takes two steps: first, the hash function h = (x % m) computes the hash index, and then the search is performed within a bucket (approximately 7–8 elements). The algorithm based on the remainder method is represented by the following DRAKON-diagrams (Figure 6.5). Here hInsert is the module for filling slots with elements using the hash function, hLookup is the module for searching for an element in the hash table, and hTraverse is the module for traversing the hash table.</p>
-</div>
-<div class="paragraph">
-<p>The implementation of the basic hash table functions using the hash function is as follows:</p>
+<p>Thus, the remainder method converts a collection of 120 integers into a hash table of 15 slots. The search for an element is now greatly accelerated as it takes two steps: first, the hash function h = (x % m) computes the hash index, and then the search is performed within a bucket (approximately 7–8 elements).<br>
+The implementation of the basic hash table functions using the hash function is as follows:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -762,39 +759,23 @@ Creating the Hash Table</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>DRAKON-diagrams of algorithms for implementing the main functions of working with hash tables are shown in Figure 6.5.</p>
-</div>
-<div class="imageblock unresolved">
-<div class="content">
-<a class="image" href="section_6/Fig6_5a_hashInsert.png" target="_blank" rel="noopener"><img src="section_6/Fig6_5a_hashInsert.png" alt="Fig6 5a hashInsert" width="100%"></a>
-</div>
+<p>DRAKON-diagrams of algorithms for implementing the main functions of working with hash tables are shown in Figure 6.6.</p>
 </div>
 <div class="paragraph text-center">
-<p>a) Hash Table Creation Function (hInsert)</p>
-</div>
-<div class="imageblock unresolved">
-<div class="content">
-<a class="image" href="section_6/Fig6_5b_searchHash.svg" target="_blank" rel="noopener"><img src="section_6/Fig6_5b_searchHash.svg" alt="Fig6 5b searchHash" width="100%"></a>
-</div>
+<p>a) Hash Table Creation Function (hInsert)<br>
+image::section_6/Fig6_6a_hashInsert.png[width=100%, link=self, window="_blank"]</p>
 </div>
 <div class="paragraph text-center">
-<p>b) Hash Table Search Function (hLookup)</p>
-</div>
-<div class="imageblock unresolved">
-<div class="content">
-<a class="image" href="section_6/Fig6_5b_searchHash.svg" target="_blank" rel="noopener"><img src="section_6/Fig6_5b_searchHash.svg" alt="Fig6 5b searchHash" width="100%"></a>
-</div>
+<p>b) Hash Table Search Function (hLookup)<br>
+image::section_6/Fig6_6b_searchHash.svg[width=100%, link=self, window="_blank"]</p>
 </div>
 <div class="paragraph text-center">
-<p>c) Hash Table Traversal Function (hTraverse)</p>
-</div>
-<div class="imageblock unresolved">
-<div class="content">
-<a class="image" href="section_6/Fig6_5c_hashTraverse.svg" target="_blank" rel="noopener"><img src="section_6/Fig6_5c_hashTraverse.svg" alt="Fig6 5c hashTraverse" width="100%"></a>
-</div>
+<p>c) Hash Table Traversal Function (hTraverse)<br>
+image::section_6/Fig6_6c_hashTraverse.svg[width=100%, link=self, window="_blank"]</p>
 </div>
 <div class="paragraph text-center">
-<p>d) Hash Table Deletion Function (hRemove)</p>
+<p>d) Hash Table Deletion Function (hRemove)<br>
+image::section_6/Fig6_6d_hashRemove.svg[width=100%, link=self, window="_blank"]</p>
 </div>
 <div class="paragraph">
 <p>Consider the algorithm for removing an element from the hash table. Suppose we delete element 74. First, the bucket containing the item to be removed is determined. Then, the algorithm traverses the elements of this bucket, where after each node.Value == value check, the current element is stored in the nodePrev variable. If the condition is met, the nodePrev.nextNode field is changed to skip the deleted element (Figure 6.5d):</p>
