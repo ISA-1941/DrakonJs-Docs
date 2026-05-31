@@ -157,7 +157,8 @@ From a programming perspective, a hash table consists of buckets – groups of e
 6.4.1 Creating a Hash Table and Chain Nodes
 
 To implement a hash table using chaining, we need two helper structures: the table itself (an array of buckets) and a node for the linked list.
-Creating the Hash Table
+
+*Creating the Hash Table*
 
 The function `createHashTable(size)` initializes a new hash table instance. It takes one argument – the desired number of buckets. Internally, it does the following:
 
@@ -168,24 +169,26 @@ The function `createHashTable(size)` initializes a new hash table instance. It t
 * Returns an object containing table and size. This object will be used by all subsequent operations (insert, lookup, delete).
 
 [.text-center]
-.Figure 6.5. DRAKON-diagrams of linked list algorithms: deletion, search, insertion by value, and duplicate deletion
+a) Function for Creating a Hash Table (createHashTable)
 image::section_6/Fig6_5a_createHashTable.svg[width=100%, link=self, window="_blank"]
 
 In practice, the table object often also includes a count field (current number of elements) and a loadFactor (threshold for resizing). However, we start with a minimal version for simplicity.
 
-Creating a Node for the Chain
+*Creating a Node for the Chain*
 
 Because collisions are resolved with linked lists, each element in a bucket must store not only a key‑value pair but also a reference to the next element in the same chain.
 
-The function createNode(key, value, next = null) creates such a node. It:
+The function `createNode(key, value, next = null)` creates such a node. It:
 
-    Accepts a key, a value, and an optional reference to the next node (default null).
+* Accepts a key, a value, and an optional reference to the next node (default null).
 
-    For debugging, prints a message to the console indicating that a node has been created. In production code this log is usually removed, but in educational examples it helps trace the algorithm's behavior.
+* For debugging, prints a message to the console indicating that a node has been created. In production code this log is usually removed, but in educational examples it helps trace the algorithm's behavior.
 
-    Returns an object with three fields: key, value, and next.
+* Returns an object with three fields: key, value, and next.
 
-Listing 6.6 – createNode (Drakon diagram Fig6_5b_createNodes)
+[.text-center]
+b) Function for Creating a node (createNode)
+image::section_6/Fig6_5b_createNodes.svg[width=100%, link=self, window="_blank"]
 
 Note that the next reference allows us to build singly linked lists inside a bucket. If only one element exists in a bucket, its next is null. When we add a new element that hashes to the same index, we place it at the beginning (or end – depending on the strategy; our algorithm will add to the head for simplicity).
 
@@ -221,8 +224,7 @@ Table 6.1. Hash table of 15 slots
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14
 |===
 
-Thus, the remainder method converts a collection of 120 integers into a hash table of 15 slots. The search for an element is now greatly accelerated as it takes two steps: first, the hash function h = (x % m) computes the hash index, and then the search is performed within a bucket (approximately 7–8 elements). The algorithm based on the remainder method is represented by the following DRAKON-diagrams (Figure 6.5). Here hInsert is the module for filling slots with elements using the hash function, hLookup is the module for searching for an element in the hash table, and hTraverse is the module for traversing the hash table.
-
+Thus, the remainder method converts a collection of 120 integers into a hash table of 15 slots. The search for an element is now greatly accelerated as it takes two steps: first, the hash function h = (x % m) computes the hash index, and then the search is performed within a bucket (approximately 7–8 elements). 
 The implementation of the basic hash table functions using the hash function is as follows:
 
 * Create a HashTable structure of size m to store objects.
@@ -233,29 +235,25 @@ The implementation of the basic hash table functions using the hash function is 
 
 * Store these objects in the designated bucket.
 
-DRAKON-diagrams of algorithms for implementing the main functions of working with hash tables are shown in Figure 6.5.
-
-image::section_6/Fig6_5a_hashInsert.png[width=100%, link=self, window="_blank"]
+DRAKON-diagrams of algorithms for implementing the main functions of working with hash tables are shown in Figure 6.6.
 
 [.text-center]
 a) Hash Table Creation Function (hInsert)
-
-image::section_6/Fig6_5b_searchHash.svg[width=100%, link=self, window="_blank"]
-
+image::section_6/Fig6_6a_hashInsert.png[width=100%, link=self, window="_blank"]
 
 [.text-center]
 b) Hash Table Search Function (hLookup)
-
-image::section_6/Fig6_5b_searchHash.svg[width=100%, link=self, window="_blank"]
+image::section_6/Fig6_6b_searchHash.svg[width=100%, link=self, window="_blank"]
 
 
 [.text-center]
 c) Hash Table Traversal Function (hTraverse)
-
-image::section_6/Fig6_5c_hashTraverse.svg[width=100%, link=self, window="_blank"]
+image::section_6/Fig6_6c_hashTraverse.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 d) Hash Table Deletion Function (hRemove)
+image::section_6/Fig6_6d_hashRemove.svg[width=100%, link=self, window="_blank"]
+
 
 Consider the algorithm for removing an element from the hash table. Suppose we delete element 74. First, the bucket containing the item to be removed is determined. Then, the algorithm traverses the elements of this bucket, where after each node.Value == value check, the current element is stored in the nodePrev variable. If the condition is met, the nodePrev.nextNode field is changed to skip the deleted element (Figure 6.5d):
 
