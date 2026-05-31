@@ -27,27 +27,26 @@ function main() {
     pushBack(list, 'Wiley S.');
     pushBack(list, 'Wiley S.');
     pushBack(list, 'Atallah N.');
-    searchData(list, 'Wiley S.');
-    removeVal(list, 'Wiley S.');
+    console.log('The linked list is:');
     iterateList(list);
-    console.log('Wiley S. is deleted');
+    searchData(list, 'Wiley S.');
+    removeDuplicates(list)
+    //removeVal(list, 'Wiley S.');
+    iterateList(list);
+    // console.log('Wiley S. is deleted');
 }
 function pushBack(list, val) {
-    var newNode, node;
-    newNode = {
+    var newNode = {
         data: val,
         nextNode: null
     };
     if (list.headNode === null) {
+        list.headNode = newNode;
         return;
     }
-    node = list.headNode;
-    while (true) {
-        if (node.nextNode !== null) {
-            node = node.nextNode;
-        } else {
-            break;
-        }
+    var node = list.headNode;
+    while (node.nextNode !== null) {
+        node = node.nextNode;
     }
     node.nextNode = newNode;
 }
@@ -60,22 +59,38 @@ function pushFront(list, val) {
     list.headNode = node;
     list.len++;
 }
-function removeVal(list,val) {
-    var nextNode, node;
-    node = list.headNode;
-    while (true) {
-        if (node !== null) {
-            nextNode = node.nextNode;
-            if (nextNode !== null && nextNode.data === val) {
-                node.nextNode = nextNode.nextNode;
+
+function removeDuplicates(list) {
+    if (!list.headNode) return;
+
+    const counter = new Map();
+    let current = list.headNode;
+    while (current !== null) {
+        counter.set(current.data, (counter.get(current.data) || 0) + 1);
+        current = current.nextNode;
+    }
+
+    const seen = new Set();
+    let prev = null;
+    let node = list.headNode;
+
+    while (node !== null) {
+        const val = node.data;
+        if (counter.get(val) > 1 && seen.has(val)) {
+            if (prev === null) {
+                list.headNode = node.nextNode;
             } else {
-                node = nextNode;
+                prev.nextNode = node.nextNode;
             }
+            node = node.nextNode;
         } else {
-            break;
+            if (counter.get(val) > 1) seen.add(val);
+            prev = node;
+            node = node.nextNode;
         }
     }
 }
+
 function searchData(list, val) {
     var node;
     list.n = 0;

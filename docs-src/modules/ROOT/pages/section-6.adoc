@@ -130,6 +130,20 @@ f) Function for Removing Duplicates (removeDupli)
 [.text-center]
 .Figure 6.4. DRAKON-diagrams of linked list algorithms: deletion, search, insertion by value, and duplicate deletion
 
+Реsults of the execution of the above algorithms are as follows:
+The linked list is:
+Smith J.
+Brown G.
+Shafler P.
+Wiley S.
+Wiley S.
+Atallah N.
+The desired value Wiley S. occurs 2 times
+Smith J.
+Brown G.
+Shafler P.
+Wiley S.
+Atallah N.
 
 === 6.4. Hashing
 
