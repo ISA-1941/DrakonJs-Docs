@@ -770,20 +770,36 @@ The implementation of the basic hash table functions using the hash function is 
 <p>DRAKON-diagrams of algorithms for implementing the main functions of working with hash tables are shown in Figure 6.6.</p>
 </div>
 <div class="paragraph text-center">
-<p>a) Hash Table Creation Function (hInsert)<br>
-image::section_6/Fig6_6a_hashInsert.png[width=100%, link=self, window="_blank"]</p>
+<p>a) Hash Table Creation Function (hInsert)</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<a class="image" href="section_6/Fig6_6a_hashInsert.png" target="_blank" rel="noopener"><img src="section_6/Fig6_6a_hashInsert.png" alt="Fig6 6a hashInsert" width="100%"></a>
+</div>
 </div>
 <div class="paragraph text-center">
-<p>b) Hash Table Search Function (hLookup)<br>
-image::section_6/Fig6_6b_searchHash.svg[width=100%, link=self, window="_blank"]</p>
+<p>b) Hash Table Search Function (hLookup)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="_images/section_6/Fig6_6b_searchHash.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_6b_searchHash.svg" alt="Fig6 6b searchHash" width="100%"></a>
+</div>
 </div>
 <div class="paragraph text-center">
-<p>c) Hash Table Traversal Function (hTraverse)<br>
-image::section_6/Fig6_6c_hashTraverse.svg[width=100%, link=self, window="_blank"]</p>
+<p>c) Hash Table Traversal Function (hTraverse)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="_images/section_6/Fig6_6c_hashTraverse.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_6c_hashTraverse.svg" alt="Fig6 6c hashTraverse" width="100%"></a>
+</div>
 </div>
 <div class="paragraph text-center">
-<p>d) Hash Table Deletion Function (hRemove)<br>
-image::section_6/Fig6_6d_hashRemove.svg[width=100%, link=self, window="_blank"]</p>
+<p>d) Hash Table Deletion Function (hRemove)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="_images/section_6/Fig6_6d_hashRemove.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_6d_hashRemove.svg" alt="Fig6 6d hashRemove" width="100%"></a>
+</div>
 </div>
 <div class="paragraph">
 <p>Consider the algorithm for removing an element from the hash table. Suppose we delete element 74. First, the bucket containing the item to be removed is determined. Then, the algorithm traverses the elements of this bucket, where after each node.Value == value check, the current element is stored in the nodePrev variable. If the condition is met, the nodePrev.nextNode field is changed to skip the deleted element (Figure 6.5d):</p>
