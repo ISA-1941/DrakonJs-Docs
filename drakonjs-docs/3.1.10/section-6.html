@@ -398,33 +398,72 @@ Click on any image to open it in a separate window for detailed viewing.</p>
 <h3 id="_6_4_hashing"><a class="anchor" href="#_6_4_hashing"></a>6.4. Hashing</h3>
 <div class="paragraph">
 <div class="title">Figure 6.4. DRAKON-diagrams of linked list algorithms: deletion, search, insertion by value, and duplicate deletion</div>
-<p>The search time for an item in a data set depends on the number of element value comparisons. To reduce search times and thus improve computational efficiency, fewer comparisons are needed. This can be achieved by converting a larger data set into a smaller range — a process called hashing — resulting in hash tables.</p>
+<p>The time to find an item in a data set often depends on how many comparisons are made. To speed up search and improve computational efficiency, we need fewer comparisons. One way is to map keys to a smaller range of indices – this process is called hashing, and the resulting structure is a hash table.</p>
 </div>
 <div class="paragraph">
-<p>From the perspective of abstract data type (ADT) theory, a hash table is a data structure that implements the interface of an associative array, allowing you to store key-value pairs and perform three basic operations: adding a new pair, searching for a key, and deleting a key-value pair.</p>
+<p>In terms of abstract data type (ADT) theory, a hash table implements an associative array. It stores key‑value pairs and supports three basic operations: insert (add a pair), lookup (find a value by key), and delete (remove a pair).</p>
 </div>
 <div class="paragraph">
-<p>From a programming perspective, a hash table is a collection of items containing key-value pairs, where the key is computed by a special function called a hash function. A hash table, in turn, consists of buckets — sets of elements with matching or close hash values. There are different methods of constructing a hash function, the simplest of which is the remainder method, where the hash function is defined as the remainder of the division of two numbers (x, m), where x is the item of the set and m is the number of buckets. In JavaScript, the hash function for this method is: h = x % m.</p>
+<p>From a programming perspective, a hash table consists of buckets – groups of elements whose hash values are equal or close. The hash function transforms a given key into an integer index (the bucket number). Many methods exist to construct a hash function. The simplest is the division method, where the hash is the remainder of the key divided by the number of buckets:<br>
+<code>h(key) = key mod m</code> (assuming the key is an integer). In JavaScript, for numeric keys, this becomes h = x % m.</p>
 </div>
 <div class="paragraph">
-<p>We will conduct a detailed analysis of the hash table creation process utilizing the JavaScript programming language within DrakonTech. First, a variable of the Node type is created, defined as a structure consisting of two fields: the element value (Value) and the next element address (Next). In fact, this is a singly linked list (see Section 1).<br>
-go</p>
+<p>6.4.1 Creating a Hash Table and Chain Nodes</p>
 </div>
 <div class="paragraph">
-<p>type Node struct {<br>
-    Value int<br>
-    Next  *Node<br>
-}</p>
+<p>To implement a hash table using chaining, we need two helper structures: the table itself (an array of buckets) and a node for the linked list.<br>
+Creating the Hash Table</p>
 </div>
 <div class="paragraph">
-<p>Then, a hash table is created through a structure that has two fields: the first field (Table) is a map that relates the integer (hash index) to the associated list (Node), and the second field (Size) is of type int:<br>
-go</p>
+<p>The function createHashTable(size) initializes a new hash table instance. It takes one argument – the desired number of buckets. Internally, it does the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Creates an array table of the given length.</p>
+</li>
+<li>
+<p>Fills each element of the array with null. This means all buckets are initially empty – no key has been added yet.</p>
+</li>
+<li>
+<p>Returns an object containing table and size. This object will be used by all subsequent operations (insert, lookup, delete).</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>type HashTable struct {<br>
-    Table map[int]*Node<br>
-    Size  int<br>
-}</p>
+<p>image::section_6/</p>
+</div>
+<div class="paragraph text-center">
+<div class="title">Figure 6.5. DRAKON-diagrams of linked list algorithms: deletion, search, insertion by value, and duplicate deletion</div>
+<p>In practice, the table object often also includes a count field (current number of elements) and a loadFactor (threshold for resizing). However, we start with a minimal version for simplicity.<br>
+Creating a Node for the Chain</p>
+</div>
+<div class="paragraph">
+<p>Because collisions are resolved with linked lists, each element in a bucket must store not only a key‑value pair but also a reference to the next element in the same chain.</p>
+</div>
+<div class="paragraph">
+<p>The function createNode(key, value, next = null) creates such a node. It:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Accepts a key, a value, and an optional reference to the next node (default null).</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>For debugging, prints a message to the console indicating that a node has been created. In production code this log is usually removed, but in educational examples it helps trace the algorithm's behavior.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Returns an object with three fields: key, value, and next.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Listing 6.6 – createNode (Drakon diagram Fig6_5b_createNodes)</p>
+</div>
+<div class="paragraph">
+<p>Note that the next reference allows us to build singly linked lists inside a bucket. If only one element exists in a bucket, its next is null. When we add a new element that hashes to the same index, we place it at the beginning (or end – depending on the strategy; our algorithm will add to the head for simplicity).</p>
 </div>
 <div class="paragraph">
 <p>As a result, this hash table would have as many singly linked lists (buckets) as specified by the Size constant. In the example below, the number of slots is 15.</p>
