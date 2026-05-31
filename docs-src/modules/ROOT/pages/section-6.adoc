@@ -242,7 +242,7 @@ DRAKON-diagrams of algorithms for implementing the main functions of working wit
 [.text-center]
 a) Hash Table Creation Function (hInsert)
 
-image::section_6/Fig6_6a_hashInsert.png[width=100%, link=self, window="_blank"]
+image::section_6/Fig6_6a_hashInsert.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 b) Hash Table Search Function (hLookup)
