@@ -171,7 +171,7 @@ The function `createHashTable(size)` initializes a new hash table instance. It t
 [.text-center]
 a) Function for Creating a Hash Table (createHashTable)
 
-image::section_6/Fig6_5a_createHashTable.svg[width=100%, link=self, window="_blank"]
+image::section_6/Fig6_5a_createHashTable.svg[width=50%, link=self, window="_blank"]
 
 In practice, the table object often also includes a count field (current number of elements) and a loadFactor (threshold for resizing). However, we start with a minimal version for simplicity.
 
@@ -190,7 +190,7 @@ The function `createNode(key, value, next = null)` creates such a node. It:
 [.text-center]
 b) Function for Creating a node (createNode)
 
-image::section_6/Fig6_5b_createNodes.svg[width=100%, link=self, window="_blank"]
+image::section_6/Fig6_5b_createNodes.svg[width=50%, link=self, window="_blank"]
 
 Note that the next reference allows us to build singly linked lists inside a bucket. If only one element exists in a bucket, its next is null. When we add a new element that hashes to the same index, we place it at the beginning (or end – depending on the strategy; our algorithm will add to the head for simplicity).
 
