@@ -239,26 +239,25 @@ The implementation of the basic hash table functions using the hash function is 
 
 DRAKON-diagrams of algorithms for implementing the main functions of working with hash tables are shown in Figure 6.6.
 
+image::section_6/Fig6_6a_hashInsert.svg[width=75%, link=self, window="_blank"]
+
 [.text-center]
 a) Hash Table Creation Function (hInsert)
 
-image::section_6/Fig6_6a_hashInsert.svg[width=100%, link=self, window="_blank"]
+image::section_6/Fig6_6b_searchHash.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 b) Hash Table Search Function (hLookup)
 
-image::section_6/Fig6_6b_searchHash.svg[width=100%, link=self, window="_blank"]
-
+image::section_6/Fig6_6c_hashTraverse.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
 c) Hash Table Traversal Function (hTraverse)
 
-image::section_6/Fig6_6c_hashTraverse.svg[width=100%, link=self, window="_blank"]
+image::section_6/Fig6_6d_hashRemove.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 d) Hash Table Deletion Function (hRemove)
-
-image::section_6/Fig6_6d_hashRemove.svg[width=100%, link=self, window="_blank"]
 
 
 Consider the algorithm for removing an element from the hash table. Suppose we delete element 74. First, the bucket containing the item to be removed is determined. Then, the algorithm traverses the elements of this bucket, where after each node.Value == value check, the current element is stored in the nodePrev variable. If the condition is met, the nodePrev.nextNode field is changed to skip the deleted element (Figure 6.5d):
