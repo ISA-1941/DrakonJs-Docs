@@ -237,7 +237,7 @@ The implementation of the basic hash table functions using the hash function is 
 
 * Store these objects in the designated bucket.
 
-Общее описание алгоритмаов для работы с хеш-таблицами представлено в виде таблицы основных параметров присеняемых функций (Table 6.?) и соответствующими DRAKON-диаграмм (Figure 6.6).
+The general description of algorithms for working with hash tables is presented as a table of basic parameters of applied functions (Table 6.2) and corresponding DRAKON diagrams (Figure 6.6).
 
 
 .Hash Table Functions Overview (Chaining Implementation)
@@ -245,7 +245,7 @@ The implementation of the basic hash table functions using the hash function is 
 |===
 | Function | Purpose | Input | Output | Brief Algorithm Description | Notes
 
-| `createHashTable(size)`
+| `createHashTable(size)`        (Figure 6.6)
 | Create an empty hash table
 | `size` – number of buckets (positive integer)
 | Object `{ table: Array(size).fill(null), size: size }`
@@ -253,7 +253,7 @@ The implementation of the basic hash table functions using the hash function is 
 2. Return an object with fields `table` and `size`.
 | All buckets are initially empty. Real implementations often add `count` and `loadFactor`.
 
-| `createNode(key, value, next)`
+| `createNode(key, value, next)`    (Figure 6.7)    
 | Create a node for a linked list (chain)
 | `key`, `value`, `next` – reference to next node (default `null`)
 | Node object `{ key, value, next }`
@@ -261,7 +261,7 @@ The implementation of the basic hash table functions using the hash function is 
 2. Return an object with the given fields.
 | Used to insert new elements into a chain.
 
-| `hashFunc(key, size)`
+| `hashFunc(key, size)`               (Figure 6.8)
 | Compute bucket index for an integer key
 | `key` – integer, `size` – table size
 | Index from `0` to `size-1`
