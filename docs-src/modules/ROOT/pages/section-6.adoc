@@ -237,7 +237,7 @@ The implementation of the basic hash table functions using the hash function is 
 
 * Store these objects in the designated bucket.
 
-The general description of algorithms for working with hash tables is presented as a table of basic parameters of applied functions (Table 6.2) and corresponding DRAKON diagrams (Figure 6.6).
+The general description of algorithms for working with hash tables is presented as a table of basic parameters of applied functions (Table 6.2) and corresponding DRAKON diagrams (Figure 6.6 - 6.12).
 
 
 .Hash Table Functions Overview (Chaining Implementation)
@@ -253,7 +253,7 @@ The general description of algorithms for working with hash tables is presented 
 2. Return an object with fields `table` and `size`.
 | All buckets are initially empty. Real implementations often add `count` and `loadFactor`.
 
-| `createNode(key, value, next)`    (Figure 6.7)    
+| `createNode(key, value, next)`        (Figure 6.7)    
 | Create a node for a linked list (chain)
 | `key`, `value`, `next` – reference to next node (default `null`)
 | Node object `{ key, value, next }`
@@ -261,14 +261,14 @@ The general description of algorithms for working with hash tables is presented 
 2. Return an object with the given fields.
 | Used to insert new elements into a chain.
 
-| `hashFunc(key, size)`               (Figure 6.8)
+| `hashFunc(key, size)`         (Figure 6.8)
 | Compute bucket index for an integer key
 | `key` – integer, `size` – table size
 | Index from `0` to `size-1`
 | Return `Math.abs(key) % size`
 | Works only with numeric keys. Strings require a different hash function.
 
-| `hashGet(hash, key)`
+| `hashGet(hash, key)`        (Figure 6.9)
 | Find a value by key
 | `hash` – table object, `key` – search key
 | Value or `undefined` if not found
