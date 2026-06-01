@@ -22,6 +22,12 @@ function createNode(key, value, next = null) {
 function hashFunc(key, size) {
     return Math.abs(key) % size;
 }
+function hashFuncSHA256(key, size) {
+    var hashHex, hashInt;
+    hashHex = CryptoJS.SHA256(String(key)).toString();
+    hashInt = parseInt(hashHex.substring(0, 8), 16);
+    return hashInt % size;
+}
 function hashGet(hash, key) {
     var index, node;
     index = hashFunc(key, hash.size);
@@ -42,7 +48,6 @@ function hashGet(hash, key) {
 function hashInsert(hash, key, value) {
     var index, node;
     index = hashFunc(key, hash.size);
-    console.log("key = ", key, "index =", index);
     node = hash.table[index];
     while (true) {
         if (node) {
@@ -63,20 +68,15 @@ function hashLookupByValue(hash, value) {
     var i, node;
     for (i = 0; i < hash.size; i++) {
         node = hash.table[i];
-        while (true) {
-            if (node !== null && node !== undefined) {
-                if (node.value === value) {
-                    console.log(`Value "${ value }" found. key: "${ node.key }`);
-                    return node.key;
-                } else {
-                    node = node.next;
-                }
-            } else {
-                break;
+        while (node !== null && node !== undefined) {
+            if (node.value === value) {
+                console.log(`Value "${value}" found. Key: "${node.key}"`);
+                return node.key;
             }
+            node = node.next;
         }
     }
-    //console.log(`Value "${ value }" found. key: "${ node.key }"`);
+    console.log(`Value "${value}" not found`);
     return undefined;
 }
 function hashRemove(hash, value) {

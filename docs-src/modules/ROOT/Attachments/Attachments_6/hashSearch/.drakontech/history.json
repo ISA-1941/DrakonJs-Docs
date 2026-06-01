@@ -1,28 +1,32 @@
 {
     "history": [
         {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/hashRemove.drakon",
-            "whenOpened": "2026-05-31T19:47:00.210Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/hashTraverse.drakon",
-            "whenOpened": "2026-05-31T19:23:57.447Z"
-        },
-        {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/hashLookupByValue.drakon",
-            "whenOpened": "2026-05-31T19:18:11.912Z"
+            "whenOpened": "2026-06-01T08:19:45.909Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/hashInsert.drakon",
+            "whenOpened": "2026-06-01T08:14:40.948Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/main.drakon",
+            "whenOpened": "2026-06-01T08:01:24.203Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/hashRemove.drakon",
+            "whenOpened": "2026-06-01T08:00:07.513Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/searchHash.drakon",
-            "whenOpened": "2026-05-31T19:17:45.167Z"
+            "whenOpened": "2026-05-31T20:27:35.363Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/hashTraverse.drakon",
+            "whenOpened": "2026-05-31T20:25:07.319Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/module.drakon",
             "whenOpened": "2026-05-31T19:14:59.906Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/main.drakon",
-            "whenOpened": "2026-05-31T19:14:58.736Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/hashFunc.drakon",
@@ -35,10 +39,6 @@
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/hashGet.drakon",
             "whenOpened": "2026-05-31T19:14:40.930Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/hashInsert.drakon",
-            "whenOpened": "2026-05-31T19:14:35.186Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/createNode.drakon",
