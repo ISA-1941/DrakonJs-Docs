@@ -448,13 +448,13 @@ Atallah N.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph text-center">
-<p>a) Function for Creating a Hash Table (createHashTable)</p>
-</div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="_images/section_6/Fig6_5a_createHashTable.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_5a_createHashTable.svg" alt="Fig6 5a createHashTable" width="50%"></a>
 </div>
+</div>
+<div class="paragraph text-center">
+<p>a) Function for Creating a Hash Table (createHashTable)</p>
 </div>
 <div class="paragraph">
 <p>In practice, the table object often also includes a count field (current number of elements) and a loadFactor (threshold for resizing). However, we start with a minimal version for simplicity.</p>
@@ -481,15 +481,16 @@ Atallah N.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph text-center">
-<p>b) Function for Creating a node (createNode)</p>
-</div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="_images/section_6/Fig6_5b_createNodes.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_5b_createNodes.svg" alt="Fig6 5b createNodes" width="50%"></a>
 </div>
 </div>
+<div class="paragraph text-center">
+<p>b) Function for Creating a node (createNode)</p>
+</div>
 <div class="paragraph">
+<div class="title">Figure 6.5. DRAKON-diagrams of hash table creation algorithms</div>
 <p>Note that the next reference allows us to build singly linked lists inside a bucket. If only one element exists in a bucket, its next is null. When we add a new element that hashes to the same index, we place it at the beginning (or end – depending on the strategy; our algorithm will add to the head for simplicity).</p>
 </div>
 <div class="paragraph">
