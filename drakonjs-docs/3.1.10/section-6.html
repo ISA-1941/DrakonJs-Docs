@@ -767,7 +767,7 @@ The implementation of the basic hash table functions using the hash function is 
 </ul>
 </div>
 <div class="paragraph">
-<p>The general description of algorithms for working with hash tables is presented as a table of basic parameters of applied functions (Table 6.2) and corresponding DRAKON diagrams (Figure 6.6).</p>
+<p>The general description of algorithms for working with hash tables is presented as a table of basic parameters of applied functions (Table 6.2) and corresponding DRAKON diagrams (Figure 6.6 - 6.12).</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Hash Table Functions Overview (Chaining Implementation)</caption>
@@ -800,7 +800,7 @@ The implementation of the basic hash table functions using the hash function is 
 <td class="tableblock halign-left valign-top"><p class="tableblock">All buckets are initially empty. Real implementations often add <code>count</code> and <code>loadFactor</code>.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>createNode(key, value, next)</code>    (Figure 6.7)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>createNode(key, value, next)</code>        (Figure 6.7)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Create a node for a linked list (chain)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>key</code>, <code>value</code>, <code>next</code> – reference to next node (default <code>null</code>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Node object <code>{ key, value, next }</code></p></td>
@@ -809,7 +809,7 @@ The implementation of the basic hash table functions using the hash function is 
 <td class="tableblock halign-left valign-top"><p class="tableblock">Used to insert new elements into a chain.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashFunc(key, size)</code>               (Figure 6.8)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashFunc(key, size)</code>         (Figure 6.8)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Compute bucket index for an integer key</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>key</code> – integer, <code>size</code> – table size</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Index from <code>0</code> to <code>size-1</code></p></td>
@@ -817,7 +817,7 @@ The implementation of the basic hash table functions using the hash function is 
 <td class="tableblock halign-left valign-top"><p class="tableblock">Works only with numeric keys. Strings require a different hash function.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashGet(hash, key)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashGet(hash, key)</code>        (Figure 6.9)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Find a value by key</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>hash</code> – table object, <code>key</code> – search key</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value or <code>undefined</code> if not found</p></td>
