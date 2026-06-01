@@ -191,6 +191,7 @@ image::section_6/Fig6_5b_createNodes.svg[width=50%, link=self, window="_blank"]
 [.text-center]
 b) Function for Creating a node (createNode)
 
+[.text-center]
 .Figure 6.5. DRAKON-diagrams of hash table creation algorithms
 
 Note that the next reference allows us to build singly linked lists inside a bucket. If only one element exists in a bucket, its next is null. When we add a new element that hashes to the same index, we place it at the beginning (or end – depending on the strategy; our algorithm will add to the head for simplicity).
