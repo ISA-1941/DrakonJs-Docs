@@ -767,6 +767,129 @@ The implementation of the basic hash table functions using the hash function is 
 </ul>
 </div>
 <div class="paragraph">
+<p>Общее описание алгоритмаов для работы с хеш-таблицами представлено в виде таблицы основных параметров присеняемых функций (Table 6.?) и соответствующими DRAKON-диаграмм (Figure 6.6).</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Hash Table Functions Overview (Chaining Implementation)</caption>
+<colgroup>
+<col style="width: 9.0909%;">
+<col style="width: 18.1818%;">
+<col style="width: 9.0909%;">
+<col style="width: 18.1818%;">
+<col style="width: 27.2727%;">
+<col style="width: 18.1819%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Function</th>
+<th class="tableblock halign-left valign-top">Purpose</th>
+<th class="tableblock halign-left valign-top">Input</th>
+<th class="tableblock halign-left valign-top">Output</th>
+<th class="tableblock halign-left valign-top">Brief Algorithm Description</th>
+<th class="tableblock halign-left valign-top">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>createHashTable(size)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create an empty hash table</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>size</code> – number of buckets (positive integer)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Object <code>{ table: Array(size).fill(null), size: size }</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1. Create an array of length <code>size</code> and fill it with <code>null</code>.<br>
+2. Return an object with fields <code>table</code> and <code>size</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All buckets are initially empty. Real implementations often add <code>count</code> and <code>loadFactor</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>createNode(key, value, next)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create a node for a linked list (chain)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>key</code>, <code>value</code>, <code>next</code> – reference to next node (default <code>null</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Node object <code>{ key, value, next }</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1. Print a debug message to the console.<br>
+2. Return an object with the given fields.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used to insert new elements into a chain.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashFunc(key, size)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Compute bucket index for an integer key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>key</code> – integer, <code>size</code> – table size</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Index from <code>0</code> to <code>size-1</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return <code>Math.abs(key) % size</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Works only with numeric keys. Strings require a different hash function.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashGet(hash, key)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Find a value by key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hash</code> – table object, <code>key</code> – search key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Value or <code>undefined</code> if not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1. Compute index via <code>hashFunc</code>.<br>
+2. Traverse the chain at that bucket.<br>
+3. If <code>node.key === key</code> found, return <code>node.value</code>.<br>
+4. Otherwise return <code>undefined</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Amortized O(1) complexity.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashInsert(hash, key, value)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Insert or update a key‑value pair</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hash</code>, <code>key</code>, <code>value</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bucket index where insertion/update occurred</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1. Compute index.<br>
+2. Traverse the chain: if key exists, update its value and return index.<br>
+3. Otherwise, create a new node and insert at the head:<br>
+<code>hash.table[index] = createNode(key, value, hash.table[index])</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Insertion at the head is simpler and faster than at the tail.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashLookupByValue(hash, value)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Find a <strong>key</strong> by value (reverse lookup)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hash</code>, <code>value</code> – search value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Key or <code>undefined</code> if not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1. Iterate over all buckets (0 to <code>size-1</code>).<br>
+2. In each bucket, traverse the chain.<br>
+3. If <code>node.value === value</code>, return <code>node.key</code>.<br>
+4. If not found, return <code>undefined</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">O(n) complexity – inefficient; use only for debugging or rare cases.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashRemove(hash, key)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete an entry by key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hash</code>, <code>key</code> – key to delete</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code> if deleted, <code>false</code> if key not found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1. Compute index.<br>
+2. Traverse the chain with a <code>prev</code> pointer.<br>
+3. If <code>node.key === key</code>:<br>
+   if <code>prev === null</code> (head) – <code>hash.table[index] = node.next</code>,<br>
+   else <code>prev.next = node.next</code>.<br>
+4. Return <code>true</code>.<br>
+5. If not found, return <code>false</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The parameter must be <code>key</code>, not <code>value</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashTraverse(hash)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Print table contents (values only)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hash</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">– (console output)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For each bucket, print <code>"Slot i:"</code> followed by all values (<code>node.value</code>) separated by <code>" &#8594; "</code>, or <code>"Empty"</code> if the bucket is empty.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Does not show keys – <code>printHashTable</code> is more informative.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>printHashTable(hash)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Print table in <code>key &#8594; value</code> format</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hash</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">– (console output)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For each bucket, build an array of strings <code>"key &#8594; value"</code> for all nodes in the chain, then print joined by <code>" &#8594; "</code> or <code>"Empty"</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Better than <code>hashTraverse</code> for debugging.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>searchHash(hash, key)</code> (unused, can be removed)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Find value by key with extra logging</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hash</code>, <code>key</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Value or <code>undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Similar to <code>hashGet</code>, but adds debug output.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Depends on undefined <code>hashFuncSHA256</code> – currently broken.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
 <p>DRAKON-diagrams of algorithms for implementing the main functions of working with hash tables are shown in Figure 6.6.</p>
 </div>
 <div class="imageblock">
