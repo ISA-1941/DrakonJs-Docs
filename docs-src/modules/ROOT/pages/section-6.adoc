@@ -151,7 +151,14 @@ The time to find an item in a data set often depends on how many comparisons are
 
 In terms of abstract data type (ADT) theory, a hash table implements an associative array. It stores key‑value pairs and supports three basic operations: insert (add a pair), lookup (find a value by key), and delete (remove a pair).
 
-From a programming perspective, a hash table consists of buckets – groups of elements whose hash values are equal or close. The hash function transforms a given key into an integer index (the bucket number). Many methods exist to construct a hash function. The simplest is the division method, where the hash is the remainder of the key divided by the number of buckets:
+From a programming perspective, a hash table consists of buckets – groups of elements whose hash values are equal or close. The hash function transforms a given key into an integer index (the bucket number). Many methods exist to construct a hash function, some of which are shown in Figure 6.5. 
+
+[.text-center]
+.Figure 6.5. DRAKON-diagrams of hash function algorithms
+
+image::section_6/Fig6_5_hashFunctions.svg[width=50%, link=self, window="_blank"]
+
+The simplest is the division method, where the hash is the remainder of the key divided by the number of buckets:
 `h(key) = key mod m` (assuming the key is an integer). In JavaScript, for numeric keys, this becomes h = x % m.
 
 6.4.1 Creating a Hash Table and Chain Nodes
@@ -195,7 +202,6 @@ b) Function for Creating a node (createNode)
 .Figure 6.5. DRAKON-diagrams of hash table creation algorithms
 
 Note that the next reference allows us to build singly linked lists inside a bucket. If only one element exists in a bucket, its next is null. When we add a new element that hashes to the same index, we place it at the beginning (or end – depending on the strategy; our algorithm will add to the head for simplicity).
-
 
 As a result, this hash table would have as many singly linked lists (buckets) as specified by the Size constant. In the example below, the number of slots is 15.
 
