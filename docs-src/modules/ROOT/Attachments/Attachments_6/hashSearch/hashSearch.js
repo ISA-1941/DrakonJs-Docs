@@ -197,7 +197,7 @@ function main() {
     }
     console.log('--- Hash Table Contents ---');
     printHashTable(hash);
-    hashLookupByValue(hash, 135790);
+    hashLookupByValue(hash, 'Matthew B. Taylor');
 }
 function printHashTable(hash) {
     var i, node, slotContent;

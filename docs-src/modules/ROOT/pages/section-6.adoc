@@ -246,14 +246,14 @@ The general description of algorithms for working with hash tables is presented 
 [cols="1,2,1,2,3,2", options="header"]
 |===
 | Function | Purpose | Input | Output | Brief Algorithm Description | Notes
-| `hashFunc(key, size)`         (Figure 6.8)
+| `hashFunc(key, size)`         (Figure 6.6)
 | Compute bucket index for an integer key
 | `key` – integer, `size` – table size
 | Index from `0` to `size-1`
 | Return `Math.abs(key) % size`
 | Works only with numeric keys. Strings require a different hash function.
 
-| `hashGet(hash, key)`        (Figure 6.9)
+| `hashGet(hash, key)`        (Figure 6.7)
 | Find a value by key
 | `hash` – table object, `key` – search key
 | Value or `undefined` if not found
@@ -263,7 +263,7 @@ The general description of algorithms for working with hash tables is presented 
 4. Otherwise return `undefined`.
 | Amortized O(1) complexity.
 
-| `hashInsert(hash, key, value)`
+| `hashInsert(hash, key, value)`        (Figure 6.8)
 | Insert or update a key‑value pair
 | `hash`, `key`, `value`
 | Bucket index where insertion/update occurred
@@ -273,7 +273,7 @@ The general description of algorithms for working with hash tables is presented 
 `hash.table[index] = createNode(key, value, hash.table[index])`.
 | Insertion at the head is simpler and faster than at the tail.
 
-| `hashLookupByValue(hash, value)`
+| `hashLookupByValue(hash, value)`        (Figure 6.9)
 | Find a **key** by value (reverse lookup)
 | `hash`, `value` – search value
 | Key or `undefined` if not found
@@ -283,7 +283,7 @@ The general description of algorithms for working with hash tables is presented 
 4. If not found, return `undefined`.
 | O(n) complexity – inefficient; use only for debugging or rare cases.
 
-| `hashRemove(hash, key)`
+| `hashRemove(hash, key)`        (Figure 6.10)
 | Delete an entry by key
 | `hash`, `key` – key to delete
 | `true` if deleted, `false` if key not found
@@ -296,14 +296,14 @@ The general description of algorithms for working with hash tables is presented 
 5. If not found, return `false`.
 | The parameter must be `key`, not `value`.
 
-| `hashTraverse(hash)`
+| `hashTraverse(hash)`       (Figure 6.11)     
 | Print table contents (values only)
 | `hash`
 | – (console output)
 | For each bucket, print `"Slot i:"` followed by all values (`node.value`) separated by `" -> "`, or `"Empty"` if the bucket is empty.
 | Does not show keys – `printHashTable` is more informative.
 
-| `printHashTable(hash)`
+| `printHashTable(hash)`    (Figure 6.12)
 | Print table in `key -> value` format
 | `hash`
 | – (console output)
@@ -318,7 +318,7 @@ The general description of algorithms for working with hash tables is presented 
 | Depends on undefined `hashFuncSHA256` – currently broken.
 |===
 
-DRAKON-diagrams of algorithms for implementing the main functions of working with hash tables are shown in Figure 6.6.
+DRAKON-diagrams of algorithms for implementing the main functions of working with hash tables are shown in Figure 6.6 - 6.12.
 
 image::section_6/Fig6_6a_hashInsert.svg[width=75%, link=self, window="_blank"]
 
