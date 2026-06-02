@@ -156,7 +156,7 @@ From a programming perspective, a hash table consists of buckets – groups of e
 [.text-center]
 .Figure 6.5. DRAKON-diagrams of hash function algorithms
 
-image::section_6/Fig6_5_hashFunctions.svg[width=50%, link=self, window="_blank"]
+image::section_6/Fig6_5_hashFunctions.svg[width=100%, link=self, window="_blank"]
 
 The simplest is the division method, where the hash is the remainder of the key divided by the number of buckets:
 `h(key) = key mod m` (assuming the key is an integer). In JavaScript, for numeric keys, this becomes h = x % m.
