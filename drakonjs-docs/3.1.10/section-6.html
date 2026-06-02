@@ -420,7 +420,16 @@ Atallah N.</p>
 <p>In terms of abstract data type (ADT) theory, a hash table implements an associative array. It stores key‑value pairs and supports three basic operations: insert (add a pair), lookup (find a value by key), and delete (remove a pair).</p>
 </div>
 <div class="paragraph">
-<p>From a programming perspective, a hash table consists of buckets – groups of elements whose hash values are equal or close. The hash function transforms a given key into an integer index (the bucket number). Many methods exist to construct a hash function. The simplest is the division method, where the hash is the remainder of the key divided by the number of buckets:<br>
+<p>From a programming perspective, a hash table consists of buckets – groups of elements whose hash values are equal or close. The hash function transforms a given key into an integer index (the bucket number). Many methods exist to construct a hash function, some of which are shown in Figure 6.5.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<a class="image" href="_images/section_6/Fig6_5_hashFunctions.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_5_hashFunctions.svg" alt="Fig6 5 hashFunctions" width="50%"></a>
+</div>
+<div class="title">Figure 6.5. DRAKON-diagrams of hash function algorithms</div>
+</div>
+<div class="paragraph">
+<p>The simplest is the division method, where the hash is the remainder of the key divided by the number of buckets:<br>
 <code>h(key) = key mod m</code> (assuming the key is an integer). In JavaScript, for numeric keys, this becomes h = x % m.</p>
 </div>
 <div class="paragraph">
