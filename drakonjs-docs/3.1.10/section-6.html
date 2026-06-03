@@ -436,13 +436,13 @@ Atallah N.</p>
 <p>6.4.1 Creating a Hash Table and Chain Nodes</p>
 </div>
 <div class="paragraph">
-<p>To implement a hash table using chaining, we need two helper structures: the table itself (an array of buckets) and a node for the linked list.</p>
+<p>To implement a hash-table using chaining, we need two helper structures: the table itself (an array of buckets) and a node for the linked list.</p>
 </div>
 <div class="paragraph">
 <p><strong>Creating the Hash Table</strong></p>
 </div>
 <div class="paragraph">
-<p>The function <code>createHashTable(size)</code> initializes a new hash table instance. It takes one argument – the desired number of buckets. Internally, it does the following:</p>
+<p>The function <code><em>createHashTable(size)</em></code> initializes a new hash table instance. It takes one argument – the desired number of buckets. Internally, it does the following:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -791,36 +791,20 @@ The implementation of the basic hash table functions using the hash function is 
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Function</th>
-<th class="tableblock halign-left valign-top">Purpose</th>
-<th class="tableblock halign-left valign-top">Input</th>
-<th class="tableblock halign-left valign-top">Output</th>
-<th class="tableblock halign-left valign-top">Brief Algorithm Description</th>
-<th class="tableblock halign-left valign-top">Notes</th>
+<th class="tableblock halign-left valign-top"><code>hashGet(hash, key)</code>        (Figure 6.6)</th>
+<th class="tableblock halign-left valign-top">Find a value by key</th>
+<th class="tableblock halign-left valign-top"><code>hash</code> – table object, <code>key</code> – search key</th>
+<th class="tableblock halign-left valign-top">Value or <code>undefined</code> if not found</th>
+<th class="tableblock halign-left valign-top">1. Compute index via <code>hashFunc</code>.<br>
+2. Traverse the chain at that bucket.<br>
+3. If <code>node.key === key</code> found, return <code>node.value</code>.<br>
+4. Otherwise return <code>undefined</code>.</th>
+<th class="tableblock halign-left valign-top">Amortized O(1) complexity.</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashFunc(key, size)</code>         (Figure 6.6)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Compute bucket index for an integer key</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>key</code> – integer, <code>size</code> – table size</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Index from <code>0</code> to <code>size-1</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Return <code>Math.abs(key) % size</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Works only with numeric keys. Strings require a different hash function.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashGet(hash, key)</code>        (Figure 6.7)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Find a value by key</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hash</code> – table object, <code>key</code> – search key</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Value or <code>undefined</code> if not found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1. Compute index via <code>hashFunc</code>.<br>
-2. Traverse the chain at that bucket.<br>
-3. If <code>node.key === key</code> found, return <code>node.value</code>.<br>
-4. Otherwise return <code>undefined</code>.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Amortized O(1) complexity.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashInsert(hash, key, value)</code>        (Figure 6.8)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashInsert(hash, key, value)</code>        (Figure 6.7)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Insert or update a key‑value pair</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>hash</code>, <code>key</code>, <code>value</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Bucket index where insertion/update occurred</p></td>
@@ -831,7 +815,7 @@ The implementation of the basic hash table functions using the hash function is 
 <td class="tableblock halign-left valign-top"><p class="tableblock">Insertion at the head is simpler and faster than at the tail.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashLookupByValue(hash, value)</code>        (Figure 6.9)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashLookupByValue(hash, value)</code>        (Figure 6.8)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Find a <strong>key</strong> by value (reverse lookup)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>hash</code>, <code>value</code> – search value</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Key or <code>undefined</code> if not found</p></td>
@@ -842,7 +826,7 @@ The implementation of the basic hash table functions using the hash function is 
 <td class="tableblock halign-left valign-top"><p class="tableblock">O(n) complexity – inefficient; use only for debugging or rare cases.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashRemove(hash, key)</code>        (Figure 6.10)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashRemove(hash, key)</code>        (Figure 6.9)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Delete an entry by key</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>hash</code>, <code>key</code> – key to delete</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code> if deleted, <code>false</code> if key not found</p></td>
@@ -856,7 +840,7 @@ The implementation of the basic hash table functions using the hash function is 
 <td class="tableblock halign-left valign-top"><p class="tableblock">The parameter must be <code>key</code>, not <code>value</code>.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashTraverse(hash)</code>       (Figure 6.11)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashTraverse(hash)</code>       (Figure 6.10)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Print table contents (values only)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>hash</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">– (console output)</p></td>
@@ -864,20 +848,12 @@ The implementation of the basic hash table functions using the hash function is 
 <td class="tableblock halign-left valign-top"><p class="tableblock">Does not show keys – <code>printHashTable</code> is more informative.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>printHashTable(hash)</code>    (Figure 6.12)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>printHashTable(hash)</code>    (Figure 6.11)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Print table in <code>key &#8594; value</code> format</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>hash</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">– (console output)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">For each bucket, build an array of strings <code>"key &#8594; value"</code> for all nodes in the chain, then print joined by <code>" &#8594; "</code> or <code>"Empty"</code>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Better than <code>hashTraverse</code> for debugging.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>searchHash(hash, key)</code> (unused, can be removed)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Find value by key with extra logging</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hash</code>, <code>key</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Value or <code>undefined</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Similar to <code>hashGet</code>, but adds debug output.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Depends on undefined <code>hashFuncSHA256</code> – currently broken.</p></td>
 </tr>
 </tbody>
 </table>
@@ -892,9 +868,9 @@ The implementation of the basic hash table functions using the hash function is 
 <div class="paragraph text-center">
 <p>a) Hash Table Creation Function (hInsert)</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/section_6/Fig6_6b_searchHash.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_6b_searchHash.svg" alt="Fig6 6b searchHash" width="100%"></a>
+<a class="image" href="section_6/Fig6_6b_searchHash.svg" target="_blank" rel="noopener"><img src="section_6/Fig6_6b_searchHash.svg" alt="Fig6 6b searchHash" width="100%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
