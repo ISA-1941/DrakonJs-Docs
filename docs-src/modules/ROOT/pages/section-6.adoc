@@ -234,10 +234,6 @@ Table 6.1. Hash table of 15 slots
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14
 |===
 
-The entire hash table will be as follows (Fig6_5c)
-
-image::section_6/Fig6_tableToBucket.png[width=100%, link=self, window="_blank"]
-
 Thus, the remainder method converts a collection of 120 integers into a hash table of 15 slots. The search for an element is now greatly accelerated as it takes two steps: first, the hash function h = (x % m) computes the hash index, and then the search is performed within a bucket (approximately 7–8 elements). 
 The implementation of the basic hash table functions using the hash function is as follows:
 
@@ -325,26 +321,27 @@ image::section_6/Fig6_7_hashInsert.svg[width=75%, link=self, window="_blank"]
 [.text-center]
 b) Hash Table Creation Function (hInsert)
 
-image::section_6/Fig6_8_searchHash.svg[width=100%, link=self, window="_blank"]
+image::section_6/Fig6_8_hashLookupByValue.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
-b) Hash Table Search Function (hLookup)
+c) Hash Table Reverse Lookup Function (hLookupByValue)
 
-image::section_6/Fig6_8_hashTraverse.svg[width=75%, link=self, window="_blank"]
-
-[.text-center]
-c) Hash Table Traversal Function (hTraverse)
-
-image::section_6/Fig6_6d_hashRemove.svg[width=100%, link=self, window="_blank"]
+image::section_6/Fig6_9_hashRemove.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 d) Hash Table Deletion Function (hRemove)
 
-
-Consider the algorithm for removing an element from the hash table. Suppose we delete element 74. First, the bucket containing the item to be removed is determined. Then, the algorithm traverses the elements of this bucket, where after each node.Value == value check, the current element is stored in the nodePrev variable. If the condition is met, the nodePrev.nextNode field is changed to skip the deleted element (Figure 6.5d):
+image::section_6/Fig6_10_hashTraverse.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
-.Figure 6.5. DRAKON-diagrams of hash table algorithms
+e) Hash Table Traversal Function (hTraverse)
+
+image::section_6/Fig6_11_printHashTable.svg[width=75%, link=self, window="_blank"]
+
+[.text-center]
+f) Hash Table Printing Function (printHashTable)
+
+Consider the algorithm for removing an element from the hash table. Suppose we delete element 74. First, the bucket containing the item to be removed is determined. Then, the algorithm traverses the elements of this bucket, where after each node.Value == value check, the current element is stored in the nodePrev variable. If the condition is met, the nodePrev.nextNode field is changed to skip the deleted element (Figure 6.5d):
 
 Another example of a "good" hash function for use with integer key values is the mean square method. The mean square method squares the key value and then extracts the middle digits of the result, giving a value in the range from 0 to M. A software implementation of a hash function algorithm in Go would involve using built-in functions for converting integers to strings (strconv.Atoi(i)) and vice versa (strconv.Itoa(i)). For example, for any four-digit number, the hash function is:
 go
@@ -363,14 +360,14 @@ func hFunc(i int) int {
 
 This section has focused on the fundamental principles of hashing and the implementation of a hash table using separate chaining. However, several important and advanced aspects of modern hashing remain outside the scope of this book:
 
-    Open addressing techniques — linear probing, quadratic probing, and double hashing.
+* Open addressing techniques — linear probing, quadratic probing, and double hashing.
 
-    Dynamic resizing of hash tables when the load factor exceeds a threshold.
+* Dynamic resizing of hash tables when the load factor exceeds a threshold.
 
-    Cryptographic hash functions (MD5, SHA family, etc.) used for data integrity and security rather than indexing.
+* Cryptographic hash functions (MD5, SHA family, etc.) used for data integrity and security rather than indexing.
 
-    Perfect hashing and minimal perfect hashing, which eliminate collisions entirely but require complex precomputation.
+* Perfect hashing and minimal perfect hashing, which eliminate collisions entirely but require complex precomputation.
 
-    Distributed hash tables (DHTs) — used in peer-to-peer networks and blockchain architectures.
+* Distributed hash tables (DHTs) — used in peer-to-peer networks and blockchain architectures.
 
 These topics will be explored in future works devoted to large-scale data management, high-performance systems, and secure information storage.
