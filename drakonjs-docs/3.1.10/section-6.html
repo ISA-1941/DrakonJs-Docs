@@ -757,6 +757,14 @@ Atallah N.</p>
 </tbody>
 </table>
 <div class="paragraph">
+<p>The entire hash table will be as follows (Fig6_5c)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="_images/section_6/Fig6_tableToBucket.png" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_tableToBucket.png" alt="Fig6 tableToBucket" width="100%"></a>
+</div>
+</div>
+<div class="paragraph">
 <p>Thus, the remainder method converts a collection of 120 integers into a hash table of 15 slots. The search for an element is now greatly accelerated as it takes two steps: first, the hash function h = (x % m) computes the hash index, and then the search is performed within a bucket (approximately 7–8 elements).<br>
 The implementation of the basic hash table functions using the hash function is as follows:</p>
 </div>
@@ -858,35 +866,43 @@ The implementation of the basic hash table functions using the hash function is 
 </tbody>
 </table>
 <div class="paragraph">
-<p>DRAKON-diagrams of algorithms for implementing the main functions of working with hash tables are shown in Figure 6.6 - 6.12.</p>
+<p>DRAKON-diagrams of algorithms for implementing the main functions of working with hash tables are shown in Figure 6.6 - 6.11.</p>
 </div>
-<div class="imageblock unresolved">
+<div class="imageblock">
 <div class="content">
-<a class="image" href="section_6/Fig6_6a_hashInsert.svg" target="_blank" rel="noopener"><img src="section_6/Fig6_6a_hashInsert.svg" alt="Fig6 6a hashInsert" width="75%"></a>
+<a class="image" href="_images/section_6/Fig6_6_hashGet.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_6_hashGet.svg" alt="Fig6 6 hashGet" width="75%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
-<p>a) Hash Table Creation Function (hInsert)</p>
+<p>a) Hash Table Find Function a value by key (hashGet)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="_images/section_6/Fig6_7_hashInsert.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_7_hashInsert.svg" alt="Fig6 7 hashInsert" width="75%"></a>
+</div>
+</div>
+<div class="paragraph text-center">
+<p>b) Hash Table Creation Function (hInsert)</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="section_6/Fig6_6b_searchHash.svg" target="_blank" rel="noopener"><img src="section_6/Fig6_6b_searchHash.svg" alt="Fig6 6b searchHash" width="100%"></a>
+<a class="image" href="section_6/Fig6_8_searchHash.svg" target="_blank" rel="noopener"><img src="section_6/Fig6_8_searchHash.svg" alt="Fig6 8 searchHash" width="100%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
 <p>b) Hash Table Search Function (hLookup)</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/section_6/Fig6_6c_hashTraverse.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_6c_hashTraverse.svg" alt="Fig6 6c hashTraverse" width="75%"></a>
+<a class="image" href="section_6/Fig6_8_hashTraverse.svg" target="_blank" rel="noopener"><img src="section_6/Fig6_8_hashTraverse.svg" alt="Fig6 8 hashTraverse" width="75%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
 <p>c) Hash Table Traversal Function (hTraverse)</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/section_6/Fig6_6d_hashRemove.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_6d_hashRemove.svg" alt="Fig6 6d hashRemove" width="100%"></a>
+<a class="image" href="section_6/Fig6_6d_hashRemove.svg" target="_blank" rel="noopener"><img src="section_6/Fig6_6d_hashRemove.svg" alt="Fig6 6d hashRemove" width="100%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
