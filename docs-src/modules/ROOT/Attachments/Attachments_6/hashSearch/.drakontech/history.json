@@ -1,6 +1,18 @@
 {
     "history": [
         {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/printHashTable.drakon",
+            "whenOpened": "2026-06-03T17:53:56.514Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/hashGet.drakon",
+            "whenOpened": "2026-06-03T17:38:11.836Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/main.drakon",
+            "whenOpened": "2026-06-03T17:37:11.366Z"
+        },
+        {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/hashFuncDjb2.drakon",
             "whenOpened": "2026-06-02T09:35:50.237Z"
         },
@@ -33,10 +45,6 @@
             "whenOpened": "2026-06-01T08:14:40.948Z"
         },
         {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/main.drakon",
-            "whenOpened": "2026-06-01T08:01:24.203Z"
-        },
-        {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/hashRemove.drakon",
             "whenOpened": "2026-06-01T08:00:07.513Z"
         },
@@ -51,10 +59,6 @@
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/module.drakon",
             "whenOpened": "2026-05-31T19:14:59.906Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/hashGet.drakon",
-            "whenOpened": "2026-05-31T19:14:40.930Z"
         }
     ]
 }
