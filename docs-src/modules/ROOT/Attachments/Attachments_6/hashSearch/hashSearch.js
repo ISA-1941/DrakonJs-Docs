@@ -126,68 +126,68 @@ function main() {
     hash = createHashTable(16);
     dataEn = [
         [
-            123456,
-            'John J. Doe'
+            519283,
+            'Alice R. Cooper'
         ],
         [
-            987654,
-            'Jane K. Smith'
+            746102,
+            'Bob M. Bennett'
         ],
         [
-            112233,
-            'Peter L. Jones'
+            357908,
+            'Carol A. Foster'
         ],
         [
-            556677,
-            'Mary V. Brown'
+            821674,
+            'David S. Hughes'
         ],
         [
-            334455,
-            'David A. Davis'
+            430165,
+            'Emma L. Reed'
         ],
         [
-            778899,
-            'Susan G. Wilson'
+            679832,
+            'Frank W. Brooks'
         ],
         [
-            223344,
-            'Michael D. Garcia'
+            213547,
+            'Grace E. Simmons'
         ],
         [
-            667788,
-            'Linda E. Rodriguez'
+            958301,
+            'Henry T. Peterson'
         ],
         [
-            445566,
-            'Christopher H. Martinez'
+            476820,
+            'Ivy N. Butler'
         ],
         [
-            889900,
-            'Jessica F. Anders'
+            392645,
+            'Jack K. Barnes'
         ],
         [
-            135790,
-            'Matthew B. Taylor'
+            568079,
+            'Kelly P. Ross'
         ],
         [
-            24689,
-            'Ashley C. Thomas'
+            734218,
+            'Leo C. Coleman'
         ],
         [
-            975310,
-            'Andrew I. Jackson'
+            807541,
+            'Mia G. Richardson'
         ],
         [
-            864201,
-            'Sarah N. White'
+            169834,
+            'Noah D. Patterson'
         ],
         [
-            753192,
-            'Daniel O. Harris'
+            625073,
+            'Olivia J. Watson
         ],
         [
-            642083,
-            'Brittany P. Lewis'
+            941206, 
+            'Paul V. Steven
         ]
     ];
     for (i = 0; i <= 15; i++) {

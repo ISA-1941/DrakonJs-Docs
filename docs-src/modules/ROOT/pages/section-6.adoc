@@ -163,11 +163,11 @@ The simplest is the division method, where the hash is the remainder of the key 
 
 6.4.1 Creating a Hash Table and Chain Nodes
 
-To implement a hash table using chaining, we need two helper structures: the table itself (an array of buckets) and a node for the linked list.
+To implement a hash-table using chaining, we need two helper structures: the table itself (an array of buckets) and a node for the linked list.
 
 *Creating the Hash Table*
 
-The function `createHashTable(size)` initializes a new hash table instance. It takes one argument – the desired number of buckets. Internally, it does the following:
+The function `_createHashTable(size)_` initializes a new hash table instance. It takes one argument – the desired number of buckets. Internally, it does the following:
 
 * Creates an array table of the given length.
 
@@ -251,15 +251,7 @@ The general description of algorithms for working with hash tables is presented 
 .Hash Table Functions Overview (Chaining Implementation)
 [cols="1,2,1,2,3,2", options="header"]
 |===
-| Function | Purpose | Input | Output | Brief Algorithm Description | Notes
-| `hashFunc(key, size)`         (Figure 6.6)
-| Compute bucket index for an integer key
-| `key` – integer, `size` – table size
-| Index from `0` to `size-1`
-| Return `Math.abs(key) % size`
-| Works only with numeric keys. Strings require a different hash function.
-
-| `hashGet(hash, key)`        (Figure 6.7)
+| `hashGet(hash, key)`        (Figure 6.6)
 | Find a value by key
 | `hash` – table object, `key` – search key
 | Value or `undefined` if not found
@@ -269,7 +261,7 @@ The general description of algorithms for working with hash tables is presented 
 4. Otherwise return `undefined`.
 | Amortized O(1) complexity.
 
-| `hashInsert(hash, key, value)`        (Figure 6.8)
+| `hashInsert(hash, key, value)`        (Figure 6.7)
 | Insert or update a key‑value pair
 | `hash`, `key`, `value`
 | Bucket index where insertion/update occurred
@@ -279,7 +271,7 @@ The general description of algorithms for working with hash tables is presented 
 `hash.table[index] = createNode(key, value, hash.table[index])`.
 | Insertion at the head is simpler and faster than at the tail.
 
-| `hashLookupByValue(hash, value)`        (Figure 6.9)
+| `hashLookupByValue(hash, value)`        (Figure 6.8)
 | Find a **key** by value (reverse lookup)
 | `hash`, `value` – search value
 | Key or `undefined` if not found
@@ -289,7 +281,7 @@ The general description of algorithms for working with hash tables is presented 
 4. If not found, return `undefined`.
 | O(n) complexity – inefficient; use only for debugging or rare cases.
 
-| `hashRemove(hash, key)`        (Figure 6.10)
+| `hashRemove(hash, key)`        (Figure 6.9)
 | Delete an entry by key
 | `hash`, `key` – key to delete
 | `true` if deleted, `false` if key not found
@@ -302,26 +294,19 @@ The general description of algorithms for working with hash tables is presented 
 5. If not found, return `false`.
 | The parameter must be `key`, not `value`.
 
-| `hashTraverse(hash)`       (Figure 6.11)     
+| `hashTraverse(hash)`       (Figure 6.10)     
 | Print table contents (values only)
 | `hash`
 | – (console output)
 | For each bucket, print `"Slot i:"` followed by all values (`node.value`) separated by `" -> "`, or `"Empty"` if the bucket is empty.
 | Does not show keys – `printHashTable` is more informative.
 
-| `printHashTable(hash)`    (Figure 6.12)
+| `printHashTable(hash)`    (Figure 6.11)
 | Print table in `key -> value` format
 | `hash`
 | – (console output)
 | For each bucket, build an array of strings `"key -> value"` for all nodes in the chain, then print joined by `" -> "` or `"Empty"`.
 | Better than `hashTraverse` for debugging.
-
-| `searchHash(hash, key)` (unused, can be removed)
-| Find value by key with extra logging
-| `hash`, `key`
-| Value or `undefined`
-| Similar to `hashGet`, but adds debug output.
-| Depends on undefined `hashFuncSHA256` – currently broken.
 |===
 
 DRAKON-diagrams of algorithms for implementing the main functions of working with hash tables are shown in Figure 6.6 - 6.12.
