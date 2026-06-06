@@ -94,7 +94,7 @@ Time complexity of the binary search algorithm belongs to class O(log n). This m
 
 === 6.3. Searching in a Singly Linked List
 
-There are three possibilities for a singly linked list. First, the desired value is missing from the list. Second, the desired value appears once. Third, the desired value appears multiple times. You can also set the task of removing duplicates — nodes that are redundant. To solve these problems, it is necessary to create a singly linked list whose items contain values "Smith A.", "Shafler B.", "Wiley D.", "Brown G.", "Black H.". In this list you should delete the entry "Brown G." and then add a new entry "Singer B." placing it after the entry "Wiley D.". After that, you should delete duplicates of the entry "Shafler B." leaving only one. The corresponding DRAKON-diagrams are presented in Figure 6.4.
+There are three possibilities for a singly linked list. First, the desired value is missing from the list. Second, the desired value appears once. Third, the desired value appears multiple times. You can also set the task of removing duplicates — nodes that are redundant. To solve these problems, it is necessary to create a singly linked list whose items contain values "Smith A.", "Brown G., "Shafler B.", "Wiley D.", "Wiley D.", Atallah N.". In this list you should delete the entry "Brown G." and then add a new entry "Singer B." placing it after the entry "Wiley D.". After that, you should delete duplicates of the entry "Shafler B." leaving only one. The linked list operations below demonstrate search as a subroutine in deletion, insertion and duplicate removal — all of which rely on locating an element by value.The corresponding DRAKON-diagrams are presented in Figure 6.4.
 
 image::section_6/Fig6_4a_main.svg[width=50%, link=self, window="_blank"]
 
@@ -245,7 +245,7 @@ The implementation of the basic hash table functions using the hash function is 
 
 * Store these objects in the designated bucket.
 
-The general description of algorithms for working with hash tables is presented as a table of basic parameters of applied functions (Table 6.2) and corresponding DRAKON diagrams (Figure 6.6 - 6.12).
+The general description of algorithms for working with hash tables is presented as a table of basic parameters of applied functions (Table 6.2) and corresponding DRAKON diagrams (Figure 6.6 - 6.11).
 
 
 .Hash Table Functions Overview (Chaining Implementation)

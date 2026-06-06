@@ -1,6 +1,10 @@
 {
     "history": [
         {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/hashRemove.drakon",
+            "whenOpened": "2026-06-04T17:48:21.232Z"
+        },
+        {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/printHashTable.drakon",
             "whenOpened": "2026-06-03T17:53:56.514Z"
         },
@@ -43,10 +47,6 @@
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/hashInsert.drakon",
             "whenOpened": "2026-06-01T08:14:40.948Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/hashRemove.drakon",
-            "whenOpened": "2026-06-01T08:00:07.513Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/hashSearch/searchHash.drakon",

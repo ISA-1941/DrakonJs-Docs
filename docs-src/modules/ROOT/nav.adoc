@@ -4,7 +4,7 @@
 * xref:section-3.adoc[Section 3. DRAKON Visual Language]
 * xref:section-4.adoc[Section 4. Implementation of ADTs in JavaScript]
 * xref:section-5.adoc[Section 5. Complexity Analysis]
-* xref:section-6.adoc[Section 6. Sorting Algorithms]
+* xref:section-6.adoc[Section 6.  Basic Search Algorithms]
 * xref:section-7.adoc[Section 7. Search Algorithms]
 * xref:section-8.adoc[Section 8. Binary Tree Algorithms]
 * xref:section-9.adoc[Section 9. Graphs and Graph Algorithms]
