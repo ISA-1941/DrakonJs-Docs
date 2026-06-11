@@ -112,7 +112,7 @@ image::section_6/Fig6_4c_searchData.svg[width=100%, link=self, window="_blank"]
 [.text-center]
 c) Function for Searching (searchData(val))
 
-image::section_6/Fig6_4d_removeVal_2.svg[width=100%, link=self, window="_blank"]
+image::section_6/Fig6_4d_removeValNew.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 d) Function for Deletion (removeVal(val))
