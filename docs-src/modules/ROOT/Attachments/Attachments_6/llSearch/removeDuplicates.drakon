@@ -37,7 +37,7 @@
             "one": "12",
             "two": "9",
             "flag1": 0,
-            "content": "current !== null )"
+            "content": "current !== null "
         },
         "8": {
             "type": "arrow-loop",

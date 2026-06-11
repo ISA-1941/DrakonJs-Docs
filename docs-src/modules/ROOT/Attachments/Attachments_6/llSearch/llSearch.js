@@ -21,22 +21,25 @@ function iterateList(list) {
 function main() {
     var list;
     list = createLinkedList();
+    console.log('Shafler P is deleted');
     pushFront(list, 'Smith J.');
     pushBack(list, 'Brown G.');
     pushBack(list, 'Shafler P.');
     pushBack(list, 'Wiley S.');
     pushBack(list, 'Wiley S.');
     pushBack(list, 'Atallah N.');
-    console.log('The linked list is:');
     iterateList(list);
-    searchData(list, 'Wiley S.');
-    removeDuplicates(list)
-    //removeVal(list, 'Wiley S.');
+    removeVal(list, 'Shafler P.');
+    console.log('Shafler P is deleted');
+    console.log('After W deletion ');
     iterateList(list);
-    // console.log('Wiley S. is deleted');
+    removeDuplicates(list);
+    console.log('After W deletion ');
+    iterateList(list);
 }
 function pushBack(list, val) {
-    var newNode = {
+    var newNode, node;
+    newNode = {
         data: val,
         nextNode: null
     };
@@ -44,9 +47,13 @@ function pushBack(list, val) {
         list.headNode = newNode;
         return;
     }
-    var node = list.headNode;
-    while (node.nextNode !== null) {
-        node = node.nextNode;
+    node = list.headNode;
+    while (true) {
+        if (node.nextNode !== null) {
+            node = node.nextNode;
+        } else {
+            break;
+        }
     }
     node.nextNode = newNode;
 }
@@ -59,34 +66,66 @@ function pushFront(list, val) {
     list.headNode = node;
     list.len++;
 }
-
 function removeDuplicates(list) {
-    if (!list.headNode) return;
-
-    const counter = new Map();
-    let current = list.headNode;
-    while (current !== null) {
-        counter.set(current.data, (counter.get(current.data) || 0) + 1);
-        current = current.nextNode;
+    var counter, current, node, prev, seen, val;
+    if (!list.headNode) {
+        return;
     }
-
-    const seen = new Set();
-    let prev = null;
-    let node = list.headNode;
-
-    while (node !== null) {
-        const val = node.data;
-        if (counter.get(val) > 1 && seen.has(val)) {
-            if (prev === null) {
-                list.headNode = node.nextNode;
-            } else {
-                prev.nextNode = node.nextNode;
-            }
-            node = node.nextNode;
+    counter = new Map();
+    current = list.headNode;
+    while (true) {
+        if (current !== null) {
+            counter.set(current.data, (counter.get(current.data) || 0) + 1);
+            current = current.nextNode;
         } else {
-            if (counter.get(val) > 1) seen.add(val);
-            prev = node;
-            node = node.nextNode;
+            break;
+        }
+    }
+    seen = new Set();
+    prev = null;
+    node = list.headNode;
+    while (true) {
+        if (node !== null) {
+            val = node.data;
+            if (counter.get(val) > 1 && seen.has(val)) {
+                if (prev === null) {
+                    list.headNode = node.nextNode;
+                } else {
+                    prev.nextNode = node.nextNode;
+                }
+                node = node.nextNode;
+            } else {
+                if (counter.get(val) > 1) {
+                    seen.add(val);
+                }
+                prev = node;
+                node = node.nextNode;
+            }
+        } else {
+            break;
+        }
+    }
+}
+function removeVal(list,val) {
+    var nextNode, node;
+    while (true) {
+        if (list.headNode !== null && list.headNode.data === val) {
+            list.headNode = list.headNode.nextNode;
+        } else {
+            break;
+        }
+    }
+    node = list.headNode;
+    while (true) {
+        if (node !== null) {
+            nextNode = node.nextNode;
+            if (nextNode !== null && nextNode.data === val) {
+                node.nextNode = nextNode.nextNode;
+            } else {
+                node = nextNode;
+            }
+        } else {
+            break;
         }
     }
 }

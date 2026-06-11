@@ -32,6 +32,37 @@ function iterateList(list) {
   }
 }
 
+function removeDuplicates(list) {
+    if (!list.headNode) return;
+
+    const counter = new Map();
+    let current = list.headNode;
+    while (current !== null) {
+        counter.set(current.data, (counter.get(current.data) || 0) + 1);
+        current = current.nextNode;
+    }
+
+    const seen = new Set();
+    let prev = null;
+    let node = list.headNode;
+
+    while (node !== null) {
+        const val = node.data;
+        if (counter.get(val) > 1 && seen.has(val)) {
+            if (prev === null) {
+                list.headNode = node.nextNode;
+            } else {
+                prev.nextNode = node.nextNode;
+            }
+            node = node.nextNode;
+        } else {
+            if (counter.get(val) > 1) seen.add(val);
+            prev = node;
+            node = node.nextNode;
+        }
+    }
+}
+
 function removeVal(list, val) {
   while (list.headNode !== null && list.headNode.data === val) {
     list.headNode = list.headNode.nextNode;
@@ -75,7 +106,9 @@ pushBack(list, "Wiley S.");
 pushBack(list, "Wiley S.");
 pushBack(list, "Atallah N.");
 
-searchData(list, "Wiley S.");
-removeVal(list, "Wiley S.");
+// searchData(list, "Wiley S.");
+removeVal(list, "Shafler P.");
 iterateList(list);
-console.log("Wiley S. is deleted");
+console.log("Shafler P. is deleted");
+removeDuplicates(list);
+iterateList(list);

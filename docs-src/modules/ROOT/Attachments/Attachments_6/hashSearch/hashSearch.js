@@ -79,28 +79,32 @@ function hashLookupByValue(hash, value) {
     console.log(`Value "${value}" not found`);
     return undefined;
 }
-function hashRemove(hash, value) {
-    var index, node, prev;
-    index = hashFunc(value, hash.size);
-    node = hash.table[index];
-    prev = null;
-    while (true) {
-        if (node) {
-            if (node.key === key) {
-                if (prev) {
-                    prev.next = node.next;
-                } else {
-                    hash.table[index] = node.next;
-                }
+function hashRemove(hash, key) {
+    const index = hashFunc(key, hash.size);
+    console.log(`Removing "${key}" → bucket ${index}`);
+    
+    let node = hash.table[index];
+    let prev = null;
+    
+    while (node !== null) {
+        if (node.key === key) {
+            // Узел найден — удаляем его
+            if (prev === null) {
+                // Это первый узел в цепочке
+                hash.table[index] = node.next;
             } else {
-                return true;
+                prev.next = node.next;
             }
-        } else {
-            break;
+            console.log(`Removed "${key}"`);
+            return true;
         }
+        // Переход к следующему узлу
+        prev = node;
+        node = node.next;
     }
-    prev = node;
-    node = node.next;
+    
+    console.log(`Key "${key}" not found`);
+    return false;
 }
 function hashTraverse(hash) {
     var i, node, output;
@@ -183,11 +187,11 @@ function main() {
         ],
         [
             625073,
-            'Olivia J. Watson
+            'Olivia J. Watson'
         ],
         [
             941206, 
-            'Paul V. Steven
+            'Paul V. Steven'
         ]
     ];
     for (i = 0; i <= 15; i++) {
@@ -197,7 +201,10 @@ function main() {
     }
     console.log('--- Hash Table Contents ---');
     printHashTable(hash);
-    hashLookupByValue(hash, 'Matthew B. Taylor');
+    hashRemove(hash, 821674);
+    console.log('--- Hash Table Contents After Removal ---');
+    printHashTable(hash);
+    hashLookupByValue(hash, 'Olivia J. Watson');
 }
 function printHashTable(hash) {
     var i, node, slotContent;

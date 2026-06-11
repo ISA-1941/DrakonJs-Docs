@@ -7,45 +7,61 @@
         "2": {
             "type": "branch",
             "branchId": 0,
-            "one": "15"
+            "one": "20"
         },
-        "9": {
+        "19": {
+            "type": "question",
+            "one": "25",
+            "two": "23",
+            "flag1": 0,
+            "content": "list.headNode !== null  && list.headNode.data\n=== val"
+        },
+        "20": {
+            "type": "arrow-loop",
+            "one": "19"
+        },
+        "23": {
+            "type": "action",
+            "one": "20",
+            "content": "list.headNode = list.headNode.nextNode"
+        },
+        "25": {
+            "type": "action",
+            "one": "34",
+            "content": "node = list.headNode"
+        },
+        "33": {
             "type": "question",
             "one": "1",
-            "two": "11",
+            "two": "35",
             "flag1": 0,
-            "content": "node !== null"
+            "content": "node !== null "
         },
-        "10": {
+        "34": {
             "type": "arrow-loop",
-            "one": "9"
+            "one": "33"
         },
-        "11": {
+        "35": {
             "type": "action",
-            "one": "12",
+            "one": "39",
             "content": "nextNode = node.nextNode"
         },
-        "12": {
+        "39": {
             "type": "question",
-            "one": "13",
-            "two": "14",
+            "one": "40",
+            "two": "41",
             "flag1": 1,
-            "content": "nextNode !== null && nextNode.data === val"
+            "content": "nextNode !== null  && nextNode.data === val"
         },
-        "13": {
+        "40": {
             "type": "action",
-            "one": "10",
+            "one": "34",
             "content": "node.nextNode = nextNode.nextNode"
         },
-        "14": {
+        "41": {
             "type": "action",
-            "one": "10",
+            "one": "34",
             "content": "node = nextNode"
-        },
-        "15": {
-            "type": "action",
-            "one": "10",
-            "content": "node = list.headNode"
         }
     },
     "keywords": {

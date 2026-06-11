@@ -11,7 +11,7 @@
         },
         "3": {
             "type": "action",
-            "one": "4",
+            "one": "14",
             "content": "list = createLinkedList()"
         },
         "4": {
@@ -21,28 +21,48 @@
         },
         "5": {
             "type": "action",
-            "one": "6",
+            "one": "10",
             "content": "pushBack(list, \"Brown G.\");\npushBack(list, \"Shafler P.\");\npushBack(list, \"Wiley S.\");\npushBack(list, \"Wiley S.\");\npushBack(list, \"Atallah N.\");"
-        },
-        "6": {
-            "type": "action",
-            "one": "7",
-            "content": "searchData(list, \"Wiley S.\")"
         },
         "7": {
             "type": "action",
             "one": "8",
-            "content": "removeVal(list, \"Wiley S.\")"
+            "content": "removeDuplicates(list)"
         },
         "8": {
             "type": "action",
-            "one": "9",
+            "one": "1",
+            "content": "console.log(\"After W deletion \")\niterateList(list)"
+        },
+        "10": {
+            "type": "action",
+            "one": "11",
             "content": "iterateList(list)"
         },
-        "9": {
+        "11": {
             "type": "action",
-            "one": "1",
-            "content": "console.log(\"Wiley S. is deleted\")"
+            "one": "13",
+            "content": "removeVal(list, \"Shafler P.\")"
+        },
+        "12": {
+            "type": "action",
+            "one": "7",
+            "content": "iterateList(list)"
+        },
+        "13": {
+            "type": "action",
+            "one": "15",
+            "content": "console.log(\"Shafler P is deleted\")"
+        },
+        "14": {
+            "type": "action",
+            "one": "4",
+            "content": "console.log(\"Shafler P is deleted\")"
+        },
+        "15": {
+            "type": "action",
+            "one": "12",
+            "content": "console.log(\"After W deletion \")"
         }
     }
 }
