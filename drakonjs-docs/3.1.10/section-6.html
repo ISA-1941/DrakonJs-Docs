@@ -336,9 +336,9 @@ Click on any image to open it in a separate window for detailed viewing.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_6_3_searching_in_a_singly_linked_list"><a class="anchor" href="#_6_3_searching_in_a_singly_linked_list"></a>6.3. Searching in a Singly Linked List</h3>
+<h3 id="_6_3_searching_and_related_operations_in_the_single_link_list"><a class="anchor" href="#_6_3_searching_and_related_operations_in_the_single_link_list"></a>6.3. Searching and related operations in the single-link list</h3>
 <div class="paragraph">
-<p>There are three possibilities for a singly linked list. First, the desired value is missing from the list. Second, the desired value appears once. Third, the desired value appears multiple times. You can also set the task of removing duplicates — nodes that are redundant. To solve these problems, it is necessary to create a singly linked list whose items contain values "Smith A.", "Brown G., "Shafler B.", "Wiley D.", "Wiley D.", Atallah N.". In this list you should delete the entry "Brown G." and then add a new entry "Singer B." placing it after the entry "Wiley D.". After that, you should delete duplicates of the entry "Shafler B." leaving only one. The linked list operations below demonstrate search as a subroutine in deletion, insertion and duplicate removal — all of which rely on locating an element by value.The corresponding DRAKON-diagrams are presented in Figure 6.4.</p>
+<p>There are three possibilities for a singly linked list. First, the desired value is missing from the list. Second, the desired value appears once. Third, the desired value appears multiple times. You can also set the task of removing duplicates — nodes that are redundant. To solve these problems, it is necessary to create a singly linked list whose items contain values "Smith J.", "Brown G." "Shafler P.", "Wiley S.", "Wiley S.", Atallah N.". In this list you should delete the entry "Brown G." and then add a new entry "Singer B." placing it after the entry "Wiley D.". After that, you should delete duplicates of the entry "Shafler B." leaving only one. The linked list operations below demonstrate search as a subroutine in deletion, insertion and duplicate removal — all of which rely on locating an element by value.The corresponding DRAKON-diagrams are presented in Figure 6.4.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -369,9 +369,9 @@ Click on any image to open it in a separate window for detailed viewing.</p>
 <div class="paragraph text-center">
 <p>c) Function for Searching (searchData(val))</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/section_6/Fig6_4d_removeVal.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_4d_removeVal.svg" alt="Fig6 4d removeVal" width="100%"></a>
+<a class="image" href="section_6/Fig6_4d_removeVal_2.svg" target="_blank" rel="noopener"><img src="section_6/Fig6_4d_removeVal_2.svg" alt="Fig6 4d removeVal 2" width="100%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
@@ -395,9 +395,9 @@ Click on any image to open it in a separate window for detailed viewing.</p>
 </div>
 <div class="paragraph text-center">
 <div class="title">Figure 6.4. DRAKON-diagrams of linked list algorithms: deletion, search, insertion by value, and duplicate deletion</div>
-<p>Реsults of the execution of the above algorithms are as follows:<br>
+<p>Results of the execution of the above algorithms are as follows:<br>
 The linked list is:<br>
-Smith J.<br>
+Smith A.<br>
 Brown G.<br>
 Shafler P.<br>
 Wiley S.<br>
@@ -791,7 +791,7 @@ The implementation of the basic hash table functions using the hash function is 
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top"><code>hashGet(hash, key)</code>        (Figure 6.6)</th>
+<th class="tableblock halign-left valign-top"><code>hashGet(hash, key)</code>        (Figure 6.6a)</th>
 <th class="tableblock halign-left valign-top">Find a value by key</th>
 <th class="tableblock halign-left valign-top"><code>hash</code> – table object, <code>key</code> – search key</th>
 <th class="tableblock halign-left valign-top">Value or <code>undefined</code> if not found</th>
@@ -804,7 +804,7 @@ The implementation of the basic hash table functions using the hash function is 
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashInsert(hash, key, value)</code>        (Figure 6.7)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashInsert(hash, key, value)</code>        (Figure 6.6b)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Insert or update a key‑value pair</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>hash</code>, <code>key</code>, <code>value</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Bucket index where insertion/update occurred</p></td>
@@ -815,7 +815,7 @@ The implementation of the basic hash table functions using the hash function is 
 <td class="tableblock halign-left valign-top"><p class="tableblock">Insertion at the head is simpler and faster than at the tail.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashLookupByValue(hash, value)</code>        (Figure 6.8)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashLookupByValue(hash, value)</code>        (Figure 6.6c)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Find a <strong>key</strong> by value (reverse lookup)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>hash</code>, <code>value</code> – search value</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Key or <code>undefined</code> if not found</p></td>
@@ -826,7 +826,7 @@ The implementation of the basic hash table functions using the hash function is 
 <td class="tableblock halign-left valign-top"><p class="tableblock">O(n) complexity – inefficient; use only for debugging or rare cases.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashRemove(hash, key)</code>        (Figure 6.9)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashRemove(hash, key)</code>        (Figure 6.6d)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Delete an entry by key</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>hash</code>, <code>key</code> – key to delete</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code> if deleted, <code>false</code> if key not found</p></td>
@@ -840,7 +840,7 @@ The implementation of the basic hash table functions using the hash function is 
 <td class="tableblock halign-left valign-top"><p class="tableblock">The parameter must be <code>key</code>, not <code>value</code>.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashTraverse(hash)</code>       (Figure 6.10)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hashTraverse(hash)</code>       (Figure 6.6e)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Print table contents (values only)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>hash</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">– (console output)</p></td>
@@ -848,7 +848,7 @@ The implementation of the basic hash table functions using the hash function is 
 <td class="tableblock halign-left valign-top"><p class="tableblock">Does not show keys – <code>printHashTable</code> is more informative.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>printHashTable(hash)</code>    (Figure 6.11)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>printHashTable(hash)</code>    (Figure 6.6f)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Print table in <code>key &#8594; value</code> format</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>hash</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">– (console output)</p></td>
@@ -860,55 +860,56 @@ The implementation of the basic hash table functions using the hash function is 
 <div class="paragraph">
 <p>DRAKON-diagrams of algorithms for implementing the main functions of working with hash tables are shown in Figure 6.6 - 6.11.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/section_6/Fig6_6_hashGet.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_6_hashGet.svg" alt="Fig6 6 hashGet" width="75%"></a>
+<a class="image" href="section_6/Fig6_6a_hashGet.svg" target="_blank" rel="noopener"><img src="section_6/Fig6_6a_hashGet.svg" alt="Fig6 6a hashGet" width="75%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
 <p>a) Hash Table Find Function a value by key (hashGet)</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/section_6/Fig6_7_hashInsert.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_7_hashInsert.svg" alt="Fig6 7 hashInsert" width="75%"></a>
+<a class="image" href="section_6/Fig6_6b_hashInsert.svg" target="_blank" rel="noopener"><img src="section_6/Fig6_6b_hashInsert.svg" alt="Fig6 6b hashInsert" width="75%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
-<p>b) Hash Table Creation Function (hInsert)</p>
+<p>b) Hash Table Creation Function (hashInsert)</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="section_6/Fig6_8_hashLookupByValue.svg" target="_blank" rel="noopener"><img src="section_6/Fig6_8_hashLookupByValue.svg" alt="Fig6 8 hashLookupByValue" width="100%"></a>
+<a class="image" href="section_6/Fig6_6c_hashLookupByValue.svg" target="_blank" rel="noopener"><img src="section_6/Fig6_6c_hashLookupByValue.svg" alt="Fig6 6c hashLookupByValue" width="100%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
-<p>c) Hash Table Reverse Lookup Function (hLookupByValue)</p>
+<p>c) Hash Table Reverse Lookup Function (hashLookupByValue)</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/section_6/Fig6_9_hashRemove.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_9_hashRemove.svg" alt="Fig6 9 hashRemove" width="100%"></a>
+<a class="image" href="section_6/Fig6_6d_hashRemove.svg" target="_blank" rel="noopener"><img src="section_6/Fig6_6d_hashRemove.svg" alt="Fig6 6d hashRemove" width="100%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
-<p>d) Hash Table Deletion Function (hRemove)</p>
+<p>d) Hash Table Deletion Function (hashRemove)</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/section_6/Fig6_10_hashTraverse.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_10_hashTraverse.svg" alt="Fig6 10 hashTraverse" width="75%"></a>
+<a class="image" href="section_6/Fig6_6e_hashTraverse.svg" target="_blank" rel="noopener"><img src="section_6/Fig6_6e_hashTraverse.svg" alt="Fig6 6e hashTraverse" width="75%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
-<p>e) Hash Table Traversal Function (hTraverse)</p>
+<p>e) Hash Table Traversal Function (hashTraverse)</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<a class="image" href="_images/section_6/Fig6_11_printHashTable.svg" target="_blank" rel="noopener"><img src="_images/section_6/Fig6_11_printHashTable.svg" alt="Fig6 11 printHashTable" width="75%"></a>
+<a class="image" href="section_6/Fig6_6f_printHashTable.svg" target="_blank" rel="noopener"><img src="section_6/Fig6_6f_printHashTable.svg" alt="Fig6 6f printHashTable" width="75%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
 <p>f) Hash Table Printing Function (printHashTable)</p>
 </div>
-<div class="paragraph">
+<div class="paragraph text-center">
+<div class="title">Figure 6.4. DRAKON-diagrams of hash table algorithms: find by key, insert, reverse lookup, delete, traverse, and print</div>
 <p>Consider the algorithm for removing an element from the hash table. Suppose we delete element 74. First, the bucket containing the item to be removed is determined. Then, the algorithm traverses the elements of this bucket, where after each node.Value == value check, the current element is stored in the nodePrev variable. If the condition is met, the nodePrev.nextNode field is changed to skip the deleted element (Figure 6.5d):</p>
 </div>
 <div class="paragraph">
