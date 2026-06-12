@@ -214,11 +214,11 @@ i = 9
 
 The time complexity of Insertion Sort depends on how the elements are arranged in the input array:
 
-    Worst case: when the array is sorted in reverse order. Each element must be compared with all previous elements and moved to the beginning of the array. The number of operations is n(n - 1) / 2 → O(n²).
+Worst case: when the array is sorted in reverse order. Each element must be compared with all previous elements and moved to the beginning of the array. The number of operations is n(n - 1) / 2 → O(n²).
 
-    Average case: when the array is partially sorted. Each element is compared, on average, with half of the previous elements: (n²) / 4 → O(n²).
+Average case: when the array is partially sorted. Each element is compared, on average, with half of the previous elements: (n²) / 4 → O(n²).
 
-    Best case: when the array is already sorted. Each element is compared with only the one before it: (n - 1) → O(n).
+Best case: when the array is already sorted. Each element is compared with only the one before it: (n - 1) → O(n).
 
 The complexity summary is given in the table below:
 
@@ -235,17 +235,17 @@ The complexity summary is given in the table below:
 
 Quick Sort is a highly efficient sorting algorithm based on the divide-and-conquer strategy. Its general scheme includes the following steps:
 
-    Select a pivot (reference) element from the array slice.
+Select a pivot (reference) element from the array slice.
 
-    Partition the array so that all elements smaller than the pivot are placed before it, and all greater or equal — after it.
+Partition the array so that all elements smaller than the pivot are placed before it, and all greater or equal — after it.
 
-    Recursively apply this procedure to the left and right partitions.
+Recursively apply this procedure to the left and right partitions.
 
-    As a result, the array becomes fully sorted.
+As a result, the array becomes fully sorted.
 
 The DRAKON-diagram of the Quick Sort algorithm is shown in Figure 7.4.
 
-image::section_7/Fig7_4b_quickSort.svg[width=50%, link=self, window="_blank"]
+image::section_7/Fig7_4b_quickSort.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
 Figure 7.4. DRAKON-diagram of the Quick Sort algorithm
@@ -343,8 +343,6 @@ The complexity summary is shown below. Quick Sort is not stable by default.
 Merge Sort is a classic divide-and-conquer algorithm. It works by recursively splitting the array into smaller parts until each part contains only one element (trivially sorted). After the splitting phase, the algorithm merges the sorted parts back together.
 
 During merging, one element from each fragment is selected and compared. The smaller (or larger, depending on the desired order) element is added to the result array. The process continues until all elements are merged. Figure 7.5 illustrates this process:
-
-image::section_7/Fig7_4b_quickSort.svg[width=50%, link=self, window="_blank"]
 
 .а) 
 image::section_7/Fig7_5b_merge.svg[width=50%, link=self, window="_blank"]
