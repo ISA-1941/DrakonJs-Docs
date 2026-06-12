@@ -345,7 +345,7 @@ Merge Sort is a classic divide-and-conquer algorithm. It works by recursively sp
 During merging, one element from each fragment is selected and compared. The smaller (or larger, depending on the desired order) element is added to the result array. The process continues until all elements are merged. Figure 7.5 illustrates this process:
 
 .а) 
-image::section_7/Fig7_5b_merge.svg[width=50%, link=self, window="_blank"]
+image::section_7/Fig7_5b_merge.svg[width=100%, link=self, window="_blank"]
 .b)
 image::section_7/Fig7_5c_mergeSorting.svg[width=50%, link=self, window="_blank"]
 
@@ -354,21 +354,8 @@ Figure 7.5. DRAKON-diagrams of Merge Sort algorithm: a) merge() function; b) mer
 
 A visual representation of Merge Sort (splitting phase) is shown in Figure 7.6.
 
-[listing]
-....
-[11, 32, 23, 85, 74, 90, 62, 48, 53, 10]
-/
-[11, 32, 23, 85, 74] [90, 62, 48, 53, 10]
-/ \ /
-[11, 32] [23, 85, 74] [90, 62] [48, 53, 10]
-/ \ / \ / \ /
-[11] [32] [23] [85, 74] [90] [62] [48] [53, 10]
-/ \ /
-[85] [74] [53] [10]
-....
-==> Final merge: [11, 23, 32, 74, 85] + [10, 48, 53, 62, 90]
-=> [10, 11, 23, 32, 48, 53, 62, 74, 85, 90]
 
+image::section_7/Fig7_6_mergeScheme.png[width=50%, link=self, window="_blank"]
 [.text-center]
 Figure 7.6. Visual representation of Merge Sort
 
