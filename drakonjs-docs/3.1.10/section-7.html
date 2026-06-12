@@ -1121,20 +1121,14 @@
 <div class="paragraph">
 <p>The time complexity of Insertion Sort depends on how the elements are arranged in the input array:</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>Worst case: when the array is sorted in reverse order. Each element must be compared with all previous elements and moved to the beginning of the array. The number of operations is n(n - 1) / 2 → O(n²).</pre>
+<div class="paragraph">
+<p>Worst case: when the array is sorted in reverse order. Each element must be compared with all previous elements and moved to the beginning of the array. The number of operations is n(n - 1) / 2 → O(n²).</p>
 </div>
+<div class="paragraph">
+<p>Average case: when the array is partially sorted. Each element is compared, on average, with half of the previous elements: (n²) / 4 → O(n²).</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>Average case: when the array is partially sorted. Each element is compared, on average, with half of the previous elements: (n²) / 4 → O(n²).</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Best case: when the array is already sorted. Each element is compared with only the one before it: (n - 1) → O(n).</pre>
-</div>
+<div class="paragraph">
+<p>Best case: when the array is already sorted. Each element is compared with only the one before it: (n - 1) → O(n).</p>
 </div>
 <div class="paragraph">
 <p>The complexity summary is given in the table below:</p>
@@ -1175,32 +1169,24 @@
 <div class="paragraph">
 <p>Quick Sort is a highly efficient sorting algorithm based on the divide-and-conquer strategy. Its general scheme includes the following steps:</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>Select a pivot (reference) element from the array slice.</pre>
+<div class="paragraph">
+<p>Select a pivot (reference) element from the array slice.</p>
 </div>
+<div class="paragraph">
+<p>Partition the array so that all elements smaller than the pivot are placed before it, and all greater or equal — after it.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>Partition the array so that all elements smaller than the pivot are placed before it, and all greater or equal — after it.</pre>
+<div class="paragraph">
+<p>Recursively apply this procedure to the left and right partitions.</p>
 </div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Recursively apply this procedure to the left and right partitions.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>As a result, the array becomes fully sorted.</pre>
-</div>
+<div class="paragraph">
+<p>As a result, the array becomes fully sorted.</p>
 </div>
 <div class="paragraph">
 <p>The DRAKON-diagram of the Quick Sort algorithm is shown in Figure 7.4.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<a class="image" href="_images/section_7/Fig7_4b_quickSort.svg" target="_blank" rel="noopener"><img src="_images/section_7/Fig7_4b_quickSort.svg" alt="Fig7 4b quickSort" width="50%"></a>
+<a class="image" href="_images/section_7/Fig7_4b_quickSort.svg" target="_blank" rel="noopener"><img src="_images/section_7/Fig7_4b_quickSort.svg" alt="Fig7 4b quickSort" width="75%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
@@ -1400,11 +1386,6 @@
 </div>
 <div class="paragraph">
 <p>During merging, one element from each fragment is selected and compared. The smaller (or larger, depending on the desired order) element is added to the result array. The process continues until all elements are merged. Figure 7.5 illustrates this process:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<a class="image" href="_images/section_7/Fig7_4b_quickSort.svg" target="_blank" rel="noopener"><img src="_images/section_7/Fig7_4b_quickSort.svg" alt="Fig7 4b quickSort" width="50%"></a>
-</div>
 </div>
 <div class="imageblock">
 <div class="content">
