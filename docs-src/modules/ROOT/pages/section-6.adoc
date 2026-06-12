@@ -88,7 +88,7 @@ The DRAKON-diagram of the binary search algorithm is represented in Figure 6.3 (
 
 [.text-center]
 .Figure 6.3. DRAKON-diagram of the Binary Search Algorithm
-image::section_6/Fig6_3_searchValue.svg[width=50%, link=self, window="_blank"]
+image::section_6/Fig6_3_searchValue.svg[width=100%, link=self, window="_blank"]
 
 Time complexity of the binary search algorithm belongs to class O(log n). This means that the asymptotic increase in the time taken by the function to process an input set of size n will not exceed log n. Space complexity: O(1) — no extra space is required.
 

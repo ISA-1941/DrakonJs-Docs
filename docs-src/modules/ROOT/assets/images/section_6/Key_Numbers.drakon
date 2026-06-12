@@ -1,0 +1,62 @@
+{
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "4"
+        },
+        "3": {
+            "type": "question",
+            "content": "<p>Loop across all single linked list nodes</p>",
+            "one": "1",
+            "two": "6",
+            "flag1": 0
+        },
+        "4": {
+            "type": "arrow-loop",
+            "one": "3"
+        },
+        "5": {
+            "type": "question",
+            "content": "<p>Is there a node key?</p>",
+            "one": "7",
+            "two": "11",
+            "flag1": 1
+        },
+        "6": {
+            "type": "action",
+            "content": "<p>Result get() - val</p>",
+            "one": "5"
+        },
+        "7": {
+            "type": "comment",
+            "content": "<p>Truthy</p>",
+            "one": "9"
+        },
+        "8": {
+            "type": "action",
+            "content": "<p>\"val\" - number</p>",
+            "one": "4"
+        },
+        "9": {
+            "type": "action",
+            "content": "<p>++number</p>",
+            "one": "8"
+        },
+        "11": {
+            "type": "comment",
+            "content": "<p>False</p>",
+            "one": "12"
+        },
+        "12": {
+            "type": "action",
+            "content": "<p>\"val\" -  1</p>",
+            "one": "4"
+        }
+    },
+    "type": "drakon",
+    "id": "Key_Numbers.drakon"
+}

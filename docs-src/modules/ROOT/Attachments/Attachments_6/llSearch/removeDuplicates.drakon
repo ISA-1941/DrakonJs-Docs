@@ -34,7 +34,7 @@
         },
         "7": {
             "type": "question",
-            "one": "12",
+            "one": "41",
             "two": "9",
             "flag1": 0,
             "content": "current !== null "
@@ -150,6 +150,11 @@
             "one": "32",
             "two": "",
             "content": "prev.nextNode = node.nextNode"
+        },
+        "41": {
+            "type": "insertion",
+            "one": "12",
+            "content": "Value\nset: 7,\n7.\n2,\n2,\n5,\n3\nNumber\nof\nduplicate\nvalues: 2,\n2,\n1,\n1\ncounter: {\n    7\n    → > 2,\n    2\n    → > 2,\n    5 -  > 1,\n    3\n    → > 1\n}"
         }
     },
     "keywords": {
