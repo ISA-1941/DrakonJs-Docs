@@ -500,8 +500,9 @@ Figure 7.9. Sequence of node movement in heap
 
 DRAKON-diagrams of the Heap Sort algorithm are presented in Figure 7.10:
 
-image::section_7/Fig7_10b_heapSort.svg[opts=interactive, width=50%, link=self, window="_blank"]
-image::section_7/Fig7_10c_heapify.svg[opts=interactive, width=50%, link=self, window="_blank"]
+image::section_7/Fig7_10b_heapSort.svg[width=50%, link=self, window="_blank"]
+
+image::section_7/Fig7_10c_heapify.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 Figure 7.10. DRAKON-diagram of Heap Sort algorithm: a) heapSort(arr); b) heapify(arr, size, i)
