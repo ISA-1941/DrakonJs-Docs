@@ -355,7 +355,7 @@ Figure 7.5. DRAKON-diagrams of Merge Sort algorithm: a) merge() function; b) mer
 A visual representation of Merge Sort (splitting phase) is shown in Figure 7.6.
 
 
-image::section_7/Fig7_6_mergeScheme.png[width=50%, link=self, window="_blank"]
+image::section_7/Fig7_6_mergeScheme.png[width=75%, link=self, window="_blank"]
 [.text-center]
 Figure 7.6. Visual representation of Merge Sort
 
@@ -383,18 +383,18 @@ Shell Sort is a variation of Insertion Sort. It begins by comparing and sorting 
 
 The DRAKON-diagram of the Shell Sort algorithm is shown in Figure 7.7.
 
-image::section_7/Fig7_7b_shellSort.svg[opts=interactive, width=50%, link=self, window="_blank"]
+image::section_7/Fig7_7b_shellSort.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 Figure 7.7. DRAKON-diagram of the Shell Sort algorithm
 
 Shell Sort uses a three-step process common to many sorting algorithms:
 
-    Segmenting the array
+Segmenting the array
 
-    Sorting within the segments
+Sorting within the segments
 
-    Merging the results into a sorted array
+Merging the results into a sorted array
 
 The array is partitioned in such a way that each item in a segment is a fixed number of positions apart from the others. This introduces a challenge: choosing the best distance *d*. A simple example of such a sequence is: d = n / 2, then d = d / 2, and so on, until d = 1.
 
