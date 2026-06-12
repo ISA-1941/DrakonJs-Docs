@@ -459,7 +459,7 @@ This algorithm is executed using the notion of a heap, which is a complete binar
 
 Figure 7.8 shows examples of both:
 
-image::section_7/Fig7_8_Tree.svg[width=50%, link=self, window="_blank"]
+image::section_7/Fig7_8_Tree.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 Figure 7.8. Binary tree examples (a - MinHeap; b - MaxHeap)
@@ -493,16 +493,16 @@ The Heap Sort algorithm uses three functions:
 
 The sequence of node movements in the heap is shown in Figure 7.9:
 
-image::section_7/Fig7_9_All.svg[width=50%, link=self, window="_blank"]
+image::section_7/Fig7_9_All.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 Figure 7.9. Sequence of node movement in heap
 
 DRAKON-diagrams of the Heap Sort algorithm are presented in Figure 7.10:
 
-image::section_7/Fig7_10b_heapSort.svg[width=50%, link=self, window="_blank"]
+image::section_7/Fig7_10b_heapSort.svg[width=100%, link=self, window="_blank"]
 
-image::section_7/Fig7_10c_heapify.svg[width=50%, link=self, window="_blank"]
+image::section_7/Fig7_10c_heapify.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 Figure 7.10. DRAKON-diagram of Heap Sort algorithm: a) heapSort(arr); b) heapify(arr, size, i)
