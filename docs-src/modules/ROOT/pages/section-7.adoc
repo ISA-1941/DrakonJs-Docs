@@ -347,7 +347,7 @@ During merging, one element from each fragment is selected and compared. The sma
 .а) 
 image::section_7/Fig7_5b_merge.svg[width=100%, link=self, window="_blank"]
 .b)
-image::section_7/Fig7_5c_mergeSorting.svg[width=50%, link=self, window="_blank"]
+image::section_7/Fig7_5c_mergeSort.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 Figure 7.5. DRAKON-diagrams of Merge Sort algorithm: a) merge() function; b) mergeSort() function
