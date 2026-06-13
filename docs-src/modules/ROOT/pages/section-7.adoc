@@ -355,7 +355,7 @@ Figure 7.5. DRAKON-diagrams of Merge Sort algorithm: a) merge() function; b) mer
 A visual representation of Merge Sort (splitting phase) is shown in Figure 7.6.
 
 
-image::section_7/Fig7_6_mergeDemo.png[width=75%, link=self, window="_blank"]
+image::section_7/Fig7_6_mergeScheme.png[width=75%, link=self, window="_blank"]
 [.text-center]
 Figure 7.6. Visual representation of Merge Sort
 
