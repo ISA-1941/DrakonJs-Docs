@@ -48,6 +48,7 @@ function merge(left, right) {
             break;
         }
     }
+    console.log('left.length = ', left.length, 'right.length = ', right.length,'i =', i, 'j =', j, 'result = ', result);
     return result;
 }
 function mergeSort(arr) {

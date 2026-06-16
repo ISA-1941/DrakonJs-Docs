@@ -352,10 +352,14 @@ image::section_7/Fig7_5c_mergeSort.svg[width=75%, link=self, window="_blank"]
 [.text-center]
 Figure 7.5. DRAKON-diagrams of Merge Sort algorithm: a) merge() function; b) mergeSort() function
 
-A visual representation of Merge Sort (splitting phase) is shown in Figure 7.6.
+A visual representation of splitting and merger phases are shown in Figure 7.6.
 
 
-image::section_7/Fig7_6_mergeScheme.png[width=75%, link=self, window="_blank"]
+image::section_7/Fig7_6a_mergeSort.svg[width=75%, link=self, window="_blank"]
+
+image::section_7/Fig7_6b_mergeFinal.svg[width=75%, link=self, window="_blank"]
+
+
 [.text-center]
 Figure 7.6. Visual representation of Merge Sort
 
