@@ -2,14 +2,20 @@ main();
 function heapSort(arr) {
     var i, size, temp;
     size = arr.length;
+    console.log('size = ', size, 'Begining:', arr);
     for (i = Math.floor(size / 2) - 1; i >= 0; i--) {
+        console.log('                   i = ', i);
+        console.log('Before heapify:', arr);
         heapify(arr, size, i);
+        console.log('After heapify:', arr);
     }
+    console.log('size = ', size, 'After heapify:', arr);
     for (i = size - 1; i > 0; i--) {
         temp = arr[0];
         arr[0] = arr[i];
         arr[i] = temp;
         heapify(arr, i, 0);
+        console.log('size = ', size, 'i =', i, 'heapify:', arr);
     }
 }
 function heapify(arr, size, i) {
@@ -33,16 +39,13 @@ function heapify(arr, size, i) {
 function main() {
     var array;
     array = [
-        11,
-        32,
         23,
-        74,
-        85,
-        90,
-        62,
-        48,
-        53,
-        10
+        5,
+        20,
+        52,
+        11,
+        41,
+        14
     ];
     console.log('Input array:', array);
     heapSort(array);
