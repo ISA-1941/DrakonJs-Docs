@@ -471,7 +471,7 @@ Figure 7.8. Binary tree examples
 The sequence of heap construction steps is shown in the table below:
 
 // [cols=",,,,,,", options="header"]
-[cols="1,1,1,1,1,1,1", options="header"]
+[cols="7*", width="35%", options="header"]
 |===
 | 23 | 5 | 20 | 52 | 11 | 41 | 14
 | 23 | 5 | *41* | 52 | 11 | *20* | 14
