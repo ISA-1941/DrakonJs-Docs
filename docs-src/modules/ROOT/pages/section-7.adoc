@@ -466,11 +466,12 @@ Figure 7.8 shows examples of both:
 image::section_7/Fig7_8_minmaxHeap.png[width=100%, link=self, window="_blank"]
 
 [.text-center]
-Figure 7.8. Binary tree examples (a - MinHeap; b - MaxHeap)
+Figure 7.8. Binary tree examples 
 
 The sequence of heap construction steps is shown in the table below:
 
-[cols=",,,,,,", options="header"]
+// [cols=",,,,,,", options="header"]
+[cols="1,1,1,1,1,1,1", options="header"]
 |===
 | 23 | 5 | 20 | 52 | 11 | 41 | 14
 | 23 | 5 | *41* | 52 | 11 | *20* | 14
