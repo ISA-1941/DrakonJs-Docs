@@ -463,7 +463,7 @@ This algorithm is executed using the notion of a heap, which is a complete binar
 
 Figure 7.8 shows examples of both:
 
-image::section_7/Fig7_8_Tree.svg[width=100%, link=self, window="_blank"]
+image::section_7/Fig7_8_minmaxHeap.png[width=100%, link=self, window="_blank"]
 
 [.text-center]
 Figure 7.8. Binary tree examples (a - MinHeap; b - MaxHeap)
