@@ -1,0 +1,80 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "btanch 1"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "// Получаем данные о ребре\n\nedgeDistance = getEdgeDistance(\n    current,\n    neighbor\n)"
+        },
+        "4": {
+            "type": "action",
+            "one": "5",
+            "content": "edgePrice = getEdgePrice(\n    current,\n    neighbor\n)"
+        },
+        "5": {
+            "type": "action",
+            "one": "6",
+            "content": "edgeCost = edgeDistance * edgePrice"
+        },
+        "6": {
+            "type": "action",
+            "one": "8",
+            "content": "// Сохраняем текущее состояние для backtracking\n\noldState = {\n    path: context.currentPath,\n    distance: context.totalDistance,\n    price: context.totalPrice\n}"
+        },
+        "7": {
+            "type": "branch",
+            "one": "13",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "8": {
+            "type": "branch",
+            "one": "9",
+            "branchId": 2,
+            "content": "branch 2"
+        },
+        "9": {
+            "type": "action",
+            "one": "12",
+            "content": "context.visited[neighbor] = true "
+        },
+        "10": {
+            "type": "action",
+            "one": "7",
+            "content": "context.totalPrice = context.totalPrice +\nedgeCost"
+        },
+        "11": {
+            "type": "action",
+            "one": "10",
+            "content": "context.totalDistance = context.totalDistance\n+ edgeDistance"
+        },
+        "12": {
+            "type": "action",
+            "one": "11",
+            "content": "context.currentPath = context.currentPath\n+ '-' + neighbor"
+        },
+        "13": {
+            "type": "action",
+            "one": "1",
+            "content": "return {\n    oldState: oldState,\n    edgeDistance: edgeDistance,\n    edgePrice: edgePrice,\n    edgeCost: edgeCost\n}"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "context, current, neighbor"
+}

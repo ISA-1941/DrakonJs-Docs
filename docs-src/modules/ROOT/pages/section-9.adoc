@@ -348,13 +348,13 @@ These diagrams decompose the traversal process into discrete decision points and
 The following Drakon-diagram illustrates the DFS_stack(graph, start) function. The LIFO (Last-In-First-Out) behavior of the stack drives deep exploration, forcing the algorithm to exhaust each branch before backtracking to previously discovered vertices.
 
 [.text-center]
-image::section_9/Fig9_6a_DFS_stack.svg[width=75%]
+image::section_9/DFS_stack.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 Figure 9.7a. Drakon-diagram illustrating the control flow of DFS (Depth-First Search)
 
 [.text-center]
-image::section_9/Fig9_6b_BFS_queue.svg[width=75%]
+image::section_9/Fig9_6b_BFS_queue.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 Figure 9.7b. Drakon-diagram illustrating the control flow of BFS (Breadth-First Search)

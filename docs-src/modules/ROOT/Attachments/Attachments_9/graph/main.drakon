@@ -1,0 +1,128 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "Preparing"
+        },
+        "3": {
+            "type": "action",
+            "one": "25",
+            "content": "graph = createGraphFromData()"
+        },
+        "14": {
+            "type": "loopend",
+            "one": "23",
+            "content": ""
+        },
+        "15": {
+            "type": "loopbegin",
+            "one": "16",
+            "content": "i = 0; i < graph.size; i++"
+        },
+        "16": {
+            "type": "action",
+            "one": "18",
+            "content": "row = \"\""
+        },
+        "17": {
+            "type": "loopend",
+            "one": "26",
+            "content": ""
+        },
+        "18": {
+            "type": "loopbegin",
+            "one": "19",
+            "content": "j = 0; j < graph.size; j++"
+        },
+        "19": {
+            "type": "action",
+            "one": "17",
+            "content": "row = row + graph.matrix[i][j] + \" \""
+        },
+        "23": {
+            "type": "action",
+            "one": "24",
+            "content": "// DFS_stack(graph, 0)\n"
+        },
+        "24": {
+            "type": "action",
+            "one": "29",
+            "content": "// BFS_queue(graph, 0)\n"
+        },
+        "25": {
+            "type": "action",
+            "one": "15",
+            "content": "console.log(\n    \"МAdjacency matrix (distance)):\"\n)"
+        },
+        "26": {
+            "type": "action",
+            "one": "14",
+            "content": "console.log(row)"
+        },
+        "28": {
+            "type": "branch",
+            "one": "35",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "29": {
+            "type": "branch",
+            "one": "31",
+            "branchId": 2,
+            "content": "Ветка2"
+        },
+        "31": {
+            "type": "action",
+            "one": "32",
+            "content": "paths_0_5 = initPathSearch(graph, 0, 5)\nprintAllPaths(\n    paths_0_5,\n    \"Path from 0 to 5\"\n)"
+        },
+        "32": {
+            "type": "action",
+            "one": "33",
+            "content": "paths_1_6 = initPathSearch(graph, 1, 6)\nprintAllPaths(\n    paths_1_6,\n    \"Path from 1 to 6\"\n)"
+        },
+        "33": {
+            "type": "action",
+            "one": "34",
+            "content": "paths_2_3 = initPathSearch(graph, 2, 3)\nprintAllPaths(\n    paths_2_3,\n    \"Path from 2 to 3\"\n)"
+        },
+        "34": {
+            "type": "action",
+            "one": "28",
+            "content": ""
+        },
+        "35": {
+            "type": "question",
+            "one": "36",
+            "two": "38",
+            "flag1": 1,
+            "content": "paths_0_5.length > 0"
+        },
+        "36": {
+            "type": "action",
+            "one": "37",
+            "content": "shortest = findShortestByDistance(\n    paths_0_5\n)"
+        },
+        "37": {
+            "type": "action",
+            "one": "38",
+            "content": "cheapest = findCheapestByPrice(paths_0_5)"
+        },
+        "38": {
+            "type": "action",
+            "one": "39",
+            "content": "console.log(\n    \"\\n=== Path analysis from 0 to 5 ===\"\n);\nconsole.log(\n    \"the shortest path: \" + shortest.path\n);\nconsole.log(\n    \"  Distance: \" + shortest.distance.toFixed(\n        2\n    ) + \" км\"\n);\nconsole.log(\n    \"  Fare: \" + shortest.price.toFixed(\n        2\n    ) + \" у.е.\"\n);"
+        },
+        "39": {
+            "type": "action",
+            "one": "1",
+            "content": "console.log(\n    \"Cheapest route: \" + cheapest.path\n)\nconsole.log(\n    \"  Distance: \" + cheapest.distance.toFixed(\n        2\n    ) + \" км\"\n);\nconsole.log(\n    \"  Fareь: \" + cheapest.price.toFixed(\n        2\n    ) + \" у.е.\"\n)"
+        }
+    }
+}

@@ -1,0 +1,74 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "4"
+        },
+        "4": {
+            "type": "question",
+            "one": "5",
+            "two": "7",
+            "flag1": 1,
+            "content": "paths.length === 0"
+        },
+        "5": {
+            "type": "action",
+            "one": "6",
+            "content": "console.log(\"Путей не найдено\")"
+        },
+        "6": {
+            "type": "action",
+            "one": "7",
+            "content": "return "
+        },
+        "7": {
+            "type": "action",
+            "one": "9",
+            "content": "console.log(\n    \"\\n=== \" + title + \": Найдено путей: \"\n    + paths.length + \" ===\"\n)"
+        },
+        "8": {
+            "type": "loopend",
+            "one": "1",
+            "content": ""
+        },
+        "9": {
+            "type": "loopbegin",
+            "one": "10",
+            "content": "i = 0; i < paths.length; i++"
+        },
+        "10": {
+            "type": "action",
+            "one": "11",
+            "content": "path = paths[i]"
+        },
+        "11": {
+            "type": "action",
+            "one": "12",
+            "content": "console.log((i + 1) + \". \" + path.path)"
+        },
+        "12": {
+            "type": "action",
+            "one": "13",
+            "content": "console.log(\n    \"   Расстояние: \" + path.distance.toFixed(\n        2\n    ) + \" км\"\n)"
+        },
+        "13": {
+            "type": "action",
+            "one": "8",
+            "content": "console.log(\n    \"   Стоимость: \" + path.price.toFixed(\n        2\n    ) + \" у.е.\"\n)"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "paths, title"
+}

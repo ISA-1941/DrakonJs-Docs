@@ -1,0 +1,107 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "22",
+            "content": "visited = []\n//  Tracks which vertices are already seen\nstack = [start]\n//  Stores vertices waiting to be processed\nresult = []\n//  Records order of vertex visits"
+        },
+        "20": {
+            "type": "question",
+            "one": "34",
+            "two": "23",
+            "flag1": 0,
+            "content": "stack.length > 0"
+        },
+        "22": {
+            "type": "arrow-loop",
+            "one": "20"
+        },
+        "23": {
+            "type": "action",
+            "one": "24",
+            "content": "vertex = stack.pop()"
+        },
+        "24": {
+            "type": "question",
+            "one": "25",
+            "two": "22",
+            "flag1": 1,
+            "content": "!visited[vertex]"
+        },
+        "25": {
+            "type": "action",
+            "one": "26",
+            "content": "visited[vertex] = true "
+        },
+        "26": {
+            "type": "action",
+            "one": "27",
+            "content": "result.push(vertex);"
+        },
+        "27": {
+            "type": "action",
+            "one": "42",
+            "content": "neighbors = getNeighbors(graph, vertex)"
+        },
+        "33": {
+            "type": "action",
+            "one": "1",
+            "content": "return result"
+        },
+        "34": {
+            "type": "action",
+            "one": "33",
+            "content": "console.log(\"result --> \", result)"
+        },
+        "38": {
+            "type": "loopend",
+            "one": "43",
+            "content": ""
+        },
+        "39": {
+            "type": "loopbegin",
+            "one": "40",
+            "content": "i = neighbors.length - 1; i >= 0; i--"
+        },
+        "40": {
+            "type": "question",
+            "one": "41",
+            "two": "38",
+            "flag1": 1,
+            "content": "!visited[neighbors[i]] && !stack.includes(\n    neighbors[i]\n)"
+        },
+        "41": {
+            "type": "action",
+            "one": "38",
+            "content": "stack.push(neighbors[i])"
+        },
+        "42": {
+            "type": "action",
+            "one": "39",
+            "content": "console.log(\n    \"vertex ==> \",\n    vertex,\n    \"neighbors --> \",\n    neighbors,\n    \"stack.length ==> \",\n    stack.length\n)"
+        },
+        "43": {
+            "type": "action",
+            "one": "22",
+            "content": "console.log(\"stack ==> \", stack)"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "graph, start"
+}

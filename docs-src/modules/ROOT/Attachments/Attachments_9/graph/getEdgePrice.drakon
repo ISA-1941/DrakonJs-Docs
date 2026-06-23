@@ -1,0 +1,65 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "key1 = from + \"-\" + to\nkey2 = to + \"-\" + from"
+        },
+        "4": {
+            "type": "action",
+            "one": "10",
+            "two": "",
+            "content": "graphData = getGraphData()"
+        },
+        "9": {
+            "type": "action",
+            "one": "1",
+            "two": "",
+            "content": "return 0"
+        },
+        "10": {
+            "type": "question",
+            "one": "11",
+            "two": "12",
+            "flag1": 1,
+            "content": "graphData.priceMap[key1] !== undefined "
+        },
+        "11": {
+            "type": "action",
+            "one": "12",
+            "two": "",
+            "content": "return graphData.priceMap[key1]"
+        },
+        "12": {
+            "type": "question",
+            "one": "13",
+            "two": "9",
+            "flag1": 1,
+            "content": "graphData.priceMap[key2] !== undefined "
+        },
+        "13": {
+            "type": "action",
+            "one": "9",
+            "two": "",
+            "content": "return graphData.priceMap[key2]"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "from, to"
+}

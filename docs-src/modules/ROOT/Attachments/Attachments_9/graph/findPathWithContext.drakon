@@ -1,0 +1,79 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "18",
+            "content": "neighbors = getNeighbors(\n    context.graph,\n    current\n)"
+        },
+        "17": {
+            "type": "loopend",
+            "one": "1",
+            "content": ""
+        },
+        "18": {
+            "type": "loopbegin",
+            "one": "19",
+            "content": "i = 0; i < neighbors.length; i++"
+        },
+        "19": {
+            "type": "action",
+            "one": "20",
+            "content": "neighbor = neighbors[i]"
+        },
+        "20": {
+            "type": "question",
+            "one": "28",
+            "two": "17",
+            "flag1": 1,
+            "content": "!context.visited[neighbor]"
+        },
+        "23": {
+            "type": "question",
+            "one": "24",
+            "two": "25",
+            "flag1": 1,
+            "content": "neighbor === context.target"
+        },
+        "24": {
+            "type": "action",
+            "one": "26",
+            "two": "",
+            "content": "handleFoundPath(context)"
+        },
+        "25": {
+            "type": "action",
+            "one": "26",
+            "two": "",
+            "content": "findPathWithContext(neighbor, context)"
+        },
+        "26": {
+            "type": "action",
+            "one": "17",
+            "two": "",
+            "content": "backtrackFromNeighbor(\n    context,\n    neighbor,\n    moveData.oldState\n)"
+        },
+        "28": {
+            "type": "action",
+            "one": "23",
+            "content": "moveData = prepareMoveToNeighbor(\n    context,\n    current,\n    neighbor\n)"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "current, context"
+}

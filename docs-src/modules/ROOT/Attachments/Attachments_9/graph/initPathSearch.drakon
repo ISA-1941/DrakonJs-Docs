@@ -1,0 +1,64 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "4"
+        },
+        "4": {
+            "type": "question",
+            "one": "5",
+            "two": "7",
+            "flag1": 1,
+            "content": "graph.size <= 0 || start < 0 || end < 0 ||\nstart >= graph.size || end >= graph.size"
+        },
+        "5": {
+            "type": "action",
+            "one": "6",
+            "content": "console.log(\"Invalid settings\")"
+        },
+        "6": {
+            "type": "action",
+            "one": "7",
+            "content": "return []"
+        },
+        "7": {
+            "type": "action",
+            "one": "8",
+            "content": "context = createSearchContext(graph)"
+        },
+        "8": {
+            "type": "action",
+            "one": "9",
+            "content": "context = resetSearchContext(\n    context,\n    start,\n    end\n)"
+        },
+        "9": {
+            "type": "action",
+            "one": "10",
+            "content": "console.log(\n    \"\\n=== Поиск всех путей от \" + start\n    + \" до \" + end + \" ===\"\n)"
+        },
+        "10": {
+            "type": "action",
+            "one": "11",
+            "content": "findPathWithContext(start, context)"
+        },
+        "11": {
+            "type": "action",
+            "one": "1",
+            "content": "return context.allPaths"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "graph, start, end"
+}
