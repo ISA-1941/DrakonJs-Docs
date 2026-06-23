@@ -498,10 +498,10 @@ The Heap Sort algorithm uses three functions:
 
 The sequence of node movements in the heap is shown in Figure 7.9:
 
-image::section_7/Fig7_9_All.svg[width=100%, link=self, window="_blank"]
+image::section_7/Fig7_9_heap_sort_dynamics.png[width=100%, link=self, window="_blank"]
 
 [.text-center]
-Figure 7.9. Sequence of node movement in heap
+Figure 7.9. The dynamics of the pyramid sorting algorithm
 
 DRAKON-diagrams of the Heap Sort algorithm are presented in Figure 7.10:
 
