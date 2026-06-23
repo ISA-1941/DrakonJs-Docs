@@ -175,71 +175,59 @@ Glossary of Basic Graph Terms
 <div class="paragraph">
 <p>Such objects include:</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>Electrical and electronic circuits</pre>
+<div class="ulist">
+<ul>
+<li>
+<p>Electrical and electronic circuits</p>
+</li>
+<li>
+<p>Circuit boards</p>
+</li>
+<li>
+<p>Road maps</p>
+</li>
+<li>
+<p>Aviation routes</p>
+</li>
+<li>
+<p>Descriptions of constructions</p>
+</li>
+</ul>
 </div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Circuit boards</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Road maps</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Aviation routes</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Descriptions of constructions</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Games</pre>
-</div>
+<div class="paragraph">
+<p>-Games</p>
 </div>
 <div class="paragraph">
 <p>Among the tasks that can be solved using graphs are:</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>Finding the shortest path between two vertices</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Solving the problem of maximum capacity of pipelines, road networks, or computer networks</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Distributing N workers to perform M different types of work</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Choosing the most efficient method of problem solving, among others</pre>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Finding the shortest path between two vertices</p>
+</li>
+<li>
+<p>Solving the problem of maximum capacity of pipelines, road networks, or computer networks</p>
+</li>
+<li>
+<p>Distributing N workers to perform M different types of work</p>
+</li>
+<li>
+<p>Choosing the most efficient method of problem solving, among others.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>A graph is a mathematical structure defined by two sets:</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>A set of vertices (also known as nodes)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>A set of edges that connect pairs of these vertices</pre>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A set of vertices (also known as nodes)</p>
+</li>
+<li>
+<p>A set of edges that connect pairs of these vertices</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>Formally, a graph is denoted as G = (V, E), where V is the set of vertices and E is the set of edges connecting them.</p>
@@ -259,16 +247,14 @@ Glossary of Basic Graph Terms
 <div class="paragraph">
 <p>In these graphs, there are no "inputs" or "outputs"; there is only the objective fact of a connection.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>Vertex Degree (deg(v)): This is the total number of edges incident to a given vertex.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Loops: This is a critical point for this textbook. In an undirected graph, a loop is counted twice (+2 to the degree). Why? Because both ends of the loop-edge are "plugged into" the same vertex, and each end contributes to the degree.</pre>
-</div>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Vertex Degree (deg(v)): This is the total number of edges incident to a given vertex.</p>
+</li>
+<li>
+<p>Loops: This is a critical point for this textbook. In an undirected graph, a loop is counted twice (+2 to the degree). Why? Because both ends of the<br>
+loop-edge are "plugged into" the same vertex, and each end contributes to the degree.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -276,34 +262,34 @@ Glossary of Basic Graph Terms
 </li>
 </ol>
 </div>
+</li>
+</ul>
+</div>
 <div class="paragraph">
 <p>Here, the logic becomes more nuanced as direction matters. The degree is split into two distinct components:</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>In-degree (deg⁻(v)): The number of edges entering (incident into) the vertex.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Out-degree (deg⁺(v)): The number of edges leaving (incident from) the vertex.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Total Degree: The sum of the in-degree and out-degree.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Loops in a Digraph: In this case, a loop is counted exactly once for the in-degree and once for the out-degree. It does not "double" the total degree in the same way as in an undirected graph; instead, it is honestly distributed between the two directions.</pre>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In-degree (deg⁻(v)): The number of edges entering (incident into) the vertex.</p>
+</li>
+<li>
+<p>Out-degree (deg⁺(v)): The number of edges leaving (incident from) the vertex.</p>
+</li>
+<li>
+<p>Total Degree: The sum of the in-degree and out-degree.</p>
+</li>
+<li>
+<p>Loops in a Digraph: In this case, a loop is counted exactly once for the in-degree and once for the out-degree. It does not "double" the total degree in the<br>
+same way as in an undirected graph; instead, it is honestly distributed between the two directions.</p>
+</li>
+</ul>
 </div>
 <div class="imageblock text-center">
 <div class="content">
 <a class="image" href="_images/section_9/Fig9_1_exampleGraph.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_1_exampleGraph.svg" alt="Fig9 1 exampleGraph" width="50%"></a>
 </div>
-<div class="title">Figure 9.1. The view of (a) undirected; (b) directed</div>
+<div class="title">Figure 1. Figure 9.1. The view of (a) undirected; (b) directed</div>
 </div>
 </div>
 <div class="sect2">
@@ -314,25 +300,21 @@ Glossary of Basic Graph Terms
 <div class="paragraph">
 <p>Refined Terms for Directed Graphs (Digraphs)</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>In-degree (deg⁻(v)): The number of edges directed into the vertex. In flow-based models, this represents the "input" capacity.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Out-degree (deg⁺(v)): The number of edges directed away from the vertex. In state machines, this represents the number of possible transitions.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Total Degree: The sum of in-degree and out-degree.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Self-Loop (Digraph): A special case where an edge starts and ends at the same vertex. It contributes exactly 1 to the in-degree and exactly 1 to the out-degree.</pre>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In-degree (deg⁻(v)): The number of edges directed into the vertex. In flow-based models, this represents the "input" capacity.</p>
+</li>
+<li>
+<p>Out-degree (deg⁺(v)): The number of edges directed away from the vertex. In state machines, this represents the number of possible transitions.</p>
+</li>
+<li>
+<p>Total Degree: The sum of in-degree and out-degree.</p>
+</li>
+<li>
+<p>Self-Loop (Digraph): A special case where an edge starts and ends at the same vertex. It contributes exactly 1 to the in-degree and exactly 1 to the out-degree.</p>
+</li>
+</ul>
 </div>
 <div class="imageblock text-center">
 <div class="content">
@@ -361,7 +343,7 @@ Glossary of Basic Graph Terms
 </div>
 <div class="imageblock unresolved text-center">
 <div class="content">
-<img src="section_9/Fig9_3_AdjMatrix.jpg" alt="Fig9 3 AdjMatrix" width="75%">
+<a class="image" href="section_9/Fig9_3_AdjMatrix.jpg" target="_blank" rel="noopener"><img src="section_9/Fig9_3_AdjMatrix.jpg" alt="Fig9 3 AdjMatrix" width="50%"></a>
 </div>
 </div>
 <div class="paragraph text-center">
@@ -387,15 +369,15 @@ Glossary of Basic Graph Terms
 <div class="paragraph">
 <p>The space complexity of representing a graph depends heavily on the chosen data structure:</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>Adjacency Matrix: Requires O(V²) memory. This is memory-intensive, especially for large, sparse graphs (graphs with relatively few edges). It also often requires knowing the number of vertices in advance.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Adjacency List: Requires O(V + E) memory, where E is the number of edges. This is much more efficient for sparse graphs, which are common in real-world applications.</pre>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Adjacency Matrix: Requires O(V²) memory. This is memory-intensive, especially for large, sparse graphs (graphs with relatively few edges). It also often requires knowing the number of vertices in advance.</p>
+</li>
+<li>
+<p>Adjacency List: Requires O(V + E) memory, where E is the number of edges. This is much more efficient for sparse graphs, which are common in real-world applications.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>In practice, the choice between these representations is a trade-off. An adjacency matrix is often preferable for dense graphs (graphs where the number of edges approaches V²) and when frequent edge lookups are required (O(1) complexity). An adjacency list is generally better for sparse graphs.</p>
