@@ -111,7 +111,7 @@ Refined Terms for Directed Graphs (Digraphs)
     Self-Loop (Digraph): A special case where an edge starts and ends at the same vertex. It contributes exactly 1 to the in-degree and exactly 1 to the out-degree.
 
 [.text-center]
-image::{imagesdir}/Figure_9.2_Basic_graph_parameters.svg[width=75%, align="center"]
+image::section_9/Figure_9.2_Basic_graph_parameters.svg[width=75%, align="center"]
 
 [.text-center]
 Figure 9.2. Basic graph parameters
@@ -127,7 +127,7 @@ An adjacency matrix is a two-dimensional array that indicates the existence of a
 In contrast, for a directed graph (or digraph), the relationship is not necessarily symmetric. An edge (u, v) means vertex *v* is adjacent from vertex *u*, and this is indicated in the matrix by a '1' at position A[u][v] only.
 
 [.text-center]
-image::{imagesdir}/Fig9_3_AdjMatrix.jpg[width=75%]
+image::section_9/Fig9_3_AdjMatrix.jpg[width=75%]
 
 [.text-center]
 Figure 9.3. Adjacency matrix for undirected and directed graphs
@@ -137,7 +137,7 @@ Figure 9.3. Adjacency matrix for undirected and directed graphs
 In some cases, a more memory-efficient way to represent a graph is to use an adjacency list. This method involves an array of linked lists (or arrays), where each individual list contains information about which vertices are adjacent to a given one.
 
 [.text-center]
-image::{imagesdir}/Fig9_4_AdjList.jpg[width=75%]
+image::section_9/Fig9_4_AdjList.jpg[width=75%]
 
 [.text-center]
 Figure 9.4. Adjacency list representation
@@ -157,7 +157,7 @@ In practice, the choice between these representations is a trade-off. An adjacen
 Many real-life problems require modeling graphs with numerical values associated with edges, such as distance, cost, or travel time. Such graphs are called weighted graphs. In an adjacency matrix, the weight is stored as the value of the matrix element (instead of '1'), and a special value (like ∞ or '0') can represent the absence of an edge. In an adjacency list, each element in the list is typically a structure containing both the adjacent vertex ID and the edge weight.
 
 [.text-center]
-image::{imagesdir}/Fig9_5_WeightField.svg[width=75%]
+image::section_9/Fig9_5_WeightField.svg[width=75%]
 
 [.text-center]
 Figure 9.5. Adjacency list with a 'weight' field
@@ -236,7 +236,7 @@ The fundamental difference between DFS and BFS lies in the order in which they e
 The step-by-step process for each algorithm is shown in the tables below for the example graph, starting from vertex V₀.
 
 [.text-center]
-image::{imagesdir}/Fig9_6_baseGraph.svg[width=75%]
+image::section_9/Fig9_6_baseGraph.svg[width=75%]
 
 [.text-center]
 Figure 9.6. A simple graph for demonstrating DFS and BFS traversals
@@ -349,13 +349,13 @@ These diagrams decompose the traversal process into discrete decision points and
 The following Drakon-diagram illustrates the DFS_stack(graph, start) function. The LIFO (Last-In-First-Out) behavior of the stack drives deep exploration, forcing the algorithm to exhaust each branch before backtracking to previously discovered vertices.
 
 [.text-center]
-image::{imagesdir}/Fig9_6a_DFS_stack.svg[width=75%]
+image::section_9/Fig9_6a_DFS_stack.svg[width=75%]
 
 [.text-center]
 Figure 9.7a. Drakon-diagram illustrating the control flow of DFS (Depth-First Search)
 
 [.text-center]
-image::{imagesdir}/Fig9_6b_BFS_queue.svg[width=75%]
+image::section_9/Fig9_6b_BFS_queue.svg[width=75%]
 
 [.text-center]
 Figure 9.7b. Drakon-diagram illustrating the control flow of BFS (Breadth-First Search)
@@ -398,7 +398,7 @@ The implementation also includes BFS_queue and DFS_stack functions, which demons
 At the core of the implemented algorithm lies the method of exponential backtracking. This approach systematically traverses all possible paths through the graph, maintaining cumulative information about the current route. Upon reaching the target vertex, the path is saved; after fully exploring each branch, a backtracking step reverts to the previous state, enabling the search to proceed with alternative routes. In the worst-case scenario, the number of paths considered grows exponentially with the number of vertices — an inherent cost of exhaustive enumeration.
 
 [.text-center]
-image::{imagesdir}/Fig9_7_searchContext.svg[width=80%]
+image::section_9/Fig9_7_searchContext.svg[width=80%]
 
 [.text-center]
 Figure 9.8. Context Object: from structure creation (a) to data population (b)
@@ -408,7 +408,7 @@ Figure 9.8. Context Object: from structure creation (a) to data population (b)
 A visual representation of the function structure, their relationships, and operational logic is presented in the mind map (Figure 9.9).
 
 [.text-center]
-image::{imagesdir}/Fig9_8_viewAlgorithmGraph.svg[width=80%]
+image::section_9/Fig9_8_viewAlgorithmGraph.svg[width=80%]
 
 [.text-center]
 Figure 9.9. Mind map of path search functions
@@ -438,7 +438,7 @@ Operations
 |===
 
 [.text-center]
-image::{imagesdir}/iFig9_9_initPathSearch.svg[width=80%]
+image::section_9/iFig9_9_initPathSearch.svg[width=80%]
 
 [.text-center]
 Figure 9.10. Drakon-diagram of the initialization function for path search
@@ -466,7 +466,7 @@ Operations
 |===
 
 [.text-center]
-image::{imagesdir}/iFig9_10_findPathWithContext.svg[width=80%]
+image::section_9/iFig9_10_findPathWithContext.svg[width=80%]
 
 [.text-center]
 Figure 9.11. Drakon-diagram of the recursive path search function
@@ -504,7 +504,7 @@ Operations
 |===
 
 [.text-center]
-image::{imagesdir}/iFig9_11_handleFoundPath.svg[width=80%]
+image::section_9/iFig9_11_handleFoundPath.svg[width=80%]
 
 [.text-center]
 Figure 9.12. Drakon-diagram of the path handler function
@@ -534,7 +534,7 @@ Operations
 |===
 
 [.text-center]
-image::{imagesdir}/iFig9_12_prepareMoveToNeighbor.svg[width=80%]
+image::section_9/iFig9_12_prepareMoveToNeighbor.svg[width=80%]
 
 [.text-center]
 Figure 9.13. Drakon-diagram of the transition preparation function
@@ -561,7 +561,7 @@ Operations
 |===
 
 [.text-center]
-image::{imagesdir}/iFig9_13_backtrackFromNeighbor.svg[width=80%]
+image::section_9/iFig9_13_backtrackFromNeighbor.svg[width=80%]
 
 [.text-center]
 Figure 9.14. Drakon-diagram of the backtracking function
@@ -672,7 +672,7 @@ Having examined the internal logic of the algorithm and its implementation in Ja
 A mind map of Dijkstra's algorithm logic is shown in Figure 9.16:
 
 [.text-center]
-image::{imagesdir}/Fig9_15_Dijkstra_classic.svg[width=80%]
+image::section_9/Fig9_15_Dijkstra_classic.svg[width=80%]
 
 [.text-center]
 Figure 9.16. Mind map of Dijkstra's algorithm logic
@@ -684,7 +684,7 @@ The DRAKON-diagrams below illustrate the control flow of the Dijkstra algorithm 
 The central function of the Dijkstra algorithm — dijkstra(graph, start) — is responsible for initializing the necessary data structures and managing the main loop of the algorithm. It sequentially selects the nearest unvisited vertex, marks it as visited, and performs relaxation on all its neighbors (Figure 9.17).
 
 [.text-center]
-image::{imagesdir}/Fig9_16_dijkstra.svg[width=80%]
+image::section_9/Fig9_16_dijkstra.svg[width=80%]
 
 [.text-center]
 Figure 9.17. DRAKON-diagram of Dijkstra's algorithm implementation
@@ -692,7 +692,7 @@ Figure 9.17. DRAKON-diagram of Dijkstra's algorithm implementation
 The function getVerticesList(graph) extracts a list of all vertices from the graph, which allows initializing the distance and visited arrays (Figure 9.18).
 
 [.text-center]
-image::{imagesdir}/Fig9_17_init.svg[width=80%]
+image::section_9/Fig9_17_init.svg[width=80%]
 
 [.text-center]
 Figure 9.18. DRAKON-diagram of the initialization function for Dijkstra's algorithm
@@ -700,7 +700,7 @@ Figure 9.18. DRAKON-diagram of the initialization function for Dijkstra's algori
 The central function of the algorithm is findMinDistanceVertex(graph, distances, visited), which at each stage selects the unvisited vertex with the minimum distance from the source vertex. This ensures the optimal choice of the next vertex for processing (Figure 9.19).
 
 [.text-center]
-image::{imagesdir}/Fig9_18_findMinDistanceVertex.svg[width=80%]
+image::section_9/Fig9_18_findMinDistanceVertex.svg[width=80%]
 
 [.text-center]
 Figure 9.19. DRAKON-diagram of the findMinDistanceVertex function
@@ -708,7 +708,7 @@ Figure 9.19. DRAKON-diagram of the findMinDistanceVertex function
 In the function markVertexVisited(graph, vertex, visited), a vertex is marked as visited, which prevents its reprocessing in the future (Figure 9.20).
 
 [.text-center]
-image::{imagesdir}/Fig9_19_markVertexVisited.svg[width=80%]
+image::section_9/Fig9_19_markVertexVisited.svg[width=80%]
 
 [.text-center]
 Figure 9.20. DRAKON-diagram of the markVertexVisited function
@@ -716,7 +716,7 @@ Figure 9.20. DRAKON-diagram of the markVertexVisited function
 Finally, the function relaxEdges(graph, vertex, distances, visited) performs relaxation on all neighbors of the current vertex. It checks whether the known distances to neighboring vertices can be improved via the current vertex and updates them if necessary (Figure 9.21).
 
 [.text-center]
-image::{imagesdir}/Fig9_20_relaxEdges.svg[width=80%]
+image::section_9/Fig9_20_relaxEdges.svg[width=80%]
 
 [.text-center]
 Figure 9.21. DRAKON-diagram of the relaxEdges function
