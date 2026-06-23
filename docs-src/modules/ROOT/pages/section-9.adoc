@@ -1,7 +1,3 @@
-:imagesdir: docs-src/modules/section-9/assets/images
-[.text-justify]
-:figure-caption!:
-
 = Section 9. Graphs and Graph Algorithms
 
 == 9.1. General Information. Basic Terminology
@@ -38,33 +34,34 @@ In general, graphs share many similarities with trees, and one can consider tree
 
 Such objects include:
 
-    Electrical and electronic circuits
+- Electrical and electronic circuits
 
-    Circuit boards
+- Circuit boards
 
-    Road maps
+- Road maps
 
-    Aviation routes
+- Aviation routes
 
-    Descriptions of constructions
+- Descriptions of constructions
 
-    Games
+-Games
 
 Among the tasks that can be solved using graphs are:
 
-    Finding the shortest path between two vertices
+- Finding the shortest path between two vertices
 
-    Solving the problem of maximum capacity of pipelines, road networks, or computer networks
+- Solving the problem of maximum capacity of pipelines, road networks, or computer networks
 
-    Distributing N workers to perform M different types of work
+- Distributing N workers to perform M different types of work
 
-    Choosing the most efficient method of problem solving, among others
+- Choosing the most efficient method of problem solving, among others.
+
 
 A graph is a mathematical structure defined by two sets:
 
-    A set of vertices (also known as nodes)
+- A set of vertices (also known as nodes)
 
-    A set of edges that connect pairs of these vertices
+- A set of edges that connect pairs of these vertices
 
 Formally, a graph is denoted as G = (V, E), where V is the set of vertices and E is the set of edges connecting them.
 
@@ -76,25 +73,27 @@ Graphs as data structures can be represented in two primary forms: undirected an
 
 In these graphs, there are no "inputs" or "outputs"; there is only the objective fact of a connection.
 
-    Vertex Degree (deg(v)): This is the total number of edges incident to a given vertex.
+- Vertex Degree (deg(v)): This is the total number of edges incident to a given vertex.
 
-    Loops: This is a critical point for this textbook. In an undirected graph, a loop is counted twice (+2 to the degree). Why? Because both ends of the loop-edge are "plugged into" the same vertex, and each end contributes to the degree.
+- Loops: This is a critical point for this textbook. In an undirected graph, a loop is counted twice (+2 to the degree). Why? Because both ends of the 
+    loop-edge are "plugged into" the same vertex, and each end contributes to the degree.
 
 2. Directed Graph (Digraph)
 
 Here, the logic becomes more nuanced as direction matters. The degree is split into two distinct components:
 
-    In-degree (deg⁻(v)): The number of edges entering (incident into) the vertex.
+- In-degree (deg⁻(v)): The number of edges entering (incident into) the vertex.
 
-    Out-degree (deg⁺(v)): The number of edges leaving (incident from) the vertex.
+ - Out-degree (deg⁺(v)): The number of edges leaving (incident from) the vertex.
 
-    Total Degree: The sum of the in-degree and out-degree.
+- Total Degree: The sum of the in-degree and out-degree.
 
-    Loops in a Digraph: In this case, a loop is counted exactly once for the in-degree and once for the out-degree. It does not "double" the total degree in the same way as in an undirected graph; instead, it is honestly distributed between the two directions.
+- Loops in a Digraph: In this case, a loop is counted exactly once for the in-degree and once for the out-degree. It does not "double" the total degree in the 
+same way as in an undirected graph; instead, it is honestly distributed between the two directions.
 
 [.text-center]
 .Figure 9.1. The view of (a) undirected; (b) directed
-image::section_9/Fig9_1_exampleGraph.svg[width=50%, link=self, window="_blank", link=self, window="_blank"]
+image::section_9/Fig9_1_exampleGraph.svg[width=50%, link=self, window="_blank"]
 
 === Adjacency, Incidence, and Degree
 
@@ -102,13 +101,13 @@ A vertex and an edge are incident if the vertex is one of the endpoints of the e
 
 Refined Terms for Directed Graphs (Digraphs)
 
-    In-degree (deg⁻(v)): The number of edges directed into the vertex. In flow-based models, this represents the "input" capacity.
+- In-degree (deg⁻(v)): The number of edges directed into the vertex. In flow-based models, this represents the "input" capacity.
 
-    Out-degree (deg⁺(v)): The number of edges directed away from the vertex. In state machines, this represents the number of possible transitions.
+- Out-degree (deg⁺(v)): The number of edges directed away from the vertex. In state machines, this represents the number of possible transitions.
 
-    Total Degree: The sum of in-degree and out-degree.
+- Total Degree: The sum of in-degree and out-degree.
 
-    Self-Loop (Digraph): A special case where an edge starts and ends at the same vertex. It contributes exactly 1 to the in-degree and exactly 1 to the out-degree.
+- Self-Loop (Digraph): A special case where an edge starts and ends at the same vertex. It contributes exactly 1 to the in-degree and exactly 1 to the out-degree.
 
 [.text-center]
 image::section_9/Fig9_2_basicElements.svg[width=50%, link=self, window="_blank"]
@@ -127,7 +126,7 @@ An adjacency matrix is a two-dimensional array that indicates the existence of a
 In contrast, for a directed graph (or digraph), the relationship is not necessarily symmetric. An edge (u, v) means vertex *v* is adjacent from vertex *u*, and this is indicated in the matrix by a '1' at position A[u][v] only.
 
 [.text-center]
-image::section_9/Fig9_3_AdjMatrix.jpg[width=75%]
+image::section_9/Fig9_3_AdjMatrix.jpg[width=50%, link=self, window="_blank"]
 
 [.text-center]
 Figure 9.3. Adjacency matrix for undirected and directed graphs
@@ -146,9 +145,9 @@ Figure 9.4. Adjacency list representation
 
 The space complexity of representing a graph depends heavily on the chosen data structure:
 
-    Adjacency Matrix: Requires O(V²) memory. This is memory-intensive, especially for large, sparse graphs (graphs with relatively few edges). It also often requires knowing the number of vertices in advance.
+- Adjacency Matrix: Requires O(V²) memory. This is memory-intensive, especially for large, sparse graphs (graphs with relatively few edges). It also often requires knowing the number of vertices in advance.
 
-    Adjacency List: Requires O(V + E) memory, where E is the number of edges. This is much more efficient for sparse graphs, which are common in real-world applications.
+- Adjacency List: Requires O(V + E) memory, where E is the number of edges. This is much more efficient for sparse graphs, which are common in real-world applications.
 
 In practice, the choice between these representations is a trade-off. An adjacency matrix is often preferable for dense graphs (graphs where the number of edges approaches V²) and when frequent edge lookups are required (O(1) complexity). An adjacency list is generally better for sparse graphs.
 
