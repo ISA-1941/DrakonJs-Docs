@@ -125,7 +125,7 @@
 <div class="edit-this-page"><a href="https://github.com/ISA-1941/DrakonJs-Docs/edit/main/docs-src/modules/ROOT/pages/section-9.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
-<aside class="toc sidebar" data-title="Contents" data-levels="2">
+<aside class="toc sidebar" data-title="Contents" data-levels="3">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
@@ -133,11 +133,8 @@
 <div class="sect1">
 <h2 id="_9_1_general_information_basic_terminology"><a class="anchor" href="#_9_1_general_information_basic_terminology"></a>9.1. General Information. Basic Terminology</h2>
 <div class="sectionbody">
-<div class="sidebarblock right">
-<div class="content">
-<div class="title">Core Terminology</div>
-Glossary of Basic Graph Terms
-</div>
+<div class="paragraph">
+<p>Glossary of Basic Graph Terms</p>
 </div>
 <div class="paragraph">
 <p>Before we dive into the algorithms, let us align our terminology. In the context of engineering data structures, these terms have precise meanings:</p>
@@ -285,11 +282,16 @@ same way as in an undirected graph; instead, it is honestly distributed between 
 </li>
 </ul>
 </div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="_images/section_9/Fig9_1_exampleGraph.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_1_exampleGraph.svg" alt="Fig9 1 exampleGraph" width="50%"></a>
+</div>
+</div>
 <div class="imageblock text-center">
 <div class="content">
 <a class="image" href="_images/section_9/Fig9_1_exampleGraph.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_1_exampleGraph.svg" alt="Fig9 1 exampleGraph" width="50%"></a>
 </div>
-<div class="title">Figure 1. Figure 9.1. The view of (a) undirected; (b) directed</div>
+<div class="title">Figure 9.1. The view of (a) undirected; (b) directed</div>
 </div>
 </div>
 <div class="sect2">
@@ -320,9 +322,7 @@ same way as in an undirected graph; instead, it is honestly distributed between 
 <div class="content">
 <a class="image" href="_images/section_9/Fig9_2_basicElements.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_2_basicElements.svg" alt="Fig9 2 basicElements" width="50%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 9.2. Basic graph parameters</p>
+<div class="title">Figure 9.2. Basic graph parameters</div>
 </div>
 </div>
 </div>
@@ -345,9 +345,7 @@ same way as in an undirected graph; instead, it is honestly distributed between 
 <div class="content">
 <a class="image" href="section_9/Fig9_3_AdjMatrix.jpg" target="_blank" rel="noopener"><img src="section_9/Fig9_3_AdjMatrix.jpg" alt="Fig9 3 AdjMatrix" width="50%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 9.3. Adjacency matrix for undirected and directed graphs</p>
+<div class="title">Figure 9.3. Adjacency matrix for undirected and directed graphs</div>
 </div>
 </div>
 <div class="sect2">
@@ -359,9 +357,7 @@ same way as in an undirected graph; instead, it is honestly distributed between 
 <div class="content">
 <a class="image" href="section_9/Fig9_4_AdjList.jpg" target="_blank" rel="noopener"><img src="section_9/Fig9_4_AdjList.jpg" alt="Fig9 4 AdjList" width="50%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 9.4. Adjacency list representation</p>
+<div class="title">Figure 9.4. Adjacency list representation</div>
 </div>
 </div>
 <div class="sect2">
@@ -392,9 +388,7 @@ same way as in an undirected graph; instead, it is honestly distributed between 
 <div class="content">
 <a class="image" href="_images/section_9/Fig9_5_WeightField.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_5_WeightField.svg" alt="Fig9 5 WeightField" width="50%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 9.5. Adjacency list with a 'weight' field</p>
+<div class="title">Figure 9.5. Adjacency list with a 'weight' field</div>
 </div>
 </div>
 <div class="sect2">
@@ -514,9 +508,7 @@ addWeightedEdge(1, 2, 10);</p>
 <div class="content">
 <a class="image" href="_images/section_9/Fig9_6_baseGraph.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_6_baseGraph.svg" alt="Fig9 6 baseGraph" width="50%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 9.6. A simple graph for demonstrating DFS and BFS traversals</p>
+<div class="title">Figure 9.6. A simple graph for demonstrating DFS and BFS traversals</div>
 </div>
 <div class="paragraph">
 <p>The following directed graph serves as the reference structure for the DFS and BFS traces presented in Tables 9.1 and 9.2. The traversal begins at vertex V₀.</p>
@@ -814,17 +806,8 @@ Order of addition = order of processing!
 <div class="paragraph">
 <p>These tables clearly demonstrate that:</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>DFS (with Stack) "dives deep" — vertex 3, added first, is processed last</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>BFS (with Queue) processes vertices in the order they are discovered — the wave expands evenly</pre>
-</div>
-</div>
 <div class="paragraph">
+<div class="title">BFS (with Queue) processes vertices in the order they are discovered — the wave expands evenly</div>
 <p>This is the fundamental difference between the two graph traversal algorithms! 🎯</p>
 </div>
 </div>
@@ -841,24 +824,21 @@ Order of addition = order of processing!
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<a class="image" href="_images/section_9/DFS_stack.svg" target="_blank" rel="noopener"><img src="_images/section_9/DFS_stack.svg" alt="DFS stack" width="50%"></a>
+<a class="image" href="_images/section_9/Fig9_6a_DFS_stack.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_6a_DFS_stack.svg" alt="Fig9 6a DFS stack" width="75%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 9.7a. Drakon-diagram illustrating the control flow of DFS (Depth-First Search)</p>
+<div class="title">a). Drakon-diagram illustrating the control flow of DFS (Depth-First Search)</div>
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<a class="image" href="_images/section_9/Fig9_6b_BFS_queue.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_6b_BFS_queue.svg" alt="Fig9 6b BFS queue" width="50%"></a>
+<a class="image" href="_images/section_9/Fig9_6b_BFS_queue.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_6b_BFS_queue.svg" alt="Fig9 6b BFS queue" width="75%"></a>
+</div>
+<div class="title">b). Drakon-diagram illustrating the control flow of BFS (Breadth-First Search)</div>
 </div>
 </div>
-<div class="paragraph text-center">
-<p>Figure 9.7b. Drakon-diagram illustrating the control flow of BFS (Breadth-First Search)</p>
-</div>
-</div>
-<div class="sect2">
+<div class="sect2 text-center">
 <h3 id="_choosing_between_dfs_and_bfs"><a class="anchor" href="#_choosing_between_dfs_and_bfs"></a>Choosing Between DFS and BFS</h3>
 <div class="paragraph">
+<div class="title">Figure 9.7b. Drakon-diagram illustrating the control flow of BFS (Breadth-First Search)</div>
 <p>In practice, the choice between DFS and BFS depends on the specific problem:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -957,15 +937,11 @@ Order of addition = order of processing!
 <div class="paragraph">
 <p>At the core of the implemented algorithm lies the method of exponential backtracking. This approach systematically traverses all possible paths through the graph, maintaining cumulative information about the current route. Upon reaching the target vertex, the path is saved; after fully exploring each branch, a backtracking step reverts to the previous state, enabling the search to proceed with alternative routes. In the worst-case scenario, the number of paths considered grows exponentially with the number of vertices — an inherent cost of exhaustive enumeration.</p>
 </div>
-<div class="imageblock unresolved text-center">
-<div class="content">
-<a class="image" href="section_9/Fig9_7_searchContext.svg" target="_blank" rel="noopener"><img src="section_9/Fig9_7_searchContext.svg" alt="Fig9 7 searchContext" width="50%"></a>
-</div>
-</div>
 <div class="paragraph text-center">
-<p>Figure 9.8. Context Object: from structure creation (a) to data population (b)<br>
-(a) — function creates an empty container with the required structure for storing search parameters and results.<br>
-(b) — the container is populated with data during the search process, accumulating information.</p>
+<div class="title">Figure 9.8. Context Object: from structure creation (a) to data population (b)</div>
+<p>(a) — function creates an empty container with the required structure for storing search parameters and results.<br>
+(b) — the container is populated with data during the search process, accumulating information.<br>
+image::section_9/Fig9_7_searchContext.svg[width=50%, link=self, window="_blank"]</p>
 </div>
 <div class="paragraph">
 <p>A visual representation of the function structure, their relationships, and operational logic is presented in the mind map (Figure 9.9).</p>
@@ -974,9 +950,7 @@ Order of addition = order of processing!
 <div class="content">
 <a class="image" href="_images/section_9/Fig9_8_viewAlgorithmGraph.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_8_viewAlgorithmGraph.svg" alt="Fig9 8 viewAlgorithmGraph" width="50%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 9.9. Mind map of path search functions</p>
+<div class="title">Figure 9.9. Mind map of path search functions</div>
 </div>
 <div class="sect2">
 <h3 id="_description_of_key_functions"><a class="anchor" href="#_description_of_key_functions"></a>Description of Key Functions</h3>
@@ -1065,9 +1039,7 @@ Order of addition = order of processing!
 <div class="content">
 <a class="image" href="section_9/iFig9_9_initPathSearch.svg" target="_blank" rel="noopener"><img src="section_9/iFig9_9_initPathSearch.svg" alt="iFig9 9 initPathSearch" width="50%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 9.10. Drakon-diagram of the initialization function for path search</p>
+<div class="title">Figure 9.10. Drakon-diagram of the initialization function for path search</div>
 </div>
 </div>
 <div class="sect3">
@@ -1155,9 +1127,7 @@ Order of addition = order of processing!
 <div class="content">
 <a class="image" href="section_9/iFig9_10_findPathWithContext.svg" target="_blank" rel="noopener"><img src="section_9/iFig9_10_findPathWithContext.svg" alt="iFig9 10 findPathWithContext" width="50%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 9.11. Drakon-diagram of the recursive path search function</p>
+<div class="title">Figure 9.11. Drakon-diagram of the recursive path search function</div>
 </div>
 </div>
 <div class="sect3">
@@ -1286,9 +1256,7 @@ Order of addition = order of processing!
 <div class="content">
 <a class="image" href="section_9/iFig9_11_handleFoundPath.svg" target="_blank" rel="noopener"><img src="section_9/iFig9_11_handleFoundPath.svg" alt="iFig9 11 handleFoundPath" width="50%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 9.12. Drakon-diagram of the path handler function</p>
+<div class="title">Figure 9.12. Drakon-diagram of the path handler function</div>
 </div>
 </div>
 <div class="sect3">
@@ -1388,9 +1356,7 @@ Order of addition = order of processing!
 <div class="content">
 <a class="image" href="section_9/iFig9_12_prepareMoveToNeighbor.svg" target="_blank" rel="noopener"><img src="section_9/iFig9_12_prepareMoveToNeighbor.svg" alt="iFig9 12 prepareMoveToNeighbor" width="50%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 9.13. Drakon-diagram of the transition preparation function</p>
+<div class="title">Figure 9.13. Drakon-diagram of the transition preparation function</div>
 </div>
 </div>
 <div class="sect3">
@@ -1472,9 +1438,7 @@ Order of addition = order of processing!
 <div class="content">
 <a class="image" href="section_9/iFig9_13_backtrackFromNeighbor.svg" target="_blank" rel="noopener"><img src="section_9/iFig9_13_backtrackFromNeighbor.svg" alt="iFig9 13 backtrackFromNeighbor" width="50%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 9.14. Drakon-diagram of the backtracking function</p>
+<div class="title">Figure 9.14. Drakon-diagram of the backtracking function</div>
 </div>
 </div>
 </div>
@@ -1661,9 +1625,7 @@ Price: 21.60 u.</p>
 <div class="content">
 <a class="image" href="_images/section_9/Fig9_15_Dijkstra_classic.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_15_Dijkstra_classic.svg" alt="Fig9 15 Dijkstra classic" width="50%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 9.16. Mind map of Dijkstra&#8217;s algorithm logic</p>
+<div class="title">Figure 9.16. Mind map of Dijkstra&#8217;s algorithm logic</div>
 </div>
 </div>
 <div class="sect2">
@@ -1678,9 +1640,7 @@ Price: 21.60 u.</p>
 <div class="content">
 <a class="image" href="_images/section_9/Fig9_16_dijkstra.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_16_dijkstra.svg" alt="Fig9 16 dijkstra" width="50%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 9.17. DRAKON-diagram of Dijkstra&#8217;s algorithm implementation</p>
+<div class="title">Figure 9.17. DRAKON-diagram of Dijkstra&#8217;s algorithm implementation</div>
 </div>
 <div class="paragraph">
 <p>The function getVerticesList(graph) extracts a list of all vertices from the graph, which allows initializing the distance and visited arrays (Figure 9.18).</p>
@@ -1689,31 +1649,28 @@ Price: 21.60 u.</p>
 <div class="content">
 <a class="image" href="_images/section_9/Fig9_17_init.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_17_init.svg" alt="Fig9 17 init" width="50%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 9.18. DRAKON-diagram of the initialization function for Dijkstra&#8217;s algorithm</p>
+<div class="title">Figure 9.18. DRAKON-diagram of the initialization function for Dijkstra&#8217;s algorithm</div>
 </div>
 <div class="paragraph">
 <p>The central function of the algorithm is findMinDistanceVertex(graph, distances, visited), which at each stage selects the unvisited vertex with the minimum distance from the source vertex. This ensures the optimal choice of the next vertex for processing (Figure 9.19).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="_images/section_9/Fig9_18_findMinDistanceVertex.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_18_findMinDistanceVertex.svg" alt="Fig9 18 findMinDistanceVertex" width="50%"></a>
+</div>
 </div>
 <div class="imageblock text-center">
 <div class="content">
 <a class="image" href="_images/section_9/Fig9_18_findMinDistanceVertex.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_18_findMinDistanceVertex.svg" alt="Fig9 18 findMinDistanceVertex" width="50%"></a>
 </div>
-</div>
-<div class="paragraph text-center">
-<p>Figure 9.19. DRAKON-diagram of the findMinDistanceVertex function</p>
+<div class="title">Figure 9.19. DRAKON-diagram of the findMinDistanceVertex function</div>
 </div>
 <div class="paragraph">
 <p>In the function markVertexVisited(graph, vertex, visited), a vertex is marked as visited, which prevents its reprocessing in the future (Figure 9.20).</p>
 </div>
-<div class="imageblock unresolved text-center">
-<div class="content">
-<a class="image" href="section_9/Fig9_19_markVertexVisited.svg" target="_blank" rel="noopener"><img src="section_9/Fig9_19_markVertexVisited.svg" alt="Fig9 19 markVertexVisited" width="50%"></a>
-</div>
-</div>
 <div class="paragraph text-center">
-<p>Figure 9.20. DRAKON-diagram of the markVertexVisited function</p>
+<p>Figure 9.20. DRAKON-diagram of the markVertexVisited function<br>
+image::section_9/Fig9_19_markVertexVisited.svg[width=50%, link=self, window="_blank"]</p>
 </div>
 <div class="paragraph">
 <p>Finally, the function relaxEdges(graph, vertex, distances, visited) performs relaxation on all neighbors of the current vertex. It checks whether the known distances to neighboring vertices can be improved via the current vertex and updates them if necessary (Figure 9.21).</p>
