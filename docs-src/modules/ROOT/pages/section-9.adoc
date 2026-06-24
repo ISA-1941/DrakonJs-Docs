@@ -222,9 +222,9 @@ Once a graph structure is established, the next logical task is to systematicall
 
 The fundamental difference between DFS and BFS lies in the order in which they explore the graph, which stems from the underlying data structure they use to manage yet-to-be-visited vertices:
 
-    Depth-First Search (DFS) uses a stack (often implemented via recursion) to explore as deep as possible along each branch before backtracking. While DFS does not inherently find shortest paths, it is indispensable for tasks like detecting cycles, topological sorting, and exploring a graph when its overall structure is not known in advance.
+. Depth-First Search (DFS) uses a stack (often implemented via recursion) to explore as deep as possible along each branch before backtracking. While DFS does not inherently find shortest paths, it is indispensable for tasks like detecting cycles, topological sorting, and exploring a graph when its overall structure is not known in advance.
 
-    Breadth-First Search (BFS) uses a queue to explore the graph level by level. It visits all direct neighbors of the starting vertex, then all of their neighbors, and so on. BFS is guaranteed to find the shortest path (in terms of the number of edges) in an unweighted graph.
+. Breadth-First Search (BFS) uses a queue to explore the graph level by level. It visits all direct neighbors of the starting vertex, then all of their neighbors, and so on. BFS is guaranteed to find the shortest path (in terms of the number of edges) in an unweighted graph.
 
 The step-by-step process for each algorithm is shown in the tables below for the example graph, starting from vertex V₀.
 
@@ -237,27 +237,81 @@ The following directed graph serves as the reference structure for the DFS and B
 
 === Depth-First Search (DFS) — Using Stack (LIFO)
 
-[cols="1,2,3,4,5,6", options="header"]
+.Detailed DFS Trace Table from Vertex 0
+[cols="1,3,2,3,2,3", options="header", align="center"]
 |===
 | Step | Action | Current Vertex | Unvisited Neighbors | Stack Content (LIFO) | Visited Order
-| 1 | Start | 0 | [1, 3] | [1, 3] | [0]
-| 2 | Pop from stack | 1 | [2, 3, 4] | [3, 2, 4] | [0, 1]
-| 3 | Pop from stack | 2 | [5] | [3, 4, 5] | [0, 1, 2]
-| 4 | Pop from stack | 5 | [4] | [3, 4] | [0, 1, 2, 5]
-| 5 | Pop from stack | 4 | [0, 3] (0 already visited) → [3] | [3] | [0, 1, 2, 5, 4]
-| 6 | Pop from stack | 3 | [5] (5 already visited) → [] | [] | [0, 1, 2, 5, 4, 3]
+
+| *1* | *Initialization* +
+Push the start vertex onto the stack. 
+| *0* | `[1, 3]` +
+_({blank}[Both neighbors are unvisited. Due to the reverse `i--` loop in your chart, they are pushed onto the stack as `[3, 1]`})_ 
+| `[3, 1]` 
+| `[0]`
+
+| *2* | *Pop from stack* +
+Extract the last element of the stack. 
+| *1* | `[2]` +
+_({blank}[The only outgoing neighbor of vertex 1])_ 
+| `[3, 2]` +
+_(Vertex 2 is pushed on top of vertex 3)_ 
+| `[0, 1]`
+
+| *3* | *Pop from stack* +
+Extract vertex 2. 
+| *2* | `[]` +
+_({blank}[Vertex 2 is an absolute dead-end; it has no outgoing edges])_ 
+| `[3]` +
+_(The stack shrinks; no new elements are added)_ 
+| `[0, 1, 2]`
+
+| *4* | *Pop from stack* +
+Extract vertex 3. 
+| *3* | `[4, 5]` +
+_({blank}[Vertex 3 has three neighbors: `[2, 4, 5]`. Since $V_2$ is already visited, only `[5, 4]` are pushed in reverse order])_ 
+| `[5, 4]` 
+| `[0, 1, 2, 3]`
+
+| *5* | *Pop from stack* +
+Extract vertex 4. 
+| *4* | `[]` +
+_({blank}[Vertex 4 has no outgoing edges])_ 
+| `[5]` 
+| `[0, 1, 2, 3, 4]`
+
+| *6* | *Pop from stack* +
+Extract vertex 5. 
+| *5* | `[6]` +
+_({blank}[Vertex 5 has two neighbors: `[4, 6]`. Since $V_4$ was already visited in step 5, only vertex 6 is pushed])_ 
+| `[6]` 
+| `[0, 1, 2, 3, 4, 5]`
+
+| *7* | *Pop from stack* +
+Extract the final vertex. 
+| *6* | `[]` +
+_({blank}[Vertex 6 has no outgoing edges])_ 
+| `[]` +
+_(The stack is completely empty)_ 
+| `[0, 1, 2, 3, 4, 5, 6]`
+
+| *8* | *Termination* +
+The condition `stack.length > 0` returns `No`. Exit loop. 
+| — 
+| — 
+| `[]` 
+| *Final Result:* `[0, 1, 2, 3, 4, 5, 6]`
 |===
 
 [NOTE]
 .Key Principle of DFS
 ====
 
-    Stack operates on LIFO (Last In, First Out)
+Stack operates on LIFO (Last In, First Out)
 
-    The algorithm goes deep until the end of a branch before backtracking
+The algorithm goes deep until the end of a branch before backtracking
 
-    New neighbors are pushed to the top of the stack
-    ====
+New neighbors are pushed to the top of the stack
+====
 
 === Breadth-First Search (BFS) — Using Queue (FIFO)
 
