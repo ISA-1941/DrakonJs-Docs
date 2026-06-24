@@ -1,12 +1,11 @@
+:imagesdir: docs-src/modules/section-7/assets/images
+[.text-justify]
+:figure-caption!:
+:page-toclevels: 3
+
 = Section 9. Graphs and Graph Algorithms
 
 == 9.1. General Information. Basic Terminology
-
-[source,asciidoc]
-
-[.right]
-[sidebar,width=25%]
-.Core Terminology
 
 Glossary of Basic Graph Terms
 
@@ -91,6 +90,8 @@ Here, the logic becomes more nuanced as direction matters. The degree is split i
 - Loops in a Digraph: In this case, a loop is counted exactly once for the in-degree and once for the out-degree. It does not "double" the total degree in the 
 same way as in an undirected graph; instead, it is honestly distributed between the two directions.
 
+image::section_9/Fig9_1_exampleGraph.svg[width=50%, link=self, window="_blank"]
+
 [.text-center]
 .Figure 9.1. The view of (a) undirected; (b) directed
 image::section_9/Fig9_1_exampleGraph.svg[width=50%, link=self, window="_blank"]
@@ -110,10 +111,8 @@ Refined Terms for Directed Graphs (Digraphs)
 - Self-Loop (Digraph): A special case where an edge starts and ends at the same vertex. It contributes exactly 1 to the in-degree and exactly 1 to the out-degree.
 
 [.text-center]
+.Figure 9.2. Basic graph parameters
 image::section_9/Fig9_2_basicElements.svg[width=50%, link=self, window="_blank"]
-
-[.text-center]
-Figure 9.2. Basic graph parameters
 
 == 9.2. Graph Representation Methods
 
@@ -126,20 +125,17 @@ An adjacency matrix is a two-dimensional array that indicates the existence of a
 In contrast, for a directed graph (or digraph), the relationship is not necessarily symmetric. An edge (u, v) means vertex *v* is adjacent from vertex *u*, and this is indicated in the matrix by a '1' at position A[u][v] only.
 
 [.text-center]
+.Figure 9.3. Adjacency matrix for undirected and directed graphs
 image::section_9/Fig9_3_AdjMatrix.jpg[width=50%, link=self, window="_blank"]
-
-[.text-center]
-Figure 9.3. Adjacency matrix for undirected and directed graphs
 
 === Adjacency List
 
 In some cases, a more memory-efficient way to represent a graph is to use an adjacency list. This method involves an array of linked lists (or arrays), where each individual list contains information about which vertices are adjacent to a given one.
 
 [.text-center]
+.Figure 9.4. Adjacency list representation
 image::section_9/Fig9_4_AdjList.jpg[width=50%, link=self, window="_blank"]
 
-[.text-center]
-Figure 9.4. Adjacency list representation
 
 === Comparison and Complexity
 
@@ -156,10 +152,8 @@ In practice, the choice between these representations is a trade-off. An adjacen
 Many real-life problems require modeling graphs with numerical values associated with edges, such as distance, cost, or travel time. Such graphs are called weighted graphs. In an adjacency matrix, the weight is stored as the value of the matrix element (instead of '1'), and a special value (like ∞ or '0') can represent the absence of an edge. In an adjacency list, each element in the list is typically a structure containing both the adjacent vertex ID and the edge weight.
 
 [.text-center]
+.Figure 9.5. Adjacency list with a 'weight' field
 image::section_9/Fig9_5_WeightField.svg[width=50%, link=self, window="_blank"]
-
-[.text-center]
-Figure 9.5. Adjacency list with a 'weight' field
 
 === Graph Representation in JavaScript
 
@@ -235,10 +229,9 @@ The fundamental difference between DFS and BFS lies in the order in which they e
 The step-by-step process for each algorithm is shown in the tables below for the example graph, starting from vertex V₀.
 
 [.text-center]
+.Figure 9.6. A simple graph for demonstrating DFS and BFS traversals
 image::section_9/Fig9_6_baseGraph.svg[width=50%, link=self, window="_blank"]
 
-[.text-center]
-Figure 9.6. A simple graph for demonstrating DFS and BFS traversals
 
 The following directed graph serves as the reference structure for the DFS and BFS traces presented in Tables 9.1 and 9.2. The traversal begins at vertex V₀.
 
@@ -333,9 +326,9 @@ Order of addition = order of processing!
 
 These tables clearly demonstrate that:
 
-    DFS (with Stack) "dives deep" — vertex 3, added first, is processed last
+.DFS (with Stack) "dives deep" — vertex 3, added first, is processed last
 
-    BFS (with Queue) processes vertices in the order they are discovered — the wave expands evenly
+.BFS (with Queue) processes vertices in the order they are discovered — the wave expands evenly
 
 This is the fundamental difference between the two graph traversal algorithms! 🎯
 
@@ -348,16 +341,15 @@ These diagrams decompose the traversal process into discrete decision points and
 The following Drakon-diagram illustrates the DFS_stack(graph, start) function. The LIFO (Last-In-First-Out) behavior of the stack drives deep exploration, forcing the algorithm to exhaust each branch before backtracking to previously discovered vertices.
 
 [.text-center]
-image::section_9/DFS_stack.svg[width=50%, link=self, window="_blank"]
+.a). Drakon-diagram illustrating the control flow of DFS (Depth-First Search)
+image::section_9/Fig9_6a_DFS_stack.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
-Figure 9.7a. Drakon-diagram illustrating the control flow of DFS (Depth-First Search)
+.b). Drakon-diagram illustrating the control flow of BFS (Breadth-First Search)
+image::section_9/Fig9_6b_BFS_queue.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
-image::section_9/Fig9_6b_BFS_queue.svg[width=50%, link=self, window="_blank"]
-
-[.text-center]
-Figure 9.7b. Drakon-diagram illustrating the control flow of BFS (Breadth-First Search)
+.Figure 9.7b. Drakon-diagram illustrating the control flow of BFS (Breadth-First Search)
 
 === Choosing Between DFS and BFS
 
@@ -397,20 +389,16 @@ The implementation also includes BFS_queue and DFS_stack functions, which demons
 At the core of the implemented algorithm lies the method of exponential backtracking. This approach systematically traverses all possible paths through the graph, maintaining cumulative information about the current route. Upon reaching the target vertex, the path is saved; after fully exploring each branch, a backtracking step reverts to the previous state, enabling the search to proceed with alternative routes. In the worst-case scenario, the number of paths considered grows exponentially with the number of vertices — an inherent cost of exhaustive enumeration.
 
 [.text-center]
-image::section_9/Fig9_7_searchContext.svg[width=50%, link=self, window="_blank"]
-
-[.text-center]
-Figure 9.8. Context Object: from structure creation (a) to data population (b)
+.Figure 9.8. Context Object: from structure creation (a) to data population (b)
 (a) — function creates an empty container with the required structure for storing search parameters and results.
 (b) — the container is populated with data during the search process, accumulating information.
+image::section_9/Fig9_7_searchContext.svg[width=50%, link=self, window="_blank"]
 
 A visual representation of the function structure, their relationships, and operational logic is presented in the mind map (Figure 9.9).
 
 [.text-center]
+.Figure 9.9. Mind map of path search functions
 image::section_9/Fig9_8_viewAlgorithmGraph.svg[width=50%, link=self, window="_blank"]
-
-[.text-center]
-Figure 9.9. Mind map of path search functions
 
 === Description of Key Functions
 
@@ -437,10 +425,9 @@ Operations
 |===
 
 [.text-center]
+.Figure 9.10. Drakon-diagram of the initialization function for path search
 image::section_9/iFig9_9_initPathSearch.svg[width=50%, link=self, window="_blank"]
 
-[.text-center]
-Figure 9.10. Drakon-diagram of the initialization function for path search
 
 ==== findPathWithContext(current, context)
 
@@ -465,10 +452,9 @@ Operations
 |===
 
 [.text-center]
+.Figure 9.11. Drakon-diagram of the recursive path search function
 image::section_9/iFig9_10_findPathWithContext.svg[width=50%, link=self, window="_blank"]
 
-[.text-center]
-Figure 9.11. Drakon-diagram of the recursive path search function
 
 ==== handleFoundPath(context)
 
@@ -503,10 +489,8 @@ Operations
 |===
 
 [.text-center]
+.Figure 9.12. Drakon-diagram of the path handler function
 image::section_9/iFig9_11_handleFoundPath.svg[width=50%, link=self, window="_blank"]
-
-[.text-center]
-Figure 9.12. Drakon-diagram of the path handler function
 
 ==== prepareMoveToNeighbor(context, current, neighbor)
 
@@ -533,10 +517,8 @@ Operations
 |===
 
 [.text-center]
+.Figure 9.13. Drakon-diagram of the transition preparation function
 image::section_9/iFig9_12_prepareMoveToNeighbor.svg[width=50%, link=self, window="_blank"]
-
-[.text-center]
-Figure 9.13. Drakon-diagram of the transition preparation function
 
 ==== backtrackFromNeighbor(context, neighbor, oldState)
 
@@ -560,10 +542,8 @@ Operations
 |===
 
 [.text-center]
+.Figure 9.14. Drakon-diagram of the backtracking function
 image::section_9/iFig9_13_backtrackFromNeighbor.svg[width=50%, link=self, window="_blank"]
-
-[.text-center]
-Figure 9.14. Drakon-diagram of the backtracking function
 
 === Algorithmic Complexity Analysis
 
@@ -671,10 +651,9 @@ Having examined the internal logic of the algorithm and its implementation in Ja
 A mind map of Dijkstra's algorithm logic is shown in Figure 9.16:
 
 [.text-center]
+.Figure 9.16. Mind map of Dijkstra's algorithm logic
 image::section_9/Fig9_15_Dijkstra_classic.svg[width=50%, link=self, window="_blank"]
 
-[.text-center]
-Figure 9.16. Mind map of Dijkstra's algorithm logic
 
 === DRAKON-Diagrams of Dijkstra's Algorithm Implementation
 
@@ -683,34 +662,29 @@ The DRAKON-diagrams below illustrate the control flow of the Dijkstra algorithm 
 The central function of the Dijkstra algorithm — dijkstra(graph, start) — is responsible for initializing the necessary data structures and managing the main loop of the algorithm. It sequentially selects the nearest unvisited vertex, marks it as visited, and performs relaxation on all its neighbors (Figure 9.17).
 
 [.text-center]
+.Figure 9.17. DRAKON-diagram of Dijkstra's algorithm implementation
 image::section_9/Fig9_16_dijkstra.svg[width=50%, link=self, window="_blank"]
-
-[.text-center]
-Figure 9.17. DRAKON-diagram of Dijkstra's algorithm implementation
 
 The function getVerticesList(graph) extracts a list of all vertices from the graph, which allows initializing the distance and visited arrays (Figure 9.18).
 
 [.text-center]
+.Figure 9.18. DRAKON-diagram of the initialization function for Dijkstra's algorithm
 image::section_9/Fig9_17_init.svg[width=50%, link=self, window="_blank"]
-
-[.text-center]
-Figure 9.18. DRAKON-diagram of the initialization function for Dijkstra's algorithm
 
 The central function of the algorithm is findMinDistanceVertex(graph, distances, visited), which at each stage selects the unvisited vertex with the minimum distance from the source vertex. This ensures the optimal choice of the next vertex for processing (Figure 9.19).
 
-[.text-center]
 image::section_9/Fig9_18_findMinDistanceVertex.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
-Figure 9.19. DRAKON-diagram of the findMinDistanceVertex function
+.Figure 9.19. DRAKON-diagram of the findMinDistanceVertex function
+image::section_9/Fig9_18_findMinDistanceVertex.svg[width=50%, link=self, window="_blank"]
+
 
 In the function markVertexVisited(graph, vertex, visited), a vertex is marked as visited, which prevents its reprocessing in the future (Figure 9.20).
 
 [.text-center]
-image::section_9/Fig9_19_markVertexVisited.svg[width=50%, link=self, window="_blank"]
-
-[.text-center]
 Figure 9.20. DRAKON-diagram of the markVertexVisited function
+image::section_9/Fig9_19_markVertexVisited.svg[width=50%, link=self, window="_blank"]
 
 Finally, the function relaxEdges(graph, vertex, distances, visited) performs relaxation on all neighbors of the current vertex. It checks whether the known distances to neighboring vertices can be improved via the current vertex and updates them if necessary (Figure 9.21).
 

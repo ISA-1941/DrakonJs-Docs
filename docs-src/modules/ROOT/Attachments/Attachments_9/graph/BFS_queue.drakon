@@ -49,7 +49,7 @@
         },
         "27": {
             "type": "action",
-            "one": "42",
+            "one": "39",
             "content": "neighbors = getNeighbors(graph, vertex)"
         },
         "33": {
@@ -64,7 +64,7 @@
         },
         "38": {
             "type": "loopend",
-            "one": "43",
+            "one": "22",
             "content": ""
         },
         "39": {
@@ -83,16 +83,6 @@
             "type": "action",
             "one": "38",
             "content": "queue.push(neighbors[i])"
-        },
-        "42": {
-            "type": "action",
-            "one": "39",
-            "content": "console.log(\n    \"vertex ==> \",\n    vertex,\n    \"neighbors --> \",\n    neighbors,\n    \"stack.length ==> \",\n    queue.length\n)"
-        },
-        "43": {
-            "type": "action",
-            "one": "22",
-            "content": "console.log(\"quueu ==> \", queue)"
         }
     },
     "keywords": {

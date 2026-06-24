@@ -1,16 +1,16 @@
 {
     "history": [
         {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/BFS_queue.drakon",
+            "whenOpened": "2026-06-24T20:36:19.126Z"
+        },
+        {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/DFS_stack.drakon",
-            "whenOpened": "2026-06-23T19:59:23.232Z"
+            "whenOpened": "2026-06-24T20:34:39.946Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/addEdgeMatrix.drakon",
             "whenOpened": "2026-06-23T19:57:07.961Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/BFS_queue.drakon",
-            "whenOpened": "2026-06-23T19:53:41.058Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/backtrackFromNeighbor.drakon",

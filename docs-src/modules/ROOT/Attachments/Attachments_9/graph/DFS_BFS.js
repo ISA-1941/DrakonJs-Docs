@@ -27,7 +27,8 @@ function backtrackFromNeighbor(context, neighbor, oldState) {
 }
 function createGraphFromData() {
     var graph;
-    graph = createGraphMatrix(6);
+    graph = createGraphMatrix(7);
+    /*
     addEdgeMatrix(graph, 0, 1);
     addEdgeMatrix(graph, 0, 3);
     addEdgeMatrix(graph, 1, 2);
@@ -38,6 +39,16 @@ function createGraphFromData() {
     addEdgeMatrix(graph, 4, 0);
     addEdgeMatrix(graph, 4, 3);
     addEdgeMatrix(graph, 5, 4);
+    */
+   addEdgeMatrix(graph, 0, 1);
+   addEdgeMatrix(graph, 1, 2);
+   addEdgeMatrix(graph, 0, 3);
+   addEdgeMatrix(graph, 1, 2);
+   addEdgeMatrix(graph, 3, 2);
+   addEdgeMatrix(graph, 3, 4);
+   addEdgeMatrix(graph, 3, 5);
+   addEdgeMatrix(graph, 5, 4);
+   addEdgeMatrix(graph, 5, 6);
     return graph;
 }
 function createGraphMatrix(size) {
