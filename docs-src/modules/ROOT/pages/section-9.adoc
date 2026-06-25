@@ -383,13 +383,13 @@ At the core of the implemented algorithm lies the method of exponential backtrac
 
 [.text-center]
 .Figure 9.8. Context Object: from structure creation (a) to data population (b)
-image::section_9/Fig9_7_searchContext.svg[width=50%, link=self, window="_blank"]
+image::section_9/Fig9_8_searchContext.svg[width=50%, link=self, window="_blank"]
 
 A visual representation of the function structure, their relationships, and operational logic is presented in the mind map (Figure 9.9).
 
 [.text-center]
 .Figure 9.9. Mind map of path search functions
-image::section_9/Fig9_8_viewAlgorithmGraph.svg[width=50%, link=self, window="_blank"]
+image::section_9/Fig9_9_viewAlgorithmGraph.svg[width=50%, link=self, window="_blank"]
 
 === Description of Key Functions
 
@@ -405,7 +405,7 @@ image::section_9/Fig9_8_viewAlgorithmGraph.svg[width=50%, link=self, window="_bl
 
 [.text-center]
 .Figure 9.10. Drakon-diagram of the initialization function for path search
-image::section_9/Fig9_9_initPathSearch.svg[width=50%, link=self, window="_blank"]
+image::section_9/Fig9_10_initPathSearch.svg[width=50%, link=self, window="_blank"]
 
 ==== findPathWithContext(current, context)
 
@@ -419,7 +419,7 @@ image::section_9/Fig9_9_initPathSearch.svg[width=50%, link=self, window="_blank"
 
 [.text-center]
 .Figure 9.11. Drakon-diagram of the recursive path search function
-image::section_9/Fig9_10_findPathWithContext.svg[width=50%, link=self, window="_blank"]
+image::section_9/Fig9_11_findPathWithContext.svg[width=50%, link=self, window="_blank"]
 
 ==== handleFoundPath(context)
 
@@ -433,7 +433,7 @@ image::section_9/Fig9_10_findPathWithContext.svg[width=50%, link=self, window="_
 
 [.text-center]
 .Figure 9.12. Drakon-diagram of the path handler function
-image::section_9/Fig9_11_handleFoundPath.svg[width=50%, link=self, window="_blank"]
+image::section_9/Fig9_12_handleFoundPath.svg[width=50%, link=self, window="_blank"]
 
 ==== prepareMoveToNeighbor(context, current, neighbor)
 
@@ -447,7 +447,7 @@ image::section_9/Fig9_11_handleFoundPath.svg[width=50%, link=self, window="_blan
 
 [.text-center]
 .Figure 9.13. Drakon-diagram of the transition preparation function
-image::section_9/Fig9_12_prepareMoveToNeighbor.svg[width=50%, link=self, window="_blank"]
+image::section_9/Fig9_13_prepareMoveToNeighbor.svg[width=50%, link=self, window="_blank"]
 
 ==== backtrackFromNeighbor(context, neighbor, oldState)
 
@@ -461,7 +461,7 @@ image::section_9/Fig9_12_prepareMoveToNeighbor.svg[width=50%, link=self, window=
 
 [.text-center]
 .Figure 9.14. Drakon-diagram of the backtracking function
-image::section_9/Fig9_13_backtrackFromNeighbor.svg[width=50%, link=self, window="_blank"]
+image::section_9/Fig9_14_backtrackFromNeighbor.svg[width=50%, link=self, window="_blank"]
 
 === Algorithmic Complexity Analysis
 
@@ -500,7 +500,7 @@ For our demonstration of Dijkstra's algorithm, we will use the graph shown in Fi
 
 [.text-center]
 .Figure 9.15. Target topology setup for Dijkstra shortest path calculation
-image::section_9/Fig9_14_DijkstraGraph.svg[width=50%, link=self, window="_blank"]
+image::section_9/Fig9_15_DijkstraGraph.svg[width=50%, link=self, window="_blank"]
 
 In JavaScript, we represent this weighted structure as an object mapping node connections:
 
