@@ -1,0 +1,188 @@
+{
+    "items": {
+        "1": {
+            "type": "idea",
+            "content": "<p>INPUT DATA</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "2": {
+            "type": "idea",
+            "content": "<p>INITIALIZATION</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "3": {
+            "type": "idea",
+            "content": "<p>MAIN LOOP</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 2
+        },
+        "4": {
+            "type": "idea",
+            "content": "<p>Source Graph (G)</p>",
+            "parent": "1",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "5": {
+            "type": "ridea",
+            "content": "<p>Network Topology</p>",
+            "parent": "4",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "6": {
+            "type": "ridea",
+            "content": "<p>Edge Weights (w &gt;= 0)</p>",
+            "parent": "4",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "7": {
+            "type": "idea",
+            "content": "<p>Start Vertex (startVertex)</p>",
+            "parent": "1",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "8": {
+            "type": "idea",
+            "content": "<p>Distances Map/Array</p>",
+            "parent": "2",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "9": {
+            "type": "idea",
+            "content": "<p>Visited Map/Array (visited)</p>",
+            "parent": "2",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "10": {
+            "type": "idea",
+            "content": "<p>Predecessors Map (previous) </p>",
+            "parent": "2",
+            "treeType": "treeview",
+            "ordinal": 2
+        },
+        "11": {
+            "type": "ridea",
+            "content": "<p>d[startVertex] = 0</p>",
+            "parent": "8",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "12": {
+            "type": "ridea",
+            "content": "<p>d[others] = Infinity</p>",
+            "parent": "8",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "13": {
+            "type": "ridea",
+            "content": "<p>All vertices = false</p>",
+            "parent": "9",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "14": {
+            "type": "ridea",
+            "content": "<p>All vertices = null</p>",
+            "parent": "10",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "15": {
+            "type": "idea",
+            "content": "<p>Vertex Selection</p>",
+            "parent": "3",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "16": {
+            "type": "idea",
+            "content": "<p>Status Finalization</p>",
+            "parent": "3",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "17": {
+            "type": "idea",
+            "content": "<p>Edge Relaxation</p>",
+            "parent": "3",
+            "treeType": "treeview",
+            "ordinal": 2
+        },
+        "18": {
+            "type": "ridea",
+            "content": "<p>Find unvisited vertex</p><p> with minimum d[v]</p>",
+            "parent": "15",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "19": {
+            "type": "ridea",
+            "content": "<p>d[u] + w(u,v) &lt; d[v]</p>",
+            "parent": "17",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "20": {
+            "type": "ridea",
+            "content": "<p>Mark selected</p><p> vertex as visited</p>",
+            "parent": "16",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "21": {
+            "type": "idea",
+            "content": "<p>Update d[v] and previous[v]</p>",
+            "parent": "17",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "22": {
+            "type": "idea",
+            "content": "<p>ALGORITHM OUTPUT</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 3
+        },
+        "23": {
+            "type": "idea",
+            "content": "<p>Shortest Distances Vector (Final `distances` map)</p>",
+            "parent": "22",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "24": {
+            "type": "ridea",
+            "content": "<p>Contains guaranteed minimal weights from startVertex to all reachable nodes </p>",
+            "parent": "23",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "25": {
+            "type": "idea",
+            "content": "<p>Shortest Paths Tree (Reconstructed via `previous` map)</p>",
+            "parent": "22",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "26": {
+            "type": "ridea",
+            "content": "<p>Backtracking trace from target to startVertex</p>",
+            "parent": "25",
+            "treeType": "treeview",
+            "ordinal": 0
+        }
+    },
+    "type": "graf",
+    "id": "Deikstra.graf"
+}
