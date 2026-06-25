@@ -838,9 +838,9 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 <div class="paragraph">
 <p>At the core of the implemented algorithm lies the method of exponential backtracking. This approach systematically traverses all possible paths through the graph, maintaining cumulative information about the current route. In the worst-case scenario, the number of paths considered grows exponentially with the number of vertices — an inherent cost of exhaustive enumeration.</p>
 </div>
-<div class="imageblock unresolved text-center">
+<div class="imageblock text-center">
 <div class="content">
-<a class="image" href="section_9/Fig9_7_searchContext.svg" target="_blank" rel="noopener"><img src="section_9/Fig9_7_searchContext.svg" alt="Fig9 7 searchContext" width="50%"></a>
+<a class="image" href="_images/section_9/Fig9_8_searchContext.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_8_searchContext.svg" alt="Fig9 8 searchContext" width="50%"></a>
 </div>
 <div class="title">Figure 9.8. Context Object: from structure creation (a) to data population (b)</div>
 </div>
@@ -849,7 +849,7 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<a class="image" href="_images/section_9/Fig9_8_viewAlgorithmGraph.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_8_viewAlgorithmGraph.svg" alt="Fig9 8 viewAlgorithmGraph" width="50%"></a>
+<a class="image" href="_images/section_9/Fig9_9_viewAlgorithmGraph.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_9_viewAlgorithmGraph.svg" alt="Fig9 9 viewAlgorithmGraph" width="50%"></a>
 </div>
 <div class="title">Figure 9.9. Mind map of path search functions</div>
 </div>
@@ -891,7 +891,7 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 </table>
 <div class="imageblock text-center">
 <div class="content">
-<a class="image" href="_images/section_9/Fig9_9_initPathSearch.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_9_initPathSearch.svg" alt="Fig9 9 initPathSearch" width="50%"></a>
+<a class="image" href="_images/section_9/Fig9_10_initPathSearch.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_10_initPathSearch.svg" alt="Fig9 10 initPathSearch" width="50%"></a>
 </div>
 <div class="title">Figure 9.10. Drakon-diagram of the initialization function for path search</div>
 </div>
@@ -932,7 +932,7 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 </table>
 <div class="imageblock text-center">
 <div class="content">
-<a class="image" href="_images/section_9/Fig9_10_findPathWithContext.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_10_findPathWithContext.svg" alt="Fig9 10 findPathWithContext" width="50%"></a>
+<a class="image" href="_images/section_9/Fig9_11_findPathWithContext.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_11_findPathWithContext.svg" alt="Fig9 11 findPathWithContext" width="50%"></a>
 </div>
 <div class="title">Figure 9.11. Drakon-diagram of the recursive path search function</div>
 </div>
@@ -973,7 +973,7 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 </table>
 <div class="imageblock text-center">
 <div class="content">
-<a class="image" href="_images/section_9/Fig9_11_handleFoundPath.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_11_handleFoundPath.svg" alt="Fig9 11 handleFoundPath" width="50%"></a>
+<a class="image" href="_images/section_9/Fig9_12_handleFoundPath.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_12_handleFoundPath.svg" alt="Fig9 12 handleFoundPath" width="50%"></a>
 </div>
 <div class="title">Figure 9.12. Drakon-diagram of the path handler function</div>
 </div>
@@ -1014,7 +1014,7 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 </table>
 <div class="imageblock text-center">
 <div class="content">
-<a class="image" href="_images/section_9/Fig9_12_prepareMoveToNeighbor.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_12_prepareMoveToNeighbor.svg" alt="Fig9 12 prepareMoveToNeighbor" width="50%"></a>
+<a class="image" href="_images/section_9/Fig9_13_prepareMoveToNeighbor.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_13_prepareMoveToNeighbor.svg" alt="Fig9 13 prepareMoveToNeighbor" width="50%"></a>
 </div>
 <div class="title">Figure 9.13. Drakon-diagram of the transition preparation function</div>
 </div>
@@ -1055,7 +1055,7 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 </table>
 <div class="imageblock text-center">
 <div class="content">
-<a class="image" href="_images/section_9/Fig9_13_backtrackFromNeighbor.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_13_backtrackFromNeighbor.svg" alt="Fig9 13 backtrackFromNeighbor" width="50%"></a>
+<a class="image" href="_images/section_9/Fig9_14_backtrackFromNeighbor.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_14_backtrackFromNeighbor.svg" alt="Fig9 14 backtrackFromNeighbor" width="50%"></a>
 </div>
 <div class="title">Figure 9.14. Drakon-diagram of the backtracking function</div>
 </div>
@@ -1115,9 +1115,9 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 <div class="paragraph">
 <p>For our demonstration of Dijkstra&#8217;s algorithm, we will use the graph shown in Figure 9.15. This graph consists of 6 vertices (labeled 0 through 5) connected by weighted edges.</p>
 </div>
-<div class="imageblock unresolved text-center">
+<div class="imageblock text-center">
 <div class="content">
-<a class="image" href="section_9/Fig9_14_DijkstraGraph.svg" target="_blank" rel="noopener"><img src="section_9/Fig9_14_DijkstraGraph.svg" alt="Fig9 14 DijkstraGraph" width="50%"></a>
+<a class="image" href="_images/section_9/Fig9_15_DijkstraGraph.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_15_DijkstraGraph.svg" alt="Fig9 15 DijkstraGraph" width="50%"></a>
 </div>
 <div class="title">Figure 9.15. Target topology setup for Dijkstra shortest path calculation</div>
 </div>
