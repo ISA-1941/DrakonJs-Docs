@@ -1,0 +1,78 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "vertices = getVerticesList(graph)"
+        },
+        "4": {
+            "type": "action",
+            "one": "5",
+            "content": "distances = initializeDistances(\n    vertices,\n    startVertex\n)"
+        },
+        "5": {
+            "type": "action",
+            "one": "6",
+            "content": "visited = initializeVisited(vertices)"
+        },
+        "6": {
+            "type": "action",
+            "one": "32",
+            "content": "previous = initializePrevious(vertices)"
+        },
+        "7": {
+            "type": "question",
+            "one": "17",
+            "two": "33",
+            "flag1": 0,
+            "content": "currentVertex !== null "
+        },
+        "8": {
+            "type": "arrow-loop",
+            "one": "7"
+        },
+        "17": {
+            "type": "action",
+            "one": "1",
+            "content": "return {\n    distances: distances,\n    previous: previous\n}"
+        },
+        "26": {
+            "type": "action",
+            "one": "34",
+            "content": "relaxEdges(\n    graph,\n    currentVertex,\n    distances,\n    previous\n)"
+        },
+        "32": {
+            "type": "action",
+            "one": "8",
+            "content": "currentVertex = findMinDistanceVertex(\n    distances,\n    visited\n)"
+        },
+        "33": {
+            "type": "action",
+            "one": "26",
+            "content": "markVertexVisited(visited, currentVertex)"
+        },
+        "34": {
+            "type": "action",
+            "one": "8",
+            "content": "currentVertex = findMinDistanceVertex(\n    distances,\n    visited\n)"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "graph, startVertex"
+}

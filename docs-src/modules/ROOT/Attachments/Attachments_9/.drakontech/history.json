@@ -1,6 +1,50 @@
 {
     "history": [
         {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/initializeVisited.drakon",
+            "whenOpened": "2026-06-25T10:36:00.662Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/initializePrevious.drakon",
+            "whenOpened": "2026-06-25T10:35:35.488Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/initializeDistances.drakon",
+            "whenOpened": "2026-06-25T10:35:06.810Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/dijkstra.drakon",
+            "whenOpened": "2026-06-25T10:34:55.698Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/findMinDistanceVertex.drakon",
+            "whenOpened": "2026-06-25T10:34:21.390Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/markVertexVisited.drakon",
+            "whenOpened": "2026-06-25T10:34:18.858Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/demonstrateStepByStep.drakon",
+            "whenOpened": "2026-06-25T10:32:07.792Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/allVerticesVisited.drakon",
+            "whenOpened": "2026-06-25T10:32:04.411Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/findCheapestByPrice.drakon",
+            "whenOpened": "2026-06-25T09:48:02.595Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/findPathWithContext.drakon",
+            "whenOpened": "2026-06-25T09:47:58.694Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/findShortestByDistance.drakon",
+            "whenOpened": "2026-06-25T09:47:52.458Z"
+        },
+        {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/BFS_queue.drakon",
             "whenOpened": "2026-06-24T20:36:19.126Z"
         },

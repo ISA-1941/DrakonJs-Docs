@@ -1,0 +1,70 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "path = []"
+        },
+        "4": {
+            "type": "action",
+            "one": "6",
+            "content": "current = targetVertex"
+        },
+        "5": {
+            "type": "question",
+            "one": "9",
+            "two": "7",
+            "flag1": 0,
+            "content": "current !== null "
+        },
+        "6": {
+            "type": "arrow-loop",
+            "one": "5"
+        },
+        "7": {
+            "type": "action",
+            "one": "8",
+            "content": "path.unshift(current)"
+        },
+        "8": {
+            "type": "action",
+            "one": "6",
+            "content": "current = previous[current]"
+        },
+        "9": {
+            "type": "question",
+            "one": "10",
+            "two": "11",
+            "flag1": 1,
+            "content": "path[0] !== startVertex"
+        },
+        "10": {
+            "type": "action",
+            "one": "11",
+            "content": "return []"
+        },
+        "11": {
+            "type": "action",
+            "one": "1",
+            "content": "return path"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "previous, startVertex, targetVertex"
+}

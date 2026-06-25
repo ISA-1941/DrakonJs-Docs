@@ -1,0 +1,122 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "Ветка1"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "console.log(\"\\n\" + \"=\".repeat(60));\nconsole.log(\n    \"DIJKSTRA'S ALGORITHM - SHORTEST PATHS FROM VERTEX \"\n    + startVertex\n);\nconsole.log(\"=\".repeat(60));"
+        },
+        "4": {
+            "type": "action",
+            "one": "5",
+            "content": "console.log(\"\\n📊 SHORTEST DISTANCES:\");\nconsole.log(\"-\".repeat(40));"
+        },
+        "5": {
+            "type": "action",
+            "one": "7",
+            "content": "vertices = Object.keys(distances).sort()"
+        },
+        "6": {
+            "type": "loopend",
+            "one": "13",
+            "content": ""
+        },
+        "7": {
+            "type": "loopbegin",
+            "one": "8",
+            "content": "i = 0; i < vertices.length; i++"
+        },
+        "8": {
+            "type": "action",
+            "one": "9",
+            "content": "vertex = vertices[i]"
+        },
+        "9": {
+            "type": "action",
+            "one": "10",
+            "content": "distance = distances[vertex]"
+        },
+        "10": {
+            "type": "action",
+            "one": "11",
+            "content": "distStr = distance === Infinity ? \"∞\": distance\n.toFixed(2)"
+        },
+        "11": {
+            "type": "action",
+            "one": "6",
+            "content": "console.log(\n    \"   From \" + startVertex + \" to \" + vertex\n    + \": \" + distStr\n)"
+        },
+        "12": {
+            "type": "branch",
+            "one": "1",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "13": {
+            "type": "branch",
+            "one": "14",
+            "branchId": 2,
+            "content": "Ветка2"
+        },
+        "14": {
+            "type": "action",
+            "one": "15",
+            "content": "console.log(\"\\n🗺️  SHORTEST PATHS:\")"
+        },
+        "15": {
+            "type": "action",
+            "one": "17",
+            "content": "console.log(\"-\".repeat(40))"
+        },
+        "16": {
+            "type": "loopend",
+            "one": "12",
+            "content": ""
+        },
+        "17": {
+            "type": "loopbegin",
+            "one": "18",
+            "content": "i = 0; i < vertices.length; i++"
+        },
+        "18": {
+            "type": "action",
+            "one": "19",
+            "content": "vertex = vertices[i]"
+        },
+        "19": {
+            "type": "question",
+            "one": "20",
+            "two": "16",
+            "flag1": 1,
+            "content": "(\n    vertex !== startVertex && distances[\n        vertex\n    ] !== Infinity\n)"
+        },
+        "20": {
+            "type": "action",
+            "one": "21",
+            "content": "path = reconstructPath(\n    previous,\n    startVertex,\n    vertex\n)"
+        },
+        "21": {
+            "type": "action",
+            "one": "16",
+            "content": "console.log(\n    \"   To \" + vertex + \": \" + path.join(\n        \" → \"\n    ) + \" (distance: \" + distances[\n        vertex\n    ].toFixed(2) + \")\"\n)"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "distances, previous, startVertex"
+}
