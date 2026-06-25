@@ -1,6 +1,10 @@
 {
     "history": [
         {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/BFS_queue.drakon",
+            "whenOpened": "2026-06-25T18:28:07.165Z"
+        },
+        {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/initializeVisited.drakon",
             "whenOpened": "2026-06-25T10:36:00.662Z"
         },
@@ -43,10 +47,6 @@
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/findShortestByDistance.drakon",
             "whenOpened": "2026-06-25T09:47:52.458Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/BFS_queue.drakon",
-            "whenOpened": "2026-06-24T20:36:19.126Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/DFS_stack.drakon",
