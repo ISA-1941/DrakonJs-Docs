@@ -331,6 +331,11 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 ====
 
 === Comparison: Stack vs. Queue
+Сравнение путей  clearly illustrates the fundamental difference between the two traversal strategies. DFS, using a stack, delves deep into the graph's branches, while BFS, using a queue, explores level by level ( (Figure 9.6).
+
+[.text-center]
+.Figure 9.7. Comparison of DFS and BFS traversal orders from vertex 0
+image::section_9/Fig9_6_ComparosonTraverse.svg[width=75%, link=self, window="_blank"]
 
 [cols="1,2,3", options="header"]
 |===
@@ -348,12 +353,12 @@ Before analyzing the practical considerations for selecting an appropriate trave
 These diagrams decompose the traversal process into discrete decision points and operations, illustrating how the choice of underlying data structure — a stack for DFS versus a queue for BFS — fundamentally shapes the execution path.
 
 [.text-center]
-.Figure 9.7a. Drakon-diagram illustrating the control flow of DFS (Depth-First Search)
-image::section_9/Fig9_7a_DFS_stack.svg[width=75%, link=self, window="_blank"]
+.Figure 9.8a. Drakon-diagram illustrating the control flow of DFS (Depth-First Search)
+image::section_9/Fig9_8a_DFS_stack.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
-.Figure 9.7b. Drakon-diagram illustrating the control flow of BFS (Breadth-First Search)
-image::section_9/Fig9_7b_BFS_queue.svg[width=75%, link=self, window="_blank"]
+.Figure 9.8b. Drakon-diagram illustrating the control flow of BFS (Breadth-First Search)
+image::section_9/Fig9_8b_BFS_queue.svg[width=75%, link=self, window="_blank"]
 
 === Choosing Between DFS and BFS
 
@@ -374,16 +379,12 @@ This subsection examines the implementation of an algorithm for finding all poss
 
 To solve this problem, an all-paths search algorithm based on recursive backtracking was implemented. Unlike classical graph traversal algorithms (BFS, DFS), which find a single path or vertex visitation order, this approach enables:
 
-- Finding all possible routes between given vertices
-- Accounting for weighted characteristics of each edge
-- Calculating total distance and cost for each route
-- Selecting optimal routes according to different criteria
+- Finding all possible routes between given vertices;
+- Accounting for weighted characteristics of each edge;
+- Calculating total distance and cost for each route;
+- Selecting optimal routes according to different criteria.
 
 At the core of the implemented algorithm lies the method of exponential backtracking. This approach systematically traverses all possible paths through the graph, maintaining cumulative information about the current route. In the worst-case scenario, the number of paths considered grows exponentially with the number of vertices — an inherent cost of exhaustive enumeration.
-
-[.text-center]
-.Figure 9.8. Context Object: from structure creation (a) to data population (b)
-image::section_9/Fig9_8_searchContext.svg[width=50%, link=self, window="_blank"]
 
 A visual representation of the function structure, their relationships, and operational logic is presented in the mind map (Figure 9.9).
 
@@ -461,7 +462,7 @@ image::section_9/Fig9_13_prepareMoveToNeighbor.svg[width=50%, link=self, window=
 
 [.text-center]
 .Figure 9.14. Drakon-diagram of the backtracking function
-image::section_9/Fig9_14_backtrackFromNeighbor.svg[width=50%, link=self, window="_blank"]
+image::section_9/Fig9_14_backtrackFromNeighbor.svg[width=100%, link=self, window="_blank"]
 
 === Algorithmic Complexity Analysis
 
