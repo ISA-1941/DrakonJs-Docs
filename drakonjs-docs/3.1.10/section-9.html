@@ -708,6 +708,15 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 </div>
 <div class="sect2">
 <h3 id="_comparison_stack_vs_queue"><a class="anchor" href="#_comparison_stack_vs_queue"></a>Comparison: Stack vs. Queue</h3>
+<div class="paragraph">
+<p>Сравнение путей  clearly illustrates the fundamental difference between the two traversal strategies. DFS, using a stack, delves deep into the graph&#8217;s branches, while BFS, using a queue, explores level by level ( (Figure 9.6).</p>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<a class="image" href="section_9/Fig9_6_ComparosonTraverse.svg" target="_blank" rel="noopener"><img src="section_9/Fig9_6_ComparosonTraverse.svg" alt="Fig9 6 ComparosonTraverse" width="75%"></a>
+</div>
+<div class="title">Figure 9.7. Comparison of DFS and BFS traversal orders from vertex 0</div>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -755,15 +764,15 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<a class="image" href="_images/section_9/Fig9_7a_DFS_stack.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_7a_DFS_stack.svg" alt="Fig9 7a DFS stack" width="75%"></a>
+<a class="image" href="_images/section_9/Fig9_8a_DFS_stack.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_8a_DFS_stack.svg" alt="Fig9 8a DFS stack" width="75%"></a>
 </div>
-<div class="title">Figure 9.7a. Drakon-diagram illustrating the control flow of DFS (Depth-First Search)</div>
+<div class="title">Figure 9.8a. Drakon-diagram illustrating the control flow of DFS (Depth-First Search)</div>
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<a class="image" href="_images/section_9/Fig9_7b_BFS_queue.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_7b_BFS_queue.svg" alt="Fig9 7b BFS queue" width="75%"></a>
+<a class="image" href="_images/section_9/Fig9_8b_BFS_queue.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_8b_BFS_queue.svg" alt="Fig9 8b BFS queue" width="75%"></a>
 </div>
-<div class="title">Figure 9.7b. Drakon-diagram illustrating the control flow of BFS (Breadth-First Search)</div>
+<div class="title">Figure 9.8b. Drakon-diagram illustrating the control flow of BFS (Breadth-First Search)</div>
 </div>
 </div>
 <div class="sect2">
@@ -822,27 +831,21 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 <div class="ulist">
 <ul>
 <li>
-<p>Finding all possible routes between given vertices</p>
+<p>Finding all possible routes between given vertices;</p>
 </li>
 <li>
-<p>Accounting for weighted characteristics of each edge</p>
+<p>Accounting for weighted characteristics of each edge;</p>
 </li>
 <li>
-<p>Calculating total distance and cost for each route</p>
+<p>Calculating total distance and cost for each route;</p>
 </li>
 <li>
-<p>Selecting optimal routes according to different criteria</p>
+<p>Selecting optimal routes according to different criteria.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>At the core of the implemented algorithm lies the method of exponential backtracking. This approach systematically traverses all possible paths through the graph, maintaining cumulative information about the current route. In the worst-case scenario, the number of paths considered grows exponentially with the number of vertices — an inherent cost of exhaustive enumeration.</p>
-</div>
-<div class="imageblock text-center">
-<div class="content">
-<a class="image" href="_images/section_9/Fig9_8_searchContext.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_8_searchContext.svg" alt="Fig9 8 searchContext" width="50%"></a>
-</div>
-<div class="title">Figure 9.8. Context Object: from structure creation (a) to data population (b)</div>
 </div>
 <div class="paragraph">
 <p>A visual representation of the function structure, their relationships, and operational logic is presented in the mind map (Figure 9.9).</p>
@@ -1055,7 +1058,7 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 </table>
 <div class="imageblock text-center">
 <div class="content">
-<a class="image" href="_images/section_9/Fig9_14_backtrackFromNeighbor.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_14_backtrackFromNeighbor.svg" alt="Fig9 14 backtrackFromNeighbor" width="50%"></a>
+<a class="image" href="_images/section_9/Fig9_14_backtrackFromNeighbor.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_14_backtrackFromNeighbor.svg" alt="Fig9 14 backtrackFromNeighbor" width="100%"></a>
 </div>
 <div class="title">Figure 9.14. Drakon-diagram of the backtracking function</div>
 </div>
