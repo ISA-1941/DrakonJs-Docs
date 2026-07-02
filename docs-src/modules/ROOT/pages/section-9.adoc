@@ -58,7 +58,7 @@ Graphs as data structures can be represented in two primary forms: undirected an
 
 [.text-center]
 .Figure 9.1. Graphical representation of (a) an undirected graph; (b) a directed graph (digraph)
-image::section_9/Fig9_1_exampleGraph.svg[width=50%, link=self, window="_blank"]
+image::section_9/Fig9_1_exampleGraph.svg[width=100%, link=self, window="_blank"]
 
 === Adjacency, Incidence, and Degree
 
@@ -73,7 +73,7 @@ Refined Terms for Directed Graphs (Digraphs):
 
 [.text-center]
 .Figure 9.2. Basic graph parameters and node dimensions
-image::section_9/Fig9_2_basicElements.svg[width=50%, link=self, window="_blank"]
+image::section_9/Fig9_2_basicElements.svg[width=100%, link=self, window="_blank"]
 
 == 9.2. Graph Representation Methods
 
@@ -507,7 +507,7 @@ The function creates a `pathInfo` object that contains the route itself, the lis
 The path handling logic is shown in Figure 9.12.
 
 [.text-center]
-.Figure 9.12. DRAKON diagram of the path handler function
+.Figure 9.12. DRAKON diagram of the Path Handler function
 image::section_9/Fig9_12_handleFoundPath.svg[width=65%, link=self, window="_blank"]
 
 ==== prepareMoveToNeighbor(context, current, neighbor)
@@ -540,7 +540,7 @@ The transition preparation logic is shown in Figure 9.13.
 .Figure 9.13. DRAKON diagram of the transition preparation function
 image::section_9/Fig9_13_prepareMoveToNeighbor.svg[width=70%, link=self, window="_blank"]
 
-==== backtrackFromNeighbor(context, neighbor, oldState)
+==== Reversing function `backtrackFromNeighbor(context, neighbor, oldState)`
 
 The function `backtrackFromNeighbor()` performs the reverse phase of the algorithm. After the recursive processing of a neighboring vertex is completed, the algorithm must return to the previous state in order to try another possible route.
 
@@ -594,10 +594,16 @@ This approach is suitable for small and medium-sized educational examples. Howev
 
 === Program Execution Example
 
+The example graph shown in Figure 9.15, the algorithm can find all simple paths from vertex `0` to vertex `5`. Each path is represented as a sequence of vertices, along with the total distance and price calculated based on the edge weights.
+
+[.text-center]
+.Figure 9.16. Output of implementation method findPathGraphical representation of the path search process from vertex 2 to vertex 5
+image::section_9/Fig9_16_graphWays.svg[width=100%, link=self, window="_blank"]
+
 The following fragment shows an example of output for paths from vertex `0` to vertex `5`.
 
-## [source,javascript]
-
+[source,javascript]
+------------------
 // === Find all paths from 0 to 5 ===
 //
 // Path Vertices: 0-1-4-3-5
