@@ -375,105 +375,231 @@ In practice, the choice between DFS and BFS depends on the specific problem requ
 
 == 9.4. Calculation of Paths and Travel Costs from a Given Vertex to All Other Vertices
 
-This subsection examines the implementation of an algorithm for finding all possible routes between two vertices in a graph, as well as calculating their cost characteristics — distance (in kilometers) and travel price (in arbitrary units).
+This subsection examines the problem of finding all possible simple routes between two vertices in a weighted graph. For each route, the algorithm calculates two cumulative characteristics:
 
-To solve this problem, an all-paths search algorithm based on recursive backtracking was implemented. Unlike classical graph traversal algorithms (BFS, DFS), which find a single path or vertex visitation order, this approach enables:
+* total distance, measured in kilometers;
+* total travel price, measured in arbitrary units.
 
-- Finding all possible routes between given vertices;
-- Accounting for weighted characteristics of each edge;
-- Calculating total distance and cost for each route;
-- Selecting optimal routes according to different criteria.
+The considered task differs from ordinary graph traversal. Classical BFS and DFS are usually used to determine the order of visiting vertices or to find one suitable path. In contrast, the algorithm described here enumerates all possible simple paths from a source vertex to a target vertex and evaluates each of them according to its accumulated weights.
 
-At the core of the implemented algorithm lies the method of exponential backtracking. This approach systematically traverses all possible paths through the graph, maintaining cumulative information about the current route. In the worst-case scenario, the number of paths considered grows exponentially with the number of vertices — an inherent cost of exhaustive enumeration.
+This makes it possible to solve the following practical tasks:
 
-A visual representation of the function structure, their relationships, and operational logic is presented in the mind map (Figure 9.9).
+* find all possible routes between two selected vertices;
+* calculate the total distance of each route;
+* calculate the total travel price of each route;
+* compare routes according to different optimization criteria;
+* select the shortest, cheapest, or otherwise preferable route.
+
+=== General Idea of the Algorithm
+
+The algorithm is based on recursive backtracking. During the search, the program gradually constructs the current path from the source vertex to the target vertex. At each step, it selects one of the neighboring vertices, adds the corresponding edge characteristics to the accumulated sums, and continues the search recursively.
+
+If the target vertex is reached, the current route is saved as a completed path. After that, the algorithm returns to the previous vertex, restores the former state, and tries another possible continuation.
+
+Thus, the algorithm consists of two alternating phases:
+
+* forward movement to a neighboring vertex;
+* backward restoration of the previous state.
+
+This mechanism makes it possible to enumerate all simple paths without revisiting vertices already included in the current route.
+
+The overall structure of the functions involved in the path search is shown in Figure 9.9.
 
 [.text-center]
 .Figure 9.9. Mind map of path search functions
-image::section_9/Fig9_9_viewAlgorithmGraph.svg[width=50%, link=self, window="_blank"]
+image::section_9/Fig9_9_viewAlgorithmGraph.svg[width=70%, link=self, window="_blank"]
+
+=== Functional Structure of the Path Search Module
+
+The path search module is organized as a small group of cooperating functions. Each function performs a clearly separated role in the general recursive process.
+
+The main control function is `initPathSearch()`. It prepares the initial search context and starts recursion.
+
+The recursive enumeration itself is performed by `findPathWithContext()`. This function checks the current vertex, processes its neighbors, and controls the transition from one vertex to another.
+
+When the target vertex is reached, the function `handleFoundPath()` creates a structured description of the completed route and stores it in the resulting collection.
+
+Two auxiliary functions support the backtracking mechanism:
+
+* `prepareMoveToNeighbor()` prepares the transition to a neighboring vertex and saves the current state;
+* `backtrackFromNeighbor()` restores the previous state after the recursive call has finished.
+
+This functional decomposition separates the logic of initialization, recursive search, result processing, forward movement, and backward restoration.
 
 === Description of Key Functions
 
 ==== initPathSearch(graph, source, target)
 
+The function `initPathSearch()` is the entry point of the path search module. It creates the search context, initializes all necessary data structures, and starts the recursive traversal of the graph.
+
 [cols="1,3a", options="header"]
 |===
 | Attribute | Description
-| Purpose | Initializes the search for all paths from source vertex to target vertex. Creates a search context, resets parameters, and initiates recursive graph traversal.
-| Parameters | graph – graph object containing adjacency matrix and edge weights; source – source vertex identifier; target – target vertex identifier
-| Return Value | Array allPaths containing all discovered paths as pathInfo objects
+
+| Purpose
+| Initializes the search for all paths from the source vertex to the target vertex. Creates the search context, resets accumulated parameters, and starts recursive graph traversal.
+
+| Parameters
+| `graph` — graph object containing the adjacency matrix and edge weights.
+
+`source` — identifier of the source vertex.
+
+`target` — identifier of the target vertex.
+
+| Return Value
+| Array `allPaths` containing all discovered paths as `pathInfo` objects.
 |===
 
+The initialization logic is shown in Figure 9.10.
+
 [.text-center]
-.Figure 9.10. Drakon-diagram of the initialization function for path search
-image::section_9/Fig9_10_initPathSearch.svg[width=50%, link=self, window="_blank"]
+.Figure 9.10. DRAKON diagram of the initialization function for path search
+image::section_9/Fig9_10_initPathSearch.svg[width=65%, link=self, window="_blank"]
 
 ==== findPathWithContext(current, context)
 
+The function `findPathWithContext()` is the core recursive function of the algorithm. It analyzes the current vertex and determines whether the target vertex has already been reached.
+
+If the current vertex is the target, the completed path is processed by `handleFoundPath()`. Otherwise, the function checks all neighboring vertices and recursively continues the search through those neighbors that have not yet been visited in the current path.
+
 [cols="1,3a", options="header"]
 |===
 | Attribute | Description
-| Purpose | The core recursive function that sequentially enumerates all neighbors of the current vertex, updates accumulated parameters (path, distance, cost), and persists the discovered route upon reaching the target vertex.
-| Parameters | current – current vertex identifier; context – search state object containing target, graph, currentPath, totalDistance, totalPrice, visited, allPaths
-| Return Value | void – results are stored in context.allPaths
+
+| Purpose
+| Performs recursive enumeration of all possible simple paths from the current vertex to the target vertex. Updates the current path, accumulated distance, and accumulated price.
+
+| Parameters
+| `current` — identifier of the current vertex.
+
+`context` — search state object containing `target`, `graph`, `currentPath`, `totalDistance`, `totalPrice`, `visited`, and `allPaths`.
+
+| Return Value
+| `void`. The results are accumulated in `context.allPaths`.
 |===
 
+The recursive search logic is shown in Figure 9.11.
+
 [.text-center]
-.Figure 9.11. Drakon-diagram of the recursive path search function
-image::section_9/Fig9_11_findPathWithContext.svg[width=50%, link=self, window="_blank"]
+.Figure 9.11. DRAKON diagram of the recursive path search function
+image::section_9/Fig9_11_findPathWithContext.svg[width=80%, link=self, window="_blank"]
 
 ==== handleFoundPath(context)
 
+The function `handleFoundPath()` is called when the recursive search reaches the target vertex. At this moment, the current route is complete and can be transformed into a structured result.
+
+The function creates a `pathInfo` object that contains the route itself, the list of vertices, total distance, and total price. This object is then added to the collection of found paths.
+
 [cols="1,3a", options="header"]
 |===
 | Attribute | Description
-| Purpose | Invoked when a complete path from source to target vertex is discovered during recursive traversal. Creates a structured record of the found path, stores it in the collection, and logs results to the console.
-| Parameters | context – search state object containing fields: currentPath (string), totalDistance (number), totalPrice (number), allPaths (array)
-| Return Value | pathInfo object with fields path, vertices, distance, price
+
+| Purpose
+| Creates and stores a structured record of a completed path from the source vertex to the target vertex.
+
+| Parameters
+| `context` — search state object containing `currentPath`, `totalDistance`, `totalPrice`, and `allPaths`.
+
+| Return Value
+| `pathInfo` object with the fields `path`, `vertices`, `distance`, and `price`.
 |===
 
+The path handling logic is shown in Figure 9.12.
+
 [.text-center]
-.Figure 9.12. Drakon-diagram of the path handler function
-image::section_9/Fig9_12_handleFoundPath.svg[width=50%, link=self, window="_blank"]
+.Figure 9.12. DRAKON diagram of the path handler function
+image::section_9/Fig9_12_handleFoundPath.svg[width=65%, link=self, window="_blank"]
 
 ==== prepareMoveToNeighbor(context, current, neighbor)
 
+The function `prepareMoveToNeighbor()` prepares the forward movement from the current vertex to one of its neighbors. It reads the edge characteristics, updates the current path, increases the accumulated distance and price, and marks the neighbor as visited.
+
+Before changing the context, the function saves the previous state. This saved state is required later for correct backtracking.
+
 [cols="1,3a", options="header"]
 |===
 | Attribute | Description
-| Purpose | Prepares data for transitioning to a neighboring vertex: computes edge distance and traversal cost, persists the current state for subsequent backtracking.
-| Parameters | context – search state object; current – current vertex identifier; neighbor – neighboring vertex identifier
-| Return Value | oldState object containing the previous state (oldPath, oldDistance, oldPrice) for later restoration
+
+| Purpose
+| Prepares transition to a neighboring vertex and saves the previous state of the search context.
+
+| Parameters
+| `context` — search state object.
+
+`current` — identifier of the current vertex.
+
+`neighbor` — identifier of the neighboring vertex.
+
+| Return Value
+| `oldState` object containing the previous values of `currentPath`, `totalDistance`, and `totalPrice`.
 |===
 
+The transition preparation logic is shown in Figure 9.13.
+
 [.text-center]
-.Figure 9.13. Drakon-diagram of the transition preparation function
-image::section_9/Fig9_13_prepareMoveToNeighbor.svg[width=50%, link=self, window="_blank"]
+.Figure 9.13. DRAKON diagram of the transition preparation function
+image::section_9/Fig9_13_prepareMoveToNeighbor.svg[width=70%, link=self, window="_blank"]
 
 ==== backtrackFromNeighbor(context, neighbor, oldState)
 
+The function `backtrackFromNeighbor()` performs the reverse phase of the algorithm. After the recursive processing of a neighboring vertex is completed, the algorithm must return to the previous state in order to try another possible route.
+
+This function clears the visited flag for the processed neighbor and restores the path, distance, and price values saved in `oldState`.
+
 [cols="1,3a", options="header"]
 |===
 | Attribute | Description
-| Purpose | Performs backtracking to the previous state after processing a neighboring vertex. Resets the visited flag, restores the path and accumulated sums. This mechanism ensures exhaustive enumeration of all possible routes.
-| Parameters | context – search state object; neighbor – vertex being processed; oldState – object containing the previous state (oldPath, oldDistance, oldPrice)
-| Return Value | void – context state is restored
+
+| Purpose
+| Restores the previous search state after processing a neighboring vertex. This enables exhaustive enumeration of alternative routes.
+
+| Parameters
+| `context` — search state object.
+
+`neighbor` — vertex whose processing has been completed.
+
+`oldState` — object containing the previous values of `currentPath`, `totalDistance`, and `totalPrice`.
+
+| Return Value
+| `void`. The search context is restored to the previous state.
 |===
 
+The backtracking logic is shown in Figure 9.14.
+
 [.text-center]
-.Figure 9.14. Drakon-diagram of the backtracking function
-image::section_9/Fig9_14_backtrackFromNeighbor.svg[width=100%, link=self, window="_blank"]
+.Figure 9.14. DRAKON diagram of the backtracking function
+image::section_9/Fig9_14_backtrackFromNeighbor.svg[width=75%, link=self, window="_blank"]
 
 === Algorithmic Complexity Analysis
 
-The implemented backtracking algorithm has a time complexity of $O(V!)$ in the worst case, as it explores all possible paths without revisiting vertices. This is acceptable for small to medium-sized graphs (up to 10–12 vertices) but becomes impractical for dense graphs with many vertices. Space complexity is $O(V)$ for storing the current path and visited vertices during recursion.
+The implemented algorithm enumerates all simple paths between two vertices. Therefore, its running time may grow exponentially with the number of vertices.
+
+In the worst case, especially for a dense graph, the number of possible simple paths can be very large. For this reason, the time complexity can be estimated as factorial or exponential, depending on the graph structure. A conservative upper estimate is:
+
+[stem]
+++++
+O(V!)
+++++
+
+where `V` is the number of vertices.
+
+The space complexity is mainly determined by the recursion depth, the current path, and the `visited` array. Since a simple path cannot contain more than `V` vertices, the auxiliary space complexity is:
+
+[stem]
+++++
+O(V)
+++++
+
+This approach is suitable for small and medium-sized educational examples. However, for large dense graphs, exhaustive path enumeration becomes impractical. In such cases, specialized algorithms should be used depending on the optimization criterion, for example shortest path algorithms.
 
 === Program Execution Example
 
-[source,javascript]
-----
-// Example output for paths from 0 to 5:
+The following fragment shows an example of output for paths from vertex `0` to vertex `5`.
+
+## [source,javascript]
+
 // === Find all paths from 0 to 5 ===
+//
 // Path Vertices: 0-1-4-3-5
 // Distance: 101.28 km
 // Price: 31.80 u.
@@ -481,9 +607,25 @@ The implemented backtracking algorithm has a time complexity of $O(V!)$ in the w
 // Path Vertices: 0-6-3-5
 // Distance: 94.21 km
 // Price: 21.60 u.
-----
+------------------
 
-Thus, the developed software module enables not only finding all possible routes in a graph but also performing their quantitative and qualitative analysis, which can be applied to transportation logistics problems and route optimization tasks.
+The first route has a greater distance and price. The second route is shorter and cheaper in this example. Therefore, the same set of found paths can be analyzed according to several criteria: minimum distance, minimum price, or a combined route quality indicator.
+
+=== Summary
+
+The developed module demonstrates how recursive backtracking can be applied to weighted graphs. Unlike simple traversal algorithms, this approach does not stop after finding one path. Instead, it systematically enumerates all possible simple paths from the source vertex to the target vertex and calculates the quantitative characteristics of each route.
+
+This makes the module useful as an educational example for understanding:
+
+* recursive graph traversal;
+* path construction;
+* state saving and restoration;
+* backtracking;
+* analysis of weighted routes;
+* comparison of alternative paths.
+
+The same idea can be used as a basis for studying transportation logistics, route planning, and optimization problems.
+
 
 == 9.5. Dijkstra's Algorithm
 

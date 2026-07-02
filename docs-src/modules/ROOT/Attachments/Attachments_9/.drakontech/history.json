@@ -1,48 +1,92 @@
 {
     "history": [
         {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/resetSearchContext.drakon",
-            "whenOpened": "2026-06-27T19:24:15.624Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/main.drakon",
+            "whenOpened": "2026-07-01T14:41:37.697Z"
         },
         {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/createSearchContext.drakon",
-            "whenOpened": "2026-06-27T19:16:50.089Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/createGraphMatrix.drakon",
-            "whenOpened": "2026-06-27T19:16:35.350Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/createGraphFromData.drakon",
-            "whenOpened": "2026-06-27T19:16:32.406Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/backtrackFromNeighbor.drakon",
-            "whenOpened": "2026-06-27T19:16:17.992Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/initPathSearch.drakon",
+            "whenOpened": "2026-07-01T14:41:25.128Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/findPathWithContext.drakon",
-            "whenOpened": "2026-06-27T19:15:23.706Z"
+            "whenOpened": "2026-07-01T14:40:33.622Z"
         },
         {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/fullAlgjrithmGraph.drakon",
-            "whenOpened": "2026-06-27T19:14:36.562Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/createGraphMatrix.drakon",
+            "whenOpened": "2026-07-01T14:39:09.932Z"
         },
         {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/main.drakon",
-            "whenOpened": "2026-06-27T17:16:39.151Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/createSearchContext.drakon",
+            "whenOpened": "2026-07-01T14:39:08.297Z"
         },
         {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/DFS_stack.drakon",
-            "whenOpened": "2026-06-27T17:15:35.913Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/backtrackFromNeighbor.drakon",
+            "whenOpened": "2026-07-01T14:38:58.830Z"
         },
         {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/addEdgeMatrix.drakon",
-            "whenOpened": "2026-06-27T17:13:24.903Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/BFS_queue.drakon",
+            "whenOpened": "2026-07-01T14:38:47.378Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/findCheapestByPrice.drakon",
-            "whenOpened": "2026-06-27T17:13:14.343Z"
+            "whenOpened": "2026-07-01T14:38:45.128Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/DFS_stack.drakon",
+            "whenOpened": "2026-07-01T14:38:28.680Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/resetSearchContext.drakon",
+            "whenOpened": "2026-07-01T14:38:19.935Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/printAllPaths.drakon",
+            "whenOpened": "2026-07-01T14:38:16.264Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/prepareMoveToNeighbor.drakon",
+            "whenOpened": "2026-07-01T14:37:55.323Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/module.drakon",
+            "whenOpened": "2026-07-01T14:37:53.018Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/handleFoundPath.drakon",
+            "whenOpened": "2026-07-01T14:37:27.742Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/getNeighbors.drakon",
+            "whenOpened": "2026-07-01T14:37:25.070Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/getGraphData.drakon",
+            "whenOpened": "2026-07-01T14:37:17.123Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/getEdgePrice.drakon",
+            "whenOpened": "2026-07-01T14:37:10.138Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/getEdgeDistance.drakon",
+            "whenOpened": "2026-07-01T14:37:03.189Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/fullAlgjrithmGraph.drakon",
+            "whenOpened": "2026-07-01T14:36:57.145Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/findShortestByDistance.drakon",
+            "whenOpened": "2026-07-01T14:36:54.234Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/createGraphFromData.drakon",
+            "whenOpened": "2026-07-01T14:36:38.782Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/addEdgeMatrix.drakon",
+            "whenOpened": "2026-07-01T14:36:34.608Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/allVerticesVisited.drakon",
@@ -75,38 +119,6 @@
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/initializeVisited.drakon",
             "whenOpened": "2026-06-27T16:55:40.468Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/main.drakon",
-            "whenOpened": "2026-06-27T16:55:36.504Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/markVertexVisited.drakon",
-            "whenOpened": "2026-06-27T16:55:34.049Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/module.drakon",
-            "whenOpened": "2026-06-27T16:55:31.879Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/printResults.drakon",
-            "whenOpened": "2026-06-27T16:55:30.271Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/reconstructPath.drakon",
-            "whenOpened": "2026-06-27T16:55:28.345Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/relaxEdges.drakon",
-            "whenOpened": "2026-06-27T16:55:26.621Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/BFS_queue.drakon",
-            "whenOpened": "2026-06-25T18:28:07.165Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/graph/findShortestByDistance.drakon",
-            "whenOpened": "2026-06-25T09:47:52.458Z"
         }
     ]
 }
