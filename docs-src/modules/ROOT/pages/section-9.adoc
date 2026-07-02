@@ -73,7 +73,7 @@ Refined Terms for Directed Graphs (Digraphs):
 
 [.text-center]
 .Figure 9.2. Basic graph parameters and node dimensions
-image::section_9/Fig9_2_basicElements.svg[width=100%, link=self, window="_blank"]
+image::section_9/Fig9_2_basicElements.svg[width=75%, link=self, window="_blank"]
 
 == 9.2. Graph Representation Methods
 
