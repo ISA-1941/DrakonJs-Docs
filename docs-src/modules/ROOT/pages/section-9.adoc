@@ -87,7 +87,7 @@ In contrast, for a directed graph (or digraph), the relationship is not necessar
 
 [.text-center]
 .Figure 9.3. Adjacency matrix layout for undirected and directed graphs
-image::section_9/Fig9_3_AdjMatrix.svg[width=50%, link=self, window="_blank"]
+image::section_9/Fig9_3_AdjMatrix.svg[width=100%, link=self, window="_blank"]
 
 === Adjacency List
 
@@ -95,7 +95,7 @@ In some cases, a more memory-efficient way to represent a graph is to use an adj
 
 [.text-center]
 .Figure 9.4. Adjacency list structural representation
-image::section_9/Fig9_4_AdjList.svg[width=50%, link=self, window="_blank"]
+image::section_9/Fig9_4_AdjList.svg[width=100%, link=self, window="_blank"]
 
 === Comparison and Complexity
 
