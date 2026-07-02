@@ -55,10 +55,10 @@ Graphs as data structures can be represented in two primary forms: undirected an
 * *Out-degree (deg^+(v^)):* The number of edges leaving (incident from) the vertex.
 * *Total Degree:* The sum of the in-degree and out-degree.
 * *Loops in a Digraph:* In this case, a loop is counted exactly once for the in-degree and once for the out-degree. It does not "double" the total degree; instead, it is honestly distributed between the two directions.
-
+?
 [.text-center]
 .Figure 9.1. Graphical representation of (a) an undirected graph; (b) a directed graph (digraph)
-image::section_9/Fig9_1_exampleGraph.svg[width=100%, link=self, window="_blank"]
+image::section_9/Fig9_1_exampleGraph.svg[width=75%, link=self, window="_blank"]
 
 === Adjacency, Incidence, and Degree
 
