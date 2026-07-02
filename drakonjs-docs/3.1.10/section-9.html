@@ -823,43 +823,115 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 <h2 id="_9_4_calculation_of_paths_and_travel_costs_from_a_given_vertex_to_all_other_vertices"><a class="anchor" href="#_9_4_calculation_of_paths_and_travel_costs_from_a_given_vertex_to_all_other_vertices"></a>9.4. Calculation of Paths and Travel Costs from a Given Vertex to All Other Vertices</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This subsection examines the implementation of an algorithm for finding all possible routes between two vertices in a graph, as well as calculating their cost characteristics — distance (in kilometers) and travel price (in arbitrary units).</p>
-</div>
-<div class="paragraph">
-<p>To solve this problem, an all-paths search algorithm based on recursive backtracking was implemented. Unlike classical graph traversal algorithms (BFS, DFS), which find a single path or vertex visitation order, this approach enables:</p>
+<p>This subsection examines the problem of finding all possible simple routes between two vertices in a weighted graph. For each route, the algorithm calculates two cumulative characteristics:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Finding all possible routes between given vertices;</p>
+<p>total distance, measured in kilometers;</p>
 </li>
 <li>
-<p>Accounting for weighted characteristics of each edge;</p>
-</li>
-<li>
-<p>Calculating total distance and cost for each route;</p>
-</li>
-<li>
-<p>Selecting optimal routes according to different criteria.</p>
+<p>total travel price, measured in arbitrary units.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>At the core of the implemented algorithm lies the method of exponential backtracking. This approach systematically traverses all possible paths through the graph, maintaining cumulative information about the current route. In the worst-case scenario, the number of paths considered grows exponentially with the number of vertices — an inherent cost of exhaustive enumeration.</p>
+<p>The considered task differs from ordinary graph traversal. Classical BFS and DFS are usually used to determine the order of visiting vertices or to find one suitable path. In contrast, the algorithm described here enumerates all possible simple paths from a source vertex to a target vertex and evaluates each of them according to its accumulated weights.</p>
 </div>
 <div class="paragraph">
-<p>A visual representation of the function structure, their relationships, and operational logic is presented in the mind map (Figure 9.9).</p>
+<p>This makes it possible to solve the following practical tasks:</p>
 </div>
-<div class="imageblock text-center">
+<div class="ulist">
+<ul>
+<li>
+<p>find all possible routes between two selected vertices;</p>
+</li>
+<li>
+<p>calculate the total distance of each route;</p>
+</li>
+<li>
+<p>calculate the total travel price of each route;</p>
+</li>
+<li>
+<p>compare routes according to different optimization criteria;</p>
+</li>
+<li>
+<p>select the shortest, cheapest, or otherwise preferable route.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_general_idea_of_the_algorithm"><a class="anchor" href="#_general_idea_of_the_algorithm"></a>General Idea of the Algorithm</h3>
+<div class="paragraph">
+<p>The algorithm is based on recursive backtracking. During the search, the program gradually constructs the current path from the source vertex to the target vertex. At each step, it selects one of the neighboring vertices, adds the corresponding edge characteristics to the accumulated sums, and continues the search recursively.</p>
+</div>
+<div class="paragraph">
+<p>If the target vertex is reached, the current route is saved as a completed path. After that, the algorithm returns to the previous vertex, restores the former state, and tries another possible continuation.</p>
+</div>
+<div class="paragraph">
+<p>Thus, the algorithm consists of two alternating phases:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>forward movement to a neighboring vertex;</p>
+</li>
+<li>
+<p>backward restoration of the previous state.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This mechanism makes it possible to enumerate all simple paths without revisiting vertices already included in the current route.</p>
+</div>
+<div class="paragraph">
+<p>The overall structure of the functions involved in the path search is shown in Figure 9.9.</p>
+</div>
+<div class="imageblock unresolved text-center">
 <div class="content">
-<a class="image" href="_images/section_9/Fig9_9_viewAlgorithmGraph.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_9_viewAlgorithmGraph.svg" alt="Fig9 9 viewAlgorithmGraph" width="50%"></a>
+<a class="image" href="section_9/Fig9_9_viewAlgorithmGraph.svg" target="_blank" rel="noopener"><img src="section_9/Fig9_9_viewAlgorithmGraph.svg" alt="Fig9 9 viewAlgorithmGraph" width="70%"></a>
 </div>
 <div class="title">Figure 9.9. Mind map of path search functions</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_functional_structure_of_the_path_search_module"><a class="anchor" href="#_functional_structure_of_the_path_search_module"></a>Functional Structure of the Path Search Module</h3>
+<div class="paragraph">
+<p>The path search module is organized as a small group of cooperating functions. Each function performs a clearly separated role in the general recursive process.</p>
+</div>
+<div class="paragraph">
+<p>The main control function is <code>initPathSearch()</code>. It prepares the initial search context and starts recursion.</p>
+</div>
+<div class="paragraph">
+<p>The recursive enumeration itself is performed by <code>findPathWithContext()</code>. This function checks the current vertex, processes its neighbors, and controls the transition from one vertex to another.</p>
+</div>
+<div class="paragraph">
+<p>When the target vertex is reached, the function <code>handleFoundPath()</code> creates a structured description of the completed route and stores it in the resulting collection.</p>
+</div>
+<div class="paragraph">
+<p>Two auxiliary functions support the backtracking mechanism:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>prepareMoveToNeighbor()</code> prepares the transition to a neighboring vertex and saves the current state;</p>
+</li>
+<li>
+<p><code>backtrackFromNeighbor()</code> restores the previous state after the recursive call has finished.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This functional decomposition separates the logic of initialization, recursive search, result processing, forward movement, and backward restoration.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_description_of_key_functions"><a class="anchor" href="#_description_of_key_functions"></a>Description of Key Functions</h3>
 <div class="sect3">
 <h4 id="_initpathsearchgraph_source_target"><a class="anchor" href="#_initpathsearchgraph_source_target"></a>initPathSearch(graph, source, target)</h4>
+<div class="paragraph">
+<p>The function <code>initPathSearch()</code> is the entry point of the path search module. It creates the search context, initializes all necessary data structures, and starts the recursive traversal of the graph.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -875,32 +947,47 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Initializes the search for all paths from source vertex to target vertex. Creates a search context, resets parameters, and initiates recursive graph traversal.</p>
+<p>Initializes the search for all paths from the source vertex to the target vertex. Creates the search context, resets accumulated parameters, and starts recursive graph traversal.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Parameters</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>graph – graph object containing adjacency matrix and edge weights; source – source vertex identifier; target – target vertex identifier</p>
+<p><code>graph</code> — graph object containing the adjacency matrix and edge weights.</p>
+</div>
+<div class="paragraph">
+<p><code>source</code> — identifier of the source vertex.</p>
+</div>
+<div class="paragraph">
+<p><code>target</code> — identifier of the target vertex.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Return Value</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Array allPaths containing all discovered paths as pathInfo objects</p>
+<p>Array <code>allPaths</code> containing all discovered paths as <code>pathInfo</code> objects.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>The initialization logic is shown in Figure 9.10.</p>
+</div>
 <div class="imageblock text-center">
 <div class="content">
-<a class="image" href="_images/section_9/Fig9_10_initPathSearch.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_10_initPathSearch.svg" alt="Fig9 10 initPathSearch" width="50%"></a>
+<a class="image" href="_images/section_9/Fig9_10_initPathSearch.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_10_initPathSearch.svg" alt="Fig9 10 initPathSearch" width="65%"></a>
 </div>
-<div class="title">Figure 9.10. Drakon-diagram of the initialization function for path search</div>
+<div class="title">Figure 9.10. DRAKON diagram of the initialization function for path search</div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_findpathwithcontextcurrent_context"><a class="anchor" href="#_findpathwithcontextcurrent_context"></a>findPathWithContext(current, context)</h4>
+<div class="paragraph">
+<p>The function <code>findPathWithContext()</code> is the core recursive function of the algorithm. It analyzes the current vertex and determines whether the target vertex has already been reached.</p>
+</div>
+<div class="paragraph">
+<p>If the current vertex is the target, the completed path is processed by <code>handleFoundPath()</code>. Otherwise, the function checks all neighboring vertices and recursively continues the search through those neighbors that have not yet been visited in the current path.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -916,32 +1003,44 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The core recursive function that sequentially enumerates all neighbors of the current vertex, updates accumulated parameters (path, distance, cost), and persists the discovered route upon reaching the target vertex.</p>
+<p>Performs recursive enumeration of all possible simple paths from the current vertex to the target vertex. Updates the current path, accumulated distance, and accumulated price.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Parameters</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>current – current vertex identifier; context – search state object containing target, graph, currentPath, totalDistance, totalPrice, visited, allPaths</p>
+<p><code>current</code> — identifier of the current vertex.</p>
+</div>
+<div class="paragraph">
+<p><code>context</code> — search state object containing <code>target</code>, <code>graph</code>, <code>currentPath</code>, <code>totalDistance</code>, <code>totalPrice</code>, <code>visited</code>, and <code>allPaths</code>.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Return Value</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>void – results are stored in context.allPaths</p>
+<p><code>void</code>. The results are accumulated in <code>context.allPaths</code>.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>The recursive search logic is shown in Figure 9.11.</p>
+</div>
 <div class="imageblock text-center">
 <div class="content">
-<a class="image" href="_images/section_9/Fig9_11_findPathWithContext.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_11_findPathWithContext.svg" alt="Fig9 11 findPathWithContext" width="50%"></a>
+<a class="image" href="_images/section_9/Fig9_11_findPathWithContext.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_11_findPathWithContext.svg" alt="Fig9 11 findPathWithContext" width="80%"></a>
 </div>
-<div class="title">Figure 9.11. Drakon-diagram of the recursive path search function</div>
+<div class="title">Figure 9.11. DRAKON diagram of the recursive path search function</div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_handlefoundpathcontext"><a class="anchor" href="#_handlefoundpathcontext"></a>handleFoundPath(context)</h4>
+<div class="paragraph">
+<p>The function <code>handleFoundPath()</code> is called when the recursive search reaches the target vertex. At this moment, the current route is complete and can be transformed into a structured result.</p>
+</div>
+<div class="paragraph">
+<p>The function creates a <code>pathInfo</code> object that contains the route itself, the list of vertices, total distance, and total price. This object is then added to the collection of found paths.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -957,32 +1056,41 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Invoked when a complete path from source to target vertex is discovered during recursive traversal. Creates a structured record of the found path, stores it in the collection, and logs results to the console.</p>
+<p>Creates and stores a structured record of a completed path from the source vertex to the target vertex.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Parameters</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>context – search state object containing fields: currentPath (string), totalDistance (number), totalPrice (number), allPaths (array)</p>
+<p><code>context</code> — search state object containing <code>currentPath</code>, <code>totalDistance</code>, <code>totalPrice</code>, and <code>allPaths</code>.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Return Value</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>pathInfo object with fields path, vertices, distance, price</p>
+<p><code>pathInfo</code> object with the fields <code>path</code>, <code>vertices</code>, <code>distance</code>, and <code>price</code>.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>The path handling logic is shown in Figure 9.12.</p>
+</div>
 <div class="imageblock text-center">
 <div class="content">
-<a class="image" href="_images/section_9/Fig9_12_handleFoundPath.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_12_handleFoundPath.svg" alt="Fig9 12 handleFoundPath" width="50%"></a>
+<a class="image" href="_images/section_9/Fig9_12_handleFoundPath.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_12_handleFoundPath.svg" alt="Fig9 12 handleFoundPath" width="65%"></a>
 </div>
-<div class="title">Figure 9.12. Drakon-diagram of the path handler function</div>
+<div class="title">Figure 9.12. DRAKON diagram of the path handler function</div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_preparemovetoneighborcontext_current_neighbor"><a class="anchor" href="#_preparemovetoneighborcontext_current_neighbor"></a>prepareMoveToNeighbor(context, current, neighbor)</h4>
+<div class="paragraph">
+<p>The function <code>prepareMoveToNeighbor()</code> prepares the forward movement from the current vertex to one of its neighbors. It reads the edge characteristics, updates the current path, increases the accumulated distance and price, and marks the neighbor as visited.</p>
+</div>
+<div class="paragraph">
+<p>Before changing the context, the function saves the previous state. This saved state is required later for correct backtracking.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -998,32 +1106,47 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Prepares data for transitioning to a neighboring vertex: computes edge distance and traversal cost, persists the current state for subsequent backtracking.</p>
+<p>Prepares transition to a neighboring vertex and saves the previous state of the search context.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Parameters</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>context – search state object; current – current vertex identifier; neighbor – neighboring vertex identifier</p>
+<p><code>context</code> — search state object.</p>
+</div>
+<div class="paragraph">
+<p><code>current</code> — identifier of the current vertex.</p>
+</div>
+<div class="paragraph">
+<p><code>neighbor</code> — identifier of the neighboring vertex.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Return Value</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>oldState object containing the previous state (oldPath, oldDistance, oldPrice) for later restoration</p>
+<p><code>oldState</code> object containing the previous values of <code>currentPath</code>, <code>totalDistance</code>, and <code>totalPrice</code>.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>The transition preparation logic is shown in Figure 9.13.</p>
+</div>
 <div class="imageblock text-center">
 <div class="content">
-<a class="image" href="_images/section_9/Fig9_13_prepareMoveToNeighbor.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_13_prepareMoveToNeighbor.svg" alt="Fig9 13 prepareMoveToNeighbor" width="50%"></a>
+<a class="image" href="_images/section_9/Fig9_13_prepareMoveToNeighbor.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_13_prepareMoveToNeighbor.svg" alt="Fig9 13 prepareMoveToNeighbor" width="70%"></a>
 </div>
-<div class="title">Figure 9.13. Drakon-diagram of the transition preparation function</div>
+<div class="title">Figure 9.13. DRAKON diagram of the transition preparation function</div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_backtrackfromneighborcontext_neighbor_oldstate"><a class="anchor" href="#_backtrackfromneighborcontext_neighbor_oldstate"></a>backtrackFromNeighbor(context, neighbor, oldState)</h4>
+<div class="paragraph">
+<p>The function <code>backtrackFromNeighbor()</code> performs the reverse phase of the algorithm. After the recursive processing of a neighboring vertex is completed, the algorithm must return to the previous state in order to try another possible route.</p>
+</div>
+<div class="paragraph">
+<p>This function clears the visited flag for the processed neighbor and restores the path, distance, and price values saved in <code>oldState</code>.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -1039,127 +1162,141 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Performs backtracking to the previous state after processing a neighboring vertex. Resets the visited flag, restores the path and accumulated sums. This mechanism ensures exhaustive enumeration of all possible routes.</p>
+<p>Restores the previous search state after processing a neighboring vertex. This enables exhaustive enumeration of alternative routes.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Parameters</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>context – search state object; neighbor – vertex being processed; oldState – object containing the previous state (oldPath, oldDistance, oldPrice)</p>
+<p><code>context</code> — search state object.</p>
+</div>
+<div class="paragraph">
+<p><code>neighbor</code> — vertex whose processing has been completed.</p>
+</div>
+<div class="paragraph">
+<p><code>oldState</code> — object containing the previous values of <code>currentPath</code>, <code>totalDistance</code>, and <code>totalPrice</code>.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Return Value</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>void – context state is restored</p>
+<p><code>void</code>. The search context is restored to the previous state.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>The backtracking logic is shown in Figure 9.14.</p>
+</div>
 <div class="imageblock text-center">
 <div class="content">
-<a class="image" href="_images/section_9/Fig9_14_backtrackFromNeighbor.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_14_backtrackFromNeighbor.svg" alt="Fig9 14 backtrackFromNeighbor" width="100%"></a>
+<a class="image" href="_images/section_9/Fig9_14_backtrackFromNeighbor.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_14_backtrackFromNeighbor.svg" alt="Fig9 14 backtrackFromNeighbor" width="75%"></a>
 </div>
-<div class="title">Figure 9.14. Drakon-diagram of the backtracking function</div>
+<div class="title">Figure 9.14. DRAKON diagram of the backtracking function</div>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_algorithmic_complexity_analysis"><a class="anchor" href="#_algorithmic_complexity_analysis"></a>Algorithmic Complexity Analysis</h3>
 <div class="paragraph">
-<p>The implemented backtracking algorithm has a time complexity of $O(V!)$ in the worst case, as it explores all possible paths without revisiting vertices. This is acceptable for small to medium-sized graphs (up to 10–12 vertices) but becomes impractical for dense graphs with many vertices. Space complexity is $O(V)$ for storing the current path and visited vertices during recursion.</p>
+<p>The implemented algorithm enumerates all simple paths between two vertices. Therefore, its running time may grow exponentially with the number of vertices.</p>
+</div>
+<div class="paragraph">
+<p>In the worst case, especially for a dense graph, the number of possible simple paths can be very large. For this reason, the time complexity can be estimated as factorial or exponential, depending on the graph structure. A conservative upper estimate is:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\$O(V!)\$
+</div>
+</div>
+<div class="paragraph">
+<p>where <code>V</code> is the number of vertices.</p>
+</div>
+<div class="paragraph">
+<p>The space complexity is mainly determined by the recursion depth, the current path, and the <code>visited</code> array. Since a simple path cannot contain more than <code>V</code> vertices, the auxiliary space complexity is:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\$O(V)\$
+</div>
+</div>
+<div class="paragraph">
+<p>This approach is suitable for small and medium-sized educational examples. However, for large dense graphs, exhaustive path enumeration becomes impractical. In such cases, specialized algorithms should be used depending on the optimization criterion, for example shortest path algorithms.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_program_execution_example"><a class="anchor" href="#_program_execution_example"></a>Program Execution Example</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">// Example output for paths from 0 to 5:
-// === Find all paths from 0 to 5 ===
-// Path Vertices: 0-1-4-3-5
-// Distance: 101.28 km
-// Price: 31.80 u.
-//
-// Path Vertices: 0-6-3-5
-// Distance: 94.21 km
-// Price: 21.60 u.</code></pre>
-</div>
-</div>
 <div class="paragraph">
-<p>Thus, the developed software module enables not only finding all possible routes in a graph but also performing their quantitative and qualitative analysis, which can be applied to transportation logistics problems and route optimization tasks.</p>
+<p>The following fragment shows an example of output for paths from vertex <code>0</code> to vertex <code>5</code>.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_9_5_dijkstras_algorithm"><a class="anchor" href="#_9_5_dijkstras_algorithm"></a>9.5. Dijkstra&#8217;s Algorithm</h2>
+<h2 id="_sourcejavascript"><a class="anchor" href="#_sourcejavascript"></a>[source,javascript]</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>The Dijkstra algorithm is designed to find the shortest paths from a given vertex to all other vertices in a graph, provided that all edge weights are non-negative. This condition is essential for the algorithm to work correctly and guarantees that the found paths are indeed the shortest possible.</p>
-</div>
-<div class="paragraph">
-<p>The algorithm is named after the renowned Dutch computer scientist Edsger W. Dijkstra, who first conceived it in 1956. Today, Dijkstra&#8217;s algorithm finds wide application across various fields of science, technology, and everyday life:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>GPS navigation systems:</strong> finding the fastest routes, taking into account distance and traffic conditions.</p>
-</li>
-<li>
-<p><strong>Telecommunications networks:</strong> determining optimal paths for data routing (OSPF, IS-IS protocols).</p>
-</li>
-<li>
-<p><strong>Robotics and Games:</strong> real-time path planning and object navigation through maps.</p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="_graph_representation_for_dijkstras_algorithm"><a class="anchor" href="#_graph_representation_for_dijkstras_algorithm"></a>Graph Representation for Dijkstra&#8217;s Algorithm</h3>
-<div class="paragraph">
-<p>For our demonstration of Dijkstra&#8217;s algorithm, we will use the graph shown in Figure 9.15. This graph consists of 6 vertices (labeled 0 through 5) connected by weighted edges.</p>
-</div>
-<div class="imageblock text-center">
-<div class="content">
-<a class="image" href="_images/section_9/Fig9_15_DijkstraGraph.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_15_DijkstraGraph.svg" alt="Fig9 15 DijkstraGraph" width="50%"></a>
-</div>
-<div class="title">Figure 9.15. Target topology setup for Dijkstra shortest path calculation</div>
-</div>
-<div class="paragraph">
-<p>In JavaScript, we represent this weighted structure as an object mapping node connections:</p>
-</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const graph = {
+<pre>The first route has a greater distance and price. The second route is shorter and cheaper in this example. Therefore, the same set of found paths can be analyzed according to several criteria: minimum distance, minimum price, or a combined route quality indicator.
+
+=== Summary
+
+The developed module demonstrates how recursive backtracking can be applied to weighted graphs. Unlike simple traversal algorithms, this approach does not stop after finding one path. Instead, it systematically enumerates all possible simple paths from the source vertex to the target vertex and calculates the quantitative characteristics of each route.
+
+This makes the module useful as an educational example for understanding:
+
+* recursive graph traversal;
+* path construction;
+* state saving and restoration;
+* backtracking;
+* analysis of weighted routes;
+* comparison of alternative paths.
+
+The same idea can be used as a basis for studying transportation logistics, route planning, and optimization problems.
+
+
+== 9.5. Dijkstra's Algorithm
+
+The Dijkstra algorithm is designed to find the shortest paths from a given vertex to all other vertices in a graph, provided that all edge weights are non-negative. This condition is essential for the algorithm to work correctly and guarantees that the found paths are indeed the shortest possible.
+
+The algorithm is named after the renowned Dutch computer scientist Edsger W. Dijkstra, who first conceived it in 1956. Today, Dijkstra's algorithm finds wide application across various fields of science, technology, and everyday life:
+
+- *GPS navigation systems:* finding the fastest routes, taking into account distance and traffic conditions.
+- *Telecommunications networks:* determining optimal paths for data routing (OSPF, IS-IS protocols).
+- *Robotics and Games:* real-time path planning and object navigation through maps.
+
+=== Graph Representation for Dijkstra's Algorithm
+
+For our demonstration of Dijkstra's algorithm, we will use the graph shown in Figure 9.15. This graph consists of 6 vertices (labeled 0 through 5) connected by weighted edges.
+
+[.text-center]
+.Figure 9.15. Target topology setup for Dijkstra shortest path calculation
+image::section_9/Fig9_15_DijkstraGraph.svg[width=50%, link=self, window="_blank"]
+
+In JavaScript, we represent this weighted structure as an object mapping node connections:
+
+[source,javascript]
+----
+const graph = {
     0: { 1: 48.3, 2: 40.7, 5: 25.4 },
     1: { 0: 48.3, 2: 37.5, 3: 29.8 },
     2: { 0: 40.7, 1: 37.5, 3: 34.9, 5: 29.8 },
     3: { 1: 29.8, 2: 34.9, 4: 25.4 },
     4: { 3: 25.4, 5: 34.9 },
     5: { 0: 25.4, 2: 29.8, 4: 34.9 }
-};</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_how_the_algorithm_works"><a class="anchor" href="#_how_the_algorithm_works"></a>How the Algorithm Works</h3>
-<div class="paragraph">
-<p>At the heart of the algorithm lies a simple yet powerful idea: iteratively build the set of vertices for which the shortest path is already known, and use them to discover shorter paths to the remaining vertices.</p>
-</div>
-<div class="paragraph">
-<p>To track its progress, the algorithm maintains three essential data structures:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><strong>Distance array (d):</strong> For each vertex $v$, we store the current length of the shortest known path from the start vertex $s$ to $v$. Initially, $d[s] = 0$ and $d[v] = \infty$ for all others.</p>
-</li>
-<li>
-<p><strong>Visited array (a):</strong> A marker array where $a[v] = 1$ indicates that the optimal path to $v$ has been resolved, and $a[v] = 0$ means it is still unprocessed.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Imagine you are exploring a network of cities connected by roads of different lengths. You start at your home city (vertex $s$), expanding your perimeter step by step by always selecting the closest unresolved destination.</p>
+};
+----
+
+=== How the Algorithm Works
+
+At the heart of the algorithm lies a simple yet powerful idea: iteratively build the set of vertices for which the shortest path is already known, and use them to discover shorter paths to the remaining vertices.
+
+To track its progress, the algorithm maintains three essential data structures:
+
+1. *Distance array (d):* For each vertex $v$, we store the current length of the shortest known path from the start vertex $s$ to $v$. Initially, $d[s] = 0$ and $d[v] = \infty$ for all others.
+2. *Visited array (a):* A marker array where $a[v] = 1$ indicates that the optimal path to $v$ has been resolved, and $a[v] = 0$ means it is still unprocessed.
+
+Imagine you are exploring a network of cities connected by roads of different lengths. You start at your home city (vertex $s$), expanding your perimeter step by step by always selecting the closest unresolved destination.</pre>
 </div>
 </div>
 </div>
