@@ -407,7 +407,7 @@ The overall structure of the functions involved in the path search is shown in F
 
 [.text-center]
 .Figure 9.9. Mind map of path search functions
-image::section_9/Fig9_9_viewAlgorithmGraph.png[width=80%, link=self, window="_blank"]
+image::section_9/Fig9_9_viewAlgorithmGraph.png[width=100%, link=self, window="_blank"]
 
 === Functional Structure of the Path Search Module
 
