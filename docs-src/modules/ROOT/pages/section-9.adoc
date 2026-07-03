@@ -453,7 +453,7 @@ The function `initPathSearch()` is the entry point of the path search module. It
 The initialization logic is shown in Figure 9.10.
 
 [.text-center]
-.Figure 9.10. DRAKON diagram of the initialization function for path search
+.Figure 9.10. DRAKON-diagram of the initialization function for path search
 image::section_9/Fig9_10_initPathSearch.svg[width=65%, link=self, window="_blank"]
 
 ==== findPathWithContext(current, context)
