@@ -33,13 +33,8 @@
         },
         "8": {
             "type": "action",
-            "one": "9",
-            "content": "context = resetSearchContext(\n    context,\n    start,\n    end\n)"
-        },
-        "9": {
-            "type": "action",
             "one": "10",
-            "content": "console.log(\n    \"\\n=== Поиск всех путей от \" + start\n    + \" до \" + end + \" ===\"\n)"
+            "content": "context = resetSearchContext(\n    context,\n    start,\n    end\n)"
         },
         "10": {
             "type": "action",
