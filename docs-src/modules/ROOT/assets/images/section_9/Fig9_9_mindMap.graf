@@ -1,0 +1,14 @@
+{
+    "items": {
+        "1": {
+            "type": "idea",
+            "content": "<p>CreateGraphFromData</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 0
+        }
+    },
+    "type": "graf",
+    "id": "Fig9_9_mindMap.graf",
+    "style": "{\"centerContent\":true,\"background\":\"#6a6a6a\"}"
+}
