@@ -331,11 +331,11 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 ====
 
 === Comparison: Stack vs. Queue
-Сравнение путей  clearly illustrates the fundamental difference between the two traversal strategies. DFS, using a stack, delves deep into the graph's branches, while BFS, using a queue, explores level by level ( (Figure 9.6).
+Сравнение путей  clearly illustrates the fundamental difference between the two traversal strategies. DFS, using a stack, delves deep into the graph's branches, while BFS, using a queue, explores level by level ( (Figure 9.7).
 
 [.text-center]
 .Figure 9.7. Comparison of DFS and BFS traversal orders from vertex 0
-image::section_9/Fig9_7_DFS-BFS.svg[width=100%, link=self, window="_blank"]
+image::section_9/Fig9_7_DFS_BFS.svg[width=100%, link=self, window="_blank"]
 
 [cols="1,2,3", options="header"]
 |===
