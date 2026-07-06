@@ -112,7 +112,7 @@ Many real-life problems require modeling graphs with numerical values associated
 
 [.text-center]
 .Figure 9.5. Adjacency list equipped with a 'weight' field
-image::section_9/Fig9_5_WeightField.svg[width=50%, link=self, window="_blank"]
+image::section_9/Fig9_5_New.svg[width=50%, link=self, window="_blank"]
 
 === Graph Representation in JavaScript
 
