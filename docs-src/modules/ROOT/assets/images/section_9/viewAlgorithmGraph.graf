@@ -1,0 +1,133 @@
+{
+    "items": {
+        "1": {
+            "type": "idea",
+            "content": "<p>Prepare the graph</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "2": {
+            "type": "idea",
+            "content": "<p> Find all paths from start to end</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "3": {
+            "type": "idea",
+            "content": "<p>Return all found paths</p>",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 2
+        },
+        "4": {
+            "type": "ridea",
+            "content": "<p> Create a  n x n adjacency matrix</p>",
+            "parent": "1",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "5": {
+            "type": "ridea",
+            "content": "<p>Add N edges between vertices</p>",
+            "parent": "1",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "6": {
+            "type": "ridea",
+            "content": "<p>Create a search context</p>",
+            "parent": "2",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "7": {
+            "type": "ridea",
+            "content": "<p>store the graph</p>",
+            "parent": "6",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "8": {
+            "type": "ridea",
+            "content": "<p>prepare the list of found paths</p>",
+            "parent": "6",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "9": {
+            "type": "ridea",
+            "content": "<p>prepare the current path</p>",
+            "parent": "6",
+            "treeType": "treeview",
+            "ordinal": 2
+        },
+        "10": {
+            "type": "ridea",
+            "content": "<p>prepare the visited vertices array</p>",
+            "parent": "6",
+            "treeType": "treeview",
+            "ordinal": 3
+        },
+        "11": {
+            "type": "ridea",
+            "content": "<p>store the target vertex</p>",
+            "parent": "6",
+            "treeType": "treeview",
+            "ordinal": 4
+        },
+        "12": {
+            "type": "idea",
+            "content": "<p>Reset the search state</p>",
+            "parent": "2",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "13": {
+            "type": "ridea",
+            "content": "<p>clear found paths</p>",
+            "parent": "12",
+            "treeType": "treeview",
+            "ordinal": 0
+        },
+        "14": {
+            "type": "ridea",
+            "content": "<p>clear visited vertices</p>",
+            "parent": "12",
+            "treeType": "treeview",
+            "ordinal": 2
+        },
+        "15": {
+            "type": "ridea",
+            "content": "<p>clear the current path</p>",
+            "parent": "12",
+            "treeType": "treeview",
+            "ordinal": 1
+        },
+        "16": {
+            "type": "ridea",
+            "content": "<p>put start into the current path</p>",
+            "parent": "12",
+            "treeType": "treeview",
+            "ordinal": 3
+        },
+        "17": {
+            "type": "idea",
+            "content": "<p>mark start as visited </p>",
+            "parent": "12",
+            "treeType": "treeview",
+            "ordinal": 4
+        },
+        "18": {
+            "type": "ridea",
+            "content": "<p>store end as the target</p>",
+            "parent": "12",
+            "treeType": "treeview",
+            "ordinal": 5
+        }
+    },
+    "type": "graf",
+    "id": "viewAlgorithmGraph.graf",
+    "style": "{\"background\":\"#8496a0\"}"
+}

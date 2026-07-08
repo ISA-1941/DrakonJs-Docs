@@ -1,0 +1,28 @@
+viewAlgorithmGraph
+│
+├── Graph preparation
+│   ├── 7 × 7 adjacency matrix
+│   └── 10 graph edges
+│
+├── Search for all paths
+│   ├── Search context
+│   │   ├── graph
+│   │   ├── current path
+│   │   ├── visited vertices
+│   │   ├── found paths
+│   │   └── target vertex
+│   │
+│   ├── Search initialization
+│   │   ├── clear state
+│   │   ├── start → current path
+│   │   └── start → visited vertices
+│   │
+│   └── DFS with backtracking
+│       ├── get neighbors
+│       ├── iterate through neighbors
+│       ├── add neighbor to path
+│       ├── if target — save path
+│       ├── if not target — go deeper
+│       └── backtrack one step
+│
+└── Result: all found paths

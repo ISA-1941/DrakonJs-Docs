@@ -1,0 +1,64 @@
+{
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "4"
+        },
+        "3": {
+            "type": "loopend",
+            "one": "1",
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#00ff00\",\"color\":\"\",\"iconBorder\":\"\",\"padding\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "4": {
+            "type": "loopbegin",
+            "one": "6",
+            "content": "<p>Cycle for every neighbor vertex</p>",
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#00ff00\",\"color\":\"\",\"iconBorder\":\"\",\"padding\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "5": {
+            "type": "action",
+            "content": "<p>1. Save the previous state;</p><p>2. Add the neighbor to the current path;</p><p>3.Mark the neighbor as visited.</p>",
+            "one": "7",
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#cfd8dc\",\"color\":\"\",\"iconBorder\":\"\",\"padding\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "6": {
+            "type": "action",
+            "content": "<p>Move to the neighbor</p>",
+            "one": "5",
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#cfd8dc\",\"color\":\"\",\"iconBorder\":\"\",\"padding\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "7": {
+            "type": "question",
+            "content": "<p>If the neighbor is the target vertex</p>",
+            "one": "8",
+            "two": "9",
+            "flag1": 1,
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"yellow\",\"color\":\"\",\"iconBorder\":\"\",\"padding\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "8": {
+            "type": "action",
+            "content": "<p>Save a copy of the current path</p>",
+            "one": "10",
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"yellow\",\"color\":\"\",\"iconBorder\":\"\",\"padding\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "9": {
+            "type": "action",
+            "content": "<p>Continue searching from this vertex</p>",
+            "one": "10",
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"yellow\",\"color\":\"\",\"iconBorder\":\"\",\"padding\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "10": {
+            "type": "action",
+            "content": "<p>Backtrack:</p><ol><li>Rremove the neighbor from the current path</li><li>Restore the visited state</li></ol>",
+            "one": "3",
+            "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#cfd8dc\",\"color\":\"\",\"iconBorder\":\"\",\"padding\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        }
+    },
+    "type": "drakon",
+    "id": "CYCLE.drakon",
+    "style": "{\"background\":\"#8496a0\",\"maxWidth\":320}"
+}
