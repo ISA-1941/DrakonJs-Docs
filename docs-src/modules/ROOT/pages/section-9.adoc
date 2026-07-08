@@ -335,7 +335,7 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 
 [.text-center]
 .Figure 9.7. Comparison of DFS and BFS traversal orders from vertex 0
-image::section_9/Fig9_7_DFS_BFS_New.svg[width=100%, link=self, window="_blank"]
+image::section_9/Fig9_7_dfs_bfs.svg[width=100%, link=self, window="_blank"]
 
 [cols="1,2,3", options="header"]
 |===
