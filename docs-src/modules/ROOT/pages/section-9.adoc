@@ -671,7 +671,7 @@ The Dijkstra algorithm is based on a simple but powerful principle: to iterative
 
 [.text-center]
 .Figure 9.17. Mind map for Dijkstra’s algorithm
-image::section_9/Fig9_17_Dijkstra_classic.svg[width=50%, link=self, window="_blank"]
+image::section_9/Fig9_17_Dijkstra_classic.svg[width=100%, link=self, window="_blank"]
 
 Let’s look at the step-by-step work of this algorithm. Let’s start with vertex 0 and look for short paths to other vertices.
 At the heart of the algorithm lies a simple yet powerful idea: iteratively build the set of vertices for which the shortest path is already known, and use them to discover shorter paths to the remaining vertices.
