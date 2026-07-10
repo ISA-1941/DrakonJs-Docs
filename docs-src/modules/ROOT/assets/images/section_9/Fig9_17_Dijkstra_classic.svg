@@ -7,7 +7,7 @@
    width="7200"
    height="4906.6665"
    viewBox="0 0 7200 4906.6665"
-   sodipodi:docname="Fig9_15_Dijkstra_classic.svg"
+   sodipodi:docname="Fig9_17_Dijkstra_classic.svg"
    inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -42,9 +42,9 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
-     inkscape:zoom="2"
-     inkscape:cx="6383.5"
-     inkscape:cy="987"
+     inkscape:zoom="0.5"
+     inkscape:cx="3599"
+     inkscape:cy="4054"
      inkscape:window-width="1920"
      inkscape:window-height="1152"
      inkscape:window-x="0"
@@ -63,7 +63,7 @@
        id="image1"
        x="3"
        y="-8.5"
-       style="fill:#a8cac4;fill-opacity:1" />
+       style="fill:none;fill-opacity:1" />
     <rect
        style="fill:#1a1a1a;stroke:#1218f9;stroke-width:0;stroke-linejoin:bevel"
        id="rect10-7-5"
