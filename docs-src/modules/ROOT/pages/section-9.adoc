@@ -537,7 +537,7 @@ Before changing the context, the function saves the previous state. This saved s
 The transition preparation logic is shown in Figure 9.13.
 
 [.text-center]
-.Figure 9.13. DRAKON diagram of the transition preparation function
+.Figure 9.13. DRAKON diagram of the Transition Preparation function
 image::section_9/Fig9_13_prepareMoveToNeighbor.svg[width=100%,link=self, window="_blank"]
 
 ==== Reversing function `backtrackFromNeighbor(context, neighbor, oldState)`
@@ -567,7 +567,7 @@ This function clears the visited flag for the processed neighbor and restores th
 The backtracking logic is shown in Figure 9.14.
 
 [.text-center]
-.Figure 9.14. DRAKON diagram of the backtracking function
+.Figure 9.14. DRAKON diagram of the Backtracking function
 image::section_9/Fig9_14_backtrackFromNeighbor.svg[width=100%, link=self, window="_blank"]
 
 === Algorithmic Complexity Analysis
@@ -597,8 +597,8 @@ This approach is suitable for small and medium-sized educational examples. Howev
 The example graph shown in Figure 9.15, the algorithm can find all simple paths from vertex `0` to vertex `5`. Each path is represented as a sequence of vertices, along with the total distance and price calculated based on the edge weights.
 
 [.text-center]
-.Figure 9.16. Output of implementation method findPathGraphical representation of the path search process from vertex 2 to vertex 5
-image::section_9/Fig9_16_graphWays.svg[width=100%, link=self, window="_blank"]
+.Figure 9.15. Output of implementation method findPathGraphical representation of the path search process from vertex 2 to vertex 5
+image::section_9/Fig9_15_graphWays.svg[width=100%, link=self, window="_blank"]
 
 The following fragment shows an example of output for paths from vertex `0` to vertex `5`.
 
@@ -645,11 +645,11 @@ The algorithm is named after the renowned Dutch computer scientist Edsger W. Dij
 
 === Graph Representation for Dijkstra's Algorithm
 
-For our demonstration of Dijkstra's algorithm, we will use the graph shown in Figure 9.15. This graph consists of 6 vertices (labeled 0 through 5) connected by weighted edges.
+For our demonstration of Dijkstra's algorithm, we will use the graph shown in Figure 9.16. This graph consists of 6 vertices (labeled 0 through 5) connected by weighted edges.
 
 [.text-center]
-.Figure 9.15. Target topology setup for Dijkstra shortest path calculation
-image::section_9/Fig9_15_DijkstraGraph.svg[width=50%, link=self, window="_blank"]
+.Figure 9.16. Target topology setup for Dijkstra shortest path calculation
+image::section_9/Fig9_16_exampleGraph.svg[width=50%, link=self, window="_blank"]
 
 In JavaScript, we represent this weighted structure as an object mapping node connections:
 
@@ -666,6 +666,13 @@ const graph = {
 ----
 
 === How the Algorithm Works
+
+The Dijkstra algorithm is based on a simple but powerful principle: to iteratively construct many vertices for which one already knows the shortest path, and use them to detect shorter routes to remaining summits. The intelligence map of Deikstra’s algorithm is presented in Figure 9.17.
+
+[.text-center]
+.Figure 9.17. Mind map for Dijkstra’s algorithm
+image::section_9/Fig9_17_Dijkstra_classic.svg[width=50%, link=self, window="_blank"]
+
 
 At the heart of the algorithm lies a simple yet powerful idea: iteratively build the set of vertices for which the shortest path is already known, and use them to discover shorter paths to the remaining vertices.
 
