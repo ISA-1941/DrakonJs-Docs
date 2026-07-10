@@ -1137,7 +1137,7 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 <div class="content">
 <a class="image" href="_images/section_9/Fig9_13_prepareMoveToNeighbor.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_13_prepareMoveToNeighbor.svg" alt="Fig9 13 prepareMoveToNeighbor" width="100%"></a>
 </div>
-<div class="title">Figure 9.13. DRAKON diagram of the transition preparation function</div>
+<div class="title">Figure 9.13. DRAKON diagram of the Transition Preparation function</div>
 </div>
 </div>
 <div class="sect3">
@@ -1193,7 +1193,7 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 <div class="content">
 <a class="image" href="_images/section_9/Fig9_14_backtrackFromNeighbor.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_14_backtrackFromNeighbor.svg" alt="Fig9 14 backtrackFromNeighbor" width="100%"></a>
 </div>
-<div class="title">Figure 9.14. DRAKON diagram of the backtracking function</div>
+<div class="title">Figure 9.14. DRAKON diagram of the Backtracking function</div>
 </div>
 </div>
 </div>
@@ -1232,9 +1232,9 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<a class="image" href="_images/section_9/Fig9_16_graphWays.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_16_graphWays.svg" alt="Fig9 16 graphWays" width="100%"></a>
+<a class="image" href="_images/section_9/Fig9_15_graphWays.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_15_graphWays.svg" alt="Fig9 15 graphWays" width="100%"></a>
 </div>
-<div class="title">Figure 9.16. Output of implementation method findPathGraphical representation of the path search process from vertex 2 to vertex 5</div>
+<div class="title">Figure 9.15. Output of implementation method findPathGraphical representation of the path search process from vertex 2 to vertex 5</div>
 </div>
 <div class="paragraph">
 <p>The following fragment shows an example of output for paths from vertex <code>0</code> to vertex <code>5</code>.</p>
@@ -1317,13 +1317,13 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 <div class="sect2">
 <h3 id="_graph_representation_for_dijkstras_algorithm"><a class="anchor" href="#_graph_representation_for_dijkstras_algorithm"></a>Graph Representation for Dijkstra&#8217;s Algorithm</h3>
 <div class="paragraph">
-<p>For our demonstration of Dijkstra&#8217;s algorithm, we will use the graph shown in Figure 9.15. This graph consists of 6 vertices (labeled 0 through 5) connected by weighted edges.</p>
+<p>For our demonstration of Dijkstra&#8217;s algorithm, we will use the graph shown in Figure 9.16. This graph consists of 6 vertices (labeled 0 through 5) connected by weighted edges.</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<a class="image" href="_images/section_9/Fig9_15_DijkstraGraph.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_15_DijkstraGraph.svg" alt="Fig9 15 DijkstraGraph" width="50%"></a>
+<a class="image" href="_images/section_9/Fig9_16_exampleGraph.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_16_exampleGraph.svg" alt="Fig9 16 exampleGraph" width="50%"></a>
 </div>
-<div class="title">Figure 9.15. Target topology setup for Dijkstra shortest path calculation</div>
+<div class="title">Figure 9.16. Target topology setup for Dijkstra shortest path calculation</div>
 </div>
 <div class="paragraph">
 <p>In JavaScript, we represent this weighted structure as an object mapping node connections:</p>
@@ -1343,6 +1343,15 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 </div>
 <div class="sect2">
 <h3 id="_how_the_algorithm_works"><a class="anchor" href="#_how_the_algorithm_works"></a>How the Algorithm Works</h3>
+<div class="paragraph">
+<p>The Dijkstra algorithm is based on a simple but powerful principle: to iteratively construct many vertices for which one already knows the shortest path, and use them to detect shorter routes to remaining summits. The intelligence map of Deikstra’s algorithm is presented in Figure 9.17.</p>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<a class="image" href="section_9/Fig9_17_Dijkstra_classic.svg" target="_blank" rel="noopener"><img src="section_9/Fig9_17_Dijkstra_classic.svg" alt="Fig9 17 Dijkstra classic" width="50%"></a>
+</div>
+<div class="title">Figure 9.17. Mind map for Dijkstra’s algorithm</div>
+</div>
 <div class="paragraph">
 <p>At the heart of the algorithm lies a simple yet powerful idea: iteratively build the set of vertices for which the shortest path is already known, and use them to discover shorter paths to the remaining vertices.</p>
 </div>

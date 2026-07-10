@@ -158,7 +158,7 @@
             "width": 265,
             "height": 140,
             "zIndex": 16,
-            "content": "<ol><li>Clear found paths</li><li>Clear the current path</li><li>clear visited vertices</li><li>put start into the current path  </li><li>mark start as visited</li><li>store end as the target</li></ol>",
+            "content": "<ol><li>Clear found paths</li><li>Clear the current path</li><li>Clear visited vertices</li><li>Put start into the current path</li><li>Mark start as visited</li><li>Store end as the target</li></ol>",
             "style": "{\"font\":\"15px Arimo\",\"iconBack\":\"#cfd8dc\",\"color\":\"\",\"iconBorder\":\"\",\"padding\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
         },
         "25": {
@@ -225,6 +225,6 @@
         }
     },
     "type": "free",
-    "id": "viewAlgorithmGraph.free",
-    "style": "{\"background\":\"#8496a0\"}"
+    "style": "{\"background\":\"#8496a0\"}",
+    "id": "viewAlgorithmGraph.free"
 }
