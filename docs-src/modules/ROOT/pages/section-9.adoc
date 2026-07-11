@@ -7,8 +7,6 @@
 
 == 9.1. General Information. Basic Terminology
 
-=== Glossary of Basic Graph Terms
-
 This section discusses data structures such as graphs. In mathematics, a graph is a structure consisting of vertices (nodes) and edges (connections) that connect these vertices.
 
 In general, graphs share many similarities with trees, and one can consider trees as a special case of graphs. However, the practical value of graphs in solving real-world problems is much greater. Many tasks can be reduced to considering a set of objects whose properties are described by the relationships between them.
@@ -44,7 +42,7 @@ Graphs as data structures can be represented in two primary forms: undirected an
 * *Out-degree (deg^+(v^)):* The number of edges leaving (incident from) the vertex.
 * *Total Degree:* The sum of the in-degree and out-degree.
 * *Loops in a Digraph:* In this case, a loop is counted exactly once for the in-degree and once for the out-degree. It does not "double" the total degree; instead, it is honestly distributed between the two directions.
-?
+
 [.text-center]
 .Figure 9.1. Graphical representation of (a) an undirected graph; (b) a directed graph (digraph)
 image::section_9/Fig9_1_exampleGraph.svg[width=75%, link=self, window="_blank"]
@@ -669,7 +667,7 @@ The mind map of Dijkstra's algorithm is presented in Figure 9.17.
 
 [.text-center]
 .Figure 9.17. Mind map for Dijkstra's algorithm
-image::section_9/Fig9_17_DijkstraAlgo.svg[width=100%, link=self, window="_blank"]
+image::section_9/Fig9_17a_DijkstraAlgo.svg[width=100%, link=self, window="_blank"]
 
 Let us examine the algorithm step by step. We start from vertex `0` and find the shortest paths from this vertex to all other vertices of the graph.
 
@@ -695,8 +693,8 @@ The functions used in this implementation are summarized in the following table.
 | `dijkstra`
 | `graph`, `startVertex`
 | Main function of the algorithm.
-| Initializes auxiliary data structures, repeatedly selects the unvisited vertex with the smallest known distance, relaxes its outgoing edges, and returns the final shortest distances and predecessors.
-| Main control flow of the algorithm. If a separate diagram is added, it can be referenced as `Fig9_18_dijkstra.svg`.
+| Initializes auxiliary data structures, repeatedly selects the unvisited vertex with the smallest known distance, relaxes outgoing edges, and returns the final shortest distances and predecessors.
+| `Fig9_17b_dD_dijkstra.svg`
 
 | `getVerticesList`
 | `graph`
@@ -708,19 +706,19 @@ The functions used in this implementation are summarized in the following table.
 | `vertices`, `startVertex`
 | Initializes the distance array.
 | Sets the distance from the start vertex to itself as `0`. Sets the distance to all other vertices as `Infinity`.
-| `Fig9_19_initialization.svg`
+| `Fig9_19_initData.svg`
 
 | `initializeVisited`
 | `vertices`
 | Initializes the visited marker array.
 | Marks all vertices as unvisited. For each vertex `v`, sets `visited[v] = false`.
-| `Fig9_19_initialization.svg`
+| `Fig9_19_initData.svg`
 
 | `initializePrevious`
 | `vertices`
 | Initializes the predecessor array.
 | Sets the predecessor of each vertex to `null`. This structure is later used to reconstruct shortest paths.
-| `Fig9_19_initialization.svg`
+| `Fig9_19_initData.svg`
 
 | `findMinDistanceVertex`
 | `distances`, `visited`
