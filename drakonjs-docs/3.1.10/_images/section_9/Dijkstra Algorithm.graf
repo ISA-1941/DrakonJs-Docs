@@ -184,5 +184,6 @@
         }
     },
     "type": "graf",
-    "id": "Deikstra.graf"
+    "id": "Dijkstra Algorithm.graf",
+    "style": "{\"background\":\"#404040\"}"
 }
