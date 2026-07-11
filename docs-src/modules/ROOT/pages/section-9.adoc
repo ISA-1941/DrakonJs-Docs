@@ -680,7 +680,7 @@ The mind map of Dijkstra's algorithm is presented in Figure 9.17.
 
 [.text-center]
 .Figure 9.17. Mind map for Dijkstra's algorithm
-image::section_9/Fig9_17_Dijkstra Algorithm.png[width=100%, link=self, window="_blank"]
+image::section_9/Fig9_17_DijkstraAlgo.svg[width=100%, link=self, window="_blank"]
 
 Let us examine the algorithm step by step. We start from vertex `0` and find the shortest paths from this vertex to all other vertices of the graph.
 
