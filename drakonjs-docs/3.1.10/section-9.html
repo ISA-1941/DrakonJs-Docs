@@ -133,8 +133,6 @@
 <div class="sect1">
 <h2 id="_9_1_general_information_basic_terminology"><a class="anchor" href="#_9_1_general_information_basic_terminology"></a>9.1. General Information. Basic Terminology</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_glossary_of_basic_graph_terms"><a class="anchor" href="#_glossary_of_basic_graph_terms"></a>Glossary of Basic Graph Terms</h3>
 <div class="paragraph">
 <p>This section discusses data structures such as graphs. In mathematics, a graph is a structure consisting of vertices (nodes) and edges (connections) that connect these vertices.</p>
 </div>
@@ -188,7 +186,6 @@
 <div class="paragraph">
 <p>Formally, a graph is denoted as $G = (V, E)$, where $V$ is the set of vertices and $E$ is the set of edges connecting them.</p>
 </div>
-</div>
 <div class="sect2">
 <h3 id="_directed_and_undirected_graphs"><a class="anchor" href="#_directed_and_undirected_graphs"></a>Directed and Undirected Graphs</h3>
 <div class="paragraph">
@@ -223,19 +220,18 @@
 <p><strong>Total Degree:</strong> The sum of the in-degree and out-degree.</p>
 </li>
 <li>
-<p><strong>Loops in a Digraph:</strong> In this case, a loop is counted exactly once for the in-degree and once for the out-degree. It does not "double" the total degree; instead, it is honestly distributed between the two directions.<br>
-?</p>
-<div class="imageblock text-center">
-<div class="content">
-<a class="image" href="_images/section_9/Fig9_1_exampleGraph.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_1_exampleGraph.svg" alt="Fig9 1 exampleGraph" width="75%"></a>
-</div>
-<div class="title">Figure 9.1. Graphical representation of (a) an undirected graph; (b) a directed graph (digraph)</div>
-</div>
+<p><strong>Loops in a Digraph:</strong> In this case, a loop is counted exactly once for the in-degree and once for the out-degree. It does not "double" the total degree; instead, it is honestly distributed between the two directions.</p>
 </li>
 </ul>
 </div>
 </li>
 </ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<a class="image" href="_images/section_9/Fig9_1_exampleGraph.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_1_exampleGraph.svg" alt="Fig9 1 exampleGraph" width="75%"></a>
+</div>
+<div class="title">Figure 9.1. Graphical representation of (a) an undirected graph; (b) a directed graph (digraph)</div>
 </div>
 </div>
 <div class="sect2">
@@ -1321,7 +1317,7 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<a class="image" href="_images/section_9/Fig9_17_DijkstraAlgo.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_17_DijkstraAlgo.svg" alt="Fig9 17 DijkstraAlgo" width="100%"></a>
+<a class="image" href="_images/section_9/Fig9_17a_DijkstraAlgo.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_17a_DijkstraAlgo.svg" alt="Fig9 17a DijkstraAlgo" width="100%"></a>
 </div>
 <div class="title">Figure 9.17. Mind map for Dijkstra&#8217;s algorithm</div>
 </div>
@@ -1376,8 +1372,8 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>dijkstra</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>graph</code>, <code>startVertex</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Main function of the algorithm.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Initializes auxiliary data structures, repeatedly selects the unvisited vertex with the smallest known distance, relaxes its outgoing edges, and returns the final shortest distances and predecessors.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Main control flow of the algorithm. If a separate diagram is added, it can be referenced as <code>Fig9_18_dijkstra.svg</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initializes auxiliary data structures, repeatedly selects the unvisited vertex with the smallest known distance, relaxes outgoing edges, and returns the final shortest distances and predecessors.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Fig9_17b_dD_dijkstra.svg</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>getVerticesList</code></p></td>
@@ -1391,21 +1387,21 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>vertices</code>, <code>startVertex</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Initializes the distance array.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Sets the distance from the start vertex to itself as <code>0</code>. Sets the distance to all other vertices as <code>Infinity</code>.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Fig9_19_initialization.svg</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Fig9_19_initData.svg</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>initializeVisited</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>vertices</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Initializes the visited marker array.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Marks all vertices as unvisited. For each vertex <code>v</code>, sets <code>visited[v] = false</code>.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Fig9_19_initialization.svg</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Fig9_19_initData.svg</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>initializePrevious</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>vertices</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Initializes the predecessor array.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Sets the predecessor of each vertex to <code>null</code>. This structure is later used to reconstruct shortest paths.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Fig9_19_initialization.svg</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Fig9_19_initData.svg</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>findMinDistanceVertex</code></p></td>
