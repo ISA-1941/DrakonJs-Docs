@@ -1296,28 +1296,28 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 <h2 id="_9_5_dijkstras_algorithm"><a class="anchor" href="#_9_5_dijkstras_algorithm"></a>9.5. Dijkstra&#8217;s Algorithm</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Dijkstra algorithm is designed to find the shortest paths from a given vertex to all other vertices in a graph, provided that all edge weights are non-negative. This condition is essential for the algorithm to work correctly and guarantees that the found paths are indeed the shortest possible.</p>
+<p>Dijkstra&#8217;s algorithm is designed to find the shortest paths from a given start vertex to all other vertices in a weighted graph, provided that all edge weights are non-negative. This condition is essential: Dijkstra&#8217;s algorithm works correctly only when every edge weight is greater than or equal to zero.</p>
 </div>
 <div class="paragraph">
-<p>The algorithm is named after the renowned Dutch computer scientist Edsger W. Dijkstra, who first conceived it in 1956. Today, Dijkstra&#8217;s algorithm finds wide application across various fields of science, technology, and everyday life:</p>
+<p>The algorithm is named after the renowned Dutch computer scientist Edsger W. Dijkstra, who first conceived it in 1956. Today, Dijkstra&#8217;s algorithm is widely used in science, engineering, and everyday applications:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>GPS navigation systems:</strong> finding the fastest routes, taking into account distance and traffic conditions.</p>
+<p><strong>GPS navigation systems:</strong> finding the fastest routes while taking into account distances and traffic conditions.</p>
 </li>
 <li>
-<p><strong>Telecommunications networks:</strong> determining optimal paths for data routing (OSPF, IS-IS protocols).</p>
+<p><strong>Telecommunications networks:</strong> determining optimal paths for data routing, for example in OSPF and IS-IS protocols.</p>
 </li>
 <li>
-<p><strong>Robotics and Games:</strong> real-time path planning and object navigation through maps.</p>
+<p><strong>Robotics and games:</strong> real-time path planning and object navigation through maps.</p>
 </li>
 </ul>
 </div>
 <div class="sect2">
 <h3 id="_graph_representation_for_dijkstras_algorithm"><a class="anchor" href="#_graph_representation_for_dijkstras_algorithm"></a>Graph Representation for Dijkstra&#8217;s Algorithm</h3>
 <div class="paragraph">
-<p>For our demonstration of Dijkstra&#8217;s algorithm, we will use the graph shown in Figure 9.16. This graph consists of 6 vertices (labeled 0 through 5) connected by weighted edges.</p>
+<p>For our demonstration of Dijkstra&#8217;s algorithm, we will use the graph shown in Figure 9.16. This graph consists of six vertices, labeled from <code>0</code> to <code>5</code>, connected by weighted edges.</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
@@ -1326,7 +1326,7 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 <div class="title">Figure 9.16. Target topology setup for Dijkstra shortest path calculation</div>
 </div>
 <div class="paragraph">
-<p>In JavaScript, we represent this weighted structure as an object mapping node connections:</p>
+<p>In JavaScript, this weighted graph can be represented as an object whose keys are vertices and whose values describe adjacent vertices and edge weights:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1340,21 +1340,32 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 };</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>This representation corresponds to an undirected weighted graph. For example, the edge between vertices <code>0</code> and <code>1</code> has weight <code>48.3</code>, and therefore it appears in both directions:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">0: { 1: 48.3, ... }
+1: { 0: 48.3, ... }</code></pre>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_how_the_algorithm_works"><a class="anchor" href="#_how_the_algorithm_works"></a>How the Algorithm Works</h3>
 <div class="paragraph">
-<p>The Dijkstra algorithm is based on a simple but powerful principle: to iteratively construct many vertices for which one already knows the shortest path, and use them to detect shorter routes to remaining summits. The intelligence map of Deikstra’s algorithm is presented in Figure 9.17.</p>
+<p>Dijkstra&#8217;s algorithm is based on a simple but powerful principle: it iteratively builds the set of vertices for which the shortest distance from the start vertex is already known, and uses these vertices to improve the distance estimates for the remaining vertices.</p>
+</div>
+<div class="paragraph">
+<p>The mind map of Dijkstra&#8217;s algorithm is presented in Figure 9.17.</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
 <a class="image" href="_images/section_9/Fig9_17_Dijkstra_classic.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_17_Dijkstra_classic.svg" alt="Fig9 17 Dijkstra classic" width="100%"></a>
 </div>
-<div class="title">Figure 9.17. Mind map for Dijkstra’s algorithm</div>
+<div class="title">Figure 9.17. Mind map for Dijkstra&#8217;s algorithm</div>
 </div>
 <div class="paragraph">
-<p>Let’s look at the step-by-step work of this algorithm. Let’s start with vertex 0 and look for short paths to other vertices.<br>
-At the heart of the algorithm lies a simple yet powerful idea: iteratively build the set of vertices for which the shortest path is already known, and use them to discover shorter paths to the remaining vertices.</p>
+<p>Let us examine the algorithm step by step. We start from vertex <code>0</code> and find the shortest paths from this vertex to all other vertices of the graph.</p>
 </div>
 <div class="paragraph">
 <p>To track its progress, the algorithm maintains three essential data structures:</p>
@@ -1362,15 +1373,411 @@ At the heart of the algorithm lies a simple yet powerful idea: iteratively build
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><strong>Distance array (d):</strong> For each vertex $v$, we store the current length of the shortest known path from the start vertex $s$ to $v$. Initially, $d[s] = 0$ and $d[v] = \infty$ for all others.</p>
+<p><strong>Distance array (<code>distances</code> or <code>d</code>):</strong> for each vertex <code>v</code>, <code>distances[v]</code> stores the current length of the shortest known path from the start vertex <code>s</code> to <code>v</code>. Initially, <code>distances[s] = 0</code>, and <code>distances[v] = Infinity</code> for all other vertices.</p>
 </li>
 <li>
-<p><strong>Visited array (a):</strong> A marker array where $a[v] = 1$ indicates that the optimal path to $v$ has been resolved, and $a[v] = 0$ means it is still unprocessed.</p>
+<p><strong>Visited array (<code>visited</code>):</strong> a marker structure where <code>visited[v] = true</code> means that the shortest distance to vertex <code>v</code> has already been finalized. If <code>visited[v] = false</code>, the vertex is still unprocessed.</p>
+</li>
+<li>
+<p><strong>Previous array (<code>previous</code>):</strong> for each vertex <code>v</code>, <code>previous[v]</code> stores the predecessor of <code>v</code> in the currently known shortest path. This structure is used later to reconstruct the actual shortest paths.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>Imagine you are exploring a network of cities connected by roads of different lengths. You start at your home city (vertex $s$), expanding your perimeter step by step by always selecting the closest unresolved destination.</p>
+<p>The algorithm can be understood through a city-exploration analogy. Imagine a network of cities connected by roads of different lengths. You start at your home city and repeatedly choose the closest city whose shortest route has not yet been finalized. From that city, you check whether its roads provide shorter routes to neighboring cities.</p>
+</div>
+<div class="paragraph">
+<p>In the classic implementation shown here, the algorithm uses a linear search to find the unvisited vertex with the smallest current distance. This makes the implementation simple and clear for educational purposes.</p>
+</div>
+<div class="paragraph">
+<p>The functions used in this implementation are summarized in the following table.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 3. Functions used in the classic implementation of Dijkstra&#8217;s algorithm</caption>
+<colgroup>
+<col style="width: 8.3333%;">
+<col style="width: 16.6666%;">
+<col style="width: 25%;">
+<col style="width: 33.3333%;">
+<col style="width: 16.6668%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Function</th>
+<th class="tableblock halign-left valign-top">Arguments</th>
+<th class="tableblock halign-left valign-top">Purpose</th>
+<th class="tableblock halign-left valign-top">Content</th>
+<th class="tableblock halign-left valign-top">Illustration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dijkstra</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>graph</code>, <code>startVertex</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Main function of the algorithm.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initializes auxiliary data structures, repeatedly selects the unvisited vertex with the smallest known distance, relaxes its outgoing edges, and returns the final shortest distances and predecessors.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Main control flow of the algorithm. If a separate diagram is added, it can be referenced as <code>Fig9_18_dijkstra.svg</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getVerticesList</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>graph</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Builds the list of graph vertices.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extracts all vertex names or indices from the graph representation and returns them as a list.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Fig9_18_getVerticesList.svg</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>initializeDistances</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>vertices</code>, <code>startVertex</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initializes the distance array.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the distance from the start vertex to itself as <code>0</code>. Sets the distance to all other vertices as <code>Infinity</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Fig9_19_initialization.svg</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>initializeVisited</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>vertices</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initializes the visited marker array.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Marks all vertices as unvisited. For each vertex <code>v</code>, sets <code>visited[v] = false</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Fig9_19_initialization.svg</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>initializePrevious</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>vertices</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initializes the predecessor array.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the predecessor of each vertex to <code>null</code>. This structure is later used to reconstruct shortest paths.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Fig9_19_initialization.svg</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findMinDistanceVertex</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>distances</code>, <code>visited</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Finds the next vertex to process.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Searches among all unvisited vertices and returns the vertex with the smallest current distance. If no reachable unvisited vertex exists, returns <code>null</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Fig9_20_findMinDistanceVertex.svg</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>markVertexVisited</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>visited</code>, <code>vertex</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Marks the selected vertex as processed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets <code>visited[vertex] = true</code>, meaning that the shortest distance to this vertex has been finalized.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Fig9_21_markVertexVisited.svg</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>relaxEdges</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>graph</code>, <code>currentVertex</code>, <code>distances</code>, <code>previous</code>, <code>visited</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Updates distance estimates for neighboring vertices.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For each outgoing edge from <code>currentVertex</code> to a neighboring vertex, checks whether the path through <code>currentVertex</code> is shorter. If it is shorter, updates <code>distances[neighbor]</code> and <code>previous[neighbor]</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Fig9_22_relaxEdges.svg</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_drakon_diagrams_of_the_algorithm_functions"><a class="anchor" href="#_drakon_diagrams_of_the_algorithm_functions"></a>DRAKON Diagrams of the Algorithm Functions</h3>
+<div class="paragraph">
+<p>The implementation of Dijkstra&#8217;s algorithm is divided into several small functions. Each of them performs one clearly defined operation. This decomposition makes the algorithm easier to understand and easier to verify.</p>
+</div>
+<div class="paragraph">
+<p>The first helper function builds the list of graph vertices. This list is required to initialize the auxiliary data structures and to iterate over vertices during the search for the next vertex to process.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<a class="image" href="_images/section_9/Fig9_18_getVerticesList.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_18_getVerticesList.svg" alt="Fig9 18 getVerticesList" width="100%"></a>
+</div>
+<div class="title">Figure 9.18. Building the list of graph vertices</div>
+</div>
+<div class="paragraph">
+<p>The next group of functions initializes the main data structures used by the algorithm: the distance array, the visited array, and the predecessor array.</p>
+</div>
+<div class="imageblock unresolved text-center">
+<div class="content">
+<a class="image" href="section_9/Fig9_19_initialization.svg" target="_blank" rel="noopener"><img src="section_9/Fig9_19_initialization.svg" alt="Fig9 19 initialization" width="100%"></a>
+</div>
+<div class="title">Figure 9.19. Initialization of distance, visited, and predecessor arrays</div>
+</div>
+<div class="paragraph">
+<p>After initialization, the algorithm must repeatedly choose the unvisited vertex with the smallest currently known distance. This operation is performed by the <code>findMinDistanceVertex</code> function.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<a class="image" href="_images/section_9/Fig9_20_findMinDistanceVertex.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_20_findMinDistanceVertex.svg" alt="Fig9 20 findMinDistanceVertex" width="100%"></a>
+</div>
+<div class="title">Figure 9.20. Finding the unvisited vertex with the minimum distance</div>
+</div>
+<div class="paragraph">
+<p>If such a vertex is found, it becomes the current vertex. The algorithm then marks it as processed. This means that the shortest distance to this vertex is now considered final.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<a class="image" href="_images/section_9/Fig9_21_markVertexVisited.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_21_markVertexVisited.svg" alt="Fig9 21 markVertexVisited" width="100%"></a>
+</div>
+<div class="title">Figure 9.21. Marking the selected vertex as processed</div>
+</div>
+<div class="paragraph">
+<p>The most important operation in the algorithm is edge relaxation. During this step, the algorithm checks whether a shorter path to each neighboring vertex can be obtained through the current vertex.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<a class="image" href="_images/section_9/Fig9_22_relaxEdges.svg" target="_blank" rel="noopener"><img src="_images/section_9/Fig9_22_relaxEdges.svg" alt="Fig9 22 relaxEdges" width="100%"></a>
+</div>
+<div class="title">Figure 9.22. Updating distance estimates for neighboring vertices</div>
+</div>
+<div class="paragraph">
+<p>For an edge from vertex <code>u</code> to vertex <code>v</code> with weight <code>w(u, v)</code>, the relaxation condition is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">distances[u] + w(u, v) &lt; distances[v]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If this condition is true, the algorithm updates the current distance estimate:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">distances[v] = distances[u] + w(u, v)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and records the predecessor of vertex <code>v</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">previous[v] = u</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Thus, relaxation performs two tasks at once:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>improves the shortest known distance to a vertex;</p>
+</li>
+<li>
+<p>stores information needed to reconstruct the shortest path.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_general_control_flow"><a class="anchor" href="#_general_control_flow"></a>General Control Flow</h3>
+<div class="paragraph">
+<p>The overall logic of the algorithm can be described as follows:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Build the list of graph vertices.</p>
+</li>
+<li>
+<p>Initialize the <code>distances</code>, <code>visited</code>, and <code>previous</code> structures.</p>
+</li>
+<li>
+<p>Set the distance to the start vertex to <code>0</code>.</p>
+</li>
+<li>
+<p>Find the unvisited vertex with the smallest current distance.</p>
+</li>
+<li>
+<p>Mark this vertex as visited.</p>
+</li>
+<li>
+<p>Relax all outgoing edges from this vertex.</p>
+</li>
+<li>
+<p>Repeat the process until there is no reachable unvisited vertex left.</p>
+</li>
+<li>
+<p>Return the final <code>distances</code> and <code>previous</code> structures.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>A JavaScript implementation of the main function can be written as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">function dijkstra(graph, startVertex) {
+    const vertices = getVerticesList(graph);
+
+    const distances = initializeDistances(vertices, startVertex);
+    const visited = initializeVisited(vertices);
+    const previous = initializePrevious(vertices);
+
+    let currentVertex = findMinDistanceVertex(distances, visited);
+
+    while (currentVertex !== null) {
+        markVertexVisited(visited, currentVertex);
+        relaxEdges(graph, currentVertex, distances, previous, visited);
+
+        currentVertex = findMinDistanceVertex(distances, visited);
+    }
+
+    return {
+        distances: distances,
+        previous: previous
+    };
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The returned object contains two results:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>distances</code> — the lengths of the shortest paths from the start vertex to all reachable vertices;</p>
+</li>
+<li>
+<p><code>previous</code> — predecessor information that allows the actual shortest paths to be reconstructed.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_result_for_the_example_graph"><a class="anchor" href="#_result_for_the_example_graph"></a>Result for the Example Graph</h3>
+<div class="paragraph">
+<p>Let us run the algorithm from vertex <code>0</code>. Initially, the distance to vertex <code>0</code> is equal to <code>0</code>, while the distances to all other vertices are set to <code>Infinity</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">distances[0] = 0
+distances[1] = Infinity
+distances[2] = Infinity
+distances[3] = Infinity
+distances[4] = Infinity
+distances[5] = Infinity</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After the algorithm finishes, the shortest distances from vertex <code>0</code> are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 4. Shortest distances from vertex 0</caption>
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 33.3333%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Vertex</th>
+<th class="tableblock halign-left valign-top">Shortest distance from vertex <code>0</code></th>
+<th class="tableblock halign-left valign-top">Previous vertex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>null</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>48.3</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>0</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>2</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>40.7</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>0</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>3</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>75.6</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>2</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>4</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>60.3</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>25.4</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>0</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>For example, the shortest path from vertex <code>0</code> to vertex <code>4</code> is reconstructed using the <code>previous</code> structure:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">4 &lt;- 5 &lt;- 0</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Reading this sequence in reverse order gives the path:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">0 -&gt; 5 -&gt; 4</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The total length of this path is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">25.4 + 34.9 = 60.3</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Similarly, the shortest path from vertex <code>0</code> to vertex <code>3</code> is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">0 -&gt; 2 -&gt; 3</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>with total length:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">40.7 + 34.9 = 75.6</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_complexity"><a class="anchor" href="#_complexity"></a>Complexity</h3>
+<div class="paragraph">
+<p>In this classic implementation, the function <code>findMinDistanceVertex</code> performs a linear scan over all vertices. Since it can be called up to <code>V</code> times, where <code>V</code> is the number of vertices, the vertex-selection part has complexity:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">O(V^2)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The relaxation of edges contributes:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">O(E)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where <code>E</code> is the number of edges.</p>
+</div>
+<div class="paragraph">
+<p>Therefore, the total time complexity of this classic implementation is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">O(V^2 + E)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For dense graphs, this is often written simply as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">O(V^2)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>More advanced implementations use a priority queue or a min-heap to select the next vertex more efficiently, but the classic version shown here is easier to understand and is well suited for explaining the main idea of Dijkstra&#8217;s algorithm.</p>
 </div>
 </div>
 </div>
