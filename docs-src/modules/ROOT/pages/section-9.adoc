@@ -762,31 +762,31 @@ The first helper function builds the list of graph vertices. This list is requir
 
 [.text-center]
 .Figure 9.18. Building the list of graph vertices
-image::section_9/Fig9_18_getVerticesList.svg[width=100%, link=self, window="_blank"]
+image::section_9/Fig9_18_getVerticesList.svg[width=75%, link=self, window="_blank"]
 
 The next group of functions initializes the main data structures used by the algorithm: the distance array, the visited array, and the predecessor array.
 
 [.text-center]
 .Figure 9.19. Initialization of distance, visited, and predecessor arrays
-image::section_9/Fig9_19_initialization.svg[width=100%, link=self, window="_blank"]
+image::section_9/Fig9_19_initialization.svg[width=75%, link=self, window="_blank"]
 
 After initialization, the algorithm must repeatedly choose the unvisited vertex with the smallest currently known distance. This operation is performed by the `findMinDistanceVertex` function.
 
 [.text-center]
 .Figure 9.20. Finding the unvisited vertex with the minimum distance
-image::section_9/Fig9_20_findMinDistanceVertex.svg[width=100%, link=self, window="_blank"]
+image::section_9/Fig9_20_findMinDistanceVertex.svg[width=75%, link=self, window="_blank"]
 
 If such a vertex is found, it becomes the current vertex. The algorithm then marks it as processed. This means that the shortest distance to this vertex is now considered final.
 
 [.text-center]
 .Figure 9.21. Marking the selected vertex as processed
-image::section_9/Fig9_21_markVertexVisited.svg[width=100%, link=self, window="_blank"]
+image::section_9/Fig9_21_markVertexVisited.svg[width=75%, link=self, window="_blank"]
 
 The most important operation in the algorithm is edge relaxation. During this step, the algorithm checks whether a shorter path to each neighboring vertex can be obtained through the current vertex.
 
 [.text-center]
 .Figure 9.22. Updating distance estimates for neighboring vertices
-image::section_9/Fig9_22_relaxEdges.svg[width=100%, link=self, window="_blank"]
+image::section_9/Fig9_22_relaxEdges.svg[width=75%, link=self, window="_blank"]
 
 For an edge from vertex `u` to vertex `v` with weight `w(u, v)`, the relaxation condition is:
 
