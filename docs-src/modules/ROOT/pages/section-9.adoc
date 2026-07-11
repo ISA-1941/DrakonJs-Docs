@@ -9,17 +9,6 @@
 
 === Glossary of Basic Graph Terms
 
-Before we dive into the algorithms, let us align our terminology. In the context of engineering data structures, these terms have precise meanings:
-
-Vertex (Node):: The fundamental unit of a graph, representing an entity (e.g., a city, a router, or a data object).
-Edge (Arc):: A connection between two vertices. In directed graphs, an edge is often called an Arc.
-Incident:: An edge is incident to a vertex if the vertex is one of the edge's two endpoints.
-Adjacent:: Two vertices are adjacent if they are connected by a common edge.
-Degree (deg(v)):: The count of edges incident to vertex v.
-Loop:: An edge that connects a vertex to itself.
-Path:: A sequence of edges that allows you to travel from one vertex to another.
-Cycle:: A path that starts and ends at the same vertex.
-
 This section discusses data structures such as graphs. In mathematics, a graph is a structure consisting of vertices (nodes) and edges (connections) that connect these vertices.
 
 In general, graphs share many similarities with trees, and one can consider trees as a special case of graphs. However, the practical value of graphs in solving real-world problems is much greater. Many tasks can be reduced to considering a set of objects whose properties are described by the relationships between them.
