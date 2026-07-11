@@ -1,40 +1,44 @@
 {
     "history": [
         {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/demonstrateStepByStep.drakon",
+            "whenOpened": "2026-07-11T07:21:28.578Z"
+        },
+        {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/dijkstra.drakon",
-            "whenOpened": "2026-07-09T13:28:40.628Z"
+            "whenOpened": "2026-07-11T07:20:18.659Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/markVertexVisited.drakon",
+            "whenOpened": "2026-07-11T07:17:30.883Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/main.drakon",
+            "whenOpened": "2026-07-11T07:16:34.842Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/initializeDistances.drakon",
+            "whenOpened": "2026-07-11T07:14:15.573Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/getVerticesList.drakon",
-            "whenOpened": "2026-07-09T08:09:48.519Z"
+            "whenOpened": "2026-07-11T07:05:15.988Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/initializeVisited.drakon",
+            "whenOpened": "2026-07-11T07:01:48.079Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/initializePrevious.drakon",
+            "whenOpened": "2026-07-11T07:01:46.511Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/findMinDistanceVertex.drakon",
-            "whenOpened": "2026-07-09T08:09:47.232Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/demonstrateStepByStep.drakon",
-            "whenOpened": "2026-07-09T08:09:42.368Z"
+            "whenOpened": "2026-07-10T20:45:47.373Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/allVerticesVisited.drakon",
             "whenOpened": "2026-07-09T08:09:40.704Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/main.drakon",
-            "whenOpened": "2026-07-09T08:09:23.457Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/initializeVisited.drakon",
-            "whenOpened": "2026-07-09T08:03:10.168Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/initializePrevious.drakon",
-            "whenOpened": "2026-07-09T08:03:07.653Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_9/Dijkstra/initializeDistances.drakon",
-            "whenOpened": "2026-07-09T08:03:03.342Z"
         }
     ]
 }

@@ -632,26 +632,25 @@ This makes the module useful as an educational example for understanding:
 
 The same idea can be used as a basis for studying transportation logistics, route planning, and optimization problems.
 
-
 == 9.5. Dijkstra's Algorithm
 
-The Dijkstra algorithm is designed to find the shortest paths from a given vertex to all other vertices in a graph, provided that all edge weights are non-negative. This condition is essential for the algorithm to work correctly and guarantees that the found paths are indeed the shortest possible.
+Dijkstra's algorithm is designed to find the shortest paths from a given start vertex to all other vertices in a weighted graph, provided that all edge weights are non-negative. This condition is essential: Dijkstra's algorithm works correctly only when every edge weight is greater than or equal to zero.
 
-The algorithm is named after the renowned Dutch computer scientist Edsger W. Dijkstra, who first conceived it in 1956. Today, Dijkstra's algorithm finds wide application across various fields of science, technology, and everyday life:
+The algorithm is named after the renowned Dutch computer scientist Edsger W. Dijkstra, who first conceived it in 1956. Today, Dijkstra's algorithm is widely used in science, engineering, and everyday applications:
 
-- *GPS navigation systems:* finding the fastest routes, taking into account distance and traffic conditions.
-- *Telecommunications networks:* determining optimal paths for data routing (OSPF, IS-IS protocols).
-- *Robotics and Games:* real-time path planning and object navigation through maps.
+- *GPS navigation systems:* finding the fastest routes while taking into account distances and traffic conditions.
+- *Telecommunications networks:* determining optimal paths for data routing, for example in OSPF and IS-IS protocols.
+- *Robotics and games:* real-time path planning and object navigation through maps.
 
 === Graph Representation for Dijkstra's Algorithm
 
-For our demonstration of Dijkstra's algorithm, we will use the graph shown in Figure 9.16. This graph consists of 6 vertices (labeled 0 through 5) connected by weighted edges.
+For our demonstration of Dijkstra's algorithm, we will use the graph shown in Figure 9.16. This graph consists of six vertices, labeled from `0` to `5`, connected by weighted edges.
 
 [.text-center]
 .Figure 9.16. Target topology setup for Dijkstra shortest path calculation
 image::section_9/Fig9_16_exampleGraph.svg[width=50%, link=self, window="_blank"]
 
-In JavaScript, we represent this weighted structure as an object mapping node connections:
+In JavaScript, this weighted graph can be represented as an object whose keys are vertices and whose values describe adjacent vertices and edge weights:
 
 [source,javascript]
 ----
@@ -665,20 +664,314 @@ const graph = {
 };
 ----
 
+This representation corresponds to an undirected weighted graph. For example, the edge between vertices `0` and `1` has weight `48.3`, and therefore it appears in both directions:
+
+[source,javascript]
+----
+0: { 1: 48.3, ... }
+1: { 0: 48.3, ... }
+----
+
 === How the Algorithm Works
 
-The Dijkstra algorithm is based on a simple but powerful principle: to iteratively construct many vertices for which one already knows the shortest path, and use them to detect shorter routes to remaining summits. The intelligence map of Deikstra’s algorithm is presented in Figure 9.17.
+Dijkstra's algorithm is based on a simple but powerful principle: it iteratively builds the set of vertices for which the shortest distance from the start vertex is already known, and uses these vertices to improve the distance estimates for the remaining vertices.
+
+The mind map of Dijkstra's algorithm is presented in Figure 9.17.
 
 [.text-center]
-.Figure 9.17. Mind map for Dijkstra’s algorithm
+.Figure 9.17. Mind map for Dijkstra's algorithm
 image::section_9/Fig9_17_Dijkstra_classic.svg[width=100%, link=self, window="_blank"]
 
-Let’s look at the step-by-step work of this algorithm. Let’s start with vertex 0 and look for short paths to other vertices.
-At the heart of the algorithm lies a simple yet powerful idea: iteratively build the set of vertices for which the shortest path is already known, and use them to discover shorter paths to the remaining vertices.
+Let us examine the algorithm step by step. We start from vertex `0` and find the shortest paths from this vertex to all other vertices of the graph.
 
 To track its progress, the algorithm maintains three essential data structures:
 
-1. *Distance array (d):* For each vertex $v$, we store the current length of the shortest known path from the start vertex $s$ to $v$. Initially, $d[s] = 0$ and $d[v] = \infty$ for all others.
-2. *Visited array (a):* A marker array where $a[v] = 1$ indicates that the optimal path to $v$ has been resolved, and $a[v] = 0$ means it is still unprocessed.
+1. *Distance array (`distances` or `d`):* for each vertex `v`, `distances[v]` stores the current length of the shortest known path from the start vertex `s` to `v`. Initially, `distances[s] = 0`, and `distances[v] = Infinity` for all other vertices.
 
-Imagine you are exploring a network of cities connected by roads of different lengths. You start at your home city (vertex $s$), expanding your perimeter step by step by always selecting the closest unresolved destination.
+2. *Visited array (`visited`):* a marker structure where `visited[v] = true` means that the shortest distance to vertex `v` has already been finalized. If `visited[v] = false`, the vertex is still unprocessed.
+
+3. *Previous array (`previous`):* for each vertex `v`, `previous[v]` stores the predecessor of `v` in the currently known shortest path. This structure is used later to reconstruct the actual shortest paths.
+
+The algorithm can be understood through a city-exploration analogy. Imagine a network of cities connected by roads of different lengths. You start at your home city and repeatedly choose the closest city whose shortest route has not yet been finalized. From that city, you check whether its roads provide shorter routes to neighboring cities.
+
+In the classic implementation shown here, the algorithm uses a linear search to find the unvisited vertex with the smallest current distance. This makes the implementation simple and clear for educational purposes.
+
+The functions used in this implementation are summarized in the following table.
+
+[cols="1,2,3,4,2", options="header"]
+.Functions used in the classic implementation of Dijkstra's algorithm
+|===
+| Function | Arguments | Purpose | Content | Illustration
+
+| `dijkstra`
+| `graph`, `startVertex`
+| Main function of the algorithm.
+| Initializes auxiliary data structures, repeatedly selects the unvisited vertex with the smallest known distance, relaxes its outgoing edges, and returns the final shortest distances and predecessors.
+| Main control flow of the algorithm. If a separate diagram is added, it can be referenced as `Fig9_18_dijkstra.svg`.
+
+| `getVerticesList`
+| `graph`
+| Builds the list of graph vertices.
+| Extracts all vertex names or indices from the graph representation and returns them as a list.
+| `Fig9_18_getVerticesList.svg`
+
+| `initializeDistances`
+| `vertices`, `startVertex`
+| Initializes the distance array.
+| Sets the distance from the start vertex to itself as `0`. Sets the distance to all other vertices as `Infinity`.
+| `Fig9_19_initialization.svg`
+
+| `initializeVisited`
+| `vertices`
+| Initializes the visited marker array.
+| Marks all vertices as unvisited. For each vertex `v`, sets `visited[v] = false`.
+| `Fig9_19_initialization.svg`
+
+| `initializePrevious`
+| `vertices`
+| Initializes the predecessor array.
+| Sets the predecessor of each vertex to `null`. This structure is later used to reconstruct shortest paths.
+| `Fig9_19_initialization.svg`
+
+| `findMinDistanceVertex`
+| `distances`, `visited`
+| Finds the next vertex to process.
+| Searches among all unvisited vertices and returns the vertex with the smallest current distance. If no reachable unvisited vertex exists, returns `null`.
+| `Fig9_20_findMinDistanceVertex.svg`
+
+| `markVertexVisited`
+| `visited`, `vertex`
+| Marks the selected vertex as processed.
+| Sets `visited[vertex] = true`, meaning that the shortest distance to this vertex has been finalized.
+| `Fig9_21_markVertexVisited.svg`
+
+| `relaxEdges`
+| `graph`, `currentVertex`, `distances`, `previous`, `visited`
+| Updates distance estimates for neighboring vertices.
+| For each outgoing edge from `currentVertex` to a neighboring vertex, checks whether the path through `currentVertex` is shorter. If it is shorter, updates `distances[neighbor]` and `previous[neighbor]`.
+| `Fig9_22_relaxEdges.svg`
+
+|===
+
+
+=== DRAKON Diagrams of the Algorithm Functions
+
+The implementation of Dijkstra's algorithm is divided into several small functions. Each of them performs one clearly defined operation. This decomposition makes the algorithm easier to understand and easier to verify.
+
+The first helper function builds the list of graph vertices. This list is required to initialize the auxiliary data structures and to iterate over vertices during the search for the next vertex to process.
+
+[.text-center]
+.Figure 9.18. Building the list of graph vertices
+image::section_9/Fig9_18_getVerticesList.svg[width=100%, link=self, window="_blank"]
+
+The next group of functions initializes the main data structures used by the algorithm: the distance array, the visited array, and the predecessor array.
+
+[.text-center]
+.Figure 9.19. Initialization of distance, visited, and predecessor arrays
+image::section_9/Fig9_19_initialization.svg[width=100%, link=self, window="_blank"]
+
+After initialization, the algorithm must repeatedly choose the unvisited vertex with the smallest currently known distance. This operation is performed by the `findMinDistanceVertex` function.
+
+[.text-center]
+.Figure 9.20. Finding the unvisited vertex with the minimum distance
+image::section_9/Fig9_20_findMinDistanceVertex.svg[width=100%, link=self, window="_blank"]
+
+If such a vertex is found, it becomes the current vertex. The algorithm then marks it as processed. This means that the shortest distance to this vertex is now considered final.
+
+[.text-center]
+.Figure 9.21. Marking the selected vertex as processed
+image::section_9/Fig9_21_markVertexVisited.svg[width=100%, link=self, window="_blank"]
+
+The most important operation in the algorithm is edge relaxation. During this step, the algorithm checks whether a shorter path to each neighboring vertex can be obtained through the current vertex.
+
+[.text-center]
+.Figure 9.22. Updating distance estimates for neighboring vertices
+image::section_9/Fig9_22_relaxEdges.svg[width=100%, link=self, window="_blank"]
+
+For an edge from vertex `u` to vertex `v` with weight `w(u, v)`, the relaxation condition is:
+
+[source,text]
+----
+distances[u] + w(u, v) < distances[v]
+----
+
+If this condition is true, the algorithm updates the current distance estimate:
+
+[source,text]
+----
+distances[v] = distances[u] + w(u, v)
+----
+
+and records the predecessor of vertex `v`:
+
+[source,text]
+----
+previous[v] = u
+----
+
+Thus, relaxation performs two tasks at once:
+
+- improves the shortest known distance to a vertex;
+- stores information needed to reconstruct the shortest path.
+
+=== General Control Flow
+
+The overall logic of the algorithm can be described as follows:
+
+1. Build the list of graph vertices.
+2. Initialize the `distances`, `visited`, and `previous` structures.
+3. Set the distance to the start vertex to `0`.
+4. Find the unvisited vertex with the smallest current distance.
+5. Mark this vertex as visited.
+6. Relax all outgoing edges from this vertex.
+7. Repeat the process until there is no reachable unvisited vertex left.
+8. Return the final `distances` and `previous` structures.
+
+A JavaScript implementation of the main function can be written as follows:
+
+[source,javascript]
+----
+function dijkstra(graph, startVertex) {
+    const vertices = getVerticesList(graph);
+
+    const distances = initializeDistances(vertices, startVertex);
+    const visited = initializeVisited(vertices);
+    const previous = initializePrevious(vertices);
+
+    let currentVertex = findMinDistanceVertex(distances, visited);
+
+    while (currentVertex !== null) {
+        markVertexVisited(visited, currentVertex);
+        relaxEdges(graph, currentVertex, distances, previous, visited);
+
+        currentVertex = findMinDistanceVertex(distances, visited);
+    }
+
+    return {
+        distances: distances,
+        previous: previous
+    };
+}
+----
+
+The returned object contains two results:
+
+- `distances` — the lengths of the shortest paths from the start vertex to all reachable vertices;
+- `previous` — predecessor information that allows the actual shortest paths to be reconstructed.
+
+=== Result for the Example Graph
+
+Let us run the algorithm from vertex `0`. Initially, the distance to vertex `0` is equal to `0`, while the distances to all other vertices are set to `Infinity`.
+
+[source,text]
+----
+distances[0] = 0
+distances[1] = Infinity
+distances[2] = Infinity
+distances[3] = Infinity
+distances[4] = Infinity
+distances[5] = Infinity
+----
+
+After the algorithm finishes, the shortest distances from vertex `0` are:
+
+[cols="1,2,3", options="header"]
+.Shortest distances from vertex 0
+|===
+| Vertex | Shortest distance from vertex `0` | Previous vertex
+
+| `0`
+| `0`
+| `null`
+
+| `1`
+| `48.3`
+| `0`
+
+| `2`
+| `40.7`
+| `0`
+
+| `3`
+| `75.6`
+| `2`
+
+| `4`
+| `60.3`
+| `5`
+
+| `5`
+| `25.4`
+| `0`
+
+|===
+
+For example, the shortest path from vertex `0` to vertex `4` is reconstructed using the `previous` structure:
+
+[source,text]
+----
+4 <- 5 <- 0
+----
+
+Reading this sequence in reverse order gives the path:
+
+[source,text]
+----
+0 -> 5 -> 4
+----
+
+The total length of this path is:
+
+[source,text]
+----
+25.4 + 34.9 = 60.3
+----
+
+Similarly, the shortest path from vertex `0` to vertex `3` is:
+
+[source,text]
+----
+0 -> 2 -> 3
+----
+
+with total length:
+
+[source,text]
+----
+40.7 + 34.9 = 75.6
+----
+
+=== Complexity
+
+In this classic implementation, the function `findMinDistanceVertex` performs a linear scan over all vertices. Since it can be called up to `V` times, where `V` is the number of vertices, the vertex-selection part has complexity:
+
+[source,text]
+----
+O(V^2)
+----
+
+The relaxation of edges contributes:
+
+[source,text]
+----
+O(E)
+----
+
+where `E` is the number of edges.
+
+Therefore, the total time complexity of this classic implementation is:
+
+[source,text]
+----
+O(V^2 + E)
+----
+
+For dense graphs, this is often written simply as:
+
+[source,text]
+----
+O(V^2)
+----
+
+More advanced implementations use a priority queue or a min-heap to select the next vertex more efficiently, but the classic version shown here is easier to understand and is well suited for explaining the main idea of Dijkstra's algorithm.
+
