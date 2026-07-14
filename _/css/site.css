@@ -1,91 +1,99 @@
-/* 1. ГЛОБАЛЬНЫЙ ФОН */
-html, body {
-    background-color: #1a2b3c !important;
-    color: #e0e0e0 !important;
-    margin: 0; padding: 0; height: 100%;
-}
+(function() {
+  'use strict';
 
-/* 2. НАВИГАЦИЯ */
-.navbar { position: fixed !important; top: 0; width: 100%; height: 4rem; z-index: 101; }
-.nav-container {
-    position: fixed !important; top: 4rem !important; left: 0 !important;
-    width: 340px !important; height: calc(100vh - 4rem) !important;
-    background-color: #1a2b3c !important; border-right: 1px solid #333 !important;
-    z-index: 100; overflow-y: auto;
-}
-.nav-menu a, .nav-link, .nav-text, .nav-item { color: #ffffff !important; text-decoration: none !important; }
-.is-active > a, .is-active > .nav-link { color: #4da6ff !important; font-weight: bold !important; }
+  const navToggle = document.querySelector('.nav-toggle');
+  const tocToggle = document.querySelector('.toc-toggle');
+  const navContainer = document.querySelector('.nav-container');
+  const tocSidebar = document.querySelector('aside.toc.sidebar');
+  const toolbar = document.querySelector('.toolbar');
+  const focusBtn = document.getElementById('focus-toggle');
 
-/* 3. ОСНОВНОЙ КОНТЕНТ */
-.main { position: relative !important; margin-left: 340px !important; background-color: #1a1a1a !important; }
-.doc {
-    max-width: 1000px !important; margin: 0 auto !important; padding: 2rem !important;
-    font-size: 1.25rem !important; box-sizing: border-box !important; 
-    background-color: transparent !important;
-}
+  let navOpen = false;
+  let tocOpen = false;
+  let focusMode = false;
 
-/* 4. ТАБЛИЦЫ (ВОЗВРАЩАЕМ ГРАНИЦЫ) */
-.doc table {
-    border-collapse: collapse !important;
-    border: 3px solid #b0b0b0 !important; /* Светло-серый, почти стальной цвет */
-    width: 100%; 
-    margin: 1.5rem 0;
-    background-color: rgba(255, 255, 255, 0.15) !important;
-}
+  function closeNav() {
+    navOpen = false;
+    if (navContainer) navContainer.classList.remove('is-active');
+    if (navToggle) navToggle.classList.remove('is-active');
+  }
 
-/* Внутренние линии ячеек — без них таблица кажется пустой */
-.doc table th, 
-.doc table td {
-    border: 1px solid #888888 !important; /* Четкие внутренние перегородки */
-    padding: 12px !important;
-}
+  function closeToc() {
+    tocOpen = false;
+    if (tocSidebar) tocSidebar.classList.remove('is-open');
+    if (tocToggle) tocToggle.classList.remove('is-active');
+  }
 
-/* Сделаем заголовок чуть ярче для наглядности */
-.doc table thead {
-    border-bottom: 3px solid #4da6ff !important; /* Синяя черта под заголовком */
-}
+  function closeAll() {
+    closeNav();
+    closeToc();
+  }
 
-/* 5. ИЛЛЮСТРАЦИИ (ФИНАЛЬНЫЙ ИСПРАВЛЕННЫЙ ВАРИАНТ) */
-.doc .imageblock { 
-    text-align: center !important; 
-    margin: 2rem 0 !important; 
-}
+  // Left hamburger: Book TOC
+  if (navToggle && navContainer) {
+    navToggle.addEventListener('click', function() {
+      navOpen = !navOpen;
+      navContainer.classList.toggle('is-active', navOpen);
+      navToggle.classList.toggle('is-active', navOpen);
+      if (tocOpen) closeToc();
+    });
+  }
 
-.doc .imageblock img, 
-.doc img {
-    /* 1. ПОДЛОЖКА: увеличил до 0.15, чтобы вы её ТОЧНО увидели */
-    background-color: rgba(255, 255, 255, 0.15) !important; 
-    
-    /* 2. РАМКА: стальная, чтобы зафиксировать границы */
-    border: 1px solid rgba(255, 255, 255, 0.3) !important;
-    
-    /* 3. ВОЗДУХ: большие отступы */
-    padding: 30px !important;
-    border-radius: 12px !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
-    
-    display: block;
-    margin: 1em auto;
-}
+  // Right hamburger: Section TOC
+  if (tocToggle && tocSidebar) {
+    tocToggle.addEventListener('click', function() {
+      tocOpen = !tocOpen;
+      tocSidebar.classList.toggle('is-open', tocOpen);
+      tocToggle.classList.toggle('is-active', tocOpen);
+      if (navOpen) closeNav();
+    });
+  }
 
-/* СПЕЦИАЛЬНО ДЛЯ SVG: ЧТОБЫ БЫЛИ ВИДНЫ РЕБРА */
-.doc img[src$=".svg"] {
-    /* Убираем invert! Он делает линии белыми, и они сливаются с подложкой.
-       Используем brightness, чтобы просто сделать черное темно-серым и четким. */
-    filter: brightness(1.2) contrast(1.1) !important;
-    mix-blend-mode: normal !important;
-}
-/* 6. БЛОКИ КОДА */
-.listingblock {
-    position: relative !important; background-color: #1e1e1e !important;
-    border: 2px solid #ededed !important; border-radius: 8px; margin: 2.5rem 0 !important;
-}
-pre.highlight { background-color: #1e1e1e !important; padding: 1.5rem !important; }
+  // Focus mode toggle
+  if (focusBtn) {
+    focusBtn.addEventListener('click', function() {
+      focusMode = !focusMode;
+      document.body.classList.toggle('focus-mode', focusMode);
+      focusBtn.innerHTML = focusMode ? '⊡' : '◉';
+      focusBtn.title = focusMode ? 'Exit focus mode' : 'Focus mode (Ctrl+F)';
+    });
+  }
 
-/* 7. ПОДСВЕТКА СИНТАКСИСА */
-.hljs-comment { color: #bbbbbb !important; }
-.hljs-keyword { color: #ff5f5f !important; font-weight: bold !important; }
-.hljs-string { color: #ffe082 !important; }
+  // Escape to close panels
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeAll();
+    if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
+      e.preventDefault();
+      if (focusBtn) focusBtn.click();
+    }
+  });
 
-/* 8. ИНТЕРФЕЙСНЫЙ МУСОР */
-aside.toc, .toc, .copy-button, .navbar-item.has-dropdown { display: none !important; }
+  // Click outside to close
+  document.addEventListener('click', function(e) {
+    if (navOpen && !navContainer.contains(e.target) && !navToggle.contains(e.target)) {
+      closeNav();
+    }
+    if (tocOpen && !tocSidebar.contains(e.target) && !tocToggle.contains(e.target)) {
+      closeToc();
+    }
+  });
+
+  // Auto-hide toolbar on scroll
+  let lastScrollY = 0;
+  window.addEventListener('scroll', function() {
+    const currentY = window.scrollY || document.documentElement.scrollTop;
+    const dir = currentY > lastScrollY ? 'down' : 'up';
+    lastScrollY = currentY;
+
+    if (!toolbar || focusMode) return;
+
+    if (currentY > 150 && dir === 'down') {
+      toolbar.style.transform = 'translateY(-100%)';
+      toolbar.style.transition = 'transform 0.25s ease';
+    } else {
+      toolbar.style.transform = 'translateY(0)';
+    }
+  }, { passive: true });
+
+  console.log('[DRAKON-UI] Navigation initialized');
+})();
