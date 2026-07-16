@@ -12,18 +12,14 @@
 */
 /* Custom layout fixes */
 
-/* Widen and center the main content area */
-.article .content {
-  max-width: 1160px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-}
+/* DRAKON custom layout */
 
-/* Widen the document itself */
 .doc {
   max-width: none !important;
-  width: 100%;
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.article .content {
+  max-width: 1160px;
 }
