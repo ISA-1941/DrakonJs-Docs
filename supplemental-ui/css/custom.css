@@ -10,11 +10,20 @@
   padding-right: 2rem;
 }
 */
-.doc {
-  max-width: none !important;
+/* Custom layout fixes */
+
+/* Widen and center the main content area */
+.article .content {
+  max-width: 1160px;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+}
+
+/* Widen the document itself */
+.doc {
+  max-width: none !important;
+  width: 100%;
   padding-left: 2rem;
   padding-right: 2rem;
-  outline: 3px solid red;
 }
