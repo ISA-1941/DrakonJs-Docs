@@ -1,10 +1,20 @@
 /* Custom layout fixes */
 
 /* Center main article text */
+/*
 .doc {
   max-width: 1160px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 2rem;
   padding-right: 2rem;
+}
+*/
+.doc {
+  max-width: none !important;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  outline: 3px solid red;
 }
