@@ -1,7 +1,7 @@
 /* Custom layout fixes */
 
 /* Center main article text */
-/*
+
 .doc {
   max-width: 1160px;
   margin-left: auto;
@@ -9,11 +9,11 @@
   padding-left: 2rem;
   padding-right: 2rem;
 }
-*/
+
 /* Custom layout fixes */
 
 /* DRAKON custom layout */
-
+/*
 .doc {
   max-width: none !important;
   padding-left: 2rem;
@@ -23,3 +23,4 @@
 .article .content {
   max-width: 1160px;
 }
+*/
