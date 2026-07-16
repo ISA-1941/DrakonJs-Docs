@@ -1,26 +1,43 @@
 /* Custom layout fixes */
 
-/* Center main article text */
-
-.doc {
-  max-width: 1160px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-/* Custom layout fixes */
-
-/* DRAKON custom layout */
 /*
+  DRAKON layout policy:
+  - do not override factory Antora site.css
+  - all local changes live here, in custom.css
+*/
+
+/* Let the document area use the available horizontal space */
 .doc {
   max-width: none !important;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  width: auto !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
 }
 
-.article .content {
-  max-width: 1160px;
+/* Make sure article containers do not impose a narrow width */
+.article,
+.article .doc {
+  max-width: none !important;
+  width: auto !important;
 }
-*/
+
+/* Keep readable content width inside the wider document area */
+.article .content {
+  max-width: 1160px !important;
+}
+
+/* TEST: custom.css visibility */
+body::before {
+  content: "custom.css loaded";
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  background: red;
+  color: white;
+  padding: 6px 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
