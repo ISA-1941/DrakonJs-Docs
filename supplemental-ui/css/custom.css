@@ -1,0 +1,8 @@
+/* Custom layout fixes */
+
+/* Center main article text */
+.doc {
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
