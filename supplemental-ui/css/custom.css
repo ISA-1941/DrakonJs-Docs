@@ -16,3 +16,8 @@ body::before {
 .doc {
   max-width: 70rem !important;
 }
+.doc .paragraph > p {
+  text-align: justify;
+  hyphens: auto;
+}
+
