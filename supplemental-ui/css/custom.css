@@ -1,43 +1,18 @@
-/* Custom layout fixes */
-
-/*
-  DRAKON layout policy:
-  - do not override factory Antora site.css
-  - all local changes live here, in custom.css
-*/
-
-/* Let the document area use the available horizontal space */
-.doc {
-  max-width: none !important;
-  width: auto !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  padding-left: 2rem !important;
-  padding-right: 2rem !important;
-}
-
-/* Make sure article containers do not impose a narrow width */
-.article,
-.article .doc {
-  max-width: none !important;
-  width: auto !important;
-}
-
-/* Keep readable content width inside the wider document area */
-.article .content {
-  max-width: 1160px !important;
-}
-
-/* TEST: custom.css visibility */
+/* Temporary red bar test: proves that custom.css is loaded */
 body::before {
-  content: "custom.css loaded";
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999999;
+  content: "CUSTOM CSS LOADED";
+  display: block;
   background: red;
   color: white;
-  padding: 6px 10px;
-  font-size: 16px;
   font-weight: bold;
+  text-align: center;
+  padding: 0.4rem;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+/* Make the main article area wider than the default Antora UI */
+.doc {
+  max-width: 70rem !important;
 }
