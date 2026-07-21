@@ -6,7 +6,7 @@ site:
 
 content:
   sources:
-    - url: .
+    - url: .git
       branches: design-reset
       start_path: docs-src
 
