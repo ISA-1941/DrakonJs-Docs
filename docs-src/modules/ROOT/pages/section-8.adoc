@@ -13,20 +13,30 @@ Binary trees as an abstract data type were discussed in Section 1. Here we will 
 .Figure 8.1. Basic tree terminology
 image::section_8/Fig8_1_Term.svg[width=50%, link=self, window="_blank"]
 
+[example.terminology]
+====
+. _Root_: The root of the tree is the only node with no incoming edges. It is the top node in the tree.
+. _Node_: The basic element of the tree. Each node has data and two references that can point to zero or more descendants.
+. _Edge_: A fundamental part of the tree used to connect two nodes.
+. _Path_: An ordered list of nodes connected by edges.
+. _Leaf_: A leaf node is a node that has no descendants.
+====
 
-    _Root_: The root of the tree is the only node with no incoming edges. It is the top node in the tree.
 
-    _Node_: The basic element of the tree. Each node has data and two references that can point to zero or more descendants.
 
-    _Edge_: A fundamental part of the tree used to connect two nodes.
+* _Root_: The root of the tree is the only node with no incoming edges. It is the top node in the tree.
 
-    _Path_: An ordered list of nodes connected by edges.
+* _Node_: The basic element of the tree. Each node has data and two references that can point to zero or more descendants.
 
-    _Leaf_: A leaf node is a node that has no descendants.
+* _Edge_: A fundamental part of the tree used to connect two nodes.
 
-    _Tree height_: The number of edges on the longest path between the root and a leaf.
+* _Path_: An ordered list of nodes connected by edges.
 
-    _Node level_: The number of edges on the path from the root node to that node.
+*_Leaf_: A leaf node is a node that has no descendants.
+
+* _Tree height_: The number of edges on the longest path between the root and a leaf.
+
+* _Node level_: The number of edges on the path from the root node to that node.
 
 The information structure of a binary tree is organized as follows (Figure 8.2):
 
@@ -36,27 +46,27 @@ image::section_8/Fig8_2_BSTree.svg[width=50%, link=self, window="_blank"]
 
 Several types of binary trees are discussed in the literature, the most important classification being based on node values:
 
-    - Binary Search Tree (BST);
+* - Binary Search Tree (BST);
 
-    - AVL Tree (Adelson-Velsky and Landis Tree);
+* - AVL Tree (Adelson-Velsky and Landis Tree);
 
-    - Red-Black Tree.
+* - Red-Black Tree.
 
-=== 8.2. Binary Search Tree
+=== 8.2. Binary Search Tree New
 
 ==== 8.2.1. Building a Binary Tree
 
 If the tree is organized such that, for each node, all node values of its left subtree are less than this node and all values of its right subtree are greater, it is called a binary search tree (BST). A BST is a recursive data structure because each subtree is also a tree. A BST has the following properties:
 
-    Each node retains a unique value.
+* - Each node retains a unique value;
 
-    Each node has zero, one, or two child nodes.
+* - Each node has zero, one, or two child nodes;
 
-    One node is referred to as the root node, which is at the top of the tree structure.
+* - One node is referred to as the root node, which is at the top of the tree structure;
 
-    Each node has only one parent node, except for the root node which has no parent.
+* - Each node has only one parent node, except for the root node which has no parent;
 
-    The value of each node is greater than that of its left child but less than that of its right child.
+* - The value of each node is greater than that of its left child but less than that of its right child.
 
 A binary search tree is built according to a specific algorithm. Consider the sequence of integers {11, 5, 17, 15, 1, 8, 19, 13, 21}, represented as a slice of numbers. First the root node {11} is formed, then in a loop for each node the method insertNode(tree, value) is called recursively (Figure 8.3a), which in turn calls the method createNode(value), which creates a new node (Figure 8.3b) в созданном дереве (Figure 8.3c).
 
@@ -135,11 +145,11 @@ image::section_8/Fig8_11_removeNode.svg[width=100%, , link=self, window="_blank"
 
 One of the basic tree operations is traversing tree nodes. Unlike linear data structures, where elements are traversed in a linear order, tree nodes can be traversed in a variety of ways.
 
-    Pre-order walk: Each ancestor node is visited before its descendants.
+* - Pre-order walk: Each ancestor node is visited before its descendants.
 
-    In-order walk: The left subtree is visited from bottom to top, then the root node, then the right subtree.
+* - In-order walk: The left subtree is visited from bottom to top, then the root node, then the right subtree.
 
-    Post-order walk: Descendants are visited first, then ancestors.
+* - Post-order walk: Descendants are visited first, then ancestors.
 
 All three cases, including the DRAKON diagrams, are shown in Figure 8.12.
 
@@ -169,13 +179,13 @@ In real life, ideal binary trees are almost never achieved. Programmers often tr
 
 The algorithms for such trees are based on the process of balancing the tree when a new node is inserted or an existing node is removed. The purpose of balancing is to reconstruct the tree so that the heights of the left and right subtrees do not differ by more than 1. The balance factor must satisfy the following conditions:
 
-    The allowable values are bf = -1, 0, and +1.
+* The allowable values are bf = -1, 0, and +1.
 
-    bf = -1 indicates that the right subtree "outweighs" the left subtree.
+*bf = -1 indicates that the right subtree "outweighs" the left subtree.
 
-    bf = +1 indicates that the left subtree "outweighs" the right subtree.
+* bf = +1 indicates that the left subtree "outweighs" the right subtree.
 
-    bf = 0 indicates that the tree contains an equal number of nodes on each side — that is, the tree is perfectly balanced.
+* bf = 0 indicates that the tree contains an equal number of nodes on each side — that is, the tree is perfectly balanced.
 
 The balancing algorithm in its most general form is presented in the following DRAKON diagram (Figure 8.15):
 
@@ -185,13 +195,13 @@ image::section_8/Fig8_15_buildingAvlTree.png[width=100%, link=self, window="_bla
 
 The balancing technique boils down to making circular movements of the nodes in four variants:
 
-    Right rotation (RR)
+* Right rotation (RR)
 
-    Left rotation (LL)
+* Left rotation (LL)
 
-    Right-left rotation (RL)
+* Right-left rotation (RL)
 
-    Left-right rotation (LR)
+* Left-right rotation (LR)
 
 Right rotation is performed when the root node has a balance factor bf = +2 and its left-hand child has a balance factor bf = +1 (Figure 8.16):
 
@@ -292,21 +302,21 @@ image::section_8/Fig8_29_redblackTree.svg[width=50%, link=self, window="_blank"]
 
 The nodes containing data (integers in this example) are called internal nodes. In addition, red-black trees contain imaginary "null" nodes associated with tree leaves, which are explicitly colored black (labeled "Null" in Figure 8.29). Red-black trees satisfy all properties of a binary search tree and must maintain the following specific invariants:
 
-    Each node is colored either red or black.
+* Each node is colored either red or black.
 
-    The root of the tree must be black. (Note: This invariant may be temporarily violated during the balancing process but must be restored before the operation completes.)
+* The root of the tree must be black. (Note: This invariant may be temporarily violated during the balancing process but must be restored before the operation completes.)
 
-    All leaves (NIL nodes) are black.
+* All leaves (NIL nodes) are black.
 
-    Both children of a red node must be black. Consequently, no two red nodes can appear consecutively on any path.
+* Both children of a red node must be black. Consequently, no two red nodes can appear consecutively on any path.
 
-    Every simple path from a node to any of its descendant leaves must contain the same number of black nodes.
+* Every simple path from a node to any of its descendant leaves must contain the same number of black nodes.
 
 Unlike AVL trees, where balance is enforced by limiting the height difference between subtrees, red-black tree balance is achieved by strictly enforcing the properties listed above. Inserting or removing a node can disrupt these invariants. Balance is restored using two primary operations: recoloring nodes and/or restructuring the tree (or subtrees) using specific rotations. The most critical of these constraints are Properties 4 and 5.
 
-    Property 4 mandates that two red nodes cannot be adjacent.
+* Property 4 mandates that two red nodes cannot be adjacent.
 
-    Property 5 builds on this by enforcing a uniform black height for all paths from any node to its leaf descendants. Regardless of the specific path taken, the count of black nodes remains constant.
+* Property 5 builds on this by enforcing a uniform black height for all paths from any node to its leaf descendants. Regardless of the specific path taken, the count of black nodes remains constant.
 
 ===== Mechanical Analogy for Balancing: The Chandelier and the Balancing Machine
 
@@ -316,29 +326,29 @@ To facilitate conceptual clarity, we employ a mechanical analogy. Since the "roo
 
 In this model:
 
-    Black balls are solid and heavy, providing stability and physical equilibrium. Their weight is defined as 1 unit.
+* Black balls are solid and heavy, providing stability and physical equilibrium. Their weight is defined as 1 unit.
 
-    Red balls are hollow, decorative, and virtually weightless (0 units). They serve as a flexible resource that can be "hardened" into black balls (weights) when necessary.
+* Red balls are hollow, decorative, and virtually weightless (0 units). They serve as a flexible resource that can be "hardened" into black balls (weights) when necessary.
 
 All NIL leaves are considered black and weightless termination points.
 
 The structural equilibrium (balance) is defined by two simple conditions:
 
-    The total weight (the number of black balls) on any path from the root to any leaf must be equal.
+* The total weight (the number of black balls) on any path from the root to any leaf must be equal.
 
-    Two red balls in a row are forbidden — this creates a "weak spot" in the chain, even though it does not alter the branch's overall weight.
+* Two red balls in a row are forbidden — this creates a "weak spot" in the chain, even though it does not alter the branch's overall weight.
 
 Black height is the fundamental metric in this engineering model, representing the total "weight" (the number of black nodes) of a specific branch. Properties 4 and 5 work together to ensure structural integrity. While red nodes allow branches to stretch, the rules guarantee that the longest path (alternating black weights and red spacers) is never more than twice the length of the shortest path (consisting only of black weights). This constraint ensures that "tension" is evenly distributed, keeping the tree approximately balanced with a height of O(log n), where n is the number of nodes.
 
 The entire lifecycle of the structure is managed by a virtual balancing automaton. It possesses an unlimited stock of spare black and red balls and performs four functions:
 
-    Insertion: The automaton hangs a new red ball (NIL replacement).
+* Insertion: The automaton hangs a new red ball (NIL replacement).
 
-    Deletion: It removes a ball and replaces it with a dummy, triggering rebalancing if necessary.
+* Deletion: It removes a ball and replaces it with a dummy, triggering rebalancing if necessary.
 
-    Balance Monitoring: After every insertion or deletion, it checks for equilibrium violations.
+* Balance Monitoring: After every insertion or deletion, it checks for equilibrium violations.
 
-    Balancing: If a violation is detected, the automaton performs local transformations: recoloring balls and/or rearranging connections (rotations) using its stock of spare parts.
+* Balancing: If a violation is detected, the automaton performs local transformations: recoloring balls and/or rearranging connections (rotations) using its stock of spare parts.
 
 To implement these operations, we define two custom data types: node and rbTree. A node includes fields for the key (numeric value), color (boolean: true for red, false for black), and pointers to left, right, and parent nodes. The rbTree structure is a reference-type variable that stores a pointer to the memory area containing the tree objects (Figure 8.30).
 
@@ -497,7 +507,7 @@ Node deletion in a red-black tree is a sophisticated operation because it must p
 
 The standard mechanical notation for the C-Cluster used in deletion operations is shown in Figure 8.39:
 
-    z: The node to be physically deleted, which triggers the Weight Debt (the "Double-Black" focus).
+z: The node to be physically deleted, which triggers the Weight Debt (the "Double-Black" focus).
 
     P: Parent of *z*.
 

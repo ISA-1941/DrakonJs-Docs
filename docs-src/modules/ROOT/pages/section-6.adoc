@@ -205,12 +205,7 @@ Note that the next reference allows us to build singly linked lists inside a buc
 
 As a result, this hash table would have as many singly linked lists (buckets) as specified by the Size constant. In the example below, the number of slots is 15.
 
-Consider constructing a hash table of size m = 15 for a collection of integers from 0 to 120. The hash table slots are initially empty:
-
-|===
-0	1	2	3	4	5	6	7	8	9	10	11	12	13	14
-|===														
-
+Consider constructing a hash table of size m = 15 for a collection of integers from 0 to 120. 
 A hash function that establishes a relationship between an element and its corresponding slot must accept any element from the dataset (specifically ranging from 0 to 120) and return an integer that corresponds to a slot number between 0 and 14. The algorithm implementing the remainder method sequentially processes each element from the original set, dividing it by 15 and returning the remainder as the hash value. This can be expressed as h(item) = item mod 15. For instance, the hash code for the element 119 is calculated as 119 mod 15 = 14 (since 119 - 15 × 7 = 14), thus placing the value 119 into the corresponding slot.
 
 |===

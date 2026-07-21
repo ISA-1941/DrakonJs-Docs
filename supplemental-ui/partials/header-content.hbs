@@ -1,0 +1,23 @@
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <!-- Ссылка на главную страницу сайта -->
+      <a class="navbar-item" href="{{{or site.url (or siteRootPath siteRootUrl)}}}">{{site.title}}</a>
+      
+      <!-- Кнопка "Гамбургер" (три черты) -->
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    
+    <!-- Содержимое навигационной панели -->
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Главная</a>
+        <!-- Здесь вы можете добавить дополнительные ссылки -->
+      </div>
+    </div>
+  </nav>
+</header>
