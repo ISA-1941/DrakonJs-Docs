@@ -135,11 +135,11 @@ image::section_8/Fig8_11_removeNode.svg[width=100%, , link=self, window="_blank"
 
 One of the basic tree operations is traversing tree nodes. Unlike linear data structures, where elements are traversed in a linear order, tree nodes can be traversed in a variety of ways.
 
-    Pre-order walk: Each ancestor node is visited before its descendants.
+* Pre-order walk: Each ancestor node is visited before its descendants.
 
-    In-order walk: The left subtree is visited from bottom to top, then the root node, then the right subtree.
+* In-order walk: The left subtree is visited from bottom to top, then the root node, then the right subtree.
 
-    Post-order walk: Descendants are visited first, then ancestors.
+* Post-order walk: Descendants are visited first, then ancestors.
 
 All three cases, including the DRAKON diagrams, are shown in Figure 8.12.
 
