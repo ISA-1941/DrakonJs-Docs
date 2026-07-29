@@ -163,19 +163,19 @@ Recall that the height of a tree is defined as the length of the longest branch 
 
 [.text-center]
 .Figure 8.14. An ideal binary tree
-image::section_8/Fig8_14_idealTree.png[width=50%, link=self, window="_blank"]
+image::section_8/Fig8_14_idealTree.png[width=100%, link=self, window="_blank"]
 
 In real life, ideal binary trees are almost never achieved. Programmers often try to build a tree where the height of the left subtree differs from the height of the right subtree by no more than 1. Such trees are called AVL trees; for these trees the complexity of operations is defined as O(log n), meaning the execution time of basic operations (search, delete) is significantly less than for BST trees.
 
 The algorithms for such trees are based on the process of balancing the tree when a new node is inserted or an existing node is removed. The purpose of balancing is to reconstruct the tree so that the heights of the left and right subtrees do not differ by more than 1. The balance factor must satisfy the following conditions:
 
-    The allowable values are bf = -1, 0, and +1.
+* The allowable values are bf = -1, 0, and +1.
 
-    bf = -1 indicates that the right subtree "outweighs" the left subtree.
+*   bf = -1 indicates that the right subtree "outweighs" the left subtree.
 
-    bf = +1 indicates that the left subtree "outweighs" the right subtree.
+*   bf = +1 indicates that the left subtree "outweighs" the right subtree.
 
-    bf = 0 indicates that the tree contains an equal number of nodes on each side — that is, the tree is perfectly balanced.
+*   bf = 0 indicates that the tree contains an equal number of nodes on each side — that is, the tree is perfectly balanced.
 
 The balancing algorithm in its most general form is presented in the following DRAKON diagram (Figure 8.15):
 
@@ -185,13 +185,13 @@ image::section_8/Fig8_15_buildingAvlTree.png[width=100%, link=self, window="_bla
 
 The balancing technique boils down to making circular movements of the nodes in four variants:
 
-    Right rotation (RR)
+* Right rotation (RR)
 
-    Left rotation (LL)
+* Left rotation (LL)
 
-    Right-left rotation (RL)
+* Right-left rotation (RL)
 
-    Left-right rotation (LR)
+* Left-right rotation (LR)
 
 Right rotation is performed when the root node has a balance factor bf = +2 and its left-hand child has a balance factor bf = +1 (Figure 8.16):
 
