@@ -18,19 +18,19 @@ JavaScript (JS) is a high-level, dynamically typed programming language that was
 
 Below are the most important features of JavaScript:
 
-    Lightweight and flexible – JavaScript is dynamically typed, meaning there is no need to explicitly define variable types. This makes it a flexible and beginner-friendly language.
+* **Lightweight and flexible** – JavaScript is dynamically typed, meaning there is no need to explicitly define variable types. This makes it a flexible and beginner-friendly language.
 
-    Interpreted language – JavaScript code is executed line by line by an engine (V8, SpiderMonkey, or Chakra). This makes development more interactive but can also impact performance.
+* **Interpreted language** – JavaScript code is executed line by line by an engine (V8, SpiderMonkey, or Chakra). This makes development more interactive but can also impact performance.
 
-    Prototype-based object model – JavaScript does not use classical OOP (like in Java or C++). Instead, it relies on prototypes and constructor functions. With the introduction of ES6 classes, JavaScript provides syntactic sugar for working with objects in an OOP-like style.
+* **Prototype-based object model** – JavaScript does not use classical OOP (like in Java or C++). Instead, it relies on prototypes and constructor functions. With the introduction of ES6 classes, JavaScript provides syntactic sugar for working with objects in an OOP-like style.
 
-    Asynchronous programming – JavaScript has non-blocking execution using callbacks, promises, and async/await. This makes it well-suited for handling asynchronous operations such as network requests.
+* **Asynchronous programming** – JavaScript has non-blocking execution using callbacks, promises, and async/await. This makes it well-suited for handling asynchronous operations such as network requests.
 
-    Functional programming features – JavaScript supports higher-order functions, closures, and anonymous functions. Functions in JavaScript are first-class citizens, meaning they can be passed as arguments, returned from other functions, and stored in variables.
+* **Functional programming features** – JavaScript supports higher-order functions, closures, and anonymous functions. Functions in JavaScript are first-class citizens, meaning they can be passed as arguments, returned from other functions, and stored in variables.
 
-    Event-driven and single-threaded – JavaScript relies on an event loop and asynchronous callbacks to manage concurrent operations.
+* **Event-driven and single-threaded** – JavaScript relies on an event loop and asynchronous callbacks to manage concurrent operations.
 
-    Extensive ecosystem – JavaScript has a massive standard library and an even larger third-party ecosystem through npm (Node Package Manager). This makes it one of the most versatile languages in modern development.
+* **Extensive ecosystem** – JavaScript has a massive standard library and an even larger third-party ecosystem through npm (Node Package Manager). This makes it one of the most versatile languages in modern development.
 
 While JavaScript was originally designed for client-side web development, it has grown into a general-purpose language thanks to Node.js, which allows JavaScript to run on servers, IoT devices, and even embedded systems.
 
@@ -89,11 +89,11 @@ In JavaScript, variables are used to store data values, similar to other program
 
 JavaScript provides three ways to declare variables:
 
-    var – the traditional way (not recommended for modern code).
+* **var** – the traditional way (not recommended for modern code).
 
-    let – for block-scoped variables that can be reassigned.
+* **let** – for block-scoped variables that can be reassigned.
 
-    const – for variables that cannot be reassigned after initialization.
+* **const** – for variables that cannot be reassigned after initialization.
 
 A variable in JavaScript is declared using the let or const keyword, followed by an identifier (variable name).
 
