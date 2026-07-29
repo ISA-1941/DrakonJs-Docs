@@ -816,9 +816,9 @@ i {
 
 /* Светло-серый фон для сниппетов JS */
 .doc .listingblock code.language-javascript,
-.doc .listingblock .language-js,
-.doc pre.highlight code[class*="language-js"],
-.doc pre.highlight code[class*="language-javascript"] {
-  background-color: #e8ecef !important; /* Светло-серый фон */
-  color: #24292e !important;            /* Темный цвет текста для читаемости на светлом */
+.doc .listingblock .language-javascript,
+.doc .listingblock code.language-js,
+.doc .listingblock .language-js {
+  background-color: var(--code-bg) !important; /* #2f3740 */
+  color: var(--code-text) !important;
 }
