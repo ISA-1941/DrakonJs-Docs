@@ -101,7 +101,7 @@ includes a description and DRAKON-diagram of hash algorithms that
 significantly reduce search time by reducing the number of element value
 comparisons.
 
-*SECTION* 8 provides conceptual information about binary trees –
+*SECTION 8* provides conceptual information about binary trees –
 nonlinear data structures, including binary search trees and
 self-balancing trees. This section describes the basic DRAKON-diagrams
 of algorithms for inserting new ones, finding nodes with specified

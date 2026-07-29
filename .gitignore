@@ -23,3 +23,5 @@ ui-bundle.zip
 .antora/
 public/
 antora-ui-default/
+*.tar.gz
+.~lock.*
