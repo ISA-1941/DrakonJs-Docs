@@ -814,11 +814,14 @@ i {
    22. Переопределение фона для JavaScript
    ============================================================ */
 
-/* Светло-серый фон для сниппетов JS */
-.doc .listingblock code.language-javascript,
-.doc .listingblock .language-javascript,
-.doc .listingblock code.language-js,
-.doc .listingblock .language-js {
+/* Сбрасываем белую/светлую подложку на всех уровнях вложенности */
+.doc .listingblock pre,
+.doc .listingblock pre code,
+.doc .listingblock .content,
+.doc .listingblock[data-lang="javascript"] pre,
+.doc .listingblock[data-lang="js"] pre,
+.doc pre.highlight,
+.doc pre.highlight code {
   background-color: var(--code-bg) !important; /* #2f3740 */
-  color: var(--code-text) !important;
+  color: var(--code-text) !important;           /* #f4f4f4 */
 }
