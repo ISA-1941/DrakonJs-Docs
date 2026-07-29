@@ -783,3 +783,29 @@ i {
     border-radius: 0.55rem;
   }
 }
+
+/* ============================================================
+   21. Стили для [abstract] (Аннотаций)
+   ============================================================ */
+
+/* Контейнер аннотации */
+.doc .quoteblock.abstract {
+  background-color: var(--panel-bg-soft) !important; /* Светло-серый/темно-стальной фон */
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+/* Сам блок текста цитаты внутри abstract */
+.doc .quoteblock.abstract blockquote {
+  background: transparent !important; /* Убираем темную плашку внутри */
+  border-left: 4px solid var(--accent-color) !important;
+  color: var(--text-color) !important;
+  margin: 0 !important;
+  padding: 0.5rem 0 0.5rem 1rem !important;
+}
+
+/* Текст параграфов внутри abstract */
+.doc .quoteblock.abstract blockquote p {
+  color: var(--text-color) !important;
+}
