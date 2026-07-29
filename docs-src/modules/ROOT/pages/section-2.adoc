@@ -280,11 +280,11 @@ console.log("Input error");
 
 Key points:
 
-    Use === instead of == to check for equality (strict comparison).
+* Use === instead of == to check for equality (strict comparison).
 
-    The else if block allows multiple conditions.
+* The else if block allows multiple conditions.
 
-    The else block executes if none of the conditions are met.
+* The else block executes if none of the conditions are met.
 
 A representation of this construct in DRAKON technology is shown in the next section.
 
