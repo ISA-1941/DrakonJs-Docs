@@ -242,11 +242,11 @@ To summarize:
 
 In programming, decision-making operators allow a program to choose different execution paths based on conditions. JavaScript provides several control structures for decision-making:
 
-    Conditional branching: if-else, switch-case
+* **Conditional branching**: if-else, switch-case
 
-    Loops for repeating actions: for, while, do-while
+    **Loops for repeating actions**: for, while, do-while
 
-    Control flow statements: break, continue, return
+    **Control flow statements**: break, continue, return
 
 ==== 2.5.1. Conditional Statement if-else
 
@@ -491,9 +491,9 @@ JavaScript has dynamic typing, meaning that variables do not have a fixed type b
 
 The main categories of data types in JavaScript include:
 
-    Primitive Types: Numbers, strings, booleans, null, undefined, Symbol, and BigInt
+    * **Primitive Types**: Numbers, strings, booleans, null, undefined, Symbol, and BigInt
 
-    Reference Types: Objects, arrays, functions, and maps
+    * **Reference Types**: Objects, arrays, functions, and maps
 
 ==== 2.7.1. Primitive Data Types
 
@@ -527,11 +527,11 @@ console.log(Number.MIN_VALUE); // 5e-324
 
 Key Points:
 
-    Number type covers both integers and floating-point values.
+* Number type covers both integers and floating-point values.
 
-    BigInt allows working with very large integers beyond Number.MAX_SAFE_INTEGER.
+* BigInt allows working with very large integers beyond Number.MAX_SAFE_INTEGER.
 
-    JavaScript automatically converts between integer and floating-point when needed.
+* JavaScript automatically converts between integer and floating-point when needed.
 
 b) String Variables and Constants
 
@@ -547,11 +547,11 @@ let message = Hello, ${name}; // Template literals (ES6+)
 
 Key Features:
 
-    Strings are immutable (modifying a string creates a new string).
+* Strings are immutable (modifying a string creates a new string).
 
-    Template literals allow embedding variables using ${} inside backticks (`).
+* Template literals allow embedding variables using ${} inside backticks (`).
 
-String Length and Character Access
+String Length and Character Access:
 
 [source,javascript]
 
@@ -571,9 +571,9 @@ console.log(greeting.charCodeAt(i).toString(16));
 
 Key Features:
 
-    The length property returns the number of characters in a string.
+* The length property returns the number of characters in a string.
 
-    charCodeAt(i) provides the Unicode value of a character.
+* charCodeAt(i) provides the Unicode value of a character.
 
 c) Boolean Variables and Constants
 
@@ -600,9 +600,9 @@ console.log("x >= y:", x >= y); // false
 
 Key Features:
 
-    Booleans are mainly used for conditional logic (if statements, loops, etc.).
+* Booleans are mainly used for conditional logic (if statements, loops, etc.).
 
-    The comparison operators (==, !=, <, >, <=, >=) return boolean values.
+* The comparison operators (==, !=, <, >, <=, >=) return boolean values.
 
 Summary of Primitive Data Types:
 
@@ -621,11 +621,11 @@ Summary of Primitive Data Types:
 
 JavaScript provides composite data types to store and manipulate collections of data and complex structures. The most commonly used composite types are:
 
-    Arrays – Ordered collections of elements.
+* **Arrays** – Ordered collections of elements.
 
-    Objects – Key-value pairs that represent complex data structures.
+* **Objects** – Key-value pairs that represent complex data structures.
 
-    Maps – Key-value storage with enhanced capabilities.
+* **Maps** – Key-value storage with enhanced capabilities.
 
 ==== 2.8.1. Arrays
 
@@ -641,11 +641,11 @@ console.log(numbers.length); // Array length (4)
 
 Key Features:
 
-    Arrays are zero-indexed (array[0] is the first element).
+* Arrays are zero-indexed (array[0] is the first element).
 
-    The .length property returns the number of elements.
+* The .length property returns the number of elements.
 
-    Arrays can store multiple types of values:
+* Arrays can store multiple types of values:
 
 [source,javascript]
 
@@ -686,9 +686,9 @@ console.log(Salary: $${employee.salary});
 
 Key Features:
 
-    Properties are accessed using dot notation (object.property) or bracket notation (object["property"]).
+* Properties are accessed using dot notation (object.property) or bracket notation (object["property"]).
 
-    Objects store heterogeneous data (unlike arrays).
+* Objects store heterogeneous data (unlike arrays).
 
 Updating and Adding Properties
 
@@ -713,9 +713,9 @@ console.log(capitals);
 
 Maps vs. Objects
 
-    Objects use only strings as keys, while Maps can use any type of key.
+* Objects use only strings as keys, while Maps can use any type of key.
 
-    Maps maintain key order, whereas objects do not guarantee order.
+* Maps maintain key order, whereas objects do not guarantee order.
 
 Summary of Composite Data Types:
 
