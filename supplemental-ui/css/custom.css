@@ -811,17 +811,23 @@ i {
 }
 
 /* ============================================================
-   22. Переопределение фона для JavaScript
+   22. Переопределение фона и текста для JavaScript
    ============================================================ */
 
-/* Сбрасываем белую/светлую подложку на всех уровнях вложенности */
+.doc .listingblock,
 .doc .listingblock pre,
-.doc .listingblock pre code,
+.doc .listingblock code,
 .doc .listingblock .content,
-.doc .listingblock[data-lang="javascript"] pre,
-.doc .listingblock[data-lang="js"] pre,
-.doc pre.highlight,
-.doc pre.highlight code {
-  background-color: var(--code-bg) !important; /* #2f3740 */
-  color: var(--code-text) !important;           /* #f4f4f4 */
+.doc .listingblock pre.highlight,
+.doc .listingblock pre.highlight code,
+.doc pre[class*="language-"],
+.doc code[class*="language-"] {
+  background-color: var(--code-bg) !important; /* Тёмно-серый фон (#2f3740) */
+  background: var(--code-bg) !important;       /* На случай, если задан через background */
+  color: #ffffff !important;                   /* Белый цвет текста */
+}
+
+/* Белый цвет для всех внутренних элементов (включая подсвеченные слова/токены) */
+.doc .listingblock pre code * {
+  color: #ffffff !important;
 }
