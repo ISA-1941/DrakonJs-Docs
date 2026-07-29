@@ -244,9 +244,9 @@ In programming, decision-making operators allow a program to choose different ex
 
 * **Conditional branching**: if-else, switch-case
 
-    **Loops for repeating actions**: for, while, do-while
+* **Loops for repeating actions**: for, while, do-while
 
-    **Control flow statements**: break, continue, return
+* **Control flow statements**: break, continue, return
 
 ==== 2.5.1. Conditional Statement if-else
 
