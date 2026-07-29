@@ -117,7 +117,6 @@ A set is a linear abstract data type that stores a collection of unique values. 
     Single Type of Logic: Only stores values, not the key-value pairs found in associative arrays.
 
 🔹 Applications of Sets:
-
     Data Preprocessing: Ensuring that input data (like keys for tree structures) contains no duplicates before processing.
     Filtering: Removing redundant entries from a stream of information.
     Tracking Visited Nodes: Used in algorithms like Breadth-First Search (BFS) to avoid infinite loops by storing already processed vertices.
@@ -255,12 +254,11 @@ Algorithms for practical implementation of basic functions of associative arrays
 ==== Hierarchical Model
 
 A tree is an acyclic connected graph with a designated root node, formally defined as:
-```
-Tree = (V, E) where:
-V = {v₁, v₂, ..., vₙ} (set of vertices)
-E ⊂ V×V (directed edges)
-∃! root ∈ V ∀v ∈ V ∃ unique path from root to v
-```
+
+* Tree = (V, E) where:
+* V = {v₁, v₂, ..., vₙ} (set of vertices)
+* E ⊂ V×V (directed edges)
+* ∃! root ∈ V ∀v ∈ V ∃ unique path from root to v
 
 [.text-center]
 .Figure 1.6. Tree Structure Taxonomy
@@ -348,16 +346,14 @@ Originating from Euler's Seven Bridges of Königsberg problem (1736). Modern for
 - Simulating physical systems
 - Encoding constraint satisfaction problems
 
----
-
-**Key Enhancements**:
+🔹 **Key Enhancements**:
 1. **Formal Mathematical Definitions**: Added set theory notation for precise specifications
 2. **Structural Taxonomy Tables**: Clear classification of variants
 3. **Historical Lineage**: Key milestones in theoretical development
 4. **Abstract Operation Mapping**: Connection to mathematical principles
 5. **Visual Consistency**: Standardized figure dimensions and alignment
 
-**Omitted per Requirements**:
+🔹 **Omitted per Requirements**:
 - Implementation-specific details
 - Algorithm complexity analysis
 - JavaScript-related content
