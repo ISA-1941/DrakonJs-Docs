@@ -328,11 +328,11 @@ console.log("Input error");
 
 Key points:
 
-    The switch statement checks the ID variable.
+* The switch statement checks the ID variable.
 
-    The break statement ensures only one case executes.
+* The break statement ensures only one case executes.
 
-    The default block runs if none of the cases match.
+* The default block runs if none of the cases match.
 
 ==== 2.5.3. Loops in JavaScript
 
