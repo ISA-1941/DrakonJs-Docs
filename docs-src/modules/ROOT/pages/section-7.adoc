@@ -77,15 +77,15 @@ For example, given the set [90, 12, 83, 24, 75, 38, 62, 41, 59, 10], the algorit
 [cols="10"]
 |===
 | *90* | *12* | 83 | 24 | 75 | 38 | 62 | 41 | 59 | 10
-| [.line-through]#10# | 12 | 83 | 24 | 75 | 38 | 62 | 41 | 59 | *90*
-| [.line-through]#10# | *12* | 83 | 24 | 75 | 38 | 62 | 41 | 59 | [.line-through]#90#
-| [.line-through]#10# | [.line-through]#12# | 83 | *24* | 75 | 38 | 62 | 41 | 59 | [.line-through]#90#
-| [.line-through]#10# | [.line-through]#12# | [.line-through]#24# | 83 | 75 | *38* | 62 | 41 | 59 | [.line-through]#90#
-| [.line-through]#10# | [.line-through]#12# | [.line-through]#24# | [.line-through]#38# | 75 | 83 | 62 | *41* | 59 | [.line-through]#90#
-| [.line-through]#10# | [.line-through]#12# | [.line-through]#24# | [.line-through]#38# | [.line-through]#41# | 83 | 62 | 75 | *59* | [.line-through]#90#
-| [.line-through]#10# | [.line-through]#12# | [.line-through]#24# | [.line-through]#38# | [.line-through]#41# | [.line-through]#59# | 62 | *75* | 83 | [.line-through]#90#
-| [.line-through]#10# | [.line-through]#12# | [.line-through]#24# | [.line-through]#38# | [.line-through]#41# | [.line-through]#59# | [.line-through]#62# | 75 | *83* | [.line-through]#90#
-| [.line-through]#10# | [.line-through]#12# | [.line-through]#24# | [.line-through]#38# | [.line-through]#41# | [.line-through]#59# | [.line-through]#62# | [.line-through]#75# | [.line-through]#83# | [.line-through]#90#
+| [.underline]#10# | 12 | 83 | 24 | 75 | 38 | 62 | 41 | 59 | *90*
+| [.underline]#10# | *12* | 83 | 24 | 75 | 38 | 62 | 41 | 59 | [.underline]#90#
+| [.underline]#10# | [.underline]#12# | 83 | *24* | 75 | 38 | 62 | 41 | 59 | [.underline]#90#
+| [.underline]#10# | [.underline]#12# | [.underline]#24# | 83 | 75 | *38* | 62 | 41 | 59 | [.underline]#90#
+| [.underline]#10# | [.underline]#12# | [.underline]#24# | [.underline]#38# | 75 | 83 | 62 | *41* | 59 | [.underline]#90#
+| [.underline]#10# | [.underline]#12# | [.underline]#24# | [.underline]#38# | [.underline]#41# | 83 | 62 | 75 | *59* | [.underline]#90#
+| [.underline]#10# | [.underline]#12# | [.underline]#24# | [.underline]#38# | [.underline]#41# | [.underline]#59# | 62 | *75* | 83 | [.underline]#90#
+| [.underline]#10# | [.underline]#12# | [.underline]#24# | [.underline]#38# | [.underline]#41# | [.underline]#59# | [.underline]#62# | 75 | *83* | [.underline]#90#
+| [.underline]#10# | [.underline]#12# | [.underline]#24# | [.underline]#38# | [.underline]#41# | [.underline]#59# | [.underline]#62# | [.underline]#75# | [.underline]#83# | [.underline]#90#
 |===
 
 Note to the table: Crossed-out items are already sorted; selected items are minimal in the current pass.
