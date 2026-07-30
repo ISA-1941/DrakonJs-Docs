@@ -40,7 +40,11 @@ The algorithm uses two nested loops. For each index i, it iterates over the rema
 
 The following table shows the results of sorting a series of values for each outer loop parameter (i).
 
-[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", options="header", width="50%", align="center"]
+++++
+<div style="margin: 0 auto; width: 50%;">
+++++
+
+[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", options="header"]
 |===
 | j=0 | j=1 | j=2 | j=3 | j=4 | j=5 | j=6 | j=7 | j=8 | j=9
 | 90 | 11 | 81 | 21 | 71 | 31 | 61 | 41 | 51 | 10
@@ -54,6 +58,10 @@ The following table shows the results of sorting a series of values for each out
 | 11 | 21 | 31 | 41 | 51 | 61 | 71 | 81 | 90 | 10
 | 10 | 11 | 21 | 31 | 41 | 51 | 61 | 71 | 81 | 90
 |===
+
+++++
+</div>
+++++
 
 The time complexity of Bubble Sort is quite high — O(n²). This is due to the large number of comparisons (arr[i] < arr[j]) and possible swaps. However, the space complexity is O(1), since no additional memory is needed beyond the original array.
 
