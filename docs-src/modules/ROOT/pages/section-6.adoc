@@ -67,10 +67,9 @@ b) Linear Search of Sorted Data
 
 If the elements of the dataset are sorted in ascending or descending order, finding the desired element is much more efficient than in an unordered linear search. In many cases, you do not have to traverse the whole list. For example, when traversing an ascending sorted list, if an element with a higher value than the search key is encountered, the search is stopped. This approach saves time and increases productivity. .Figure 6.2 shows the DRAKON-diagram of this algorithm.
 
-image::section_6/Fig6_2_dataSorted.svg[width=50%, link=self, window="_blank"]
-
 [.text-center]
 .Figure 6.2. DRAKON-diagram of the Search in a Sorted Array
+image::section_6/Fig6_2_dataSorted.svg[width=50%, link=self, window="_blank"]
 
 === 6.2. Binary Search for Data in a Sorted Structure
 
