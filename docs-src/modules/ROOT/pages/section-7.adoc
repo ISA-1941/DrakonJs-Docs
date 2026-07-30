@@ -1,4 +1,3 @@
-:imagesdir: docs-src/modules/section-7/assets/images
 [.text-justify]
 :figure-caption!:
 :page-toclevels: 3
@@ -92,9 +91,9 @@ The time and space complexity of the Selection Sort algorithm are summarized in 
 
 The time complexity is the same in all cases because the algorithm uses two nested loops:
 
-    The outer loop runs n times (once per element)
+* The outer loop runs n times (once per element)
 
-    The inner loop runs (n - 1) times per outer iteration
+* The inner loop runs (n - 1) times per outer iteration
 
 This results in a total of n * (n - 1) comparisons, which gives the time complexity of O(n²) regardless of the input order.
 
@@ -118,64 +117,50 @@ Input array
 |===
 | 90 | 11 | 81 | 21 | 71 | 31 | 61 | 41 | 51 | 10
 |===
-
 [.text-center]
 i = 1
-
 [cols="10"]
 |===
 | 11 | 90 | 81 | 21 | 71 | 31 | 61 | 41 | 51 | 10
 |===
-
 [.text-center]
 i = 2
-
 [cols="10"]
 |===
 | 11 | 81 | 90 | 21 | 71 | 31 | 61 | 41 | 51 | 10
 |===
-
 [.text-center]
 i = 3
-
 [cols="10"]
 |===
 | 11 | 81 | 21 | 90 | 71 | 31 | 61 | 41 | 51 | 10
 | 11 | 21 | 81 | 90 | 71 | 31 | 61 | 41 | 51 | 10
 |===
-
 [.text-center]
 i = 4
-
 [cols="10"]
 |===
 | 11 | 21 | 81 | 71 | 90 | 31 | 61 | 41 | 51 | 10
 | 11 | 21 | 71 | 81 | 90 | 31 | 61 | 41 | 51 | 10
 |===
-
 [.text-center]
 i = 5
-
 [cols="10"]
 |===
 | 11 | 21 | 71 | 81 | 31 | 90 | 61 | 41 | 51 | 10
 | 11 | 21 | 71 | 31 | 81 | 90 | 61 | 41 | 51 | 10
 | 11 | 21 | 31 | 71 | 81 | 90 | 61 | 41 | 51 | 10
 |===
-
 [.text-center]
 i = 6
-
 [cols="10"]
 |===
 | 11 | 21 | 31 | 71 | 81 | 61 | 90 | 41 | 51 | 10
 | 11 | 21 | 31 | 71 | 61 | 81 | 90 | 41 | 51 | 10
 | 11 | 21 | 31 | 61 | 71 | 81 | 90 | 41 | 51 | 10
 |===
-
 [.text-center]
 i = 7
-
 [cols="10"]
 |===
 | 11 | 21 | 31 | 61 | 71 | 81 | 41 | 90 | 51 | 10
@@ -183,10 +168,8 @@ i = 7
 | 11 | 21 | 31 | 61 | 41 | 71 | 81 | 90 | 51 | 10
 | 11 | 21 | 31 | 41 | 61 | 71 | 81 | 90 | 51 | 10
 |===
-
 [.text-center]
 i = 8
-
 [cols="10"]
 |===
 | 11 | 21 | 31 | 41 | 61 | 71 | 81 | 51 | 90 | 10
@@ -194,10 +177,8 @@ i = 8
 | 11 | 21 | 31 | 41 | 61 | 51 | 71 | 81 | 90 | 10
 | 11 | 21 | 31 | 41 | 51 | 61 | 71 | 81 | 90 | 10
 |===
-
 [.text-center]
 i = 9
-
 [cols="10"]
 |===
 | 11 | 21 | 31 | 41 | 51 | 61 | 71 | 81 | 10 | 90
