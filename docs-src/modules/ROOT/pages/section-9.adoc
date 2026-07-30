@@ -27,7 +27,8 @@ Among the tasks that can be solved using graphs are:
 - Distributing N workers to perform M different types of work
 - Choosing the most efficient method of problem solving, among others.
 
-Formally, a graph is denoted as $G = (V, E)$, where $V$ is the set of vertices and $E$ is the set of edges connecting them.
+Formally, a graph is denoted as `G = (V, E)`, where `V` is the set of vertices and `E` is the set of edges connecting them.
+
 
 === Directed and Undirected Graphs
 
@@ -125,9 +126,9 @@ Solving problems related to processing a data set organized in the form of graph
 
 === Adjacency Matrix
 
-An adjacency matrix is a two-dimensional array that indicates the existence of a relationship between two vertices. If the graph has $V$ vertices, then the adjacency matrix is a $V \times V$ array. In an undirected graph, the adjacency relationship is symmetric: if vertex $u$ is adjacent to $v$, then $v$ is also adjacent to $u$. This symmetry is reflected in the adjacency matrix, which is always symmetric about its main diagonal.
+An adjacency matrix is a two-dimensional array that indicates the existence of a relationship between two vertices. If the graph has `V` vertices, then the adjacency matrix is a `V × V` array. In an undirected graph, the adjacency relationship is symmetric: if vertex `u` is adjacent to `v`, then `v` is also adjacent to `u`. This symmetry is reflected in the adjacency matrix, which is always symmetric about its main diagonal.
 
-In contrast, for a directed graph (or digraph), the relationship is not necessarily symmetric. An edge $(u, v)$ means vertex $v$ is adjacent from vertex $u$, and this is indicated in the matrix by a '1' at position `A[u][v]` only.
+In contrast, for a directed graph (or digraph), the relationship is not necessarily symmetric. An edge `(u, v)` means vertex `v` is adjacent from vertex `u`, and this is indicated in the matrix by a '1' at position `A[u][v]` only.
 
 [.text-center]
 .Figure 9.3. Adjacency matrix layout for undirected and directed graphs
@@ -145,14 +146,16 @@ image::section_9/Fig9_4_AdjList.svg[width=100%, link=self, window="_blank"]
 
 The space complexity of representing a graph depends heavily on the chosen data structure:
 
-- *Adjacency Matrix:* Requires $O(V^2)$ memory. This is memory-intensive, especially for large, sparse graphs (graphs with relatively few edges). It also often requires knowing the number of vertices in advance.
-- *Adjacency List:* Requires $O(V + E)$ memory, where $E$ is the number of edges. This is much more efficient for sparse graphs, which are common in real-world applications.
 
-In practice, the choice between these representations is a trade-off. An adjacency matrix is often preferable for dense graphs (graphs where the number of edges approaches $V^2$) and when frequent edge lookups are required ($O(1)$ complexity). An adjacency list is generally better for sparse graphs.
+- *Adjacency Matrix:* Requires `O(V^2)` memory. This is memory-intensive, especially for large, sparse graphs (graphs with relatively few edges). It also often requires knowing the number of vertices in advance.
+- *Adjacency List:* Requires `O(V + E)` memory, where `E` is the number of edges. This is much more efficient for sparse graphs, which are common in real-world applications.
+
+In practice, the choice between these representations is a trade-off. An adjacency matrix is often preferable for dense graphs (graphs where the number of edges approaches `V^2`) and when frequent edge lookups are required (`O(1)` complexity). An adjacency list is generally better for sparse graphs.
 
 === Weighted Graphs
 
-Many real-life problems require modeling graphs with numerical values associated with edges, such as distance, cost, or travel time. Such graphs are called weighted graphs. In an adjacency matrix, the weight is stored as the value of the matrix element (instead of '1'), and a special value (like $\infty$ or '0') can represent the absence of an edge. In an adjacency list, each element in the list is typically a structure containing both the adjacent vertex ID and the edge weight.
+
+Many real-life problems require modeling graphs with numerical values associated with edges, such as distance, cost, or travel time. Such graphs are called weighted graphs. In an adjacency matrix, the weight is stored as the value of the matrix element (instead of '1'), and a special value (like `∞` or `0`) can represent the absence of an edge. In an adjacency list, each element in the list is typically a structure containing both the adjacent vertex ID and the edge weight.
 
 [.text-center]
 .Figure 9.5. Adjacency list equipped with a 'weight' field
@@ -222,7 +225,7 @@ The fundamental difference between DFS and BFS lies in the order in which they e
 1. *Depth-First Search (DFS)* uses a stack (often implemented via recursion or explicit arrays) to explore as deep as possible along each branch before backtracking. While DFS does not inherently find shortest paths, it is indispensable for tasks like detecting cycles, topological sorting, and exploring a graph when its overall structure is not known in advance.
 2. *Breadth-First Search (BFS)* uses a queue to explore the graph level by level. It visits all direct neighbors of the starting vertex, then all of their neighbors, and so on. BFS is guaranteed to find the shortest path (in terms of the number of edges) in an unweighted graph.
 
-The step-by-step process for each algorithm is shown in the tables below for the example graph, starting from vertex $V_0$.
+The step-by-step process for each algorithm is shown in the tables below for the example graph, starting from vertex `V_0`.
 
 [.text-center]
 .Figure 9.6. Reference directed graph for demonstrating DFS and BFS traversals
@@ -261,7 +264,7 @@ _(The stack shrinks; no new elements are added)_
 | *4* | *Pop from stack* +
 Extract vertex 3. 
 | *3* | `[4, 5]` +
-_({blank}[Vertex 3 has three neighbors: `[2, 4, 5]`. Since $V_2$ is already visited, only `[5, 4]` are pushed in reverse order])_ 
+__({blank}[Vertex 3 has three neighbors: `[2, 4, 5]`. `V_2` is already visited, only `[5, 4]` are pushed in reverse order])_
 | `[5, 4]` 
 | `[0, 1, 2, 3]`
 
@@ -275,7 +278,7 @@ _({blank}[Vertex 4 has no outgoing edges])_
 | *6* | *Pop from stack* +
 Extract vertex 5. 
 | *5* | `[6]` +
-_({blank}[Vertex 5 has two neighbors: `[4, 6]`. Since $V_4$ was already visited in step 5, only vertex 6 is pushed])_ 
+_({blank}[Vertex 5 has two neighbors: `[4, 6]`. Since `V_4` was already visited in step 5, only vertex 6 is pushed])_
 | `[6]` 
 | `[0, 1, 2, 3, 4, 5]`
 
@@ -375,7 +378,7 @@ The queue operates on the FIFO (First In, First Out) principle. The algorithm ex
 ====
 
 === Comparison: Stack vs. Queue
-The comparison of traversal paths clearly illustrates the fundamental difference between the two traversal strategies. DFS, using a stack, delves deep into the graph's branches, while BFS, using a queue, explores the graph level by level (Figure 9.7).
+The comparison of traversal paths clearly illustrates the fundamental difference between the two traversal strategies. 
 DFS, using a stack, delves deep into the graph's branches, while BFS, using a queue, explores level by level ( (Figure 9.7).
 
 [.text-center]
@@ -386,7 +389,7 @@ image::section_9/Fig9_7_dfs_bfs.svg[width=100%, link=self, window="_blank"]
 |===
 | Feature | DFS (Stack) | BFS (Queue)
 | Data Structure | Stack (LIFO) | Queue (FIFO)
-| Traversal Order From $V_0$ | 0 → 1 → 2 → 3 → 4 → 5 → 6 | 0 → 1 → 3 → 2 → 4 → 5 → 6
+| Traversal Order From `V_0` | 0 → 1 → 2 → 3 → 4 → 5 → 6 | 0 → 1 → 3 → 2 → 4 → 5 → 6
 | Strategy | "Depth-first" — explores branches completely | "Breadth-first" — explores level by level
 | Target Applications | Cycle detection, Topological sort | Shortest path in unweighted networks
 |===
