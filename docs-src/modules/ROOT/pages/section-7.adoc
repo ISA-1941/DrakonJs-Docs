@@ -41,7 +41,7 @@ The algorithm uses two nested loops. For each index i, it iterates over the rema
 The following table shows the results of sorting a series of values for each outer loop parameter (i).
 
 ++++
-<div style="margin: 0 auto; width: 50%;">
+<div style="margin: 0 auto; width: 80%;">
 ++++
 
 [cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", options="header"]
@@ -86,7 +86,7 @@ For example, given the set [90, 12, 83, 24, 75, 38, 62, 41, 59, 10], the algorit
 <div style="margin: 0 auto; width: 50%;">
 ++++
 
-[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="50%", align="center""]
+[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="80%", align="center""]
 |===
 | *90* | *12* | 83 | 24 | 75 | 38 | 62 | 41 | 59 | 10
 | [.underline]#10# | 12 | 83 | 24 | 75 | 38 | 62 | 41 | 59 | *90*
@@ -142,7 +142,7 @@ In this algorithm, larger values are pushed to the right. The algorithm compares
 <div style="margin: 0 auto; width: 50%;">
 ++++
 
-[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="50%", align="center"]
+[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="80%", align="center"]
 |===
 10+| Input array
 | 90 | 11 | 81 | 21 | 71 | 31 | 61 | 41 | 51 | 10
