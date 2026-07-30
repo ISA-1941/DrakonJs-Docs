@@ -40,7 +40,7 @@ The algorithm uses two nested loops. For each index i, it iterates over the rema
 
 The following table shows the results of sorting a series of values for each outer loop parameter (i).
 
-[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", options="header", width="50%, align="center"]
+[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", options="header", width="50%", align="center"]
 |===
 | j=0 | j=1 | j=2 | j=3 | j=4 | j=5 | j=6 | j=7 | j=8 | j=9
 | 90 | 11 | 81 | 21 | 71 | 31 | 61 | 41 | 51 | 10
@@ -74,7 +74,7 @@ The idea is simple: in each iteration, the algorithm finds the smallest value in
 
 For example, given the set [90, 12, 83, 24, 75, 38, 62, 41, 59, 10], the algorithm scans the array and finds the smallest element — 10. It then swaps 10 with the element at the first position (90). The sorted part now contains 10, and the process repeats with the remaining elements. The table below illustrates this process of selection and replacement.
 
-[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="50%, align="center""]
+[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="50%", align="center""]
 |===
 | *90* | *12* | 83 | 24 | 75 | 38 | 62 | 41 | 59 | 10
 | [.underline]#10# | 12 | 83 | 24 | 75 | 38 | 62 | 41 | 59 | *90*
@@ -122,7 +122,7 @@ Figure 7.3. DRAKON-diagram of the Insertion Sort algorithm
 
 In this algorithm, larger values are pushed to the right. The algorithm compares adjacent elements and swaps them if needed. This process is shown in the table below, where underscores mark the positions where swaps occurred.
 
-[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="50%, align="center"]
+[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="50%", align="center"]
 |===
 10+| Input array
 | 90 | 11 | 81 | 21 | 71 | 31 | 61 | 41 | 51 | 10
