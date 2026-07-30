@@ -74,9 +74,9 @@ JavaScript supports multidimensional arrays by storing arrays inside arrays.
 [source, javascript]
 ----
 let matrix = [
-*    [1, 2, 3],
-*    [4, 5, 6],
-*    [7, 8, 9]
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
 ];
 
 console.log(matrix[1][2]); // Output: 6
@@ -121,11 +121,11 @@ In JavaScript, sliceA will contain elements from index 0 to 4, and sliceB will c
 
 The following functions and methods are used to work with slices (arrays) in JavaScript:
 
-*    push(): Adds elements to the end of the array. If the array size is insufficient, it automatically increases.
+    push(): Adds elements to the end of the array. If the array size is insufficient, it automatically increases.
 
-*    length: Property that returns the number of elements in the array.
+    length: Property that returns the number of elements in the array.
 
-*    slice(): Creates a new array containing a "slice" of the original array.
+    slice(): Creates a new array containing a "slice" of the original array.
 
 ==== 3.2.3. Objects in JavaScript
 
@@ -163,9 +163,9 @@ console.log("Employee 2:", employee2);
 
 Key Differences:
 
-*    The first approach (object literal {}) is more common and recommended.
+    The first approach (object literal {}) is more common and recommended.
 
-*    The second approach (new Object()) is used when objects need to be created dynamically.
+    The second approach (new Object()) is used when objects need to be created dynamically.
 
 🔹 Creating an Object with a Factory Function
 
@@ -263,11 +263,11 @@ console.log(studentScores);
 
 Now, studentScores contains:
 
-*    "Alice" → 95
+    "Alice" → 95
 
-*    "Bob" → 88
+    "Bob" → 88
 
-*    "Charlie" → 92
+    "Charlie" → 92
 
 🔹 Accessing Values in a Map
 
@@ -312,9 +312,9 @@ next: null
 
 Each node has:
 
-*    data – stores the value
+    data – stores the value
 
-*    next – stores the reference to the next node (initially null)
+    next – stores the reference to the next node (initially null)
 
 🔹 Creating a Linked List
 
@@ -347,17 +347,17 @@ image::section_3/Fig3_5_Stack.svg[width=100%, link=self, window="_blank"]
 
 A stack supports two primary operations:
 
-*    Push(item) – adds an element to the top of the stack
+    Push(item) – adds an element to the top of the stack
 
-*    Pop() – removes the top element from the stack
+    Pop() – removes the top element from the stack
 
 From a conceptual point of view, a stack can be compared to a stack of plates: you can only remove the top plate. To access a plate further down, you must remove all plates above it.
 
 This structure is commonly used in:
 
-*    Undo (Ctrl+Z) functionality in text editors
+    Undo (Ctrl+Z) functionality in text editors
 
-*    Managing function calls in recursion (function calls are stored in a stack)
+    Managing function calls in recursion (function calls are stored in a stack)
 
 🔹 Declaring a Stack in JavaScript
 
@@ -408,11 +408,11 @@ A queue supports two primary operations:
 
 Queues are widely used in:
 
-*    Task scheduling (CPU scheduling, print queue)
+    Task scheduling (CPU scheduling, print queue)
 
-*    Breadth-First Search (BFS) algorithms
+    Breadth-First Search (BFS) algorithms
 
-*    Message processing systems
+    Message processing systems
 
 ==== 3.2.7. Representation of Binary Trees in JavaScript
 
