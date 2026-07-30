@@ -112,75 +112,92 @@ In this algorithm, larger values are pushed to the right. The algorithm compares
 
 [.text-center]
 Input array
-
 [cols="10"]
 |===
 | 90 | 11 | 81 | 21 | 71 | 31 | 61 | 41 | 51 | 10
 |===
 [.text-center]
+
 i = 1
 [cols="10"]
 |===
+
 | 11 | 90 | 81 | 21 | 71 | 31 | 61 | 41 | 51 | 10
 |===
+
 [.text-center]
 i = 2
 [cols="10"]
 |===
+
 | 11 | 81 | 90 | 21 | 71 | 31 | 61 | 41 | 51 | 10
 |===
+
 [.text-center]
 i = 3
 [cols="10"]
 |===
+
 | 11 | 81 | 21 | 90 | 71 | 31 | 61 | 41 | 51 | 10
 | 11 | 21 | 81 | 90 | 71 | 31 | 61 | 41 | 51 | 10
 |===
+
 [.text-center]
 i = 4
 [cols="10"]
 |===
+
 | 11 | 21 | 81 | 71 | 90 | 31 | 61 | 41 | 51 | 10
 | 11 | 21 | 71 | 81 | 90 | 31 | 61 | 41 | 51 | 10
 |===
+
 [.text-center]
 i = 5
 [cols="10"]
 |===
+
 | 11 | 21 | 71 | 81 | 31 | 90 | 61 | 41 | 51 | 10
 | 11 | 21 | 71 | 31 | 81 | 90 | 61 | 41 | 51 | 10
 | 11 | 21 | 31 | 71 | 81 | 90 | 61 | 41 | 51 | 10
 |===
+
 [.text-center]
 i = 6
 [cols="10"]
 |===
+
 | 11 | 21 | 31 | 71 | 81 | 61 | 90 | 41 | 51 | 10
 | 11 | 21 | 31 | 71 | 61 | 81 | 90 | 41 | 51 | 10
 | 11 | 21 | 31 | 61 | 71 | 81 | 90 | 41 | 51 | 10
 |===
+
 [.text-center]
 i = 7
 [cols="10"]
 |===
+
 | 11 | 21 | 31 | 61 | 71 | 81 | 41 | 90 | 51 | 10
 | 11 | 21 | 31 | 61 | 71 | 81 | 41 | 51 | 90 | 10
 | 11 | 21 | 31 | 61 | 41 | 71 | 81 | 90 | 51 | 10
 | 11 | 21 | 31 | 41 | 61 | 71 | 81 | 90 | 51 | 10
 |===
+
 [.text-center]
 i = 8
 [cols="10"]
 |===
+
 | 11 | 21 | 31 | 41 | 61 | 71 | 81 | 51 | 90 | 10
 | 11 | 21 | 31 | 41 | 61 | 71 | 51 | 81 | 90 | 10
 | 11 | 21 | 31 | 41 | 61 | 51 | 71 | 81 | 90 | 10
 | 11 | 21 | 31 | 41 | 51 | 61 | 71 | 81 | 90 | 10
 |===
+
 [.text-center]
 i = 9
 [cols="10"]
 |===
+
 | 11 | 21 | 31 | 41 | 51 | 61 | 71 | 81 | 10 | 90
 | 11 | 21 | 31 | 41 | 61 | 51 | 71 | 10 | 81 | 90
 | 11 | 21 | 31 | 41 | 51 | 61 | 71 | 10 | 81 | 90
@@ -239,11 +256,11 @@ Let us look at an example in detail. Suppose we are sorting the array [78, 11, 8
 
 We create three temporary arrays:
 
-    left[] for elements less than the pivot
+* left[] for elements less than the pivot
 
-    equal[] for elements equal to the pivot
+* equal[] for elements equal to the pivot
 
-    right[] for elements greater than the pivot
+* right[] for elements greater than the pivot
 
 During execution, if an element from the left side is greater than the pivot, and one from the right side is smaller, the two elements are swapped. In our example, 78 > 31 and 24 < 31, so they are exchanged. This process continues until the subarray is partitioned correctly. Then, Quick Sort is applied recursively to the left and right partitions.
 
