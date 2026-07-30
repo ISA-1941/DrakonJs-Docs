@@ -45,7 +45,7 @@ Graphs as data structures can be represented in two primary forms: undirected an
 
 [.text-center]
 .Figure 9.1. Graphical representation of (a) an undirected graph; (b) a directed graph (digraph)
-image::section_9/Fig9_1_exampleGraphNew.svg[width=75%, link=self, window="_blank"]
+image::section_9/Fig9_1_exampleGraph.svg[width=75%, link=self, window="_blank"]
 
 === Adjacency, Incidence, and Degree
 
