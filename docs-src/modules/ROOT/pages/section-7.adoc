@@ -82,6 +82,10 @@ The idea is simple: in each iteration, the algorithm finds the smallest value in
 
 For example, given the set [90, 12, 83, 24, 75, 38, 62, 41, 59, 10], the algorithm scans the array and finds the smallest element — 10. It then swaps 10 with the element at the first position (90). The sorted part now contains 10, and the process repeats with the remaining elements. The table below illustrates this process of selection and replacement.
 
+++++
+<div style="margin: 0 auto; width: 50%;">
+++++
+
 [cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="50%", align="center""]
 |===
 | *90* | *12* | 83 | 24 | 75 | 38 | 62 | 41 | 59 | 10
@@ -95,6 +99,10 @@ For example, given the set [90, 12, 83, 24, 75, 38, 62, 41, 59, 10], the algorit
 | [.underline]#10# | [.underline]#12# | [.underline]#24# | [.underline]#38# | [.underline]#41# | [.underline]#59# | [.underline]#62# | 75 | *83* | [.underline]#90#
 | [.underline]#10# | [.underline]#12# | [.underline]#24# | [.underline]#38# | [.underline]#41# | [.underline]#59# | [.underline]#62# | [.underline]#75# | [.underline]#83# | [.underline]#90#
 |===
+
+++++
+</div>
+++++
 
 Note to the table: Crossed-out items are already sorted; selected items are minimal in the current pass.
 
@@ -129,6 +137,10 @@ image::section_7/Fig7_3b_insertSort.svg[width=50%, link=self, window="_blank"]
 Figure 7.3. DRAKON-diagram of the Insertion Sort algorithm
 
 In this algorithm, larger values are pushed to the right. The algorithm compares adjacent elements and swaps them if needed. This process is shown in the table below, where underscores mark the positions where swaps occurred.
+
+++++
+<div style="margin: 0 auto; width: 50%;">
+++++
 
 [cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="50%", align="center"]
 |===
@@ -183,6 +195,11 @@ In this algorithm, larger values are pushed to the right. The algorithm compares
 | 11 | 10 | 21 | 31 | 41 | 51 | 61 | 71 | 81 | 90
 | 10 | 11 | 21 | 31 | 41 | 51 | 61 | 71 | 81 | 90
 |===
+
+++++
+</div>
+++++
+
 
 The time complexity of Insertion Sort depends on how the elements are arranged in the input array:
 
