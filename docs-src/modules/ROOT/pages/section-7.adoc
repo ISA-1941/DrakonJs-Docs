@@ -83,7 +83,7 @@ The idea is simple: in each iteration, the algorithm finds the smallest value in
 For example, given the set [90, 12, 83, 24, 75, 38, 62, 41, 59, 10], the algorithm scans the array and finds the smallest element — 10. It then swaps 10 with the element at the first position (90). The sorted part now contains 10, and the process repeats with the remaining elements. The table below illustrates this process of selection and replacement.
 
 ++++
-<div style="margin: 0 auto; width: 50%;">
+<div style="margin: 0 auto; width: 80%;">
 ++++
 
 [cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="80%", align="center""]
@@ -139,7 +139,7 @@ Figure 7.3. DRAKON-diagram of the Insertion Sort algorithm
 In this algorithm, larger values are pushed to the right. The algorithm compares adjacent elements and swaps them if needed. This process is shown in the table below, where underscores mark the positions where swaps occurred.
 
 ++++
-<div style="margin: 0 auto; width: 50%;">
+<div style="margin: 0 auto; width: 80%;">
 ++++
 
 [cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="80%", align="center"]
