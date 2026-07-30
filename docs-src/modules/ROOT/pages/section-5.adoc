@@ -52,18 +52,18 @@ if (array[index] > maxNumber) {
 maxNumber = array[index];
 }
 }
-
 console.log("The largest value of an array element =", maxNumber);
+
 
 When implementing this algorithm, the following will be performed:
 
-    (N - 1) operations of assigning a new value to the loop counter i
+* (N - 1) operations of assigning a new value to the loop counter i
 
-    (N - 1) operations of comparing the counter with the value N
+* (N - 1) operations of comparing the counter with the value N
 
-    (N - 1) operations of comparing an array element with the value of maxNumber
+* (N - 1) operations of comparing an array element with the value of maxNumber
 
-    From 1 to N operations of assigning a value to the variable maxNumber
+From 1 to N operations of assigning a value to the variable maxNumber
 
 It is obvious that such a calculation for determining the complexity of an algorithm and estimating its complexity is individual and depends on the size of the input data. Therefore, it was quite natural to propose a qualitative assessment of complexity depending on the "quality" of the initial data: the best case, the worst case, and the average case.
 
