@@ -831,3 +831,20 @@ i {
 .doc .listingblock pre code * {
   color: #ffffff !important;
 }
+
+/* ============================================================
+   23. Компактные таблицы (маленькая высота строк и отступы)
+   ============================================================ */
+
+/* Уменьшаем отступы ячеек и выравниваем текст по центру */
+.doc table.compact th,
+.doc table.compact td {
+  padding: 0.15rem 0.35rem !important;
+  font-size: 0.9rem !important;
+  text-align: center !important;
+}
+
+/* Уменьшаем внешний отступ самой таблицы */
+.doc table.compact {
+  margin: 0.4rem 0 !important;
+}
