@@ -13,13 +13,13 @@ This section explores the application of DrakonTech, a visual programming techno
 
 In theory and practice, the following forms of representation of algorithms have been formed:
 
-    Words (written in natural language)
+* Words (written in natural language)
 
-    Visual (images from graphic characters)
+* Visual (images from graphic characters)
 
-    Pseudocode (semiformalized descriptions of algorithms in conditional algorithmic language)
+* Pseudocode (semiformalized descriptions of algorithms in conditional algorithmic language)
 
-    Software (programming language texts)
+* Software (programming language texts)
 
 Visual representations of algorithms were the most effective and common in terms of visualization and understanding. Conceptually, visualization is a form of presentation of information, data, and knowledge in the form of images, in order to achieve maximum convenience of perception, understanding, and analysis. Visual representation allows a better view and understanding of the structural elements used in the design of the algorithm, including the logic of their interaction.
 
@@ -239,11 +239,11 @@ Let us create a Drakon-diagram using the example of a program for determining th
 
 For example, let us take the number 12345:
 
-    First sum = 1 + 2 + 3 + 4 + 5 = 15
+* First sum = 1 + 2 + 3 + 4 + 5 = 15
 
-    Second sum = 1 + 5 = 6
+* Second sum = 1 + 5 = 6
 
-    Therefore, the digital root of 12345 is 6.
+* Therefore, the digital root of 12345 is 6.
 
 To solve the problem of finding the digital root of an integer, we will create four Drakon-diagrams: module, main, digRoot, and sumDigits (Figure 4.13).
 
