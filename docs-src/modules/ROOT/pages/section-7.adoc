@@ -122,67 +122,48 @@ Figure 7.3. DRAKON-diagram of the Insertion Sort algorithm
 
 In this algorithm, larger values are pushed to the right. The algorithm compares adjacent elements and swaps them if needed. This process is shown in the table below, where underscores mark the positions where swaps occurred.
 
-[.text-center]
-Input array
 [cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="50%"]
 |===
+10+| Input array
 | 90 | 11 | 81 | 21 | 71 | 31 | 61 | 41 | 51 | 10
-|===
-i = 1
-[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="50%"]
-|===
+
+10+| i = 1
 | 11 | 90 | 81 | 21 | 71 | 31 | 61 | 41 | 51 | 10
-|===
-i = 2
-[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="50%"]
-|===
+
+10+| i = 2
 | 11 | 81 | 90 | 21 | 71 | 31 | 61 | 41 | 51 | 10
-|===
-i = 3
-[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="50%"]
-|===
+
+10+| i = 3
 | 11 | 81 | 21 | 90 | 71 | 31 | 61 | 41 | 51 | 10
 | 11 | 21 | 81 | 90 | 71 | 31 | 61 | 41 | 51 | 10
-|===
-i = 4
-[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="50%"]
-|===
+
+10+| i = 4
 | 11 | 21 | 81 | 71 | 90 | 31 | 61 | 41 | 51 | 10
 | 11 | 21 | 71 | 81 | 90 | 31 | 61 | 41 | 51 | 10
-|===
-i = 5
-[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="50%"]
-|===
+
+10+| i = 5
 | 11 | 21 | 71 | 81 | 31 | 90 | 61 | 41 | 51 | 10
 | 11 | 21 | 71 | 31 | 81 | 90 | 61 | 41 | 51 | 10
 | 11 | 21 | 31 | 71 | 81 | 90 | 61 | 41 | 51 | 10
-|===
-i = 6
-[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="50%"]
-|===
+
+10+| i = 6
 | 11 | 21 | 31 | 71 | 81 | 61 | 90 | 41 | 51 | 10
 | 11 | 21 | 31 | 71 | 61 | 81 | 90 | 41 | 51 | 10
 | 11 | 21 | 31 | 61 | 71 | 81 | 90 | 41 | 51 | 10
-|===
-i = 7
-[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="50%"]
-|===
+
+10+| i = 7
 | 11 | 21 | 31 | 61 | 71 | 81 | 41 | 90 | 51 | 10
 | 11 | 21 | 31 | 61 | 71 | 81 | 41 | 51 | 90 | 10
 | 11 | 21 | 31 | 61 | 41 | 71 | 81 | 90 | 51 | 10
 | 11 | 21 | 31 | 41 | 61 | 71 | 81 | 90 | 51 | 10
-|===
-i = 8
-[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="50%"]
-|===
+
+10+| i = 8
 | 11 | 21 | 31 | 41 | 61 | 71 | 81 | 51 | 90 | 10
 | 11 | 21 | 31 | 41 | 61 | 71 | 51 | 81 | 90 | 10
 | 11 | 21 | 31 | 41 | 61 | 51 | 71 | 81 | 90 | 10
 | 11 | 21 | 31 | 41 | 51 | 61 | 71 | 81 | 90 | 10
-|===
-i = 9
-[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="50%"]
-|===
+
+10+| i = 9
 | 11 | 21 | 31 | 41 | 51 | 61 | 71 | 81 | 10 | 90
 | 11 | 21 | 31 | 41 | 61 | 51 | 71 | 10 | 81 | 90
 | 11 | 21 | 31 | 41 | 51 | 61 | 71 | 10 | 81 | 90
@@ -300,11 +281,11 @@ To better understand how recursive sorting builds the final result, the table be
 
 The time complexity of Quick Sort depends on how well the pivot is chosen:
 
-    Best case: the pivot is the median → O(n log n)
+* Best case: the pivot is the median → O(n log n)
 
-    Average case: still O(n log n), due to recursive halving
+* Average case: still O(n log n), due to recursive halving
 
-    Worst case: when the pivot is the smallest or largest item, resulting in unbalanced partitions → O(n²)
+*Worst case: when the pivot is the smallest or largest item, resulting in unbalanced partitions → O(n²)
 
 Quick Sort uses recursion. In each step, it partitions the array and performs O(n) work. This leads to the recurrence relation T(n) = 2T(n/2) + O(n), which solves to O(n log n).
 
