@@ -31,17 +31,77 @@ Formally, a graph is denoted as $G = (V, E)$, where $V$ is the set of vertices a
 
 === Directed and Undirected Graphs
 
-Graphs as data structures can be represented in two primary forms: undirected and directed. 
+A graph as a data structure is defined by a set of vertices and a set of connections between them. Depending on whether these connections have direction, graphs are divided into two main types: *undirected graphs* and *directed graphs*.
 
-1. Undirected Graph:: In these graphs, there are no "inputs" or "outputs"; there is only the objective fact of a connection.
-* *Vertex Degree (deg(v)):* This is the total number of edges incident to a given vertex.
-* *Loops:* In an undirected graph, a loop is counted twice (+2 to the degree). Why? Because both ends of the loop-edge are "plugged into" the same vertex, and each end contributes to the total degree.
+==== Undirected Graphs
 
-2. Directed Graph (Digraph):: Here, the logic becomes more nuanced as direction matters (Figure 9.1). The connection from vertex $u$ to vertex $v$ is not equivalent to a connection from $v$ to $u$. The degree is split into two distinct components:
-* *In-degree (deg^-(v^)):* The number of edges entering (incident into) the vertex.
-* *Out-degree (deg^+(v^)):* The number of edges leaving (incident from) the vertex.
-* *Total Degree:* The sum of the in-degree and out-degree.
-* *Loops in a Digraph:* In this case, a loop is counted exactly once for the in-degree and once for the out-degree. It does not "double" the total degree; instead, it is honestly distributed between the two directions.
+An *undirected graph* is a graph in which edges have no direction. An edge between vertices `u` and `v` represents only the fact that these two vertices are connected. In other words, the connection `u -- v` is equivalent to the connection `v -- u`.
+
+Formally, an undirected graph can be written as:
+
+[stem]
+++++
+G = (V, E)
+++++
+
+where `V` is the set of vertices and `E` is the set of edges. Each edge connects two vertices.
+
+The *degree* of a vertex `v`, denoted as stem:[\deg(v)], is the number of edges incident to `v`, that is, the number of edges connected to this vertex.
+
+If loops are allowed, then a loop in an undirected graph contributes `2` to the degree of the vertex.
+
+This is because a loop has two endpoints, and both endpoints are incident to the same vertex.
+
+For example, if a vertex `v` has one ordinary edge connected to another vertex and one loop, then:
+
+[stem]
+++++
+\deg(v) = 1 + 2 = 3
+++++
+
+==== Directed Graphs
+
+A *directed graph*, or *digraph*, is a graph in which every edge has a direction. Directed edges are often called *arcs*.
+
+An arc from vertex `u` to vertex `v` is written as:
+
+[stem]
+++++
+(u, v)
+++++
+
+and represents a connection directed from `u` to `v`.
+
+Unlike in an undirected graph, the arcs `(u, v)` and `(v, u)` are different connections.
+
+For directed graphs, the degree of a vertex is divided into two separate characteristics:
+
+* The *in-degree* of a vertex `v`, denoted as stem:[\deg^-(v)], is the number of arcs entering `v`.
+* The *out-degree* of a vertex `v`, denoted as stem:[\deg^+(v)], is the number of arcs leaving `v`.
+
+The *total degree* of a vertex in a directed graph is the sum of its in-degree and out-degree:
+
+[stem]
+++++
+\deg(v) = \deg^-(v) + \deg^+(v)
+++++
+
+If a directed graph contains a loop `(v, v)`, then this loop both enters and leaves the same vertex `v`. Therefore, it increases the in-degree by `1` and the out-degree by `1`:
+
+[stem]
+++++
+\deg^-(v) \mathrel{+}= 1
+++++
+
+[stem]
+++++
+\deg^+(v) \mathrel{+}= 1
+++++
+
+As a result, a loop increases the total degree of the vertex by `2`.
+
+In short, an undirected edge represents a symmetric connection between two vertices, while a directed edge represents an ordered connection. For this reason, directed graphs distinguish between incoming and outgoing arcs.
+
 
 [.text-center]
 .Figure 9.1. Graphical representation of (a) an undirected graph; (b) a directed graph (digraph)
