@@ -112,28 +112,28 @@ In this algorithm, larger values are pushed to the right. The algorithm compares
 
 [.text-center]
 Input array
-[.compact, cols="10", options="compact"]
+[.small, cols="10", options="compact"]
 |===
 | 90 | 11 | 81 | 21 | 71 | 31 | 61 | 41 | 51 | 10
 |===
 
 [.text-center]
 i = 1
-[.compact, cols="10", options="compact"]
+[.small, cols="10", options="compact"]
 |===
 | 11 | 90 | 81 | 21 | 71 | 31 | 61 | 41 | 51 | 10
 |===
 
 [.text-center]
 i = 2
-[.compact, cols="10", options="compact"]
+[.small, cols="10", options="compact"]
 |===
 | 11 | 81 | 90 | 21 | 71 | 31 | 61 | 41 | 51 | 10
 |===
 
 [.text-center]
 i = 3
-[.compact, cols="10", options="compact"]
+[.small, cols="10", options="compact"]
 |===
 | 11 | 81 | 21 | 90 | 71 | 31 | 61 | 41 | 51 | 10
 | 11 | 21 | 81 | 90 | 71 | 31 | 61 | 41 | 51 | 10
@@ -141,7 +141,7 @@ i = 3
 
 [.text-center]
 i = 4
-[.compact, cols="10", options="compact"]
+[.small, cols="10", options="compact"]
 |===
 | 11 | 21 | 81 | 71 | 90 | 31 | 61 | 41 | 51 | 10
 | 11 | 21 | 71 | 81 | 90 | 31 | 61 | 41 | 51 | 10
@@ -149,7 +149,7 @@ i = 4
 
 [.text-center]
 i = 5
-[.compact, cols="10", options="compact"]
+[.small, cols="10", options="compact"]
 |===
 | 11 | 21 | 71 | 81 | 31 | 90 | 61 | 41 | 51 | 10
 | 11 | 21 | 71 | 31 | 81 | 90 | 61 | 41 | 51 | 10
@@ -158,7 +158,7 @@ i = 5
 
 [.text-center]
 i = 6
-[.compact, cols="10", options="compact"]
+[.small, cols="10", options="compact"]
 |===
 | 11 | 21 | 31 | 71 | 81 | 61 | 90 | 41 | 51 | 10
 | 11 | 21 | 31 | 71 | 61 | 81 | 90 | 41 | 51 | 10
@@ -167,7 +167,7 @@ i = 6
 
 [.text-center]
 i = 7
-[.compact, cols="10", options="compact"]
+[.small, cols="10", options="compact"]
 |===
 | 11 | 21 | 31 | 61 | 71 | 81 | 41 | 90 | 51 | 10
 | 11 | 21 | 31 | 61 | 71 | 81 | 41 | 51 | 90 | 10
@@ -177,7 +177,7 @@ i = 7
 
 [.text-center]
 i = 8
-[.compact, cols="10", options="compact"]
+[.small, cols="10", options="compact"]
 |===
 | 11 | 21 | 31 | 41 | 61 | 71 | 81 | 51 | 90 | 10
 | 11 | 21 | 31 | 41 | 61 | 71 | 51 | 81 | 90 | 10
@@ -187,7 +187,7 @@ i = 8
 
 [.text-center]
 i = 9
-[.compact, cols="10", options="compact"]
+[.small, cols="10", options="compact"]
 |===
 | 11 | 21 | 31 | 41 | 51 | 61 | 71 | 81 | 10 | 90
 | 11 | 21 | 31 | 41 | 61 | 51 | 71 | 10 | 81 | 90
