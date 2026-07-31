@@ -250,42 +250,42 @@ Extract the last element of the stack.
 | *1* | `[2]` +
 _({blank}[The only outgoing neighbor of vertex 1])_ 
 | `[3, 2]` +
-_(Vertex V~2~ is pushed on top of vertex 3)_ 
+_(Vertex `V~2~` is pushed on top of vertex 3)_ 
 | `[0, 1]`
 
 | *3* | *Pop from stack* +
-Extract vertex 2. 
+Extract vertex `V~2~`. 
 | *2* | `[]` +
-_({blank}[Vertex 2 is an absolute dead-end; it has no outgoing edges])_ 
+_({blank}[Vertex `V~2~` is an absolute dead-end; it has no outgoing edges])_ 
 | `[3]` +
 _(The stack shrinks; no new elements are added)_ 
 | `[0, 1, 2]`
 
 | *4* | *Pop from stack* +
-Extract vertex 3. 
+Extract vertex `V~3~`. 
 | *3* | `[4, 5]` +
-__({blank}[Vertex 3 has three neighbors: `[2, 4, 5]`. `V~2~` is already visited, only `[5, 4]` are pushed in reverse order])_
+__({blank}[Vertex `V~3~` has three neighbors: `[2, 4, 5]`. `V~2~` is already visited, only `[5, 4]` are pushed in reverse order])_
 | `[5, 4]` 
 | `[0, 1, 2, 3]`
 
 | *5* | *Pop from stack* +
-Extract vertex 4. 
+Extract vertex `V~4~`. 
 | *4* | `[]` +
-_({blank}[Vertex 4 has no outgoing edges])_ 
+_({blank}[Vertex `V~4~` has no outgoing edges])_ 
 | `[5]` 
 | `[0, 1, 2, 3, 4]`
 
 | *6* | *Pop from stack* +
-Extract vertex 5. 
+Extract vertex `V~5~`. 
 | *5* | `[6]` +
-_({blank}[Vertex 5 has two neighbors: `[4, 6]`. Since `V~4~` was already visited in step 5, only vertex 6 is pushed])_
+_({blank}[Vertex `V~5~` has two neighbors: `[4, 6]`. Since `V~4~` was already visited in step 5, only vertex `V~6~` is pushed])_
 | `[6]` 
 | `[0, 1, 2, 3, 4, 5]`
 
 | *7* | *Pop from stack* +
 Extract the final vertex. 
 | *6* | `[]` +
-_({blank}[Vertex 6 has no outgoing edges])_ 
+_({blank}[Vertex `V~6~` has no outgoing edges])_ 
 | `[]` +
 _(The stack is completely empty)_ 
 | `[0, 1, 2, 3, 4, 5, 6]`
@@ -323,42 +323,42 @@ Extract the first element from the queue head.
 | *1* | `[2]` +
 _({blank}[The only outgoing neighbor of vertex 1])_ 
 | `[3, 2]` +
-_(Vertex 2 is appended to the tail of the queue)_ 
+_(Vertex `V~2~` is appended to the tail of the queue)_ 
 | `[0, 1]`
 
 | *3* | *Dequeue (Shift)* +
-Extract vertex 3 from the queue head. 
+Extract vertex `V~3~` from the queue head. 
 | *3* | `[4, 5]` +
-_({blank}[Vertex 3 has neighbors `[2, 4, 5]`. Vertex 2 is skipped as it is already in the queue. Only `[4, 5]` are appended])_ 
+_({blank}[Vertex `V~3~` has neighbors `[2, 4, 5]`. Vertex `V~2~` is skipped as it is already in the queue. Only `[4, 5]` are appended])_ 
 | `[2, 4, 5]` 
 | `[0, 1, 3]`
 
 | *4* | *Dequeue (Shift)* +
-Extract vertex 2. 
+Extract vertex `V~2~`. 
 | *2* | `[]` +
-_({blank}[Vertex 2 has no outgoing edges])_ 
+_({blank}[Vertex `V~2~` has no outgoing edges])_ 
 | `[4, 5]` +
 _(The queue shrinks from the front)_ 
 | `[0, 1, 3, 2]`
 
 | *5* | *Dequeue (Shift)* +
-Extract vertex 4. 
+Extract vertex `V~4~`. 
 | *4* | `[]` +
-_({blank}[Vertex 4 has no outgoing edges])_ 
+_({blank}[Vertex `V~4~` has no outgoing edges])_ 
 | `[5]` 
 | `[0, 1, 3, 2, 4]`
 
 | *6* | *Dequeue (Shift)* +
-Extract vertex 5. 
+Extract vertex `V~5~`. 
 | *5* | `[6]` +
-_({blank}[Vertex 5 has neighbors `[4, 6]`. Vertex 4 is skipped as it is already visited. Only vertex 6 is appended])_ 
+_({blank}[Vertex `V~5~` has neighbors `[4, 6]`. Vertex `V~4~` is skipped as it is already visited. Only vertex `V~6~` is appended])_ 
 | `[6]` 
 | `[0, 1, 3, 2, 4, 5]`
 
 | *7* | *Dequeue (Shift)* +
 Extract the final vertex. 
 | *6* | `[]` +
-_({blank}[Vertex 6 has no outgoing edges])_ 
+_({blank}[Vertex `V~6~` has no outgoing edges])_ 
 | `[]` +
 _(The queue is completely empty)_ 
 | `[0, 1, 3, 2, 4, 5, 6]`
