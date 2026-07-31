@@ -264,7 +264,7 @@ _(The stack shrinks; no new elements are added)_
 | *4* | *Pop from stack* +
 Extract vertex 3. 
 | *3* | `[4, 5]` +
-__({blank}[Vertex 3 has three neighbors: `[2, 4, 5]`. `V_2` is already visited, only `[5, 4]` are pushed in reverse order])_
+__({blank}[Vertex 3 has three neighbors: `[2, 4, 5]`. 'V~2~' is already visited, only `[5, 4]` are pushed in reverse order])_
 | `[5, 4]` 
 | `[0, 1, 2, 3]`
 
