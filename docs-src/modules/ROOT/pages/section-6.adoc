@@ -230,13 +230,12 @@ The implementation of the basic hash table functions using the hash function is 
 
 * Store these objects in the designated bucket.
 
-The general description of algorithms for working with hash tables is presented as a table of basic parameters of applied functions (Table 6.2) and corresponding DRAKON diagrams (Figure 6.6 - 6.11).
+The general description of algorithms for working with hash tables is presented as a table of basic parameters of applied functions (Table 6.2) and corresponding DRAKON diagrams (Figure 6.7a - 6.7f).
 
-
-.Hash Table Functions Overview (Chaining Implementation)
+Table 6.2. Functions Overview (Chaining Implementation)
 [cols="1,2,1,2,3,2", options="header"]
 |===
-| `hashGet(hash, key)`        (Figure 6.8a)
+| `hashGet(hash, key)`        (Figure 6.7a)
 | Find a value by key
 | `hash` – table object, `key` – search key
 | Value or `undefined` if not found
