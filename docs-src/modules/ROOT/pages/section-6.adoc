@@ -233,9 +233,16 @@ The implementation of the basic hash table functions using the hash function is 
 The general description of algorithms for working with hash tables is presented as a table of basic parameters of applied functions (Table 6.2) and corresponding DRAKON diagrams (Figure 6.7a - 6.7f).
 
 Table 6.2. Functions Overview (Chaining Implementation)
-[cols="1,2,1,2,3,2", options="header"]
+[cols="1,2,2,2,3,2", options="header"]
 |===
-| `hashGet(hash, key)`        (Figure 6.7a)
+| Function
+| Purpose
+| Parameters
+| Return value
+| Main steps
+| Notes / Complexity
+
+| hashGet(hash, key)        (Figure 6.7a)
 | Find a value by key
 | `hash` – table object, `key` – search key
 | Value or `undefined` if not found
@@ -331,7 +338,7 @@ image::section_6/Fig6_7f_printHashTable.svg[width=75%, link=self, window="_blank
 Consider the algorithm for removing an element from the hash table. Consider the algorithm for removing an element from the hash table. Suppose we delete the entry with key 74. First, the bucket containing this key is determined by computing `hashFunc(74)`. Then the algorithm traverses the chain in this bucket. After each `node.key === key` check, the previous node is stored in the `prev` variable. If the key is found, the chain is relinked: if the node is the head of the chain, `hash.table[index]` is set to `node.next`; otherwise, `prev.next` is set to `node.next` (Figure 6.7d).
 
 
-Another example of a "good" hash function for use with integer key values is the mean square method. The mean square method squares the key value and then extracts the middle digits of the result, giving a value in the range from 0 to M. A software implementation of a hash function algorithm in Go would involve using built-in functions for converting integers to strings (strconv.Atoi(i)) and vice versa (strconv.Itoa(i)). For example, for any four-digit number, the hash function is:
+Another example of a hash function for integer keys is the mid-square method. The mean square method squares the key value and then extracts the middle digits of the result, giving a value in the range from 0 to M. A software implementation of a hash function algorithm in Go would involve using built-in functions for converting integers to strings (strconv.Atoi(i)) and vice versa (strconv.Itoa(i)). For example, for any four-digit number, the hash function is:
 go
 
 func hFunc(i int) int {
