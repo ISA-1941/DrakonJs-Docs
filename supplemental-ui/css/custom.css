@@ -848,3 +848,19 @@ i {
 .doc table.compact {
   margin: 0.4rem 0 !important;
 }
+
+/* ============================================================
+   24. Литеральные блоки (literal paragraphs) — предохранитель
+   На случай случайных отступов в .adoc, которые Asciidoctor
+   превращает в literalblock, а не в список/абзац
+   ============================================================ */
+
+.doc .literalblock pre {
+  background-color: var(--code-bg) !important;
+  color: var(--code-text) !important;
+  border: 1px solid #59646f;
+  border-radius: 0.55rem;
+  padding: 1rem 1.15rem;
+  font-family: "JetBrains Mono", "Fira Code", "Ubuntu Mono", Consolas, monospace;
+  white-space: pre-wrap; /* чтобы длинный текст переносился, а не растягивал страницу */
+}
