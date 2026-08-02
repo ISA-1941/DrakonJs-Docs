@@ -2,6 +2,7 @@
 
 [.text-justify]
 :figure-caption!:
+:table-caption!:
 
 = Section 6. Basic Search Algorithms
 
@@ -212,7 +213,7 @@ A hash function that establishes a relationship between an element and its corre
 
 The algorithm then identifies slots for other elements, gradually filling them. When the algorithm encounters element 104 in the loop, the remainder of the division is 104 % 15 = 14, so this element will also be included in the 14th slot. In this way, each slot will accumulate corresponding elements with the same hash index. For example, for a hash index of 8, the slot will consist of these elements: 113, 98, 83, 68, 53, 38, 23, 8. The entire hash table will be as follows (Table 6.1):
 
-.Hash table of 15 slots
+.Table 1: Hash table of 15 slots
 |===
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14
 | 105 | 106 | 107 | 108 | 109 | 110 | 111 | 112 | 113 | 114 | 115 | 116 | 117 | 118 | 119
@@ -239,7 +240,7 @@ The implementation of the basic hash table functions using the hash function is 
 
 The general description of algorithms for working with hash tables is presented as a table of basic parameters of applied functions (Table 6.2) and corresponding DRAKON diagrams (Figure 6.8a - 6.8f).
 
-.Functions Overview (Chaining Implementation)
+.Table 2: Functions Overview (Chaining Implementation)
 [cols="1,2,2,2,3,2", options="header"]
 |===
 | Function
@@ -339,7 +340,7 @@ image::section_6/Fig6_8f_printHashTable.svg[width=75%, link=self, window="_blank
 [.text-left]
 Consider a concrete example. A hash table of size m = 16 is populated with 16 records, each keyed by a six-digit identifier and holding a person's name as the value. Calling `printHashTable(hash)` after all insertions produces the following snapshot of the table (Table 6.3):
 
-.Hash table contents before removal (`printHashTable`, m = 16)
+.Table 3: Hash table contents before removal (`printHashTable`, m = 16)
 [cols="1,4", options="header"]
 |===
 | Slot | Chain (key -> value)
@@ -371,7 +372,7 @@ Suppose we now call `hashRemove(hash, 821674)`. The algorithm proceeds as follow
 
 Only slot 10 is affected by this operation; every other slot remains exactly as in Table 6.4:
 
-.Slot 10 before and after `hashRemove(hash, 821674)`
+.Table 4: Slot 10 before and after `hashRemove(hash, 821674)`
 [cols="1,4", options="header"]
 |===
 | State | Chain (key -> value)
