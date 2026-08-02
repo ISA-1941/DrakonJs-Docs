@@ -129,6 +129,7 @@ image::section_6/Fig6_4f_removeDuplicates.svg[width=100%, link=self, window="_bl
 [.text-center]
 .Figure 6.4. DRAKON-diagrams of linked list algorithms: deletion, search, insertion by value, and duplicate deletion
 
+
 [.text-left]
 Results of the execution of the above algorithms are as follows:
 The linked list is:
@@ -335,6 +336,7 @@ image::section_6/Fig6_8f_printHashTable.svg[width=75%, link=self, window="_blank
 [.text-center]
 .Figure 6.8. DRAKON-diagrams of hash table algorithms: find by key, insert, reverse lookup, delete, traverse, and print
 
+[.text-left]
 Consider a concrete example. A hash table of size m = 16 is populated with 16 records, each keyed by a six-digit identifier and holding a person's name as the value. Calling `printHashTable(hash)` after all insertions produces the following snapshot of the table (Table 6.3):
 
 .Hash table contents before removal (`printHashTable`, m = 16)
@@ -367,9 +369,9 @@ Suppose we now call `hashRemove(hash, 821674)`. The algorithm proceeds as follow
 * After each `node.key === key` check, the previously visited node is kept in the `prev` variable. The first two nodes (`169834`, `734218`) do not match and are skipped in turn.
 * The third node matches (`node.key === 821674`). Since it is not the head of the chain, the link is repaired by setting `prev.next = node.next` — the node holding `David S. Hughes` is detached from the chain, and `hashRemove` returns `true`.
 
-Only slot 10 is affected by this operation; every other slot remains exactly as in Table 6.3:
+Only slot 10 is affected by this operation; every other slot remains exactly as in Table 6.4:
 
-.Table 6.4. Slot 10 before and after `hashRemove(hash, 821674)`
+.Slot 10 before and after `hashRemove(hash, 821674)`
 [cols="1,4", options="header"]
 |===
 | State | Chain (key -> value)
