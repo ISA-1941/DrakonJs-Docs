@@ -341,19 +341,50 @@ image::section_6/Fig6_8f_printHashTable.svg[width=75%, link=self, window="_blank
 [.text-center]
 Figure 6.8. DRAKON-diagrams of hash table algorithms: find by key, insert, reverse lookup, delete, traverse, and print
 
-Consider the algorithm for removing an element from the hash table. Suppose we delete the entry with key 74. First, the bucket containing this key is determined by computing `hashFunc(74)`. Then the algorithm traverses the chain in this bucket. After each `node.key === key` check, the previous node is stored in the `prev` variable. If the key is found, the chain is relinked: if the node is the head of the chain, `hash.table[index]` is set to `node.next`; otherwise, `prev.next` is set to `node.next` (Figure 6.8d).
+Consider a concrete example. A hash table of size m = 16 is populated with 16 records, each keyed by a six-digit identifier and holding a person's name as the value. Calling `printHashTable(hash)` after all insertions produces the following snapshot of the table (Table 6.3):
 
-Another example of a hash function for integer keys is the mid-square method. The mid-square method squares the key value and then extracts the middle digits of the result, giving a value in the range from 0 to M. A JavaScript implementation of this hash function might convert the squared key to a string, extract the middle digits, and convert them back to an integer. For example, for any four-digit number, the hash function is:
+.Table 6.3. Hash table contents before removal (`printHashTable`, m = 16)
+[cols="1,4", options="header"] New
+|===
+| Slot | Chain (key -> value)
 
-[source,javascript]
-----
-function hFunc(i) {
-    i = i * i;
-    let s = i.toString();
-    s = s.slice(3, 5);
-    return parseInt(s, 10);
-}
-----
+| 0  | Empty
+| 1  | 625073 -> Olivia J. Watson
+| 2  | Empty
+| 3  | 519283 -> Alice R. Cooper
+| 4  | 476820 -> Ivy N. Butler -> 357908 -> Carol A. Foster
+| 5  | 807541 -> Mia G. Richardson -> 392645 -> Jack K. Barnes -> 430165 -> Emma L. Reed
+| 6  | 941206 -> Paul V. Steven -> 746102 -> Bob M. Bennett
+| 7  | Empty
+| 8  | 679832 -> Frank W. Brooks
+| 9  | Empty
+| 10 | 169834 -> Noah D. Patterson -> 734218 -> Leo C. Coleman -> 821674 -> David S. Hughes
+| 11 | 213547 -> Grace E. Simmons
+| 12 | Empty
+| 13 | 958301 -> Henry T. Peterson
+| 14 | Empty
+| 15 | 568079 -> Kelly P. Ross
+|===
+
+Suppose we now call `hashRemove(hash, 821674)`. The algorithm proceeds as follows:
+
+* Compute the bucket index: `hashFunc(821674) = 821674 mod 16 = 10`.
+* Traverse the chain stored in slot 10. The chain currently holds three nodes: `169834 -> Noah D. Patterson`, `734218 -> Leo C. Coleman`, `821674 -> David S. Hughes`.
+* After each `node.key === key` check, the previously visited node is kept in the `prev` variable. The first two nodes (`169834`, `734218`) do not match and are skipped in turn.
+* The third node matches (`node.key === 821674`). Since it is not the head of the chain, the link is repaired by setting `prev.next = node.next` — the node holding `David S. Hughes` is detached from the chain, and `hashRemove` returns `true`.
+
+Only slot 10 is affected by this operation; every other slot remains exactly as in Table 6.3:
+
+.Table 6.4. Slot 10 before and after `hashRemove(hash, 821674)`
+[cols="1,4", options="header"]
+|===
+| State | Chain (key -> value)
+
+| Before | 169834 -> Noah D. Patterson -> 734218 -> Leo C. Coleman -> 821674 -> David S. Hughes
+| After  | 169834 -> Noah D. Patterson -> 734218 -> Leo C. Coleman
+|===
+
+Finally, consider a call to `hashLookupByValue(hash, "Olivia J. Watson")` — a reverse lookup, illustrating the O(n) traversal described in Table 6.2. The algorithm scans every bucket in order; the very first non-empty bucket it inspects, slot 1, already contains the matching node, and the function returns key `625073`. Unlike `hashGet`, which locates a value in average-case O(1) time by jumping straight to the correct bucket, `hashLookupByValue` has no such shortcut: in the worst case it must inspect every node in every bucket before concluding that no match exists.
 
 === Topics Beyond the Scope of This Book
 
