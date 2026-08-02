@@ -154,7 +154,7 @@ To implement a hash-table using chaining, we need two helper structures: the tab
 
 ==== Creating a Hash Table and Chain Nodes
 
-The function `createHashTable(size)` initializes a new hash table instance. It takes one argument – the desired number of buckets. Internally, it does the following (Figure 6.6a):
+The function `createHashTable(size)` initializes a new hash table instance. It takes one argument – the desired number of buckets. Internally, it does the following (Figure 6.6):
 
 * Creates an array table of the given length.
 
@@ -164,7 +164,7 @@ The function `createHashTable(size)` initializes a new hash table instance. It t
 
 In practice, the table object often also includes a count field (current number of elements) and a loadFactor (threshold for resizing). However, we start with a minimal version for simplicity.
 
-image::section_6/Fig6_6b_createHashTable.svg[width=50%, link=self, window="_blank"]
+image::section_6/Fig6_6_createHashTable.svg[width=50%, link=self, window="_blank"]
 [.text-center]
 
 .Figure 6.6. Function for Creating a Hash Table (createHashTable)
@@ -230,7 +230,7 @@ The implementation of the basic hash table functions using the hash function is 
 
 * Store these objects in the designated bucket.
 
-The general description of algorithms for working with hash tables is presented as a table of basic parameters of applied functions (Table 6.2) and corresponding DRAKON diagrams (Figure 6.7a - 6.7f).
+The general description of algorithms for working with hash tables is presented as a table of basic parameters of applied functions (Table 6.2) and corresponding DRAKON diagrams (Figure 6.8a - 6.8f).
 
 Table 6.2. Functions Overview (Chaining Implementation)
 [cols="1,2,2,2,3,2", options="header"]
@@ -242,7 +242,7 @@ Table 6.2. Functions Overview (Chaining Implementation)
 | Main steps
 | Notes / Complexity
 
-| hashGet(hash, key)        (Figure 6.7a)
+| hashGet(hash, key)        (Figure 6.8a)
 | Find a value by key
 | `hash` – table object, `key` – search key
 | Value or `undefined` if not found
@@ -252,7 +252,7 @@ Table 6.2. Functions Overview (Chaining Implementation)
 4. Otherwise return `undefined`.
 | Amortized O(1) complexity.
 
-| `hashInsert(hash, key, value)`        (Figure 6.7b)
+| `hashInsert(hash, key, value)`        (Figure 6.8b)
 | Insert or update a key‑value pair
 | `hash`, `key`, `value`
 | Bucket index where insertion/update occurred
@@ -262,7 +262,7 @@ Table 6.2. Functions Overview (Chaining Implementation)
 `hash.table[index] = createNode(key, value, hash.table[index])`.
 | Insertion at the head is simpler and faster than at the tail.
 
-| `hashLookupByValue(hash, value)`        (Figure 6.7c)
+| `hashLookupByValue(hash, value)`        (Figure 6.8c)
 | Find a **key** by value (reverse lookup)
 | `hash`, `value` – search value
 | Key or `undefined` if not found
@@ -272,7 +272,7 @@ Table 6.2. Functions Overview (Chaining Implementation)
 4. If not found, return `undefined`.
 | O(n) complexity – inefficient; use only for debugging or rare cases.
 
-| `hashRemove(hash, key)`        (Figure 6.7d)
+| `hashRemove(hash, key)`        (Figure 6.8d)
 | Delete an entry by key
 | `hash`, `key` – key to delete
 | `true` if deleted, `false` if key not found
@@ -285,14 +285,14 @@ Table 6.2. Functions Overview (Chaining Implementation)
 5. If not found, return `false`.
 | The parameter must be `key`, not `value`.
 
-| `hashTraverse(hash)`       (Figure 6.7e)     
+| `hashTraverse(hash)`       (Figure 6.8e)     
 | Print table contents (values only)
 | `hash`
 | – (console output)
 | For each bucket, print `"Slot i:"` followed by all values (`node.value`) separated by `" -> "`, or `"Empty"` if the bucket is empty.
 | Does not show keys – `printHashTable` is more informative.
 
-| `printHashTable(hash)`    (Figure 6.7f)
+| `printHashTable(hash)`    (Figure 6.8f)
 | Print table in `key -> value` format
 | `hash`
 | – (console output)
@@ -302,43 +302,42 @@ Table 6.2. Functions Overview (Chaining Implementation)
 
 DRAKON-diagrams of algorithms for implementing the main hash table operations are shown in Figure 6.7a–f.
 
-image::section_6/Fig6_7a_hashGet.svg[width=75%, link=self, window="_blank"]
+image::section_6/Fig6_8a_hashGet.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
-.Figure 6.7a. Hash table search by key (`hashGet`)
+.Figure 6.8a. Hash table search by key (`hashGet`)
 
-image::section_6/Fig6_7b_hashInsert.svg[width=75%, link=self, window="_blank"]
-
-[.text-center]
-.Figure 6.7b. Hash table insertion or update (`hashInsert`)
-
-image::section_6/Fig6_7c_hashLookupByValue.svg[width=100%, link=self, window="_blank"]
+image::section_6/Fig6_8b_hashInsert.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
-.Figure 6.7c. Hash table reverse lookup by value (`hashLookupByValue`)
+.Figure 6.8b. Hash table insertion or update (`hashInsert`)
 
-image::section_6/Fig6_7d_hashRemove.svg[width=100%, link=self, window="_blank"]
-
-[.text-center]
-.Figure 6.7d. Hash table deletion by key (`hashRemove`)
-
-image::section_6/Fig6_7e_hashTraverse.svg[width=75%, link=self, window="_blank"]
+image::section_6/Fig6_8c_hashLookupByValue.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
-.Figure 6.7e. Hash Table Traversal Function (hashTraverse)
+.Figure 6.8c. Hash table reverse lookup by value (`hashLookupByValue`)
 
-image::section_6/Fig6_7f_printHashTable.svg[width=75%, link=self, window="_blank"]
-
-[.text-center]
-.Figure 6.7f. Hash table printing (`printHashTable`)
+image::section_6/Fig6_8d_hashRemove.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
-.Figure 6.7. DRAKON-diagrams of hash table algorithms: find by key, insert, reverse lookup, delete, traverse, and print
+.Figure 6.8d. Hash table deletion by key (`hashRemove`)
 
-Consider the algorithm for removing an element from the hash table. Consider the algorithm for removing an element from the hash table. Suppose we delete the entry with key 74. First, the bucket containing this key is determined by computing `hashFunc(74)`. Then the algorithm traverses the chain in this bucket. After each `node.key === key` check, the previous node is stored in the `prev` variable. If the key is found, the chain is relinked: if the node is the head of the chain, `hash.table[index]` is set to `node.next`; otherwise, `prev.next` is set to `node.next` (Figure 6.7d).
+image::section_6/Fig6_8e_hashTraverse.svg[width=75%, link=self, window="_blank"]
 
+[.text-center]
+.Figure 6.8e. Hash Table Traversal Function (hashTraverse)
 
-Another example of a hash function for integer keys is the mid-square method. The mean square method squares the key value and then extracts the middle digits of the result, giving a value in the range from 0 to M. A software implementation of a hash function algorithm in Go would involve using built-in functions for converting integers to strings (strconv.Atoi(i)) and vice versa (strconv.Itoa(i)). For example, for any four-digit number, the hash function is:
+image::section_6/Fig6_8f_printHashTable.svg[width=75%, link=self, window="_blank"]
+
+[.text-center]
+.Figure 6.8f. Hash table printing (`printHashTable`)
+
+[.text-center]
+.Figure 6.8. DRAKON-diagrams of hash table algorithms: find by key, insert, reverse lookup, delete, traverse, and print
+
+Consider the algorithm for removing an element from the hash table. Consider the algorithm for removing an element from the hash table. Suppose we delete the entry with key 74. First, the bucket containing this key is determined by computing `hashFunc(74)`. Then the algorithm traverses the chain in this bucket. After each `node.key === key` check, the previous node is stored in the `prev` variable. If the key is found, the chain is relinked: if the node is the head of the chain, `hash.table[index]` is set to `node.next`; otherwise, `prev.next` is set to `node.next` (Figure 6.8d).
+
+Another example of a hash function for integer keys is the mid-square method. The mid-square method squares the key value and then extracts the middle digits of the result, giving a value in the range from 0 to M. A software implementation of a hash function algorithm in JavaScript would involve using built-in functions for converting integers to strings (strconv.Atoi(i)) and vice versa (strconv.Itoa(i)). For example, for any four-digit number, the hash function is:
 go
 
 func hFunc(i int) int {
