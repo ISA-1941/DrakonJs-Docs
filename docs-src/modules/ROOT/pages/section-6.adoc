@@ -133,7 +133,7 @@ image::section_6/Fig6_4f_removeDuplicates.svg[width=100%, link=self, window="_bl
 f) Function for Removing Duplicates (removeDuplicates)
 
 [.text-center]
-.Figure 6.4. DRAKON-diagrams of linked list algorithms: deletion, search, insertion by value, and duplicate deletion
+Figure 6.4. DRAKON-diagrams of linked list algorithms: deletion, search, insertion by value, and duplicate deletion
 
 [.text-left]
 Results of the execution of the above algorithms are as follows:
@@ -314,38 +314,32 @@ The general description of algorithms for working with hash tables is presented 
 
 DRAKON-diagrams of algorithms for implementing the main hash table operations are shown in Figure 6.8a–f.
 
+[.text-center]
+.Figure 6.8a. Hash table search by key (`hashGet`)
 image::section_6/Fig6_8a_hashGet.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
-.Figure 6.8a. Hash table search by key (`hashGet`)
-
+.Figure 6.8b. Hash table insertion or update (`hashInsert`)
 image::section_6/Fig6_8b_hashInsert.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
-.Figure 6.8b. Hash table insertion or update (`hashInsert`)
-
+.Figure 6.8c. Hash table reverse lookup by value (`hashLookupByValue`)
 image::section_6/Fig6_8c_hashLookupByValue.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
-.Figure 6.8c. Hash table reverse lookup by value (`hashLookupByValue`)
-
+.Figure 6.8d. Hash table deletion by key (`hashRemove`)
 image::section_6/Fig6_8d_hashRemove.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
-.Figure 6.8d. Hash table deletion by key (`hashRemove`)
-
+.Figure 6.8e. Hash Table Traversal Function (hashTraverse)
 image::section_6/Fig6_8e_hashTraverse.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
-.Figure 6.8e. Hash Table Traversal Function (hashTraverse)
-
+.Figure 6.8f. Hash table printing (`printHashTable`)
 image::section_6/Fig6_8f_printHashTable.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
-.Figure 6.8f. Hash table printing (`printHashTable`)
-
-[.text-center]
-.Figure 6.8. DRAKON-diagrams of hash table algorithms: find by key, insert, reverse lookup, delete, traverse, and print
+Figure 6.8. DRAKON-diagrams of hash table algorithms: find by key, insert, reverse lookup, delete, traverse, and print
 
 Consider the algorithm for removing an element from the hash table. Suppose we delete the entry with key 74. First, the bucket containing this key is determined by computing `hashFunc(74)`. Then the algorithm traverses the chain in this bucket. After each `node.key === key` check, the previous node is stored in the `prev` variable. If the key is found, the chain is relinked: if the node is the head of the chain, `hash.table[index]` is set to `node.next`; otherwise, `prev.next` is set to `node.next` (Figure 6.8d).
 
