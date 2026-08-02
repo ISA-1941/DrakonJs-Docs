@@ -306,9 +306,8 @@ Table 2: Functions Overview (Chaining Implementation)
 | – (console output)
 | For each bucket, build an array of strings `"key -> value"` for all nodes in the chain, then print joined by `" -> "` or `"Empty"`.
 | Better than `hashTraverse` for debugging.
-|===
 
-DRAKON-diagrams of algorithms for implementing the main hash table operations are shown in Figure 6.8a–f.
+DRAKON-diagrams of hash table algorithms: find by key, insert, reverse lookup, delete, traverse, and print are shown in Figure 6.8a–f.
 
 [.text-center]
 .Figure 6.8a. Hash table search by key (`hashGet`)
@@ -333,9 +332,6 @@ image::section_6/Fig6_8e_hashTraverse.svg[width=75%, link=self, window="_blank"]
 [.text-center]
 .Figure 6.8f. Hash table printing (`printHashTable`)
 image::section_6/Fig6_8f_printHashTable.svg[width=75%, link=self, window="_blank"]
-
-[.text-center]
-.Figure 6.8. DRAKON-diagrams of hash table algorithms: find by key, insert, reverse lookup, delete, traverse, and print
 
 [.text-left]
 Consider a concrete example. A hash table of size m = 16 is populated with 16 records, each keyed by a six-digit identifier and holding a person's name as the value. Calling `printHashTable(hash)` after all insertions produces the following snapshot of the table (Table 6.3):
