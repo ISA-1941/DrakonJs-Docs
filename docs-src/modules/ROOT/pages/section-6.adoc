@@ -131,6 +131,7 @@ image::section_6/Fig6_4f_removeDuplicates.svg[width=100%, link=self, window="_bl
 .Figure 6.4. DRAKON-diagrams of linked list algorithms: deletion, search, insertion by value, and duplicate deletion
 
 === Execution Results
+[.text-left]
 Results of the execution of the above algorithms are as follows:
 The linked list is:
 Smith J.
@@ -334,7 +335,7 @@ image::section_6/Fig6_8f_printHashTable.svg[width=75%, link=self, window="_blank
 
 
 === 6.4.2. Concrete Example
-
+[.text-left]
 Consider a concrete example. A hash table of size m = 16 is populated with 16 records, each keyed by a six-digit identifier and holding a person's name as the value. Calling `printHashTable(hash)` after all insertions produces the following snapshot of the table (Table 6.3):
 
 Table 3: Hash table contents before removal (`printHashTable`, m = 16)
