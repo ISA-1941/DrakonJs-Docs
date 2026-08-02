@@ -130,8 +130,8 @@ image::section_6/Fig6_4f_removeDuplicates.svg[width=100%, link=self, window="_bl
 [.text-center]
 .Figure 6.4. DRAKON-diagrams of linked list algorithms: deletion, search, insertion by value, and duplicate deletion
 
-=== Execution Results
 [.text-left]
+=== Execution Results
 Results of the execution of the above algorithms are as follows:
 The linked list is:
 Smith J.
@@ -306,6 +306,7 @@ Table 2: Functions Overview (Chaining Implementation)
 | – (console output)
 | For each bucket, build an array of strings `"key -> value"` for all nodes in the chain, then print joined by `" -> "` or `"Empty"`.
 | Better than `hashTraverse` for debugging.
+|===
 
 DRAKON-diagrams of hash table algorithms: find by key, insert, reverse lookup, delete, traverse, and print are shown in Figure 6.8a–f.
 
