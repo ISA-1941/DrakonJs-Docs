@@ -1,12 +1,24 @@
 {
     "history": [
         {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/llRemoveWithValue/removeDupli.drakon",
-            "whenOpened": "2026-08-02T07:43:26.042Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/llRemoveWithValue/main.drakon",
+            "whenOpened": "2026-08-02T08:58:06.794Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/llRemoveWithValue/removeVal.drakon",
+            "whenOpened": "2026-08-02T08:56:19.417Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/llRemoveWithValue/createLinkedList.drakon",
+            "whenOpened": "2026-08-02T08:56:12.774Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/llRemoveWithValue/nodeWithVal.drakon",
-            "whenOpened": "2026-08-02T07:43:07.737Z"
+            "whenOpened": "2026-08-02T08:56:05.583Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/llRemoveWithValue/removeDupli.drakon",
+            "whenOpened": "2026-08-02T07:43:26.042Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/llRemoveWithValue/pushBack.drakon",
