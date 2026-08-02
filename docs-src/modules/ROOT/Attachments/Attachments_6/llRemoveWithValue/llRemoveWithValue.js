@@ -25,7 +25,7 @@ function iterateList(list) {
 function main() {
     var list;
     list = createLinkedList();
-    pushFront(list, 'Smith A.');
+    pushFront(list, 'Smith J.');
     pushBack(list, 'Shafler B.');
     pushBack(list, 'Shafler B.');
     pushBack(list, 'Shafler B.');

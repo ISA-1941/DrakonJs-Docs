@@ -3,7 +3,7 @@
 [.text-justify]
 :figure-caption!:
 
-== Section 6. Basic Search Algorithms
+= Section 6. Basic Search Algorithms
 
 [abstract]
 This section examines the primary algorithms used for searching data structures. To enhance the understanding of the practical applications of these algorithms, DRAKON-diagrams are provided along with assessments of their time and space complexity.
@@ -28,17 +28,40 @@ In principle, search algorithms differ between search methods and search strateg
 
 == List of Figures
 
+|===
+| Figure | Title | Description
+
+| 6.1 | Linear Search | DRAKON-diagram of the Linear Search Algorithm
+| 6.2 | Sorted Data Search | DRAKON-diagram of the Search in a Sorted Array
+| 6.3 | Binary Search | DRAKON-diagram of the Binary Search Algorithm
+| 6.4a | Main Function | Entry Point for Linked List Operations
+| 6.4b | PushFront / PushBack | Adding New Items to the List
+| 6.4c | SearchData | Searching for an Element in a Linked List
+| 6.4d | RemoveVal | Deleting a Node by Value
+| 6.4e | PushVal / NodeWithVal | Inserting by Value and Locating Node by Value
+| 6.4f | RemoveDupli | Removing Duplicate Nodes
+| 6.5 | Hash Functions | DRAKON-diagram of Hash Function Construction Methods
+| 6.6 | Hash Table Creation | Creating a Hash Table Structure
+| 6.7 | Node Creation | Creating a Chain Node for Collision Resolution
+| 6.8a | Hash Table Get | Finding a Value by Key
+| 6.8b | Hash Table Insert | Inserting or Updating a Key-Value Pair
+| 6.8c | Hash Table Reverse Lookup | Finding a Key by Value
+| 6.8d | Hash Table Deletion | Deleting an Element by Key
+| 6.8e | Hash Table Traversal | Printing Table Contents (Values Only)
+| 6.8f | Hash Table Print | Printing Table in Key → Value Format
+|===
+
 [NOTE]
 ====
 All illustrations in this section are provided in the SVG format.
 Click on any image to open it in a separate window for detailed viewing.
 ====
 
-=== 6.1. Linear Data Searching
+== 6.1. Linear Data Searching
 
-a) Linear Search of Unsorted Data
+=== a) Linear Search of Unsorted Data
 
-In the case of a linear search for an element in an unordered dataset, for example, in an array or in a slice, the simplest algorithm is to examine all elements until the desired value is found (.Figure 6.1).
+In the case of a linear search for an element in an unordered dataset, for example, in an array or in a slice, the simplest algorithm is to examine all elements until the desired value is found (Figure 6.1).
 
 [.text-center]
 .Figure 6.1. DRAKON-diagram of the Linear Search Algorithm
@@ -46,15 +69,15 @@ image::section_6/Fig6_1_searchElement.svg[width=50%, link=self, window="_blank"]
 
 This algorithm is not very efficient, but it works on arbitrary collections. Time complexity: O(n). In the worst case (the desired element is in the last position), to find the element you need to traverse all elements. Here "n" is the size of the slice. Space complexity: O(1). No additional memory is required to accommodate the slice. Another worst-case scenario is the absence of the required element.
 
-b) Linear Search of Sorted Data
+=== b) Linear Search of Sorted Data
 
-If the elements of the dataset are sorted in ascending or descending order, finding the desired element is much more efficient than in an unordered linear search. In many cases, you do not have to traverse the whole list. For example, when traversing an ascending sorted list, if an element with a higher value than the search key is encountered, the search is stopped. This approach saves time and increases productivity. .Figure 6.2 shows the DRAKON-diagram of this algorithm.
+If the elements of the dataset are sorted in ascending or descending order, finding the desired element is much more efficient than in an unordered linear search. In many cases, you do not have to traverse the whole list. For example, when traversing an ascending sorted list, if an element with a higher value than the search key is encountered, the search is stopped. This approach saves time and increases productivity. Figure 6.2 shows the DRAKON-diagram of this algorithm.
 
 [.text-center]
 .Figure 6.2. DRAKON-diagram of the Search in a Sorted Array
 image::section_6/Fig6_2_dataSorted.svg[width=50%, link=self, window="_blank"]
 
-=== 6.2. Binary Search for Data in a Sorted Structure
+== 6.2. Binary Search for Data in a Sorted Structure
 
 Binary search is performed as follows:
 
@@ -74,7 +97,7 @@ image::section_6/Fig6_3_searchValue.svg[width=80%, link=self, window="_blank"]
 
 Time complexity of the binary search algorithm belongs to class O(log n). This means that the asymptotic increase in the time taken by the function to process an input set of size n will not exceed log n. Space complexity: O(1) — no extra space is required.
 
-=== 6.3. Searching and related operations in the single-link list
+== 6.3. Searching and Related Operations in a Singly Linked List
 
 There are three possibilities for a singly linked list. First, the desired value is missing from the list. Second, the desired value appears once. Third, the desired value appears multiple times. You can also set the task of removing duplicates — nodes that are redundant. To solve these problems, it is necessary to create a singly linked list whose items contain values "Smith J.", "Brown G." "Shafler P.", "Wiley S.", "Wiley S.", Atallah N.". In this list you should delete the entry "Brown G." and then add a new entry "Singer B." placing it after the entry "Wiley D.". After that, you should delete duplicates of the entry "Shafler B." leaving only one. The linked list operations below demonstrate search as a subroutine in deletion, insertion and duplicate removal — all of which rely on locating an element by value.The corresponding DRAKON-diagrams are presented in Figure 6.4.
 
@@ -115,7 +138,7 @@ f) Function for Removing Duplicates (removeDuplicates)
 [.text-left]
 Results of the execution of the above algorithms are as follows:
 The linked list is:
-Smith A.
+Smith J.
 Brown G.
 Shafler P.
 Wiley S.
@@ -128,31 +151,24 @@ Shafler P.
 Wiley S.
 Atallah N.
 
-=== 6.4. Hashing
+== 6.4. Hashing
 
 The time to find an item in a data set often depends on how many comparisons are made. To speed up search and improve computational efficiency, we need fewer comparisons. One way is to map keys to a smaller range of indices – this process is called hashing, and the resulting structure is a hash table.
 
 In terms of abstract data type (ADT) theory, a hash table implements an associative array. It stores key‑value pairs and supports three basic operations: insert (add a pair), lookup (find a value by key), and delete (remove a pair).
 
-From a programming perspective, a hash table consists of buckets — groups of elements mapped to the same hash index.  The hash function transforms a given key into an integer index (the bucket number). Many methods exist to construct a hash function, some of which are shown in Figure 6.5. 
+From a programming perspective, a hash table consists of buckets — groups of elements mapped to the same hash index. The hash function transforms a given key into an integer index (the bucket number). Many methods exist to construct a hash function, some of which are shown in Figure 6.5.
 
-image::section_6/Fig6_5_hashFunctions.svg[width=100%, link=self, window="_blank"]
 [.text-center]
-
-.Figure 6.5. DRAKON-diagrams of Hash Function algorithms
-a)hashFunc = Math.abs(key) % size; b) 
-
+.Figure 6.5. DRAKON-diagrams of hash function construction methods
 image::section_6/Fig6_5_hashFunctions.svg[width=100%, link=self, window="_blank"]
-
 
 The simplest is the division method, where the hash is the remainder of the key divided by the number of buckets:
 `h(key) = key mod m` (assuming the key is an integer). In JavaScript, for numeric keys, this becomes h = x % m.
 
-6.4.1 Creating a Hash Table and Chain Nodes
+=== 6.4.1. Creating a Hash Table and Chain Nodes
 
-To implement a hash-table using chaining, we need two helper structures: the table itself (an array of buckets) and a node for the linked list.
-
-==== Creating a Hash Table and Chain Nodes
+To implement a hash table using chaining, we need two helper structures: the table itself (an array of buckets) and a node for the linked list.
 
 The function `createHashTable(size)` initializes a new hash table instance. It takes one argument – the desired number of buckets. Internally, it does the following (Figure 6.6):
 
@@ -164,10 +180,9 @@ The function `createHashTable(size)` initializes a new hash table instance. It t
 
 In practice, the table object often also includes a count field (current number of elements) and a loadFactor (threshold for resizing). However, we start with a minimal version for simplicity.
 
-image::section_6/Fig6_6_createHashTable.svg[width=50%, link=self, window="_blank"]
 [.text-center]
-
 .Figure 6.6. Function for Creating a Hash Table (createHashTable)
+image::section_6/Fig6_6_createHashTable.svg[width=50%, link=self, window="_blank"]
 
 Because collisions are resolved with linked lists, each element in a bucket must store not only a key‑value pair but also a reference to the next element in the same chain.
 
@@ -179,11 +194,9 @@ The function `createNode(key, value, next = null)` creates such a node (Figure 6
 
 * Returns an object with three fields: key, value, and next.
 
-image::section_6/Fig6_7_createNodes.svg[width=50%, link=self, window="_blank"]
 [.text-center]
-
-.Figure 6.7. Function for Creating a node (createNode)
-
+.Figure 6.7. Function for Creating a Node (createNode)
+image::section_6/Fig6_7_createNodes.svg[width=50%, link=self, window="_blank"]
 
 Note that the next reference allows us to build singly linked lists inside a bucket. If only one element exists in a bucket, its next is null. When we add a new element that hashes to the same index, we place it at the beginning (or end – depending on the strategy; our algorithm will add to the head for simplicity).
 
@@ -193,9 +206,9 @@ Consider constructing a hash table of size m = 15 for a collection of integers f
 
 |===
 0	1	2	3	4	5	6	7	8	9	10	11	12	13	14
-|===														
+|===
 
-A hash function that establishes a relationship between an element and its corresponding slot must accept any element from the dataset (specifically ranging from 0 to 120) and return an integer that corresponds to a slot number between 0 and 14. The algorithm implementing the remainder method sequentially processes each element from the original set, dividing it by 15 and returning the remainder as the hash value. This can be expressed as h(item) = item mod 15. For instance, the hash code for the element 119 is calculated as 119 mod 15 = 14 (since 119 - 15 × 7 = 14), thus placing the value 119 into the corresponding slot.
+A hash function that establishes a relationship between an element and its corresponding slot must accept any element from the dataset (ranging from 0 to 119) and return an integer that corresponds to a slot number between 0 and 14. The algorithm implementing the remainder method sequentially processes each element from the original set, dividing it by 15 and returning the remainder as the hash value. This can be expressed as h(item) = item mod 15. For instance, the hash code for the element 119 is calculated as 119 mod 15 = 14 (since 119 - 15 × 7 = 14), thus placing the value 119 into the corresponding slot.
 
 |===
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14
@@ -204,8 +217,7 @@ A hash function that establishes a relationship between an element and its corre
 
 The algorithm then identifies slots for other elements, gradually filling them. When the algorithm encounters element 104 in the loop, the remainder of the division is 104 % 15 = 14, so this element will also be included in the 14th slot. In this way, each slot will accumulate corresponding elements with the same hash index. For example, for a hash index of 8, the slot will consist of these elements: 113, 98, 83, 68, 53, 38, 23, 8. The entire hash table will be as follows (Table 6.1):
 
-Table 6.1. Hash table of 15 slots
-
+.Table 6.1. Hash table of 15 slots
 |===
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14
 | 105 | 106 | 107 | 108 | 109 | 110 | 111 | 112 | 113 | 114 | 115 | 116 | 117 | 118 | 119
@@ -219,7 +231,7 @@ Table 6.1. Hash table of 15 slots
 |===
 
 Thus, the remainder method converts a collection of 120 integers into a hash table of 15 slots. The search for an element is now greatly accelerated as it takes two steps: first, the hash function h = (x % m) computes the hash index, and then the search is performed within a bucket (exactly 8 elements in each bucket for this example).
-). 
+
 The implementation of the basic hash table functions using the hash function is as follows:
 
 * Create a HashTable structure of size m to store objects.
@@ -232,7 +244,7 @@ The implementation of the basic hash table functions using the hash function is 
 
 The general description of algorithms for working with hash tables is presented as a table of basic parameters of applied functions (Table 6.2) and corresponding DRAKON diagrams (Figure 6.8a - 6.8f).
 
-Table 6.2. Functions Overview (Chaining Implementation)
+.Table 6.2. Functions Overview (Chaining Implementation)
 [cols="1,2,2,2,3,2", options="header"]
 |===
 | Function
@@ -242,7 +254,7 @@ Table 6.2. Functions Overview (Chaining Implementation)
 | Main steps
 | Notes / Complexity
 
-| hashGet(hash, key)        (Figure 6.8a)
+| `hashGet(hash, key)`        (Figure 6.8a)
 | Find a value by key
 | `hash` – table object, `key` – search key
 | Value or `undefined` if not found
@@ -250,7 +262,7 @@ Table 6.2. Functions Overview (Chaining Implementation)
 2. Traverse the chain at that bucket. +
 3. If `node.key === key` found, return `node.value`. +
 4. Otherwise return `undefined`.
-| Amortized O(1) complexity.
+| Average-case (expected) O(1) complexity.
 
 | `hashInsert(hash, key, value)`        (Figure 6.8b)
 | Insert or update a key‑value pair
@@ -300,7 +312,7 @@ Table 6.2. Functions Overview (Chaining Implementation)
 | Better than `hashTraverse` for debugging.
 |===
 
-DRAKON-diagrams of algorithms for implementing the main hash table operations are shown in Figure 6.7a–f.
+DRAKON-diagrams of algorithms for implementing the main hash table operations are shown in Figure 6.8a–f.
 
 image::section_6/Fig6_8a_hashGet.svg[width=75%, link=self, window="_blank"]
 
@@ -335,22 +347,21 @@ image::section_6/Fig6_8f_printHashTable.svg[width=75%, link=self, window="_blank
 [.text-center]
 .Figure 6.8. DRAKON-diagrams of hash table algorithms: find by key, insert, reverse lookup, delete, traverse, and print
 
-Consider the algorithm for removing an element from the hash table. Consider the algorithm for removing an element from the hash table. Suppose we delete the entry with key 74. First, the bucket containing this key is determined by computing `hashFunc(74)`. Then the algorithm traverses the chain in this bucket. After each `node.key === key` check, the previous node is stored in the `prev` variable. If the key is found, the chain is relinked: if the node is the head of the chain, `hash.table[index]` is set to `node.next`; otherwise, `prev.next` is set to `node.next` (Figure 6.8d).
+Consider the algorithm for removing an element from the hash table. Suppose we delete the entry with key 74. First, the bucket containing this key is determined by computing `hashFunc(74)`. Then the algorithm traverses the chain in this bucket. After each `node.key === key` check, the previous node is stored in the `prev` variable. If the key is found, the chain is relinked: if the node is the head of the chain, `hash.table[index]` is set to `node.next`; otherwise, `prev.next` is set to `node.next` (Figure 6.8d).
 
-Another example of a hash function for integer keys is the mid-square method. The mid-square method squares the key value and then extracts the middle digits of the result, giving a value in the range from 0 to M. A software implementation of a hash function algorithm in JavaScript would involve using built-in functions for converting integers to strings (strconv.Atoi(i)) and vice versa (strconv.Itoa(i)). For example, for any four-digit number, the hash function is:
-go
+Another example of a hash function for integer keys is the mid-square method. The mid-square method squares the key value and then extracts the middle digits of the result, giving a value in the range from 0 to M. A JavaScript implementation of this hash function might convert the squared key to a string, extract the middle digits, and convert them back to an integer. For example, for any four-digit number, the hash function is:
 
-func hFunc(i int) int {
-    var j int
-    var s string
-    i = i * i
-    s = strconv.Itoa(i)
-    s = s[3:5]
-    j, _ = strconv.Atoi(s)
-    return j
+[source,javascript]
+----
+function hFunc(i) {
+    i = i * i;
+    let s = i.toString();
+    s = s.slice(3, 5);
+    return parseInt(s, 10);
 }
+----
 
-==== Topics Beyond the Scope of This Book
+=== Topics Beyond the Scope of This Book
 
 This section has focused on the fundamental principles of hashing and the implementation of a hash table using separate chaining. However, several important and advanced aspects of modern hashing remain outside the scope of this book:
 
