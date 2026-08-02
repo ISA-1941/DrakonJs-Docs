@@ -2,6 +2,7 @@
 
 [.text-justify]
 :figure-caption!:
+:table-caption!:
 
 = Section 6. Basic Search Algorithms
 
@@ -344,7 +345,7 @@ Figure 6.8. DRAKON-diagrams of hash table algorithms: find by key, insert, rever
 Consider a concrete example. A hash table of size m = 16 is populated with 16 records, each keyed by a six-digit identifier and holding a person's name as the value. Calling `printHashTable(hash)` after all insertions produces the following snapshot of the table (Table 6.3):
 
 .Table 6.3. Hash table contents before removal (`printHashTable`, m = 16)
-[cols="1,4", options="header"] 
+[cols="1,4", options="header"]
 |===
 | Slot | Chain (key -> value)
 
