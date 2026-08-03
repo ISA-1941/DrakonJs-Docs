@@ -11,58 +11,43 @@
         },
         "3": {
             "type": "action",
-            "one": "14",
+            "one": "16",
             "content": "list = createLinkedList()"
-        },
-        "4": {
-            "type": "action",
-            "one": "5",
-            "content": "pushFront(list, \"Smith J.\");"
         },
         "5": {
             "type": "action",
-            "one": "10",
-            "content": "pushBack(list, \"Brown G.\");\npushBack(list, \"Shafler P.\");\npushBack(list, \"Wiley S.\");\npushBack(list, \"Wiley S.\");\npushBack(list, \"Atallah N.\");"
-        },
-        "7": {
-            "type": "action",
-            "one": "8",
-            "content": "removeDuplicates(list)"
-        },
-        "8": {
-            "type": "action",
-            "one": "1",
-            "content": "console.log(\"After W deletion \")\niterateList(list)"
-        },
-        "10": {
-            "type": "action",
-            "one": "11",
-            "content": "iterateList(list)"
-        },
-        "11": {
-            "type": "action",
-            "one": "13",
-            "content": "removeVal(list, \"Shafler P.\")"
-        },
-        "12": {
-            "type": "action",
-            "one": "7",
-            "content": "iterateList(list)"
-        },
-        "13": {
-            "type": "action",
             "one": "15",
-            "content": "console.log(\"Shafler P is deleted\")"
+            "content": "removeDuplicates(list)\nconsole.log(\n    'List after removing duplicates '\n)\niterateList(list)"
         },
         "14": {
             "type": "action",
-            "one": "4",
-            "content": "console.log(\"Shafler P is deleted\")"
+            "one": "5",
+            "content": "console.log(\n    'Searching and removing duplicates for Wiley S.'\n)"
         },
         "15": {
             "type": "action",
-            "one": "12",
+            "one": "1",
             "content": "console.log(\"After W deletion \")"
+        },
+        "16": {
+            "type": "action",
+            "one": "17",
+            "content": "console.log(\n    'Example of Inserting and Deleting Nodes'\n);"
+        },
+        "17": {
+            "type": "action",
+            "one": "18",
+            "content": "pushFront(list, 'Smith J.')\npushBack(list, 'Brown G.')\npushBack(list, 'Shafler P.')\npushBack(list, 'Wiley S.')\npushBack(list, 'Wiley S.')\npushBack(list, 'Atallah N.')"
+        },
+        "18": {
+            "type": "action",
+            "one": "19",
+            "content": "console.log('List after inserting nodes')\niterateList(list)\nconsole.log(\n    '------------------------------'\n)"
+        },
+        "19": {
+            "type": "action",
+            "one": "14",
+            "content": "console.log('Deleting Shafler P.')\nremoveVal(list, 'Shafler P.')\niterateList(list)\nconsole.log('Shafler P is deleted')"
         }
     }
 }
