@@ -21,20 +21,27 @@ function iterateList(list) {
 function main() {
     var list;
     list = createLinkedList();
-    console.log('Shafler P is deleted');
+    console.log('Example of Inserting and Deleting Nodes');
     pushFront(list, 'Smith J.');
     pushBack(list, 'Brown G.');
     pushBack(list, 'Shafler P.');
     pushBack(list, 'Wiley S.');
     pushBack(list, 'Wiley S.');
     pushBack(list, 'Atallah N.');
+    console.log('------------------------');
+    console.log('List after inserting nodes');
     iterateList(list);
+    console.log('------------------------');
+    console.log('Deleting Shafler P.');
     removeVal(list, 'Shafler P.');
     console.log('Shafler P is deleted');
-    console.log('After W deletion ');
+    console.log('List after deletion ');
     iterateList(list);
+    console.log('------------------------');
+    console.log('Searching and removing duplicates for Wiley S.');
+    searchData(list, 'Wiley S.');
     removeDuplicates(list);
-    console.log('After W deletion ');
+    console.log('List after removing duplicates ');
     iterateList(list);
 }
 function pushBack(list, val) {
