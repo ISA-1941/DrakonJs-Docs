@@ -133,14 +133,16 @@ Figure 6.4. DRAKON-diagrams of linked list algorithms: deletion, search, inserti
 [.text-left]
 === Execution Results
 Results of the execution of the above algorithms are as follows:
-The linked list is:
-Example of Inserting and Deleting Nodes
+
+==============================
+List after inserting nodes
 Smith J.
 Brown G.
 Shafler P.
 Wiley S.
 Wiley S.
 Atallah N.
+-------------------------------
 Deleting Shafler P.
 Shafler P is deleted
 List after deletion 
@@ -149,6 +151,7 @@ Brown G.
 Wiley S.
 Wiley S.
 Atallah N.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Searching and removing duplicates for Wiley S.
 The desired value Wiley S. occurs 2 times
 List after removing duplicates 
