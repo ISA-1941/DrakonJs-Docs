@@ -32,16 +32,16 @@ function main() {
     console.log('List after inserting nodes');
     iterateList(list);
     console.log('------------------------');
-    console.log('Deleting Shafler P.');
-    removeVal(list, 'Shafler P.');
-    console.log('Shafler P is deleted');
-    console.log('List after deletion ');
+    console.log('          Deleting Shafler P.');
+    removeVal(list, '          Shafler P.');
+    console.log('          Shafler P is deleted');
+    console.log('          List after deletion ');
     iterateList(list);
     console.log('------------------------');
-    console.log('Searching and removing duplicates for Wiley S.');
-    searchData(list, 'Wiley S.');
+    console.log('                    Searching and removing duplicates for Wiley S.');
+    searchData(list,'                Wiley S.');
     removeDuplicates(list);
-    console.log('List after removing duplicates ');
+    console.log('                    List after removing duplicates ');
     iterateList(list);
 }
 function pushBack(list, val) {
