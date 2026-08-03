@@ -45,8 +45,6 @@ Drakon.Tech is a visual programming language with a strong emphasis on clarity a
 
 * Facilitating Learning: Drakon technology serves as an excellent tool for teaching and learning programming concepts, as it helps to visualize abstract ideas.
 
-
-
 Potential for Developing Algorithmic Thinking:
 
 * Visualizing Logic: The visual nature of Drakon.Tech allows users to see the logical flow of an algorithm, which helps to develop their ability to think logically and systematically.

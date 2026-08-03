@@ -8,7 +8,7 @@
 
 The previous sections focused on the description of the most common data structures, on the one hand as abstract entities, and on the other — their concrete implementation in the JavaScript programming language. This section will deal with the theoretical analysis of algorithms for processing data structures from the perspective of estimating the time spent on program code execution and computer memory usage.
 
-In theory and in practice, data structure processing algorithms are defined as a set of sequentially performed, stable procedures that provide a final computational result based on a fixed and limited set of source data. Most data processing algorithms include basic data processing procedures such as searching, sorting, adding, updating, deleting, etc.
+In theory and in practice, data structure processing algorithms are defined as a set of sequentially performed, well-defined procedures that provide a final computational result based on a fixed and limited set of source data. Most data processing algorithms include basic data processing procedures such as searching, sorting, adding, updating, deleting, etc.
 
 Foremost, it should be noted that a "good algorithm" must have two characteristics: a) correctness and b) finiteness. Correctness means that if an algorithm is designed to solve a particular problem, it must always produce the correct result for all source data, and no input data will yield the wrong result. The finiteness of an algorithm means that a finite number of computational operations must be performed to obtain the result — that is, the execution of the program code must stop at some point in time.
 
@@ -20,7 +20,7 @@ Once the algorithm is correct and finite, the most important characteristic of t
 
 * The memory used by the algorithm should also be as small as possible.
 
-In most computational tasks, it is necessary to strive for a compromise between computation time and occupied memory. In other words, when choosing a method for solving a computational problem, you need to decide on priorities: what is more important — computation time or amount of memory occupied. It may seem that this is not so important for modern computers. However, when solving complex problems associated with the processing of huge amounts of data, for example, for artificial intelligence problems or for bioinformatics problems (e.g., genome decoding), the search for the optimal combination of computing time and computer memory becomes decisive. In this regard, we will define the term "algorithm complexity" as a measure of the amount of time and/or space required to solve a problem, depending on the size of the data.
+In most computational tasks, it is necessary to strive for a compromise between computation time and occupied memory. In other words, when choosing a method for solving a computational problem, you need to decide on priorities: what is more important — computation time or amount of memory occupied. It may seem that this is not so important for modern computers. This becomes critical for large-scale problems — for example, in artificial intelligence or bioinformatics, such as genome decoding. Here, finding the right balance between time and memory is often the deciding factor." In this regard, we will define the term "algorithm complexity" as a measure of the amount of time and/or space required to solve a problem, depending on the size of the data.
 
 Such analysis involves determining a function that links the length of the input data of the algorithm to the time it takes (its time complexity) or the number of storage locations it uses (space complexity). An algorithm is considered effective when the values of this function are either negligible or slowly increasing relative to the size of the input data.
 
@@ -38,7 +38,7 @@ Thus, when assessing the complexity of algorithms, they are evaluated on an abst
 
 * The processor performs any elementary operation in one time step.
 
-*Loops and functions are not considered elementary operations.
+* Loops and functions are not considered elementary operations.
 
 The complexity T(n) of an algorithm associated with estimates of its complexity is determined by counting the number of operations performed. For example, consider the algorithm for finding the maximum element of an array:
 
@@ -125,17 +125,17 @@ let pow = 1;
 
 for (let i = 1; i < n; i++) {
 for (let j = 1; j < m; j++) {
-pow = pow * i * j;
+product = product * i * j;
 }
 }
 
-console.log("pow =", pow);
+console.log("product =", product);
 
 Comparison of Complexities
 
 The comparison of the discussed complexities is presented in the form of a table.
 
-Table 5.1. Comparison of general complexities
+Table 5.1. Comparison of General Complexities
 
 [width="94%",cols="9%,12%,22%,21%,18%,18%",options="header"]
 |===
