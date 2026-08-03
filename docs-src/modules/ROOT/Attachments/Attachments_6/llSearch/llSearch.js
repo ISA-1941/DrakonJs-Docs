@@ -39,7 +39,6 @@ function main() {
     removeDuplicates(list);
     console.log('List after removing duplicates ');
     iterateList(list);
-    console.log('After W deletion ');
 }
 function pushBack(list, val) {
     var newNode, node;

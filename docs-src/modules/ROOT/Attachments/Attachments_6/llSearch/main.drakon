@@ -16,18 +16,13 @@
         },
         "5": {
             "type": "action",
-            "one": "15",
+            "one": "1",
             "content": "removeDuplicates(list)\nconsole.log(\n    'List after removing duplicates '\n)\niterateList(list)"
         },
         "14": {
             "type": "action",
             "one": "5",
             "content": "console.log(\n    'Searching and removing duplicates for Wiley S.'\n)"
-        },
-        "15": {
-            "type": "action",
-            "one": "1",
-            "content": "console.log(\"After W deletion \")"
         },
         "16": {
             "type": "action",
