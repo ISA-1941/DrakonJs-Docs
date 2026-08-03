@@ -28,18 +28,21 @@ function main() {
     pushBack(list, 'Wiley S.');
     pushBack(list, 'Wiley S.');
     pushBack(list, 'Atallah N.');
+    console.log('------------------------');
     console.log('List after inserting nodes');
     iterateList(list);
-    console.log('------------------------------');
+    console.log('------------------------');
     console.log('Deleting Shafler P.');
     removeVal(list, 'Shafler P.');
-    iterateList(list);
     console.log('Shafler P is deleted');
+    console.log('List after deletion ');
+    iterateList(list);
+    console.log('------------------------');
     console.log('Searching and removing duplicates for Wiley S.');
+    searchData(list,'Wiley S.');
     removeDuplicates(list);
     console.log('List after removing duplicates ');
     iterateList(list);
-    console.log('After W deletion ');
 }
 function pushBack(list, val) {
     var newNode, node;
