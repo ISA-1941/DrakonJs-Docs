@@ -82,7 +82,7 @@ The interface of Drakon.Tech is designed with a focus on visual clarity and ease
 
 [.text-center]
 .Figure 4.2. DrakonTech Interface
-image::section_4/Fig4_2_InterfaceDrakonTech.jpg[width=100%, link=self, window="_blank"]
+image::section_4/Fig4_2_InterfaceDrakonTech.svg[width=75%, link=self, window="_blank"]
 === 4.2.1. Core Principles
 
 * **Visual Flow:** The primary focus is on a graphical workspace where users construct algorithms using visual icons and connecting lines. This emphasizes the flow of control and data.
