@@ -26,13 +26,18 @@ function main() {
     pushBack(list, 'Shafler P.');
     pushBack(list, 'Wiley S.');
     pushBack(list, 'Wiley S.');
+    pushBack(list, 'Wiley S.');
     pushBack(list, 'Atallah N.');
-    console.log('The linked list is:');
+    console.log('==============');
+    console.log('Results of the linked list after adding values');
     iterateList(list);
+    console.log('==============');
+    console.log('Results of the linked list after removing a value');
     removeVal(list, 'Shafler P.');
-      iterateList(list);
+    iterateList(list);
     // searchData(list, 'Brown G.');
     // searchData(list, 'Shafler P.');
+    console.log('Results of the linked list after removing duplicates');
     removeDuplicates(list)
     //removeVal(list, 'Wiley S.');
     iterateList(list);

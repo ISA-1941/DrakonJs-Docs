@@ -1,12 +1,24 @@
 {
     "history": [
         {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/llSearch/removeDuplicates.drakon",
-            "whenOpened": "2026-06-11T18:06:47.970Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/llSearch/removeVal.drakon",
+            "whenOpened": "2026-08-02T20:49:32.071Z"
         },
         {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/llSearch/removeVal.drakon",
-            "whenOpened": "2026-06-11T07:44:15.556Z"
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/llSearch/removeDuplicates.drakon",
+            "whenOpened": "2026-08-02T20:10:20.351Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/llSearch/pushFront.drakon",
+            "whenOpened": "2026-08-02T20:06:09.186Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/llSearch/pushBack.drakon",
+            "whenOpened": "2026-08-02T20:06:05.366Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/llSearch/searchData.drakon",
+            "whenOpened": "2026-08-02T19:59:04.260Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/llSearch/main.drakon",
@@ -19,18 +31,6 @@
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/llSearch/createLinkedList.drakon",
             "whenOpened": "2026-06-06T11:24:04.630Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/llSearch/pushBack.drakon",
-            "whenOpened": "2026-06-04T17:49:40.966Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/llSearch/searchData.drakon",
-            "whenOpened": "2026-05-30T15:34:12.941Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_6/llSearch/pushFront.drakon",
-            "whenOpened": "2026-05-30T15:31:13.655Z"
         }
     ]
 }

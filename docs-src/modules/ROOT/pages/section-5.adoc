@@ -2,9 +2,9 @@
 [.text-justify]
 :figure-caption!:
 
-== Section 5. Complexity and Stability Analysis of Algorithms
+= Section 5. Complexity and Stability Analysis of Algorithms
 
-=== 5.1. Requirements for Algorithms
+== 5.1. Requirements for Algorithms
 
 The previous sections focused on the description of the most common data structures, on the one hand as abstract entities, and on the other — their concrete implementation in the JavaScript programming language. This section will deal with the theoretical analysis of algorithms for processing data structures from the perspective of estimating the time spent on program code execution and computer memory usage.
 
@@ -24,7 +24,7 @@ In most computational tasks, it is necessary to strive for a compromise between 
 
 Such analysis involves determining a function that links the length of the input data of the algorithm to the time it takes (its time complexity) or the number of storage locations it uses (space complexity). An algorithm is considered effective when the values of this function are either negligible or slowly increasing relative to the size of the input data.
 
-=== 5.2. Theoretical Analysis of Algorithm Complexity
+== 5.2. Theoretical Analysis of Algorithm Complexity
 
 Ultimately, the created algorithms must be implemented on some computing device using the generated program code. Therefore, one should distinguish between the complexity of the algorithm itself and the complexity of its computer implementation. The fastest algorithm implemented on a slow computing device may be less efficient than a less successful algorithm implemented on a computer with more processing power or a programming language capable of parallel computing.
 
@@ -67,7 +67,7 @@ From 1 to N operations of assigning a value to the variable maxNumber
 
 It is obvious that such a calculation for determining the complexity of an algorithm and estimating its complexity is individual and depends on the size of the input data. Therefore, it was quite natural to propose a qualitative assessment of complexity depending on the "quality" of the initial data: the best case, the worst case, and the average case.
 
-=== 5.3. Qualitative Assessment of Complexity
+== 5.3. Qualitative Assessment of Complexity
 
 Asymptotic notations such as Omega notation (Ω), Theta notation (Θ), and Big-O notation (O) that reflect the three time bounds of an algorithm (lower, middle, and upper) are used to quantify the complexity of algorithms.
 
@@ -155,7 +155,7 @@ image::section_5/Fig5_1_Comparison.png[width=100%, link=self, window="_blank"]
 
 As shown in this table and graph, as the complexity of the function increases, the number of computations or the time required to perform the function can increase significantly. Next, the algorithms will be described with estimates of their complexity.
 
-=== 5.4. Space Complexity
+== 5.4. Space Complexity
 
 Another characteristic of the computational complexity of algorithms is space complexity, estimated by the amount of memory required by the algorithm in its life cycle. This space consists of a fixed part and a variable part.
 
@@ -165,7 +165,7 @@ Another characteristic of the computational complexity of algorithms is space co
 
 Space complexity is evaluated as O(1) if only the input data set is used. If the problem requires auxiliary memory of the same size as the input memory (memory to store the original array), then the space complexity is evaluated as O(n). In the case of a two-dimensional array or matrix, space complexity may be O(n²).
 
-=== 5.5. Algorithm Stability
+== 5.5. Algorithm Stability
 
 It is especially important to know whether the algorithm used is stable, especially in situations where your data already has some order that you would like to preserve when sorting with a different key. For example, a spreadsheet has rows containing student data sorted by name by default. You would also like to sort it by class while maintaining the orderly order of names.
 
