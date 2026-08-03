@@ -143,7 +143,7 @@ Wiley S.
 Atallah N.
 
 Deleting `Shafler P.``
-`Shafler P.`is deleted
+`Shafler P.` is deleted
 List after deletion 
 Smith J.
 Brown G.
@@ -151,7 +151,7 @@ Wiley S.
 Wiley S.
 Atallah N.
 
-Searching and removing duplicates for `Wiley S.``
+Searching and removing duplicates for `Wiley S.`.`
 The desired value Wiley S. occurs 2 times
 List after removing duplicates 
 Smith J.
