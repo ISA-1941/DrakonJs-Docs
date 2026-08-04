@@ -20,7 +20,7 @@ Once the algorithm is correct and finite, the most important characteristic of t
 
 * The memory used by the algorithm should also be as small as possible.
 
-In most computational tasks, it is necessary to strive for a compromise between computation time and occupied memory. In other words, when choosing a method for solving a computational problem, you need to decide on priorities: what is more important — computation time or amount of memory occupied. It may seem that this is not so important for modern computers. This becomes critical for large-scale problems — for example, in artificial intelligence or bioinformatics, such as genome decoding. Here, finding the right balance between time and memory is often the deciding factor." In this regard, we will define the term "algorithm complexity" as a measure of the amount of time and/or space required to solve a problem, depending on the size of the data.
+In most computational tasks, it is necessary to strive for a compromise between computation time and occupied memory. In other words, when choosing a method for solving a computational problem, you need to decide on priorities: what is more important — computation time or amount of memory occupied. It may seem that this is not so important for modern computers. This becomes critical for large-scale problems — for example, in artificial intelligence or bioinformatics, such as genome decoding. Here, finding the right balance between time and memory is often the deciding factor. In this regard, we will define the term "algorithm complexity" as a measure of the amount of time and/or space required to solve a problem, depending on the size of the data.
 
 Such analysis involves determining a function that links the length of the input data of the algorithm to the time it takes (its time complexity) or the number of storage locations it uses (space complexity). An algorithm is considered effective when the values of this function are either negligible or slowly increasing relative to the size of the input data.
 
@@ -57,13 +57,13 @@ console.log("The largest value of an array element =", maxNumber);
 
 When implementing this algorithm, the following will be performed:
 
-* (N - 1) operations of assigning a new value to the loop counter i
+* (N - 1) operations of assigning a new value to the loop counter i;
 
-* (N - 1) operations of comparing the counter with the value N
+* (N - 1) operations of comparing the counter with the value N;
 
-* (N - 1) operations of comparing an array element with the value of maxNumber
+* (N - 1) operations of comparing an array element with the value of maxNumber;
 
-From 1 to N operations of assigning a value to the variable maxNumber
+* (From 1 to N) operations of assigning a value to the variable maxNumber.
 
 It is obvious that such a calculation for determining the complexity of an algorithm and estimating its complexity is individual and depends on the size of the input data. Therefore, it was quite natural to propose a qualitative assessment of complexity depending on the "quality" of the initial data: the best case, the worst case, and the average case.
 
@@ -79,7 +79,7 @@ Asymptotic notations such as Omega notation (Ω), Theta notation (Θ), and Big-O
 
 Consider in more detail the Big-O notation that determines the upper bound of any algorithm — that is, the algorithm cannot take longer than the upper bound.
 
-Constant Time Complexity — O(1)
+=== Constant Time Complexity — O(1)
 
 An algorithm with constant time complexity requires the same amount of time regardless of its input data. For example, given two numbers, you need to calculate their sum.
 
@@ -96,7 +96,7 @@ console.log("i = ", i);
 
 Recall that log₂ 16 = log₂ 2⁴ = 4 log₂ 2 = 4, since log₂ 2 = 1. Algorithms with logarithmic complexity are considered highly efficient because the ratio of execution time to the size of the data array decreases as the data size increases. Algorithms that work in logarithmic time are usually found in binary tree operations or binary search operations. Such algorithms will be discussed in the next section.
 
-Linear Time Complexity — O(n)
+=== Linear Time Complexity — O(n)
 
 Linear complexity characterizes algorithms whose execution time linearly depends on the size of the input data (n). The simplest example is the problem of computing the sum of n numbers:
 
@@ -113,7 +113,7 @@ console.log("sum =", sum);
 
 Typical examples of linear time complexity are algorithms associated with array sorting, which will be shown in the next section. It is important to note that linear complexity algorithms do not require additional memory.
 
-Quadratic Time Complexity — O(n²)
+=== Quadratic Time Complexity — O(n²)
 
 In quadratic complexity algorithms, the number of operations is quadratic depending on the size of the input data. As an example, we can give the algorithm of multiplication of two numbers in the interval [1:n; 1:m]:
 
@@ -121,7 +121,7 @@ In quadratic complexity algorithms, the number of operations is quadratic depend
 
 let n = 3;
 let m = 5;
-let pow = 1;
+let product = 1;
 
 for (let i = 1; i < n; i++) {
 for (let j = 1; j < m; j++) {
@@ -151,7 +151,7 @@ Or in graphic form (Figure 5.1):
 
 [.text-center]
 image::section_5/Fig5_1_Comparison.png[width=100%, link=self, window="_blank"]
-.Figure 5.1. Comparison of general complexities
+.Figure 5.1. Comparison of General Complexities
 
 As shown in this table and graph, as the complexity of the function increases, the number of computations or the time required to perform the function can increase significantly. Next, the algorithms will be described with estimates of their complexity.
 

@@ -43,14 +43,15 @@ Unlike some other programming languages, JavaScript does not require a package d
 The basic structure of a JavaScript program can be organized as follows:
 
 [source,javascript]
-
+----
 import fs from 'fs';
 
 function main() {
-console.log("Hello, World!");
+console.log(`Hello, World!`);
 }
 
 main();
+----
 
 Here import fs from 'fs' – JavaScript allows importing external libraries or built-in modules.
 
@@ -61,17 +62,18 @@ Execution order – The script runs from top to bottom, and functions are called
 JavaScript supports two types of comments:
 
 [source,javascript]
-
+----
 // This is a single-line comment
 /*
 This is a multi-line comment.
 It can span multiple lines.
 */
+----
 
 The specifics of organizing the structure of a JavaScript program in the DRAKON environment are presented in Section 3. We will only note that in DRAKON technology, the program is structured through the module() function, which is a container for the main logic of the program. Inside module(), the main() function is usually called, which controls the main process of code execution.
 
 [source,javascript]
-
+----
 function module() {
 function main() {
 console.log("Hello, World!");
@@ -82,6 +84,7 @@ main(); // Call the main function
 
 // Call the module
 module();
+----
 
 === 2.3. Variables and Constants in JavaScript
 
@@ -98,55 +101,64 @@ JavaScript provides three ways to declare variables:
 A variable in JavaScript is declared using the let or const keyword, followed by an identifier (variable name).
 
 [source,javascript]
-
+----
 let i = 10; // Integer
 let s = "Hello"; // String
 let f = true; // Boolean
+----
 
 Variables in JavaScript do not require type definitions, as types are inferred automatically.
 
 [source,javascript]
-
+----
 let a = 25; // Number (integer)
 let x = 32.5; // Number (floating point)
 let z = "Enter a new value"; // String
+----
 
 If no initial value is assigned, JavaScript sets variables to undefined, unlike Go, which initializes them with default values.
 
 In JavaScript, multiple variables can be declared and initialized in one line, separated by commas:
 
 [source,javascript]
-
+----
 let a = 100, b = 200, c = 300;
+----
 
 JavaScript allows reassigning variables to different types:
 
 [source,javascript]
-
+----
 let value = 10; // Initially a number
 value = "text"; // Now a string
 value = true; // Now a boolean
+----
 
 JavaScript allows implicit variable declaration (not recommended):
 
 [source,javascript]
-
+----
 x = 2.5; // Automatically declared as a global variable (avoid this!)
+----
 
 Variable names in JavaScript must follow certain rules:
 
 ✅ Can contain letters, digits, $, and _ (but no spaces).
+
 ✅ Cannot start with a digit.
+
 ✅ Are case-sensitive (myVar and myvar are different).
+
 ✅ Use camelCase naming convention (userName, totalPrice).
 
 Constants are declared using const, meaning their values cannot be changed after initialization:
 
 [source,javascript]
-
+----
 const item = "name";
 const n = 25;
 const y = 45.5;
+----
 
 === 2.4. Input and Output
 
@@ -159,10 +171,11 @@ JavaScript provides several ways to display information:
 a) Basic Output to Console
 
 [source,javascript]
-
+----
 console.log("Hello"); // Output without a newline
 console.log("Hello", 23); // Output multiple values with spaces
-console.log(The salary is $${32000}); // Using template literals
+console.log(`The salary is $${32000}`); // Using template literals
+----
 
 It should be noted that console.log() automatically adds a newline unless specified otherwise.
 
@@ -171,19 +184,21 @@ b) Formatted Output Using console.log()
 JavaScript provides formatted output:
 
 [source,javascript]
-
+----
 console.log("Hello %d", 23); // Equivalent to Go's fmt.Printf("Hello %d", 23)
 console.log("Name: %s, Salary: %d", "Smith", 32000);
+----
 
 c) Using Template Literals (Recommended)
 
 Template strings provide an easy way to interpolate variables and expressions into strings.
 
 [source,javascript]
-
+----
 let name = "Smith";
 let salary = 32000;
-console.log(The salary of ${name} is $${salary});
+console.log(`The salary of ${name} is $${salary}`);
+----
 
 Template literals (`) automatically replace variables inside ${}.
 
@@ -196,23 +211,25 @@ a) Input in the Browser (Using prompt())
 In client-side JavaScript, prompt() can be used to get user input:
 
 [source,javascript]
-
+----
 let name = prompt("Enter last name:");
 let salary = prompt("Enter salary:");
-console.log(Salary of ${name} is $${salary});
+console.log(`Salary of ${name} is $${salary}`);
+----
 
 The function prompt() always returns a string, so numbers must be converted using parseInt() or parseFloat():
 
 [source,javascript]
-
+----
 let salary = parseInt(prompt("Enter salary:"));
+----
 
 b) Input in Node.js (Using readline)
 
 If running JavaScript in Node.js, we use the readline module to handle user input:
 
 [source,javascript]
-
+----
 const readline = require("readline");
 
 const q = readline.createInterface({
@@ -222,12 +239,13 @@ output: process.stdout
 
 q.question("Enter last name: ", function(name) {
 q.question("Enter salary: ", function(salary) {
-console.log(Salary of ${name} is $${salary});
+console.log(`Salary of ${name} is $${salary}`);
 q.close();
 });
 });
+----
 
-To summarize:
+**To Summarize:**
 
 [options="header"]
 |===
@@ -255,19 +273,20 @@ The if-else statement allows executing different blocks of code depending on a c
 Syntax of if-else in JavaScript:
 
 [source,javascript]
-
+----
 if (condition) {
 // Code executes if the condition is true
 } else {
 // Code executes if the condition is false
 }
+----
 
 For single-line conditions, curly braces {} can be omitted.
 
 Example of if-else Usage:
 
 [source,javascript]
-
+----
 let ID = "Apple";
 
 if (ID === "Apple") {
@@ -277,8 +296,9 @@ console.log("Your operating system is not supported");
 } else {
 console.log("Input error");
 }
+----
 
-Key points:
+**Key Points:**
 
 * Use === instead of == to check for equality (strict comparison).
 
@@ -295,7 +315,7 @@ The switch statement provides a simpler way to compare a variable with multiple 
 Syntax of switch-case in JavaScript:
 
 [source,javascript]
-
+----
 switch (expression) {
 case value1:
 // Code for case 1
@@ -306,13 +326,14 @@ break;
 default:
 // Code if no cases match
 }
+----
 
 The break statement prevents fall-through execution.
 
 Example of switch-case Usage:
 
 [source,javascript]
-
+----
 let ID = "Apple";
 
 switch (ID) {
@@ -325,8 +346,9 @@ break;
 default:
 console.log("Input error");
 }
+----
 
-Key points:
+**Key Points:**
 
 * The switch statement checks the ID variable.
 
@@ -338,41 +360,44 @@ Key points:
 
 JavaScript supports multiple loop types for repeating actions.
 
-1️⃣ Classic for Loop
+a) Classic for Loop
 
 [source,javascript]
-
+----
 for (let i = 0; i < 8; i++) {
 console.log(i);
 }
+----
 
-2️⃣ while Loop (Preconditioned Loop)
+b) while Loop (Preconditioned Loop)
 
 Executes as long as the condition is true:
 
 [source,javascript]
-
+----
 let count = 10;
 
 while (count > 0) {
 console.log(count);
 count--;
 }
+----
 
-3️⃣ do-while Loop
+c) do-while Loop
 
 Ensures the loop executes at least once, even if the condition is false.
 
 [source,javascript]
-
+----
 let num = 5;
 
 do {
 console.log(num);
 num--;
 } while (num > 0);
+----
 
-To summarize:
+**To Summarize:**
 
 [options="header"]
 |===
@@ -395,15 +420,16 @@ JavaScript provides the for-of loop to iterate over arrays and other iterable ob
 Syntax of for-of in JavaScript:
 
 [source,javascript]
-
+----
 for (let element of iterable) {
 // Code to execute for each element
 }
+----
 
 Example: Summing an Array
 
 [source,javascript]
-
+----
 let nums = [2, 3, 4];
 let sum = 0;
 
@@ -412,13 +438,14 @@ sum += num;
 }
 
 console.log("Sum:", sum);
+----
 
 ==== 2.6.2. Iterating Over an Array with Indexes (forEach)
 
 If we need both the index and value, we can use forEach:
 
 [source,javascript]
-
+----
 let nums = [2, 3, 4];
 
 nums.forEach((num, index) => {
@@ -426,6 +453,7 @@ if (num === 3) {
 console.log("Index:", index);
 }
 });
+----
 
 ==== 2.6.3. Iterating Over Objects Using for-in
 
@@ -434,15 +462,16 @@ JavaScript does not have a built-in range keyword, but it provides for-in to ite
 Example: Iterating Over an Object
 
 [source,javascript]
-
+----
 let capitals = {
-ca: "Paris",
-co: "France"
+France: "Paris",
+Germany: "Berlin"
 };
 
 for (let key in capitals) {
-console.log(${key} -> ${capitals[key]});
+console.log(`${key} -> ${capitals[key]}`);
 }
+----
 
 ==== 2.6.4. Iterating Over Maps Using forEach() and for-of
 
@@ -451,27 +480,29 @@ For Map objects, we use forEach() or for-of with .entries().
 Example: Iterating Over a Map
 
 [source,javascript]
-
+----
 let capitals = new Map([
-["ca", "Paris"],
-["co", "France"]
+["France", "Paris"],
+["Germany", "Berlin"]
 ]);
 
 for (let [key, value] of capitals.entries()) {
-console.log(${key} -> ${value});
+console.log(`${key} -> ${value}`);
 }
+----
 
 ==== 2.6.5. Iterating Over Keys Only
 
 If we only need the keys:
 
 [source,javascript]
-
+----
 for (let key of capitals.keys()) {
 console.log("Key:", key);
 }
+----
 
-To summarize:
+**To Summarize:**
 
 [options="header"]
 |===
@@ -504,28 +535,31 @@ JavaScript uses a single Number type for both integers and floating-point values
 Example: Declaring Numeric Variables
 
 [source,javascript]
-
+----
 let integerNumber = 42; // Integer
 let floatingPoint = 3.14; // Floating-point number
+----
 
 JavaScript also supports BigInt, a special type for working with very large integers.
 
 [source,javascript]
-
-let bigNumber = 9007199254740991n; // BigInt type (suffix 'n' is required)
+----
+let bigNumber = 9007199254740993n; // BigInt type (suffix 'n' is required)
+----
 
 Numeric Limits
 
 The maximum and minimum values for numbers are stored in constants:
 
 [source,javascript]
-
+----
 console.log(Number.MAX_SAFE_INTEGER); // 9007199254740991
 console.log(Number.MIN_SAFE_INTEGER); // -9007199254740991
 console.log(Number.MAX_VALUE); // 1.7976931348623157e+308
 console.log(Number.MIN_VALUE); // 5e-324
+----
 
-Key Points:
+**Key Points:**
 
 * Number type covers both integers and floating-point values.
 
@@ -540,12 +574,13 @@ A string in JavaScript is a sequence of characters enclosed in single quotes (')
 Declaring String Variables
 
 [source,javascript]
-
+----
 let greeting = "Hello, World"; // Double quotes
 let name = 'John'; // Single quotes
-let message = Hello, ${name}; // Template literals (ES6+)
+let message = `Hello, ${name}`; // Template literals (ES6+)
+----
 
-Key Features:
+**Key Features:**
 
 * Strings are immutable (modifying a string creates a new string).
 
@@ -554,22 +589,24 @@ Key Features:
 String Length and Character Access:
 
 [source,javascript]
-
+----
 console.log(greeting.length); // 12
 console.log(greeting[0]); // 'H'
 console.log(greeting.charCodeAt(0)); // Unicode code of 'H' (72)
+----
 
 Unicode Representation (Hex Output)
 
 To get the hexadecimal representation of characters:
 
 [source,javascript]
-
+----
 for (let i = 0; i < greeting.length; i++) {
 console.log(greeting.charCodeAt(i).toString(16));
 }
+----
 
-Key Features:
+**Key Features:**
 
 * The length property returns the number of characters in a string.
 
@@ -582,14 +619,15 @@ Boolean values are either true or false. They are commonly used in comparisons a
 Declaring Boolean Variables
 
 [source,javascript]
-
+----
 let isJavaScriptFun = true;
 let isWeekend = false;
+----
 
-Boolean Expressions
+**Boolean Expressions:**
 
 [source,javascript]
-
+----
 let x = 5, y = 8;
 console.log("x == y:", x == y); // false
 console.log("x != y:", x != y); // true
@@ -597,14 +635,15 @@ console.log("x < y:", x < y); // true
 console.log("x > y:", x > y); // false
 console.log("x <= y:", x <= y); // true
 console.log("x >= y:", x >= y); // false
+----
 
-Key Features:
+**Key Features:**
 
 * Booleans are mainly used for conditional logic (if statements, loops, etc.).
 
 * The comparison operators (==, !=, <, >, <=, >=) return boolean values.
 
-Summary of Primitive Data Types:
+**Summary of Primitive Data Types:**
 
 [options="header"]
 |===
@@ -634,12 +673,13 @@ An array is an ordered collection of elements, where each element is indexed num
 Declaring and Initializing Arrays
 
 [source,javascript]
-
+----
 let numbers = [10, 20, 30, 40]; // Array with 4 elements
 console.log(numbers[0]); // Access first element (10)
 console.log(numbers.length); // Array length (4)
+----
 
-Key Features:
+**Key Features:**
 
 * Arrays are zero-indexed (array[0] is the first element).
 
@@ -648,19 +688,21 @@ Key Features:
 * Arrays can store multiple types of values:
 
 [source,javascript]
-
+----
 let mixedArray = [42, "text", true, null];
+----
 
 Adding and Removing Elements
 
 [source,javascript]
-
+----
 let fruits = ["Apple", "Banana"];
 fruits.push("Orange"); // Add element to the end
 fruits.pop(); // Remove last element
 fruits.unshift("Grapes"); // Add to the beginning
 fruits.shift(); // Remove first element
 console.log(fruits);
+----
 
 📌 JavaScript arrays are flexible – they can grow, shrink, and store mixed data types.
 
@@ -671,7 +713,7 @@ An object is a collection of key-value pairs, where each key is a property that 
 Declaring an Object
 
 [source,javascript]
-
+----
 let employee = {
 firstName: "Max",
 lastName: "Smith",
@@ -681,10 +723,11 @@ salary: 34000,
 address: "Amarillo"
 };
 
-console.log(Employee: ${employee.firstName} ${employee.lastName});
-console.log(Salary: $${employee.salary});
+console.log(`Employee: ${employee.firstName} ${employee.lastName}`);
+console.log(`Salary: $${employee.salary}`);
+----
 
-Key Features:
+**Key Features:**
 
 * Properties are accessed using dot notation (object.property) or bracket notation (object["property"]).
 
@@ -693,15 +736,16 @@ Key Features:
 Updating and Adding Properties
 
 [source,javascript]
-
+----
 employee.age = 43; // Updating a property
 employee.department = "IT"; // Adding a new property
 console.log(employee);
+----
 
 ==== 2.8.3. Map
 
 [source,javascript]
-
+----
 let capitals = new Map([
 ["France", "Paris"],
 ["Germany", "Berlin"]
@@ -710,14 +754,15 @@ let capitals = new Map([
 console.log(capitals.get("France")); // Access value by key
 capitals.set("Spain", "Madrid"); // Add new key-value pair
 console.log(capitals);
+----
 
-Maps vs. Objects
+**Maps vs. Objects:**
 
 * Objects use only strings as keys, while Maps can use any type of key.
 
 * Maps maintain key order, whereas objects do not guarantee order.
 
-Summary of Composite Data Types:
+**Summary of Composite Data Types:**
 
 [options="header"]
 |===
@@ -735,23 +780,29 @@ Inheritance, encapsulation, and polymorphism are the three pillars of object-ori
 
 Core OOP Principles and Their Roles:
 
-🔹 Inheritance
+**Inheritance**
 
-✅ Allows creating new classes (subclasses) based on existing ones (superclasses), inheriting their properties and methods.
-✅ Promotes code reuse and the creation of class hierarchies.
-✅ In JavaScript, inheritance is implemented through prototypes or using classes (ES6).
+* Allows creating new classes (subclasses) based on existing ones (superclasses), inheriting their properties and methods.
 
-🔹 Encapsulation
+* Promotes code reuse and the creation of class hierarchies.
 
-✅ Hides internal implementation details of a class and provides access to them only through public methods.
-✅ Protects data from unauthorized access and enhances code reliability.
-✅ In JavaScript, encapsulation is achieved through closures or modules.
+* In JavaScript, inheritance is implemented through prototypes or using classes (ES6).
 
-🔹 Polymorphism
+**Encapsulation**
 
-✅ Enables objects of different classes with a common interface to behave differently.
-✅ Makes code more flexible and adaptable to changes.
-✅ In JavaScript, polymorphism is implemented through dynamic typing and method overriding.
+* Hides internal implementation details of a class and provides access to them only through public methods.
+
+* Protects data from unauthorized access and enhances code reliability.
+
+* In JavaScript, encapsulation is achieved through closures or modules.
+
+**Polymorphism**
+
+* Enables objects of different classes with a common interface to behave differently.
+
+* Makes code more flexible and adaptable to changes.
+
+* In JavaScript, polymorphism is implemented through dynamic typing and method overriding.
 
 ==== 2.9.2. Implementing OOP Principles Using Factory Functions
 
@@ -762,7 +813,7 @@ Encapsulation with Factory Functions
 In this book, the specified OOP principles are implemented based on the use of factory functions.
 
 [source,javascript]
-
+----
 function createPerson(name, age) {
 let _name = name; // private variable
 let _age = age; // private variable
@@ -787,11 +838,12 @@ console.log(person.getName()); // Output: Ivan
 person.setAge(31);
 console.log(person.getAge()); // Output: 31
 // console.log(person._age); // Error: _age is not accessible from outside
+----
 
 Composition (Alternative to Inheritance) with Factory Functions
 
 [source,javascript]
-
+----
 const canBark = (state) => ({
 bark: () => console.log("Woof!")
 });
@@ -815,11 +867,12 @@ canWalk(state)
 const dog = createDog("Bobik");
 dog.bark(); // Output: Woof!
 dog.walk(); // Output: Walking...
+----
 
 Polymorphism with Factory Functions
 
 [source,javascript]
-
+----
 const createCircle = (radius) => ({
 calculateArea: () => Math.PI * radius * radius
 });
@@ -837,3 +890,4 @@ const square = createSquare(4);
 
 printArea(circle); // Output: Area: 78.53981633974483
 printArea(square); // Output: Area: 16
+----

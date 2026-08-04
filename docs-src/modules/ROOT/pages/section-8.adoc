@@ -1,11 +1,11 @@
 [.text-justify]
 :figure-caption!:
 
-== Section 8. Binary Tree Algorithms
+= Section 8. Binary Tree Algorithms
 
-=== 8.1. Representation of Binary Trees
+== 8.1. Representation of Binary Trees
 
-A binary tree is a hierarchical data structure in which each node has at most two children, referred to as the left and right child. The topmost node is called the root, and nodes with no children are called leaves. Four types of imbalanced states exist.
+A binary tree is a hierarchical data structure in which each node has at most two children, referred to as the left and right child. The topmost node is called the root, and nodes with no children are called leaves.
 
 Binary trees as an abstract data type were discussed in Section 1. Here we will discuss the computer implementation of this type of data structure using the visual algorithmic language DRAKON and the JavaScript programming language. Recall the basic terminology of binary trees (Figure 8.1):
 
@@ -16,13 +16,13 @@ image::section_8/Fig8_1_Term.svg[width=50%, link=self, window="_blank"]
 
 * _Root_: The root of the tree is the only node with no incoming edges. It is the top node in the tree.
 
-* _Node_: The basic element of the tree. Each node has data and two references that can point to zero or more descendants.
+* _Node_: The basic element of the tree. Each node has data and two references that can point to zero or more children.
 
 * _Edge_: A fundamental part of the tree used to connect two nodes.
 
 * _Path_: An ordered list of nodes connected by edges.
 
-* _Leaf_: A leaf node is a node that has no descendants.
+* _Leaf_: A leaf node is a node that has no children.
 
 * _Tree height_: The number of edges on the longest path between the root and a leaf.
 
@@ -36,15 +36,13 @@ image::section_8/Fig8_2_BSTree.svg[width=50%, link=self, window="_blank"]
 
 Several types of binary trees are discussed in the literature, the most important classification being based on node values:
 
-    - Binary Search Tree (BST);
+* Binary Search Tree (BST)
+* AVL Tree (Adelson-Velsky and Landis Tree)
+* Red-Black Tree
 
-    - AVL Tree (Adelson-Velsky and Landis Tree);
+== 8.2. Binary Search Tree
 
-    - Red-Black Tree.
-
-=== 8.2. Binary Search Tree
-
-==== 8.2.1. Building a Binary Tree
+=== 8.2.1. Building a Binary Tree
 
 If the tree is organized such that, for each node, all node values of its left subtree are less than this node and all values of its right subtree are greater, it is called a binary search tree (BST). A BST is a recursive data structure because each subtree is also a tree. A BST has the following properties:
 
@@ -58,7 +56,7 @@ If the tree is organized such that, for each node, all node values of its left s
 
 * The value of each node is greater than that of its left child but less than that of its right child.
 
-A binary search tree is built according to a specific algorithm. Consider the sequence of integers {11, 5, 17, 15, 1, 8, 19, 13, 21}, represented as a slice of numbers. First the root node {11} is formed, then in a loop for each node the method insertNode(tree, value) is called recursively (Figure 8.3a), which in turn calls the method createNode(value), which creates a new node (Figure 8.3b) в созданном дереве (Figure 8.3c).
+A binary search tree is built according to a specific algorithm. Consider the sequence of integers {11, 5, 17, 15, 1, 8, 19, 13, 21}, represented as a slice of numbers. First the root node {11} is formed, then in a loop for each node the method insertNode(tree, value) is called recursively (Figure 8.3a), which in turn calls the method createNode(value), which creates a new node (Figure 8.3b) in the resulting tree (Figure 8.3c).
 
 [.text-center]
 .Figure 8.3. Binary tree DRAKON-diagrams: a) building a tree by insert(node, value); b) creating a node
@@ -72,7 +70,7 @@ The complete process of creating a binary tree is shown in Figure 8.4. The first
 .Figure 8.4. Building a binary tree
 image::section_8/Fig8_4_Process.svg[width=100%, link=self, window="_blank"]
 
-==== 8.2.2. Finding a Node Based on a Given Value
+=== 8.2.2. Finding a Node Based on a Given Value
 
 Another basic operation is the findNode(value) function. This function uses a JavaScript construct that recursively compares the value of val with the values of other nodes as it traverses the tree. The DRAKON-diagram of the findNode(node, value) function is shown in Figure 8.5.
 
@@ -81,13 +79,13 @@ image::section_8/Fig8_5_findNode.svg[width=100%, link=self, window="_blank"]
 [.text-center]
 Figure 8.5. DRAKON-diagram of the node finding algorithm
 
-==== 8.2.3. Deleting a Node with a Specified Value
+=== 8.2.3. Deleting a Node with a Specified Value
 
 The next basic operation is deleting a node with a specified value. The function removeNode(node, value) is used recursively.
 
 Let us analyze in more detail the order in which nodes are moved in these variants.
 
-*Option a)*: Node (21) has no descendants (Figure 8.6).
+*Option a)*: Node (21) has no children (Figure 8.6).
 
 In this case, this node is removed by changing the value of node = null in the parent node. Figure 8.6 shows the process of deleting node (21) and the corresponding DRAKON-diagram fragment.
 
@@ -96,23 +94,23 @@ In this case, this node is removed by changing the value of node = null in the p
 image::section_8/Fig8_6_del21.svg[width=50%, link=self, window="_blank", link=self, window="_blank"]
 
 
-*Option b)*: Node (19) has a right-hand descendant (Figure 8.7).
+*Option b)*: Node (19) has a right child (Figure 8.7).
 
-In this case, node (19) is removed from the tree by replacing its address in the parent node (17) with the address of its only descendant node (21). Figure 8.7 shows the process of removing node (19) and the corresponding DRAKON-diagram fragment.
+In this case, node (19) is removed from the tree by replacing its address in the parent node (17) with the address of its only child node (21). Figure 8.7 shows the process of removing node (19) and the corresponding DRAKON-diagram fragment.
 
 [.text-center]
-.Figure 8.7. Deleting node (19) with a right-hand descendant
+.Figure 8.7. Deleting node (19) with a right child
 image::section_8/Fig8_7_del19.svg[width=50%, link=self, window="_blank", , link=self, window="_blank"]
 
-*Option c)*: Node (8) has a left-hand child (Figure 8.8).
+*Option c)*: Node (8) has a left child (Figure 8.8).
 
 In this case, node (8) is removed from the tree by replacing its address in parent node (5) with the address of its only left child node (6). Figure 8.8 shows the process of removing node (8) and the corresponding DRAKON-diagram fragment.
 
 [.text-center]
-.Figure 8.8. Deleting node (8) with a left-hand child
+.Figure 8.8. Deleting node (8) with a left child
 image::section_8/Fig8_del8.svg[width=50%, link=self, window="_blank", , link=self, window="_blank"] 
 
-*Option d)*: Node (5) has two descendants (Figure 8.9). In this case the binary search tree is rearranged: node (2) moves to the place of node (5).
+*Option d)*: Node (5) has two children (Figure 8.9). In this case the binary search tree is rearranged: node (2) moves to the place of node (5).
 
 [.text-center]
 .Figure 8.9. Deleting node (5) with two children
@@ -131,7 +129,7 @@ The complete DRAKON-diagram of node removal from a binary search tree is shown i
 .Figure 8.11. DRAKON-diagram of node removal
 image::section_8/Fig8_11_removeNode.svg[width=100%, , link=self, window="_blank"]
 
-==== 8.2.4. Traversing the Binary Search Tree
+=== 8.2.4. Traversing the Binary Search Tree
 
 One of the basic tree operations is traversing tree nodes. Unlike linear data structures, where elements are traversed in a linear order, tree nodes can be traversed in a variety of ways.
 
@@ -148,10 +146,9 @@ image::section_8/Fig8_12_Diag.svg[width=100%, , link=self, window="_blank"]
 .Figure 8.12. Three classical tree traversals: Pre-, In-, and Post-order
 image::section_8/Fig8_12_Tree.svg[width=100%, , link=self, window="_blank"]
 
-=== 8.3. Self-Balancing Binary Trees (AVL Trees)
+== 8.3. Self-Balancing Binary Trees (AVL Trees)
 
-The efficiency of binary tree processing algorithms significantly depends on the order in which node values are provided during tree construction. 
- In the most favorable sequence, the binary tree becomes balanced. In the worst-case sequence, the "tree" degenerates into a "branch". (Figure 8.13).
+The efficiency of binary tree processing algorithms significantly depends on the order in which node values are provided during tree construction. In the most favorable sequence, the binary tree becomes balanced. In the worst-case sequence, the "tree" degenerates into a "branch" (Figure 8.13). As we will see below, restoring balance in such cases reduces to four canonical rotation patterns — right, left, right-left, and left-right rotation.
 
 [.text-center]
 .Figure 8.13. Most favorable (a) and worst-case (b)  input data sequences 
@@ -193,19 +190,19 @@ The balancing technique boils down to making circular movements of the nodes in 
 
 * Left-right rotation (LR)
 
-Right rotation is performed when the root node has a balance factor bf = +2 and its left-hand child has a balance factor bf = +1 (Figure 8.16):
+Right rotation is performed when the root node has a balance factor bf = +2 and its left child has a balance factor bf = +1 (Figure 8.16):
 
 [.text-center]
 .Figure 8.16. Right rotation
 image::section_8/Fig8_16_turnRR.svg[width=100%, link=self, window="_blank"]
 
-Left rotation is performed when the root node has a balance factor bf = -2 and its right-hand descendant has a balance factor bf = -1 (Figure 8.17):
+Left rotation is performed when the root node has a balance factor bf = -2 and its right child has a balance factor bf = -1 (Figure 8.17):
 
 [.text-center]
 .Figure 8.17. Left rotation
 image::section_8/Fig8_17_turnLL.svg[width=100%, link=self, window="_blank"]
 
-Right-left rotation is performed when the root node has a balance factor bf = -2 and its right-hand child has a balance factor bf = +1 (Figure 8.18):
+Right-left rotation is performed when the root node has a balance factor bf = -2 and its right child has a balance factor bf = +1 (Figure 8.18):
 
 [.text-center]
 .Figure 8.18. Right-left rotation
@@ -238,7 +235,7 @@ Depending on the location of the new node relative to the parent node and the ba
 image::section_8/Fig8_22_twoRotates.svg[width=50%, link=self, window="_blank"]
 
 
-Let us examine the tree rebuilding process in detail as a result of using the `rotateInsert(node, val)` method on the example of entering the values of three nodes (5, 6, 8). After receiving the value of the last node (8), a "twig" appears instead of a tree that needs to be balanced. In this case the condition in the `rotateInsert(node, val)` method is met: the balancing factor is 2 (kb = 2) and the value of node (8) is greater than the parent node (6), so the `rotateLeft(node)` method is called. The balancing process in this case is shown in Figure 8.23:
+Let us examine the tree rebuilding process in detail as a result of using the `rotateInsert(node, val)` method on the example of entering the values of three nodes (5, 6, 8). After receiving the value of the last node (8), a "twig" appears instead of a tree that needs to be balanced. In this case the condition in the `rotateInsert(node, val)` method is met: the balancing factor is 2 (bf = 2) and the value of node (8) is greater than the parent node (6), so the `rotateLeft(node)` method is called. The balancing process in this case is shown in Figure 8.23:
 
 [.text-center]
 .Figure 8.23. Example of left-left rotation balancing
@@ -263,9 +260,9 @@ image::section_8/Fig8_26_delVar.svg[width=75%, link=self, window="_blank"]
 [.text-center]
 Figure 8.26. Cases for nodes to be removed
 
-a) The node to be deleted has two non-empty descendants.
-b) The node to be deleted has no descendants.
-c) The node to be deleted has one descendant (left or right).
+a) The node to be deleted has two non-empty children.
+b) The node to be deleted has no children.
+c) The node to be deleted has one child (left or right).
 
 As with the other methods, a node with a given value is first recursively identified and then one of the options presented is selected. A DRAKON-diagram of the algorithm for deleting a node with a specified value is shown in Figure 8.27.
 
@@ -280,9 +277,9 @@ image::section_8/Fig8_28_mainAVL.svg[width=50%, link=self, window="_blank"]
 [.text-center]
 .Figure 8.28. DRAKON-diagram of the main function
 
-=== 8.4. Red-Black Trees
+== 8.4. Red-Black Trees
 
-==== 8.4.1. Description of Red-Black Tree Properties as a Data Structure
+=== 8.4.1. Description of Red-Black Tree Properties as a Data Structure
 
 A red-black tree is a variant of a self-balancing binary search tree in which the nodes are colored red or black according to a specific set of rules (Figure 8.29).
 
@@ -292,23 +289,18 @@ image::section_8/Fig8_29_redblackTree.svg[width=50%, link=self, window="_blank"]
 
 The nodes containing data (integers in this example) are called internal nodes. In addition, red-black trees contain imaginary "null" nodes associated with tree leaves, which are explicitly colored black (labeled "Null" in Figure 8.29). Red-black trees satisfy all properties of a binary search tree and must maintain the following specific invariants:
 
-    Each node is colored either red or black.
-
-    The root of the tree must be black. (Note: This invariant may be temporarily violated during the balancing process but must be restored before the operation completes.)
-
-    All leaves (NIL nodes) are black.
-
-    Both children of a red node must be black. Consequently, no two red nodes can appear consecutively on any path.
-
-    Every simple path from a node to any of its descendant leaves must contain the same number of black nodes.
+. Each node is colored either red or black.
+. The root of the tree must be black. (Note: this invariant may be temporarily violated during the balancing process but must be restored before the operation completes.)
+. All leaves (NIL nodes) are black.
+. Both children of a red node must be black. Consequently, no two red nodes can appear consecutively on any path.
+. Every simple path from a node to any of its descendant leaves must contain the same number of black nodes.
 
 Unlike AVL trees, where balance is enforced by limiting the height difference between subtrees, red-black tree balance is achieved by strictly enforcing the properties listed above. Inserting or removing a node can disrupt these invariants. Balance is restored using two primary operations: recoloring nodes and/or restructuring the tree (or subtrees) using specific rotations. The most critical of these constraints are Properties 4 and 5.
 
-    Property 4 mandates that two red nodes cannot be adjacent.
+* *Property 4* mandates that two red nodes cannot be adjacent.
+* *Property 5* builds on this by enforcing a uniform black height for all paths from any node to its leaf descendants. Regardless of the specific path taken, the count of black nodes remains constant.
 
-    Property 5 builds on this by enforcing a uniform black height for all paths from any node to its leaf descendants. Regardless of the specific path taken, the count of black nodes remains constant.
-
-===== Mechanical Analogy for Balancing: The Chandelier and the Balancing Machine
+==== Mechanical Analogy for Balancing: The Chandelier and the Balancing Machine
 
 Understanding the dynamic enforcement of red-black properties is crucial for developing an efficient balancing algorithm. However, this often presents significant challenges, as it requires tracking the state of multiple nodes simultaneously.
 
@@ -316,29 +308,24 @@ To facilitate conceptual clarity, we employ a mechanical analogy. Since the "roo
 
 In this model:
 
-    Black balls are solid and heavy, providing stability and physical equilibrium. Their weight is defined as 1 unit.
-
-    Red balls are hollow, decorative, and virtually weightless (0 units). They serve as a flexible resource that can be "hardened" into black balls (weights) when necessary.
+* *Black balls* are solid and heavy, providing stability and physical equilibrium. Their weight is defined as 1 unit.
+* *Red balls* are hollow, decorative, and virtually weightless (0 units). They serve as a flexible resource that can be "hardened" into black balls (weights) when necessary.
 
 All NIL leaves are considered black and weightless termination points.
 
-The structural equilibrium (balance) is defined by two simple conditions:
+The structural equilibrium (balance) is defined by two simple conditions, which restate Properties 5 and 4 respectively in mechanical terms:
 
-    The total weight (the number of black balls) on any path from the root to any leaf must be equal.
-
-    Two red balls in a row are forbidden — this creates a "weak spot" in the chain, even though it does not alter the branch's overall weight.
+* The total weight (the number of black balls) on any path from the root to any leaf must be equal — this is Property 5, the uniform black height.
+* Two red balls in a row are forbidden — this creates a "weak spot" in the chain, even though it does not alter the branch's overall weight; this is Property 4.
 
 Black height is the fundamental metric in this engineering model, representing the total "weight" (the number of black nodes) of a specific branch. Properties 4 and 5 work together to ensure structural integrity. While red nodes allow branches to stretch, the rules guarantee that the longest path (alternating black weights and red spacers) is never more than twice the length of the shortest path (consisting only of black weights). This constraint ensures that "tension" is evenly distributed, keeping the tree approximately balanced with a height of O(log n), where n is the number of nodes.
 
 The entire lifecycle of the structure is managed by a virtual balancing automaton. It possesses an unlimited stock of spare black and red balls and performs four functions:
 
-    Insertion: The automaton hangs a new red ball (NIL replacement).
-
-    Deletion: It removes a ball and replaces it with a dummy, triggering rebalancing if necessary.
-
-    Balance Monitoring: After every insertion or deletion, it checks for equilibrium violations.
-
-    Balancing: If a violation is detected, the automaton performs local transformations: recoloring balls and/or rearranging connections (rotations) using its stock of spare parts.
+Insertion:: The automaton hangs a new red ball (NIL replacement).
+Deletion:: It removes a ball and replaces it with a dummy, triggering rebalancing if necessary.
+Balance Monitoring:: After every insertion or deletion, it checks for equilibrium violations.
+Balancing:: If a violation is detected, the automaton performs local transformations: recoloring balls and/or rearranging connections (rotations) using its stock of spare parts.
 
 To implement these operations, we define two custom data types: node and rbTree. A node includes fields for the key (numeric value), color (boolean: true for red, false for black), and pointers to left, right, and parent nodes. The rbTree structure is a reference-type variable that stores a pointer to the memory area containing the tree objects (Figure 8.30).
 
@@ -346,9 +333,9 @@ To implement these operations, we define two custom data types: node and rbTree.
 .Figure 8.30. DRAKON-diagram of Node and rbTree description
 image::section_8/Fig8_30_makeNodeTree.svg[width=100%, link=self, window="_blank"]
 
-===== Cluster Node Notation
+==== Cluster Node Notation
 
-To analyze the balancing process, we focus on a local C-Cluster of nodes. This notation is essential for understanding the transformations applied by the automaton. The following designations are used (Figure 8.31):
+To analyze the balancing process, we introduce an original cluster-based notation, developed specifically for this book, which focuses on a local C-Cluster of nodes involved in a transformation. This notation is essential for understanding the transformations applied by the automaton. The following designations are used (Figure 8.31):
 
 [.text-center]
 .Figure 8.31. Designation of "kinship" degrees of RB tree nodes (Cluster x, P, G, U, S)
@@ -356,29 +343,23 @@ image::section_8/Fig8_31_clusterInfoInsert.svg[width=75%, link=self, window="_bl
 
 In this model:
 
-    x: The newly inserted red node.
-
-    P: Parent of x.
-
-    G: Grandparent of x (parent of P). In our model, G is always a solid 'weight' (black) before fixup begins.
-
-    U: Uncle of x (sibling of P). A missing (null) uncle is treated as a static black 'weight' (NIL leaf).
-
-    S: Sibling of x (the other child of P). Its color and position are crucial for determining the necessary rotation type.
+`x`:: The newly inserted red node.
+`P`:: Parent of `x`.
+`G`:: Grandparent of `x` (parent of `P`). In our model, `G` is always a solid 'weight' (black) before fixup begins.
+`U`:: Uncle of `x` (sibling of `P`). A missing (null) uncle is treated as a static black 'weight' (NIL leaf).
+`S`:: Sibling of `x` (the other child of `P`). Its color and position are crucial for determining the necessary rotation type.
 
 For a compact description of the cluster arrangement, we introduce the following symbolic notation:
 
-    A colon ":" separates the node name from its color (P:B describes a black parent).
-
-    The comparison symbols "<" and ">" indicate relationship direction (x<P means x is P's left child).
-
-    Commas and semicolons delimit attributes.
+* A colon `:` separates the node name from its color (`P:B` describes a black parent).
+* The comparison symbols `<` and `>` indicate relationship direction (`x<P` means `x` is `P`'s left child).
+* Commas and semicolons delimit attributes.
 
 For example, the notation x:R, x<P; P:R, P>G; G:B; U:R; U>G; describes a specific "zig-zag" violation where red node x is the left child of its red parent P, which in turn is the right child of the black grandparent G, who also has a red uncle U. Cluster nodes can be in a "zig-zig" (e.g., x<P<G) or "zig-zag" (e.g., x<P>G) configuration.
 
 This concise notation significantly simplifies the balancing algorithms, making the transformation criteria visual and efficient.
 
-==== 8.4.2. Inserting a New Node and the Balancing Process
+=== 8.4.2. Inserting a New Node and the Balancing Process
 
 A new node is inserted into the red-black tree using the rbInsert(tree, key) function, which follows standard BST rules and always adds a new red node. However, this addition may introduce a "Double Red" conflict (violating Property 4). The rebalancing process is summarized in the mindmap in Figure 8.32.
 
@@ -475,35 +456,21 @@ b) Right-rotation primitive
 [.text-center]
 .Figure 8.38. DRAKON-diagrams of the fundamental rotation primitives
 
-The following videos provide dynamic demonstrations of these transformations in action, showing how the C-Cluster evolves from the violation states in Figure 8.33 to the balanced configuration.
+[TIP]
+====
+*Deepen your understanding:* experiment with the dedicated online visualization and simulation tool, Red-Black Tree Visualizer. This interactive platform allows you to insert and delete nodes, observe the balancing operations in real time, and visualize the tree structure dynamically. Engaging with this tool will enhance your comprehension of the balancing mechanisms described above.
+====
 
-    Case A — Recoloring (Red Uncle, Figure 8.33a) (video placeholder)
-
-    Case B3 — Inner Rotation (LR Case, Figure 8.33d) (video placeholder)
-
-    Case B4 — Inner Rotation (RL Case, Figure 8.33e) (video placeholder)
-
-    Case B1 — Outer Rotation (LL Case, Figure 8.33b) (video placeholder)
-
-    Case B2 — Outer Rotation (RR Case, Figure 8.33c) (video placeholder)
-
-Student Note: Experimenting with Red-Black Trees
-
-Deepen your understanding by conducting experiments using the dedicated online visualization and simulation tool, Red-Black Tree Visualizer. This interactive platform allows you to insert and delete nodes, observe the balancing operations in real-time, and visualize the tree structure dynamically. Engaging with this tool will enhance your comprehension of the complex balancing mechanisms inherent in red-black trees.
-
-==== 8.4.3. Deleting a Node: Restoring the Weight Balance
+=== 8.4.3. Deleting a Node: Restoring the Weight Balance
 
 Node deletion in a red-black tree is a sophisticated operation because it must preserve the tree's "gravitational" balance. However, by adhering to our analogy of weights (black nodes) and zero-gravity spacers (red nodes), the logic becomes intuitive: complexity only arises when we lose a "weight."
 
 The standard mechanical notation for the C-Cluster used in deletion operations is shown in Figure 8.39:
 
-    z: The node to be physically deleted, which triggers the Weight Debt (the "Double-Black" focus).
-
-    P: Parent of *z*.
-
-    s: Sibling of *z*.
-
-    s.l, s.r: The left and right children of sibling *s* (the "nephews").
+`z`:: The node to be physically deleted, which triggers the Weight Debt (the "Double-Black" focus).
+`P`:: Parent of `z`.
+`s`:: Sibling of `z`.
+`s.l`, `s.r`:: The left and right children of sibling `s` (the "nephews").
 
 [.text-center]
 .Figure 8.39. Cluster deletion nodes and their designations (z, P, s, s.l, s.r)
@@ -517,19 +484,19 @@ image::section_8/Fig8_40_mindMapDeletion.png[width=100%, link=self, window="_bla
 
 The operation consists of three primary steps:
 
-    Identification: As in any standard BST, the algorithm first locates the target node (*z*).
-
-    Structural Deletion and Replacement: We must physically remove the node in a way that minimizes damage:
-
-        If node *z* has at most one child: We remove *z* and replace it with its non-NIL child (or a NIL node).
-
-        If node *z* has two children: We cannot delete it directly. Instead, we find its inorder successor (the minimum node in its right subtree), swap their values, and then delete the successor. This ensures that the node being physically removed always has zero or one child.
-
-    The Color Impact (The Weight Factor): Rebalancing necessity is determined entirely by the color of the physically deleted component:
-
-        Deleting a Red Node: If the deleted node is red, no action is required. As red nodes are weightless, their removal does not alter any black-height paths, and Property 5 remains intact.
-
-        Deleting a Black Node: If the deleted node is black, we have a problem. We have removed a "brick" from one side of the scale. This branch is now "lighter," violating Property 5 and creating a Weight Deficit.
+. *Identification:* As in any standard BST, the algorithm first locates the target node (`z`).
+. *Structural Deletion and Replacement:* We must physically remove the node in a way that minimizes damage:
++
+--
+* If node `z` has at most one child: we remove `z` and replace it with its non-NIL child (or a NIL node).
+* If node `z` has two children: we cannot delete it directly. Instead, we find its inorder successor (the minimum node in its right subtree), swap their values, and then delete the successor. This ensures that the node being physically removed always has zero or one child.
+--
+. *The Color Impact (The Weight Factor):* Rebalancing necessity is determined entirely by the color of the physically deleted component:
++
+--
+* Deleting a Red Node: if the deleted node is red, no action is required. As red nodes are weightless, their removal does not alter any black-height paths, and Property 5 remains intact.
+* Deleting a Black Node: if the deleted node is black, we have a problem. We have removed a "brick" from one side of the scale. This branch is now "lighter," violating Property 5 and creating a Weight Deficit.
+--
 
 This deficit is the core of the "Double Black" problem. It signals to our balancing automaton that it must either:
 
@@ -538,11 +505,9 @@ b. Or redistribute weights from neighboring branches to fill the gap.
 
 The "Double Black" Concept (The Weight Debt): The node that occupies the position of the physically deleted black node is temporarily designated as "Double Black" (DB). In our chandelier analogy, this is a Weight Debt — a conceptual void indicating the path through this node is "lighter" than Property 5 requires. Correcting this violation employs a sequence of recoloring and rotations:
 
-    Weight Transfer: Shifting a black weight from a neighboring branch via rotation.
-
-    Color Hardening: Transforming a red node into a black weight to fill the void.
-
-    Debt Propagation: If the local cluster cannot cancel the void, the "debt" is moved up toward the parent. The parent then becomes the new focus of the balancing process until the deficit is cancelled at the root or resolved by a rotation.
+Weight Transfer:: Shifting a black weight from a neighboring branch via rotation.
+Color Hardening:: Transforming a red node into a black weight to fill the void.
+Debt Propagation:: If the local cluster cannot cancel the void, the "debt" is moved up toward the parent. The parent then becomes the new focus of the balancing process until the deficit is cancelled at the root or resolved by a rotation.
 
 The atlas of options for removing a node from the RB tree is presented in Figure 8.41.
 
@@ -607,7 +572,7 @@ c) handleDirectCapture
 [.text-center]
 .Figure 8.45. DRAKON-diagrams of the three specialized handle-type functions for RB tree balancing
 
-=== 8.5. Comparison of Tree Structures
+== 8.5. Comparison of Tree Structures
 
 A clear comparison of the dynamic behavior of each tree structure is presented in Table 8.3. While standard BST implementations risk degrading into linear structures with O(n) complexity, self-balancing structures (AVL and red-black) guarantee O(log n) complexity, making them scalable for large datasets. Note that although red-black trees have dynamic complexities in insertions and deletions compared to BSTs, they eliminate the critical O(n) failure mode, providing a predictable O(log n) experience.
 
@@ -630,7 +595,7 @@ Table 8.3. Comparison of time and space complexities for tree operations
 | Delete | O(log n) | O(log n) | O(n)
 |===
 
-=== 8.6. Conclusion
+== 8.6. Conclusion
 
 Trees are one of the most important data structures in computer science, used to represent hierarchical relationships and organize data. They provide efficient search, insert, and delete operations, making them ideal for use in a variety of applications.
 
