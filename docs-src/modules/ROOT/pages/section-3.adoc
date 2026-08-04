@@ -107,7 +107,7 @@ let parentSlice = new Array(20).fill(0); // Creating an array of 20 elements, fi
 
 [.text-center]
 .Figure 3.2. Creating Different Slices `sliceA` and `sliceB`
-image::section_3/Fig3_2.svg[width=100%, link=self, window="_blank"]
+image::section_3/Fig3_2_Slice.svg[width=100%, link=self, window="_blank"]
 
 The length property indicates the number of elements in the slice (array). In JavaScript there is no explicit concept of "capacity". Multiple "slices" can be created from a single array using the slice() method or destructuring. For example, to create sliceA and sliceB from parentSlice:
 
