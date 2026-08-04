@@ -36,10 +36,35 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="svg115" />
   <defs
-     id="defs1" />
+     id="defs1">
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Invert"
+       id="filter115"
+       x="0"
+       y="-0.0026595745"
+       width="1.000684"
+       height="1.0026596">
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0.21 0.72 0.07 0 0 "
+         result="fbSourceGraphic"
+         id="feColorMatrix115" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix116" />
+      <feColorMatrix
+         id="feColorMatrix117"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -0.21 -0.72 -0.07 1 0 "
+         result="color2"
+         in="fbSourceGraphic" />
+    </filter>
+  </defs>
   <g
      id="g128"
-     transform="translate(-36.5,-20)">
+     transform="translate(-36.5,-20)"
+     style="filter:url(#filter115)">
     <g
        data-cell-id="0"
        id="g127">
