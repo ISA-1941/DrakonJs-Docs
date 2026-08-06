@@ -287,7 +287,7 @@ A linked list is a dynamic data structure where each element, called a node, con
 
 [.text-center]
 .Figure 3.4. Singly Linked List Structure
-image::section_3/Fig3_4_LL.png[width=100%, link=self, window="_blank"]
+image::section_3/Fig3_4_LL.svg[width=100%, link=self, window="_blank"]
 
 a) Data (which can be any primitive or complex data type)
 b) A reference (pointer) to the next node in the list
