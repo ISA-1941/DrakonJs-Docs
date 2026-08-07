@@ -247,7 +247,7 @@ To solve the problem of finding the digital root of an integer, we will create f
 
 [.text-center]
 .Figure 4.13. Modules: `module`, `main`, `digRoot`, and `sumDigits`
-image::section_4/Fig4_13_fourFunctions.png[width=25%, link=self, window="_blank"]
+image::section_4/Fig4_13_fourFunctions.png[width=75%, link=self, window="_blank"]
 
 The function module contains a call to the main() function. The main() function contains a call to the digroot function with an integer specified (Figure 4.14):
 

@@ -2,18 +2,6 @@
 :figure-caption!:
 :page-toclevels: 3
 
-++++
-<style>
-  table.tableblock td {
-    padding: 2px 4px !important;
-    line-height: 1.1 !important;
-  }
-  table.tableblock {
-    margin-bottom: 6px !important;
-  }
-</style>
-++++ 
-
 = Section 7. Basic Sorting Algorithms
 
 [abstract]
