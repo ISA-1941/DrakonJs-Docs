@@ -16,8 +16,7 @@
 
 = Section 7. Basic Sorting Algorithms
 
-== Abstract
-
+[abstract]
 This section provides a comprehensive analysis of fundamental sorting algorithms for contiguous memory segments (array slices). It explores core concepts, algorithmic mechanics, and performance trade-offs across classic comparison-based methods: Bubble Sort, Selection Sort, Insertion Sort, Quick Sort, Merge Sort, Shell Sort, and Heap Sort. Each algorithm is evaluated in terms of best, average, and worst-case time complexity, auxiliary space requirements, and numerical stability. To enhance pedagogical clarity and structural logic, visual workflow formalisms—including DRAKON diagrams, step-by-step state transition tables, and heap tree visualizations—are systematically integrated. Finally, a comparative framework is established to guide optimal algorithm selection based on key data characteristics and constraints.
 
 == 7.1. General Characteristics of Sorting Algorithms
