@@ -1,6 +1,9 @@
-== Section 1. Abstract Data Types
+= Section 1. Abstract Data Types
 
-=== 1.1. ADT Concept
+[abstract]
+This section introduces the foundational concepts of Abstract Data Types (ADTs) in computer science. It covers the separation of interface from implementation, enabling modular software design and algorithmic reasoning. The section provides a detailed classification and overview of both linear ADTs (arrays, sets, linked lists, stacks, queues) and non-linear ADTs (associative arrays, trees, graphs), detailing their defining characteristics, core operations, primary advantages, limitations, and real-world applications.
+
+== 1.1. ADT Concept
 
 In computer science, *data* is a representation of facts, values, measurements, or symbols that can be stored, transmitted, and processed by a computer system.
 
@@ -22,7 +25,7 @@ The main purpose of ADTs is to separate *interface* from *implementation*. The i
 
 This separation allows programmers and engineers to reason about data structures at different levels of abstraction.
 
-=== 1.2. Classification of Abstract Data Types
+== 1.2. Classification of Abstract Data Types
 
 Abstract data types can be classified according to several criteria.
 
@@ -55,13 +58,13 @@ The main categories discussed in this section are:
 ** trees;
 ** graphs.
 
-=== 1.3. Linear Abstract Data Types
+== 1.3. Linear Abstract Data Types
 
 Linear abstract data types organize data as a sequence of elements. The logical order of elements is one of their defining properties.
 
 Linear structures are widely used because many computational tasks naturally involve sequences: lists of records, input streams, execution histories, buffers, tasks, commands, and ordered collections.
 
-==== 1.3.1. Arrays
+=== 1.3.1. Arrays
 
 An *array* is a linear abstract data type that stores a collection of elements and provides access to each element by an index.
 
@@ -73,7 +76,7 @@ If the base address of the array is known, the address of an element can be calc
 
 This property makes arrays one of the most important and efficient data structures in computer science.
 
-===== Characteristics of Arrays
+==== Characteristics of Arrays
 
 * *Indexed access* - Each element can be accessed directly by its numeric index.
 * *Contiguous memory model* - Classical arrays store elements in adjacent memory locations.
@@ -81,7 +84,7 @@ This property makes arrays one of the most important and efficient data structur
 * *Homogeneous storage in low-level languages* - In languages such as C, arrays usually store elements of the same type.
 * *Efficient traversal* - Arrays are well suited for sequential iteration.
 
-===== Main Operations on Arrays
+==== Main Operations on Arrays
 
 * `access(index)` - Returns the element stored at the specified index.
 * `update(index, value)` - Replaces the element at the specified index.
@@ -90,14 +93,14 @@ This property makes arrays one of the most important and efficient data structur
 * `search(value)` - Finds the position of a value in the array.
 * `length()` - Returns the number of elements.
 
-===== Advantages of Arrays
+==== Advantages of Arrays
 
 * *Fast random access* - Any element can be accessed directly by index.
 * *Memory locality* - Contiguous storage improves cache efficiency on modern hardware.
 * *Simple structure* - Arrays are easy to understand and implement.
 * *Efficient iteration* - Sequential traversal is usually fast.
 
-===== Limitations of Arrays
+==== Limitations of Arrays
 
 * *Expensive insertion and deletion in the middle* - Elements may need to be shifted.
 * *Fixed size in the classical model* - Resizing may require allocating a new array.
@@ -106,7 +109,7 @@ This property makes arrays one of the most important and efficient data structur
 
 In modern programming languages, arrays are often implemented as dynamic arrays that can grow and shrink at runtime. JavaScript arrays are dynamic and can store values of different types, but the abstract concept of an array remains based on indexed access.
 
-===== Applications of Arrays
+==== Applications of Arrays
 
 Arrays are used in many areas of computing, including:
 
@@ -116,7 +119,7 @@ Arrays are used in many areas of computing, including:
 * implementing stacks, queues, heaps, and hash tables;
 * supporting efficient iteration in algorithms.
 
-==== 1.3.2. Sets
+=== 1.3.2. Sets
 
 A *set* is an abstract data type that stores a collection of unique values. Its defining characteristic is the uniqueness invariant: a set does not allow duplicate elements.
 
@@ -124,14 +127,14 @@ In the mathematical sense, sets are unordered collections. They do not provide i
 
 Although sets are not linear in the same strict sense as arrays or linked lists, they are often discussed alongside collection-based ADTs because they store individual elements and support membership operations.
 
-===== Characteristics of Sets
+==== Characteristics of Sets
 
 * *Unique elements* - Each value can appear only once.
 * *Membership-based access* - The primary operation is checking whether an element belongs to the set.
 * *Dynamic size* - Sets can grow or shrink as elements are added or removed.
 * *No indexed access* - Elements are not normally accessed by position.
 
-===== Main Operations on Sets
+==== Main Operations on Sets
 
 * `add(value)` - Inserts a value into the set if it is not already present.
 * `has(value)` - Checks whether a value exists in the set.
@@ -141,20 +144,20 @@ Although sets are not linear in the same strict sense as arrays or linked lists,
 * `intersection(set)` - Returns a set containing only common elements.
 * `difference(set)` - Returns a set containing elements from one set that are not in another.
 
-===== Advantages of Sets
+==== Advantages of Sets
 
 * *Efficient deduplication* - Sets automatically prevent duplicate values.
 * *Fast membership testing* - Many implementations provide efficient lookup.
 * *Clear semantics* - Sets directly model mathematical collections of unique elements.
 * *Useful for algorithmic state tracking* - Sets are frequently used to track visited elements.
 
-===== Limitations of Sets
+==== Limitations of Sets
 
 * *No positional access* - Sets do not usually support indexing.
 * *No key-value association* - Sets store values, not pairs.
 * *Implementation-dependent ordering* - Mathematical sets are unordered, even if some implementations preserve insertion order.
 
-===== Applications of Sets
+==== Applications of Sets
 
 Sets are used for:
 
@@ -165,7 +168,7 @@ Sets are used for:
 * filtering data streams;
 * comparing collections.
 
-==== 1.3.3. Linked Lists
+=== 1.3.3. Linked Lists
 
 A *linked list* is a linear abstract data type in which elements are stored as nodes. Each node contains data and one or more references to other nodes.
 
@@ -173,7 +176,7 @@ Unlike arrays, linked lists do not require contiguous memory. Elements can be st
 
 The first node of a linked list is usually called the *head*. The last node usually points to `null`, unless the list is circular.
 
-===== Types of Linked Lists
+==== Types of Linked Lists
 
 There are several common types of linked lists.
 
@@ -182,7 +185,7 @@ There are several common types of linked lists.
 * *Circular linked list* - The last node points back to the first node.
 * *Circular doubly linked list* - Each node has previous and next references, and the list forms a closed cycle.
 
-===== Main Operations on Linked Lists
+==== Main Operations on Linked Lists
 
 * `insertFirst(value)` - Inserts a new node at the beginning.
 * `insertLast(value)` - Inserts a new node at the end.
@@ -191,21 +194,21 @@ There are several common types of linked lists.
 * `find(value)` - Searches for a node containing the specified value.
 * `traverse()` - Visits all nodes in sequence.
 
-===== Advantages of Linked Lists
+==== Advantages of Linked Lists
 
 * *Dynamic size* - The structure can grow and shrink at runtime.
 * *Efficient insertion and deletion at known positions* - Nodes can be relinked without shifting many elements.
 * *No need for contiguous memory* - Nodes may be stored anywhere in memory.
 * *Useful for implementing other ADTs* - Stacks, queues, and adjacency lists can be based on linked lists.
 
-===== Limitations of Linked Lists
+==== Limitations of Linked Lists
 
 * *No direct random access* - Accessing an element requires traversal from the head or tail.
 * *Additional memory overhead* - Each node stores references in addition to data.
 * *Poorer cache locality* - Nodes may be scattered across memory.
 * *More complex implementation* - Pointer or reference management can introduce errors.
 
-===== Applications of Linked Lists
+==== Applications of Linked Lists
 
 Linked lists are used for:
 
@@ -216,7 +219,7 @@ Linked lists are used for:
 * implementing polynomial and sparse matrix representations;
 * creating circular buffers and scheduling structures.
 
-==== 1.3.4. Stacks
+=== 1.3.4. Stacks
 
 A *stack* is a linear abstract data type that follows the *Last In, First Out* principle, commonly abbreviated as *LIFO*.
 
@@ -224,7 +227,7 @@ This means that the last element inserted into the stack is the first element re
 
 The insertion operation is called `push`, and the removal operation is called `pop`.
 
-===== Main Operations on Stacks
+==== Main Operations on Stacks
 
 * `push(value)` - Adds a value to the top of the stack.
 * `pop()` - Removes and returns the top value.
@@ -232,14 +235,14 @@ The insertion operation is called `push`, and the removal operation is called `p
 * `isEmpty()` - Checks whether the stack is empty.
 * `size()` - Returns the number of elements.
 
-===== Characteristics of Stacks
+==== Characteristics of Stacks
 
 * *Restricted access* - Elements are accessed only from the top.
 * *LIFO behavior* - The most recently added element is removed first.
 * *Simple interface* - Stack operations are small and clearly defined.
 * *Useful for nested structures* - Stacks naturally model recursion and nested expressions.
 
-===== Applications of Stacks
+==== Applications of Stacks
 
 Stacks are used in:
 
@@ -252,7 +255,7 @@ Stacks are used in:
 * depth-first search;
 * backtracking algorithms.
 
-==== 1.3.5. Queues
+=== 1.3.5. Queues
 
 A *queue* is a linear abstract data type that follows the *First In, First Out* principle, commonly abbreviated as *FIFO*.
 
@@ -260,7 +263,7 @@ This means that the first element inserted into the queue is the first element r
 
 The insertion operation is usually called `enqueue`, and the removal operation is called `dequeue`.
 
-===== Main Operations on Queues
+==== Main Operations on Queues
 
 * `enqueue(value)` - Adds a value to the rear of the queue.
 * `dequeue()` - Removes and returns the front value.
@@ -268,14 +271,14 @@ The insertion operation is usually called `enqueue`, and the removal operation i
 * `isEmpty()` - Checks whether the queue is empty.
 * `size()` - Returns the number of elements.
 
-===== Common Variations
+==== Common Variations
 
 * *Simple queue* - Elements are inserted at the rear and removed from the front.
 * *Circular queue* - The last position connects back to the first position, improving fixed-buffer utilization.
 * *Priority queue* - Elements are removed according to priority rather than insertion order.
 * *Deque* - A double-ended queue that allows insertion and removal at both ends.
 
-===== Applications of Queues
+==== Applications of Queues
 
 Queues are used in:
 
@@ -286,7 +289,7 @@ Queues are used in:
 * handling asynchronous events;
 * managing requests in operating systems and servers.
 
-=== 1.4. Non-Linear Abstract Data Types
+== 1.4. Non-Linear Abstract Data Types
 
 Non-linear abstract data types organize elements in structures that are not simple sequences.
 
@@ -294,7 +297,7 @@ Instead of a single logical order, they represent hierarchical, associative, or 
 
 The most important non-linear ADTs are associative arrays, trees, and graphs.
 
-==== 1.4.1. Associative Arrays
+=== 1.4.1. Associative Arrays
 
 An *associative array* is an abstract data type that stores a collection of key-value pairs. Each key appears at most once in the collection and is used to access its associated value.
 
@@ -314,7 +317,7 @@ An associative array follows these rules:
 * a single key can map to only one value at a time;
 * keys must be distinguishable from one another.
 
-===== Main Operations on Associative Arrays
+==== Main Operations on Associative Arrays
 
 * `insert(key, value)` - Adds a key-value pair.
 * `find(key)` - Returns the value associated with the key.
@@ -322,7 +325,7 @@ An associative array follows these rules:
 * `contains(key)` - Checks whether a key exists.
 * `size()` - Returns the number of key-value pairs.
 
-===== Hash-Based Associative Arrays
+==== Hash-Based Associative Arrays
 
 Many associative arrays are implemented using *hash tables*.
 
@@ -330,7 +333,7 @@ A hash table uses a *hash function* to convert a key into an index in an interna
 
 The idea of hashing was significantly developed by Hans Peter Luhn in 1953. Later, hashing became one of the fundamental techniques for building efficient symbol tables, dictionaries, caches, and databases.
 
-===== Applications of Associative Arrays
+==== Applications of Associative Arrays
 
 Associative arrays are used for:
 
@@ -342,7 +345,7 @@ Associative arrays are used for:
 * configuration storage;
 * database indexing concepts.
 
-==== 1.4.2. Trees
+=== 1.4.2. Trees
 
 A *tree* is a non-linear abstract data type that represents hierarchical relationships between elements.
 
@@ -350,7 +353,7 @@ A tree consists of nodes connected by edges. One node is designated as the *root
 
 Trees are acyclic, which means they do not contain cycles.
 
-===== Hierarchical Model
+==== Hierarchical Model
 
 Tree terminology includes the following concepts:
 
@@ -363,7 +366,7 @@ Tree terminology includes the following concepts:
 * *Depth* - The distance from the root to a node.
 * *Height* - The length of the longest path from a node to a leaf.
 
-===== Fundamental Properties
+==== Fundamental Properties
 
 A tree with `n` nodes has exactly `n - 1` edges.
 
@@ -371,7 +374,7 @@ There is exactly one path from the root to any node.
 
 Because of these properties, trees are useful for representing hierarchical data, decision processes, and sorted collections.
 
-===== Structural Classification
+==== Structural Classification
 
 Common types of trees include:
 
@@ -382,7 +385,7 @@ Common types of trees include:
 * *Trie* - A tree used to store strings by prefixes.
 * *Heap* - A tree-based structure used to implement priority queues.
 
-===== Historical Context
+==== Historical Context
 
 Tree structures became central to computer science with the development of symbolic computation, parsing, searching, and file organization.
 
@@ -390,7 +393,7 @@ John McCarthy's work on Lisp in 1960 popularized recursive list and tree-like st
 
 Donald Knuth later systematized tree algorithms in *The Art of Computer Programming*, making trees one of the core topics in the study of data structures.
 
-===== Applications of Trees
+==== Applications of Trees
 
 Trees are used in:
 
@@ -403,7 +406,7 @@ Trees are used in:
 * autocomplete systems;
 * hierarchical document models.
 
-==== 1.4.3. Graphs
+=== 1.4.3. Graphs
 
 A *graph* is a non-linear abstract data type that represents relationships between objects.
 
@@ -411,7 +414,7 @@ A graph consists of a set of *vertices* and a set of *edges*. Vertices represent
 
 Graphs are among the most general and powerful structures in computer science.
 
-===== Relational Model
+==== Relational Model
 
 A graph is commonly written as:
 
@@ -426,7 +429,7 @@ If edges have direction, the graph is called a *directed graph* or *digraph*.
 
 If edges have no direction, the graph is called an *undirected graph*.
 
-===== Typological Spectrum
+==== Typological Spectrum
 
 Common types of graphs include:
 
@@ -442,7 +445,7 @@ Common types of graphs include:
 * *Multigraph* - Multiple edges may connect the same pair of vertices.
 * *Hypergraph* - An edge may connect more than two vertices.
 
-===== Mathematical Foundations
+==== Mathematical Foundations
 
 Graph theory began with Leonhard Euler's solution to the Seven Bridges of Königsberg problem in 1736.
 
@@ -454,7 +457,7 @@ In the twentieth century, researchers such as Paul Erdős contributed significan
 
 Graph algorithms also became central to operations research. For example, Lester Ford and Delbert Fulkerson developed important methods related to network flows in the 1950s.
 
-===== Abstract Operations
+==== Abstract Operations
 
 Common graph operations include:
 
@@ -466,7 +469,7 @@ Common graph operations include:
 * `hasPath(source, target)` - Checks whether a path exists.
 * `traverse(start)` - Visits vertices according to a traversal strategy.
 
-===== Graph Representations
+==== Graph Representations
 
 Graphs are commonly represented using:
 
@@ -480,7 +483,7 @@ An adjacency matrix is simple and provides fast edge lookup, but it can consume 
 
 An adjacency list is usually more memory-efficient for sparse graphs and is widely used in practical graph algorithms.
 
-===== Applications of Graphs
+==== Applications of Graphs
 
 Graphs are used in:
 
@@ -495,7 +498,7 @@ Graphs are used in:
 * project scheduling;
 * artificial intelligence.
 
-=== 1.5. Summary
+== 1.5. Summary
 
 Abstract data types provide a formal way to describe data structures independently of implementation details.
 

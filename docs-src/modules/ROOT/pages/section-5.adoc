@@ -4,6 +4,9 @@
 
 = Section 5. Complexity and Stability Analysis of Algorithms
 
+[abstract]
+This section introduces the analysis of algorithm complexity and stability as essential tools for evaluating algorithm quality. It explains that a correct algorithm must not only produce the expected result, but also terminate in a finite number of steps and use time and memory resources efficiently. The section presents theoretical complexity analysis through an abstract machine model, allowing algorithms to be compared independently of a specific computer or JavaScript runtime. Special attention is given to asymptotic notation, including Big-O, Omega, and Theta, and to common complexity classes such as constant, logarithmic, linear, and quadratic complexity. JavaScript examples are used to connect these mathematical ideas with practical code behavior, while DRAKON diagrams can help visualize control flow and repeated operations that influence complexity. The section also introduces space complexity and algorithm stability, preparing the reader to evaluate algorithms by correctness, performance, memory usage, and preservation of data order.
+
 == 5.1. Requirements for Algorithms
 
 The previous sections focused on the description of the most common data structures, on the one hand as abstract entities, and on the other — their concrete implementation in the JavaScript programming language. This section will deal with the theoretical analysis of algorithms for processing data structures from the perspective of estimating the time spent on program code execution and computer memory usage.

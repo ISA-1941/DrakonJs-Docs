@@ -2,12 +2,12 @@
 :page-toclevels: 3
 [.text-justify]
 :figure-caption!:
-== Section 3. Implementation of Basic Abstract Data Types in JavaScript
-
-=== 3.1. Data Structuring Features
+= Section 3. Implementation of Basic Abstract Data Types in JavaScript
 
 [abstract]
 This section delves into the practical implementation of basic Abstract Data Types (ADTs) within the JavaScript programming language. ADTs, as mathematical models with defined operators, provide a foundation for algorithm development. However, translating these conceptual models into executable code requires representing ADTs using the data types and methods available in JavaScript. We will explore how to bridge the gap between abstract data structures and their concrete JavaScript implementations, demonstrating techniques to effectively utilize JavaScript's features to realize fundamental ADTs. This section will equip readers with the knowledge to translate theoretical ADT concepts into functional JavaScript code, laying the groundwork for more complex data structure and algorithm implementations.
+
+== 3.1. Data Structuring Features
 
 In practical terms, a data structure is a collection of data structured in such a way as to ensure efficient use by users. This requires a certain ordering of data, primarily at the level of storage in computer memory. Reducing space and increasing organization in conjunction with reducing the time complexity of different tasks is the main objective of working with data structures.
 
@@ -29,11 +29,11 @@ Finally, one characteristic of data structures is homogeneity. Homogeneous struc
 
 The presence of a large number of data structure features has predetermined various attempts to classify them. From a programming point of view, the main features are: linearity/non-linearity, data access, and data homogeneity/heterogeneity. This section covers the JavaScript implementation of linear abstract data types such as arrays/slices, maps, linked lists, stacks, and queues.
 
-=== 3.2. Linear Data Structures
+== 3.2. Linear Data Structures
 
 Linear data structures are structures in which data elements are arranged in sequence. Linear structures can be distinguished by the way the individual elements of a data collection are accessed and by the homogeneity of the data (homogeneous and heterogeneous).
 
-==== 3.2.1. Arrays in JavaScript
+=== 3.2.1. Arrays in JavaScript
 
 An array is a collection of data where each element is stored at a specific index. Arrays allow efficient storage and manipulation of multiple values in a single variable.
 
@@ -43,11 +43,11 @@ For example, the collection of integers [31, 26, 19, 24, 32, ....35, 41, 14, 33,
 .Figure 3.1. One-Dimensional Array
 image::section_3/Fig3_1_Array.svg[width=100%,link=self, window="_blank"]
 
-===== Declaring Arrays in JavaScript
+==== Declaring Arrays in JavaScript
 
 JavaScript arrays are dynamic, meaning they can grow and shrink as needed. Unlike some other languages, JavaScript allows mixing different types within an array, but best practice is to keep arrays homogeneous (storing values of the same type).
 
-===== Creating Arrays
+==== Creating Arrays
 
 Arrays in JavaScript can be declared in different ways:
 
@@ -58,7 +58,7 @@ a) Using [] (Recommended)
 let numbers = [24, 12, 36, 6, 47, 11];
 ----
 
-===== Using the Array Constructor
+==== Using the Array Constructor
 
 [source, javascript]
 ----
@@ -67,7 +67,7 @@ let numbers = new Array(24, 12, 36, 6, 47, 11);
 
 This method is rarely used in modern JavaScript.
 
-===== Multidimensional Arrays
+==== Multidimensional Arrays
 
 JavaScript supports multidimensional arrays by storing arrays inside arrays.
 
@@ -84,7 +84,7 @@ console.log(matrix[1][2]); // Output: 6
 
 Here, matrix[1][2] accesses the second row, third column (6).
 
-===== Summary
+==== Summary
 
 |===
 | Feature | JavaScript Equivalent
@@ -94,7 +94,7 @@ Here, matrix[1][2] accesses the second row, third column (6).
 | Multidimensional arrays | let matrix = [[...], [...]];
 |===
 
-==== 3.2.2. Slices
+=== 3.2.2. Slices
 
 A slice is a variable-length data collection that stores elements of a homogeneous type. A slice can be thought of as a "slice" of an array. Slice syntax in JavaScript is [] or [value1, value2, value3, ..., valueN].
 
@@ -127,13 +127,13 @@ The following functions and methods are used to work with slices (arrays) in Jav
 
 *    slice(): Creates a new array containing a "slice" of the original array.
 
-==== 3.2.3. Objects in JavaScript
+=== 3.2.3. Objects in JavaScript
 
 In JavaScript, objects serve the same purpose as structures in other programming languages. They allow us to store multiple related values (properties) in a single entity. Objects in JavaScript are flexible and support various ways of creation and manipulation.
 
 JavaScript objects are defined using curly braces {} and consist of key-value pairs.
 
-===== Creating an Object with Named Properties
+==== Creating an Object with Named Properties
 
 [source, javascript]
 ----
@@ -146,7 +146,7 @@ salary: 20000
 console.log("Employee 1:", employee1);
 ----
 
-===== Alternative Way: Object Constructor
+==== Alternative Way: Object Constructor
 
 Another way to create an object is by using the Object constructor.
 
@@ -161,13 +161,13 @@ employee2.salary = 35000;
 console.log("Employee 2:", employee2);
 ----
 
-===== Key Differences
+==== Key Differences
 
 *    The first approach (object literal {}) is more common and recommended.
 
 *    The second approach (new Object()) is used when objects need to be created dynamically.
 
-===== Creating an Object with a Factory Function
+==== Creating an Object with a Factory Function
 
 A factory function is a regular function that creates and returns an object.
 
@@ -196,7 +196,7 @@ Employee 1: { firstName: 'Peter', lastName: 'Wolf', age: 35, salary: 20000 }
 Employee 2: { firstName: 'Nick', lastName: 'Smith', age: 49, salary: 35000 }
 ----
 
-===== Adding Methods to a Factory Function
+==== Adding Methods to a Factory Function
 
 An object can contain methods (functions inside the object).
 
@@ -227,7 +227,7 @@ Bob Anderson
 35000
 ----
 
-==== 3.2.4. Map in JavaScript
+=== 3.2.4. Map in JavaScript
 
 In JavaScript, Maps are collections that store unordered key-value pairs, where each key is unique and maps to a corresponding value. Maps are particularly useful in data retrieval algorithms because they offer efficient lookups.
 
@@ -235,7 +235,7 @@ Unlike arrays, which use numeric indexes, Maps allow keys of any data type, maki
 
 [.text-center]
 .Figure 3.3. Map
-image::section_3/Fig3_3_MapNew.svg[width=50%, align=center, link=self, window=_blank]
+image::section_3/Fig3_3_MapNew.svg[width=75  %, align=center, link=self, window="_blank"]
 
 In JavaScript, we use the Map object to create a map. The syntax is:
 
@@ -246,7 +246,7 @@ let myMap = new Map();
 
 Here, myMap is an empty Map ready to store key-value pairs.
 
-===== Declaring a Map Where Keys Are Strings and Values Are Numbers
+==== Declaring a Map Where Keys Are Strings and Values Are Numbers
 
 We use the .set() method:
 
@@ -269,7 +269,7 @@ Now, studentScores contains:
 
 *    "Charlie" → 92
 
-===== Accessing Values in a Map
+==== Accessing Values in a Map
 
 To retrieve a value from a map, use .get(key):
 
@@ -281,7 +281,7 @@ console.log(studentScores.get("Bob")); // Output: 88
 
 If the key does not exist, .get() returns undefined.
 
-==== 3.2.5. Linked List
+=== 3.2.5. Linked List
 
 A linked list is a dynamic data structure where each element, called a node, consists of two parts (Figure 3.4):
 
@@ -298,7 +298,7 @@ They are widely used in memory management, file systems, and queue implementatio
 
 In JavaScript, we represent a linked list node using an object.
 
-===== Creating a Node
+==== Creating a Node
 
 [source, javascript]
 ----
@@ -316,7 +316,7 @@ Each node has:
 
 *    next – stores the reference to the next node (initially null)
 
-===== Creating a Linked List
+==== Creating a Linked List
 
 A linked list needs:
 
@@ -335,7 +335,7 @@ size: 0
 
 Here head points to the first node, and size stores the length of the list.
 
-==== 3.2.6. Stack and Queue as Data Structures
+=== 3.2.6. Stack and Queue as Data Structures
 
 a) Stack
 
@@ -359,7 +359,7 @@ This structure is commonly used in:
 
 *    Managing function calls in recursion (function calls are stored in a stack)
 
-===== Declaring a Stack in JavaScript
+==== Declaring a Stack in JavaScript
 
 JavaScript does not have a built-in stack data type, but it can be implemented using arrays, as they provide push() and pop() methods.
 
@@ -414,7 +414,7 @@ Queues are widely used in:
 
 *    Message processing systems
 
-==== 3.2.7. Representation of Binary Trees in JavaScript
+=== 3.2.7. Representation of Binary Trees in JavaScript
 
 A binary tree in JavaScript can be represented as a set of linked node objects. Each node contains a value and two references: one to the left child and one to the right child. If a child does not exist, the corresponding reference is null. The entire tree is accessed through a reference to its root node.
 
