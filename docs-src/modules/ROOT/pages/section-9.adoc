@@ -145,7 +145,7 @@ In some cases, a more memory-efficient way to represent a graph is to use an adj
 
 [.text-center]
 .Figure 9.4. Adjacency list structural representation
-image::section_9/Fig9_4_List.png[width=75%, link=self, window="_blank"]
+image::section_9/Fig9_4_List.svg[width=75%, link=self, window="_blank"]
 
 === Comparison and Complexity
 
