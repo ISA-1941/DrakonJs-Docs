@@ -134,9 +134,10 @@ An adjacency matrix is a two-dimensional array that indicates the existence of a
 
 In contrast, for a directed graph (or digraph), the relationship is not necessarily symmetric. An edge `(u, v)` means vertex `v` is adjacent from vertex `u`, and this is indicated in the matrix by a '1' at position `A[u][v]` only.
 
+
 [.text-center]
 .Figure 9.3. Adjacency matrix layout for undirected and directed graphs
-image::section_9/Fig9_3_AdjMatrixNew.svg[width=100%, link=self, window="_blank"]
+image::section_9/Fig9_3_AdjMatrix.svg[width=75%, link=self, window="_blank"]
 
 === Adjacency List
 
