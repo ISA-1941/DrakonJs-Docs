@@ -115,7 +115,7 @@ A vertex and an edge are incident if the vertex is one of the endpoints of the e
 
 Refined Terms for Directed Graphs (Digraphs):
 
-- *In-degree (deg^-(v^)):* The number of edges directed into the vertex. In flow-based models, this represents the "input" capacity.
+- *In-degree (deg^-v^):* The number of edges directed into the vertex. In flow-based models, this represents the "input" capacity.
 - *Out-degree (deg^+(v^)):* The number of edges directed away from the vertex. In state machines, this represents the number of possible state transitions.
 - *Total Degree:* The sum of in-degree and out-degree.
 - *Self-Loop (Digraph):* A special case where an edge starts and ends at the same vertex. It contributes exactly 1 to the in-degree and exactly 1 to the out-degree.
