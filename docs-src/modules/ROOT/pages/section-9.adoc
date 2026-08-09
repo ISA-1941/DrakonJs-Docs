@@ -99,6 +99,13 @@ deg^-(v) += 1
 deg^+(v) += 1
 ----
 
+:stem:
+
+stem:[deg^-(v) += 1]
+
+stem:[deg^+(v) += 1]
+
+
 As a result, a loop increases the total degree of the vertex by `2`.
 
 In short, an undirected edge represents a symmetric connection between two vertices, while a directed edge represents an ordered connection. For this reason, directed graphs distinguish between incoming and outgoing arcs.
