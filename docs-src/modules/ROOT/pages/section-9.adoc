@@ -107,7 +107,7 @@ In short, an undirected edge represents a symmetric connection between two verti
 
 [.text-center]
 .Figure 9.1. Graphical representation of (a) an undirected graph; (b) a directed graph (digraph)
-image::section_9/Fig9_1_exampleGraph.svg[width=50%, link=self, window="_blank"]
+image::section_9/Fig9_1_exampleGraph.svg[width=75%, link=self, window="_blank"]
 
 === Adjacency, Incidence, and Degree
 
@@ -122,7 +122,7 @@ Refined Terms for Directed Graphs (Digraphs):
 
 [.text-center]
 .Figure 9.2. Basic graph parameters and node dimensions    
-image::section_9/Fig9_2_basicElements.svg[width=75%, link=self, window="_blank"]
+image::section_9/Fig9_2_basicElements.svg[width=50%, link=self, window="_blank"]
 
 == 9.2. Graph Representation Methods
 
