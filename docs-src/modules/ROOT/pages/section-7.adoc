@@ -31,11 +31,7 @@ The algorithm uses two nested loops. For each index i, it iterates over the rema
 
 The following table shows the results of sorting a series of values for each outer loop parameter (i).
 
-++++
-<div style="margin: 0 auto; width: 80%;">
-++++
-
-[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", options="header"]
+[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="80%",align="center", options="header"]
 |===
 | j=0 | j=1 | j=2 | j=3 | j=4 | j=5 | j=6 | j=7 | j=8 | j=9
 | 90 | 11 | 81 | 21 | 71 | 31 | 61 | 41 | 51 | 10
@@ -49,10 +45,6 @@ The following table shows the results of sorting a series of values for each out
 | 11 | 21 | 31 | 41 | 51 | 61 | 71 | 81 | 90 | 10
 | 10 | 11 | 21 | 31 | 41 | 51 | 61 | 71 | 81 | 90
 |===
-
-++++
-</div>
-++++
 
 The time complexity of Bubble Sort is quite high — O(n²). This is due to the large number of comparisons (arr[j] < arr[i]) and possible swaps. However, the space complexity is O(1), since no additional memory is needed beyond the original array.
 
@@ -72,10 +64,6 @@ The idea is simple: in each iteration, the algorithm finds the smallest value in
 
 For example, given the set [90, 12, 83, 24, 75, 38, 62, 41, 59, 10], the algorithm scans the array and finds the smallest element — 10. It then swaps 10 with the element at the first position (90). The sorted part now contains 10, and the process repeats with the remaining elements. The table below illustrates this process of selection and replacement.
 
-++++
-<div style="margin: 0 auto; width: 80%;">
-++++
-
 [cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="80%", align="center"]
 |===
 | *90* | *12* | 83 | 24 | 75 | 38 | 62 | 41 | 59 | 10
@@ -94,7 +82,7 @@ For example, given the set [90, 12, 83, 24, 75, 38, 62, 41, 59, 10], the algorit
 </div>
 ++++
 
-Note to the table: Crossed-out items are already sorted; selected items are minimal in the current pass.
+Note to the table: Underlined items are already sorted; selected items are minimal in the current pass.
 
 The time and space complexity of the Selection Sort algorithm are summarized in the table below:
 
@@ -294,7 +282,7 @@ The time complexity of Quick Sort depends on how well the pivot is chosen:
 
 * Average case: still O(n log n), due to recursive halving
 
-*Worst case: when the pivot is the smallest or largest item, resulting in unbalanced partitions → O(n²)
+* Worst case: when the pivot is the smallest or largest item, resulting in unbalanced partitions → O(n²)
 
 Quick Sort uses recursion. In each step, it partitions the array and performs O(n) work. This leads to the recurrence relation T(n) = 2T(n/2) + O(n), which solves to O(n log n).
 
@@ -426,7 +414,7 @@ Shell Sort is not stable in its original form, but it can be modified to preserv
 
 Heap Sort (pyramid sorting) can be seen as an improved version of Selection Sort: it divides the input data into sorted and unsorted regions, and then successively reduces the unsorted region by removing the largest item and moving it to the sorted region. The improvement is that a binary heap is used to find the highest value, not a linear search algorithm.
 
-This algorithm is executed using the notion of a heap, which is a complete binary tree (see subsection 1.3). All nodes of a heap are either larger than their child items (max-heap) or smaller than their child items (min-heap). A binary heap tree can be of two types:
+This algorithm is executed using the notion of a heap, which is a complete binary tree (see subsection 1.3).In a max-heap, parent nodes are greater than or equal to their children, whereas in a min-heap, parent nodes are less than or equal to their children. A binary heap tree can be of two types:
 
 MinHeap:: the parent node is always smaller than the child nodes
 MaxHeap:: the parent node is always greater than or equal to the child nodes
@@ -509,7 +497,7 @@ Space Complexity and Stability Comparison
 |===
 | Algorithm | Space Complexity | Stable
 | Bubble Sort | O(1) | Yes
-| Selection Sort | O(1) | Yes
+| Selection Sort | O(1) | No
 | Insertion Sort | O(1) | Yes
 | Quick Sort | O(log n) average, O(n) worst | No
 | Merge Sort | O(n) | Yes
