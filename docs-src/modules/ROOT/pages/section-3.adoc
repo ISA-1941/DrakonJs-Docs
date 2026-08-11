@@ -434,3 +434,15 @@ function createNode(value) {
 ----
 
 This factory-style representation avoids the use of class and this, while keeping the structure simple and explicit. It is convenient for describing algorithms in DRAKON diagrams: operations such as insertion, search, deletion, and traversal can be shown as manipulations of ordinary objects and their left and right links. JavaScript code then directly follows the same logic, creating nodes with a factory function and updating references between them.
+
+== 3.3. Summary
+
+This section covered the practical realization of fundamental Abstract Data Types (ADTs) in JavaScript, bridging theoretical concepts with concrete implementation techniques. 
+
+We examined both linear and non-linear data structures:
+* **Dynamic Arrays and Sets:** Leveraging JavaScript's built-in capabilities and performance tradeoffs.
+* **Linked Lists (Singly and Doubly):** Implementing pointer-based structures manually using factory functions and reference manipulation.
+* **Stacks and Queues:** Enforcing LIFO and FIFO behavior for operational constraints and algorithmic tasks such as parsing and state traversal.
+* **Binary Trees:** Representing hierarchical structures via linked node objects.
+
+By relying on explicit factory functions rather than class-based syntax, these implementations maintain a direct correspondence with visual DRAKON diagrams. This hybrid methodology lays a solid foundation for evaluating memory dynamics, pointer operations, and algorithmic time complexity in subsequent sections.

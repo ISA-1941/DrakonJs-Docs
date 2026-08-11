@@ -2,10 +2,9 @@
 == Welcome to the DRAKON-JS Project
 
 All the things we know and understand are made up of something called
-data. Data is like a bunch of unstructured information that helps us
-think, learn, and make stuff in the real world, like things in nature,
-things we create, and even things we see in pretend worlds. To structure
-this data in order to obtain new knowledge or new meanings, it is
+data. Data represents unstructured information that enables us to analyze, 
+learn, and create objects in the physical world... and even simulated environments.
+To structure this data in order to obtain new knowledge or new meanings, it is
 necessary to process them according to a certain plan of action. In a
 stricter definition, a data structure is a form of representation of the
 properties and relationships of a subject area, focused on the
@@ -24,7 +23,7 @@ formation of computer science as an academic science, N. Wirth,
 formulated this connection in the title of the book: "Algorithms + data
 structures = program" [Wirth].
 
-The variety of objective, non-objective and virtual worlds and the
+The variety of physical, abstract, and virtual worlds and the
 processes taking place in them predetermine the emergence of many
 problem situations, the effective solution of which involves the choice
 of data structures and algorithms for their processing. A solution is
@@ -57,7 +56,7 @@ illustrations. In a number of important cases, the algorithm
 visualization technology based on the Drakon graphical language is used.
 
 *SECTION 1* reveals the meaning of the main concepts in the discipline
-Data Structure and Algorithms: data, data type, abstract data types,
+Data Structures and Algorithms: data, data type, abstract data types,
 algorithms. A high level of competence in the development of efficient
 algorithms is necessary for every programmer, not only when solving
 practical problems related to the use of IT technologies. Knowledge in
@@ -71,7 +70,7 @@ basic concepts and a certain level of programming are assumed for
 reading this chapter.
 
 *SECTION 3* gives a brief description of the visual language DRAKON,
-which allows to represent any complex algorithms in the form of a
+which allows for the representation of complex algorithms in the form of a
 DRAKON-diagram using icons, corresponding to the basic constructions of
 the JavaScript language. The technology of automated transformation of the
 DRAKON-diagram into the program code is given in the editor DrakonTech, 
@@ -82,7 +81,7 @@ constructions of the language JavaScript, on the second step - automatically
 generated software code, implemented in any software environment
 
 *SECTION 4* presents JavaScript language constructs that implement the basic
-abstract data types described in Section 1: array, cut, list etc.
+abstract data types described in Section 1: array, slice, list etc.
 Explanations are given regarding the use of appropriate JavaScript language
 constructs.
 

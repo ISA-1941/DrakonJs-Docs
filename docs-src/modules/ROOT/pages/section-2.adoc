@@ -10,7 +10,7 @@ This section provides a foundational overview of the JavaScript programming lang
 
 Since this book takes a hybrid approach to the software implementation of algorithms, it is essential to briefly describe the fundamental concepts and constructs of its components: the visual algorithmic language DRAKON and the JavaScript programming language. This approach is particularly promising in the field of education, as it fosters the formation and development of algorithmic and computational thinking. It is also highly applicable in computer science, particularly in the study of data structures and algorithms.
 
-However, it is assumed that the reader is already familiar with at least one modern programming language. At the same time, the description of JavaScript in this book is limited to the constructs necessary for understanding data structure algorithms.
+This section assumes prior familiarity with basic programming concepts in at least one modern high-level language. At the same time, the description of JavaScript in this book is limited to the constructs necessary for understanding data structure algorithms.
 
 This section focuses on the core programming constructs in JavaScript, such as variables, arrays, objects, maps, logical operators, loops, functions, recursion, and more. Special emphasis is placed on data types, both primitive and complex. JavaScript prototypes and closures are also briefly discussed, as they play a key role in the language.
 
@@ -891,3 +891,13 @@ const square = createSquare(4);
 printArea(circle); // Output: Area: 78.53981633974483
 printArea(square); // Output: Area: 16
 ----
+
+== 2.10. Summary
+
+This section provided a comprehensive overview of the JavaScript programming language and the DRAKON visual algorithmic language, establishing the practical foundation for implementing data structures and algorithms in this book.
+
+JavaScript’s core syntax, dynamic typing, flexible object model, and functional programming capabilities (such as first-class functions and closures) make it a versatile tool for algorithm design. We explored both class-based and object-composition paradigms, alongside essential control structures and asynchronous primitives (`Promises`, `async/await`). 
+
+In parallel, the DRAKON language introduces a visual, structured methodology for algorithm specification, minimizing cognitive load and preventing common flow-control errors. Together with JavaScript, this hybrid approach bridges high-level algorithmic reasoning with robust, modern software implementation.
+
+With the core language mechanics and visual modeling principles established, we are fully prepared to proceed to concrete data structure implementations, algorithmic analysis, and performance optimization in the upcoming sections.

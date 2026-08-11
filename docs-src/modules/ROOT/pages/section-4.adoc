@@ -6,7 +6,7 @@
 [abstract]
 This section explores the application of DrakonTech, a visual programming technology, to the design and implementation of data structures and algorithms. We will demonstrate how DrakonTech's graphical approach simplifies the representation of complex algorithmic logic, making it easier to understand, develop, and maintain efficient data structures and algorithms. We will cover the core principles of DrakonTech and illustrate its use in solving common algorithmic challenges, emphasizing its ability to enhance code clarity and reduce errors.
 
-===4.1. Algorithm Representation Visualization
+== 4.1. Algorithm Representation Visualization
 
 === 4.1.1. Methods of Visualization of Algorithms
 
@@ -270,7 +270,7 @@ image::section_4/Fig4_16_wrench.svg[width=75%, link=self, window="_blank"]
 The result of automatic code generation in JavaScript:
 
 [source, javascript]
-
+----
 main();
 function digRoot(n) {
 var sum;
@@ -293,6 +293,7 @@ sum += parseInt(digit, 10);
 }
 return sum;
 }
+----
 
 == 4.6. Execution of the Generated Code
 
@@ -303,3 +304,11 @@ The execution of the generated program in the VS Code environment is carried out
 As part of the hybrid approach, debugging a program often has to be carried out in parallel in two environments: DrakonTech and Visual Studio Code. Naturally, in case of graphical syntax errors, Drakon-diagram code generation will not be performed.
 
 The debugging process of the generated code is recommended to be carried out with the help of the appropriate programming environment toolkit. After debugging is complete, all corrections must be made to the corresponding graphs in the Drakon-diagram. In any case, it is always necessary to ensure that the contents of the diagrams correspond to the program code in the relevant IDE.
+
+== 4.7. Summary
+
+This section explored the fundamentals and practical applications of the DRAKON visual algorithmic language and the DrakonTech environment within our hybrid development workflow.
+
+By translating complex algorithmic logic into structured visual diagrams, DRAKON eliminates ambiguity and significantly reduces cognitive overhead during algorithm design. We examined the key visual primitives, syntax rules, and architectural patterns (such as primitive and silhouette algorithms) that guarantee deterministic flow control. Furthermore, we demonstrated how DrakonTech automates the generation of clean, executable JavaScript code, seamlessly bridging high-level algorithmic concepts with runtime execution in Node.js and Visual Studio Code.
+
+Mastering this visual approach equips developers and students with a disciplined method for designing, verifying, and debugging algorithms visually before and alongside traditional code editing.

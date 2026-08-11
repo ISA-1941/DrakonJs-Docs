@@ -15,7 +15,7 @@ An *abstract data type* (ADT) is a mathematical model of a data structure that s
 * what operations are allowed;
 * what behavior these operations must have.
 
-An ADT describes the logical behavior of a data structure without specifying how it is implemented in memory.
+An ADT describes the logical behavior of a data structure independently of its underlying data representation or physical memory layout.
 
 For example, a stack is defined by the operations `push`, `pop`, and `peek`, and by the rule that the last inserted element is the first one removed. This rule is independent of whether the stack is implemented using an array, a linked list, or another internal representation.
 
@@ -68,7 +68,7 @@ Linear structures are widely used because many computational tasks naturally inv
 
 An *array* is a linear abstract data type that stores a collection of elements and provides access to each element by an index.
 
-In the classical model, an array has a fixed size and stores elements in contiguous memory locations. This allows direct random access to any element using its index.
+In its fundamental or static form, an array has a fixed size and stores elements in contiguous memory locations. This allows direct random access to any element using its index.
 
 If the base address of the array is known, the address of an element can be calculated using the formula:
 
@@ -136,9 +136,9 @@ Although sets are not linear in the same strict sense as arrays or linked lists,
 
 ==== Main Operations on Sets
 
-* `add(value)` - Inserts a value into the set if it is not already present.
-* `has(value)` - Checks whether a value exists in the set.
-* `delete(value)` - Removes a value from the set.
+* `contains(element)` - Checks whether an element exists in the set.
+* `add(element)` - Checks whether a value exists in the set.
+* `remove(element)` - Removes a value from the set.
 * `size()` - Returns the number of unique elements.
 * `union(set)` - Returns a set containing elements from both sets.
 * `intersection(set)` - Returns a set containing only common elements.
@@ -205,7 +205,7 @@ There are several common types of linked lists.
 
 * *No direct random access* - Accessing an element requires traversal from the head or tail.
 * *Additional memory overhead* - Each node stores references in addition to data.
-* *Poorer cache locality* - Nodes may be scattered across memory.
+* *Lack of spatial locality* - Non-contiguous allocation reduces CPU cache performance due to pointer chasing.
 * *More complex implementation* - Pointer or reference management can introduce errors.
 
 ==== Applications of Linked Lists
@@ -327,7 +327,7 @@ An associative array follows these rules:
 
 ==== Hash-Based Associative Arrays
 
-Many associative arrays are implemented using *hash tables*.
+«Associative arrays are most commonly implemented using hash tables (providing $O(1)$ average-time complexity) or balanced search trees (providing $O(\log n)$ worst-case guarantees).
 
 A hash table uses a *hash function* to convert a key into an index in an internal array. This makes lookup, insertion, and deletion efficient on average.
 

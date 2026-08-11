@@ -46,7 +46,7 @@ Thus, when assessing the complexity of algorithms, they are evaluated on an abst
 The complexity T(n) of an algorithm associated with estimates of its complexity is determined by counting the number of operations performed. For example, consider the algorithm for finding the maximum element of an array:
 
 [source, javascript]
-
+----
 const array = [11, 9, 17, 45, 411];
 let maxNumber = array[0];
 
@@ -56,7 +56,7 @@ maxNumber = array[index];
 }
 }
 console.log("The largest value of an array element =", maxNumber);
-
+----
 
 When implementing this algorithm, the following will be performed:
 
@@ -91,11 +91,12 @@ Logarithmic Time Complexity — O(log n)
 When the time taken by an algorithm is proportional to the logarithm of the input size n, it is said to have logarithmic time complexity. An example is the simple calculation of the number of print operations of the index in a loop:
 
 [source, javascript]
-
+----
 let n = 16;
 for (let i = 1; i < n; i *= 2) {
 console.log("i = ", i);
 }
+----
 
 Recall that log₂ 16 = log₂ 2⁴ = 4 log₂ 2 = 4, since log₂ 2 = 1. Algorithms with logarithmic complexity are considered highly efficient because the ratio of execution time to the size of the data array decreases as the data size increases. Algorithms that work in logarithmic time are usually found in binary tree operations or binary search operations. Such algorithms will be discussed in the next section.
 
@@ -104,15 +105,15 @@ Recall that log₂ 16 = log₂ 2⁴ = 4 log₂ 2 = 4, since log₂ 2 = 1. Algori
 Linear complexity characterizes algorithms whose execution time linearly depends on the size of the input data (n). The simplest example is the problem of computing the sum of n numbers:
 
 [source, javascript]
-
+----
 let n = 16;
 let sum = 0;
 
 for (let i = 0; i < n; i++) {
 sum += i;
 }
-
 console.log("sum =", sum);
+----
 
 Typical examples of linear time complexity are algorithms associated with array sorting, which will be shown in the next section. It is important to note that linear complexity algorithms do not require additional memory.
 
@@ -121,7 +122,7 @@ Typical examples of linear time complexity are algorithms associated with array 
 In quadratic complexity algorithms, the number of operations is quadratic depending on the size of the input data. As an example, we can give the algorithm of multiplication of two numbers in the interval [1:n; 1:m]:
 
 [source, javascript]
-
+----
 let n = 3;
 let m = 5;
 let product = 1;
@@ -131,8 +132,8 @@ for (let j = 1; j < m; j++) {
 product = product * i * j;
 }
 }
-
 console.log("product =", product);
+----
 
 Comparison of Complexities
 
@@ -173,3 +174,15 @@ Space complexity is evaluated as O(1) if only the input data set is used. If the
 It is especially important to know whether the algorithm used is stable, especially in situations where your data already has some order that you would like to preserve when sorting with a different key. For example, a spreadsheet has rows containing student data sorted by name by default. You would also like to sort it by class while maintaining the orderly order of names.
 
 On the other hand, the stability of sorting does not matter when the sorting keys of objects in a collection are the objects themselves — arrays of integers or strings, for example — because we cannot determine the difference between duplicate keys.
+
+== 5.6. Summary
+
+This section established the theoretical and analytical foundations for evaluating algorithm performance and correctness, independently of specific hardware or JavaScript execution environments.
+
+We explored the core principles of algorithmic efficiency:
+* **Time and Space Complexity:** Evaluating how execution time and auxiliary memory usage scale relative to the input size $n$.
+* **Asymptotic Notations:** Utilizing $\mathcal{O}$ (upper bound), $\Omega$ (lower bound), and $\Theta$ (tight bound) to classify algorithm growth rates (e.g., constant, logarithmic, linear, quadratic).
+* **Abstract Machine Models:** Analyzing algorithms via the RAM model to decouple performance metrics from compiler optimizations and environment overhead.
+* **Algorithm Stability:** Assessing whether an algorithm preserves the relative order of elements with equal keys, a critical property in multi-key sorting scenarios.
+
+Understanding these analytical tools enables rigorous comparison between competing algorithmic solutions, ensuring optimal resource utilization in practical applications.
