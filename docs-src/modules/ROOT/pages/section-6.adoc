@@ -76,21 +76,24 @@ There are three possibilities for a singly linked list. First, the desired value
 image::section_6/Fig6_4a_main.svg[width=50%, link=self, window="_blank"]
 
 [.text-center]
-.b) Functions for Pushing New Items (pushFront(list, val) and pushBack(list, val))
+.b) Functions for Pushing New Items (pushFront(list, val) 
 image::section_6/Fig6_4b_pushFront.svg[width=50%, link=self, window="_blank"]
-image::section_6/Fig6_4b_pushBack.svg[width=75%, link=self, window="_blank"]
 
 [.text-center]
-.c) Function for Searching (searchData(val))
-image::section_6/Fig6_4c_searchData.svg[width=100%, link=self, window="_blank"]
+.c) Functions for Pushing New Items pushBack(list, val))
+image::section_6/Fig6_4c_pushBack.svg[width=75%, link=self, window="_blank"]
+
+[.text-center]
+.d) Function for Searching (searchData(val))
+image::section_6/Fig6_4d_searchData.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 .d) Function for Deletion (removeVal(val))
-image::section_6/Fig6_4d_removeVal.svg[width=100%, link=self, window="_blank"]
+image::section_6/Fig6_4e_removeVal.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 .e) Function for Removing Duplicates (removeDuplicates)
-image::section_6/Fig6_4e_removeDuplicates.svg[width=100%, link=self, window="_blank"]
+image::section_6/Fig6_4f_removeDuplicates.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
 Figure 6.4. DRAKON-diagrams of linked list algorithms: deletion, search and duplicate deletion
