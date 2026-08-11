@@ -67,7 +67,11 @@ A binary search tree is built according to a specific algorithm. Consider the se
 [.text-center]
 .Figure 8.3. Binary tree DRAKON-diagrams: a) building a tree by insert(node, value); b) creating a node
 image::section_8/Fig8_3a_insertNode.svg[width=100%, link=self, window="_blank"]
+.a)
+
 image::section_8/Fig8_3b_createNode.svg[width=50%, link=self, window="_blank"]
+.b)
+.Figure 8.3. Binary tree DRAKON-diagrams: a) building a tree by insert(node, value); b) creating a node
 
 The complete process of creating a binary tree is shown in Figure 8.4. The first number 11 is written to the root of the tree. The second number 5 is less than the value in the tree root, so it is written to the left subtree. The next number 17 is greater than the root number, so it is written to the right subtree. Then the number 15 is greater than the value at the root of the tree, so it is written to the right subtree, but the right subtree is already built. The number 15 is compared to the number 17 at the root of the right subtree. Since the value to be added is less than the value in the root of the right subtree, we add the left subtree to this node. The final result is a binary search tree with three variants: node 5 is the parent of two children (1, 8), node 15 has only a left child, and node 19 has only a right child. This arrangement of nodes is chosen to demonstrate the node removal function, which will be discussed later.
 
