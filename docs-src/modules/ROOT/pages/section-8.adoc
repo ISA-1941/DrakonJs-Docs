@@ -5,11 +5,8 @@
 
 [abstract]
 This section presents an advanced study of binary tree data structures and algorithms, spanning Binary Search Trees (BST), AVL trees, and Red-Black Trees (RBT), implemented using JavaScript and visual programming formalisms (DRAKON diagrams).
-
 A key contribution of this work is the author's innovative conceptual framework based on a node cluster (C-Cluster) representation for insertion and deletion operations. Within this model, the local spatial topology, color state, and structural relationships of candidate nodes are encoded into a compact character string (a textual cluster descriptor). This information image abstracts complex pointers and significantly simplifies the conditional logic of tree restructuring algorithms.
-
 Furthermore, this section introduces a novel mechanical analogy for Red-Black Tree balancing—modeling the structure as a suspended chandelier governed by gravitational equilibrium, where black nodes act as solid unit weights and red nodes act as weightless spacers. This mechanical paradigm renders abstract invariants (such as uniform black height and double-red prevention) visually intuitive and directly translates into the automated decision rules of a virtual balancing automaton.
-
 Additionally, the section covers foundational traversal strategies, canonical rotation primitives (LL, RR, LR, RL), and exact complexity trade-offs, providing both theoretical rigor and a complete visual reference framework.
 
 == 8.1. Representation of Binary Trees
@@ -100,7 +97,7 @@ In this case, this node is removed by changing the value of node = null in the p
 
 [.text-center]
 .Figure 8.6. Deleting a node without children
-image::section_8/Fig8_6_del21.svg[width=50%, link=self, window="_blank", link=self, window="_blank"]
+image::section_8/Fig8_6_del21.svg[width=75%, link=self, window="_blank"]
 
 
 *Option b)*: Node (19) has a right child (Figure 8.7).
@@ -109,7 +106,7 @@ In this case, node (19) is removed from the tree by replacing its address in the
 
 [.text-center]
 .Figure 8.7. Deleting node (19) with a right child
-image::section_8/Fig8_7_del19.svg[width=50%, link=self, window="_blank", , link=self, window="_blank"]
+image::section_8/Fig8_7_del19.svg[width=75%, link=self, window="_blank"]
 
 *Option c)*: Node (8) has a left child (Figure 8.8).
 
@@ -117,13 +114,13 @@ In this case, node (8) is removed from the tree by replacing its address in pare
 
 [.text-center]
 .Figure 8.8. Deleting node (8) with a left child
-image::section_8/Fig8_del8.svg[width=50%, link=self, window="_blank", , link=self, window="_blank"] 
+image::section_8/Fig8_del8.svg[width=75%, link=self, window="_blank"] 
 
 *Option d)*: Node (5) has two children (Figure 8.9). In this case the binary search tree is rearranged: node (2) moves to the place of node (5).
 
 [.text-center]
 .Figure 8.9. Deleting node (5) with two children
-image::section_8/Fig8_9_del5.svg[width=50%, link=self, window="_blank", link=self, window="_blank"]
+image::section_8/Fig8_9_del5.svg[width=75%, link=self, window="_blank"]
 
 The DRAKON-diagram of the minimum value search method is shown in Figure 8.10.
 
