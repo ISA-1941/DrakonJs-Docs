@@ -78,10 +78,6 @@ For example, given the set [90, 12, 83, 24, 75, 38, 62, 41, 59, 10], the algorit
 | [.underline]#10# | [.underline]#12# | [.underline]#24# | [.underline]#38# | [.underline]#41# | [.underline]#59# | [.underline]#62# | [.underline]#75# | [.underline]#83# | [.underline]#90#
 |===
 
-++++
-</div>
-++++
-
 Note to the table: Underlined items are already sorted; selected items are minimal in the current pass.
 
 The time and space complexity of the Selection Sort algorithm are summarized in the table below:
@@ -102,7 +98,7 @@ The time complexity is the same in all cases because the algorithm uses two nest
 
 * The inner loop runs (n - 1) times per outer iteration
 
-This results in a total of n * (n - 1) comparisons, which gives the time complexity of O(n²) regardless of the input order.
+* This results in a total of n * (n - 1) comparisons, which gives the time complexity of O(n²) regardless of the input order.
 
 == 7.4. Insertion Sort
 
@@ -115,10 +111,6 @@ This algorithm is similar to how people naturally sort playing cards or paper do
 image::section_7/Fig7_3b_insertSort.svg[width=50%, link=self, window="_blank"]
 
 In this algorithm, larger values are pushed to the right. The algorithm compares adjacent elements and swaps them if needed. This process is shown in the table below, where underscores mark the positions where swaps occurred.
-
-++++
-<div style="margin: 0 auto; width: 80%;">
-++++
 
 [cols="^1,^1,^1,^1,^1,^1,^1,^1,^1,^1", width="80%", align="center"]
 |===
@@ -173,11 +165,6 @@ In this algorithm, larger values are pushed to the right. The algorithm compares
 | 11 | 10 | 21 | 31 | 41 | 51 | 61 | 71 | 81 | 90
 | 10 | 11 | 21 | 31 | 41 | 51 | 61 | 71 | 81 | 90
 |===
-
-++++
-</div>
-++++
-
 
 The time complexity of Insertion Sort depends on how the elements are arranged in the input array:
 
