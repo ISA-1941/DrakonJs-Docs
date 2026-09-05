@@ -452,6 +452,7 @@ image::section_8/Fig8_37_handleRotationInsert.svg[width=75%, link=self, window="
 
 The fundamental rotation primitives used by these handlers — the "building blocks" of restructuring — are detailed in Figures 8.38a and 8.38b.
 
+.Figure 8.38. DRAKON-diagrams of the fundamental rotation primitives
 image::section_8/Fig8_38a_rotateLeft.svg[width=100%, link=self, window="_blank"]
 
 [.text-center]
@@ -462,8 +463,7 @@ image::section_8/Fig8_38b_rotateRight.svg[width=100%, link=self, window="_blank"
 [.text-center]
 b) Right-rotation primitive
 
-.Figure 8.38. DRAKON-diagrams of the fundamental rotation primitives
-
+[TIP]
 ====
 *Deepen your understanding:* experiment with the dedicated online visualization and simulation tool, Red-Black Tree Visualizer. This interactive platform allows you to insert and delete nodes, observe the balancing operations in real time, and visualize the tree structure dynamically. Engaging with this tool will enhance your comprehension of the balancing mechanisms described above.
 ====
