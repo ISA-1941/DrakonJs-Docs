@@ -65,9 +65,9 @@ If the tree is organized such that, for each node, all node values of its left s
 A binary search tree is built according to a specific algorithm. Consider the sequence of integers {11, 5, 17, 15, 1, 8, 19, 13, 21}, represented as a slice of numbers. First the root node {11} is formed, then in a loop for each node the method insertNode(tree, value) is called recursively (Figure 8.3a), which in turn calls the method createNode(value), which creates a new node (Figure 8.3b) in the resulting tree (Figure 8.3c).
 
 [.text-center]
-image::section_8/Fig8_3a_insertNode.svg[width=100%, link=self, window="_blank"]
+image::section_8/Fig8_3a_insertNode.svg[width=100%, link=self, window="_blank"]      
 .a)
-image::section_8/Fig8_3b_createNode.svg[width=50%, link=self, window="_blank"]
+image::section_8/Fig8_3_bc.svg[width=50%, link=self, window="_blank"]
 .b)
 .Figure 8.3. Binary tree DRAKON-diagrams: a) building a tree by insert(node, value); b) creating a node
 

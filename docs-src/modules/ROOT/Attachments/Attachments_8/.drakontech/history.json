@@ -1,6 +1,18 @@
 {
     "history": [
         {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/rebalance.drakon",
+            "whenOpened": "2026-09-04T20:15:29.141Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/insertNode.drakon",
+            "whenOpened": "2026-09-04T20:15:05.294Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/main.drakon",
+            "whenOpened": "2026-09-04T20:15:02.844Z"
+        },
+        {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/bstTree/createNode.drakon",
             "whenOpened": "2026-08-03T20:02:53.100Z"
         }
