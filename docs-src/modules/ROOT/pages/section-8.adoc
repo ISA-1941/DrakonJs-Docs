@@ -436,7 +436,7 @@ image::section_8/Fig8_34_rbInsert.svg[width=50%, link=self, window="_blank"]
 The complete decision logic of the balancing process is mapped out in the master DRAKON-diagram shown in Figure 8.35.
 
 [.text-center]
-Figure 8.35. DRAKON-diagram of the tree balancing function fixInsert(tree, data)
+.Figure 8.35. DRAKON-diagram of the tree balancing function fixInsert(tree, data)
 image::section_8/Fig8_35_fixInsert.svg[width=75%, link=self, window="_blank"]
 
 The internal logic for the recoloring handler (Case A, Red Uncle) is shown in Figure 8.36, while the logic for the rotation handlers (Cases B1-B4, Black Uncle) is detailed in Figure 8.37.
