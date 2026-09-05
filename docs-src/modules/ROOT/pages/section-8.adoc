@@ -580,7 +580,7 @@ image::section_8/Fig8_45c_handleDirectCapture.svg[width=100%, link=self, window=
 c) handleDirectCapture
 
 [.text-center]
-.Figure 8.45. DRAKON-diagrams of the three specialized handle-type functions for RB tree balancing
+_Figure 8.45. DRAKON-diagrams of the three specialized handle-type functions for RB tree balancing
 
 == 8.5. Comparison of Tree Structures
 
