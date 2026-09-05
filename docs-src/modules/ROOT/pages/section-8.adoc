@@ -465,6 +465,7 @@ b) Right-rotation primitive
 [.text-center]
 .Figure 8.38. DRAKON-diagrams of the fundamental rotation primitives_
 
+
 [TIP]
 ====
 *Deepen your understanding:* experiment with the dedicated online visualization and simulation tool, Red-Black Tree Visualizer. This interactive platform allows you to insert and delete nodes, observe the balancing operations in real time, and visualize the tree structure dynamically. Engaging with this tool will enhance your comprehension of the balancing mechanisms described above.
