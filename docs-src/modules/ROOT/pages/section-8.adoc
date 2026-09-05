@@ -463,14 +463,7 @@ image::section_8/Fig8_38b_rotateRight.svg[width=100%, link=self, window="_blank"
 b) Right-rotation primitive
 
 [.text-center]
-.Figure 8.38. DRAKON-diagrams of the fundamental rotation primitives
---
---
-
-[TIP]
-====
-*Deepen your understanding:* experiment with...
-====
+_Figure 8.38. DRAKON-diagrams of the fundamental rotation primitives_
 
 [TIP]
 ====
