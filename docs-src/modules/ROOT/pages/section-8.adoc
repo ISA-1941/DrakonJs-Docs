@@ -425,7 +425,7 @@ image::section_8/Fig8_33_B4_RL.svg[width=50%, link=self, window="_blank"]
 e) Case B4 — Zig-Zag (RL Double Red Violation)
 
 [.text-center]
-Figure 8.33. Atlas of options (violation states) for balancing after node insertion
+.Figure 8.33. Atlas of options (violation states) for balancing after node insertion
 
 The complete logic for red-black tree construction is encapsulated in the rbInsert function (Figure 8.34). It merges standard BST insertion with a call to the specialized fixInsert balancing routine to meticulously restore tree invariants.
 
