@@ -5,7 +5,7 @@ This section introduces the foundational concepts of Abstract Data Types (ADTs) 
 
 [.text-center]
 .Figure 10.1. Memory hierarchy of a modern computer
-image::section_10/Fig10_1_MMO.png[width=60%, link=self, window="_blank"]
+image::section_10/Fig10_1_MMO.svg[width=60%, link=self, window="_blank"]
 
 
 == 1.1. ADT Concept
