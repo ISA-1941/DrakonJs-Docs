@@ -6,6 +6,68 @@
 
 = Section 10. Data Structures Selection in Practice
 
+== 10.1. 
+=== 10.1. Data Structure Selection Roadmap
+
+Выбор оптимальной структуры данных — это многокритериальная задача, требующая учета функциональных требований, характеристик данных, операционного профиля и физических ограничений аппаратного обеспечения. Функциональные требования отвечают на вопрос «Что необходимо выполнять?», операционный профиль — «Как часто и в каком режиме это будет выполняться?», а аппаратные ограничения — «Какие ресурсы доступны и как они влияют на производительность?»
+Функциональные требования определяют, какие действия над данными должна обеспечивать структура и какие свойства необходимо сохранять. Например: поиск по ключу, вставку и удаление элементов, доступ по индексу, поддержание упорядоченности или выборку значений из заданного диапазона. Эти требования очерчивают круг подходящих структур данных.
+
+Операционный профиль характеризует, как структура будет использоваться: какие операции выполняются чаще, над каким объёмом данных и в какой последовательности. Например, в одном приложении преобладает поиск, а изменения редки; в другом новые элементы непрерывно поступают и затем последовательно обрабатываются. Даже при одинаковом наборе необходимых операций различия в частоте их выполнения могут привести к выбору разных структур.
+
+Choosing an optimal data structure is a _multi-criteria decision problem_ that requires consideration of _functional requirements_, _data characteristics_, the _operation profile_, and _physical hardware constraints_. Functional requirements answer the question “What operations must be supported?”, the operation profile answers “How often and under what conditions will these operations be performed?”, and hardware constraints answer “What resources are available, and how do they affect performance?”
+
+_Functional requirements_ specify which _operations on data_ a structure must support and which _properties_ it must preserve. Examples include _lookup by key_, _insertion and deletion of elements_, _access by index_, _maintaining sorted order_, and _retrieving values within a specified range_. These requirements establish the set of suitable data structures.
+
+The _operation profile_ describes how a structure will be used: _which operations_ are performed most frequently, the _volume of data_ they involve, and their _sequence_. For example, one application may primarily perform lookups, with infrequent updates; another may continuously receive new elements and then process them sequentially. Even when the required operations are identical, differences in their _execution frequency_ may lead to the selection of different structures.
+
+| Фактор                                            | Как влияет на выбор структуры данных                                                                                                                                                |
+| ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Объём доступной оперативной памяти**            | Помимо самих данных, структура хранит служебную информацию: указатели, индексы, резервные ячейки. Эти расходы могут ограничивать допустимый размер структуры.                       |
+| **Ёмкость кэшей и размер кэш-линии**              | Компактное размещение элементов позволяет при одном обращении загрузить несколько соседних значений и затем использовать их без повторного обращения к оперативной памяти.          |
+| **Задержка доступа к памяти**                     | Особенно существенна при последовательном переходе по указателям: адрес следующего элемента становится известен только после чтения предыдущего.                                    |
+| **Пропускная способность памяти**                 | Ограничивает скорость массового просмотра, копирования и перемещения данных, например при вставках в массив.                                                                        |
+| **Размер указателей и требования к выравниванию** | Влияют на фактический размер элементов: указатели и промежутки для выравнивания могут заметно увеличивать расход памяти.                                                            |
+| **Возможности параллельной обработки**            | При работе нескольких ядер важны разделение данных и частота обращения к общей памяти. Конкуренция за одни и те же кэш-линии может снижать производительность.                      |
+| **Характеристики внешнего накопителя**            | Если данные не помещаются в оперативной памяти, становятся важны число обращений к накопителю и размер передаваемых блоков. Это одна из причин применения B-деревьев и B+‑деревьев. |
+
+[cols="1,3", options="header"]
+|===
+|Factor |Impact on data structure selection
+
+|_Available RAM capacity_
+|In addition to the data itself, a structure stores auxiliary information: pointers, indices, and reserved slots. This overhead may limit the maximum size of the structure.
+
+|_Cache capacity and cache line size_
+|Storing elements close together allows several adjacent values to be loaded in a single memory access and subsequently used without accessing RAM again.
+
+|_Memory access latency_
+|Particularly significant when following a chain of pointers: the address of the next element becomes available only after the previous element has been read.
+
+|_Memory bandwidth_
+|Limits the speed of bulk scanning, copying, and moving data, for example when inserting elements into an array.
+
+|_Pointer size and alignment requirements_
+|Affect the actual memory footprint of elements: pointers and alignment padding can substantially increase memory usage.
+
+|_Parallel processing capabilities_
+|When multiple cores are used, data partitioning and the frequency of access to shared memory become important. Contention over the same cache lines can reduce performance.
+
+|_Storage device characteristics_
+|When data does not fit in RAM, the number of storage accesses and the size of transferred blocks become important. This is one reason for using B-trees and B+ trees.
+|===
+
+
+Сводная **таблица пятишагового алгоритма принятия решения** по выбору структур данных объединяет функциональные требования, паттерны доступа и аппаратные ограничения системы
+
+
+
+
+
+
+
+
+
+
 [.text-center]
 .Figure 10.1. Memory hierarchy of a modern computer
 image::section_10/Fig10_1_MMO_slate.svg[width=100%, link=self, window="_blank"]
@@ -17,7 +79,7 @@ Any practical choice of a data structure in a real computing system must account
 In modern computers, memory is organized as a **hierarchical pyramid** (Figure 10.1), where each level differs in capacity, access speed, and cost.
 
 [.text-center]
-.Figure 10.1. Memory hierarchy of a modern computer
+.Figure 10.2. Memory hierarchy of a modern computer
 image::section_10/Fig10_2_Memory.png[width=60%, link=self, window="_blank"]
 
 === 10.3.1. Characteristics of Memory Levels
