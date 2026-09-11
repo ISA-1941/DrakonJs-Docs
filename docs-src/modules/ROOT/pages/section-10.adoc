@@ -52,68 +52,73 @@ Data structure selection algorithm according to the characteristics of a specifi
 .Figure 10.1. Multi-Criteria Memory-Oriented decision-making algorithm for data structure selection
 image::section_10/Fig10_1_MMO_slate.svg[width=100%, link=self, window="_blank"]
 
-[cols="1,2,2,3", options="header"]
+.Multi-Criteria Memory-Oriented decision-making algorithm for data structure selection
+[cols="2,3,3,4", options="header"]
 |===
 |Algorithm Step |Analyzed Criterion / Condition |Recommended Structures |Engineering Rationale and Features
 
-.4+|1. Defining the "Golden Core" +
-(Operation Profile)^1^
+|1. Defining the "Golden Core" (Operation Profile)^1^
 |Predominantly read and search (> 70–80%)
 |Arrays, Hash Tables, Trees
 |Priority on minimal cost of point access or iteration^1^.
 
+|1. Defining the "Golden Core" (Operation Profile)^1^
 |Predominantly write and insert
 |Linked Lists, Stacks, Queues
 |Minimizing overhead of moving and shifting elements in memory^1^.
 
+|1. Defining the "Golden Core" (Operation Profile)^1^
 |Mixed mode (~50/50)
 |Balanced Trees, Hash Tables with reserved capacity
 |Optimal trade-off between write and search speed^1^.
 
-.2+|2. Natural Data Ordering^2^
-|Order is critical +
-(Ranges, MIN/MAX, neighbors)
+|2. Natural Data Ordering^2^
+|Order is critical (Ranges, MIN/MAX, neighbors)
 |B-Tree, Skip List, Sorted Array
 |Hash tables are excluded, since the hashing mechanism completely destroys ordering^2^.
 
-|Order does not matter +
-(Point access by key)
+|2. Natural Data Ordering^2^
+|Order does not matter (Point access by key)
 |Hash Table
 |Provides maximum speed for point access by key, $O(1)$^2^.
 
-.3+|3. Insertion and Deletion Pattern^2^
+|3. Insertion and Deletion Pattern^2^
 |Append only (at the end)
 |Stack (LIFO), Dynamic Array (Vector)
 |Amortized $O(1)$, no need to shift existing elements^2^.
 
+|3. Insertion and Deletion Pattern^2^
 |Insert only at the beginning
 |Deque, Linked List
 |Avoids catastrophic $O(n)$ shifting of array elements^2^.
 
+|3. Insertion and Deletion Pattern^2^
 |Insert in the middle or by key
 |• Rare insertions: Dynamic array with shifting +
 • Frequent insertions: Linked List or B-Tree
 |Array wins on simplicity for rare operations; lists and trees eliminate mass memory copying for frequent ones^2^.
 
-.3+|4. Memory and Cache Assessment +
-(Hardware Filter)^3,5^
+|4. Memory and Cache Assessment (Hardware Filter)^3,5^
 |Data fits in L1/L2 cache (hundreds of KB)
 |Array
 |Thanks to perfect cache locality, even an $O(n)$ shifted insertion completes in microseconds^3^.
 
+|4. Memory and Cache Assessment (Hardware Filter)^3,5^
 |Huge volumes (in RAM or on disk)
 |Linked Lists, Trees
 |Isolated cache misses are cheaper than fully copying gigabyte-sized arrays^3^.
 
+|4. Memory and Cache Assessment (Hardware Filter)^3,5^
 |Immutable data (Read-Only)
 |Sorted Array + Binary Search
 |Maximum memory packing density, $O(\log n)$ search, and ideal prefetching behavior^3,5^.
 
-.2+|5. Multithreading^4^
+|5. Multithreading^4^
 |Synchronization needed (Yes)
 |Lock-free structures (Michael-Scott lists), Partitioned structures
 |Avoiding bottlenecks and complex locking in standard structures^4^.
 
+|5. Multithreading^4^
 |Single-threaded mode (No)
 |Simple base implementations
 |Minimal overhead for access control^4^.
