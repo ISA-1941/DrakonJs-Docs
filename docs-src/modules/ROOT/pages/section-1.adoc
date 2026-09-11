@@ -3,11 +3,6 @@
 [abstract]
 This section introduces the foundational concepts of Abstract Data Types (ADTs) in computer science. It covers the separation of interface from implementation, enabling modular software design and algorithmic reasoning. The section provides a detailed classification and overview of both linear ADTs (arrays, sets, linked lists, stacks, queues) and non-linear ADTs (associative arrays, trees, graphs), detailing their defining characteristics, core operations, primary advantages, limitations, and real-world applications.
 
-[.text-center]
-.Figure 10.1. Memory hierarchy of a modern computer
-image::section_10/Fig10_1_MMO.svg[width=60%, link=self, window="_blank"]
-
-
 == 1.1. ADT Concept
 
 In computer science, *data* is a representation of facts, values, measurements, or symbols that can be stored, transmitted, and processed by a computer system.
