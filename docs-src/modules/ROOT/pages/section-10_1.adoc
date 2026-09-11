@@ -1,3 +1,10 @@
+== 10.2. Data structure selection algorithm
+
+
+
+
+
+
 == 10.3. Memory Hierarchy and Its Impact on Data Structure Performance
 
 Any practical choice of a data structure in a real computing system must account not only for the abstract algorithmic complexity (Big-O) but also for the **physical organization of memory**. Ignoring this factor is one of the primary reasons why a theoretically optimal structure often performs slower in practice than a "simpler" alternative.

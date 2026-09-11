@@ -1,3 +1,18 @@
+:imagesdir: ../assets/images
+
+[.text-justify]
+:figure-caption!:
+:table-caption!:
+
+= Section 10. Data Structures Selection in Practice
+
+[.text-center]
+.Figure 10.1. Memory hierarchy of a modern computer
+image::section_10/Fig10_1_MMO_slate.svg[width=60%, link=self, window="_blank"]
+
+
+
+
 == 10.3. Memory Hierarchy and Its Impact on Data Structure Performance
 
 Any practical choice of a data structure in a real computing system must account not only for the abstract algorithmic complexity (Big-O) but also for the **physical organization of memory**. Ignoring this factor is one of the primary reasons why a theoretically optimal structure often performs slower in practice than a "simpler" alternative.
@@ -6,7 +21,7 @@ In modern computers, memory is organized as a **hierarchical pyramid** (Figure 1
 
 [.text-center]
 .Figure 10.1. Memory hierarchy of a modern computer
-image::section_10/Fig10_1_Memory.png[width=60%, link=self, window="_blank"]
+image::section_10/Fig10_2_Memory.png[width=60%, link=self, window="_blank"]
 
 === 10.3.1. Characteristics of Memory Levels
 
