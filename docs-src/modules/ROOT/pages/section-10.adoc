@@ -10,9 +10,6 @@
 .Figure 10.1. Memory hierarchy of a modern computer
 image::section_10/Fig10_1_MMO_slate.svg[width=100%, link=self, window="_blank"]
 
-
-
-
 == 10.3. Memory Hierarchy and Its Impact on Data Structure Performance
 
 Any practical choice of a data structure in a real computing system must account not only for the abstract algorithmic complexity (Big-O) but also for the **physical organization of memory**. Ignoring this factor is one of the primary reasons why a theoretically optimal structure often performs slower in practice than a "simpler" alternative.
