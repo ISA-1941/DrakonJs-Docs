@@ -8,11 +8,6 @@
 
 === 10.1. Data Structure Selection Roadmap
 
-Выбор оптимальной структуры данных — это многокритериальная задача, требующая учета функциональных требований, характеристик данных, операционного профиля и физических ограничений аппаратного обеспечения. Функциональные требования отвечают на вопрос «Что необходимо выполнять?», операционный профиль — «Как часто и в каком режиме это будет выполняться?», а аппаратные ограничения — «Какие ресурсы доступны и как они влияют на производительность?»
-Функциональные требования определяют, какие действия над данными должна обеспечивать структура и какие свойства необходимо сохранять. Например: поиск по ключу, вставку и удаление элементов, доступ по индексу, поддержание упорядоченности или выборку значений из заданного диапазона. Эти требования очерчивают круг подходящих структур данных.
-
-Операционный профиль характеризует, как структура будет использоваться: какие операции выполняются чаще, над каким объёмом данных и в какой последовательности. Например, в одном приложении преобладает поиск, а изменения редки; в другом новые элементы непрерывно поступают и затем последовательно обрабатываются. Даже при одинаковом наборе необходимых операций различия в частоте их выполнения могут привести к выбору разных структур.
-
 Choosing an optimal data structure is a _multi-criteria decision problem_ that requires consideration of _functional requirements_, _data characteristics_, the _operation profile_, and _physical hardware constraints_. Functional requirements answer the question “What operations must be supported?”, the operation profile answers “How often and under what conditions will these operations be performed?”, and hardware constraints answer “What resources are available, and how do they affect performance?”
 
 _Functional requirements_ specify which _operations on data_ a structure must support and which _properties_ it must preserve. Examples include _lookup by key_, _insertion and deletion of elements_, _access by index_, _maintaining sorted order_, and _retrieving values within a specified range_. These requirements establish the set of suitable data structures.
@@ -51,18 +46,80 @@ Table 1. Hardware Characteristics and Constraints
 
 Сводная **таблица пятишагового алгоритма принятия решения** по выбору структур данных объединяет функциональные требования, паттерны доступа и аппаратные ограничения системы
 
-
-
-
-
-
-
-
-
+Data structure selection algorithm according to the characteristics of a specific task can be presented in five steps (Figure 10.1):
 
 [.text-center]
-.Figure 10.1. Memory hierarchy of a modern computer
+.Figure 10.1. Multi-Criteria Memory-Oriented decision-making algorithm for data structure selection
 image::section_10/Fig10_1_MMO_slate.svg[width=100%, link=self, window="_blank"]
+
+[cols="1,2,2,3", options="header"]
+|===
+|Algorithm Step |Analyzed Criterion / Condition |Recommended Structures |Engineering Rationale and Features
+
+.4+|1. Defining the "Golden Core" +
+(Operation Profile)^1^
+|Predominantly read and search (> 70–80%)
+|Arrays, Hash Tables, Trees
+|Priority on minimal cost of point access or iteration^1^.
+
+|Predominantly write and insert
+|Linked Lists, Stacks, Queues
+|Minimizing overhead of moving and shifting elements in memory^1^.
+
+|Mixed mode (~50/50)
+|Balanced Trees, Hash Tables with reserved capacity
+|Optimal trade-off between write and search speed^1^.
+
+.2+|2. Natural Data Ordering^2^
+|Order is critical +
+(Ranges, MIN/MAX, neighbors)
+|B-Tree, Skip List, Sorted Array
+|Hash tables are excluded, since the hashing mechanism completely destroys ordering^2^.
+
+|Order does not matter +
+(Point access by key)
+|Hash Table
+|Provides maximum speed for point access by key, $O(1)$^2^.
+
+.3+|3. Insertion and Deletion Pattern^2^
+|Append only (at the end)
+|Stack (LIFO), Dynamic Array (Vector)
+|Amortized $O(1)$, no need to shift existing elements^2^.
+
+|Insert only at the beginning
+|Deque, Linked List
+|Avoids catastrophic $O(n)$ shifting of array elements^2^.
+
+|Insert in the middle or by key
+|• Rare insertions: Dynamic array with shifting +
+• Frequent insertions: Linked List or B-Tree
+|Array wins on simplicity for rare operations; lists and trees eliminate mass memory copying for frequent ones^2^.
+
+.3+|4. Memory and Cache Assessment +
+(Hardware Filter)^3,5^
+|Data fits in L1/L2 cache (hundreds of KB)
+|Array
+|Thanks to perfect cache locality, even an $O(n)$ shifted insertion completes in microseconds^3^.
+
+|Huge volumes (in RAM or on disk)
+|Linked Lists, Trees
+|Isolated cache misses are cheaper than fully copying gigabyte-sized arrays^3^.
+
+|Immutable data (Read-Only)
+|Sorted Array + Binary Search
+|Maximum memory packing density, $O(\log n)$ search, and ideal prefetching behavior^3,5^.
+
+.2+|5. Multithreading^4^
+|Synchronization needed (Yes)
+|Lock-free structures (Michael-Scott lists), Partitioned structures
+|Avoiding bottlenecks and complex locking in standard structures^4^.
+
+|Single-threaded mode (No)
+|Simple base implementations
+|Minimal overhead for access control^4^.
+|===
+
+
 
 == 10.3. Memory Hierarchy and Its Impact on Data Structure Performance
 
