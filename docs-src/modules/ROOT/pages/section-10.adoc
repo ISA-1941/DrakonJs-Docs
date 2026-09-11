@@ -19,6 +19,8 @@ _Functional requirements_ specify which _operations on data_ a structure must su
 
 The _operation profile_ describes how a structure will be used: _which operations_ are performed most frequently, the _volume of data_ they involve, and their _sequence_. For example, one application may primarily perform lookups, with infrequent updates; another may continuously receive new elements and then process them sequentially. Even when the required operations are identical, differences in their _execution frequency_ may lead to the selection of different structures.
 
+The **hardware constraints** of the system impose additional limitations on the choice of data structures. These constraints include the available RAM capacity, cache size and line size, memory access latency, memory bandwidth, pointer size and alignment requirements, parallel processing capabilities, and storage device characteristics. Each of these factors can significantly impact the performance of different data structures (Table 1).
+
 .Table 1. Hardware Characteristics and Constraints
 
 [cols="1,3", options="header"]
