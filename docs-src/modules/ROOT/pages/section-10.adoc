@@ -21,7 +21,7 @@ The _operation profile_ describes how a structure will be used: _which operation
 
 The **hardware constraints** of the system impose additional limitations on the choice of data structures. These constraints include the available RAM capacity, cache size and line size, memory access latency, memory bandwidth, pointer size and alignment requirements, parallel processing capabilities, and storage device characteristics. Each of these factors can significantly impact the performance of different data structures (Table 1).
 
-.Table 1. Hardware Characteristics and Constraints
+Table 1. Hardware Characteristics and Constraints
 
 [cols="1,3", options="header"]
 |===
@@ -48,43 +48,6 @@ The **hardware constraints** of the system impose additional limitations on the 
 |_Storage device characteristics_
 |When data does not fit in RAM, the number of storage accesses and the size of transferred blocks become important. This is one reason for using B-trees and B+ trees.
 |===
-
-| Фактор                                            | Как влияет на выбор структуры данных                                                                                                                                                |
-| ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Объём доступной оперативной памяти**            | Помимо самих данных, структура хранит служебную информацию: указатели, индексы, резервные ячейки. Эти расходы могут ограничивать допустимый размер структуры.                       |
-| **Ёмкость кэшей и размер кэш-линии**              | Компактное размещение элементов позволяет при одном обращении загрузить несколько соседних значений и затем использовать их без повторного обращения к оперативной памяти.          |
-| **Задержка доступа к памяти**                     | Особенно существенна при последовательном переходе по указателям: адрес следующего элемента становится известен только после чтения предыдущего.                                    |
-| **Пропускная способность памяти**                 | Ограничивает скорость массового просмотра, копирования и перемещения данных, например при вставках в массив.                                                                        |
-| **Размер указателей и требования к выравниванию** | Влияют на фактический размер элементов: указатели и промежутки для выравнивания могут заметно увеличивать расход памяти.                                                            |
-| **Возможности параллельной обработки**            | При работе нескольких ядер важны разделение данных и частота обращения к общей памяти. Конкуренция за одни и те же кэш-линии может снижать производительность.                      |
-| **Характеристики внешнего накопителя**            | Если данные не помещаются в оперативной памяти, становятся важны число обращений к накопителю и размер передаваемых блоков. Это одна из причин применения B-деревьев и B+‑деревьев. |
-
-[cols="1,3", options="header"]
-|===
-|Factor |Impact on data structure selection
-
-|_Available RAM capacity_
-|In addition to the data itself, a structure stores auxiliary information: pointers, indices, and reserved slots. This overhead may limit the maximum size of the structure.
-
-|_Cache capacity and cache line size_
-|Storing elements close together allows several adjacent values to be loaded in a single memory access and subsequently used without accessing RAM again.
-
-|_Memory access latency_
-|Particularly significant when following a chain of pointers: the address of the next element becomes available only after the previous element has been read.
-
-|_Memory bandwidth_
-|Limits the speed of bulk scanning, copying, and moving data, for example when inserting elements into an array.
-
-|_Pointer size and alignment requirements_
-|Affect the actual memory footprint of elements: pointers and alignment padding can substantially increase memory usage.
-
-|_Parallel processing capabilities_
-|When multiple cores are used, data partitioning and the frequency of access to shared memory become important. Contention over the same cache lines can reduce performance.
-
-|_Storage device characteristics_
-|When data does not fit in RAM, the number of storage accesses and the size of transferred blocks become important. This is one reason for using B-trees and B+ trees.
-|===
-
 
 Сводная **таблица пятишагового алгоритма принятия решения** по выбору структур данных объединяет функциональные требования, паттерны доступа и аппаратные ограничения системы
 
