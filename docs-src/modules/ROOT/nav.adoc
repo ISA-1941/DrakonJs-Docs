@@ -8,3 +8,4 @@
 * xref:section-7.adoc[Section 7. Basic Sort Algorithms]
 * xref:section-8.adoc[Section 8. Binary Tree Algorithms]
 * xref:section-9.adoc[Section 9. Graphs and Graph Algorithms]
+* xref:section-10.adoc[Section 10. Data Structure Selection]
