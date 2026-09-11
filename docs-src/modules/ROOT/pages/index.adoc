@@ -111,3 +111,7 @@ values and deleting nodes.
 structures – graphs. Basic concepts of graph theory and their basic
 types are given. Algorithms of representation of graphs, their
 traversal, choice of path between vertices are considered.
+
+*SECTION 10* provides basic information about data structure selection, 
+including criteria for choosing appropriate data structures based 
+on the requirements of the application.
