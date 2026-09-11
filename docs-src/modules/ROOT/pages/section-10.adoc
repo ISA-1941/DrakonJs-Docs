@@ -54,17 +54,101 @@ image::section_10/Fig10_1_MMO_slate.svg[width=100%, link=self, window="_blank"]
 
 .Multi-Criteria Memory-Oriented decision-making algorithm for data structure selection
 
-\= Data Structure Selection Algorithm: 5-Step Decision Process Selecting the optimal data structure requires evaluating functional requirements, access patterns, physical memory behavior, and runtime execution constraints. The following 5-step decision process guides software engineers sequentially from high-level workload analysis down to low-latency hardware considerations. .Step 1: Operational Profile ("Golden Core") Analysis [cols="2,2,3", options="header", grid=all, frame=all] |=== | Analyzed Criterion / Condition | Recommended Structures | Engineering Rationale &amp; Key Considerations | Read-heavy and search-focused (&gt; 70–80%) | Arrays, Hash Tables, Trees | Prioritizes minimal cost for point access or iteration. | Write-heavy and insertion-focused | Linked Lists, Stacks, Queues | Minimizes memory relocation and element shifting overhead. | Mixed workload (\~50/50) | Balanced Trees, Hash Tables with pre-allocation | Optimal trade-off between write speed and search performance. |=== .Step 2: Natural Data Ordering [cols="2,2,3", options="header", grid=all, frame=all] |=== | Analyzed Criterion / Condition | Recommended Structures | Engineering Rationale &amp; Key Considerations | Ordering is critical + \_(Range queries, MIN/MAX, nearest neighbors)\_ | B-Tree, Skip List, Sorted Array | \*Hash tables are excluded\* because the hashing mechanism completely destroys element ordering. | Ordering is not important + \_(Point access by key)\_ | Hash Table | Provides maximum point access speed by key at stem:[O(1)]. |=== .Step 3: Insertion and Deletion Pattern [cols="2,2,3", options="header", grid=all, frame=all] |=== | Analyzed Criterion / Condition | Recommended Structures | Engineering Rationale &amp; Key Considerations | Strictly at the end | Stack (LIFO), Dynamic Array (Vector / ArrayList) | Amortized stem:[O(1)], eliminates the need to shift existing elements. | Strictly at the beginning | Deque, Linked List | Eliminates catastrophic stem:[O(n)] element shifting in arrays. | In the middle or by key | • \*Rare insertions:\* Dynamic array with element shifting + • \*Frequent insertions:\* Linked list or B-Tree | Arrays win in simplicity for rare operations; lists and trees eliminate bulk memory copying for frequent operations. |=== .Step 4: Memory and Cache Evaluation (Hardware Filter) [cols="2,2,3", options="header", grid=all, frame=all] |=== | Analyzed Criterion / Condition | Recommended Structures | Engineering Rationale &amp; Key Considerations | Dataset fits into L1/L2 cache (hundreds of KB) | Array | Thanks to ideal cache locality, even an stem:[O(n)] element shift completes in microseconds. | Massive datasets (residing in RAM or on disk) | Linked Lists, Trees | Individual pointer cache misses are cheaper than bulk-copying gigabytes of array memory. | Immutable dataset (Read-Only) | Sorted Array + Binary Search | Maximum memory packing density, stem:[O(\\log n)] search, and optimal CPU prefetching. |=== .Step 5: Concurrency Requirements [cols="2,2,3", options="header", grid=all, frame=all] |
+.Шаг 1: Определение операционного профиля («Золотое ядро»)
+[cols="3,4,5", options="header"]
+|===
+|Анализируемый критерий / Условие
+|Рекомендуемые структуры
+|Инженерное обоснование и особенности
 
-Any practical choice of a data structure in a real computing system must account not only for the abstract algorithmic complexity (Big-O) but also for the **physical organization of memory**. Ignoring this factor is one of the primary reasons why a theoretically optimal structure often performs slower in practice than a "simpler" alternative.
+|*Преимущественно чтение и поиск (> 70–80%)*
+|*Массивы, Хеш-таблицы, Деревья*
+|Приоритет минимальной стоимости точечного доступа или итерации^1^.
 
-In modern computers, memory is organized as a **hierarchical pyramid** (Figure 10.1), where each level differs in capacity, access speed, and cost.
+|*Преимущественно запись и вставка*
+|*Связные списки, Стеки, Очереди*
+|Минимизация накладных расходов на перемещение и сдвиг элементов в памяти^1^.
 
-[.text-center]
-.Figure 10.2. Memory hierarchy of a modern computer
-image::section_10/Fig10_2_Memory.png[width=60%, link=self, window="_blank"]
+|*Смешанный режим (~50/50)*
+|*Сбалансированные деревья, Хеш-таблицы с резервированием*
+|Оптимальный компромисс между скоростью записи и поиска^1^.
+|===
 
-=== 10.3.1. Characteristics of Memory Levels
+.Шаг 2: Анализ естественного порядка данных
+[cols="3,4,5", options="header"]
+|===
+|Анализируемый критерий / Условие
+|Рекомендуемые структуры
+|Инженерное обоснование и особенности
+
+|*Порядок критичен* +
+_(Диапазоны, MIN/MAX, соседи)_
+|*B-Tree, Skip List, Отсортированный массив*
+|*Хеш-таблицы исключаются*, так как механизм хеширования полностью уничтожает порядок^2^.
+
+|*Порядок не важен* +
+_(Точечный доступ по ключу)_
+|*Хеш-таблица*
+|Обеспечивает максимальную скорость точечного доступа по ключу O(1)^2^.
+|===
+
+.Шаг 3: Паттерн вставки и удаления
+[cols="3,4,5", options="header"]
+|===
+|Анализируемый критерий / Условие
+|Рекомендуемые структуры
+|Инженерное обоснование и особенности
+
+|*Только в конец*
+|*Стек (LIFO), Динамический массив (Vector / ArrayList)*
+|Амортизированное O(1), отсутствие необходимости сдвигать существующие элементы^2^.
+
+|*Только в начало*
+|*Дек (deque), Связный список*
+|Исключает катастрофический сдвиг элементов массивов за O(n)^2^.
+
+|*В середину или по ключу*
+a|
+* _Редкие вставки:_ *Динамический массив со сдвигом*
+* _Частые вставки:_ *Связный список или B-Tree*
+|Массив выигрывает простотой при редких операциях; списки и деревья избавляют от массового копирования памяти при частых^2^.
+|===
+
+.Шаг 4: Оценка памяти и кэша (Аппаратный фильтр)
+[cols="3,4,5", options="header"]
+|===
+|Анализируемый критерий / Условие
+|Рекомендуемые структуры
+|Инженерное обоснование и особенности
+
+|*Данные помещаются в L1/L2 кэш (сотни КБ)*
+|*Массив*
+|За счет идеальной кэш-локальности даже вставка со сдвигом за O(n) выполняется за микросекунды^3^.
+
+|*Огромные объемы (в RAM или на диске)*
+|*Связные списки, Деревья*
+|Точечные кэш-промахи обходятся дешевле полного копирования гигабайтных массивов^3^.
+
+|*Неизменяемые данные (Read-Only)*
+|*Отсортированный массив + Бинарный поиск*
+|Максимальная плотность упаковки в памяти, поиск O(log n) и идеальная работа prefetching^3^.
+|===
+
+.Шаг 5: Необходимость многопоточности
+[cols="3,4,5", options="header"]
+|===
+|Анализируемый критерий / Условие
+|Рекомендуемые структуры
+|Инженерное обоснование и особенности
+
+|*Нужна синхронизация (Да)*
+|*Lock-free структуры (списки Майкла-Скотта), Секционированные структуры*
+|Избежание узких мест и сложных блокировок в стандартных структурах^4^.
+
+|*Однопоточный режим (Нет)*
+|*Простые базовые реализации*
+|Минимальные накладные расходы на управление доступом^4^.
+|===
 
 Each memory level has unique parameters that determine how efficiently a particular data structure interacts with it.
 
