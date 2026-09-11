@@ -160,8 +160,8 @@ Any practical choice of a data structure in a real computing system must account
 In modern computers, memory is organized as a **hierarchical pyramid** (Figure 10.1), where each level differs in capacity, access speed, and cost.
 
 [.text-center]
-.Figure 10.2. Memory hierarchy of a modern computer
-image::section_10/Fig10_2_Memory.png[width=60%, link=self, window="_blank"]
+.*Figure 10.2. Memory hierarchy of a modern computer*
+image::section_10/Fig10_2_Memory.png[width=60%, align="center", link=self, window="_blank"]
 
 === 10.3.1. Characteristics of Memory Levels
 
