@@ -44,17 +44,15 @@ Table 1. Hardware Characteristics and Constraints
 |When data does not fit in RAM, the number of storage accesses and the size of transferred blocks become important. This is one reason for using B-trees and B+ trees.
 |===
 
-Сводная **таблица пятишагового алгоритма принятия решения** по выбору структур данных объединяет функциональные требования, паттерны доступа и аппаратные ограничения системы
-
-Data structure selection algorithm according to the characteristics of a specific task can be presented in five steps (Figure 10.1):
+Data structure selection algorithm according to the characteristics of a specific task can be presented in five steps (Figure 10.1. )
 
 [.text-center]
 .Figure 10.1. Multi-Criteria Memory-Oriented decision-making algorithm for data structure selection
 image::section_10/Fig10_1_MMO_slate.svg[width=100%, link=self, window="_blank"]
 
-.Multi-Criteria Memory-Oriented decision-making algorithm for data structure selection
+In more detail Multi-Criteria Memory-Oriented decision-making algorithm for data structure selection is presented in the following tables (Tables 1–5).
 
-*Table 1. Step 1: Identifying the Operation Profile (“Golden Core”)*
+*Table 2.1. Identifying the Operation Profile (“Golden Core”)*
 
 [cols="3,4,5", options="header"]
 |===
@@ -75,7 +73,7 @@ image::section_10/Fig10_1_MMO_slate.svg[width=100%, link=self, window="_blank"]
 |An optimal trade-off between write and lookup performance^1^.
 |===
 
-*Table 2. Step 2: Assessing the Need for Data Ordering*
+*Table 2.2. Assessing the Need for Data Ordering*
 
 [cols="3,4,5", options="header"]
 |===
@@ -94,7 +92,7 @@ _(Individual lookups by key)_
 |Provides O(1) average-case lookup by key^2^.
 |===
 
-*Table 3. Step 3: Identifying the Insertion and Deletion Pattern*
+*Table 2.3. Identifying the Insertion and Deletion Pattern*
 
 [cols="3,4,5", options="header"]
 |===
@@ -117,7 +115,7 @@ a|
 |Arrays offer simplicity when operations are infrequent; lists and trees avoid bulk memory copying when operations are frequent^2^.
 |===
 
-*Table 4. Step 4: Assessing Memory and Cache Constraints (Hardware Filter)*
+*Table 2.4. Assessing Memory and Cache Constraints (Hardware Filter)*
 
 [cols="3,4,5", options="header"]
 |===
@@ -138,7 +136,7 @@ a|
 |Maximum memory density, O(log n) lookup, and ideal prefetching behavior^3^.
 |===
 
-*Table 5. Step 5: Determining Whether Multithreading Is Required*
+*Table 2.5. Determining Whether Multithreading Is Required*
 
 [cols="3,4,5", options="header"]
 |===
@@ -155,7 +153,19 @@ a|
 |Minimal overhead for coordinating access^4^.
 |===
 
-Each memory level has unique parameters that determine how efficiently a particular data structure interacts with it.
+== 10.3. Memory Hierarchy and Its Impact on Data Structure Performance
+
+Any practical choice of a data structure in a real computing system must account not only for the abstract algorithmic complexity (Big-O) but also for the **physical organization of memory**. Ignoring this factor is one of the primary reasons why a theoretically optimal structure often performs slower in practice than a "simpler" alternative.
+
+In modern computers, memory is organized as a **hierarchical pyramid** (Figure 10.1), where each level differs in capacity, access speed, and cost.
+
+[.text-center]
+.Figure 10.2. Memory hierarchy of a modern computer
+image::section_10/Fig10_2_Memory.png[width=60%, link=self, window="_blank"]
+
+=== 10.3.1. Characteristics of Memory Levels
+
+Each memory level has unique parameters that determine how efficiently a particular data structure interacts with it. The figures below are **order-of-magnitude estimates for a typical modern system**, not measurements of any specific processor — actual numbers vary with microarchitecture, process node, and generation of hardware.
 
 .Memory level comparison
 [cols="2,2,2,2,2,2", options="header", align="center", frame="all", grid="all"]
