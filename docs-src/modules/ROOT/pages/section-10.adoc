@@ -54,101 +54,105 @@ image::section_10/Fig10_1_MMO_slate.svg[width=100%, link=self, window="_blank"]
 
 .Multi-Criteria Memory-Oriented decision-making algorithm for data structure selection
 
-*Шаг 1: Определение операционного профиля («Золотое ядро»)*
+*Table 1. Step 1: Identifying the Operation Profile (“Golden Core”)*
 
 [cols="3,4,5", options="header"]
 |===
-|Анализируемый критерий / Условие
-|Рекомендуемые структуры
-|Инженерное обоснование и особенности
+|Criterion / Condition
+|Recommended Data Structures
+|Engineering Rationale and Considerations
 
-|*Преимущественно чтение и поиск (> 70–80%)*
-|*Массивы, Хеш-таблицы, Деревья*
-|Приоритет минимальной стоимости точечного доступа или итерации^1^.
+|*Mostly reading and searching (> 70–80%)*
+|*Arrays, Hash Tables, Trees*
+|Priority is given to minimizing the cost of individual lookups or iteration^1^.
 
-|*Преимущественно запись и вставка*
-|*Связные списки, Стеки, Очереди*
-|Минимизация накладных расходов на перемещение и сдвиг элементов в памяти^1^.
+|*Mostly writing and insertion*
+|*Linked Lists, Stacks, Queues*
+|Minimizes the overhead of moving and shifting elements in memory^1^.
 
-|*Смешанный режим (~50/50)*
-|*Сбалансированные деревья, Хеш-таблицы с резервированием*
-|Оптимальный компромисс между скоростью записи и поиска^1^.
+|*Mixed workload (~50/50)*
+|*Balanced Trees, Hash Tables with Preallocated Capacity*
+|An optimal trade-off between write and lookup performance^1^.
 |===
 
-*Шаг 2: Анализ естественного порядка данных*
+*Table 2. Step 2: Assessing the Need for Data Ordering*
+
 [cols="3,4,5", options="header"]
 |===
-|Анализируемый критерий / Условие
-|Рекомендуемые структуры
-|Инженерное обоснование и особенности
+|Criterion / Condition
+|Recommended Data Structures
+|Engineering Rationale and Considerations
 
-|*Порядок критичен* +
-_(Диапазоны, MIN/MAX, соседи)_
-|*B-Tree, Skip List, Отсортированный массив*
-|*Хеш-таблицы исключаются*, так как механизм хеширования полностью уничтожает порядок^2^.
+|*Ordering is essential* +
+_(Range queries, MIN/MAX, predecessors and successors)_
+|*B-Trees, Skip Lists, Sorted Arrays*
+|*Hash tables are excluded*, because hashing does not preserve key order^2^.
 
-|*Порядок не важен* +
-_(Точечный доступ по ключу)_
-|*Хеш-таблица*
-|Обеспечивает максимальную скорость точечного доступа по ключу O(1)^2^.
+|*Ordering is not required* +
+_(Individual lookups by key)_
+|*Hash Table*
+|Provides O(1) average-case lookup by key^2^.
 |===
 
-*Шаг 3: Паттерн вставки и удаления*
+*Table 3. Step 3: Identifying the Insertion and Deletion Pattern*
+
 [cols="3,4,5", options="header"]
 |===
-|Анализируемый критерий / Условие
-|Рекомендуемые структуры
-|Инженерное обоснование и особенности
+|Criterion / Condition
+|Recommended Data Structures
+|Engineering Rationale and Considerations
 
-|*Только в конец*
-|*Стек (LIFO), Динамический массив (Vector / ArrayList)*
-|Амортизированное O(1), отсутствие необходимости сдвигать существующие элементы^2^.
+|*At the end only*
+|*Stack (LIFO), Dynamic Array (Vector / ArrayList)*
+|Amortized O(1) operations, with no need to shift existing elements^2^.
 
-|*Только в начало*
-|*Дек (deque), Связный список*
-|Исключает катастрофический сдвиг элементов массивов за O(n)^2^.
+|*At the beginning only*
+|*Deque, Linked List*
+|Avoids the costly O(n) shifting of array elements^2^.
 
-|*В середину или по ключу*
+|*In the middle or by key*
 a|
-* _Редкие вставки:_ *Динамический массив со сдвигом*
-* _Частые вставки:_ *Связный список или B-Tree*
-|Массив выигрывает простотой при редких операциях; списки и деревья избавляют от массового копирования памяти при частых^2^.
+* _Infrequent insertions:_ *Dynamic Array with Element Shifting*
+* _Frequent insertions:_ *Linked List or B-Tree*
+|Arrays offer simplicity when operations are infrequent; lists and trees avoid bulk memory copying when operations are frequent^2^.
 |===
 
-*Шаг 4: Оценка памяти и кэша (Аппаратный фильтр)*
+*Table 4. Step 4: Assessing Memory and Cache Constraints (Hardware Filter)*
+
 [cols="3,4,5", options="header"]
 |===
-|Анализируемый критерий / Условие
-|Рекомендуемые структуры
-|Инженерное обоснование и особенности
+|Criterion / Condition
+|Recommended Data Structures
+|Engineering Rationale and Considerations
 
-|*Данные помещаются в L1/L2 кэш (сотни КБ)*
-|*Массив*
-|За счет идеальной кэш-локальности даже вставка со сдвигом за O(n) выполняется за микросекунды^3^.
+|*Data fits in the L1/L2 cache (hundreds of KB)*
+|*Array*
+|Excellent cache locality allows even O(n) insertions involving element shifting to complete in microseconds^3^.
 
-|*Огромные объемы (в RAM или на диске)*
-|*Связные списки, Деревья*
-|Точечные кэш-промахи обходятся дешевле полного копирования гигабайтных массивов^3^.
+|*Very large data volumes (in RAM or on disk)*
+|*Linked Lists, Trees*
+|Individual cache misses are less costly than copying entire gigabyte-sized arrays^3^.
 
-|*Неизменяемые данные (Read-Only)*
-|*Отсортированный массив + Бинарный поиск*
-|Максимальная плотность упаковки в памяти, поиск O(log n) и идеальная работа prefetching^3^.
+|*Immutable Data (Read-Only)*
+|*Sorted Array + Binary Search*
+|Maximum memory density, O(log n) lookup, and ideal prefetching behavior^3^.
 |===
 
-*Шаг 5: Необходимость многопоточности*
+*Table 5. Step 5: Determining Whether Multithreading Is Required*
+
 [cols="3,4,5", options="header"]
 |===
-|Анализируемый критерий / Условие
-|Рекомендуемые структуры
-|Инженерное обоснование и особенности
+|Criterion / Condition
+|Recommended Data Structures
+|Engineering Rationale and Considerations
 
-|*Нужна синхронизация (Да)*
-|*Lock-free структуры (списки Майкла-Скотта), Секционированные структуры*
-|Избежание узких мест и сложных блокировок в стандартных структурах^4^.
+|*Synchronization is required (Yes)*
+|*Lock-Free Structures (Michael–Scott Queues), Partitioned Structures*
+|Avoids bottlenecks and complex locking in conventional structures^4^.
 
-|*Однопоточный режим (Нет)*
-|*Простые базовые реализации*
-|Минимальные накладные расходы на управление доступом^4^.
+|*Single-threaded execution (No)*
+|*Simple Basic Implementations*
+|Minimal overhead for coordinating access^4^.
 |===
 
 Each memory level has unique parameters that determine how efficiently a particular data structure interacts with it.
