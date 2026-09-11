@@ -1,0 +1,121 @@
+== 10.3. Memory Hierarchy and Its Impact on Data Structure Performance
+
+Any practical choice of a data structure in a real computing system must account not only for the abstract algorithmic complexity (Big-O) but also for the **physical organization of memory**. Ignoring this factor is one of the primary reasons why a theoretically optimal structure often performs slower in practice than a "simpler" alternative.
+
+In modern computers, memory is organized as a **hierarchical pyramid** (Figure 10.1), where each level differs in capacity, access speed, and cost.
+
+[.text-center]
+.Figure 10.1. Memory hierarchy of a modern computer
+image::section_10/Fig10_1_Memory.png[width=60%, link=self, window="_blank"]
+
+=== 10.3.1. Characteristics of Memory Levels
+
+Each memory level has unique parameters that determine how efficiently a particular data structure interacts with it. The figures below are **order-of-magnitude estimates for a typical modern system**, not measurements of any specific processor — actual numbers vary with microarchitecture, process node, and generation of hardware.
+
+.Memory level comparison (order-of-magnitude estimates)
+[cols="2,2,2,2", options="header", align="center", frame="all", grid="all"]
+|===
+| Memory Level | Typical Size | Access Time | Managed By
+
+| **CPU Registers** | ~1 KB | < 1 ns | Compiler
+| **L1 Cache** | 32–64 KB | ~1 ns | Hardware
+| **L2 Cache** | 256–512 KB | ~3–5 ns | Hardware
+| **L3 Cache** | 4–32 MB | ~10–15 ns | Hardware
+| **RAM** | 8–256 GB | ~50–100 ns | OS/Program
+| **SSD/Disk (swap)** | 256 GB – 4 TB | ~50–200 μs (SSD) / ~1–10 ms (HDD) | OS
+|===
+
+_Order of magnitude only; see, e.g., the widely cited "Latency Numbers Every Programmer Should Know" reference table for a fuller picture, itself an approximation that is periodically updated as hardware evolves._
+
+NOTE: We do not tabulate bandwidth or "relative energy per access" figures here. Both depend heavily on the specific measurement conditions (bus width, port count, process node, methodology), and without stating those conditions, a bare multiplier such as "1×…1000×" creates a false impression of precision. If your course requires these figures, look them up for the specific platform you are analyzing rather than treating any generic table as authoritative.
+
+> **Important:** The difference between register access time (< 1 ns) and RAM access time (~100 ns) is **two orders of magnitude**. In the time the CPU waits for data from RAM, it could have executed **hundreds** of operations. This is precisely why data structures that are "cache-friendly" outperform even those with better theoretical complexity.
+
+=== 10.3.2. Key Concepts: Cache Line and Cache Miss
+
+Data moves between memory and cache not one byte at a time, but in fixed-size blocks called **cache lines** (typically 64 bytes). When a program accesses a variable, the entire cache line containing that variable is loaded into the cache. This is a property of how the *memory-to-cache transfer* works — at the instruction level, the CPU can still read and write individual bytes, as well as larger units (words, double words, etc.); it is the movement between memory and cache, not the CPU's instruction set, that operates on cache-line granularity.
+
+* **Cache hit:** Data is already in the cache (any level). Access takes from ~1 ns (L1) up to ~10–15 ns (L3).
+* **Cache miss:** Data is not found at the level being checked. A miss in L1 is not automatically a trip to RAM — it may still be found in L2 or L3, at a cost intermediate between a cache hit and a full RAM access. Only a miss at **every** cache level results in the ~100 ns RAM latency. It is worth distinguishing these cases: a fast L1→L2 hit and a full miss down to RAM differ by roughly an order of magnitude in cost.
+
+**For data structures, this means:**
+
+* **Arrays** (and any sequentially stored structures): When iterating over an array, the CPU loads one cache line (64 bytes = 8 elements of 8 bytes) and processes all 8 elements **without additional misses**. This achieves near-theoretical maximum speed.
+
+* **Linked lists and trees:** Nodes are typically scattered across memory, so a node's neighbors in the structure are not necessarily its neighbors in memory (weak spatial locality). Moving to the next node is *not guaranteed* to miss — a node may already be resident in cache, particularly for small structures — but two factors work against these structures in general: poor spatial locality, and the fact that the address of the *next* node is only known after dereferencing the *current* one (a data dependency), which prevents the hardware from anticipating the access in advance. Together, these effects — not a guaranteed miss on every step — explain why traversal of scattered linked structures is, on average, markedly slower than traversal of an array of the same size.
+
+=== 10.3.3. Prefetching Mechanism
+
+Modern processors feature **hardware prefetchers** that analyze memory access patterns and proactively load data into the cache.
+
+* For **arrays**, a regular sequential access pattern is easy for the prefetcher to detect: it recognizes linear traversal and begins loading upcoming cache lines **ahead**, before the program even requests them. This effectively hides much of the RAM latency.
+
+* For **linked lists and trees**, pointer-based transitions are much harder to predict, since the address of the next node depends on the value read from the current one. Classic stride-based prefetchers gain little traction here. This does not mean prefetching is entirely useless for such structures — more specialized techniques (e.g., pointer-chasing prefetchers) exist — but they are far less effective and less general than sequential prefetching.
+
+> **Conclusion:** If your data structure supports **sequential iteration** and you use it frequently in this mode, an array will typically iterate substantially faster than a tree or a list traversed node-by-node — even though a *full traversal* of either structure is the same O(n) operation. It is important not to conflate this with search: the O(log n) figure commonly quoted for balanced trees refers to *searching for a single element*, not to traversing the entire structure. The performance gap between array and tree iteration comes from cache locality and access predictability, not from a difference in traversal complexity.
+
+=== 10.3.4. Practical Rule: The "Cache Filter"
+
+When selecting a data structure, **always** ask yourself three questions:
+
+1. **Will the structure be iterated (traversed entirely) frequently?**
+   * YES → Prefer arrays and vectors (even if insertion is O(n)).
+   * NO → Trees and lists become viable options.
+
+2. **What is the access pattern?**
+   * Sequential (in order) → Arrays win due to prefetching.
+   * Indexed, random position → Arrays still win: direct index access is O(1) and needs no search structure at all.
+   * Lookup by key (not by position) → Choose between hash tables and trees based on your actual requirements: hash tables typically offer faster average-case lookup when no ordering is needed and keys hash well; trees are preferable when you need ordered traversal, range queries, or worst-case guarantees.
+
+3. **How large is the data relative to the L3 cache size?**
+   * Data fits in L3 (millions of elements) → The cache effect is maximized; structures with poor locality (lists) perform catastrophically.
+   * Data does not fit in L3 (tens of millions or more) → Do **not** assume the array-vs-tree gap shrinks here. Sequential access can *retain or even widen* its advantage once it spills into RAM, because prefetching and full use of memory bandwidth still favor regular, linear reads; random access, by contrast, now pays the full RAM latency on essentially every step with no bandwidth amortization. Beyond the cache, locality often matters *more*, not less.
+
+=== 10.3.5. Illustrative Example: Iterating 1 Million Elements
+
+Consider three data structures, each containing 1 million integers, and a full iteration over each.
+
+.Iteration performance comparison (qualitative)
+[cols="2,2,2,2", options="header", align="center", frame="all", grid="all"]
+|===
+| Structure | Memory Layout | Cache Misses per Element | Expected Relative Speed
+
+| **Array** | Sequential | Low (~1 miss per cache line) | Fastest
+| **Linked List** | Random / fragmented | High | Markedly slower than the array
+| **Tree (depth-first traversal)** | Random (typically fragmented per node) | High | Comparable to or slower than the list, depending on implementation
+|===
+
+CAUTION: We deliberately omit specific timings (milliseconds) and fixed relative-speed multipliers here. Such numbers are meaningless without the full context of an experiment: the exact data layout, node allocation strategy, compiler and optimization flags, the specific CPU and cache sizes, and the measurement methodology (warm-up, repetitions, isolation from system noise). A ratio measured on one machine with one implementation should never be quoted as a general fact. If you want concrete numbers, run the benchmark yourself on your target hardware and report the setup alongside the results.
+
+> **Important:** This comparison is only about iteration. If the structure is used for *search* rather than full traversal, the picture changes — a hash table, for instance, can offer average O(1) lookup even though it is not the best choice for ordered iteration. There is no universal ratio between hash-table and tree traversal speed; it depends entirely on the implementation. **The right choice always depends on the dominant operation your application actually performs.**
+
+=== 10.3.6. Cache-Friendly Structures: Conditions, Not a Fixed Ranking
+
+Rather than a single "cache-locality rating," it is more useful — and more accurate — to think in terms of the conditions under which a given implementation of a structure is cache-friendly or not. Locality is a property of *how data is laid out and accessed*, not of the structure's name alone: two implementations of "the same" structure (e.g., a linked list with a custom node pool vs. one using individual `malloc`/`new` per node) can have very different cache behavior.
+
+.Cache-locality conditions
+[cols="1,2,2", options="header", align="center", frame="all", grid="all"]
+|===
+| Structure | Favorable conditions | Unfavorable conditions
+
+| **Static / Dynamic Array (Vector), Sorted Array** | Sequential access; fixed or predictable element size | Frequent mid-sequence insertions/deletions
+| **Hash Table (open addressing)** | Key lookup without ordering requirements; good hash distribution | Need for ordered traversal; poor hash function causing clustering
+| **Deque (array-based)** | Access/insertion mostly at the ends; otherwise array-like locality | Random-position insertions
+| **Linked List / Tree with a node pool or custom allocator** | Nodes allocated close together in memory; frequent insert/delete at known positions | Very large structures exceeding the pool's contiguous region
+| **Naive Linked List / Tree (individual heap allocations)** | Structure is small enough to fit in cache regardless of layout | Large structure with scattered nodes; frequent full traversal
+|===
+
+The general principle: locality depends on layout and access pattern together, not on the data structure's name in isolation. When performance matters, check how a *specific implementation* actually lays out its data before assuming it is "cache-friendly" or not.
+
+=== 10.3.7. Bridge to the DRAKON Decision Diagram
+
+Understanding the memory hierarchy enables the introduction of a **new critical filter** into the data structure selection algorithm (see the DRAKON diagram in Section 10.5):
+
+* If **cache locality** is a priority (high-load systems, game engines, financial applications) → **favor arrays** and sequentially stored structures.
+
+* If **cache locality** is a lower priority, this is not simply a function of the task being "background" or "batch" — such workloads can themselves be memory-intensive and benefit from good locality. The filter is better framed as: if the dominant operation is infrequent, small-scale, or not performance-critical for the application → trees and lists can be chosen based on other criteria (e.g., ease of insertion/deletion, ordering guarantees) without the cache-locality concern dominating the decision.
+
+This filter is inserted **after** the questions about operation frequency and **before** the questions about memory constraints, as shown in Figure 10.2 (see Section 10.5).
+
+[.text-center]
+*— End of Subsection 10.3 —*

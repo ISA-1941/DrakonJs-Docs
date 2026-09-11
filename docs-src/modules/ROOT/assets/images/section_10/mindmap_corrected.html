@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Алгоритм выбора структур данных — исправленная карта</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; background:#ffffff; margin:0; padding:24px; }
+  h1 { font-size:18px; color:#2c2c2a; margin:0 0 20px; font-weight:600; }
+  #container { overflow-x:auto; }
+</style>
+</head>
+<body>
+<h1>Алгоритм выбора структур данных — исправленная версия</h1>
+<div id="container"></div>
+<script>
+const data = {
+  label: 'Алгоритм выбора структур данных',
+  children: [
+    { label: 'Количественные характеристики', children: [
+      { label: 'Размер данных (N)' },
+      { label: 'Динамика роста' },
+      { label: 'Пиковые нагрузки' }
+    ]},
+    { label: 'Операционный профиль', children: [
+      { label: 'Соотношение чтения и записи' },
+      { label: 'Частота вставок и удалений' },
+      { label: 'Скорость поиска' }
+    ]},
+    { label: 'Характер доступа', children: [
+      { label: 'Доступ по индексу или ключу' },
+      { label: 'Локальность (начало/конец/середина)' },
+      { label: 'Наличие порядка и диапазонов' },
+      { label: 'Случайный или последовательный' }
+    ]},
+    { label: 'Иерархия памяти и кэш', children: [
+      { label: 'Уровни памяти', children: [
+        { label: 'Регистры CPU (<1 нс)' },
+        { label: 'Кэш L1/L2/L3 (1–20 нс)' },
+        { label: 'Оперативная память (50–100 нс)' }
+      ]},
+      { label: 'Кэш-локальность', children: [
+        { label: 'Кэш-линии (64 байта)' },
+        { label: 'Prefetching (для массивов)' },
+        { label: 'Кэш-промахи (списки, деревья)' }
+      ]},
+      { label: 'Фрагментация кучи' },
+      { label: 'Overhead на элемент' }
+    ]},
+    { label: 'Топология связей', children: [
+      { label: 'Линейная последовательность' },
+      { label: 'Иерархические отношения' },
+      { label: 'Произвольные связи many-to-many' }
+    ]},
+    { label: 'Инженерные факторы', children: [
+      { label: 'Конкурентный доступ (потокобезопасность)' },
+      { label: 'Специфика языка и платформы' },
+      { label: 'Сложность реализации и поддержки' },
+      { label: 'Гарантии реального времени' },
+      { label: 'Устойчивость к недоверенным данным' }
+    ]},
+    { label: 'Выбор конкретных структур', children: [
+      { label: 'Массивы', children: [
+        { label: 'Динамический массив (Vector, ArrayList)' },
+        { label: 'Отсортированный массив (бинарный поиск)' }
+      ]},
+      { label: 'Связные списки (низкая кэш-локальность)' },
+      { label: 'Хеш-таблицы (O(1) в среднем случае)' },
+      { label: 'Деревья (упорядоченность)', children: [
+        { label: 'AVL — строгий баланс, быстрый поиск' },
+        { label: 'Красно-чёрное дерево — быстрые вставки' },
+        { label: 'BST — просто, при N < 1000' },
+        { label: 'B+Tree — большие данные, диск/БД' }
+      ]},
+      { label: 'Графы', children: [
+        { label: 'Список смежности (разреженный граф)' },
+        { label: 'Матрица смежности (плотный граф)' }
+      ]},
+      { label: 'Куча / приоритетная очередь' }
+    ]}
+  ]
+};
+
+const fill = ['#4a5268', '#333e48', '#2b4a3c', '#2f6b4c'];
+const connColor = ['#aab4d9', '#7c8fa3', '#5aa47c'];
+
+const rowHeight = 54;
+const boxHeight = 40;
+const paddingX = 18;
+const gapX = 70;
+const startX = 20;
+const branchGapRows = 1;
+
+const canvas = document.createElement('canvas');
+const ctx = canvas.getContext('2d');
+ctx.font = '600 14px Arial';
+function measure(label){ return ctx.measureText(label).width; }
+
+function assignDepth(node, depth){
+  node.depth = depth;
+  node.width = Math.ceil(measure(node.label)) + paddingX * 2;
+  if (node.children) node.children.forEach(c => assignDepth(c, depth + 1));
+}
+assignDepth(data, 0);
+
+let maxDepth = 0;
+function trackDepth(node){ maxDepth = Math.max(maxDepth, node.depth); if (node.children) node.children.forEach(trackDepth); }
+trackDepth(data);
+
+const colMaxWidth = new Array(maxDepth + 1).fill(0);
+function trackWidth(node){ colMaxWidth[node.depth] = Math.max(colMaxWidth[node.depth], node.width); if (node.children) node.children.forEach(trackWidth); }
+trackWidth(data);
+
+const colX = new Array(maxDepth + 1);
+colX[0] = startX;
+for (let d = 1; d <= maxDepth; d++) colX[d] = colX[d - 1] + colMaxWidth[d - 1] + gapX;
+
+function assignX(node){ node.x = colX[node.depth]; if (node.children) node.children.forEach(assignX); }
+assignX(data);
+
+let rowCounter = 0;
+function assignY(node){
+  if (!node.children || node.children.length === 0){
+    node.y = rowCounter * rowHeight + rowHeight / 2;
+    rowCounter++;
+    return node.y;
+  }
+  const ys = node.children.map(c => assignY(c));
+  node.y = (Math.min(...ys) + Math.max(...ys)) / 2;
+  return node.y;
+}
+
+const topYs = [];
+data.children.forEach((branch, i) => {
+  topYs.push(assignY(branch));
+  if (i < data.children.length - 1) rowCounter += branchGapRows;
+});
+data.y = (Math.min(...topYs) + Math.max(...topYs)) / 2;
+
+const totalHeight = rowCounter * rowHeight + 20;
+const totalWidth = colX[maxDepth] + colMaxWidth[maxDepth] + 40;
+
+const svgNS = 'http://www.w3.org/2000/svg';
+const svg = document.createElementNS(svgNS, 'svg');
+svg.setAttribute('width', totalWidth);
+svg.setAttribute('height', totalHeight);
+svg.setAttribute('viewBox', '0 0 ' + totalWidth + ' ' + totalHeight);
+document.getElementById('container').appendChild(svg);
+
+function drawConnector(parent, child){
+  const x1 = parent.x + parent.width, y1 = parent.y;
+  const x2 = child.x, y2 = child.y;
+  const dx = (x2 - x1) * 0.5;
+  const path = document.createElementNS(svgNS, 'path');
+  path.setAttribute('d', 'M ' + x1 + ' ' + y1 + ' C ' + (x1 + dx) + ' ' + y1 + ', ' + (x2 - dx) + ' ' + y2 + ', ' + x2 + ' ' + y2);
+  path.setAttribute('fill', 'none');
+  path.setAttribute('stroke', connColor[Math.min(parent.depth, connColor.length - 1)]);
+  path.setAttribute('stroke-width', '1.6');
+  svg.appendChild(path);
+}
+
+function drawNode(node){
+  if (node.children){
+    node.children.forEach(child => {
+      drawConnector(node, child);
+      drawNode(child);
+    });
+  }
+  const rect = document.createElementNS(svgNS, 'rect');
+  rect.setAttribute('x', node.x);
+  rect.setAttribute('y', node.y - boxHeight / 2);
+  rect.setAttribute('width', node.width);
+  rect.setAttribute('height', boxHeight);
+  rect.setAttribute('rx', 8);
+  rect.setAttribute('fill', fill[Math.min(node.depth, fill.length - 1)]);
+  svg.appendChild(rect);
+
+  const text = document.createElementNS(svgNS, 'text');
+  text.setAttribute('x', node.x + node.width / 2);
+  text.setAttribute('y', node.y);
+  text.setAttribute('text-anchor', 'middle');
+  text.setAttribute('dominant-baseline', 'central');
+  text.setAttribute('fill', '#ffffff');
+  text.setAttribute('font-size', '14');
+  text.setAttribute('font-weight', '600');
+  text.textContent = node.label;
+  svg.appendChild(text);
+
+  if (node.children && node.children.length){
+    const cx = node.x + node.width, cy = node.y;
+    const circle = document.createElementNS(svgNS, 'circle');
+    circle.setAttribute('cx', cx);
+    circle.setAttribute('cy', cy);
+    circle.setAttribute('r', 9);
+    circle.setAttribute('fill', '#20262e');
+    svg.appendChild(circle);
+
+    const chevron = document.createElementNS(svgNS, 'path');
+    chevron.setAttribute('d', 'M ' + (cx + 3) + ' ' + (cy - 4) + ' L ' + (cx - 3) + ' ' + cy + ' L ' + (cx + 3) + ' ' + (cy + 4));
+    chevron.setAttribute('fill', 'none');
+    chevron.setAttribute('stroke', '#ffffff');
+    chevron.setAttribute('stroke-width', '1.5');
+    chevron.setAttribute('stroke-linecap', 'round');
+    chevron.setAttribute('stroke-linejoin', 'round');
+    svg.appendChild(chevron);
+  }
+}
+
+drawNode(data);
+</script>
+</body>
+</html>
