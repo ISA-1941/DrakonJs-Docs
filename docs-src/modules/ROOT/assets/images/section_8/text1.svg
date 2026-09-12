@@ -4,9 +4,9 @@
 <svg
    version="1.1"
    id="svg1"
-   width="1178"
-   height="1335"
-   viewBox="0 0 1178 1335"
+   width="38.657227"
+   height="44.459351"
+   viewBox="0 0 38.657227 44.459351"
    sodipodi:docname="Fig8_13ab.png"
    inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    inkscape:dataloss="true"
@@ -38,8 +38,8 @@
     <inkscape:page
        x="0"
        y="0"
-       width="1178"
-       height="1335"
+       width="38.657227"
+       height="44.459351"
        id="page2"
        margin="0"
        bleed="0" />
@@ -47,7 +47,8 @@
   <g
      inkscape:groupmode="layer"
      inkscape:label="Image"
-     id="g1">
+     id="g1"
+     transform="translate(-540.59997,-1184.391)">
     <image
        width="1178"
        height="1335"
@@ -59,10 +60,7 @@
        style="font-stretch:semi-condensed;font-size:45.3543px;font-family:Sans;-inkscape-font-specification:'Sans, Semi-Condensed';writing-mode:lr-tb;direction:ltr;fill:#536020;fill-opacity:0.125786;fill-rule:evenodd;stroke:#f6fbf9;stroke-width:4.02142;stroke-linejoin:round;stroke-dashoffset:0.45"
        x="538.91235"
        y="1220.8604"
-       id="text1"
-       inkscape:export-filename="text1.svg"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96"><tspan
+       id="text1"><tspan
          sodipodi:role="line"
          id="tspan1"
          x="538.91235"
