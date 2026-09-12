@@ -44,114 +44,153 @@ Table 1. Hardware Characteristics and Constraints
 |When data does not fit in RAM, the number of storage accesses and the size of transferred blocks become important. This is one reason for using B-trees and B+ trees.
 |===
 
+
+Before making a choice,you must define the mandatory operations (key-based lookup, indexed access, insertion, deletion, range queries) and the required data organization properties (key ordering, insertion-order preservation, element uniqueness, or allowing duplicates). Data structures that fail to meet these requirements are ruled out from further consideration.
+
 Data structure selection algorithm according to the characteristics of a specific task can be presented in five steps (Figure 10.1. )
 
 [.text-center]
 .Figure 10.1. Multi-Criteria Memory-Oriented decision-making algorithm for data structure selection
 image::section_10/Fig10_1_MMO_slate.svg[width=100%, link=self, window="_blank"]
 
-In more detail Multi-Criteria Memory-Oriented decision-making algorithm for data structure selection is presented in the following tables (Tables 1–5).
+In more detail Multi-Criteria Memory-Oriented decision-making algorithm for data structure selection is presented in the following tables (Tables 2.1–2.5).
 
-*Table 2.1. Identifying the Operation Profile (“Golden Core”)*
-
+[caption=""]
+.Table 2.1. Step 1: Identifying the Operation Profile (“Golden Core”)
 [cols="3,4,5", options="header"]
 |===
 |Criterion / Condition
-|Recommended Data Structures
+|Candidate Data Structures
 |Engineering Rationale and Considerations
 
-|*Mostly reading and searching (> 70–80%)*
-|*Arrays, Hash Tables, Trees*
-|Priority is given to minimizing the cost of individual lookups or iteration^1^.
+|*Mostly reading and searching*
+|Arrays for indexed access or sequential traversal; hash tables for lookup by key; sorted arrays or balanced search trees for ordered queries.
+|Distinguish direct access, lookup by key, and sequential traversal. These operations have different costs and may favor different structures.
 
 |*Mostly writing and insertion*
-|*Linked Lists, Stacks, Queues*
-|Minimizes the overhead of moving and shifting elements in memory^1^.
+|Dynamic arrays for appending; linked lists for insertion at known locations; hash tables or balanced search trees for updates by key.
+|The insertion location and subsequent access requirements determine which candidates are appropriate. For LIFO or FIFO processing, choose a suitable stack or queue implementation.
 
-|*Mixed workload (~50/50)*
-|*Balanced Trees, Hash Tables with Preallocated Capacity*
-|An optimal trade-off between write and lookup performance^1^.
+|*Mixed read/write workload*
+|Dynamic arrays, hash tables, or balanced search trees, depending on the required operations.
+|Compare the frequency and cost of each operation. Reserving capacity, where supported, can reduce reallocations or rehashing but consumes additional memory.
 |===
 
-*Table 2.2. Assessing the Need for Data Ordering*
+NOTE: Operation frequencies alone do not determine the best structure: data volume, insertion locations, and the cost of each operation also matter. Ratios such as 80/20 or 50/50 illustrate workloads; they are not universal selection thresholds. Stacks and queues specify access disciplines and can be implemented using different underlying structures.
 
+[caption=""]
+.Table 2.2. Step 2: Assessing the Need for Data Ordering
 [cols="3,4,5", options="header"]
 |===
 |Criterion / Condition
-|Recommended Data Structures
+|Candidate Data Structures
 |Engineering Rationale and Considerations
 
-|*Ordering is essential* +
-_(Range queries, MIN/MAX, predecessors and successors)_
-|*B-Trees, Skip Lists, Sorted Arrays*
-|*Hash tables are excluded*, because hashing does not preserve key order^2^.
+|*Key order is required* (range queries, ordered traversal, predecessors and successors)
+|Balanced search trees (AVL or red-black trees), B-trees or B+ trees, skip lists, and sorted arrays.
+|These structures support operations based on key order. The update frequency and storage environment help distinguish between them; a hash table alone does not provide ordered range queries.
 
-|*Ordering is not required* +
-_(Individual lookups by key)_
-|*Hash Table*
-|Provides O(1) average-case lookup by key^2^.
+|*Key order is not required* (individual lookups by key)
+|Hash table.
+|Expected O(1) lookup is possible under suitable hashing and load-factor assumptions, assuming bounded-cost key hashing and comparison. Worst-case lookup is not generally O(1).
 |===
 
-*Table 2.3. Identifying the Insertion and Deletion Pattern*
+NOTE: Key order and insertion order are different requirements: preserving insertion order does not make keys sorted. If only the minimum or maximum must be retrieved repeatedly, a heap may suffice; maintaining full key order may be unnecessary.
 
+[caption=""]
+.Table 2.3. Step 3: Identifying the Insertion and Deletion Pattern
 [cols="3,4,5", options="header"]
 |===
 |Criterion / Condition
-|Recommended Data Structures
+|Candidate Data Structures
 |Engineering Rationale and Considerations
 
-|*At the end only*
-|*Stack (LIFO), Dynamic Array (Vector / ArrayList)*
-|Amortized O(1) operations, with no need to shift existing elements^2^.
+|*Insertion and deletion at the end only*
+|Dynamic array; a stack implemented using a dynamic array or linked nodes.
+|Dynamic-array append is amortized O(1); removing the last element does not require shifting the remaining elements. Occasional resizing may move existing elements.
 
-|*At the beginning only*
-|*Deque, Linked List*
-|Avoids the costly O(n) shifting of array elements^2^.
+|*Insertion and deletion at the beginning only*
+|Linked list with a head reference; deque with efficient operations at the front.
+|These implementations avoid the O(n) element shifting required by a conventional contiguous array when its front changes.
 
-|*In the middle or by key*
-a|
-* _Infrequent insertions:_ *Dynamic Array with Element Shifting*
-* _Frequent insertions:_ *Linked List or B-Tree*
-|Arrays offer simplicity when operations are infrequent; lists and trees avoid bulk memory copying when operations are frequent^2^.
+|*Insertion at one end and removal at the other, or changes at both ends*
+|Queue or deque implemented using a circular buffer or an appropriately linked structure.
+|A circular buffer reuses vacant positions without shifting all elements. A linked implementation requires suitable head and tail references; efficient removal at both ends generally requires backward links.
+
+|*Insertion or deletion at an internal position*
+|Dynamic array for infrequent changes; linked list when the required node references are already available.
+|Array changes may shift O(n) elements. A list can change links in O(1), but locating the position may require an O(n) traversal; frequent insertion alone does not establish that a list is preferable.
+
+|*Insertion, update, or deletion by key*
+|Hash table when key order is unnecessary; balanced search tree when ordered operations are required.
+|Hash tables typically provide expected O(1) key-based operations under suitable assumptions; balanced search trees provide O(log n) search, insertion, and deletion under the usual comparison-cost model.
 |===
 
-*Table 2.4. Assessing Memory and Cache Constraints (Hardware Filter)*
+NOTE: The total cost includes locating the target and modifying the structure. Constant-time link changes require access to all necessary nodes; for example, deleting a node from a singly linked list generally requires its predecessor. Changing an element by key and inserting at a numerical position are different tasks.
 
+[caption=""]
+.Table 2.4. Step 4: Assessing Memory and Cache Constraints (Hardware Filter)
 [cols="3,4,5", options="header"]
 |===
 |Criterion / Condition
-|Recommended Data Structures
+|Candidate Data Structures
 |Engineering Rationale and Considerations
 
-|*Data fits in the L1/L2 cache (hundreds of KB)*
-|*Array*
-|Excellent cache locality allows even O(n) insertions involving element shifting to complete in microseconds^3^.
+|*Small working set with frequent sequential access*
+|Contiguous arrays or other compact representations.
+|Good spatial locality can reduce memory-access overhead. Element shifting may be acceptable for small arrays, but its actual cost depends on element size, workload, and hardware.
 
-|*Very large data volumes (in RAM or on disk)*
-|*Linked Lists, Trees*
-|Individual cache misses are less costly than copying entire gigabyte-sized arrays^3^.
+|*Large data volume in RAM with frequent sequential processing*
+|Arrays or chunked arrays.
+|Compact or block-based storage supports efficient scanning and reduces per-element pointer overhead. A large data volume alone does not justify choosing a linked list.
 
-|*Immutable Data (Read-Only)*
-|*Sorted Array + Binary Search*
-|Maximum memory density, O(log n) lookup, and ideal prefetching behavior^3^.
+|*Large data volume in RAM with frequent localized changes*
+|Balanced search trees for changes by key; linked lists when the necessary node references are known; chunked structures when suitable.
+|These candidates can avoid shifting a large contiguous suffix, but pointer overhead, allocation costs, and cache misses must be weighed against that benefit.
+
+|*Data exceeds available RAM or is primarily stored on a storage device*
+|B-trees or B+ trees for indexed access and updates; block-oriented sequential layouts for scans.
+|Match the layout to the access pattern. Block-oriented trees reduce the number of storage accesses for indexed operations, while sequential layouts favor bulk processing.
+
+|*Read-only data requiring lookup or traversal in key order*
+|Sorted array with binary search.
+|A compact representation supports O(log n) binary search and efficient sequential traversal. Binary search has a different access pattern from a sequential scan and does not obtain the same predictable streaming-prefetch benefit.
 |===
 
-*Table 2.5. Determining Whether Multithreading Is Required*
+NOTE: Performance depends on the active working set, element layout, access pattern, and implementation; no universal cache-size or timing threshold determines the winner. In JavaScript, an ordinary Array does not guarantee the same physical representation as a packed numeric buffer; TypedArray provides a clearer model for fixed-width numeric data. Validate candidate implementations using representative data and workloads.
 
+[caption=""]
+.Table 2.5. Step 5: Determining Whether Concurrent Access Is Required
 [cols="3,4,5", options="header"]
 |===
 |Criterion / Condition
-|Recommended Data Structures
+|Candidate Data Structures / Access Strategies
 |Engineering Rationale and Considerations
 
-|*Synchronization is required (Yes)*
-|*Lock-Free Structures (Michael–Scott Queues), Partitioned Structures*
-|Avoids bottlenecks and complex locking in conventional structures^4^.
+|*Several threads or workers process independently owned data*
+|Separate structures per thread or worker; partitioned data with explicit ownership and communication.
+|Independent ownership can reduce contention. Exchanging data or combining results may still require coordination.
 
-|*Single-threaded execution (No)*
-|*Simple Basic Implementations*
-|Minimal overhead for coordinating access^4^.
+|*Several threads or workers access shared mutable data*
+|Structures protected by locks; partitioned structures with appropriate coordination; specialized concurrent structures, including lock-free queues where justified.
+|Choose according to the required consistency guarantees, contention level, and runtime support. Lock-free algorithms are one option, not an automatic consequence of using multiple threads.
+
+|*Single-threaded execution without concurrent shared-memory access*
+|Simple implementations appropriate to the required operations.
+|No inter-thread synchronization is needed, reducing coordination overhead and implementation complexity.
 |===
+
+NOTE: First identify which data is shared, which operations modify it, and which guarantees must hold during concurrent access. Lock-free does not mean synchronization-free or necessarily faster; such algorithms require suitable atomic operations and careful implementation. In JavaScript, asynchronous execution alone does not imply parallel shared-memory access.
+
+Conclusion
+
+Choosing a data structure is essentially a process of progressively narrowing down the set of viable solutions. Functional requirements determine which structures are even capable of solving the problem; the operation profile, the nature of data mutations, and the constraints of the computing environment then allow the remaining candidates to be compared against one another. The recommendations in the tables above should be treated as guidelines whose applicability depends on the specific conditions at hand.
+
+The outcome of the five-step process is a well-grounded choice of one or more candidates. The final decision should be validated on representative data and workloads, measuring operation execution time and memory consumption. If the results fail to meet requirements, the initial assumptions should be revisited and the selection process repeated.
+
+To understand why structures with identical theoretical complexity can differ substantially in actual performance, we will next examine the impact of physical memory organization.
+
+
 
 == 10.3. Memory Hierarchy and Its Impact on Data Structure Performance
 
