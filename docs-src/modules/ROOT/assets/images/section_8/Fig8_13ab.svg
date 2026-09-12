@@ -7,14 +7,14 @@
    viewBox="0 0 151.80197 172.39391"
    version="1.1"
    id="svg1"
-   inkscape:version="1.4.3 (fcd0343856, 2026-01-01)"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    sodipodi:docname="Fig8_13ab.svg"
+   xml:space="preserve"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
      id="namedview1"
      pagecolor="#505050"
      bordercolor="#eeeeee"
@@ -24,60 +24,52 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
-     inkscape:zoom="1"
-     inkscape:cx="492.5"
-     inkscape:cy="430"
+     inkscape:zoom="1.7778096"
+     inkscape:cx="164.52831"
+     inkscape:cy="280.68248"
      inkscape:window-width="1920"
      inkscape:window-height="1152"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
-  <defs
-     id="defs1">
-    <linearGradient
+     inkscape:current-layer="layer1-0" /><defs
+     id="defs1"><rect
+       x="356.61862"
+       y="520.86568"
+       width="55.686504"
+       height="62.436383"
+       id="rect8" /><linearGradient
        id="linearGradient13"
-       inkscape:collect="always">
-      <stop
+       inkscape:collect="always"><stop
          style="stop-color:#f4fefd;stop-opacity:1;"
          offset="0"
-         id="stop13" />
-      <stop
+         id="stop13" /><stop
          style="stop-color:#f4fefd;stop-opacity:0;"
          offset="1"
-         id="stop14" />
-    </linearGradient>
-    <linearGradient
+         id="stop14" /></linearGradient><linearGradient
        id="linearGradient11"
-       inkscape:collect="always">
-      <stop
+       inkscape:collect="always"><stop
          style="stop-color:#f4fefd;stop-opacity:1;"
          offset="0"
-         id="stop11" />
-      <stop
+         id="stop11" /><stop
          style="stop-color:#f4fefd;stop-opacity:0;"
          offset="1"
-         id="stop12" />
-    </linearGradient>
-    <rect
+         id="stop12" /></linearGradient><rect
        x="349"
        y="201"
        width="169"
        height="93"
-       id="rect7" />
-    <rect
+       id="rect7" /><rect
        x="360"
        y="305"
        width="153"
        height="68"
-       id="rect6" />
-    <rect
+       id="rect6" /><rect
        x="376"
        y="315"
        width="86"
        height="54"
-       id="rect5" />
-    <linearGradient
+       id="rect5" /><linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient11"
        id="linearGradient12"
@@ -85,8 +77,7 @@
        y1="59.617344"
        x2="116.78618"
        y2="59.617344"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
+       gradientUnits="userSpaceOnUse" /><linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient13"
        id="linearGradient14"
@@ -94,14 +85,11 @@
        y1="59.617344"
        x2="116.78618"
        y2="59.617344"
-       gradientUnits="userSpaceOnUse" />
-  </defs>
-  <g
+       gradientUnits="userSpaceOnUse" /></defs><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-27.161288,-42.908693)">
-    <text
+     transform="translate(-27.161288,-42.908693)"><text
        xml:space="preserve"
        style="font-size:18.0508px;font-family:P052;-inkscape-font-specification:'P052, Normal';writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#800000;stroke:#f9fefd;stroke-width:1.128;stroke-linejoin:bevel"
        x="22.178572"
@@ -111,8 +99,7 @@
          id="tspan1"
          style="stroke-width:1.128"
          x="22.178572"
-         y="19.285715" /></text>
-    <text
+         y="19.285715" /></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.0508px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#800000;stroke:#f9fefd;stroke-width:1.128;stroke-linejoin:bevel"
        x="36.964283"
@@ -122,30 +109,15 @@
          id="tspan2"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.128"
          x="36.964283"
-         y="32.785713" /></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;white-space:pre;inline-size:117.704;opacity:0.9;fill:#800000;stroke:#f9fefd;stroke-width:1.128;stroke-linejoin:bevel"
-       x="21.960417"
-       y="37.835415"
-       id="text3"
-       transform="translate(5.2916939,26.987506)"><tspan
-         x="21.960417"
-         y="37.835415"
-         id="tspan5"><tspan
-           style="font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal'"
-           id="tspan3">[5, 3, 7, 2, 4, 6, 8]</tspan></tspan></text>
-    <g
+         y="32.785713" /></text><g
        id="g4"
-       transform="translate(-19.049997,-15.610417)">
-      <ellipse
+       transform="translate(-19.049997,-15.610417)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4"
          cx="147.5052"
          cy="62.573956"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="145.78545"
@@ -155,20 +127,16 @@
            id="tspan4"
            style="stroke-width:0.546"
            x="145.78545"
-           y="64.822914">5</tspan></text>
-    </g>
-    <g
+           y="64.822914">5</tspan></text></g><g
        id="g5"
        transform="translate(-3.7041668)"
-       style="stroke:#fdfefd;stroke-opacity:1">
-      <ellipse
+       style="stroke:#fdfefd;stroke-opacity:1"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#fdfefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#fdfefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -178,20 +146,16 @@
            id="tspan4-8"
            style="stroke:#fdfefd;stroke-width:0.546;stroke-opacity:1"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6"
        transform="translate(-13.758342,13.229167)"
-       style="stroke:#fdfefd;stroke-opacity:1">
-      <ellipse
+       style="stroke:#fdfefd;stroke-opacity:1"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#fdfefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#fdfefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -201,31 +165,25 @@
            id="tspan4-8-1"
            style="stroke:#fdfefd;stroke-width:0.546;stroke-opacity:1"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <text
+           y="61.866302">2</tspan></text></g><text
        xml:space="preserve"
        transform="matrix(0.26458333,0,0,0.26458333,-1.5875,2.38125)"
        id="text5"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.7874px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect5);opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:2.06362;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1" />
-    <text
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.7874px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect5);display:inline;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:2.06362;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1" /><text
        xml:space="preserve"
        transform="matrix(0.26458333,0,0,0.26458333,-1.5875,2.38125)"
        id="text6"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.7874px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect6);opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:2.06362;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1" />
-    <text
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.7874px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect6);display:inline;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:2.06362;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1" /><text
        xml:space="preserve"
        transform="scale(0.26458333)"
        id="text7"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.7874px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect7);opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:2.06362;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1" />
-    <ellipse
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.7874px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect7);display:inline;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:2.06362;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1" /><ellipse
        style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
        id="path4-0-7"
        cx="148.48372"
        cy="59.088177"
        rx="4.0127978"
-       ry="3.7818453" />
-    <text
+       ry="3.7818453" /><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
        x="146.76396"
@@ -235,15 +193,13 @@
          id="tspan4-8-6"
          style="stroke-width:0.546"
          x="146.76396"
-         y="61.337135">7</tspan></text>
-    <ellipse
+         y="61.337135">7</tspan></text><ellipse
        style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
        id="path4-0-0-6"
        cx="138.42955"
        cy="72.317345"
        rx="4.0127978"
-       ry="3.7818453" />
-    <text
+       ry="3.7818453" /><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
        x="136.70978"
@@ -253,15 +209,13 @@
          id="tspan4-8-1-9"
          style="stroke-width:0.546"
          x="136.70978"
-         y="74.566307">6</tspan></text>
-    <ellipse
+         y="74.566307">6</tspan></text><ellipse
        style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
        id="path4-0-0-1-4"
        cx="157.47954"
        cy="72.317345"
        rx="4.0127978"
-       ry="3.7818453" />
-    <text
+       ry="3.7818453" /><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
        x="155.75978"
@@ -271,19 +225,16 @@
          id="tspan4-8-1-7-1"
          style="stroke-width:0.546"
          x="155.75978"
-         y="74.566299">8</tspan></text>
-    <g
+         y="74.566299">8</tspan></text><g
        id="g5-0"
        transform="translate(-3.7041668)"
-       style="stroke:#fdfefd;stroke-opacity:1">
-      <ellipse
+       style="stroke:#fdfefd;stroke-opacity:1"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#fdfefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-8"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#fdfefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -293,20 +244,16 @@
            id="tspan4-8-5"
            style="stroke:#fdfefd;stroke-width:0.546;stroke-opacity:1"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-0"
        transform="translate(-13.758342,13.229167)"
-       style="stroke:#fdfefd;stroke-opacity:1">
-      <ellipse
+       style="stroke:#fdfefd;stroke-opacity:1"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#fdfefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-9"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#fdfefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -316,20 +263,16 @@
            id="tspan4-8-1-3"
            style="stroke:#fdfefd;stroke-width:0.546;stroke-opacity:1"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-4"
        transform="translate(-3.7041668)"
-       style="stroke:#fbfefd;stroke-opacity:1">
-      <ellipse
+       style="stroke:#fbfefd;stroke-opacity:1"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#fbfefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-81"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#fbfefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -339,20 +282,16 @@
            id="tspan4-8-3"
            style="stroke:#fbfefd;stroke-width:0.546;stroke-opacity:1"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-04"
        transform="translate(-13.758342,13.229167)"
-       style="stroke:#fbfefd;stroke-opacity:1">
-      <ellipse
+       style="stroke:#fbfefd;stroke-opacity:1"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#fbfefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-4"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#fbfefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -362,19 +301,15 @@
            id="tspan4-8-1-4"
            style="stroke:#fbfefd;stroke-width:0.546;stroke-opacity:1"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-6"
-       transform="translate(-3.7041668)">
-      <ellipse
+       transform="translate(-3.7041668)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-2"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -384,19 +319,15 @@
            id="tspan4-8-7"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-8"
-       transform="translate(-13.758342,13.229167)">
-      <ellipse
+       transform="translate(-13.758342,13.229167)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-5"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -406,20 +337,16 @@
            id="tspan4-8-1-1"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-3"
        transform="translate(-3.7041668)"
-       style="stroke:#f4fefd;stroke-opacity:1">
-      <ellipse
+       style="stroke:#f4fefd;stroke-opacity:1"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f4fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-1"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f4fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -429,20 +356,16 @@
            id="tspan4-8-64"
            style="stroke:#f4fefd;stroke-width:0.546;stroke-opacity:1"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-3"
        transform="translate(-13.758342,13.229167)"
-       style="stroke:#f4fefd;stroke-opacity:1">
-      <ellipse
+       style="stroke:#f4fefd;stroke-opacity:1"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f4fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-3"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f4fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -452,20 +375,16 @@
            id="tspan4-8-1-6"
            style="stroke:#f4fefd;stroke-width:0.546;stroke-opacity:1"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-7"
        transform="translate(-3.7041668)"
-       style="fill:#f80000;fill-opacity:1">
-      <ellipse
+       style="fill:#f80000;fill-opacity:1"><ellipse
          style="opacity:0.9;fill:#f80000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-6"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#f80000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -475,20 +394,16 @@
            id="tspan4-8-30"
            style="fill:#f80000;fill-opacity:1;stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-30"
        transform="translate(-13.758342,13.229167)"
-       style="fill:#f80000;fill-opacity:1">
-      <ellipse
+       style="fill:#f80000;fill-opacity:1"><ellipse
          style="opacity:0.9;fill:#f80000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-92"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#f80000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -498,19 +413,15 @@
            id="tspan4-8-1-40"
            style="fill:#f80000;fill-opacity:1;stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-75"
-       transform="translate(-3.7041668)">
-      <ellipse
+       transform="translate(-3.7041668)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-4"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -520,19 +431,15 @@
            id="tspan4-8-2"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-89"
-       transform="translate(-13.758342,13.229167)">
-      <ellipse
+       transform="translate(-13.758342,13.229167)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-36"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -542,20 +449,16 @@
            id="tspan4-8-1-0"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-8"
        transform="translate(-3.7041668)"
-       style="stroke-dasharray:none">
-      <ellipse
+       style="stroke-dasharray:none"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-5"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -565,20 +468,16 @@
            id="tspan4-8-4"
            style="stroke-width:0.546;stroke-dasharray:none"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-6"
        transform="translate(-13.758342,13.229167)"
-       style="stroke-dasharray:none">
-      <ellipse
+       style="stroke-dasharray:none"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-2"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -588,20 +487,16 @@
            id="tspan4-8-1-62"
            style="stroke-width:0.546;stroke-dasharray:none"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-9"
        transform="translate(-3.7041668)"
-       style="stroke-width:0.988066;stroke-dasharray:none">
-      <ellipse
+       style="stroke-width:0.988066;stroke-dasharray:none"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.988066;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-08"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.988066;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -611,20 +506,16 @@
            id="tspan4-8-11"
            style="stroke-width:0.988066;stroke-dasharray:none"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-03"
        transform="translate(-13.758342,13.229167)"
-       style="stroke-width:0.988066;stroke-dasharray:none">
-      <ellipse
+       style="stroke-width:0.988066;stroke-dasharray:none"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.988066;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-40"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.988066;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -634,20 +525,16 @@
            id="tspan4-8-1-19"
            style="stroke-width:0.988066;stroke-dasharray:none"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-40"
        transform="translate(-3.7041668)"
-       style="stroke:#f4fefd;stroke-opacity:1">
-      <ellipse
+       style="stroke:#f4fefd;stroke-opacity:1"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f4fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-04"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f4fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -657,20 +544,16 @@
            id="tspan4-8-67"
            style="stroke:#f4fefd;stroke-width:0.546;stroke-opacity:1"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-5"
        transform="translate(-13.758342,13.229167)"
-       style="stroke:#f4fefd;stroke-opacity:1">
-      <ellipse
+       style="stroke:#f4fefd;stroke-opacity:1"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f4fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-69"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f4fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -680,19 +563,15 @@
            id="tspan4-8-1-2"
            style="stroke:#f4fefd;stroke-width:0.546;stroke-opacity:1"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-32"
-       transform="translate(-3.7041668)">
-      <ellipse
+       transform="translate(-3.7041668)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-15"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -702,19 +581,15 @@
            id="tspan4-8-9"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-1"
-       transform="translate(-13.758342,13.229167)">
-      <ellipse
+       transform="translate(-13.758342,13.229167)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-49"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -724,20 +599,16 @@
            id="tspan4-8-1-07"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-96"
        transform="translate(-3.7041668)"
-       style="stroke:#f4fefd;stroke-opacity:1">
-      <ellipse
+       style="stroke:#f4fefd;stroke-opacity:1"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f4fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-10"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f4fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -747,20 +618,16 @@
            id="tspan4-8-22"
            style="stroke:#f4fefd;stroke-width:0.546;stroke-opacity:1"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-05"
        transform="translate(-13.758342,13.229167)"
-       style="stroke:#f4fefd;stroke-opacity:1">
-      <ellipse
+       style="stroke:#f4fefd;stroke-opacity:1"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f4fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-52"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f4fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -770,19 +637,15 @@
            id="tspan4-8-1-02"
            style="stroke:#f4fefd;stroke-width:0.546;stroke-opacity:1"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-2"
-       transform="translate(-3.7041668)">
-      <ellipse
+       transform="translate(-3.7041668)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-54"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -792,19 +655,15 @@
            id="tspan4-8-93"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-60"
-       transform="translate(-13.758342,13.229167)">
-      <ellipse
+       transform="translate(-13.758342,13.229167)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-50"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -814,20 +673,16 @@
            id="tspan4-8-1-94"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-94"
        transform="translate(-3.7041668)"
-       style="fill:#f7f7fc;fill-opacity:1">
-      <ellipse
+       style="fill:#f7f7fc;fill-opacity:1"><ellipse
          style="opacity:0.9;fill:#f7f7fc;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-22"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#f7f7fc;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -837,20 +692,16 @@
            id="tspan4-8-12"
            style="fill:#f7f7fc;fill-opacity:1;stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-88"
        transform="translate(-13.758342,13.229167)"
-       style="fill:#f7f7fc;fill-opacity:1">
-      <ellipse
+       style="fill:#f7f7fc;fill-opacity:1"><ellipse
          style="opacity:0.9;fill:#f7f7fc;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-928"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#f7f7fc;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -860,19 +711,15 @@
            id="tspan4-8-1-68"
            style="fill:#f7f7fc;fill-opacity:1;stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-68"
-       transform="translate(-3.7041668)">
-      <ellipse
+       transform="translate(-3.7041668)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-9"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -882,19 +729,15 @@
            id="tspan4-8-79"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-033"
-       transform="translate(-13.758342,13.229167)">
-      <ellipse
+       transform="translate(-13.758342,13.229167)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-37"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -904,19 +747,15 @@
            id="tspan4-8-1-65"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-04"
-       transform="translate(-3.7041668)">
-      <ellipse
+       transform="translate(-3.7041668)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-87"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -926,19 +765,15 @@
            id="tspan4-8-62"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-4"
-       transform="translate(-13.758342,13.229167)">
-      <ellipse
+       transform="translate(-13.758342,13.229167)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-7"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -948,19 +783,15 @@
            id="tspan4-8-1-92"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-25"
-       transform="translate(-3.7041668)">
-      <ellipse
+       transform="translate(-3.7041668)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-74"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -970,19 +801,15 @@
            id="tspan4-8-45"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-9"
-       transform="translate(-13.758342,13.229167)">
-      <ellipse
+       transform="translate(-13.758342,13.229167)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-35"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -992,19 +819,15 @@
            id="tspan4-8-1-8"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-02"
-       transform="translate(-3.7041668)">
-      <ellipse
+       transform="translate(-3.7041668)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-01"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1014,19 +837,15 @@
            id="tspan4-8-21"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-2"
-       transform="translate(-13.758342,13.229167)">
-      <ellipse
+       transform="translate(-13.758342,13.229167)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-0"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1036,19 +855,15 @@
            id="tspan4-8-1-11"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-06"
-       transform="translate(-3.7041668)">
-      <ellipse
+       transform="translate(-3.7041668)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-47"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1058,19 +873,15 @@
            id="tspan4-8-58"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-26"
-       transform="translate(-13.758342,13.229167)">
-      <ellipse
+       transform="translate(-13.758342,13.229167)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-06"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1080,19 +891,15 @@
            id="tspan4-8-1-628"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-72"
-       transform="translate(-3.7041668)">
-      <ellipse
+       transform="translate(-3.7041668)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-64"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1102,19 +909,15 @@
            id="tspan4-8-20"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-29"
-       transform="translate(-13.758342,13.229167)">
-      <ellipse
+       transform="translate(-13.758342,13.229167)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-09"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1124,19 +927,15 @@
            id="tspan4-8-1-5"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-76"
-       transform="translate(-3.7041668)">
-      <ellipse
+       transform="translate(-3.7041668)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-09"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1146,19 +945,15 @@
            id="tspan4-8-59"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-7"
-       transform="translate(-13.758342,13.229167)">
-      <ellipse
+       transform="translate(-13.758342,13.229167)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-8"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1168,19 +963,15 @@
            id="tspan4-8-1-38"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-98"
-       transform="translate(-3.7041668)">
-      <ellipse
+       transform="translate(-3.7041668)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-85"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1190,19 +981,15 @@
            id="tspan4-8-37"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-13"
-       transform="translate(-13.758342,13.229167)">
-      <ellipse
+       transform="translate(-13.758342,13.229167)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-80"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1212,19 +999,15 @@
            id="tspan4-8-1-99"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-1"
-       transform="translate(-3.7041668)">
-      <ellipse
+       transform="translate(-3.7041668)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-75"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1234,19 +1017,15 @@
            id="tspan4-8-41"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-71"
-       transform="translate(-13.758342,13.229167)">
-      <ellipse
+       transform="translate(-13.758342,13.229167)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-11"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1256,19 +1035,15 @@
            id="tspan4-8-1-08"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-08"
-       transform="translate(-3.7041668)">
-      <ellipse
+       transform="translate(-3.7041668)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-102"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1278,19 +1053,15 @@
            id="tspan4-8-97"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-56"
-       transform="translate(-13.758342,13.229167)">
-      <ellipse
+       transform="translate(-13.758342,13.229167)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-46"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1300,19 +1071,15 @@
            id="tspan4-8-1-97"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-15"
-       transform="translate(-3.7041668)">
-      <ellipse
+       transform="translate(-3.7041668)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-41"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1322,19 +1089,15 @@
            id="tspan4-8-49"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-83"
-       transform="translate(-13.758342,13.229167)">
-      <ellipse
+       transform="translate(-13.758342,13.229167)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-85"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1344,19 +1107,15 @@
            id="tspan4-8-1-27"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-39"
-       transform="translate(-3.7041668)">
-      <ellipse
+       transform="translate(-3.7041668)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-72"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1366,19 +1125,15 @@
            id="tspan4-8-90"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-24"
-       transform="translate(-13.758342,13.229167)">
-      <ellipse
+       transform="translate(-13.758342,13.229167)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-76"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1388,20 +1143,16 @@
            id="tspan4-8-1-13"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-5"
        transform="translate(-3.7041668)"
-       style="stroke:#f5fefd;stroke-opacity:1">
-      <ellipse
+       style="stroke:#f5fefd;stroke-opacity:1"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f5fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-080"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f5fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1411,20 +1162,16 @@
            id="tspan4-8-13"
            style="stroke:#f5fefd;stroke-width:0.546;stroke-opacity:1"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-59"
        transform="translate(-13.758342,13.229167)"
-       style="stroke:#f5fefd;stroke-opacity:1">
-      <ellipse
+       style="stroke:#f5fefd;stroke-opacity:1"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f5fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-34"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f5fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1434,19 +1181,15 @@
            id="tspan4-8-1-083"
            style="stroke:#f5fefd;stroke-width:0.546;stroke-opacity:1"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-761"
-       transform="translate(-3.7041668)">
-      <ellipse
+       transform="translate(-3.7041668)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-50"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1456,19 +1199,15 @@
            id="tspan4-8-0"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-81"
-       transform="translate(-13.758342,13.229167)">
-      <ellipse
+       transform="translate(-13.758342,13.229167)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-22"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1478,19 +1217,15 @@
            id="tspan4-8-1-10"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-70"
-       transform="translate(-3.7041668)">
-      <ellipse
+       transform="translate(-3.7041668)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-03"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1500,19 +1235,15 @@
            id="tspan4-8-74"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-25"
-       transform="translate(-13.758342,13.229167)">
-      <ellipse
+       transform="translate(-13.758342,13.229167)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-24"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1522,19 +1253,15 @@
            id="tspan4-8-1-86"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-22"
-       transform="translate(-3.7041668)">
-      <ellipse
+       transform="translate(-3.7041668)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-45"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1544,19 +1271,15 @@
            id="tspan4-8-71"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-69"
-       transform="translate(-13.758342,13.229167)">
-      <ellipse
+       transform="translate(-13.758342,13.229167)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-81"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1566,19 +1289,15 @@
            id="tspan4-8-1-37"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-685"
-       transform="translate(-3.7041668)">
-      <ellipse
+       transform="translate(-3.7041668)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-21"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1588,19 +1307,15 @@
            id="tspan4-8-06"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-49"
-       transform="translate(-13.758342,13.229167)">
-      <ellipse
+       transform="translate(-13.758342,13.229167)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-90"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1610,19 +1325,15 @@
            id="tspan4-8-1-31"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-21"
-       transform="translate(-3.7041668)">
-      <ellipse
+       transform="translate(-3.7041668)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-509"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1632,19 +1343,15 @@
            id="tspan4-8-01"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-37"
-       transform="translate(-13.758342,13.229167)">
-      <ellipse
+       transform="translate(-13.758342,13.229167)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-41"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1654,19 +1361,15 @@
            id="tspan4-8-1-03"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-724"
-       transform="translate(-3.7041668)">
-      <ellipse
+       transform="translate(-3.7041668)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-16"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1676,19 +1379,15 @@
            id="tspan4-8-8"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-592"
-       transform="translate(-13.758342,13.229167)">
-      <ellipse
+       transform="translate(-13.758342,13.229167)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-73"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1698,19 +1397,15 @@
            id="tspan4-8-1-972"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g5-34"
-       transform="translate(-3.7041668)">
-      <ellipse
+       transform="translate(-3.7041668)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-66"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1720,19 +1415,15 @@
            id="tspan4-8-589"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">3</tspan></text>
-    </g>
-    <g
+           y="61.866302">3</tspan></text></g><g
        id="g6-50"
-       transform="translate(-13.758342,13.229167)">
-      <ellipse
+       transform="translate(-13.758342,13.229167)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-60"
          cx="112.50038"
          cy="59.617344"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="110.78062"
@@ -1742,19 +1433,15 @@
            id="tspan4-8-1-78"
            style="stroke-width:0.546"
            x="110.78062"
-           y="61.866302">2</tspan></text>
-    </g>
-    <g
+           y="61.866302">2</tspan></text></g><g
        id="g17"
-       transform="translate(1.0583333)">
-      <ellipse
+       transform="translate(1.0583333)"><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#fdfefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#fdfefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -1764,15 +1451,13 @@
            id="tspan4-8-1-7"
            style="stroke:#fdfefd;stroke-width:0.546;stroke-opacity:1"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#fdfefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-8"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#fdfefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -1782,15 +1467,13 @@
            id="tspan4-8-1-7-6"
            style="stroke:#fdfefd;stroke-width:0.546;stroke-opacity:1"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#fbfefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-7"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#fbfefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -1800,15 +1483,13 @@
            id="tspan4-8-1-7-3"
            style="stroke:#fbfefd;stroke-width:0.546;stroke-opacity:1"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-85"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -1818,15 +1499,13 @@
            id="tspan4-8-1-7-7"
            style="stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f4fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-0"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f4fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -1836,15 +1515,13 @@
            id="tspan4-8-1-7-8"
            style="stroke:#f4fefd;stroke-width:0.546;stroke-opacity:1"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#f80000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-5"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#f80000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -1854,15 +1531,13 @@
            id="tspan4-8-1-7-69"
            style="fill:#f80000;fill-opacity:1;stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-2"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -1872,15 +1547,13 @@
            id="tspan4-8-1-7-0"
            style="stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-84"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -1890,15 +1563,13 @@
            id="tspan4-8-1-7-2"
            style="stroke-width:0.546;stroke-dasharray:none"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.539484;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-6"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.539483;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -1908,15 +1579,13 @@
            id="tspan4-8-1-7-38"
            style="stroke-width:0.539483;stroke-dasharray:none"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f4fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-82"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f4fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -1926,15 +1595,13 @@
            id="tspan4-8-1-7-60"
            style="stroke:#f4fefd;stroke-width:0.546;stroke-opacity:1"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-58"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -1944,15 +1611,13 @@
            id="tspan4-8-1-7-4"
            style="stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f4fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-83"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f4fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -1962,15 +1627,13 @@
            id="tspan4-8-1-7-40"
            style="stroke:#f4fefd;stroke-width:0.546;stroke-opacity:1"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-3"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -1980,15 +1643,13 @@
            id="tspan4-8-1-7-74"
            style="stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#f7f7fc;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-38"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#f7f7fc;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -1998,15 +1659,13 @@
            id="tspan4-8-1-7-33"
            style="fill:#f7f7fc;fill-opacity:1;stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-26"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -2016,15 +1675,13 @@
            id="tspan4-8-1-7-79"
            style="stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-830"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -2034,15 +1691,13 @@
            id="tspan4-8-1-7-89"
            style="stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-1"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -2052,15 +1707,13 @@
            id="tspan4-8-1-7-82"
            style="stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-9"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -2070,15 +1723,13 @@
            id="tspan4-8-1-7-5"
            style="stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-96"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -2088,15 +1739,13 @@
            id="tspan4-8-1-7-01"
            style="stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-10"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -2106,15 +1755,13 @@
            id="tspan4-8-1-7-88"
            style="stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-37"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -2124,15 +1771,13 @@
            id="tspan4-8-1-7-87"
            style="stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-32"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -2142,15 +1787,13 @@
            id="tspan4-8-1-7-71"
            style="stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-51"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -2160,15 +1803,13 @@
            id="tspan4-8-1-7-21"
            style="stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-49"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -2178,15 +1819,13 @@
            id="tspan4-8-1-7-608"
            style="stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-03"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -2196,15 +1835,13 @@
            id="tspan4-8-1-7-36"
            style="stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-33"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -2214,15 +1851,13 @@
            id="tspan4-8-1-7-10"
            style="stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f5fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-56"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f5fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -2232,15 +1867,13 @@
            id="tspan4-8-1-7-9"
            style="stroke:#f5fefd;stroke-width:0.546;stroke-opacity:1"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-42"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -2250,15 +1883,13 @@
            id="tspan4-8-1-7-03"
            style="stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-08"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -2268,15 +1899,13 @@
            id="tspan4-8-1-7-23"
            style="stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-98"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -2286,15 +1915,13 @@
            id="tspan4-8-1-7-04"
            style="stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-48"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -2304,15 +1931,13 @@
            id="tspan4-8-1-7-77"
            style="stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-21"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -2322,15 +1947,13 @@
            id="tspan4-8-1-7-65"
            style="stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-216"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -2340,15 +1963,13 @@
            id="tspan4-8-1-7-215"
            style="stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-      <ellipse
+           y="75.095467">4</tspan></text><ellipse
          style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          id="path4-0-0-1-210"
          cx="117.79202"
          cy="72.846512"
          rx="4.0127978"
-         ry="3.7818453" />
-      <text
+         ry="3.7818453" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
          x="116.07227"
@@ -2358,45 +1979,37 @@
            id="tspan4-8-1-7-50"
            style="stroke-width:0.546"
            x="116.07227"
-           y="75.095467">4</tspan></text>
-    </g>
-    <path
+           y="75.095467">4</tspan></text></g><path
        style="fill:none;fill-rule:evenodd;stroke:#faf6fc;stroke-width:0.610955;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="m 125.33765,49.999927 -12.64019,7.950146"
        id="path16"
        inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
-    <path
+       inkscape:connector-curvature="0" /><path
        style="fill:none;fill-rule:evenodd;stroke:#faf6fc;stroke-width:0.611;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="M 144.12665,58.553637 131.72422,49.519155"
        id="path16-3"
        inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
-    <path
+       inkscape:connector-curvature="0" /><path
        style="fill:none;fill-rule:evenodd;stroke:#faf6fc;stroke-width:0.567897;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="m 146.30007,62.478459 -6.56783,6.651181"
        id="path16-6"
        inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
-    <path
+       inkscape:connector-curvature="0" /><path
        style="fill:none;fill-rule:evenodd;stroke:#faf6fc;stroke-width:0.523909;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="m 106.34237,62.846885 -5.03605,7.193972"
        id="path16-6-0"
        inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
-    <path
+       inkscape:connector-curvature="0" /><path
        style="fill:none;fill-rule:evenodd;stroke:#faf6fc;stroke-width:0.649103;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="m 111.32124,62.097363 4.51258,7.844513"
        id="path16-6-0-0"
        inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
-    <path
+       inkscape:connector-curvature="0" /><path
        style="fill:none;fill-rule:evenodd;stroke:#faf6fc;stroke-width:0.584916;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="m 151.06999,62.021797 4.29554,6.691627"
        id="path16-6-0-0-9"
        inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
-    <text
+       inkscape:connector-curvature="0" /><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#f7f7fc;fill-opacity:1;stroke:#faf6fc;stroke-width:0.611;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
        x="90.752083"
@@ -2406,39 +2019,33 @@
          id="tspan17"
          style="stroke-width:0.611"
          x="90.752083"
-         y="97.102081">a)</tspan></text>
-    <ellipse
+         y="97.102081">a)</tspan></text><ellipse
        style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
        id="path4-8"
        cx="104.03371"
        cy="186.61713"
        rx="4.0127978"
-       ry="3.7818453" />
-    <text
+       ry="3.7818453" /><text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#730000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
        x="102.31396"
        y="188.86607"
        id="text4-4"><tspan
          sodipodi:role="line"
          id="tspan4-5"
-         style="stroke-width:0.546"
+         style="fill:#730000;fill-opacity:1;stroke-width:0.546"
          x="102.31396"
-         y="188.86607">2</tspan></text>
-    <g
+         y="188.86607">3</tspan></text><g
        id="layer1-8"
-       transform="translate(-16.748576,122.72058)">
-      <g
+       transform="translate(-16.188856,123.2803)"><g
          id="g4-4"
-         transform="translate(-19.049997,-15.610417)">
-        <ellipse
+         transform="translate(-19.049997,-15.610417)"><ellipse
            style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
            id="path4-88"
            cx="147.5052"
            cy="62.573956"
            rx="4.0127978"
-           ry="3.7818453" />
-        <text
+           ry="3.7818453" /><text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
            x="145.78545"
@@ -2448,144 +2055,32 @@
              id="tspan4-87"
              style="stroke-width:0.546"
              x="145.78545"
-             y="64.822914">3</tspan></text>
-      </g>
-    </g>
-    <g
-       id="g4-0"
-       transform="translate(-25.215241,76.418389)">
-      <ellipse
-         style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
-         id="path4-5"
-         cx="148.56352"
-         cy="80.036469"
-         rx="4.0127978"
-         ry="3.7818453" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
-         x="146.84377"
-         y="81.756264"
-         id="text4-7"><tspan
-           sodipodi:role="line"
-           id="tspan4-3"
-           style="stroke-width:0.546"
-           x="146.84377"
-           y="81.756264">4</tspan></text>
-      <g
-         id="layer1-1"
-         transform="translate(71.437497,6.614587)">
-        <g
-           id="g4-3"
-           transform="translate(-19.049997,-15.610417)">
-          <ellipse
-             style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
-             id="path4-4"
-             cx="147.5052"
-             cy="62.573956"
-             rx="4.0127978"
-             ry="3.7818453" />
-          <text
-             xml:space="preserve"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
-             x="145.78545"
-             y="64.822914"
-             id="text4-9"><tspan
-               sodipodi:role="line"
-               id="tspan4-4"
-               style="stroke-width:0.546"
-               x="145.78545"
-               y="64.822914">8</tspan></text>
-        </g>
-      </g>
-      <g
-         id="layer1-7"
-         transform="translate(35.18958,22.225011)">
-        <g
-           id="g4-41"
-           transform="translate(-19.049997,-15.610417)">
-          <ellipse
-             style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
-             id="path4-2"
-             cx="147.5052"
-             cy="62.573956"
-             rx="4.0127978"
-             ry="3.7818453" />
-          <text
-             xml:space="preserve"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
-             x="146.05003"
-             y="64.558334"
-             id="text4-2"><tspan
-               sodipodi:role="line"
-               id="tspan4-1"
-               style="stroke-width:0.546"
-               x="146.05003"
-               y="64.558334">5</tspan></text>
-        </g>
-      </g>
-      <g
-         id="layer1-7-2"
-         transform="translate(54.768747,14.287503)">
-        <g
-           id="g4-41-9"
-           transform="translate(-19.049997,-15.610417)">
-          <g
-             id="g18"
-             transform="translate(-3.7041667,-1.8520788)">
-            <ellipse
-               style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
-               id="path4-2-7"
-               cx="147.5052"
-               cy="62.573956"
-               rx="4.0127978"
-               ry="3.7818453" />
-            <text
-               xml:space="preserve"
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
-               x="146.05003"
-               y="64.029167"
-               id="text4-2-4"><tspan
-                 sodipodi:role="line"
-                 id="tspan4-1-3"
-                 style="stroke-width:0.546"
-                 x="146.05003"
-                 y="64.029167">6</tspan></text>
-          </g>
-        </g>
-      </g>
-    </g>
-    <path
+             y="64.822914">4</tspan></text></g></g><path
        style="fill:none;fill-rule:evenodd;stroke:#faf6fc;stroke-width:0.733231;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="m 170.69133,130.7161 -12.69972,3.67919"
        id="path16-6-03"
        inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
-    <path
+       inkscape:connector-curvature="0" /><path
        style="fill:none;fill-rule:evenodd;stroke:#faf6fc;stroke-width:0.60903;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="m 151.75264,137.98824 -9.49638,5.51628"
        id="path16-6-03-8"
        inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
-    <path
+       inkscape:connector-curvature="0" /><path
        style="fill:none;fill-rule:evenodd;stroke:#faf6fc;stroke-width:0.526847;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="m 135.11304,147.85732 -8.8786,6.32503"
+       d="m 135.48619,148.23047 -8.8786,6.32503"
        id="path16-6-03-0"
        inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
-    <path
+       inkscape:connector-curvature="0" /><path
        style="fill:none;fill-rule:evenodd;stroke:#faf6fc;stroke-width:0.529;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="m 120.78136,159.48805 -6.77143,7.71319"
+       d="m 121.22784,159.04157 -6.77143,7.71319"
        id="path16-6-03-0-1"
        inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
-    <path
+       inkscape:connector-curvature="0" /><path
        style="fill:none;fill-rule:evenodd;stroke:#faf6fc;stroke-width:0.53;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="m 110.88683,173.63422 -5.15953,9.51458"
        id="path16-6-03-0-1-1"
        inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
-    <text
+       inkscape:connector-curvature="0" /><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#f7f7fc;fill-opacity:1;stroke:#faf6fc;stroke-width:0.53;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
        x="96.572922"
@@ -2595,18 +2090,159 @@
          id="tspan18"
          style="stroke-width:0.53"
          x="96.572922"
-         y="214.3125">b)</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;white-space:pre;inline-size:117.704;opacity:0.9;fill:#800000;stroke:#f9fefd;stroke-width:1.128;stroke-linejoin:bevel"
-       x="21.960417"
-       y="37.835415"
-       id="text3-9-4"
-       transform="translate(11.203322,125.65727)"><tspan
-         x="21.960417"
-         y="37.835415"
-         id="tspan7"><tspan
-           style="font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal'"
-           id="tspan6">[8, 7, 6, 5, 4, 3, 2]</tspan></tspan></text>
-  </g>
-</svg>
+         y="214.3125">b)</tspan></text><g
+       id="layer1-8-3"
+       transform="translate(8.560628,112.18333)"><g
+         id="g4-4-5"
+         transform="translate(-19.049997,-15.610417)"><ellipse
+           style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+           id="path4-88-6"
+           cx="149.7515"
+           cy="49.564899"
+           rx="4.0127978"
+           ry="3.7818453" /><text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+           x="148.36713"
+           y="51.589542"
+           id="text4-3-2"><tspan
+             sodipodi:role="line"
+             id="tspan4-87-9"
+             style="stroke-width:0.546"
+             x="148.36713"
+             y="51.589542">6</tspan></text></g></g><g
+       id="layer1-8-3-9"
+       transform="translate(-6.1210784,122.28191)"><g
+         id="g4-4-5-2"
+         transform="translate(-19.049997,-15.610417)"><ellipse
+           style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+           id="path4-88-6-0"
+           cx="149.7515"
+           cy="49.564899"
+           rx="4.0127978"
+           ry="3.7818453" /><text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+           x="148.36713"
+           y="51.589542"
+           id="text4-3-2-2"><tspan
+             sodipodi:role="line"
+             id="tspan4-87-9-3"
+             style="stroke-width:0.546"
+             x="148.36713"
+             y="51.589542">5</tspan></text></g></g><g
+       id="layer1-8-3-2"
+       transform="translate(7.901838,134.18822)"><g
+         id="g4-4-5-8"
+         transform="translate(-19.049997,-15.610417)"><ellipse
+           style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+           id="path4-88-6-9"
+           cx="166.56877"
+           cy="17.567425"
+           rx="4.0127978"
+           ry="3.7818453" /><text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+           x="165.03558"
+           y="19.592068"
+           id="text4-3-2-7"><tspan
+             sodipodi:role="line"
+             id="tspan4-87-9-36"
+             style="stroke-width:0.546"
+             x="165.03558"
+             y="19.592068">7</tspan></text></g></g><path
+       style="fill:none;fill-rule:evenodd;stroke:#faf6fc;stroke-width:0.530001;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 104.03371,190.39897 -2.0415,11.08139"
+       id="path16-6-03-0-1-1-7"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" /><g
+       id="layer1-8-3-2-3"
+       transform="translate(-21.350859,177.56278)"><g
+         id="g4-4-5-8-7"
+         transform="translate(-19.049997,-15.610417)"><ellipse
+           style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+           id="path4-88-6-9-4"
+           cx="215.10498"
+           cy="-32.294598"
+           rx="4.0127978"
+           ry="3.7818453" /><text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+           x="213.57179"
+           y="-30.269955"
+           id="text4-3-2-7-5"><tspan
+             sodipodi:role="line"
+             id="tspan4-87-9-36-2"
+             style="stroke-width:0.546"
+             x="213.57179"
+             y="-30.269955">8</tspan></text><g
+           id="layer1-8-3-2-4"
+           transform="translate(21.166667,24.60625)"><g
+             id="g4-4-5-8-3"
+             transform="translate(-19.049997,-15.610417)"><ellipse
+               style="opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.546;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+               id="path4-88-6-9-0"
+               cx="140.80692"
+               cy="33.574203"
+               rx="4.0127978"
+               ry="3.7818453" /><text
+               xml:space="preserve"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5px;font-family:'Noto Sans Bhaiksuki';-inkscape-font-specification:'Noto Sans Bhaiksuki, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:0.9;fill:#0c0000;fill-opacity:1;stroke:#f8fefd;stroke-width:0.545999;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+               x="139.27373"
+               y="35.598846"
+               id="text4-3-2-7-7"><tspan
+                 sodipodi:role="line"
+                 id="tspan4-87-9-36-8"
+                 style="stroke-width:0.546"
+                 x="139.27373"
+                 y="35.598846">2</tspan></text><text
+               xml:space="preserve"
+               transform="matrix(0.26458333,0,0,0.26458333,65.445474,-128.0395)"
+               id="text8"
+               style="font-stretch:semi-condensed;font-size:37.7953px;font-family:Sans;-inkscape-font-specification:'Sans, Semi-Condensed';writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect8);display:inline;fill:#730000;fill-opacity:1;fill-rule:evenodd;stroke:#f6fbf9;stroke-width:4.02142;stroke-linejoin:round;stroke-dashoffset:0.45" /><text
+               xml:space="preserve"
+               style="font-stretch:semi-condensed;font-size:10px;font-family:Sans;-inkscape-font-specification:'Sans, Semi-Condensed';writing-mode:lr-tb;direction:ltr;fill:#730000;fill-opacity:1;fill-rule:evenodd;stroke:#f6fbf9;stroke-width:1.064;stroke-linejoin:round;stroke-dashoffset:0.45"
+               x="80.179192"
+               y="-27.879965"
+               id="text9"><tspan
+                 sodipodi:role="line"
+                 id="tspan9"
+                 style="stroke-width:1.064"
+                 x="80.179192"
+                 y="-27.879965" /></text></g></g></g></g><image
+       width="60.589584"
+       height="11.1125"
+       preserveAspectRatio="none"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOUAAAAqCAYAAABMd5x3AAAABHNCSVQICAgIfAhkiAAACkZJREFU&#10;eJztnHmQXFUVh7/uzEySmSEhAUyAmMgqkSpcQDZxiSICRgFZTFCkUMQERUBQS9xXKFDQqkgoLSgr&#10;EDFqEFRUIEGQJSr7phFEApIQCCQOWSaTzMzPP363a5pOd2e6+75OU3W/qlc96ff6nXfPvefes9yX&#10;nCQSiUTrkN/WD5BIJF5JMspEosVIRplItBjJKBOJFiMZZSLRYiSjTCRajGSUiUSLkYwykWgxklEm&#10;Ei1GMspEosWIbZS7At8FHgBeBvqAFcCNwEygPaKsfYE1gIZxDAK/J357u4HzgPuAdcAG4DHgQmBi&#10;ZFmjgbvZelsHgE9Ell2OycCTQebNwIgMZIwETgMWAavweFoF/BmYjXWSBV3AWcAdwGpgI/Ac8Afg&#10;JKAtI7lG0nCPdkk36JW8JGlSOH+4pJWSBiX1SLpD0k2SlkrqlzQg6UZJ42qQWe3YR9IySf/bytEb&#10;num3kvKRZCNpV0l3h3sPSFoV2j8Qvlsqaa+I8rokPRLuva5Ke1dLOiWi3HJHm6Srw7NI0s2SRkSW&#10;MUHSoiJ9rpe0vKg/ByXdJWmXyHJ3k3RPkYy1klZI6gttHZA0X1JnuH5ieK5iFgUd1fUMtVxcMMp+&#10;SddJukjS1ySNDQ/2eHjgX0naoeS3R8qDdiD8LhdZkZWO8UHBvZKOi3jfkZKuD532kKRDi9q0v6SH&#10;w7mFkjoiyRwjT0IbJb2vSfqrdMwMz7E+tDO2UbbJA39Q0nOSZhTpcbSkMyW9LI+nKxVvsu2UdEuQ&#10;+7SkYzVkXOMkXSJpk6TNks4K33dLukAe17+Q7aPpRrlJ0vEl544ND7pGXsFKf5uTdFlo7P2StovY&#10;gZWOvKTvBCXNC88f697HyINyuaSpZc4fJul2SXMkbR9J5s7yjL1e0iFN0F+lY4qk/0h6UdIVsmHE&#10;Nsr95FW/T9JJZc7nJF0oj6fl8qIQQ+575Ql8g6Qjypwv2MCgpFu15YR7hGwHDRllLN94DI7XeoCX&#10;ynnJwDPhs4u4sWUlDgA+jWOBbwKbI923DTgZ6ADmA/8sc82dwDsjyStQ0Nsgjte3Be3A93A8+S0c&#10;32XBaOB2PF4WlTkvHFeeB2wHjAdWRpDbjeP2l4ElZc5vDs81HdgZ98mmCHJfQSyj/DfQC4wDdmHL&#10;zsoBu4fPp3FSJEtG4UHTHT6fjHjvscCBOOlwU8T7bo2CUfaTvf4q8WHgeDxgf4gnpyz4G3DMVq7p&#10;wONpM7A+ktzfhKMahWRhH+6L6MTKRt6HB2g3cBE2zGKOAmZgw72cDGaXEo4F3gU8BFwV+d5TgB1w&#10;pvUJYBLwZeB3wC1B3oeIn6HrwgOxF5gAfB1YDDyKjeQK4BA8ULNgN+DbuN3ns+1Wa/DkNANnfB8A&#10;nm+S3A5gGtbxPWQ0OcYaOH3AGcBarKwngEfwQ78W2AN4FjgbuCGSzEqMxYMmB1yMXeqYvAa7V6tw&#10;B10C7FRyzanYYE4h3oDpwv01Hrg1/LuYg4GPA3OAL+E+iUXBbZ2EQ4G/R7x3LXQB+wHn4InvOdzW&#10;jU2SPwN4Dy6TXI7d6OjErNv14HrVw9h9PAg3YG88QO7A8VfW///IccAb8ep9Ywb3H4sNfifgMmx8&#10;b8Zt3hkPmB7gcNxxIyPKzePZeilwIl6xO7E7vTCc/yzweeKumDOxXpcAPyL7PixlFq6/rgPuAt4G&#10;zA2f9zTpGabjtueAb+AVOhNiGWUHnqHn4Zn8o8COeEDugwfn8cBtbD1WaIQu4FPh7yuJF2sU04Y7&#10;phsnIU4FHsQTz0rccZ/BLvpReAWLwV+xDt8PvAP4NZ6xe/HAPBm4FvfpbLyqxWAP7Lauxx7I2kj3&#10;rYVBbJSFyWAn4FCs31iTXiXywCexbjtxjmJuphJrSNVWK4mcGNLXz4d0drkU9lfl8sRSbVnHjHUU&#10;UtrL5BJCFjJOCO3YKOmoCteMkfRYSJ1/JaPnKHccINfv+hSnLtshaYGc5r9AW9aXZymbkkilo03e&#10;kHG+hjZqzJc0KiN5oyRdGtq/VtIZql4TjVISibFSjsD+fTteCR8tZ/t4Zu8BXge8NYLcUvLYpRuJ&#10;Y66sgv+X8KzdT+U0fC9DGd9JZJd8KeUprON2tky21cNM7NncxrZxW0vpx/mK7wMnYHf2BOw9xGY8&#10;Xh3PBl7AXspP8KqdKTESPe14zyvAcip33Brs4o0l/r5QgO1x4qUfZ4KzUt4K7MJ14rZUoqCHzDux&#10;iDyeAETjddnRwJm4f/fCsVwp44O8g3EMvwk4t8K1sbkXJxMPBd4OXEe8SWMc8HPgCByanIzj+KYQ&#10;wygH8coATjxUYgyOPYXT6rHZF08O68g2+P8vsAwndw7Eq0gpI3EJAYY2TTRCHjgat/FBKtdHd8eT&#10;0+YgtxFy2AvK4zLQlCrXboeTa33h70blnos3fj+BM8qVJpiCB9LRoMxixgA/wwb5F5xxjbExYdjE&#10;cF8343ogeMbcscJ1B+GVZT3wjwhyS9kfG8MzwIsZ3L/ABuD68PdplF/1p+HVpRfv7mmUHC7cX4hL&#10;E+PKXNOGy1Kd2GO5v0GZG/CuqFyVYzaelG8J8kcBf2pQbmHSPgD4APCmCtftDUwN18fK6udxzXk6&#10;zq423SALD9EoAq7BsdaeOAs7oeSaw3DWagTutH8VnesAfozT7RdTX/yVwx2Uw+7lcLKuE/CrOEtw&#10;7FQLV+FdTHvjtu8Vvs/jjOAcPEEsZstVe3aQuRCvasNhAMcz6/AgnQe8vuj8RFyeOSVcOwfHQQVi&#10;6Lge6tXx9cDjeNWaj42zsDWzDZebrsH6W4FfyyumHh2DJ4JZePyczTYwSIi3eeBhXAaYi5Mt03HC&#10;Zy1OdOyJB+wSvF+x2B3JAW/AK+nzDMVEtdDGUGLjBYYXx3UAb8GbAWpNiqzA7ywuwLXYx3AhezRD&#10;nsJ9+J280iL+ZNzWp6hN/3cBXwB+gPV7NG5rPzbKNhzTXYoNsJgYOq6HenW8Euv3Wjx2bsAbBHqw&#10;e9wZrluD9zc/VfL7enScAz4W7l94/7YaG3HyJ3r8HHMr2AK8KszC/vhUPEh7sG++ALia6vFkvUmR&#10;PK4bQn21yXrk3om3tX0OZ/8mYwO8F/glXtmqbUUbpDbDGMRb6e7GCZhpeLcU2GW/E/gpHiTV7tvM&#10;xFMjcpfgkOR0vFJOxfXJXrwI3IwXgVKDLJVZi45HMxRLV0vigSecbF52rqF+Uq1OGaP+tFB+xapZ&#10;71oivyO3TNLpTZSJpPPkdy7HNlFm0nH2R8vUKWPQhWfCx2luLWz3IHtZE2WOwHHhcGPfWCQdv0po&#10;FaOchpMCi5soM4fT7qvJcB9jGSYD7wb+SEav/lQg6fhVQj0+cR74CN6VswHv9GjkTYzCJusv4nis&#10;WYzCpYNzKP9idlZMxDq7uokyk46zoxu/BDAG71ZrOLOdk4btybTjrXIfLPpuNS4aP9vogyQSr1Im&#10;4kx7cXZ5MXAkda7StRhlIpFoAq0SUyYSiUAyykSixUhGmUi0GMkoE4kWIxllItFiJKNMJFqMZJSJ&#10;RIvxf6bM2EuJ/DEAAAAAAElFTkSuQmCC&#10;"
+       id="image1"
+       x="34.172718"
+       y="160.64784" /><image
+       width="60.589584"
+       height="11.1125"
+       preserveAspectRatio="none"
+       xlink:href="data:image/png;base64,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&#10;RIvxf6bM2EuJ/DEAAAAAAElFTkSuQmCC&#10;"
+       id="image1-8"
+       x="34.172718"
+       y="160.64784" /><g
+       id="layer1-0"
+       transform="translate(-0.51259597,-56.091233)"><text
+         xml:space="preserve"
+         style="font-stretch:semi-condensed;font-size:5.5px;font-family:Sans;-inkscape-font-specification:'Sans, Semi-Condensed';writing-mode:lr-tb;direction:ltr;fill:#757324;fill-opacity:0.148398;fill-rule:evenodd;stroke:#f6fbf9;stroke-width:1.064;stroke-linejoin:round;stroke-dashoffset:0.45"
+         x="39.282272"
+         y="109.8642"
+         id="text10"><tspan
+           sodipodi:role="line"
+           id="tspan10"
+           style="stroke-width:1.064"
+           x="39.282272"
+           y="109.8642" /><tspan
+           sodipodi:role="line"
+           style="stroke-width:1.064"
+           id="tspan11"
+           x="39.282272"
+           y="116.7392" /><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:5.5px;font-family:Sans;-inkscape-font-specification:'Sans, Semi-Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.064"
+           x="39.282272"
+           y="123.6142"
+           id="tspan12">[5, 3, 7, 2, 4, 6, 8]</tspan></text></g></g></svg>
