@@ -217,7 +217,10 @@ Each memory level has unique parameters that determine how efficiently a particu
 | **SSD/Disk (swap)** | 256 GB – 4 TB | ~50–200 μs (SSD) / ~10 ms (HDD) | ~0.5–5 GB/s | OS | 1000×
 |===
 
+[IMPORTANT]
+====
 **Important:** The difference between register access time (< 1 ns) and RAM access time (~100 ns) is **two orders of magnitude**. In the time the CPU waits for data from RAM, it could have executed **hundreds** of operations. This is precisely why data structures that are "cache-friendly" outperform even those with better theoretical complexity.
+====
 
 === 10.2.2. Key Concepts: Cache Line and Cache Miss
 
