@@ -184,15 +184,13 @@ NOTE: First identify which data is shared, which operations modify it, and which
 
 Conclusion
 
-Choosing a data structure is essentially a process of progressively narrowing down the set of viable solutions. Functional requirements determine which structures are even capable of solving the problem; the operation profile, the nature of data mutations, and the constraints of the computing environment then allow the remaining candidates to be compared against one another. The recommendations in the tables above should be treated as guidelines whose applicability depends on the specific conditions at hand.
+The five-step algorithm presented here makes it possible to identify data structures that meet the requirements of the task at hand. Functional requirements define the set of viable solutions, while the operation profile, the nature of data mutations, and the constraints of the computing environment help compare the remaining candidates. The result is a well-grounded choice of one or more candidates, which must then be validated on representative data and workloads by measuring operation execution time and memory consumption.
 
-The outcome of the five-step process is a well-grounded choice of one or more candidates. The final decision should be validated on representative data and workloads, measuring operation execution time and memory consumption. If the results fail to meet requirements, the initial assumptions should be revisited and the selection process repeated.
+Applying the hardware filter introduced in the fourth step requires understanding how the elements of a structure are placed in computer memory and how the processor accesses them. Sequentially reading adjacent array elements versus following references between list nodes can incur substantially different time costs, even when processing the same number of elements.
 
-To understand why structures with identical theoretical complexity can differ substantially in actual performance, we will next examine the impact of physical memory organization.
+The next subsection therefore examines the memory hierarchy and its impact on data structure performance. This will help explain why the theoretical advantages of a structure do not always translate into faster performance in a real computing environment.
 
-
-
-== 10.3. Memory Hierarchy and Its Impact on Data Structure Performance
+== 10.2. Memory Hierarchy and Its Impact on Data Structure Performance
 
 Any practical choice of a data structure in a real computing system must account not only for the abstract algorithmic complexity (Big-O) but also for the **physical organization of memory**. Ignoring this factor is one of the primary reasons why a theoretically optimal structure often performs slower in practice than a "simpler" alternative.
 
@@ -202,7 +200,7 @@ In modern computers, memory is organized as a **hierarchical pyramid** (Figure 1
 .*Figure 10.2. Memory hierarchy of a modern computer*
 image::section_10/Fig10_2_Memory.png[width=60%, link=self, window="_blank"]
 
-=== 10.3.1. Characteristics of Memory Levels
+=== 10.2.1. Characteristics of Memory Levels
 
 Each memory level has unique parameters that determine how efficiently a particular data structure interacts with it. The figures below are **order-of-magnitude estimates for a typical modern system**, not measurements of any specific processor — actual numbers vary with microarchitecture, process node, and generation of hardware.
 
@@ -221,7 +219,7 @@ Each memory level has unique parameters that determine how efficiently a particu
 
 > **Important:** The difference between register access time (< 1 ns) and RAM access time (~100 ns) is **two orders of magnitude**. In the time the CPU waits for data from RAM, it could have executed **hundreds** of operations. This is precisely why data structures that are "cache-friendly" outperform even those with better theoretical complexity.
 
-=== 10.3.2. Key Concepts: Cache Line and Cache Miss
+=== 10.2.2. Key Concepts: Cache Line and Cache Miss
 
 The CPU does not work with individual bytes but with fixed-size blocks called **cache lines** (typically 64 bytes). When a program accesses a variable, the entire cache line containing that variable is loaded into the cache.
 
@@ -234,7 +232,7 @@ The CPU does not work with individual bytes but with fixed-size blocks called **
 
 * **Linked lists and trees:** Nodes are scattered randomly across memory. Moving to the next node almost always causes a **cache miss**, because the adjacent node does not reside in the same cache line. The latency accumulates, and performance degrades by a factor of 5–20.
 
-=== 10.3.3. Prefetching Mechanism
+=== 10.2.3. Prefetching Mechanism
 
 Modern processors feature **hardware prefetchers** that analyze memory access patterns and proactively load data into the cache.
 
@@ -244,7 +242,7 @@ Modern processors feature **hardware prefetchers** that analyze memory access pa
 
 > **Conclusion:** If your data structure supports **sequential iteration** and you use it frequently in this mode, an array will be an order of magnitude faster than a tree or a list, even if the tree has O(log n) complexity and the array has O(n).
 
-=== 10.3.4. Practical Rule: The "Cache Filter"
+=== 10.2.4. Practical Rule: The "Cache Filter"
 
 When selecting a data structure, **always** ask yourself three questions:
 
@@ -260,7 +258,7 @@ When selecting a data structure, **always** ask yourself three questions:
    * Data fits in L3 (millions of elements) → The cache effect is maximized; structures with poor locality (lists) perform catastrophically.
    * Data does not fit in L3 (tens of millions) → The difference between arrays and trees becomes less critical because RAM is slow regardless.
 
-=== 10.3.5. Illustrative Example: Iterating 1 Million Elements
+=== 10.2.5. Illustrative Example: Iterating 1 Million Elements
 
 Consider three data structures, each containing 1 million integers. We perform a full iteration and measure time (estimate for a modern Intel Core i7):
 
@@ -278,7 +276,7 @@ Consider three data structures, each containing 1 million integers. We perform a
 
 > **Important:** This timing is only for iteration. If the structure is used for search (not iteration), the picture changes. A hash table provides O(1) search but will iterate 5× slower than a tree. Therefore, **the choice always depends on the dominant operation**.
 
-=== 10.3.6. Cache-Friendly Structures (Priority During Selection)
+=== 10.2.6. Cache-Friendly Structures (Priority During Selection)
 
 Based on memory hierarchy analysis, we can construct a **cache-locality rating** for major data structures:
 
@@ -296,7 +294,7 @@ Based on memory hierarchy analysis, we can construct a **cache-locality rating**
 | **Poor** (★☆☆☆☆) | Naive Linked List, AVL/RBT with standard new/malloc | Each node is a separate allocation, maximal fragmentation
 |===
 
-=== 10.3.7. Bridge to the DRAKON Decision Diagram
+=== 10.2.7. Bridge to the DRAKON Decision Diagram
 
 Understanding the memory hierarchy enables the introduction of a **new critical filter** into the data structure selection algorithm (see the DRAKON diagram in Section 10.5):
 
@@ -306,5 +304,38 @@ Understanding the memory hierarchy enables the introduction of a **new critical 
 
 This filter is inserted **after** the questions about operation frequency and **before** the questions about memory constraints, as shown in Figure 10.2 (see Section 10.5).
 
-[.text-center]
-*— End of Subsection 10.3 —*
+Based on the material in this subsection, the following procedure can be proposed for assessing the resources available for a specific task.
+
+.Procedure for Assessing Available Resources for a Specific Task
+[cols="1,1,1", options="header"]
+|===
+| What to Assess | What Needs to Be Determined | How It Affects the Decision
+
+| Data volume and expected growth
+| Number of elements, size of a single element, possible maximum volume
+| Helps assess whether the data will fit in available memory
+
+| Total memory consumption
+| Beyond the useful data itself: references, indices, reserved capacity, temporary copies, and auxiliary structures
+| Compact source data does not necessarily mean low memory consumption for the program as a whole
+
+| Available RAM
+| How much memory can be allocated to the program, accounting for the OS, runtime environment, and other processes
+| A margin should be left for data growth and peak consumption during operations
+
+| Working set and locality
+| Which portion of the data is actively used; whether accesses are sequential or reference-based
+| Helps assess the benefit of compact placement and the likelihood of data reuse from cache
+
+| Nature of memory and storage exchange
+| Whether bulk reads/copies predominate, or numerous scattered accesses
+| In the first case, throughput matters most; in the second, the latency of individual accesses
+
+| Parallel processing capability
+| Whether data and work can be split across executors; which data will remain shared
+| Indicates whether additional cores can be leveraged without excessive coordination overhead
+
+| Actual program metrics
+| Time for characteristic operations, peak memory consumption, behavior under increasing load
+| Allows preliminary estimates to be verified and implementations compared in the target environment
+|===
