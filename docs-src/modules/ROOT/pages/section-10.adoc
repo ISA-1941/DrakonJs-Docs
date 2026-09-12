@@ -6,7 +6,7 @@
 
 = Section 10. Data Structures Selection in Practice
 
-=== 10.1. Data Structure Selection Roadmap
+== 10.1. Data Structure Selection Roadmap
 
 Choosing an optimal data structure is a _multi-criteria decision problem_ that requires consideration of _functional requirements_, _data characteristics_, the _operation profile_, and _physical hardware constraints_. Functional requirements answer the question “What operations must be supported?”, the operation profile answers “How often and under what conditions will these operations be performed?”, and hardware constraints answer “What resources are available, and how do they affect performance?”
 
