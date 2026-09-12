@@ -243,7 +243,10 @@ Modern processors feature **hardware prefetchers** that analyze memory access pa
 
 * For **linked lists and trees**, the prefetcher is **useless**: pointer-based transitions are unpredictable, and the CPU cannot anticipate where the program will jump next.
 
-> **Conclusion:** If your data structure supports **sequential iteration** and you use it frequently in this mode, an array will be an order of magnitude faster than a tree or a list, even if the tree has O(log n) complexity and the array has O(n).
+[IMPORTANT]
+====
+**Conclusion:** If your data structure supports **sequential iteration** and you use it frequently in this mode, an array will be an order of magnitude faster than a tree or a list, even if the tree has O(log n) complexity and the array has O(n).
+====
 
 === 10.2.4. Practical Rule: The "Cache Filter"
 
@@ -277,7 +280,10 @@ Consider three data structures, each containing 1 million integers. We perform a
 | **Tree (depth-first traversal)** | Random (worse than list) | ~1–1.5 (double miss) | ~20× | ~20 ms
 |===
 
-> **Important:** This timing is only for iteration. If the structure is used for search (not iteration), the picture changes. A hash table provides O(1) search but will iterate 5× slower than a tree. Therefore, **the choice always depends on the dominant operation**.
+[IMPORTANT]
+====
+**Important:** This timing is only for iteration. If the structure is used for search (not iteration), the picture changes. A hash table provides O(1) search but will iterate 5× slower than a tree. Therefore, **the choice always depends on the dominant operation**.
+====
 
 === 10.2.6. Cache-Friendly Structures (Priority During Selection)
 
