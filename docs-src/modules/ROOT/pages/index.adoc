@@ -1,5 +1,5 @@
 [.text-justify]
-== Welcome to the DRAKON-JS Project
+== Welcome to the Data Structures and Algorithms DRAKON-JS Project
 
 All the things we know and understand are made up of something called
 data. Data represents unstructured information that enables us to analyze, 
@@ -54,6 +54,16 @@ data structures and the study of basic algorithms is carried out in the
 JavaScript programming language and is accompanied by explanatory
 illustrations. In a number of important cases, the algorithm
 visualization technology based on the Drakon graphical language is used.
+
+Particular attention is given to the engineering judgment involved in choosing 
+data structures and algorithms. Readers are encouraged to consider the operations 
+required by a task, their relative frequency, the available computing resources, 
+and the constraints of the execution environment. This perspective connects theoretical 
+complexity analysis with practical questions: how data is organized in memory, how memory 
+access affects performance, and which trade-offs are acceptable for a particular application. 
+
+The aim is to help readers develop the ability to justify their choices and recognize the conditions
+ under which those choices should be reconsidered.
 
 *SECTION 1* reveals the meaning of the main concepts in the discipline
 Data Structures and Algorithms: data, data type, abstract data types,
@@ -112,6 +122,11 @@ structures – graphs. Basic concepts of graph theory and their basic
 types are given. Algorithms of representation of graphs, their
 traversal, choice of path between vertices are considered.
 
-*SECTION 10* provides basic information about data structure selection, 
-including criteria for choosing appropriate data structures based 
-on the requirements of the application.
+*SECTION 10* brings together the preceding material through an engineering 
+approach to selecting data structures and algorithms. It presents a five-step 
+selection procedure that connects application requirements and operation profiles 
+with the capabilities and limitations of candidate structures. It then examines how 
+data is represented in computer memory, explaining the practical significance of
+ memory hierarchy, cache behavior, and data locality, with attention to JavaScript. 
+ The section helps readers assess the resources available to them and understand why 
+ theoretical complexity alone is insufficient to predict practical performance.
