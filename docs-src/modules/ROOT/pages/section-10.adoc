@@ -198,7 +198,7 @@ In modern computers, memory is organized as a **hierarchical pyramid** (Figure 1
 
 [.text-center]
 .*Figure 10.2. Memory hierarchy of a modern computer*
-image::section_10/Fig10_2_Memory.png[width=60%, link=self, window="_blank"]
+image::section_10/Fig10_2_Memory.svg[width=60%, link=self, window="_blank"]
 
 === 10.2.1. Characteristics of Memory Levels
 
