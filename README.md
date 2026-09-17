@@ -1,8 +1,6 @@
 **Dear Readers,**
-
-I graduated from the Moscow Power Engineering Institute in 1966, attending a lecture by Professor Tetelbaum on the binary number system 
-as the foundation of computer operation at a time when the institute offered no courses in computing or programming, and the first computer 
-I saw—the Ural-1—performed about 100 operations per second. Today, sixty years later, as an 85-year-old retiree, I am pleased to share my book,
+I graduated from the Moscow Power Engineering Institute in 1966. The first computer I saw—the Ural-1—performed about 100 operations per second.
+Today, sixty years later, as an 85-year-old retiree, I am pleased to share my book,
  ***Data Structures and Algorithms: A Hybrid DrakonTech & JavaScript Approach***.
 In this book, I explore how visual tools—mind maps and DRAKON diagrams—can help readers understand data structures and algorithms, 
 making the logic of algorithms clearer while introducing an engineering approach to their selection based on problem requirements and 
@@ -27,9 +25,9 @@ I wrote this book during the ongoing war, amid air-raid sirens and daily drone a
 I would be deeply grateful for any financial contribution to help our family evacuate to safety.
 
 
-Completing this book does not mark the end of my work. I intend to continue my research into the foundations of neuroconstructivist pedagogy, 
+**Completing this book does not mark the end of my work. I intend to continue my research into the foundations of neuroconstructivist pedagogy, 
 with a particular focus on developing algorithmic thinking in the age of artificial intelligence. The central ideas of this research are presented in my article, 
-**“Neuroconstructivist Competence in the Age of AI”***.
+**“Neuroconstructivist Competence in the Age of AI”***.**
 ---
 
 ### 🤝 How to Support Our Evacuation & Future Research
