@@ -24,11 +24,11 @@ I wrote this book during the ongoing war, amid air-raid sirens and daily drone a
  my six-month-old granddaughter, and I must seek a safer place to live. If you find this work useful and are able to help, 
 I would be deeply grateful for any financial contribution to help our family evacuate to safety.
 
-
-**Completing this book does not mark the end of my work. I intend to continue my research into the foundations of neuroconstructivist pedagogy, 
+**
+Completing this book does not mark the end of my work. I intend to continue my research into the foundations of neuroconstructivist pedagogy, 
 with a particular focus on developing algorithmic thinking in the age of artificial intelligence. The central ideas of this research are presented in my article, 
-**“Neuroconstructivist Competence in the Age of AI”***.**
----
+**“Neuroconstructivist Competence in the Age of AI”***.
+---**
 
 ### 🤝 How to Support Our Evacuation & Future Research
 
