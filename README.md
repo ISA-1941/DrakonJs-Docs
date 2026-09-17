@@ -7,18 +7,26 @@ I saw—the Ural-1—performed about 100 operations per second. Today, sixty yea
 In this book, I explore how visual tools—mind maps and DRAKON diagrams—can help readers understand data structures and algorithms, 
 making the logic of algorithms clearer while introducing an engineering approach to their selection based on problem requirements and 
 available resources. 
+
 Another core goal was to demonstrate the capabilities of DrakonTech, which enables users to represent algorithms visually as DRAKON diagrams 
 and automatically generate executable JavaScript code directly from them.
+
 The book is freely available. Editable DRAKON diagrams for use in DrakonTech, together with the automatically generated JavaScript code, 
 are published on GitHub so that readers can study, modify, run implementations, and conduct their own experiments.
 Given the scope and volume of this work, some errors or oversights are inevitable. As a non-native English speaker, 
 I would also be deeply grateful for any feedback, edits, or suggestions regarding the quality and phrasing of the English text. 
+
+
 I warmly welcome readers' feedback, corrections, and constructive critiques—whether through 
 **[GitHub Issues](https://github.com/ISA-1941/DrakonJs-Docs/issues)** 
 or direct communication—so that we may refine and improve this material together for the community.
+
+
 I wrote this book during the ongoing war, amid air-raid sirens and daily drone attacks. As the front line draws closer, my daughter,
  my six-month-old granddaughter, and I must seek a safer place to live. If you find this work useful and are able to help, 
 I would be deeply grateful for any financial contribution to help our family evacuate to safety.
+
+
 Completing this book does not mark the end of my work. I intend to continue my research into the foundations of neuroconstructivist pedagogy, 
 with a particular focus on developing algorithmic thinking in the age of artificial intelligence. The central ideas of this research are presented in my article, 
 **“Neuroconstructivist Competence in the Age of AI”***.
