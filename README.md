@@ -6,9 +6,7 @@
 **[Read the book online — freely available](https://ISA-1941.github.io/DrakonJs-Docs/)**
 
 <p align="center">
-  <img src="Cover_ReadMe.svg"
-       alt="Data Structures and Algorithms — book cover"
-       width="320">
+  <img src="./Cover_ReadMeGrey.svg" alt="Data Structures and Algorithms — book cover" width="320">
 </p>
 
 ## About the book
