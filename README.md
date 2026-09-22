@@ -6,7 +6,7 @@
 **[Read the book online — freely available](https://ISA-1941.github.io/DrakonJs-Docs/)**
 
 <p align="center">
-  <img src="Cover_ReadMe.svg" alt="Book cover featuring a symbolic dragon, a DRAKON diagram, and automatically generated JavaScript" width="640">
+  <img src="Cover_ReadMeGrey.svg" alt="Book cover featuring a symbolic dragon, a DRAKON diagram, and automatically generated JavaScript" width="640">
 </p>
 
 ## About the book
