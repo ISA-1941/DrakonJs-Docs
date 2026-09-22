@@ -13,7 +13,7 @@
 
 This book explores data structures and algorithms through a hybrid approach that combines DRAKON visual programming with JavaScript. It is intended primarily for university students studying these subjects, and for teachers and programmers interested in a visual approach to understanding and implementing algorithms.
 
-The central idea is to make the logic of an algorithm visible and connect it directly to executable code. Readers can examine a DRAKON diagram, edit it in DrakonTech, generate JavaScript, and experiment with the resulting program.
+The central idea is to make the logic of an algorithm visible and connect it directly to executable code. Readers can examine a DRAKON-diagram, edit it in DrakonTech, generate JavaScript, and experiment with the resulting program.
 
 ## From a diagram to a working program
 
