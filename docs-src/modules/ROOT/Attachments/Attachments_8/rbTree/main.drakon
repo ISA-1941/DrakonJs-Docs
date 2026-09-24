@@ -95,13 +95,18 @@
         },
         "34": {
             "type": "action",
-            "one": "35",
+            "one": "36",
             "content": "values = Array.from(uniqueValues)"
         },
         "35": {
             "type": "action",
             "one": "32",
             "content": "console.log('value :', values)"
+        },
+        "36": {
+            "type": "action",
+            "one": "35",
+            "content": "values[0] = 8\nvalues[1] = 42\nvalues[2] = 90"
         }
     }
 }

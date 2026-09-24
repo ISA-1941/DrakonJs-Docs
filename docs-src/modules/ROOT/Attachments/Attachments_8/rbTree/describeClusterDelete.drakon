@@ -12,7 +12,7 @@
         },
         "3": {
             "type": "action",
-            "one": "9",
+            "one": "29",
             "content": "nullNode = tree.nullNode"
         },
         "4": {
@@ -24,11 +24,6 @@
             "type": "action",
             "one": "28",
             "content": "parts = []"
-        },
-        "9": {
-            "type": "action",
-            "one": "24",
-            "content": "wrapper = {description: \"\", nodes: {}}"
         },
         "10": {
             "type": "action",
@@ -77,7 +72,7 @@
         "18": {
             "type": "action",
             "one": "11",
-            "content": "parts.push(isLeft ? \"z←P\": \"z→P\")\nparts.push(`P:${P.color}`)\nparts.push(\n    `s:${s.color}, ${isLeft ? \"s→P\" : \"s←P\"}`\n)\nparts.push(\n    `s_L:${wrapper.nodes.s_L.color}`\n)\nparts.push(\n    `s_R:${wrapper.nodes.s_R.color}`\n)"
+            "content": "parts.push(isLeft ? \"z←P\": \"z→P\")\nparts.push(`P:${P.color}`)\nparts.push(\n    `s:${s.color}, ${isLeft ? \"s→P\" : \"s←P\"}`\n)\nparts.push(`:${wrapper.nodes.s_L.color}`)\nparts.push(\n    `s_R:${wrapper.nodes.s_R.color}`\n)"
         },
         "21": {
             "type": "action",
@@ -93,11 +88,6 @@
             "type": "action",
             "one": "1",
             "content": "return wrapper"
-        },
-        "24": {
-            "type": "action",
-            "one": "7",
-            "content": "nodes = {z: node, P: P}"
         },
         "25": {
             "type": "question",
@@ -120,6 +110,11 @@
             "type": "action",
             "one": "4",
             "content": "console.log(\n    \"Node analyze:\",\n    node ? node.key: \"UNDEFINED\"\n)"
+        },
+        "29": {
+            "type": "action",
+            "one": "7",
+            "content": "wrapper = {\n    description: '',\n    nodes: {z: node}\n};"
         }
     },
     "keywords": {

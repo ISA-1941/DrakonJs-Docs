@@ -32,6 +32,63 @@ function bstDelete(tree, node) {
         x = y.right;
         console.log(`bstDelete: x set to y.right: ${ x ? x.key : 'null' }`);
     }
+    x.parent = y.parent;
+    if (y.parent === nullNode) {
+        tree.root = x || nullNode;
+        console.log(`bstDelete: set tree.root to ${ x ? x.key : 'null' }`);
+    } else {
+        if (y === y.parent.left) {
+            y.parent.left = x || nullNode;
+            console.log(`bstDelete: set y.parent.left to ${ x ? x.key : 'null' }`);
+        } else {
+            y.parent.right = x || nullNode;
+            console.log(`bstDelete: set y.parent.right to ${ x ? x.key : 'null' }`);
+        }
+    }
+    if (y !== node) {
+        console.log(`bstDelete: copying key from ${ y.key } to ${ node.key }`);
+        node.key = y.key;
+    }
+    if (y.color === 'B') {
+        console.log(`bstDelete: y is black, returning x for fixing: ${ x ? x.key : 'null' }`);
+        return x || nullNode;
+    }
+    console.log('bstDelete: y is red, no fix needed, returning nullNode');
+    return nullNode;
+}
+function bstDeleteOld(tree, node) {
+    var mes1, mes2, message, nullNode, x, y;
+    nullNode = tree.nullNode;
+    console.log(`bstDelete: starting for node ${ node.key }`);
+    if (!node || node === nullNode || node === undefined) {
+        console.log('bstDelete: invalid node, returning nullNode');
+        return nullNode;
+    }
+    y = node;
+    mes1 = `bstDelete: node ${ node.key }`;
+    mes2 = ` has left: ${ node.left.key }, right: ${ node.right.key }`;
+    message = mes1 + mes2;
+    console.log(message);
+    if (node.left === nullNode || node.right === nullNode) {
+        y = node;
+        console.log(`bstDelete: y set to original node ${ y.key }`);
+    } else {
+        message = `bstDelete: both children exist, finding min in right subtree`;
+        console.log(message);
+        y = findMin(tree, node.right);
+        if (!y || y === nullNode || y === undefined) {
+            console.log('bstDelete: findMin returned invalid, using original node');
+            y = node;
+        }
+        console.log(`bstDelete: y set to ${ y.key }`);
+    }
+    if (y.left !== nullNode) {
+        x = y.left;
+        console.log(`bstDelete: x set to y.left: ${ x.key }`);
+    } else {
+        x = y.right;
+        console.log(`bstDelete: x set to y.right: ${ x ? x.key : 'null' }`);
+    }
     if (x) {
         if (x === null) {
             x = tree.nullNode;
@@ -95,8 +152,7 @@ function bstInsert(tree, key) {
 function deleteNode(tree, key) {
     var fixNode, nodeToDelete, nullNode, wrapper;
     nullNode = tree.nullNode;
-    nodeToDelete = findNode(tree, key);  
-    console.log(`nodeToDelete = ${ nodeToDelete ? nodeToDelete.key : 'undefined' }`);
+    nodeToDelete = findNode(tree, key);
     if (nodeToDelete === nullNode || !nodeToDelete) {
         console.log(`Node with key ${ key } not found`);
         return;
@@ -104,15 +160,13 @@ function deleteNode(tree, key) {
     fixNode = bstDelete(tree, nodeToDelete);
     if (fixNode) {
         wrapper = describeClusterDelete(tree, fixNode);
-        console.log(`Дескриптор: [${ wrapper }]`);
         console.log(`Старт балансировки. Образ кластера: [${ wrapper.description }]`);
         fixDelete(tree, wrapper);
     }
     return nodeToDelete;
 }
-
 function describeClusterDelete(tree, node) {
-    var P, isLeft, nodes, nullNode, parts, s, wrapper;
+    var P, isLeft, nullNode, parts, s, wrapper;
     if (!node) {
         console.error('Warning: undefined узла');
         return null;
@@ -120,27 +174,24 @@ function describeClusterDelete(tree, node) {
     nullNode = tree.nullNode;
     wrapper = {
         description: '',
-        nodes: {}
+        nodes: { z: node }
     };
     parts = [];
     console.log('Node analyze:', node ? node.key : 'UNDEFINED');
     P = node.parent;
     parts.push(`z:${ node.color }`);
-    
     if (P !== tree.nullNode) {
         wrapper.nodes.P = P;
         isLeft = node === P.left;
         s = isLeft ? P.right : P.left;
         wrapper.nodes.s = s;
-        wrapper.nodes.s.l = s.left;
-        wrapper.nodes.s.r = s.right;
-        
-        // Замена стрелок на < и >
-        parts.push(isLeft ? 'z<P' : 'z>P');
+        wrapper.nodes.s_L = s.left;
+        wrapper.nodes.s_R = s.right;
+        parts.push(isLeft ? 'z\u2190P' : 'z\u2192P');
         parts.push(`P:${ P.color }`);
-        parts.push(`s:${ s.color },${ isLeft ? 's>P' : 's<P' }`);
-        parts.push(`s.l:${ wrapper.nodes.s.l.color }`);
-        parts.push(`s.r:${ wrapper.nodes.s.r.color }`);
+        parts.push(`s:${ s.color }, ${ isLeft ? 's\u2192P' : 's\u2190P' }`);
+        parts.push(`:${ wrapper.nodes.s_L.color }`);
+        parts.push(`s_R:${ wrapper.nodes.s_R.color }`);
     } else {
         wrapper.description = `r:${ node.color }`;
         return wrapper;
@@ -159,16 +210,16 @@ function describeClusterInsert(tree, node) {
     nodes.P = P;
     if (P !== nullNode) {
         xToP = x === P.left ? 'x<P' : 'x>P';
-        parts.push(`${ xToP };P:${ P.color }`);
+        parts.push(`${ xToP }; P:${ P.color }`);
         G = P.parent;
         nodes.G = G;
         if (G !== nullNode) {
             pToG = P === G.left ? 'P<G' : 'P>G';
-            parts.push(`${ pToG };G:${ G.color }`);
+            parts.push(`${ pToG }; G:${ G.color }`);
             U = P === G.left ? G.right : G.left;
             nodes.U = U;
             if (U !== nullNode) {
-                parts.push(`U:${U.color }`);
+                parts.push(`U:${ U.color }`);
             } else {
                 parts.push('U:null');
             }
@@ -227,7 +278,6 @@ function findNode(tree, key) {
     }
     return current;
 }
-
 function fixDelete(tree, wrapper) {
     var case1_1, case1_2, case2_1, case2_2, case2_3, case2_4, clusterMap, clusterString;
     if (wrapper == null) {
@@ -236,38 +286,29 @@ function fixDelete(tree, wrapper) {
         clusterString = wrapper.description;
     }
     clusterMap = wrapper.nodes;
-    console.log(`Current cluster image for delete: [${ wrapper.description }]`);
-    
-    if ((clusterString == 's.r:B' || clusterString == 's.r:R' || clusterString == 'z:R') && clusterMap.z) {
+    console.log(`Current Descriptor
+                            
+                            : [${ clusterString }]`);
+    if (clusterMap.z === tree.root || clusterMap.z.color === 'R') {
         clusterMap.z.color = 'B';
         return;
     }
-
-// Применение новой нотации < и > в шаблонах случаев
     case1_1 = 'z:B;z<P;P:B;s:R,s>P;s.l:B;s.r:B';
     case1_2 = 'z:B;z>P;P:B;s:R,s<P;s.l:B;s.r:B';
-    
-    if (clusterString == case1_1 || clusterString == case1_2) {
-        console.log(`Cluster  If: [${ wrapper.description }]`);
+    if (clusterString === case1_1 || clusterString === case1_2) {
         handleSiblingRotation(tree, wrapper);
-        return; 
     }
-    
     case2_1 = 'z:B;z<P;P:B;s:B,s>P;s.l:B;s.r:B';
     case2_2 = 'z:B;z>P;P:B;s:B,s<P;s.l:B;s.r:B';
     case2_3 = 'z:B;z<P;P:R;s:B,s>P;s.l:B;s.r:B';
     case2_4 = 'z:B;z>P;P:R;s:B,s<P;s.l:B;s.r:B';
-    
-    if (clusterString == case2_1 || clusterString == case2_2 || clusterString == case2_3 || clusterString == case2_4) {
+    if (clusterString === case2_1 || clusterString === case2_2 || clusterString === case2_3 || clusterString === case2_4) {
         handlepropagateDeficiency(tree, wrapper);
-        return;
     }
-    
     if (clusterString.includes('s.l:R') || clusterString.includes('s.r:R')) {
         handleDirectCapture(tree, wrapper);
     }
 }
-
 function fixInsert(tree, node) {
     var clusterString, wrapper;
     if (node === tree.root || node.parent.color === 'B') {
@@ -275,25 +316,41 @@ function fixInsert(tree, node) {
     }
     wrapper = describeClusterInsert(tree, node);
     clusterString = wrapper.description;
-    console.log(`!!! Current cluster image for insert: [${ clusterString }]`);
     if (clusterString.includes('U:R')) {
         handleRecolorInsert(tree, wrapper);
     } else {
         handleRotationInsert(tree, wrapper);
     }
 }
-
-function handlepropagateDeficiency(tree, wrapper) {
-    var clusterMap;
+function handleDirectCapture(tree, wrapper) {
+    var clustaerString, clusterMap, s;
     clusterMap = wrapper.nodes;
-    if (!clusterMap.P || !clusterMap.s) {
-        return;
+    clustaerString = clusterrapper.description;
+    s = clusterMap.s;
+    if (!(clusterMap.s == null)) {
+        clusterMap.s.color = 'R';
     }
-    clusterMap.s.color = 'R';
-    if (clusterMap.P.color === 'R') {
-        clusterMap.P.color = 'B';
+    if (clusterMap.includes('z<P') && clusterMap.s.r.color === 'B') {
+        clusterMap.s_L.color = 'B';
+        s.color = 'R';
+        rotateRight(tree, s);
+        s = clusterMap.P.right;
     } else {
-        fixDelete(tree, describeClusterDelete(tree, clusterMap.P));
+        if (clusterString.includes('z>P') && clusterMap.s.l.color === 'B') {
+            clusterMap.s.r.color = 'B';
+            s.color = 'R';
+            rotateLeft(tree, s);
+            s = clusterMap.P.left;
+        }
+    }
+    s.color = clusterMap.P.color;
+    clusterMap.P.color = 'B';
+    if (clusterString.includes('z<P')) {
+        s.right.color = 'B';
+        rotateLeft(tree, clusterrMap.P);
+    } else {
+        s.left.color = 'B';
+        rotateRight(tree, clusterrMap.P);
     }
 }
 function handleRecolorInsert(tree, wrapper) {
@@ -307,6 +364,32 @@ function handleRecolorInsert(tree, wrapper) {
     return fixInsert(tree, clusterMap.G);
 }
 function handleRotationInsert(tree, wrapper) {
+    var G, P, U, clusterMap, clusterString, top, x;
+    clusterString = wrapper.description;
+    clusterMap = wrapper.nodes;
+    P = wrapper.nodes.P;
+    G = wrapper.nodes.G;
+    U = wrapper.nodes.U;
+    x = wrapper.nodes.x;
+    top = P;
+    if (clusterString.includes('x>P') && clusterString.includes('P<G')) {
+        rotateLeft(tree, P);
+        top = x;
+    }
+    if (clusterString.includes('x<P') && clusterString.includes('P>G')) {
+        rotateRight(tree, P);
+        top = x;
+    }
+    top.color = 'B';
+    clusterMap.G.color = 'R';
+    if (clusterString.includes('P<G')) {
+        rotateRight(tree, G);
+    }
+    if (clusterString.includes('P>G')) {
+        rotateLeft(tree, G);
+    }
+}
+function handleRotationInsertOld(tree, wrapper) {
     var G, P, U, clusterMap, clusterString, x;
     clusterString = wrapper.description;
     clusterMap = wrapper.nodes;
@@ -314,10 +397,10 @@ function handleRotationInsert(tree, wrapper) {
     G = wrapper.nodes.G;
     U = wrapper.nodes.U;
     x = wrapper.nodes.x;
-    if (clusterString.includes('x>P; P<G')) {
+    if (clusterString.includes('x>P;P<G')) {
         rotateLeft(tree, P);
     }
-    if (clusterString.includes('x<P; P>G')) {
+    if (clusterString.includes('x<P;P>G')) {
         rotateRight(tree, P);
     }
     clusterMap.P.color = 'B';
@@ -329,56 +412,39 @@ function handleRotationInsert(tree, wrapper) {
         rotateLeft(tree, G);
     }
 }
-
 function handleSiblingRotation(tree, wrapper) {
-    var clusterMap, clusterString, zSaved;
+    var clusterMap, clusterString, wrapperUpdate, zSaved;
     clusterMap = wrapper.nodes;
     clusterString = wrapper.description;
-    if (!clusterMap.s) return;
-
+    if (!clusterMap.s) {
+        return;
+    }
     clusterMap.s.color = 'B';
     clusterMap.P.color = 'R';
+    if (clusterMap && clusterMap.z) {
+    }
     zSaved = clusterMap.z;
-
     if (clusterString.includes('z<P')) {
         rotateLeft(tree, clusterMap.P);
     } else {
         rotateRight(tree, clusterMap.P);
     }
-    // Рекурсивный вызов с обновленным дескриптором
-    fixDelete(tree, describeClusterDelete(tree, zSaved));
+    wrapperUpdate = describeClusterDelete(tree, zSaved);
+    fixDelete(tree, describeClusterDelete(tree, wrapperUpdate));
 }
-
-function handleDirectCapture(tree, wrapper) {
-    var clusterString, clusterMap, s;
+function handlepropagateDeficiency(tree, wrapper) {
+    var clusterMap;
     clusterMap = wrapper.nodes;
-    clusterString = wrapper.description; // Исправлена опечатка
-    s = clusterMap.s;
-
-    if (s && clusterString.includes('z<P') && s.right.color === 'B') {
-        s.left.color = 'B';
-        s.color = 'R';
-        rotateRight(tree, s);
-        s = clusterMap.P.right;
-    } else if (s && clusterString.includes('z>P') && s.left.color === 'B') {
-        s.right.color = 'B';
-        s.color = 'R';
-        rotateLeft(tree, s);
-        s = clusterMap.P.left;
+    if (!clusterMap.P || !clusterMap.s) {
+        return;
     }
-
-    s.color = clusterMap.P.color;
-    clusterMap.P.color = 'B';
-
-    if (clusterString.includes('z<P')) {
-        s.right.color = 'B';
-        rotateLeft(tree, clusterMap.P);
+    clusterMap.s.color = 'R';
+    if (clusterMap.P.color === 'R') {
+        clusterMap.P.color = 'B';
     } else {
-        s.left.color = 'B';
-        rotateRight(tree, clusterMap.P);
+        fixDelete(tree, describeClusterDelete(tree, clusterMap.P));
     }
 }
-
 function main() {
     var count, max, min, randomVal, tree, uniqueValues, val, values;
     tree = makeRBTree();
@@ -396,13 +462,17 @@ function main() {
         }
     }
     values = Array.from(uniqueValues);
+    values = [];
+    values[0] = 8;
+    values[1] = 42;
+    values[2] = 90;
     console.log('value :', values);
     for (val of values) {
         rbInsert(tree, val);
     }
     console.log('\nTree after inserts !!!:\n');
     printTree(tree, tree.root);
-    deleteNode(tree, values[4]);
+    deleteNode(tree, values[0]);
     console.log('\nTree after delete node  (FIXED):\n');
     printTree(tree, tree.root);
     setTimeout(() => {

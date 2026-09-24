@@ -1,6 +1,26 @@
 {
     "history": [
         {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/module.drakon",
+            "whenOpened": "2026-09-24T07:34:14.149Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/main.drakon",
+            "whenOpened": "2026-09-24T07:34:05.545Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/handleRotationInsert.drakon",
+            "whenOpened": "2026-09-24T07:12:47.127Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/rotateRight.drakon",
+            "whenOpened": "2026-09-24T07:12:40.017Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/rotateLeft.drakon",
+            "whenOpened": "2026-09-24T07:12:34.054Z"
+        },
+        {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/avlTree/rebalance.drakon",
             "whenOpened": "2026-09-04T20:15:29.141Z"
         },

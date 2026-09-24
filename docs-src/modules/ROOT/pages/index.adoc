@@ -2,8 +2,12 @@
 == Welcome to the Data Structures and Algorithms DRAKON-JS Project
 
 All the things we know and understand are made up of something called
-data. Data represents unstructured information that enables us to analyze, 
-learn, and create objects in the physical world... and even simulated environments.
+data. Data represents recorded facts, attributes, and relationships related 
+to objects and processes within a specific domain. To leverage data for solving 
+particular problems, it’s essential to organize it and establish its meaning 
+in the context of those challenges. Structuring and processing data lay the
+groundwork for deriving insights, uncovering patterns, and generating new knowledge.
+
 To structure this data in order to obtain new knowledge or new meanings, it is
 necessary to process them according to a certain plan of action. In a
 stricter definition, a data structure is a form of representation of the

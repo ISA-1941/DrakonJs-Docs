@@ -28,10 +28,10 @@
         },
         "30": {
             "type": "question",
-            "one": "48",
+            "one": "49",
             "two": "35",
             "flag1": 1,
-            "content": "clusterString == \"r:B\" || clusterString ==\n\"r:R\" || clusterString == \"z:R\""
+            "content": "clusterMap.z === tree.root || clusterMap.z\n.color === 'R'"
         },
         "35": {
             "type": "branch",
@@ -50,7 +50,7 @@
             "one": "38",
             "two": "9",
             "flag1": 1,
-            "content": "clusterString == case2_1 || case2_2 || case2_3\n|| case2_4"
+            "content": "clusterString === case2_1 || clusterString\n=== case2_2 || clusterString === case2_3\n|| clusterString === case2_4"
         },
         "38": {
             "type": "action",
@@ -75,7 +75,7 @@
             "one": "44",
             "two": "36",
             "flag1": 1,
-            "content": "clusterString == case1_1 || case1_2"
+            "content": "clusterString === case1_1 || clusterString\n=== case1_2"
         },
         "44": {
             "type": "action",
@@ -98,13 +98,6 @@
             "type": "action",
             "one": "25",
             "content": "return "
-        },
-        "48": {
-            "type": "question",
-            "one": "49",
-            "two": "35",
-            "flag1": 1,
-            "content": "clusterMap.z"
         },
         "49": {
             "type": "action",

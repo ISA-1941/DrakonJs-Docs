@@ -102,13 +102,25 @@
         },
         "23": {
             "type": "action",
-            "one": "41",
+            "one": "25",
             "content": "x = y.left;\nconsole.log(\n    `bstDelete: x set to y.left: ${x.key}`\n)"
         },
         "24": {
             "type": "action",
-            "one": "41",
+            "one": "25",
             "content": "x = y.right;\nconsole.log(\n    `bstDelete: x set to y.right: ${x ? x.key : 'null'}`\n)"
+        },
+        "25": {
+            "type": "question",
+            "one": "38",
+            "two": "27",
+            "flag1": 1,
+            "content": "x"
+        },
+        "27": {
+            "type": "action",
+            "one": "28",
+            "content": "console.log(\n    \"bstDelete: x is null, skipping parent assignment\"\n)"
         },
         "28": {
             "type": "question",
@@ -168,10 +180,17 @@
             "one": "1",
             "content": "console.log(\n    \"bstDelete: y is red, no fix needed, returning nullNode\"\n);\nreturn nullNode;"
         },
-        "41": {
+        "38": {
+            "type": "question",
+            "one": "39",
+            "two": "28",
+            "flag1": 1,
+            "content": "x === null "
+        },
+        "39": {
             "type": "action",
             "one": "28",
-            "content": "x.parent = y.parent"
+            "content": "x = tree.nullNode\nx.parent = y.parent;\nconsole.log(\n    `bstDelete: set x.parent to ${y.parent.key}`\n)"
         }
     },
     "keywords": {

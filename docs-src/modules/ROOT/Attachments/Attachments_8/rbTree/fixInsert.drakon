@@ -47,7 +47,7 @@
         "14": {
             "type": "action",
             "one": "6",
-            "content": "wrapper = describeClusterInsertNew(\n    tree,\n    node\n)"
+            "content": "wrapper = describeClusterInsert(\n    tree,\n    node\n)"
         }
     },
     "keywords": {
