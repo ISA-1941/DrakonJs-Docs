@@ -605,6 +605,12 @@ Table 8.3. Comparison of time and space complexities for tree operations
 | Delete | O(log n) | O(log n) | O(n)
 |===
 
+
+=== Computational Experiment
+
+xref:docs-src/modules/ROOT/attachments/trees/rbTree.js[Open rbTree.js]
+
+
 == 8.6. Conclusion
 
 Trees are one of the most important data structures in computer science, used to represent hierarchical relationships and organize data. They provide efficient search, insert, and delete operations, making them ideal for use in a variety of applications.
