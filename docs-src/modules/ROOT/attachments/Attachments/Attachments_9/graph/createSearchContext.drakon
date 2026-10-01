@@ -1,0 +1,27 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "1",
+            "content": "return {\n    graph: graph,\n    // Граф\n    \n    allPaths: [],\n    // Все найденные пути\n    \n    target: -1,\n    // Целевая вершина\n    \n    visited: [],\n    // Посещенные вершины\n    \n    currentPath: '',\n    // Текущий путь\n    \n    totalDistance: 0,\n    // Общее расстояние\n    \n    totalPrice: 0\n    // Общая стоимость\n}"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "graph"
+}

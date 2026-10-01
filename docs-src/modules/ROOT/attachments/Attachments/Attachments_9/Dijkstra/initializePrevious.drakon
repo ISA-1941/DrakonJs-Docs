@@ -1,0 +1,58 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "4"
+        },
+        "4": {
+            "type": "action",
+            "one": "6",
+            "two": "",
+            "content": "previous = {}"
+        },
+        "5": {
+            "type": "loopend",
+            "one": "9",
+            "two": "",
+            "content": ""
+        },
+        "6": {
+            "type": "loopbegin",
+            "one": "7",
+            "two": "",
+            "content": "i = 0; i < vertices.length; i++"
+        },
+        "7": {
+            "type": "action",
+            "one": "8",
+            "two": "",
+            "content": "vertex = vertices[i]"
+        },
+        "8": {
+            "type": "action",
+            "one": "5",
+            "two": "",
+            "content": "previous[vertex] = null "
+        },
+        "9": {
+            "type": "action",
+            "one": "1",
+            "two": "",
+            "content": "return previous"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "vertices"
+}

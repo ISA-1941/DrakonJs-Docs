@@ -1,0 +1,162 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "6",
+            "content": "Less than value"
+        },
+        "4": {
+            "type": "branch",
+            "one": "1",
+            "branchId": 5,
+            "content": "Exit"
+        },
+        "5": {
+            "type": "branch",
+            "one": "11",
+            "branchId": 2,
+            "content": "More than value"
+        },
+        "6": {
+            "type": "question",
+            "one": "7",
+            "two": "8",
+            "flag1": 1,
+            "content": "node === null"
+        },
+        "7": {
+            "type": "action",
+            "one": "8",
+            "content": "return null"
+        },
+        "8": {
+            "type": "question",
+            "one": "9",
+            "two": "5",
+            "flag1": 1,
+            "content": "value < node.value"
+        },
+        "9": {
+            "type": "action",
+            "one": "10",
+            "content": "node.left = removeNode(node.left, value)"
+        },
+        "10": {
+            "type": "action",
+            "one": "5",
+            "content": "return node"
+        },
+        "11": {
+            "type": "question",
+            "one": "12",
+            "two": "20",
+            "flag1": 1,
+            "content": "value > node.value"
+        },
+        "12": {
+            "type": "action",
+            "one": "13",
+            "two": "",
+            "content": "node.right = removeNode(\n    node.right,\n    value\n)"
+        },
+        "13": {
+            "type": "action",
+            "one": "20",
+            "two": "",
+            "content": "return node"
+        },
+        "20": {
+            "type": "branch",
+            "branchId": 3,
+            "one": "21",
+            "content": "One child node or both nodes are either absent"
+        },
+        "21": {
+            "type": "question",
+            "one": "22",
+            "two": "23",
+            "flag1": 1,
+            "content": "node.left === null && node.right === null"
+        },
+        "22": {
+            "type": "action",
+            "one": "23",
+            "two": "",
+            "content": "return null"
+        },
+        "23": {
+            "type": "question",
+            "one": "24",
+            "two": "30",
+            "flag1": 1,
+            "content": "node.right === null && node.left !== null"
+        },
+        "24": {
+            "type": "action",
+            "one": "30",
+            "two": "",
+            "content": "return node.left"
+        },
+        "25": {
+            "type": "branch",
+            "branchId": 4,
+            "one": "32",
+            "content": "Both nodes are present"
+        },
+        "30": {
+            "type": "question",
+            "one": "31",
+            "two": "25",
+            "flag1": 1,
+            "content": "node.left === null && node.right !== null"
+        },
+        "31": {
+            "type": "action",
+            "one": "25",
+            "two": "",
+            "content": "return node.right"
+        },
+        "32": {
+            "type": "question",
+            "one": "33",
+            "two": "4",
+            "flag1": 1,
+            "content": "node.right !== null && node.left !== null"
+        },
+        "33": {
+            "type": "action",
+            "one": "39",
+            "two": "",
+            "content": "minNode = findMin(node.right)"
+        },
+        "39": {
+            "type": "action",
+            "one": "40",
+            "content": "node.value = minNode.value"
+        },
+        "40": {
+            "type": "action",
+            "one": "41",
+            "content": "node.right = removeNode(\n    node.right,\n    minNode.value\n)"
+        },
+        "41": {
+            "type": "action",
+            "one": "4",
+            "content": "return node"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "node, value"
+}

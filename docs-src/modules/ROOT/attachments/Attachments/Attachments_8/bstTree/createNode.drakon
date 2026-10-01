@@ -1,0 +1,39 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "4"
+        },
+        "3": {
+            "type": "action",
+            "one": "1",
+            "content": "return {\n    value: value,\n    left: null,\n    right: null\n}"
+        },
+        "4": {
+            "type": "question",
+            "one": "5",
+            "two": "3",
+            "flag1": 1,
+            "content": "value === undefined"
+        },
+        "5": {
+            "type": "action",
+            "one": "3",
+            "content": "throw new Error(\n    \"Node value must be defined\"\n)"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "value"
+}

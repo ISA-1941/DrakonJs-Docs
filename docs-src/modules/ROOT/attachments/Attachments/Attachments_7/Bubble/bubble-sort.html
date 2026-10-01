@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bubble Sort Visualization</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+    canvas {
+      border: 1px solid #ccc;
+      background-color: #fff;
+      margin-top: 20px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bubble Sort Visualization</h1>
+  <canvas id="canvas" width="600" height="300"></canvas>
+  <br>
+  <button onclick="startSort()">Start Sorting</button>
+
+  <script>
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    const array = [90, 11, 81, 21, 71, 31, 61, 41, 51, 10];
+    const barWidth = 50;
+    const delay = 300;
+
+    function drawArray(highlight1 = -1, highlight2 = -1) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < array.length; i++) {
+        ctx.fillStyle = (i === highlight1 || i === highlight2) ? "tomato" : "skyblue";
+        ctx.fillRect(i * barWidth + 5, canvas.height - array[i] * 2, barWidth - 10, array[i] * 2);
+        ctx.fillStyle = "black";
+        ctx.fillText(array[i], i * barWidth + 20, canvas.height - 5);
+      }
+    }
+
+    async function startSort() {
+      for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array.length - 1; j++) {
+          drawArray(j, j + 1);
+          await new Promise(resolve => setTimeout(resolve, delay));
+
+          if (array[j] > array[j + 1]) {
+            let temp = array[j];
+            array[j] = array[j + 1];
+            array[j + 1] = temp;
+            drawArray(j, j + 1);
+            await new Promise(resolve => setTimeout(resolve, delay));
+          }
+        }
+      }
+      drawArray();
+    }
+
+    drawArray();
+  </script>
+</body>
+</html>

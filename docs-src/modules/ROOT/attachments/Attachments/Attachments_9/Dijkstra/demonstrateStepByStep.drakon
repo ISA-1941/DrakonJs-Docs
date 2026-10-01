@@ -1,0 +1,165 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "71"
+        },
+        "3": {
+            "type": "action",
+            "one": "29",
+            "content": "distances = initializeDistances(\n    vertices,\n    startVertex\n)\nvisited = initializeVisited(vertices)\nprevious = initializePrevious(vertices)"
+        },
+        "4": {
+            "type": "action",
+            "one": "5",
+            "content": "stepCount = 0"
+        },
+        "5": {
+            "type": "action",
+            "one": "52",
+            "content": "console.log(\"\\n\" + \"=\".repeat(60))\nconsole.log(\"STEP-BY-STEP EXECUTION\")\nconsole.log(\"=\".repeat(60))"
+        },
+        "29": {
+            "type": "action",
+            "one": "4",
+            "content": "steps = []"
+        },
+        "51": {
+            "type": "question",
+            "one": "1",
+            "two": "53",
+            "flag1": 0,
+            "content": "true "
+        },
+        "52": {
+            "type": "arrow-loop",
+            "one": "51"
+        },
+        "53": {
+            "type": "action",
+            "one": "54",
+            "content": "currentVertex = findMinDistanceVertex(\n    distances,\n    visited\n)"
+        },
+        "54": {
+            "type": "question",
+            "one": "55",
+            "two": "62",
+            "flag1": 1,
+            "content": "currentVertex === null "
+        },
+        "55": {
+            "type": "action",
+            "one": "56",
+            "two": "",
+            "content": "console.log(\n    \"   No more vertices to process. Algorithm finished.\"\n)"
+        },
+        "56": {
+            "type": "action",
+            "one": "59",
+            "two": "",
+            "content": "console.log(\"\\n✅ Final distances:\")"
+        },
+        "57": {
+            "type": "action",
+            "one": "52",
+            "two": "",
+            "content": "return "
+        },
+        "58": {
+            "type": "loopend",
+            "one": "57",
+            "two": "",
+            "content": ""
+        },
+        "59": {
+            "type": "loopbegin",
+            "one": "60",
+            "two": "",
+            "content": "i = 0; i < vertices.length; i++"
+        },
+        "60": {
+            "type": "action",
+            "one": "61",
+            "two": "",
+            "content": "v = vertices[i]"
+        },
+        "61": {
+            "type": "action",
+            "one": "58",
+            "two": "",
+            "content": "console.log(\n    \"   \" + v + \": \" + distances[v].toFixed(\n        2\n    )\n)"
+        },
+        "62": {
+            "type": "action",
+            "one": "63",
+            "two": "",
+            "content": "stepCount = stepCount + 1"
+        },
+        "63": {
+            "type": "action",
+            "one": "64",
+            "two": "",
+            "content": "console.log(\n    \"\\n📌 Step \" + stepCount + \":\"\n)"
+        },
+        "64": {
+            "type": "action",
+            "one": "65",
+            "two": "",
+            "content": "console.log(\n    \"   Current vertex: \" + currentVertex\n)"
+        },
+        "65": {
+            "type": "action",
+            "one": "67",
+            "two": "",
+            "content": "console.log(\"   Current distances:\")"
+        },
+        "66": {
+            "type": "loopend",
+            "one": "69",
+            "two": "",
+            "content": ""
+        },
+        "67": {
+            "type": "loopbegin",
+            "one": "68",
+            "two": "",
+            "content": "i = 0; i < vertices.length; i++"
+        },
+        "68": {
+            "type": "action",
+            "one": "66",
+            "two": "",
+            "content": "v = vertices[i]\ndist = distances[v]\ndistStr = dist === Infinity ? \"∞\": dist.toFixed(\n    2\n)\nvisitedMark = visited[v] ? \" [✓]\": \" [ ]\"\nconsole.log(\n    \"     \" + v + \": \" + distStr + visitedMark\n)"
+        },
+        "69": {
+            "type": "action",
+            "one": "70",
+            "two": "",
+            "content": "markVertexVisited(visited, currentVertex)"
+        },
+        "70": {
+            "type": "action",
+            "one": "52",
+            "content": "relaxEdges(\n    graph,\n    currentVertex,\n    distances,\n    previous\n)"
+        },
+        "71": {
+            "type": "action",
+            "one": "3",
+            "content": "vertices = getVerticesList(graph)"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "graph, startVertex"
+}

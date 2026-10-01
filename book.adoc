@@ -1,0 +1,40 @@
+= Структуры данных и алгоритмы
+Ваше Имя
+:doctype: book
+:lang: ru
+:toc: macro
+:toclevels: 2
+:sectnums:
+:source-highlighter: rouge
+:imagesdir: docs-src/modules/ROOT/assets/images
+
+toc::[]
+
+:leveloffset: +1
+
+include::docs-src/modules/ROOT/pages/index.adoc[]
+
+include::docs-src/modules/ROOT/pages/section-1.adoc[]
+
+include::docs-src/modules/ROOT/pages/section-2.adoc[]
+
+include::docs-src/modules/ROOT/pages/section-3.adoc[]
+
+include::docs-src/modules/ROOT/pages/section-4.adoc[]
+
+include::docs-src/modules/ROOT/pages/section-5.adoc[]
+
+include::docs-src/modules/ROOT/pages/section-6.adoc[]
+
+include::docs-src/modules/ROOT/pages/section-7.adoc[]
+
+include::docs-src/modules/ROOT/pages/section-8.adoc[]
+
+include::docs-src/modules/ROOT/pages/section-9.adoc[]
+
+include::docs-src/modules/ROOT/pages/section-10.adoc[]
+
+:leveloffset: 0
+
+
+

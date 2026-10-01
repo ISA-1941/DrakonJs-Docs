@@ -1,0 +1,36 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "// Graph definition with weighted edges\n\ngraph = {\n    0: {1: 48.3, 2: 40.7, 5: 25.4},\n    1: {0: 48.3, 2: 37.5, 3: 29.8},\n    2: {\n        0: 40.7,\n        1: 37.5,\n        3: 34.9,\n        5: 29.8\n    },\n    3: {1: 29.8, 2: 34.9, 4: 25.4},\n    4: {3: 25.4, 5: 34.9},\n    5: {0: 25.4, 2: 29.8, 4: 34.9}\n}"
+        },
+        "4": {
+            "type": "action",
+            "one": "5",
+            "two": "",
+            "content": "startVertex = \"0\""
+        },
+        "5": {
+            "type": "action",
+            "one": "6",
+            "two": "",
+            "content": "result = dijkstra(graph, startVertex)"
+        },
+        "6": {
+            "type": "action",
+            "one": "1",
+            "two": "",
+            "content": "printResults(\n    result.distances,\n    result.previous,\n    startVertex\n)"
+        }
+    }
+}

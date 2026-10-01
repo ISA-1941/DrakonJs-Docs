@@ -1,0 +1,48 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "16",
+            "content": "list = createLinkedList()"
+        },
+        "5": {
+            "type": "action",
+            "one": "1",
+            "content": "removeDuplicates(list)\nconsole.log(\n    'List after removing duplicates '\n)\niterateList(list)"
+        },
+        "14": {
+            "type": "action",
+            "one": "5",
+            "content": "console.log(\n    'Searching and removing duplicates for Wiley S.'\n)"
+        },
+        "16": {
+            "type": "action",
+            "one": "17",
+            "content": "console.log(\n    'Example of Inserting and Deleting Nodes'\n);"
+        },
+        "17": {
+            "type": "action",
+            "one": "18",
+            "content": "pushFront(list, 'Smith J.')\npushBack(list, 'Brown G.')\npushBack(list, 'Shafler P.')\npushBack(list, 'Wiley S.')\npushBack(list, 'Wiley S.')\npushBack(list, 'Atallah N.')"
+        },
+        "18": {
+            "type": "action",
+            "one": "19",
+            "content": "console.log('List after inserting nodes')\niterateList(list)\nconsole.log(\n    '------------------------------'\n)"
+        },
+        "19": {
+            "type": "action",
+            "one": "14",
+            "content": "console.log('Deleting Shafler P.')\nremoveVal(list, 'Shafler P.')\niterateList(list)\nconsole.log('Shafler P is deleted')"
+        }
+    }
+}

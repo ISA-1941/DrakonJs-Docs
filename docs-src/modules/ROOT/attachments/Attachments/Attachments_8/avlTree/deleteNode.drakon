@@ -1,0 +1,132 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "4",
+            "content": "Branch1"
+        },
+        "4": {
+            "type": "question",
+            "one": "5",
+            "two": "8",
+            "flag1": 1,
+            "content": "node === null"
+        },
+        "5": {
+            "type": "action",
+            "one": "8",
+            "content": "return null"
+        },
+        "6": {
+            "type": "branch",
+            "one": "24",
+            "branchId": 2,
+            "content": "Exit"
+        },
+        "8": {
+            "type": "question",
+            "one": "9",
+            "two": "10",
+            "flag1": 1,
+            "content": "value < node.value"
+        },
+        "9": {
+            "type": "action",
+            "one": "6",
+            "content": "node.left = deleteNode(node.left, value)"
+        },
+        "10": {
+            "type": "question",
+            "one": "11",
+            "two": "12",
+            "flag1": 1,
+            "content": "value > node.value"
+        },
+        "11": {
+            "type": "action",
+            "one": "6",
+            "content": "node.right = deleteNode(\n    node.right,\n    value\n)"
+        },
+        "12": {
+            "type": "question",
+            "one": "13",
+            "two": "14",
+            "flag1": 1,
+            "content": "!node.left"
+        },
+        "13": {
+            "type": "action",
+            "one": "14",
+            "content": "return node.right"
+        },
+        "14": {
+            "type": "question",
+            "one": "15",
+            "two": "16",
+            "flag1": 1,
+            "content": "!node.right"
+        },
+        "15": {
+            "type": "action",
+            "one": "16",
+            "content": "return node.left"
+        },
+        "16": {
+            "type": "action",
+            "one": "19",
+            "content": "successor = node.right"
+        },
+        "17": {
+            "type": "question",
+            "one": "22",
+            "two": "18",
+            "flag1": 0,
+            "content": "successor.left"
+        },
+        "18": {
+            "type": "action",
+            "one": "19",
+            "content": "successor = successor.left"
+        },
+        "19": {
+            "type": "arrow-loop",
+            "one": "17"
+        },
+        "22": {
+            "type": "action",
+            "one": "23",
+            "two": "",
+            "content": "node.value = successor.value"
+        },
+        "23": {
+            "type": "action",
+            "one": "6",
+            "two": "",
+            "content": "node.right = deleteNode(\n    node.right,\n    successor.value\n)"
+        },
+        "24": {
+            "type": "action",
+            "one": "25",
+            "content": "updateHeight(node)"
+        },
+        "25": {
+            "type": "action",
+            "one": "1",
+            "content": "return rebalance(node)"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "node, value"
+}

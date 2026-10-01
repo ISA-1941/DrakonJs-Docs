@@ -1,0 +1,42 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "pathInfo = {\n    path: context.currentPath,\n    vertices: context.currentPath.split(\n        '-'\n    ).map(Number),\n    distance: context.totalDistance,\n    price: context.totalPrice\n}"
+        },
+        "4": {
+            "type": "action",
+            "one": "5",
+            "content": "context.allPaths.push(pathInfo)"
+        },
+        "5": {
+            "type": "action",
+            "one": "6",
+            "content": "// Get information about the path found\n\nconsole.log(\n    \"Path Verticices: \" + context.currentPath\n);\nconsole.log(\n    \"  Distance: \" + context.totalDistance\n    .toFixed(2) + \" км\"\n);\nconsole.log(\n    \"  Price: \" + context.totalPrice.toFixed(\n        2\n    ) + \" у.е.\\n\"\n);"
+        },
+        "6": {
+            "type": "action",
+            "one": "1",
+            "content": "return pathInfo"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "context"
+}

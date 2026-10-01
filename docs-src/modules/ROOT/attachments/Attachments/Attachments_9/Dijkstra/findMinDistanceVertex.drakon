@@ -1,0 +1,74 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "4"
+        },
+        "3": {
+            "type": "action",
+            "one": "5",
+            "content": "minDistance = Infinity"
+        },
+        "4": {
+            "type": "action",
+            "one": "3",
+            "content": "minVertex = null "
+        },
+        "5": {
+            "type": "action",
+            "one": "7",
+            "content": "vertices = Object.keys(distances)"
+        },
+        "6": {
+            "type": "loopend",
+            "one": "12",
+            "content": ""
+        },
+        "7": {
+            "type": "loopbegin",
+            "one": "8",
+            "content": "i = 0; i < vertices.length; i++"
+        },
+        "8": {
+            "type": "action",
+            "one": "9",
+            "content": "vertex = vertices[i]"
+        },
+        "9": {
+            "type": "question",
+            "one": "10",
+            "two": "6",
+            "flag1": 1,
+            "content": "!visited[vertex] && distances[vertex] < minDistance"
+        },
+        "10": {
+            "type": "action",
+            "one": "11",
+            "content": "minDistance = distances[vertex]"
+        },
+        "11": {
+            "type": "action",
+            "one": "6",
+            "content": "minVertex = vertex"
+        },
+        "12": {
+            "type": "action",
+            "one": "1",
+            "content": "return minVertex"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "distances, visited"
+}

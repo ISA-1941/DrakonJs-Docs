@@ -82,7 +82,7 @@ image::section_8/Fig8_4_Process.svg[width=100%, link=self, window=_blank]
 
 Another basic operation is the findNode(value) function. This function uses a JavaScript construct that recursively compares the value of val with the values of other nodes as it traverses the tree. The DRAKON-diagram of the findNode(node, value) function is shown in Figure 8.5.
 
-image::section_8/Fig8_5_findNode.svg[xref=section_8/Fig8_5_findNode.svg, width=100%]
+image::section_8/Fig8_5_findNode.svg[width=100%, link=self, window=_blank]
 
 [.text-center]
 Figure 8.5. DRAKON-diagram of the node finding algorithm

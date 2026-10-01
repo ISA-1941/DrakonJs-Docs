@@ -1,0 +1,103 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "n = arr.length"
+        },
+        "4": {
+            "type": "action",
+            "one": "72",
+            "content": "inc = Math.floor(n / 2)"
+        },
+        "61": {
+            "type": "question",
+            "one": "1",
+            "two": "63",
+            "flag1": 0,
+            "content": "inc > 0"
+        },
+        "62": {
+            "type": "loopend",
+            "one": "71",
+            "two": "",
+            "content": ""
+        },
+        "63": {
+            "type": "loopbegin",
+            "one": "64",
+            "two": "",
+            "content": "i = inc; i < n; i++"
+        },
+        "64": {
+            "type": "action",
+            "one": "65",
+            "two": "",
+            "content": "temp = arr[i]"
+        },
+        "65": {
+            "type": "action",
+            "one": "70",
+            "two": "",
+            "content": "j = i"
+        },
+        "66": {
+            "type": "question",
+            "one": "67",
+            "two": "68",
+            "flag1": 0,
+            "content": "j >= inc && arr[j - inc] > temp"
+        },
+        "67": {
+            "type": "action",
+            "one": "62",
+            "two": "",
+            "content": "arr[j] = temp"
+        },
+        "68": {
+            "type": "action",
+            "one": "69",
+            "two": "",
+            "content": "arr[j] = arr[j - inc]"
+        },
+        "69": {
+            "type": "action",
+            "one": "70",
+            "two": "",
+            "content": "j = j - inc"
+        },
+        "70": {
+            "type": "arrow-loop",
+            "one": "66",
+            "two": ""
+        },
+        "71": {
+            "type": "action",
+            "one": "72",
+            "two": "",
+            "content": "inc = Math.floor((inc + 1) * 5 / 11)"
+        },
+        "72": {
+            "type": "arrow-loop",
+            "one": "61"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "arr"
+}

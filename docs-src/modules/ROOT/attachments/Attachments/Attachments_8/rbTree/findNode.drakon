@@ -1,0 +1,65 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "nullNode = tree.nullNode"
+        },
+        "4": {
+            "type": "action",
+            "one": "6",
+            "content": "current = tree.root"
+        },
+        "5": {
+            "type": "question",
+            "one": "10",
+            "two": "7",
+            "flag1": 0,
+            "content": "current !== nullNode && current !== undefined\n&& current.key !== key"
+        },
+        "6": {
+            "type": "arrow-loop",
+            "one": "5"
+        },
+        "7": {
+            "type": "question",
+            "one": "8",
+            "two": "9",
+            "flag1": 1,
+            "content": "key < current.key"
+        },
+        "8": {
+            "type": "action",
+            "one": "6",
+            "content": "current = current.left"
+        },
+        "9": {
+            "type": "action",
+            "one": "6",
+            "content": "current = current.right"
+        },
+        "10": {
+            "type": "action",
+            "one": "1",
+            "content": "return current"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "tree, key"
+}

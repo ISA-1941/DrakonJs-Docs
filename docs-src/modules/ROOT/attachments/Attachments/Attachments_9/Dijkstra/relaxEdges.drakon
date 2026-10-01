@@ -1,0 +1,75 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3",
+            "content": ""
+        },
+        "3": {
+            "type": "action",
+            "one": "5",
+            "content": "neighbors = Object.keys(\n    graph[currentVertex]\n)"
+        },
+        "4": {
+            "type": "loopend",
+            "one": "12",
+            "content": ""
+        },
+        "5": {
+            "type": "loopbegin",
+            "one": "6",
+            "content": "i = 0; i < neighbors.length; i++"
+        },
+        "6": {
+            "type": "action",
+            "one": "7",
+            "content": "neighbor = neighbors[i]"
+        },
+        "7": {
+            "type": "action",
+            "one": "8",
+            "content": "// Get edge weight\n\nweight = graph[currentVertex][neighbor]"
+        },
+        "8": {
+            "type": "action",
+            "one": "9",
+            "content": "// Calculate new potential distance\n\nnewDistance = distances[currentVertex] +\nweight"
+        },
+        "9": {
+            "type": "question",
+            "one": "10",
+            "two": "4",
+            "flag1": 1,
+            "content": "newDistance < distances[neighbor]"
+        },
+        "10": {
+            "type": "action",
+            "one": "11",
+            "content": "distances[neighbor] = newDistance"
+        },
+        "11": {
+            "type": "action",
+            "one": "4",
+            "content": "previous[neighbor] = currentVertex"
+        },
+        "12": {
+            "type": "action",
+            "one": "1",
+            "content": "return {\n    distances,\n    previous\n}"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "graph, \ncurrentVertex,\n distances, \nprevious"
+}

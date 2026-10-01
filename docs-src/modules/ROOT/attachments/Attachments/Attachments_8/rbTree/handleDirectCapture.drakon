@@ -1,0 +1,138 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "Internal alignment (Case 5)"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "clusterMap = wrapper.nodes\nclustaerString = clusterrapper.description"
+        },
+        "4": {
+            "type": "action",
+            "one": "22",
+            "content": "s = clusterMap.s"
+        },
+        "5": {
+            "type": "question",
+            "one": "7",
+            "two": "6",
+            "flag1": 1,
+            "content": "clusterMap.includes(\"z<P\") && clusterMap.s\n.r.color === 'B'"
+        },
+        "6": {
+            "type": "question",
+            "one": "10",
+            "two": "14",
+            "flag1": 1,
+            "content": "clusterString.includes(\"z>P\") && clusterMap\n.s.l.color === 'B'"
+        },
+        "7": {
+            "type": "action",
+            "one": "8",
+            "content": "clusterMap.s_L.color = 'B';\ns.color = 'R'"
+        },
+        "8": {
+            "type": "action",
+            "one": "9",
+            "content": "rotateRight(tree, s)"
+        },
+        "9": {
+            "type": "action",
+            "one": "14",
+            "content": "s = clusterMap.P.right"
+        },
+        "10": {
+            "type": "action",
+            "one": "11",
+            "content": "clusterMap.s.r.color = 'B';\ns.color = 'R'"
+        },
+        "11": {
+            "type": "action",
+            "one": "12",
+            "content": "rotateLeft(tree, s)"
+        },
+        "12": {
+            "type": "action",
+            "one": "14",
+            "content": "s = clusterMap.P.left"
+        },
+        "13": {
+            "type": "branch",
+            "one": "1",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "14": {
+            "type": "branch",
+            "one": "15",
+            "branchId": 2,
+            "content": "The Final Turnabout (Case 6)"
+        },
+        "15": {
+            "type": "action",
+            "one": "16",
+            "content": "s.color = clusterMap.P.color"
+        },
+        "16": {
+            "type": "action",
+            "one": "17",
+            "content": "clusterMap.P.color = 'B'"
+        },
+        "17": {
+            "type": "question",
+            "one": "18",
+            "two": "20",
+            "flag1": 1,
+            "content": "clusterString.includes(\"z<P\")"
+        },
+        "18": {
+            "type": "action",
+            "one": "19",
+            "content": "s.right.color = 'B'"
+        },
+        "19": {
+            "type": "action",
+            "one": "13",
+            "content": "rotateLeft(tree, clusterrMap.P)"
+        },
+        "20": {
+            "type": "action",
+            "one": "21",
+            "content": "s.left.color = 'B'"
+        },
+        "21": {
+            "type": "action",
+            "one": "13",
+            "content": "rotateRight(tree, clusterrMap.P)"
+        },
+        "22": {
+            "type": "question",
+            "one": "23",
+            "two": "5",
+            "flag1": 0,
+            "content": "clusterMap.s == null "
+        },
+        "23": {
+            "type": "action",
+            "one": "5",
+            "content": "clusterMap.s.color = 'R'"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "tree, wrapper"
+}

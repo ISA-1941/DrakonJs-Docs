@@ -1,0 +1,66 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "4"
+        },
+        "3": {
+            "type": "action",
+            "one": "7",
+            "content": "cheapest = paths[0]"
+        },
+        "4": {
+            "type": "question",
+            "one": "5",
+            "two": "3",
+            "flag1": 1,
+            "content": "paths.length === 0"
+        },
+        "5": {
+            "type": "action",
+            "one": "3",
+            "content": "return null "
+        },
+        "6": {
+            "type": "loopend",
+            "one": "10",
+            "content": ""
+        },
+        "7": {
+            "type": "loopbegin",
+            "one": "8",
+            "content": "i = 1; i < paths.length; i++"
+        },
+        "8": {
+            "type": "question",
+            "one": "9",
+            "two": "6",
+            "flag1": 1,
+            "content": "paths[i].price < cheapest.price"
+        },
+        "9": {
+            "type": "action",
+            "one": "6",
+            "content": "cheapest = paths[i]"
+        },
+        "10": {
+            "type": "action",
+            "one": "1",
+            "content": "return cheapest"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "paths"
+}

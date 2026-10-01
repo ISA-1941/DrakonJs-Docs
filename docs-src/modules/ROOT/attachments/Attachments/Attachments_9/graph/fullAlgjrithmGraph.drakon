@@ -1,0 +1,67 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "Creating of Graph"
+        },
+        "3": {
+            "type": "action",
+            "one": "10",
+            "content": "Graph\nCreating\ncreateGraphFromData()"
+        },
+        "6": {
+            "type": "branch",
+            "one": "1",
+            "branchId": 4,
+            "content": "Exit"
+        },
+        "7": {
+            "type": "branch",
+            "one": "8",
+            "branchId": 2,
+            "content": "Context Making"
+        },
+        "8": {
+            "type": "action",
+            "one": "9",
+            "content": "initPathSearch(graph, start, end)"
+        },
+        "9": {
+            "type": "action",
+            "one": "12",
+            "content": "Context\nbuilding: createSearchContext(graph)"
+        },
+        "10": {
+            "type": "action",
+            "one": "11",
+            "content": "createGraphMatrix(n)"
+        },
+        "11": {
+            "type": "action",
+            "one": "7",
+            "content": "addEdgeMatrix(m)"
+        },
+        "12": {
+            "type": "action",
+            "one": "13",
+            "content": "Context\nPopulations: resetSearchContext(\n    context,\n    start,\n    end\n)"
+        },
+        "13": {
+            "type": "branch",
+            "branchId": 3,
+            "one": "14",
+            "content": "Traverse \"From -To\""
+        },
+        "14": {
+            "type": "action",
+            "one": "6",
+            "content": "findPathWithContext(start, context)"
+        }
+    }
+}

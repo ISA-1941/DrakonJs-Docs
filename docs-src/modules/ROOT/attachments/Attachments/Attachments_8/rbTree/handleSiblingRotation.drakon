@@ -1,0 +1,84 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "14",
+            "content": "clusterMap = wrapper.nodes\nclusterString = wrapper.description"
+        },
+        "4": {
+            "type": "action",
+            "one": "11",
+            "content": "clusterMap.s.color = 'B'\nclusterMap.P.color = 'R'"
+        },
+        "5": {
+            "type": "question",
+            "one": "6",
+            "two": "7",
+            "flag1": 1,
+            "content": "clusterString.includes(\"z<P\")"
+        },
+        "6": {
+            "type": "action",
+            "one": "10",
+            "content": "rotateLeft(tree, clusterMap.P)"
+        },
+        "7": {
+            "type": "action",
+            "one": "10",
+            "content": "rotateRight(tree, clusterMap.P)"
+        },
+        "8": {
+            "type": "action",
+            "one": "1",
+            "content": "fixDelete(\n    tree,\n    describeClusterDelete(\n        tree,\n        wrapperUpdate\n    )\n)"
+        },
+        "9": {
+            "type": "action",
+            "one": "5",
+            "content": "zSaved = clusterMap.z"
+        },
+        "10": {
+            "type": "action",
+            "one": "8",
+            "content": "wrapperUpdate = describeClusterDelete(\n    tree,\n    zSaved\n)"
+        },
+        "11": {
+            "type": "question",
+            "one": "9",
+            "two": "9",
+            "flag1": 1,
+            "content": "clusterMap && clusterMap.z"
+        },
+        "14": {
+            "type": "question",
+            "one": "15",
+            "two": "4",
+            "flag1": 1,
+            "content": "!clusterMap.s"
+        },
+        "15": {
+            "type": "action",
+            "one": "4",
+            "two": "",
+            "content": "return "
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "tree, wrapper"
+}
