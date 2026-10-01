@@ -1,4 +1,4 @@
-main();
+// main();
 function bstDelete(tree, node) {
     var mes1, mes2, message, nullNode, x, y;
     nullNode = tree.nullNode;

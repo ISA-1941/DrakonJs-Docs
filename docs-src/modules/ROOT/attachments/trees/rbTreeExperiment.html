@@ -29,11 +29,43 @@
 
 <br><br>
 
-<button>Run experiment</button>
+<button onclick="runExperiment()">Run experiment</button>
 
 <h2>Result</h2>
 
 <pre id="output">The result will appear here.</pre>
+
+
+<script src="rbTreeExperiment.js"></script>
+
+<script>
+
+function runExperiment() {
+
+    const values = document
+        .getElementById("inputValues")
+        .value
+        .split(",")
+        .map(Number);
+
+    const deleteValue =
+        Number(document.getElementById("deleteValue").value);
+
+    const tree = makeRBTree();
+
+    for (const value of values) {
+        rbInsert(tree, value);
+    }
+
+    deleteNode(tree, deleteValue);
+
+    document.getElementById("output").textContent =
+        "Input values: " + values.join(", ") + "\n" +
+        "Deleted value: " + deleteValue + "\n" +
+        "Root after deletion: " + tree.root.key;
+}
+
+</script>
 
 </body>
 
