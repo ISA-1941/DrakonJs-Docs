@@ -1,46 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Red-Black Tree Experiment</title>
-</head>
-
-<body>
-
-<h1>Red-Black Tree — Computational Experiment</h1>
-
-<p>Enter integer values separated by commas:</p>
-
-<input
-    id="inputValues"
-    type="text"
-    value="8, 42, 90"
-    size="40"
->
-
-<p>Node to delete:</p>
-
-<input
-    id="deleteValue"
-    type="number"
-    value="8"
->
-
-<br><br>
-
-<button onclick="runExperiment()">Run experiment</button>
-
-<h2>Result</h2>
-
-<pre id="output">The result will appear here.</pre>
-
-
-<script src="rbTreeExperiment.js"></script>
-
 <script>
-
 function runExperiment() {
+
+    const output = document.getElementById("output");
 
     const values = document
         .getElementById("inputValues")
@@ -53,20 +14,40 @@ function runExperiment() {
 
     const tree = makeRBTree();
 
+    // Сохраняем обычный console.log
+    const originalLog = console.log;
+
+    let result = "";
+
+    // Временно перенаправляем console.log
+    console.log = function (...args) {
+        result += args.join(" ") + "\n";
+    };
+
+    // Создаём дерево
     for (const value of values) {
         rbInsert(tree, value);
     }
 
+    result += "\nTREE BEFORE DELETION\n\n";
+
+    // ВАША функция
+    printTree(tree, tree.root);
+
+    result += "\nDELETE NODE: " + deleteValue + "\n\n";
+
+    // ВАША функция
     deleteNode(tree, deleteValue);
 
-    document.getElementById("output").textContent =
-        "Input values: " + values.join(", ") + "\n" +
-        "Deleted value: " + deleteValue + "\n" +
-        "Root after deletion: " + tree.root.key;
+    result += "\nTREE AFTER DELETION\n\n";
+
+    // ВАША функция
+    printTree(tree, tree.root);
+
+    // Возвращаем console.log в нормальное состояние
+    console.log = originalLog;
+
+    // Показываем накопленный результат на странице
+    output.textContent = result;
 }
-
 </script>
-
-</body>
-
-</html>
