@@ -43,33 +43,70 @@
 <!-- Experiment control -->
 <script>
 
+// Capture the output of printTree()
+function captureTree(tree) {
+
+    const originalLog = console.log;
+    let result = "";
+
+    console.log = function (...args) {
+        result += args.join(" ") + "\n";
+    };
+
+    try {
+        printTree(tree, tree.root);
+    }
+    finally {
+        console.log = originalLog;
+    }
+
+    // Remove terminal ANSI color codes
+    result = result.replace(/\x1B\[[0-9;]*m/g, "");
+
+    return result;
+}
+
+
+// Run computational experiment
 function runExperiment() {
 
+    const output = document.getElementById("output");
+
+    // Read input values
     const values = document
         .getElementById("inputValues")
         .value
         .split(",")
-        .map(Number);
+        .map(value => Number(value.trim()));
 
+    // Read the value to delete
     const deleteValue =
         Number(document.getElementById("deleteValue").value);
 
+    // Create Red-Black Tree
     const tree = makeRBTree();
 
+    // Insert values
     for (const value of values) {
         rbInsert(tree, value);
     }
 
-    console.log("TREE BEFORE DELETION");
-    printTree(tree, tree.root);
+    // Capture tree before deletion
+    const before = captureTree(tree);
 
+    // Delete selected node
     deleteNode(tree, deleteValue);
 
-    console.log("TREE AFTER DELETION");
-    printTree(tree, tree.root);
+    // Capture tree after deletion
+    const after = captureTree(tree);
 
-    document.getElementById("output").textContent =
-        "Experiment completed. Open browser Console to see both trees.";
+    // Display result
+    output.textContent =
+        "TREE BEFORE DELETION\n\n" +
+        before +
+        "\nDELETE NODE: " + deleteValue + "\n\n" +
+        "TREE AFTER DELETION\n\n" +
+        after;
 }
 
 </script>
