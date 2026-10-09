@@ -1,0 +1,109 @@
+{
+    "items": {
+        "1": {
+            "type": "idea",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 0,
+            "text": "<p>БЛОК 1. ПОДГОТОВКА ВЫВОДА</p>"
+        },
+        "2": {
+            "type": "idea",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 1,
+            "text": "<p> БЛОК 2. ЧТЕНИЕ ВВОДА</p>"
+        },
+        "3": {
+            "type": "idea",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 2,
+            "text": "<p>БЛОК 3. ПОСТРОЕНИЕ ДЕРЕВА</p>"
+        },
+        "4": {
+            "type": "idea",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 3,
+            "text": "<p>БЛОК 4. ЭКСПЕРИМЕНТ С УДАЛЕНИЕМ</p>"
+        },
+        "5": {
+            "type": "idea",
+            "parent": "root",
+            "treeType": "treeview",
+            "ordinal": 4,
+            "text": "<p>БЛОК 5. ФОРМИРОВАНИЕ ОТЧЁТА</p>"
+        },
+        "6": {
+            "type": "ridea",
+            "parent": "2",
+            "treeType": "treeview",
+            "ordinal": 0,
+            "text": "<p> прочитать inputValues → массив чисел</p>"
+        },
+        "8": {
+            "type": "ridea",
+            "parent": "2",
+            "treeType": "treeview",
+            "ordinal": 1,
+            "text": "<p>прочитать deleteValue → число</p>"
+        },
+        "9": {
+            "type": "ridea",
+            "parent": "3",
+            "treeType": "treeview",
+            "ordinal": 0,
+            "text": "<p>создать пустое дерево</p>"
+        },
+        "10": {
+            "type": "ridea",
+            "parent": "3",
+            "treeType": "treeview",
+            "ordinal": 1,
+            "text": "<p>вставить все значения по одному</p>"
+        },
+        "11": {
+            "type": "ridea",
+            "parent": "4",
+            "treeType": "treeview",
+            "ordinal": 0,
+            "text": "<p>снять снимок дерева ДО</p>"
+        },
+        "12": {
+            "type": "ridea",
+            "parent": "4",
+            "treeType": "treeview",
+            "ordinal": 1,
+            "text": "<p>удалить узел</p>"
+        },
+        "13": {
+            "type": "ridea",
+            "parent": "4",
+            "treeType": "treeview",
+            "ordinal": 2,
+            "text": "<p>снять снимок дерева ПОСЛЕ</p>"
+        },
+        "14": {
+            "type": "ridea",
+            "parent": "5",
+            "treeType": "treeview",
+            "ordinal": 0,
+            "text": "<p>склеить снимки и вывести в &lt;pre&gt;</p>"
+        },
+        "15": {
+            "type": "idea",
+            "parent": "1",
+            "treeType": "treeview",
+            "ordinal": 1,
+            "text": "<p>const output = document.getElementById(\"output\");</p>"
+        },
+        "16": {
+            "type": "conclusion",
+            "parent": "1",
+            "treeType": "treeview",
+            "ordinal": 0,
+            "text": "<p>Нахождение в adoc-файле «Найди в HTML-документе элемент, у которого id=\"output\", и дай мне ссылку на этот элемент». </p>"
+        }
+    }
+}

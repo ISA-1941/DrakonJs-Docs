@@ -1,4 +1,4 @@
-main();
+// main();
 function createBstTree() {
     return { root: null };
 }
@@ -71,26 +71,17 @@ function insertNode(tree,value) {
         }
     }
 }
-// function main() {
+function main() {
     var found, result, tree, val, values;
     tree = createBstTree();
     values = [
-        11,
-        5,
-        2,
-        17,
-        15,
-        1,
-        8,
-        6,
-        19,
-        13,
-        21
+        5, 8, 23, 42, 4, 16, 15, 9, 11, 7, 3, 2, 1
+
     ];
     for (val of values) {
         insertNode(tree, val);
     }
-    console.log(tree);
+    console.dir(tree, { depth: null });
     result = [];
     preOrder(tree.root, result);
     result = [];
@@ -98,14 +89,14 @@ function insertNode(tree,value) {
     console.log('inOrder:', result);
     result = [];
     postOrder(tree.root, result);
-    found = findNode(tree.root, 13);
+    found = findNode(tree.root, 42);
     if (found) {
         console.log('Found:', found.value);
     } else {
         console.log('Not found');
     }
-    tree.root = removeNode(tree.root, 17);
-    found = findNode(tree.root, 17);
+    tree.root = removeNode(tree.root, 42);
+    found = findNode(tree.root, 42);
     if (found) {
         console.log('Found:', found.value);
     } else {
@@ -156,8 +147,8 @@ function removeNode(node, value) {
         node.right = removeNode(node.right, minNode.value);
         return node;
     }
-
-    function printBstTree(node, prefix = "", isLeft = true) {
+}
+function printBstTree(node, prefix = "", isLeft = true) {
     if (node === null) {
         return "";
     }
@@ -185,5 +176,4 @@ function removeNode(node, value) {
     }
 
     return result;
-}
 }

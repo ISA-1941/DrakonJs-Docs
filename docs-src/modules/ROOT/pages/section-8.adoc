@@ -154,6 +154,16 @@ image::section_8/Fig8_12_Diag.svg[width=100%, link=self, window=_blank]
 .Figure 8.12. Three classical tree traversals: Pre-, In-, and Post-order
 image::section_8/Fig8_12_Tree.svg[width=100%, link=self, window=_blank]
 
+=== Computational Experiment
+
+Enter a sequence of integer values, construct
+a binary search tree, and observe its structure
+before and after deleting a selected node.
+
+link:{attachmentsdir}/trees/bstTree.js[Open JavaScript code]
+
+link:{attachmentsdir}/trees/bstTreeExperiment.html[Run experiment]
+
 == 8.3. Self-Balancing Binary Trees (AVL Trees)
 
 The efficiency of binary tree processing algorithms significantly depends on the order in which node values are provided during tree construction. In the most favorable sequence, the binary tree becomes balanced. In the worst-case sequence, the "tree" degenerates into a "branch" (Figure 8.13). As we will see below, restoring balance in such cases reduces to four canonical rotation patterns — right, left, right-left, and left-right rotation.
