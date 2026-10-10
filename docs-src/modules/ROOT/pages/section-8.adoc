@@ -160,9 +160,10 @@ Enter a sequence of integer values, construct
 a binary search tree, and observe its structure
 before and after deleting a selected node.
 
-link:{attachmentsdir}/trees/bstTree.js[Open JavaScript code]
+link:{attachmentsdir}/trees/bstTree.js[Open JavaScript code,role=experiment-link]
 
-link:{attachmentsdir}/trees/bstTreeExperiment.html[Run experiment]
+link:{attachmentsdir}/trees/bstTreeExperiment.html[Run experiment,role=experiment-link]
+
 
 == 8.3. Self-Balancing Binary Trees (AVL Trees)
 
