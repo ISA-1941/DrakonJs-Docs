@@ -864,3 +864,15 @@ i {
   font-family: "JetBrains Mono", "Fira Code", "Ubuntu Mono", Consolas, monospace;
   white-space: pre-wrap; /* чтобы длинный текст переносился, а не растягивал страницу */
 }
+
+/* Computational experiment links */
+
+.doc a[href*="/_attachments/trees/"] {
+    color: #ffffff !important;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.doc a[href*="/_attachments/trees/"]:hover {
+    color: #ffd08a !important;
+}
