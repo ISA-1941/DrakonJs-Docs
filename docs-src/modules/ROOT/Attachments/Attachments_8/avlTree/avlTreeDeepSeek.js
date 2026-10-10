@@ -1,5 +1,3 @@
-This program is correct. It was  made from avlTree.js  to test and chages  avlTree.js 
-
 main();
 function createNode(value) {
     return {

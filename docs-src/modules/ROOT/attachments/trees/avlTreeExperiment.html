@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AVL Search Tree Experiment</title>
+</head>
+
+<body>
+
+<h1>AVL Search Tree — Computational Experiment</h1>
+
+<p>Enter integer values separated by commas:</p>
+
+<input
+    id="inputValues"
+    type="text"
+    value="8, 42, 90"
+    size="40"
+>
+
+<p>Node to delete:</p>
+
+<input
+    id="deleteValue"
+    type="number"
+    value="8"
+>
+
+<br><br>
+
+<button onclick="runExperiment()">Run experiment</button>
+
+<h2>Result</h2>
+
+<pre id="output">The result will appear here.</pre>
+
+
+<!-- Load the AVL Tree program -->
+<script src="avlTreeExperiment.js"></script>
+<!-- Experiment control -->
+<script>
+
+function runExperiment() {
+    const output = document.getElementById("output");
+    // Read input values
+    const input = document.getElementById("inputValues").value;
+
+    const values = input
+        .split(",")
+        .map(value => Number(value.trim()));
+
+    // Read the value to delete
+    const deleteValue = Number(
+        document.getElementById("deleteValue").value
+    );
+
+    // Validate input
+    if (
+        input.trim() === "" ||
+        values.some(value => !Number.isSafeInteger(value)) ||
+        !Number.isSafeInteger(deleteValue) ||
+        document.getElementById("deleteValue").value.trim() === ""
+    ) {
+        output.textContent = "Please enter valid integer values.";
+        return;
+    }
+    // Create AVL Tree
+    const tree = createAvlTree();
+    // Insert values
+
+    for (const value of values) {
+    tree.root = insertNode(tree.root, value);
+}
+    // Tree before deletion
+    const before = printAvlTree(tree.root);
+
+    // Delete selected node
+    tree.root = deleteNode(tree.root, deleteValue);
+    // Tree after deletion
+    const after = printAvlTree(tree.root);
+
+    // Display result
+    output.textContent =
+        "TREE BEFORE DELETION\n\n" +
+        before +
+        "\nDELETE NODE: " + deleteValue + "\n\n" +
+        "TREE AFTER DELETION\n\n" +
+        (after || "(empty tree)");
+}
+
+</script>
+
+</body>
+</html>

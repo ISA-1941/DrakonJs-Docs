@@ -294,6 +294,14 @@ The main() program inputs an array of data, searches for a node with a specified
 .Figure 8.28. DRAKON-diagram of the main function
 image::section_8/Fig8_28_mainAVL.svg[width=50%, link=self, window=_blank]
 
+=== Computational Experiment
+
+Enter a sequence of integer values, construct an AVL tree,
+and observe its structure before and after deleting a selected node.
+
+link:{attachmentsdir}/trees/avlTree.js[Open JavaScript code]
+
+link:{attachmentsdir}/trees/avlTreeExperiment.html[Run experiment]
 
 == 8.4. Red-Black Trees
 

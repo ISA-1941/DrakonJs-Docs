@@ -1,4 +1,4 @@
-main();
+// main();
 function createNode(value) {
     return {
         value,
@@ -7,7 +7,7 @@ function createNode(value) {
         height: 1
     };
 }
-function createavlTree() {
+function createAvlTree() {
     return { root: null };
 }
 function deleteNode(node, value) {
@@ -103,30 +103,22 @@ function isLeaf(node) {
 function main() {
     var result, tree, value, values;
 
-tree = createavlTree();
-    values = [
-        1,
-        2,
-        5,
-        6,
-        8,
-        11,
-        13,
-        15,
-        17,
-        19,
-        21
-    ];
+tree = createAvlTree();
+    values = [8, 42, 90];
     for (value of values) {
         tree.root = insertNode(tree.root, value);
     }
+    console.log("\nTREE BEFORE DELETION");
     result = [];
     inOrder(tree.root, result);
     console.log('In-order:', result);
-    tree.root = deleteNode(tree.root, 5);
+    console.log(printAvlTree(tree.root));
+    tree.root = deleteNode(tree.root, 42);
     result = [];
     inOrder(tree.root, result);
     console.log('In-order after deleting:', result);
+    console.log("\nTREE AFTER DELETION");
+    console.log(printAvlTree(tree.root));
 }
 function rebalance(node) {
     var balance;
