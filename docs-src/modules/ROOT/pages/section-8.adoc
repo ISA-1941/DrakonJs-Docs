@@ -627,10 +627,9 @@ Table 8.3. Comparison of time and space complexities for tree operations
 
 === Computational Experiment
 
-link:{attachmentsdir}/trees/rbTree.js[Open JavaScript code]
+link:{attachmentsdir}/trees/rbTree.js[Open JavaScript code,role=experiment-link]
 
-link:{attachmentsdir}/trees/rbTreeExperiment.html[Run experiment]
-
+link:{attachmentsdir}/trees/rbTreeExperiment.html[Run experiment,role=experiment-link]
 
 == 8.6. Conclusion
 
