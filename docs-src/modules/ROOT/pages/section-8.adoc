@@ -300,9 +300,9 @@ image::section_8/Fig8_28_mainAVL.svg[width=50%, link=self, window=_blank]
 Enter a sequence of integer values, construct an AVL tree,
 and observe its structure before and after deleting a selected node.
 
-link:{attachmentsdir}/trees/avlTree.js[Open JavaScript code]
+link:{attachmentsdir}/trees/avlTree.js[Open JavaScript code,role=experiment-link]
 
-link:{attachmentsdir}/trees/avlTreeExperiment.html[Run experiment]
+link:{attachmentsdir}/trees/avlTreeExperiment.html[Run experiment,role=experiment-link]
 
 == 8.4. Red-Black Trees
 
