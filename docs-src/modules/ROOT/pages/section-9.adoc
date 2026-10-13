@@ -1030,3 +1030,12 @@ O(V^2)
 
 More advanced implementations use a priority queue or a min-heap to select the next vertex more efficiently, but the classic version shown here is easier to understand and is well suited for explaining the main idea of Dijkstra's algorithm.
 
+=== Computational Experiment
+
+Construct your own graph on an 8 × 8 grid.
+Select vertices, connect them with edges,
+and generate the corresponding adjacency lists.
+
+link:{attachmentsdir}/graphes/graphConstructor.html[
+Run Graph Constructor,role=experiment-link]
+

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Graph Constructor — Computational Experiment</title>
+  <style>
+    :root { font-family: Arial, Helvetica, sans-serif; color-scheme: light; }
+    body { margin: 0; background: #eef2f5; color: #233142; }
+    main { max-width: 760px; margin: 28px auto; padding: 22px; background: white; border-radius: 12px; box-shadow: 0 3px 18px #1c33451a; }
+    h1 { margin: 0 0 10px; font-size: 1.55rem; }
+    p { line-height: 1.5; }
+    .controls { display: flex; gap: 10px; flex-wrap: wrap; margin: 18px 0; }
+    button { padding: 10px 14px; border: 1px solid #64788c; border-radius: 6px; background: #fff; color: #203448; cursor: pointer; font-weight: 600; }
+    button.active { background: #235f91; border-color: #235f91; color: white; }
+    button:disabled { opacity: .48; cursor: not-allowed; }
+    #grid { display: block; width: min(100%, 520px); height: auto; border: 1px solid #718294; background: #fafcfe; touch-action: manipulation; }
+    .cell { fill: transparent; stroke: #b7c4d0; stroke-width: 1; cursor: pointer; }
+    .cell:hover { fill: #dceefa; }
+    .edge { stroke: #169447; stroke-width: 5; stroke-linecap: round; pointer-events: none; }
+    .vertex.selected { fill: #e89427; }
+    .vertex { fill: #2463a0; stroke: white; stroke-width: 2; pointer-events: none; }
+    .vertex-label { fill: white; font-size: 17px; font-weight: bold; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    #status { margin-top: 14px; font-weight: 600; }
+    #matrixSection { margin-top: 24px; padding-top: 12px; border-top: 1px solid #cbd5df; }
+    #matrixSection[hidden] { display: none; }
+    .matrix-scroll { overflow-x: auto; max-width: 100%; }
+    .matrix { border-collapse: separate; border-spacing: 5px; }
+    .matrix th { min-width: 38px; text-align: center; font-size: 14px; }
+    .matrix input { box-sizing: border-box; width: 40px; height: 40px; text-align: center; font-size: 17px; border: 1px solid #889bad; border-radius: 4px; }
+    .matrix input:focus { outline: 2px solid #235f91; outline-offset: 1px; }
+    .matrix input.error { border: 2px solid #c43e3e; background: #fff0f0; }
+    #feedback { min-height: 1.5em; font-weight: 600; }
+    #correctMatrix { white-space: pre; overflow-x: auto; padding: 12px; background: #f0f5f9; border-radius: 6px; }
+    #correctMatrix[hidden] { display: none; }
+    #listSection { margin-top: 24px; padding-top: 12px; border-top: 1px solid #cbd5df; }
+    #listSection[hidden], #correctList[hidden] { display: none; }
+    .list-table { border-collapse: collapse; width: min(100%, 560px); }
+    .list-table th, .list-table td { border: 1px solid #cbd5df; padding: 8px 12px; text-align: left; }
+    .list-table input { box-sizing: border-box; width: 100%; min-width: 0; padding: 9px; font-size: 16px; border: 1px solid #889bad; border-radius: 4px; }
+    .list-table input.error { border: 2px solid #c43e3e; background: #fff0f0; }
+    #correctList { white-space: pre; overflow-x: auto; padding: 12px; background: #f0f5f9; border-radius: 6px; }
+    @media (max-width: 600px) { main { margin: 0; border-radius: 0; padding: 15px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Graph Constructor — Computational Experiment</h1>
+    <p>Select Add Vertices to place or remove vertices. Select Add Edges, then click two vertices to connect them with a green edge. Select the same pair again to remove the edge. Build a matrix when your graph is ready.</p>
+    <div class="controls">
+      <button type="button" id="verticesButton" class="active" aria-pressed="true">Add Vertices</button>
+      <button type="button" id="edgesButton" aria-pressed="false">Add Edges</button>
+      <button type="button" id="buildMatrixButton">Build Adjacency Matrix</button>
+      <button type="button" id="editButton" hidden>Edit Graph</button>
+      <button type="button" id="clearButton">Clear Graph</button>
+      <button type="button" id="saveExperimentButton">Save Experiment</button>
+      <button type="button" id="loadExperimentButton">Load Experiment</button>
+      <input type="file" id="loadExperimentFile" accept=".json,application/json" hidden>
+    </div>
+    <p id="storageStatus" role="status" aria-live="polite">Auto Save is enabled when browser storage is available.</p>
+    <svg id="grid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Interactive eight by eight grid for placing graph vertices"></svg>
+    <p id="status" aria-live="polite">Vertices: 0</p>
+    <section id="matrixSection" hidden>
+      <h2>Adjacency Matrix — Student's Answer</h2>
+      <p>Enter 1 if the two vertices are connected by an edge, otherwise enter 0. Complete every cell before checking.</p>
+      <div class="matrix-scroll"><table id="studentMatrix" class="matrix" aria-label="Student adjacency matrix"></table></div>
+      <div class="controls">
+        <button type="button" id="checkButton">Check My Answer</button>
+        <button type="button" id="showButton" disabled>Show Correct Matrix</button>
+      </div>
+      <p id="feedback" role="status" aria-live="polite"></p>
+      <pre id="correctMatrix" hidden></pre>
+    </section>
+    <section id="listSection" hidden>
+      <h2>Adjacency List — Student's Answer</h2>
+      <p>Enter adjacent vertex numbers separated by commas (for example: 1, 3, 4). The order does not matter. Leave the field empty if the vertex has no neighbors.</p>
+      <table class="list-table" aria-label="Student adjacency list">
+        <thead><tr><th>Vertex</th><th>Adjacent vertices</th></tr></thead>
+        <tbody id="studentList"></tbody>
+      </table>
+      <div class="controls">
+        <button type="button" id="checkListButton">Check Adjacency List</button>
+        <button type="button" id="showListButton" disabled>Show Correct List</button>
+        <button type="button" id="clearListButton">Clear Answers</button>
+      </div>
+      <p id="listFeedback" role="status" aria-live="polite"></p>
+      <pre id="correctList" hidden></pre>
+    </section>
+  </main>
+  <script>
+    "use strict";
+    const GRID_SIZE = 8;
+    const CELL_SIZE = 64;
+    const SVG_NS = "http://www.w3.org/2000/svg";
+    const svg = document.getElementById("grid");
+    const status = document.getElementById("status");
+    const vertices = new Map(); // Key: "row,column"; value: {row, column, id}.
+    const edges = new Set(); // Edge keys: "smallerId,largerId".
+    let nextVertexId = 0;
+    let mode = "vertices";
+    let selectedId = null;
+    let matrixLocked = false;
+    let matrixIds = [];
+
+    const STORAGE_KEY = "drakon-graph-constructor-experiment-v1";
+    function snapshot() {
+      const matrix = {};
+      document.querySelectorAll("#studentMatrix input").forEach(el => {
+        matrix[`${el.dataset.row},${el.dataset.col}`] = el.value;
+      });
+      const list = {};
+      document.querySelectorAll("#studentList input").forEach(el => {
+        list[el.dataset.vertex] = el.value;
+      });
+      return {
+        format: "graph-constructor", version: 1,
+        vertices: [...vertices.values()].map(v => ({row:v.row, column:v.column, id:v.id})),
+        edges: [...edges], matrixLocked, matrix, list
+      };
+    }
+    function saveAutomatically() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(snapshot()));
+        document.getElementById("storageStatus").textContent = "Auto Save: current experiment saved in this browser.";
+      } catch (error) {
+        document.getElementById("storageStatus").textContent = "Auto Save unavailable. Use Save Experiment to keep your work.";
+      }
+    }
+    function restoreExperiment(data) {
+      if (!data || data.format !== "graph-constructor" || data.version !== 1 ||
+          !Array.isArray(data.vertices) || !Array.isArray(data.edges)) throw Error("Unsupported experiment file.");
+      const incoming = new Map();
+      const ids = new Set();
+      for (const v of data.vertices) {
+        if (![v.row,v.column,v.id].every(Number.isInteger) ||
+            v.row < 0 || v.row >= GRID_SIZE || v.column < 0 || v.column >= GRID_SIZE ||
+            v.id < 0 || ids.has(v.id) || incoming.has(`${v.row},${v.column}`)) throw Error("Invalid vertices.");
+        ids.add(v.id); incoming.set(`${v.row},${v.column}`, {row:v.row,column:v.column,id:v.id});
+      }
+      if ([...ids].sort((a,b)=>a-b).some((id,i)=>id!==i)) throw Error("Vertex numbering is invalid.");
+      const incomingEdges = new Set();
+      for (const key of data.edges) {
+        if (typeof key !== "string" || !/^\d+,\d+$/.test(key)) throw Error("Invalid edge.");
+        const [a,b] = key.split(",").map(Number);
+        if (!ids.has(a) || !ids.has(b) || a===b) throw Error("Invalid edge endpoints.");
+        incomingEdges.add(edgeKey(a,b));
+      }
+      if (data.matrixLocked && !incoming.size) throw Error("Empty matrix experiment.");
+      vertices.clear(); for (const [key,v] of incoming) vertices.set(key,v);
+      edges.clear(); for (const key of incomingEdges) edges.add(key);
+      nextVertexId = vertices.size;
+      selectedId = null;
+      if (matrixLocked) editGraph();
+      setMode("vertices");
+      redrawGraph();
+      if (data.matrixLocked) {
+        buildMatrix(false);
+        document.querySelectorAll("#studentMatrix input").forEach(el => {
+          const key = `${el.dataset.row},${el.dataset.col}`;
+          el.value = typeof data.matrix?.[key] === "string" ? data.matrix[key] : "";
+        });
+        document.querySelectorAll("#studentList input").forEach(el => {
+          el.value = typeof data.list?.[el.dataset.vertex] === "string" ? data.list[el.dataset.vertex] : "";
+        });
+      }
+      saveAutomatically();
+    }
+    function saveExperimentFile() {
+      const blob = new Blob([JSON.stringify(snapshot(), null, 2)], {type:"application/json"});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url; a.download = "graph-experiment.json"; a.click();
+      setTimeout(() => URL.revokeObjectURL(url), 30000);
+    }
+    async function loadExperimentFile(event) {
+      const file = event.target.files?.[0];
+      if (!file) return;
+      try {
+        const data = JSON.parse(await file.text());
+        restoreExperiment(data);
+        document.getElementById("storageStatus").textContent = "Experiment loaded and saved automatically.";
+      } catch (error) { alert(`Cannot load experiment: ${error.message}`); }
+      event.target.value = "";
+    }
+
+    function setMode(newMode) {
+      if (matrixLocked) return;
+      mode = newMode;
+      selectedId = null;
+      for (const [buttonId, buttonMode] of [["verticesButton", "vertices"], ["edgesButton", "edges"]]) {
+        const button = document.getElementById(buttonId);
+        const active = mode === buttonMode;
+        button.classList.toggle("active", active);
+        button.setAttribute("aria-pressed", String(active));
+      }
+      redrawGraph();
+    }
+
+    function edgeKey(a, b) {
+      return [Math.min(a, b), Math.max(a, b)].join(",");
+    }
+
+    function svgElement(tag, attributes = {}) {
+      const element = document.createElementNS(SVG_NS, tag);
+      for (const [name, value] of Object.entries(attributes)) {
+        element.setAttribute(name, String(value));
+      }
+      return element;
+    }
+
+    function drawGrid() {
+      svg.replaceChildren();
+      for (let row = 0; row < GRID_SIZE; row++) {
+        for (let column = 0; column < GRID_SIZE; column++) {
+          const cell = svgElement("rect", {
+            x: column * CELL_SIZE, y: row * CELL_SIZE,
+            width: CELL_SIZE, height: CELL_SIZE, class: "cell"
+          });
+          cell.addEventListener("click", () => handleCellClick(row, column));
+          svg.appendChild(cell);
+        }
+      }
+      redrawGraph();
+    }
+
+    function handleCellClick(row, column) {
+      if (matrixLocked) return;
+      if (mode === "vertices") toggleVertex(row, column);
+      else toggleEdge(row, column);
+    }
+
+    function toggleVertex(row, column) {
+      const key = `${row},${column}`;
+      if (vertices.has(key)) {
+        const removedId = vertices.get(key).id;
+        vertices.delete(key);
+
+        // Remove incident edges and renumber remaining vertex IDs.
+        // Every ID greater than removedId shifts down by one.
+        const updatedEdges = new Set();
+        for (const edge of edges) {
+          let [a, b] = edge.split(",").map(Number);
+          if (a === removedId || b === removedId) continue;
+          if (a > removedId) a--;
+          if (b > removedId) b--;
+          updatedEdges.add(edgeKey(a, b));
+        }
+        edges.clear();
+        for (const edge of updatedEdges) edges.add(edge);
+        for (const vertex of vertices.values()) {
+          if (vertex.id > removedId) vertex.id--;
+        }
+        nextVertexId = vertices.size;
+        selectedId = null;
+      } else {
+        vertices.set(key, { row, column, id: nextVertexId++ });
+      }
+      redrawGraph();
+      saveAutomatically();
+    }
+
+    function toggleEdge(row, column) {
+      const vertex = vertices.get(`${row},${column}`);
+      if (!vertex) return;
+      if (selectedId === null) {
+        selectedId = vertex.id;
+      } else if (selectedId === vertex.id) {
+        selectedId = null;
+      } else {
+        const key = edgeKey(selectedId, vertex.id);
+        if (edges.has(key)) edges.delete(key);
+        else edges.add(key);
+        selectedId = null;
+      }
+      redrawGraph();
+      saveAutomatically();
+    }
+
+    function redrawGraph() {
+      svg.querySelectorAll(".edge, .vertex, .vertex-label").forEach(el => el.remove());
+      const byId = new Map([...vertices.values()].map(v => [v.id, v]));
+      for (const key of edges) {
+        const [a, b] = key.split(",").map(Number);
+        const v1 = byId.get(a);
+        const v2 = byId.get(b);
+        if (!v1 || !v2) continue;
+        svg.appendChild(svgElement("line", {
+          x1: (v1.column + 0.5) * CELL_SIZE,
+          y1: (v1.row + 0.5) * CELL_SIZE,
+          x2: (v2.column + 0.5) * CELL_SIZE,
+          y2: (v2.row + 0.5) * CELL_SIZE,
+          class: "edge"
+        }));
+      }
+      for (const { row, column, id } of vertices.values()) {
+        const x = (column + 0.5) * CELL_SIZE;
+        const y = (row + 0.5) * CELL_SIZE;
+        svg.appendChild(svgElement("circle", {
+          cx: x, cy: y, r: 20,
+          class: id === selectedId ? "vertex selected" : "vertex"
+        }));
+        const label = svgElement("text", { x, y, class: "vertex-label" });
+        label.textContent = String(id);
+        svg.appendChild(label);
+      }
+      status.textContent = `Vertices: ${vertices.size} | Edges: ${edges.size}` +
+        (selectedId !== null ? ` | Selected vertex: ${selectedId}` : "");
+    }
+
+    function expectedValue(a, b) {
+      return edges.has(edgeKey(a, b)) ? 1 : 0;
+    }
+
+    function buildMatrix(scrollToMatrix = true) {
+      if (vertices.size === 0) {
+        alert("Add at least one vertex before building a matrix.");
+        return;
+      }
+      matrixIds = [...vertices.values()].map(v => v.id).sort((a, b) => a - b);
+      matrixLocked = true;
+      selectedId = null;
+      redrawGraph();
+      document.getElementById("verticesButton").disabled = true;
+      document.getElementById("edgesButton").disabled = true;
+      document.getElementById("clearButton").disabled = true;
+      document.getElementById("buildMatrixButton").hidden = true;
+      document.getElementById("editButton").hidden = false;
+      const table = document.getElementById("studentMatrix");
+      table.replaceChildren();
+      const header = document.createElement("tr");
+      const corner = document.createElement("th");
+      corner.scope = "col";
+      header.appendChild(corner);
+      for (const id of matrixIds) {
+        const th = document.createElement("th");
+        th.scope = "col";
+        th.textContent = id;
+        header.appendChild(th);
+      }
+      table.appendChild(header);
+      for (const rowId of matrixIds) {
+        const tr = document.createElement("tr");
+        const rowHead = document.createElement("th");
+        rowHead.scope = "row";
+        rowHead.textContent = rowId;
+        tr.appendChild(rowHead);
+        for (const colId of matrixIds) {
+          const td = document.createElement("td");
+          const input = document.createElement("input");
+          input.type = "text";
+          input.inputMode = "numeric";
+          input.maxLength = 1;
+          input.pattern = "[01]";
+          input.setAttribute("aria-label", `Row ${rowId}, column ${colId}`);
+          input.dataset.row = rowId;
+          input.dataset.col = colId;
+          input.addEventListener("input", () => {
+            input.classList.remove("error");
+            document.getElementById("feedback").textContent = "";
+          });
+          td.appendChild(input);
+          tr.appendChild(td);
+        }
+        table.appendChild(tr);
+      }
+      buildStudentList();
+      document.getElementById("matrixSection").hidden = false;
+      document.getElementById("feedback").textContent = "";
+      document.getElementById("showButton").disabled = true;
+      document.getElementById("correctMatrix").hidden = true;
+      if (scrollToMatrix) document.getElementById("matrixSection").scrollIntoView({ behavior: "smooth", block: "nearest" });
+      saveAutomatically();
+    }
+
+    function checkMatrix() {
+      const inputs = [...document.querySelectorAll("#studentMatrix input")];
+      let incorrect = 0;
+      let incomplete = 0;
+      for (const input of inputs) {
+        const value = input.value.trim();
+        const valid = value === "0" || value === "1";
+        if (!valid) incomplete++;
+        else if (Number(value) !== expectedValue(Number(input.dataset.row), Number(input.dataset.col))) incorrect++;
+        input.classList.toggle("error", !valid || Number(value) !== expectedValue(Number(input.dataset.row), Number(input.dataset.col)));
+      }
+      const feedback = document.getElementById("feedback");
+      if (incomplete) feedback.textContent = `Complete all cells using only 0 or 1. Invalid or empty cells: ${incomplete}.`;
+      else if (incorrect) feedback.textContent = `Incorrect: ${incorrect} cell${incorrect === 1 ? "" : "s"} contain errors. Try again!`;
+      else feedback.textContent = "Correct! Your adjacency matrix matches the graph.";
+      document.getElementById("showButton").disabled = false;
+    }
+
+    function showCorrectMatrix() {
+      const labels = matrixIds.map(String);
+      const width = Math.max(2, ...labels.map(x => x.length));
+      const pad = x => String(x).padStart(width, " ");
+      const lines = [" ".repeat(width) + "  " + labels.map(pad).join(" ")];
+      for (const row of matrixIds) {
+        lines.push(pad(row) + "  " + matrixIds.map(col => pad(expectedValue(row, col))).join(" "));
+      }
+      const output = document.getElementById("correctMatrix");
+      output.textContent = "Correct Adjacency Matrix\n\n" + lines.join("\n");
+      output.hidden = false;
+    }
+
+    function expectedNeighbors(id) {
+      const neighbors = [];
+      for (const other of matrixIds) {
+        if (other !== id && edges.has(edgeKey(id, other))) neighbors.push(other);
+      }
+      return neighbors;
+    }
+
+    function buildStudentList() {
+      const tbody = document.getElementById("studentList");
+      tbody.replaceChildren();
+      for (const id of matrixIds) {
+        const row = document.createElement("tr");
+        const label = document.createElement("th");
+        label.scope = "row";
+        label.textContent = id;
+        const cell = document.createElement("td");
+        const input = document.createElement("input");
+        input.type = "text";
+        input.dataset.vertex = String(id);
+        input.setAttribute("aria-label", `Neighbors of vertex ${id}`);
+        input.placeholder = "e.g. 1, 3, 4";
+        input.addEventListener("input", () => {
+          input.classList.remove("error");
+          document.getElementById("listFeedback").textContent = "";
+        });
+        cell.appendChild(input);
+        row.append(label, cell);
+        tbody.appendChild(row);
+      }
+      document.getElementById("listSection").hidden = false;
+      document.getElementById("listFeedback").textContent = "";
+      document.getElementById("showListButton").disabled = true;
+      document.getElementById("correctList").hidden = true;
+    }
+
+    function checkList() {
+      let incorrect = 0;
+      const issues = [];
+      for (const input of document.querySelectorAll("#studentList input")) {
+        const value = input.value.trim();
+        const tokens = value === "" ? [] : value.split(",").map(x => x.trim());
+        const valid = tokens.every(x => /^\d+$/.test(x)) &&
+          tokens.every(x => matrixIds.includes(Number(x))) &&
+          new Set(tokens.map(Number)).size === tokens.length;
+        const actual = tokens.map(Number).sort((a, b) => a - b);
+        const expected = expectedNeighbors(Number(input.dataset.vertex));
+        const correct = valid && actual.length === expected.length &&
+          actual.every((x, i) => x === expected[i]);
+        input.classList.toggle("error", !correct);
+        if (!correct) {
+          incorrect++;
+          const vertex = Number(input.dataset.vertex);
+          if (!valid) {
+            issues.push(`Vertex ${vertex}: use unique, existing vertex numbers separated by commas.`);
+          } else {
+            const missing = expected.filter(x => !actual.includes(x));
+            const extra = actual.filter(x => !expected.includes(x));
+            const parts = [];
+            if (missing.length) parts.push(`missing: ${missing.join(", ")}`);
+            if (extra.length) parts.push(`extra: ${extra.join(", ")}`);
+            issues.push(`Vertex ${vertex}: ${parts.join("; ")}.`);
+          }
+        }
+      }
+      document.getElementById("listFeedback").textContent = incorrect === 0
+        ? "Correct! Your adjacency list matches the graph."
+        : `Incorrect: ${incorrect} row${incorrect === 1 ? "" : "s"} contain errors. ${issues.join(" ")}`;
+      document.getElementById("showListButton").disabled = false;
+    }
+
+    function clearListAnswers() {
+      for (const input of document.querySelectorAll("#studentList input")) {
+        input.value = "";
+        input.classList.remove("error");
+      }
+      document.getElementById("listFeedback").textContent = "";
+      document.getElementById("correctList").hidden = true;
+      document.getElementById("showListButton").disabled = true;
+    }
+
+    function showCorrectList() {
+      const lines = matrixIds.map(id => `${id}: [${expectedNeighbors(id).join(", ")}]`);
+      const output = document.getElementById("correctList");
+      output.textContent = "Correct Adjacency List\n\n" + lines.join("\n");
+      output.hidden = false;
+    }
+
+    function editGraph() {
+      matrixLocked = false;
+      document.getElementById("verticesButton").disabled = false;
+      document.getElementById("edgesButton").disabled = false;
+      document.getElementById("clearButton").disabled = false;
+      document.getElementById("buildMatrixButton").hidden = false;
+      document.getElementById("editButton").hidden = true;
+      document.getElementById("matrixSection").hidden = true;
+      document.getElementById("listSection").hidden = true;
+      setMode("vertices");
+      saveAutomatically();
+    }
+
+    document.getElementById("buildMatrixButton").addEventListener("click", buildMatrix);
+    document.getElementById("editButton").addEventListener("click", editGraph);
+    document.getElementById("checkButton").addEventListener("click", checkMatrix);
+    document.getElementById("showButton").addEventListener("click", showCorrectMatrix);
+    document.getElementById("checkListButton").addEventListener("click", checkList);
+    document.getElementById("showListButton").addEventListener("click", showCorrectList);
+    document.getElementById("clearListButton").addEventListener("click", clearListAnswers);
+    document.getElementById("verticesButton").addEventListener("click", () => setMode("vertices"));
+    document.getElementById("edgesButton").addEventListener("click", () => setMode("edges"));
+    document.getElementById("clearButton").addEventListener("click", () => {
+      vertices.clear();
+      edges.clear();
+      nextVertexId = 0;
+      selectedId = null;
+      redrawGraph();
+      saveAutomatically();
+    });
+    document.getElementById("saveExperimentButton").addEventListener("click", saveExperimentFile);
+    document.getElementById("loadExperimentButton").addEventListener("click", () => document.getElementById("loadExperimentFile").click());
+    document.getElementById("loadExperimentFile").addEventListener("change", loadExperimentFile);
+    document.addEventListener("input", event => {
+      if (event.target.matches("#studentMatrix input, #studentList input")) saveAutomatically();
+    });
+    drawGrid();
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) restoreExperiment(JSON.parse(saved));
+    } catch (error) {
+      document.getElementById("storageStatus").textContent = "Could not restore the saved experiment. You can load a JSON backup.";
+    }
+  </script>
+</body>
+</html>
