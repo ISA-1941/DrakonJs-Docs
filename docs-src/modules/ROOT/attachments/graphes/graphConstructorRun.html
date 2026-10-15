@@ -96,7 +96,7 @@
     </pre>
     function showAlgorithmResults(text) {
     const output = document.getElementById("algorithmResults");
-    output.textContent = text;
+    output.textContent += "\n\n" + text;
 }
     </section>
     <section id="matrixSection" hidden>
@@ -209,17 +209,7 @@ function runDijkstra() {
         const startVertex = "0";
 
         // Execute Dijkstra algorithm
-        captureAlgorithmOutput(() => {
-
-    const result = dijkstra(graph, startVertex);
-
-    printResults(
-        result.distances,
-        result.previous,
-        startVertex
-    );
-
-});
+        
     } catch (error) {
         console.error("Dijkstra error:", error);
         alert("Dijkstra error: " + error.message);
