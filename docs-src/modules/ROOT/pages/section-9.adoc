@@ -1039,8 +1039,7 @@ Students can create directed or undirected graphs,
 define edge weights, and execute BFS, DFS,
 and Dijkstra's shortest-path algorithm.
 
-The experiments run directly in a web browser.
-
+[.experiment-link]
 link:{attachmentsdir}/graphes/graphConstructorRun.html[
 Launch Graph Constructor,
 window=_blank
