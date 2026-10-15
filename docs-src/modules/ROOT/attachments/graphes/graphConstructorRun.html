@@ -14,14 +14,15 @@
     button { padding: 10px 14px; border: 1px solid #64788c; border-radius: 6px; background: #fff; color: #203448; cursor: pointer; font-weight: 600; }
     button.active { background: #235f91; border-color: #235f91; color: white; }
     button:disabled { opacity: .48; cursor: not-allowed; }
-    #grid { display: block; width: min(100%, 520px); height: auto; border: 1px solid #718294; background: #fafcfe; touch-action: manipulation; }
+    #grid { display: block; width: min(100%, 520px); height: auto; border: 1px solid #718294; background: #fafcfe; touch-action: none; }
     .cell { fill: transparent; stroke: #b7c4d0; stroke-width: 1; cursor: pointer; }
     .cell:hover { fill: #dceefa; }
     .arrow-head { fill: #169447; pointer-events: none; }
     .edge-hit { stroke: transparent; stroke-width: 18; cursor: pointer; pointer-events: stroke; }
     .edge { stroke: #169447; stroke-width: 5; stroke-linecap: round; pointer-events: none; }
     .vertex.selected { fill: #e89427; }
-    .vertex { fill: #2463a0; stroke: white; stroke-width: 2; pointer-events: none; }
+    .vertex { fill: #2463a0; stroke: white; stroke-width: 2; pointer-events: all; cursor: grab; }
+    .vertex.dragging { cursor: grabbing; opacity: .75; }
     .vertex-label { fill: white; font-size: 17px; font-weight: bold; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
     #status { margin-top: 14px; font-weight: 600; }
     #matrixSection { margin-top: 24px; padding-top: 12px; border-top: 1px solid #cbd5df; }
@@ -42,13 +43,19 @@
     .list-table input { box-sizing: border-box; width: 100%; min-width: 0; padding: 9px; font-size: 16px; border: 1px solid #889bad; border-radius: 4px; }
     .list-table input.error { border: 2px solid #c43e3e; background: #fff0f0; }
     #correctList { white-space: pre; overflow-x: auto; padding: 12px; background: #f0f5f9; border-radius: 6px; }
+    #roadSection { margin-top: 24px; padding-top: 12px; border-top: 1px solid #cbd5df; }
+    .road-table { border-collapse: collapse; width: 100%; }
+    .road-table th, .road-table td { border: 1px solid #cbd5df; padding: 9px; text-align: center; }
+    .road-table input { width: 100%; max-width: 105px; box-sizing: border-box; padding: 8px; font-size: 15px; }
+    .road-table input:invalid { border: 2px solid #c43e3e; }
+    .road-total { font-weight: 600; }
     @media (max-width: 600px) { main { margin: 0; border-radius: 0; padding: 15px; } }
   </style>
 </head>
 <body>
   <main>
     <h1>Graph Constructor — Computational Experiment</h1>
-    <p>Select Add Vertices to place or remove vertices. Select Add Edges, then click two vertices to connect them with a green edge. Select the same pair again to remove the edge or arc. In Directed Graph mode, click a line while Add Edges is active to change its direction. Build a matrix when your graph is ready.</p>
+    <p>Select Add Vertices to place or remove vertices. Drag a vertex to an empty grid cell to move it; Ctrl+Z undoes changes. Select Add Edges, then click two vertices to connect them with a green edge. Select the same pair again to remove the edge or arc. In Directed Graph mode, click a line while Add Edges is active to change its direction. Build a matrix when your graph is ready.</p>
     <fieldset id="graphTypeSelector" style="border:1px solid #cbd5df;border-radius:6px;padding:10px 14px;margin-top:16px">
       <legend><strong>Graph Type</strong></legend>
       <label style="margin-right:22px"><input type="radio" name="graphType" value="undirected" checked> Undirected Graph</label>
@@ -60,6 +67,7 @@
       <button type="button" id="buildMatrixButton">Build Adjacency Matrix</button>
       <button type="button" id="editButton" hidden>Edit Graph</button>
       <button type="button" id="clearButton">Clear Graph</button>
+      <button type="button" id="undoButton" disabled title="Undo (Ctrl+Z)">Undo ↶</button>
       <button type="button" id="saveExperimentButton">Save Experiment</button>
       <button type="button" id="loadExperimentButton">Load Experiment</button>
       <input type="file" id="loadExperimentFile" accept=".json,application/json" hidden>
@@ -67,6 +75,17 @@
     <p id="storageStatus" role="status" aria-live="polite">Auto Save is enabled when browser storage is available.</p>
     <svg id="grid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Interactive eight by eight grid for placing graph vertices"></svg>
     <p id="status" aria-live="polite">Vertices: 0</p>
+    <section id="roadSection">
+      <h2>Road Parameters</h2>
+      <p>Enter distance and cost per kilometer for each road.</p>
+      <div class="matrix-scroll"><table class="road-table"><thead><tr><th>Road</th><th>Distance (km)</th><th>Cost / km</th><th>Total cost</th></tr></thead><tbody id="roadRows"></tbody></table></div>
+      <p id="roadStatus" role="status"></p>
+      <div class="controls">
+        <button type="button" id="runGraphButton">Run BFS / DFS</button>
+        <button type="button" onclick="runDijkstra()">Run Dijkstra</button>
+      </div>
+      <p id="runGraphStatus" role="status" aria-live="polite"></p>
+    </section>
     <section id="matrixSection" hidden>
       <h2>Adjacency Matrix — Student's Answer</h2>
       <p>Enter 1 if an edge (or an arc from the row vertex to the column vertex) exists, otherwise enter 0. Complete every cell before checking.</p>
@@ -109,6 +128,159 @@
     let selectedId = null;
     let matrixLocked = false;
     let matrixIds = [];
+    const roadParameters = new Map(); // Key: sorted pair of vertex IDs; {distance, rate}.
+    function roadPairs() {
+      return [...new Set([...edges].map(key => {
+        const [a, b] = key.split(",").map(Number);
+        return edgeKey(a, b);
+      }))].sort((left, right) => {
+        const [a,b] = left.split(",").map(Number);
+        const [c,d] = right.split(",").map(Number);
+        return a-c || b-d;
+      });
+    }
+    // Matrix representation required by the DRAKONTech getNeighbors(graph, vertex).
+    function getGraphData(criterion = "distance") {
+      if (criterion !== "distance" && criterion !== "cost") throw Error("Unknown criterion: " + criterion);
+      const size = vertices.size;
+      const matrix = Array.from({length:size}, () => Array(size).fill(0));
+      for (const edge of edges) {
+        const [from,to] = edge.split(",").map(Number);
+        const road = roadParameters.get(edgeKey(from,to));
+        if (!road || road.distance === "" || road.distance == null) throw Error("Missing distance for road " + edge);
+        const distance = Number(road.distance);
+        if (!Number.isFinite(distance) || distance <= 0) throw Error("Invalid distance for road " + edge);
+        let weight = distance;
+        if (criterion === "cost") {
+          if (road.rate === "" || road.rate == null) throw Error("Missing rate for road " + edge);
+          const rate = Number(road.rate);
+          if (!Number.isFinite(rate) || rate <= 0) throw Error("Invalid rate for road " + edge);
+          weight = distance * rate;
+        }
+        matrix[from][to] = weight;
+        if (graphType === "undirected") matrix[to][from] = weight;
+      }
+      return {size, matrix};
+    }
+      // Convert adjacency matrix to Dijkstra graph format
+function matrixToGraph(graphData) {
+    const graph = {};
+    const matrix = graphData.matrix;
+    const size = graphData.size;
+
+    for (let i = 0; i < size; i++) {
+        graph[i] = {};
+
+        for (let j = 0; j < size; j++) {
+            const weight = matrix[i][j];
+
+            if (weight > 0) {
+                graph[i][j] = weight;
+            }
+        }
+    }
+
+    return graph;
+}
+
+// Run Dijkstra algorithm
+function runDijkstra() {
+    try {
+        // Get graph data from Graph Constructor
+        const graphData = getGraphData("distance");
+
+        // Convert adjacency matrix
+        const graph = matrixToGraph(graphData);
+
+        // Starting vertex
+        const startVertex = "0";
+
+        // Execute Dijkstra algorithm
+        const result = dijkstra(graph, startVertex);
+
+        // Display results in browser Console
+        printResults(
+            result.distances,
+            result.previous,
+            startVertex
+        );
+
+    } catch (error) {
+        console.error("Dijkstra error:", error);
+        alert("Dijkstra error: " + error.message);
+    }
+}
+
+    // One history entry per completed user action, not per mouse movement.
+    const undoStack = [];
+    const UNDO_LIMIT = 80;
+    function rememberAction() {
+      undoStack.push(JSON.stringify(snapshot()));
+      if (undoStack.length > UNDO_LIMIT) undoStack.shift();
+      document.getElementById("undoButton").disabled = false;
+    }
+    function undo() {
+      if (!undoStack.length) return;
+      const previous = JSON.parse(undoStack.pop());
+      restoreExperiment(previous);
+      document.getElementById("undoButton").disabled = !undoStack.length;
+    }
+
+    function renderRoadTable() {
+      const body = document.getElementById("roadRows");
+      body.replaceChildren();
+      const pairs = roadPairs();
+      for (const pair of pairs) {
+        const [a,b] = pair.split(",").map(Number);
+        const values = roadParameters.get(pair) || {distance:"", rate:""};
+        const row = document.createElement("tr");
+        const road = document.createElement("th");
+        road.scope = "row";
+        const forward = edges.has(`${a},${b}`);
+        const backward = edges.has(`${b},${a}`);
+        road.textContent = graphType === "undirected" ? `${a}–${b}` :
+          forward && backward ? `${a} ↔ ${b}` : forward ? `${a} → ${b}` : `${b} → ${a}`;
+        row.appendChild(road);
+        const total = document.createElement("td");
+        total.className = "road-total";
+        for (const [field, label] of [["distance","Distance"],["rate","Cost per kilometer"]]) {
+          const td = document.createElement("td");
+          const input = document.createElement("input");
+          input.type = "number"; input.min = "0"; input.step = "any";
+          input.placeholder = field === "distance" ? "km" : "$/km";
+          input.setAttribute("aria-label", `${label} for road ${a}–${b}`);
+          input.value = values[field];
+          input.addEventListener("focus", () => { input.dataset.beforeEdit = JSON.stringify(snapshot()); });
+          input.addEventListener("input", () => {
+            if (input.dataset.beforeEdit !== undefined) {
+              undoStack.push(input.dataset.beforeEdit);
+              if (undoStack.length > UNDO_LIMIT) undoStack.shift();
+              document.getElementById("undoButton").disabled = false;
+              delete input.dataset.beforeEdit;
+            }
+            const current = roadParameters.get(pair) || {distance:"",rate:""};
+            current[field] = input.value;
+            roadParameters.set(pair, current);
+            updateTotal();
+            saveAutomatically();
+          });
+          td.appendChild(input); row.appendChild(td);
+        }
+        function updateTotal() {
+          const v = roadParameters.get(pair) || values;
+          const d = Number(v.distance), r = Number(v.rate);
+          total.textContent = v.distance !== "" && v.rate !== "" &&
+            Number.isFinite(d) && Number.isFinite(r) && d >= 0 && r >= 0
+            ? (d*r).toFixed(2) : "—";
+        }
+        updateTotal();
+        row.appendChild(total);
+        body.appendChild(row);
+      }
+      document.getElementById("roadStatus").textContent = pairs.length
+        ? `Roads: ${pairs.length}. Values are saved with the experiment.`
+        : "Add edges to create road parameters.";
+    }
 
     const STORAGE_KEY = "drakon-graph-constructor-experiment-v1";
     function snapshot() {
@@ -123,7 +295,8 @@
       return {
         format: "graph-constructor", version: 1,
         vertices: [...vertices.values()].map(v => ({row:v.row, column:v.column, id:v.id})),
-        edges: [...edges], graphType, matrixLocked, matrix, list
+        edges: [...edges], graphType, matrixLocked, matrix, list,
+        roads: Object.fromEntries([...roadParameters].map(([key, value]) => [key, {...value}]))
       };
     }
     function saveAutomatically() {
@@ -157,6 +330,13 @@
       graphType = data.graphType === "directed" ? "directed" : "undirected";
       document.querySelector(`input[name="graphType"][value="${graphType}"]`).checked = true;
       vertices.clear(); for (const [key,v] of incoming) vertices.set(key,v);
+      roadParameters.clear();
+      if (data.roads && typeof data.roads === "object") {
+        for (const [key, value] of Object.entries(data.roads)) {
+          if (/^\d+,\d+$/.test(key) && value && typeof value === "object")
+            roadParameters.set(key, {distance:String(value.distance ?? ""), rate:String(value.rate ?? "")});
+        }
+      }
       edges.clear(); for (const key of incomingEdges) edges.add(key);
       nextVertexId = vertices.size;
       selectedId = null;
@@ -235,12 +415,14 @@
 
     function handleCellClick(row, column) {
       if (matrixLocked) return;
+      if (suppressVertexClick) return;
       if (mode === "vertices") toggleVertex(row, column);
       else toggleEdge(row, column);
     }
 
     function toggleVertex(row, column) {
       const key = `${row},${column}`;
+      rememberAction();
       if (vertices.has(key)) {
         const removedId = vertices.get(key).id;
         vertices.delete(key);
@@ -248,6 +430,16 @@
         // Remove incident edges and renumber remaining vertex IDs.
         // Every ID greater than removedId shifts down by one.
         const updatedEdges = new Set();
+        const updatedRoads = new Map();
+        for (const [pair, values] of roadParameters) {
+          let [a,b] = pair.split(",").map(Number);
+          if (a === removedId || b === removedId) continue;
+          if (a > removedId) a--;
+          if (b > removedId) b--;
+          updatedRoads.set(edgeKey(a,b), values);
+        }
+        roadParameters.clear();
+        for (const [pair, values] of updatedRoads) roadParameters.set(pair, values);
         for (const edge of edges) {
           let [a, b] = edge.split(",").map(Number);
           if (a === removedId || b === removedId) continue;
@@ -275,6 +467,7 @@
       if (selectedId === null) selectedId = vertex.id;
       else if (selectedId === vertex.id) selectedId = null;
       else {
+        rememberAction();
         const a = selectedId, b = vertex.id;
         if (graphType === "directed") {
           const key = `${a},${b}`;
@@ -294,6 +487,7 @@
     // Both -> low-to-high -> high-to-low -> both.
     function cycleEdge(a,b) {
       if (matrixLocked || mode !== "edges" || graphType !== "directed") return;
+      rememberAction();
       const forward = `${a},${b}`, backward = `${b},${a}`;
       const f = edges.has(forward), r = edges.has(backward);
       edges.delete(forward); edges.delete(backward);
@@ -340,12 +534,70 @@
       }
       for (const {row,column,id} of vertices.values()) {
         const x=(column+.5)*CELL_SIZE, y=(row+.5)*CELL_SIZE;
-        svg.appendChild(svgElement("circle", {cx:x,cy:y,r:20,class:id===selectedId?"vertex selected":"vertex"}));
+        const circle = svgElement("circle", {cx:x,cy:y,r:20,class:id===selectedId?"vertex selected":"vertex"});
+        circle.addEventListener("pointerdown", event => beginVertexDrag(event, id));
+        circle.addEventListener("click", event => {
+          event.stopPropagation();
+          if (suppressVertexClick) { suppressVertexClick = false; return; }
+          handleCellClick(row,column);
+        });
+        svg.appendChild(circle);
         const label=svgElement("text", {x,y,class:"vertex-label"});
         label.textContent=String(id); svg.appendChild(label);
       }
+      renderRoadTable();
       status.textContent=`Vertices: ${vertices.size} | ${graphType === "directed" ? "Arcs" : "Edges"}: ${edges.size}`+
         (selectedId!==null?` | Selected vertex: ${selectedId}`:"");
+    }
+
+    let suppressVertexClick = false;
+    function beginVertexDrag(event, id) {
+      if (matrixLocked || mode !== "vertices" || event.button !== 0) return;
+      const circle = event.currentTarget;
+      const vertex = [...vertices.values()].find(v => v.id === id);
+      if (!vertex) return;
+      const startX = event.clientX, startY = event.clientY;
+      let moved = false;
+      const toCell = (e) => {
+        const pt = svg.createSVGPoint();
+        pt.x = e.clientX; pt.y = e.clientY;
+        const ctm = svg.getScreenCTM();
+        if (!ctm) return null;
+        const local = pt.matrixTransform(ctm.inverse());
+        if (local.x < 0 || local.y < 0 || local.x >= 512 || local.y >= 512) return null;
+        return {row:Math.floor(local.y/CELL_SIZE), column:Math.floor(local.x/CELL_SIZE)};
+      };
+      circle.setPointerCapture(event.pointerId);
+      const move = e => {
+        if (Math.hypot(e.clientX-startX,e.clientY-startY) > 6) moved = true;
+        if (moved) circle.classList.add("dragging");
+      };
+      const finish = e => {
+        circle.removeEventListener("pointermove", move);
+        circle.removeEventListener("pointerup", finish);
+        circle.removeEventListener("pointercancel", cancel);
+        if (!moved) return;
+        suppressVertexClick = true;
+        setTimeout(() => { suppressVertexClick = false; }, 0);
+        const dest = toCell(e);
+        if (!dest) return;
+        const oldKey = `${vertex.row},${vertex.column}`;
+        const newKey = `${dest.row},${dest.column}`;
+        if (oldKey === newKey || vertices.has(newKey)) return;
+        rememberAction();
+        vertices.delete(oldKey);
+        vertex.row = dest.row; vertex.column = dest.column;
+        vertices.set(newKey, vertex);
+        redrawGraph(); saveAutomatically();
+      };
+      const cancel = () => {
+        circle.removeEventListener("pointermove", move);
+        circle.removeEventListener("pointerup", finish);
+        circle.removeEventListener("pointercancel", cancel);
+      };
+      circle.addEventListener("pointermove", move);
+      circle.addEventListener("pointerup", finish);
+      circle.addEventListener("pointercancel", cancel);
     }
 
     function expectedValue(a,b) {
@@ -564,6 +816,7 @@
             converted.add(edgeKey(a,b));
           }
         }
+        rememberAction();
         edges.clear(); for (const key of converted) edges.add(key);
         graphType = newType;
         selectedId = null;
@@ -580,12 +833,27 @@
     document.getElementById("verticesButton").addEventListener("click", () => setMode("vertices"));
     document.getElementById("edgesButton").addEventListener("click", () => setMode("edges"));
     document.getElementById("clearButton").addEventListener("click", () => {
+      if (vertices.size || edges.size) rememberAction();
       vertices.clear();
       edges.clear();
       nextVertexId = 0;
       selectedId = null;
       redrawGraph();
       saveAutomatically();
+    });
+    document.getElementById("undoButton").addEventListener("click", undo);
+    document.addEventListener("keydown", event => {
+      if (!(event.ctrlKey || event.metaKey) || event.key.toLowerCase() !== "z" || event.shiftKey) return;
+      if (event.target.closest("input, textarea, [contenteditable]")) return;
+      if (!undoStack.length) return;
+      event.preventDefault(); undo();
+    });
+    document.getElementById("runGraphButton").addEventListener("click", () => {
+      const result = document.getElementById("runGraphStatus");
+      try {
+        if (typeof main !== "function") throw Error("graphRun.js is not loaded or main() is missing.");
+        main(); result.textContent = "Experiment completed. See Firefox Console (Ctrl+Shift+K).";
+      } catch (error) { result.textContent = "Error: " + error.message; console.error(error); }
     });
     document.getElementById("saveExperimentButton").addEventListener("click", saveExperimentFile);
     document.getElementById("loadExperimentButton").addEventListener("click", () => document.getElementById("loadExperimentFile").click());
@@ -601,5 +869,7 @@
       document.getElementById("storageStatus").textContent = "Could not restore the saved experiment. You can load a JSON backup.";
     }
   </script>
+  <script src="graphRun.js"></script>
+  <script src="dijkstraRun.js"></script>
 </body>
 </html>

@@ -1030,12 +1030,19 @@ O(V^2)
 
 More advanced implementations use a priority queue or a min-heap to select the next vertex more efficiently, but the classic version shown here is easier to understand and is well suited for explaining the main idea of Dijkstra's algorithm.
 
-=== Computational Experiment
+== Computational Experiments with Graph Algorithms
 
-Construct your own graph on an 8 × 8 grid.
-Select vertices, connect them with edges,
-and generate the corresponding adjacency lists.
+The Graph Constructor provides an interactive environment
+for investigating graph algorithms.
 
-link:{attachmentsdir}/graphes/graphConstructor.html[
-Run Graph Constructor,role=experiment-link]
+Students can create directed or undirected graphs,
+define edge weights, and execute BFS, DFS,
+and Dijkstra's shortest-path algorithm.
+
+The experiments run directly in a web browser.
+
+link:{attachmentsdir}/graphes/graphConstructorRun.html[
+Launch Graph Constructor,
+window=_blank
+]
 

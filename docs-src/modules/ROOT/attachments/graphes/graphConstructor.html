@@ -17,6 +17,8 @@
     #grid { display: block; width: min(100%, 520px); height: auto; border: 1px solid #718294; background: #fafcfe; touch-action: manipulation; }
     .cell { fill: transparent; stroke: #b7c4d0; stroke-width: 1; cursor: pointer; }
     .cell:hover { fill: #dceefa; }
+    .arrow-head { fill: #169447; pointer-events: none; }
+    .edge-hit { stroke: transparent; stroke-width: 18; cursor: pointer; pointer-events: stroke; }
     .edge { stroke: #169447; stroke-width: 5; stroke-linecap: round; pointer-events: none; }
     .vertex.selected { fill: #e89427; }
     .vertex { fill: #2463a0; stroke: white; stroke-width: 2; pointer-events: none; }
@@ -46,7 +48,12 @@
 <body>
   <main>
     <h1>Graph Constructor — Computational Experiment</h1>
-    <p>Select Add Vertices to place or remove vertices. Select Add Edges, then click two vertices to connect them with a green edge. Select the same pair again to remove the edge. Build a matrix when your graph is ready.</p>
+    <p>Select Add Vertices to place or remove vertices. Select Add Edges, then click two vertices to connect them with a green edge. Select the same pair again to remove the edge or arc. In Directed Graph mode, click a line while Add Edges is active to change its direction. Build a matrix when your graph is ready.</p>
+    <fieldset id="graphTypeSelector" style="border:1px solid #cbd5df;border-radius:6px;padding:10px 14px;margin-top:16px">
+      <legend><strong>Graph Type</strong></legend>
+      <label style="margin-right:22px"><input type="radio" name="graphType" value="undirected" checked> Undirected Graph</label>
+      <label><input type="radio" name="graphType" value="directed"> Directed Graph</label>
+    </fieldset>
     <div class="controls">
       <button type="button" id="verticesButton" class="active" aria-pressed="true">Add Vertices</button>
       <button type="button" id="edgesButton" aria-pressed="false">Add Edges</button>
@@ -62,7 +69,7 @@
     <p id="status" aria-live="polite">Vertices: 0</p>
     <section id="matrixSection" hidden>
       <h2>Adjacency Matrix — Student's Answer</h2>
-      <p>Enter 1 if the two vertices are connected by an edge, otherwise enter 0. Complete every cell before checking.</p>
+      <p>Enter 1 if an edge (or an arc from the row vertex to the column vertex) exists, otherwise enter 0. Complete every cell before checking.</p>
       <div class="matrix-scroll"><table id="studentMatrix" class="matrix" aria-label="Student adjacency matrix"></table></div>
       <div class="controls">
         <button type="button" id="checkButton">Check My Answer</button>
@@ -73,7 +80,7 @@
     </section>
     <section id="listSection" hidden>
       <h2>Adjacency List — Student's Answer</h2>
-      <p>Enter adjacent vertex numbers separated by commas (for example: 1, 3, 4). The order does not matter. Leave the field empty if the vertex has no neighbors.</p>
+      <p>Enter adjacent vertex numbers (outgoing neighbors for directed graphs) separated by commas (for example: 1, 3, 4). The order does not matter. Leave the field empty if the vertex has no neighbors.</p>
       <table class="list-table" aria-label="Student adjacency list">
         <thead><tr><th>Vertex</th><th>Adjacent vertices</th></tr></thead>
         <tbody id="studentList"></tbody>
@@ -95,7 +102,8 @@
     const svg = document.getElementById("grid");
     const status = document.getElementById("status");
     const vertices = new Map(); // Key: "row,column"; value: {row, column, id}.
-    const edges = new Set(); // Edge keys: "smallerId,largerId".
+    const edges = new Set(); // Undirected: sorted pair; directed: source,target.
+    let graphType = "undirected";
     let nextVertexId = 0;
     let mode = "vertices";
     let selectedId = null;
@@ -115,7 +123,7 @@
       return {
         format: "graph-constructor", version: 1,
         vertices: [...vertices.values()].map(v => ({row:v.row, column:v.column, id:v.id})),
-        edges: [...edges], matrixLocked, matrix, list
+        edges: [...edges], graphType, matrixLocked, matrix, list
       };
     }
     function saveAutomatically() {
@@ -143,9 +151,11 @@
         if (typeof key !== "string" || !/^\d+,\d+$/.test(key)) throw Error("Invalid edge.");
         const [a,b] = key.split(",").map(Number);
         if (!ids.has(a) || !ids.has(b) || a===b) throw Error("Invalid edge endpoints.");
-        incomingEdges.add(edgeKey(a,b));
+        incomingEdges.add(data.graphType === "directed" ? `${a},${b}` : edgeKey(a,b));
       }
       if (data.matrixLocked && !incoming.size) throw Error("Empty matrix experiment.");
+      graphType = data.graphType === "directed" ? "directed" : "undirected";
+      document.querySelector(`input[name="graphType"][value="${graphType}"]`).checked = true;
       vertices.clear(); for (const [key,v] of incoming) vertices.set(key,v);
       edges.clear(); for (const key of incomingEdges) edges.add(key);
       nextVertexId = vertices.size;
@@ -243,7 +253,7 @@
           if (a === removedId || b === removedId) continue;
           if (a > removedId) a--;
           if (b > removedId) b--;
-          updatedEdges.add(edgeKey(a, b));
+          updatedEdges.add(graphType === "directed" ? `${a},${b}` : edgeKey(a, b));
         }
         edges.clear();
         for (const edge of updatedEdges) edges.add(edge);
@@ -262,53 +272,84 @@
     function toggleEdge(row, column) {
       const vertex = vertices.get(`${row},${column}`);
       if (!vertex) return;
-      if (selectedId === null) {
-        selectedId = vertex.id;
-      } else if (selectedId === vertex.id) {
-        selectedId = null;
-      } else {
-        const key = edgeKey(selectedId, vertex.id);
-        if (edges.has(key)) edges.delete(key);
-        else edges.add(key);
+      if (selectedId === null) selectedId = vertex.id;
+      else if (selectedId === vertex.id) selectedId = null;
+      else {
+        const a = selectedId, b = vertex.id;
+        if (graphType === "directed") {
+          const key = `${a},${b}`;
+          if (edges.has(key)) edges.delete(key);
+          else edges.add(key);
+        } else {
+          const key = edgeKey(a,b);
+          if (edges.has(key)) edges.delete(key);
+          else edges.add(key);
+        }
         selectedId = null;
       }
-      redrawGraph();
-      saveAutomatically();
+      redrawGraph(); saveAutomatically();
+    }
+
+    // In directed mode, click a line to cycle through its directions.
+    // Both -> low-to-high -> high-to-low -> both.
+    function cycleEdge(a,b) {
+      if (matrixLocked || mode !== "edges" || graphType !== "directed") return;
+      const forward = `${a},${b}`, backward = `${b},${a}`;
+      const f = edges.has(forward), r = edges.has(backward);
+      edges.delete(forward); edges.delete(backward);
+      if (f && r) edges.add(forward);
+      else if (f) edges.add(backward);
+      else edges.add(forward), edges.add(backward);
+      selectedId = null;
+      redrawGraph(); saveAutomatically();
     }
 
     function redrawGraph() {
-      svg.querySelectorAll(".edge, .vertex, .vertex-label").forEach(el => el.remove());
+      svg.querySelectorAll(".edge, .arrow-head, .edge-hit, .vertex, .vertex-label").forEach(el => el.remove());
       const byId = new Map([...vertices.values()].map(v => [v.id, v]));
-      for (const key of edges) {
-        const [a, b] = key.split(",").map(Number);
-        const v1 = byId.get(a);
-        const v2 = byId.get(b);
+      const pairs = new Set([...edges].map(key => {
+        const [a,b] = key.split(",").map(Number);
+        return edgeKey(a,b);
+      }));
+      for (const pair of pairs) {
+        const [a,b] = pair.split(",").map(Number);
+        const v1=byId.get(a), v2=byId.get(b);
         if (!v1 || !v2) continue;
-        svg.appendChild(svgElement("line", {
-          x1: (v1.column + 0.5) * CELL_SIZE,
-          y1: (v1.row + 0.5) * CELL_SIZE,
-          x2: (v2.column + 0.5) * CELL_SIZE,
-          y2: (v2.row + 0.5) * CELL_SIZE,
-          class: "edge"
-        }));
+        const x1=(v1.column+.5)*CELL_SIZE, y1=(v1.row+.5)*CELL_SIZE;
+        const x2=(v2.column+.5)*CELL_SIZE, y2=(v2.row+.5)*CELL_SIZE;
+        const dx=x2-x1, dy=y2-y1, length=Math.hypot(dx,dy);
+        const ux=dx/length, uy=dy/length;
+        svg.appendChild(svgElement("line", {x1,y1,x2,y2,class:"edge"}));
+        if (graphType === "directed") {
+          const arrow = (tx,ty, vx,vy) => {
+            const tipX=tx-vx*22, tipY=ty-vy*22;
+            const baseX=tipX-vx*13, baseY=tipY-vy*13;
+            const sideX=-vy*7, sideY=vx*7;
+            svg.appendChild(svgElement("polygon", {
+              points:`${tipX},${tipY} ${baseX+sideX},${baseY+sideY} ${baseX-sideX},${baseY-sideY}`,
+              class:"arrow-head"
+            }));
+          };
+          if (edges.has(`${a},${b}`)) arrow(x2,y2,ux,uy);
+          if (edges.has(`${b},${a}`)) arrow(x1,y1,-ux,-uy);
+        }
+        // Wide transparent hit area for easy mouse/touch selection.
+        const hit=svgElement("line", {x1,y1,x2,y2,class:"edge-hit"});
+        hit.addEventListener("click", event => {event.stopPropagation(); cycleEdge(a,b);});
+        svg.appendChild(hit);
       }
-      for (const { row, column, id } of vertices.values()) {
-        const x = (column + 0.5) * CELL_SIZE;
-        const y = (row + 0.5) * CELL_SIZE;
-        svg.appendChild(svgElement("circle", {
-          cx: x, cy: y, r: 20,
-          class: id === selectedId ? "vertex selected" : "vertex"
-        }));
-        const label = svgElement("text", { x, y, class: "vertex-label" });
-        label.textContent = String(id);
-        svg.appendChild(label);
+      for (const {row,column,id} of vertices.values()) {
+        const x=(column+.5)*CELL_SIZE, y=(row+.5)*CELL_SIZE;
+        svg.appendChild(svgElement("circle", {cx:x,cy:y,r:20,class:id===selectedId?"vertex selected":"vertex"}));
+        const label=svgElement("text", {x,y,class:"vertex-label"});
+        label.textContent=String(id); svg.appendChild(label);
       }
-      status.textContent = `Vertices: ${vertices.size} | Edges: ${edges.size}` +
-        (selectedId !== null ? ` | Selected vertex: ${selectedId}` : "");
+      status.textContent=`Vertices: ${vertices.size} | ${graphType === "directed" ? "Arcs" : "Edges"}: ${edges.size}`+
+        (selectedId!==null?` | Selected vertex: ${selectedId}`:"");
     }
 
-    function expectedValue(a, b) {
-      return edges.has(edgeKey(a, b)) ? 1 : 0;
+    function expectedValue(a,b) {
+      return edges.has(graphType === "directed" ? `${a},${b}` : edgeKey(a,b)) ? 1 : 0;
     }
 
     function buildMatrix(scrollToMatrix = true) {
@@ -322,6 +363,7 @@
       redrawGraph();
       document.getElementById("verticesButton").disabled = true;
       document.getElementById("edgesButton").disabled = true;
+      document.querySelectorAll('input[name="graphType"]').forEach(input => input.disabled = true);
       document.getElementById("clearButton").disabled = true;
       document.getElementById("buildMatrixButton").hidden = true;
       document.getElementById("editButton").hidden = false;
@@ -406,7 +448,7 @@
     function expectedNeighbors(id) {
       const neighbors = [];
       for (const other of matrixIds) {
-        if (other !== id && edges.has(edgeKey(id, other))) neighbors.push(other);
+        if (other !== id && expectedValue(id, other) === 1) neighbors.push(other);
       }
       return neighbors;
     }
@@ -495,6 +537,7 @@
       matrixLocked = false;
       document.getElementById("verticesButton").disabled = false;
       document.getElementById("edgesButton").disabled = false;
+      document.querySelectorAll('input[name="graphType"]').forEach(input => input.disabled = false);
       document.getElementById("clearButton").disabled = false;
       document.getElementById("buildMatrixButton").hidden = false;
       document.getElementById("editButton").hidden = true;
@@ -504,6 +547,29 @@
       saveAutomatically();
     }
 
+    // Keep the same graph when switching types; an undirected edge becomes two arcs.
+    document.querySelectorAll('input[name="graphType"]').forEach(input => {
+      input.addEventListener("change", event => {
+        const newType = event.target.value;
+        if (newType === graphType) return;
+        const converted = new Set();
+        if (newType === "directed") {
+          for (const key of edges) {
+            const [a,b] = key.split(",").map(Number);
+            converted.add(`${a},${b}`); converted.add(`${b},${a}`);
+          }
+        } else {
+          for (const key of edges) {
+            const [a,b] = key.split(",").map(Number);
+            converted.add(edgeKey(a,b));
+          }
+        }
+        edges.clear(); for (const key of converted) edges.add(key);
+        graphType = newType;
+        selectedId = null;
+        redrawGraph(); saveAutomatically();
+      });
+    });
     document.getElementById("buildMatrixButton").addEventListener("click", buildMatrix);
     document.getElementById("editButton").addEventListener("click", editGraph);
     document.getElementById("checkButton").addEventListener("click", checkMatrix);
