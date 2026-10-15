@@ -85,6 +85,19 @@
         <button type="button" onclick="runDijkstra()">Run Dijkstra</button>
       </div>
       <p id="runGraphStatus" role="status" aria-live="polite"></p>
+      <pre id="algorithmResults"
+     style="background:#f5f5f5;
+            color:#222;
+            padding:15px;
+            border:1px solid #ccc;
+            border-radius:6px;
+            white-space:pre-wrap;
+            overflow-x:auto;">
+    </pre>
+    function showAlgorithmResults(text) {
+    const output = document.getElementById("algorithmResults");
+    output.textContent = text;
+}
     </section>
     <section id="matrixSection" hidden>
       <h2>Adjacency Matrix — Student's Answer</h2>
@@ -196,15 +209,17 @@ function runDijkstra() {
         const startVertex = "0";
 
         // Execute Dijkstra algorithm
-        const result = dijkstra(graph, startVertex);
+        captureAlgorithmOutput(() => {
 
-        // Display results in browser Console
-        printResults(
-            result.distances,
-            result.previous,
-            startVertex
-        );
+    const result = dijkstra(graph, startVertex);
 
+    printResults(
+        result.distances,
+        result.previous,
+        startVertex
+    );
+
+});
     } catch (error) {
         console.error("Dijkstra error:", error);
         alert("Dijkstra error: " + error.message);
