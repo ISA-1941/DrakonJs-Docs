@@ -94,9 +94,16 @@
             white-space:pre-wrap;
             overflow-x:auto;">
     </pre>
-    function showAlgorithmResults(text) {
+function showAlgorithmResults(text) {
     const output = document.getElementById("algorithmResults");
-    output.textContent += "\n\n" + text;
+
+    if (output.textContent.trim() ===
+        "Results will appear here after running an algorithm.") {
+        output.textContent = "";
+    }
+
+    output.textContent +=
+        (output.textContent.trim() ? "\n\n" : "") + text;
 }
     </section>
     <section id="matrixSection" hidden>
