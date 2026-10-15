@@ -83,28 +83,13 @@
       <div class="controls">
         <button type="button" id="runGraphButton">Run BFS / DFS</button>
         <button type="button" onclick="runDijkstra()">Run Dijkstra</button>
+        <button type="button" id="clearAlgorithmResultsButton">Clear Results</button>
       </div>
       <p id="runGraphStatus" role="status" aria-live="polite"></p>
-      <pre id="algorithmResults"
-     style="background:#f5f5f5;
-            color:#222;
-            padding:15px;
-            border:1px solid #ccc;
-            border-radius:6px;
-            white-space:pre-wrap;
-            overflow-x:auto;">
-    </pre>
-function showAlgorithmResults(text) {
-    const output = document.getElementById("algorithmResults");
-
-    if (output.textContent.trim() ===
-        "Results will appear here after running an algorithm.") {
-        output.textContent = "";
-    }
-
-    output.textContent +=
-        (output.textContent.trim() ? "\n\n" : "") + text;
-}
+      <h2>Algorithm Execution Results</h2>
+      <pre id="algorithmResults" role="status" aria-live="polite"
+           style="background:#f5f5f5;color:#222;padding:15px;border:1px solid #ccc;
+                  border-radius:6px;white-space:pre-wrap;overflow-x:auto;">Results will appear here after running an algorithm.</pre>
     </section>
     <section id="matrixSection" hidden>
       <h2>Adjacency Matrix — Student's Answer</h2>
@@ -203,6 +188,37 @@ function matrixToGraph(graphData) {
     return graph;
 }
 
+// Show algorithm output directly in the experiment page.
+function showAlgorithmResults(message) {
+    const output = document.getElementById("algorithmResults");
+    const previous = output.textContent.trim();
+    const placeholder = "Results will appear here after running an algorithm.";
+    output.textContent = previous && previous !== placeholder
+        ? previous + "\n\n" + message
+        : message;
+}
+
+// Capture synchronous console output without modifying DRAKONTech-generated code.
+function captureAlgorithmOutput(callback) {
+    const originalLog = console.log;
+    const lines = [];
+    console.log = function (...args) {
+        lines.push(args.map(value => {
+            if (typeof value === "string") return value;
+            if (value === undefined) return "undefined";
+            try { return JSON.stringify(value); }
+            catch (_) { return String(value); }
+        }).join(" "));
+        originalLog.apply(console, args);
+    };
+    try {
+        callback();
+    } finally {
+        console.log = originalLog;
+        showAlgorithmResults(lines.join("\n") || "Algorithm completed without console output.");
+    }
+}
+
 // Run Dijkstra algorithm
 function runDijkstra() {
     try {
@@ -215,11 +231,20 @@ function runDijkstra() {
         // Starting vertex
         const startVertex = "0";
 
-        // Execute Dijkstra algorithm
-        
+        // Execute the existing DRAKONTech algorithm and show its results.
+        const algorithm = typeof dijkstraRun === "function" ? dijkstraRun
+                        : typeof dijkstra === "function" ? dijkstra : null;
+        if (!algorithm) throw Error("dijkstraRun.js is not loaded or the Dijkstra function is missing.");
+        if (typeof printResults !== "function") throw Error("printResults() is missing.");
+        captureAlgorithmOutput(() => {
+            const result = algorithm(graph, startVertex);
+            printResults(result.distances, result.previous, startVertex);
+        });
+        document.getElementById("runGraphStatus").textContent = "Dijkstra completed.";
     } catch (error) {
+        document.getElementById("runGraphStatus").textContent = "Dijkstra error: " + error.message;
+        showAlgorithmResults("Dijkstra error: " + error.message);
         console.error("Dijkstra error:", error);
-        alert("Dijkstra error: " + error.message);
     }
 }
 
@@ -860,11 +885,16 @@ function runDijkstra() {
       if (!undoStack.length) return;
       event.preventDefault(); undo();
     });
+    document.getElementById("clearAlgorithmResultsButton").addEventListener("click", () => {
+      document.getElementById("algorithmResults").textContent = "Results will appear here after running an algorithm.";
+      document.getElementById("runGraphStatus").textContent = "";
+    });
     document.getElementById("runGraphButton").addEventListener("click", () => {
       const result = document.getElementById("runGraphStatus");
       try {
         if (typeof main !== "function") throw Error("graphRun.js is not loaded or main() is missing.");
-        main(); result.textContent = "Experiment completed. See Firefox Console (Ctrl+Shift+K).";
+        captureAlgorithmOutput(() => main());
+        result.textContent = "BFS / DFS completed. Results are shown below.";
       } catch (error) { result.textContent = "Error: " + error.message; console.error(error); }
     });
     document.getElementById("saveExperimentButton").addEventListener("click", saveExperimentFile);
