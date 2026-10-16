@@ -424,3 +424,21 @@ This section has focused on the fundamental principles of hashing and the implem
 * Distributed hash tables (DHTs) — used in peer-to-peer networks and blockchain architectures.
 
 These topics will be explored in future works devoted to large-scale data management, high-performance systems, and secure information storage.
+
+=== Computational Experiment
+
+The user enters an array and a target value, or selects "Random sorted array" / "Random unsorted array".
+
+(В UI/UX описаниях чаще используют The user или Users вместо Student, если речь идет про общий класс пользователей).
+
+Before execution, they can predict whether Binary Search will locate the target.
+
+Clicking "Run all searches" executes all three algorithms against the same dataset.
+
+A results table displays the output and the number of comparisons made by each algorithm, 
+followed by a step-by-step trace (low, mid, high pointers for Binary Search).
+
+If the array is unsorted, a warning is raised. If Binary Search fails to find an existing target due to the lack of sorting, 
+the page explicitly highlights this behavior.
+
+link:{attachmentsdir}/searching/search-experiment.html[Launch Search Experiment,window=_blank,role=experiment-link]
