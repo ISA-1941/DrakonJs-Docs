@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search Algorithms — Computational Experiment</title>
+  <style>
+    :root { font-family: Arial, Helvetica, sans-serif; color-scheme: light; }
+    body { margin: 0; background: #eef2f5; color: #233142; }
+    main { max-width: 760px; margin: 28px auto; padding: 22px; background: white; border-radius: 12px; box-shadow: 0 3px 18px #1c33451a; }
+    h1 { margin: 0 0 10px; font-size: 1.55rem; }
+    h2 { font-size: 1.2rem; }
+    p { line-height: 1.5; }
+    .controls { display: flex; gap: 10px; flex-wrap: wrap; margin: 14px 0; }
+    button { padding: 10px 14px; border: 1px solid #64788c; border-radius: 6px; background: #fff; color: #203448; cursor: pointer; font-weight: 600; }
+    button.primary { background: #235f91; border-color: #235f91; color: white; }
+    label { display: block; font-weight: 600; margin: 12px 0 4px; }
+    input[type=text], input[type=number] { box-sizing: border-box; width: 100%; padding: 10px; font-size: 16px; border: 1px solid #889bad; border-radius: 4px; }
+    input.error { border: 2px solid #c43e3e; background: #fff0f0; }
+    .row { display: flex; gap: 14px; flex-wrap: wrap; }
+    .row > div { flex: 1 1 200px; }
+    .cells { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0; }
+    .cell { min-width: 42px; padding: 6px 4px; text-align: center; border: 1px solid #889bad; border-radius: 4px; background: #fafcfe; }
+    .cell small { display: block; color: #64788c; font-size: 11px; }
+    .cell.hit { background: #cfeedb; border-color: #169447; font-weight: bold; }
+    #message { min-height: 1.4em; font-weight: 600; }
+    #message.warn { color: #a85a00; }
+    #message.bad { color: #c43e3e; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #cbd5df; padding: 10px; text-align: left; font-size: 18px; }
+    .scroll { overflow-x: auto; }
+    fieldset { border: 1px solid #cbd5df; border-radius: 6px; padding: 10px 14px; margin-top: 18px; }
+    fieldset label { display: inline-block; margin: 4px 18px 4px 0; font-weight: normal; }
+    pre { font-size: 18px; line-height: 1.5; background: #f5f5f5; color: #222; padding: 15px; border: 1px solid #ccc; border-radius: 6px; white-space: pre-wrap; overflow-x: auto; }
+    section { margin-top: 24px; padding-top: 12px; border-top: 1px solid #cbd5df; }
+    @media (max-width: 600px) { main { margin: 0; border-radius: 0; padding: 15px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <a href="https://isa-1941.github.io/DrakonJs-Docs/drakonjs-docs/3.1.10/section-6.html">← Back to Searching</a>
+    <h1>Search Algorithms — Computational Experiment</h1>
+    <p>Enter an array and a value, then run three search algorithms on the same data. Compare how many elements each one examines. Binary search requires a sorted array: try it on unsorted data and see what happens.</p>
+
+    <label for="arrayInput">Array (numbers separated by commas)</label>
+    <input type="text" id="arrayInput" value="2, 4, 21, 34, 43, 48, 51, 56, 63" autocomplete="off">
+    <div class="row">
+      <div>
+        <label for="valueInput">Value to find</label>
+        <input type="number" id="valueInput" value="34" step="1">
+      </div>
+      <div>
+        <label for="sizeInput">Random array size</label>
+        <input type="number" id="sizeInput" value="10" min="1" max="30" step="1">
+      </div>
+    </div>
+    <div class="controls">
+      <button type="button" id="randomSortedButton">Random sorted array</button>
+      <button type="button" id="randomUnsortedButton">Random unsorted array</button>
+    </div>
+
+    <fieldset>
+      <legend><strong>Your prediction (optional)</strong></legend>
+      <p style="margin:4px 0 8px">Will binary search find this value on this array?</p>
+      <label><input type="radio" name="guess" value="yes"> Yes, it will find it</label>
+      <label><input type="radio" name="guess" value="no"> No, it will report “not found”</label>
+    </fieldset>
+
+    <div class="controls">
+      <button type="button" id="runButton" class="primary">Run all searches</button>
+      <button type="button" id="clearButton">Clear results</button>
+    </div>
+    <p id="message" role="status" aria-live="polite"></p>
+    <div class="cells" id="cells" aria-label="Array elements"></div>
+
+    <section id="resultSection" hidden>
+      <h2>Results</h2>
+      <div class="scroll">
+        <table>
+          <thead><tr><th>Algorithm</th><th>Result</th><th>Elements examined</th></tr></thead>
+          <tbody id="resultRows"></tbody>
+        </table>
+      </div>
+      <h2>Step-by-step trace</h2>
+      <pre id="trace"></pre>
+    </section>
+  </main>
+  <script>
+    "use strict";
+    // Each algorithm returns {found: [indexes], steps: number, log: [strings]}.
+    // "steps" counts the elements examined (one per loop iteration).
+
+    // 1. Linear search through the whole array: finds every occurrence.
+    function linearSearchAll(data, value) {
+      const found = [], log = [];
+      let steps = 0;
+      for (let i = 0; i < data.length; i++) {
+        steps++;
+        const hit = data[i] === value;
+        log.push(`step ${steps}: index ${i}, element ${data[i]} ${hit ? "= match" : "≠ " + value}`);
+        if (hit) found.push(i);
+      }
+      return {found, steps, log};
+    }
+
+    // 2. Linear search in a sorted array: stops as soon as an element is greater.
+    function linearSearchSorted(data, value) {
+      const log = [];
+      let steps = 0;
+      for (let i = 0; i < data.length; i++) {
+        steps++;
+        if (data[i] === value) {
+          log.push(`step ${steps}: index ${i}, element ${data[i]} = match, stop`);
+          return {found: [i], steps, log};
+        }
+        if (data[i] > value) {
+          log.push(`step ${steps}: index ${i}, element ${data[i]} > ${value}, stop`);
+          return {found: [], steps, log};
+        }
+        log.push(`step ${steps}: index ${i}, element ${data[i]} < ${value}, continue`);
+      }
+      return {found: [], steps, log};
+    }
+
+    // 3. Binary search: halves the range on every step.
+    function binarySearch(data, value) {
+      const log = [];
+      let low = 0, high = data.length - 1, steps = 0;
+      while (low <= high) {
+        steps++;
+        const mid = Math.floor((low + high) / 2);
+        const head = `step ${steps}: low=${low}, high=${high}, mid=${mid}, element ${data[mid]}`;
+        if (data[mid] === value) {
+          log.push(head + " = match, stop");
+          return {found: [mid], steps, log};
+        }
+        if (data[mid] < value) { log.push(head + ` < ${value}, low = ${mid + 1}`); low = mid + 1; }
+        else { log.push(head + ` > ${value}, high = ${mid - 1}`); high = mid - 1; }
+      }
+      return {found: [], steps, log};
+    }
+
+    const arrayInput = document.getElementById("arrayInput");
+    const valueInput = document.getElementById("valueInput");
+    const message = document.getElementById("message");
+    const cellsBox = document.getElementById("cells");
+
+    function setMessage(text, kind = "") { message.textContent = text; message.className = kind; }
+
+    function parseArray() {
+      const text = arrayInput.value.trim();
+      if (!text) throw Error("Enter at least one number.");
+      const parts = text.split(",").map(x => x.trim());
+      if (parts.length > 40) throw Error("Use at most 40 elements.");
+      const data = parts.map(Number);
+      if (parts.some((p, i) => p === "" || !Number.isFinite(data[i]))) throw Error("The array must contain only numbers separated by commas.");
+      return data;
+    }
+
+    function isSorted(data) { return data.every((x, i) => i === 0 || data[i - 1] <= x); }
+
+    function drawCells(data, hits = []) {
+      cellsBox.replaceChildren();
+      data.forEach((x, i) => {
+        const div = document.createElement("div");
+        div.className = "cell" + (hits.includes(i) ? " hit" : "");
+        div.textContent = x;
+        const idx = document.createElement("small");
+        idx.textContent = i;
+        div.appendChild(idx);
+        cellsBox.appendChild(div);
+      });
+    }
+
+    function randomArray(sorted) {
+      const size = Math.min(30, Math.max(1, parseInt(document.getElementById("sizeInput").value, 10) || 10));
+      const data = Array.from({length: size}, () => Math.floor(Math.random() * 99) - 9);
+      if (sorted) data.sort((a, b) => a - b);
+      arrayInput.value = data.join(", ");
+      arrayInput.classList.remove("error");
+      valueInput.value = data[Math.floor(Math.random() * data.length)];
+      clearResults();
+      drawCells(data);
+    }
+
+    function describe(result) {
+      if (!result.found.length) return "not found (-1)";
+      return result.found.length === 1 ? `found at index ${result.found[0]}`
+        : `found at indexes ${result.found.join(", ")}`;
+    }
+
+    function runAll() {
+      arrayInput.classList.remove("error");
+      let data;
+      try { data = parseArray(); }
+      catch (error) { arrayInput.classList.add("error"); setMessage(error.message, "bad"); return; }
+      if (valueInput.value.trim() === "" || !Number.isFinite(Number(valueInput.value))) {
+        setMessage("Enter the value to find.", "bad"); return;
+      }
+      const value = Number(valueInput.value);
+      const sorted = isSorted(data);
+      const runs = [
+        ["Linear search (whole array)", linearSearchAll(data, value)],
+        ["Linear search (sorted array)", linearSearchSorted(data, value)],
+        ["Binary search", binarySearch(data, value)]
+      ];
+      const rows = document.getElementById("resultRows");
+      rows.replaceChildren();
+      for (const [name, result] of runs) {
+        const tr = document.createElement("tr");
+        for (const text of [name, describe(result), String(result.steps)]) {
+          const td = document.createElement("td");
+          td.textContent = text;
+          tr.appendChild(td);
+        }
+        rows.appendChild(tr);
+      }
+      document.getElementById("trace").textContent = runs
+        .map(([name, result]) => `${name}\n${result.log.join("\n") || "(no steps)"}`).join("\n\n");
+      document.getElementById("resultSection").hidden = false;
+      drawCells(data, runs[0][1].found);
+
+      const exists = runs[0][1].found.length > 0;
+      const binaryFound = runs[2][1].found.length > 0;
+      let text = sorted ? "The array is sorted: all algorithms are applicable."
+        : "Warning: the array is NOT sorted. Binary search and sorted linear search may give wrong answers.";
+      if (!sorted && exists && !binaryFound) text += " Here binary search missed a value that is present!";
+      const guess = document.querySelector('input[name="guess"]:checked');
+      if (guess) {
+        const correct = (guess.value === "yes") === binaryFound;
+        text += correct ? " Your prediction was correct." : " Your prediction was incorrect. Study the binary search trace to see why.";
+      }
+      setMessage(text, sorted ? "" : "warn");
+    }
+
+    function clearResults() {
+      document.getElementById("resultSection").hidden = true;
+      document.getElementById("resultRows").replaceChildren();
+      document.getElementById("trace").textContent = "";
+      setMessage("");
+      for (const radio of document.querySelectorAll('input[name="guess"]')) radio.checked = false;
+    }
+
+    document.getElementById("runButton").addEventListener("click", runAll);
+    document.getElementById("clearButton").addEventListener("click", () => {
+      clearResults();
+      try { drawCells(parseArray()); } catch (_) { cellsBox.replaceChildren(); }
+    });
+    document.getElementById("randomSortedButton").addEventListener("click", () => randomArray(true));
+    document.getElementById("randomUnsortedButton").addEventListener("click", () => randomArray(false));
+    arrayInput.addEventListener("input", () => {
+      arrayInput.classList.remove("error");
+      try { drawCells(parseArray()); } catch (_) { cellsBox.replaceChildren(); }
+    });
+    try { drawCells(parseArray()); } catch (_) {}
+  </script>
+</body>
+</html>

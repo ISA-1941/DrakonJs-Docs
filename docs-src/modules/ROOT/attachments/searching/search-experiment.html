@@ -40,7 +40,7 @@
   <main>
     <a href="https://isa-1941.github.io/DrakonJs-Docs/drakonjs-docs/3.1.10/section-6.html">← Back to Searching</a>
     <h1>Search Algorithms — Computational Experiment</h1>
-    <p>Enter an array and a value, then run three search algorithms on the same data. Compare how many elements each one examines. Binary search requires a sorted array: try it on unsorted data and see what happens.</p>
+    <p>Enter an array and a value, then run three search algorithms on the same data. Compare how many elements each one examines. Binary search requires a sorted array: try it on unsorted data and see what happens. The programs are loaded directly from the DRAKONTech-generated JavaScript files.</p>
 
     <label for="arrayInput">Array (numbers separated by commas)</label>
     <input type="text" id="arrayInput" value="2, 4, 21, 34, 43, 48, 51, 56, 63" autocomplete="off">
@@ -87,57 +87,71 @@
   </main>
   <script>
     "use strict";
-    // Each algorithm returns {found: [indexes], steps: number, log: [strings]}.
-    // "steps" counts the elements examined (one per loop iteration).
+    // Load the original DRAKONTech-generated programs from adjacent .js files.
+    // Their initial main(); calls are suppressed; algorithm bodies remain unchanged.
+    const SOURCES = [
+      { file: "simpleSearch.js", functionName: "searchElement", label: "Linear search (all matches)" },
+      { file: "sliceSearch.js", functionName: "sliceSearch", label: "Linear search (first occurrence)" },
+      { file: "binarySearch.js", functionName: "searchValue", label: "Binary search" }
+    ];
+    let loadedAlgorithms = null;
 
-    // 1. Linear search through the whole array: finds every occurrence.
-    function linearSearchAll(data, value) {
-      const found = [], log = [];
-      let steps = 0;
-      for (let i = 0; i < data.length; i++) {
-        steps++;
-        const hit = data[i] === value;
-        log.push(`step ${steps}: index ${i}, element ${data[i]} ${hit ? "= match" : "≠ " + value}`);
-        if (hit) found.push(i);
-      }
-      return {found, steps, log};
+    async function loadAlgorithms() {
+      if (loadedAlgorithms) return loadedAlgorithms;
+      const loaded = await Promise.all(SOURCES.map(async spec => {
+        const response = await fetch(spec.file, { cache: "no-store" });
+        if (!response.ok) throw Error(`Cannot load ${spec.file}: HTTP ${response.status}`);
+        const source = await response.text();
+        // Only suppress the demonstration entry point, not the search algorithm.
+        const stripped = source.replace(/^\s*main\s*\(\s*\)\s*;?/, "");
+        if (stripped === source) throw Error(`${spec.file}: expected initial main(); call`);
+        // Separate function scope for each file prevents collisions between main() functions.
+        const factory = new Function("console", stripped + `\nreturn ${spec.functionName};`);
+        return { ...spec, factory };
+      }));
+      loadedAlgorithms = loaded;
+      return loaded;
     }
 
-    // 2. Linear search in a sorted array: stops as soon as an element is greater.
-    function linearSearchSorted(data, value) {
+    function executeAlgorithm(spec, data, value) {
       const log = [];
-      let steps = 0;
-      for (let i = 0; i < data.length; i++) {
-        steps++;
-        if (data[i] === value) {
-          log.push(`step ${steps}: index ${i}, element ${data[i]} = match, stop`);
-          return {found: [i], steps, log};
+      const checked = [];
+      const capturedConsole = {
+        log: (...args) => log.push(args.map(x => String(x)).join(" "))
+      };
+      const algorithm = spec.factory(capturedConsole);
+      // Observe the real algorithm's array accesses without replacing its logic.
+      const observedArray = new Proxy(data.slice(), {
+        get(target, key, receiver) {
+          const val = Reflect.get(target, key, receiver);
+          if (typeof key === "string" && /^(0|[1-9]\d*)$/.test(key)) {
+            const index = Number(key);
+            // Binary search can read the same midpoint twice in one iteration.
+            if (checked.length === 0 || checked[checked.length - 1] !== index) {
+              checked.push(index);
+            }
+          }
+          return val;
         }
-        if (data[i] > value) {
-          log.push(`step ${steps}: index ${i}, element ${data[i]} > ${value}, stop`);
-          return {found: [], steps, log};
-        }
-        log.push(`step ${steps}: index ${i}, element ${data[i]} < ${value}, continue`);
+      });
+      const returned = algorithm(observedArray, value);
+      let found;
+      if (spec.functionName === "searchValue") {
+        found = returned === -1 ? [] : [returned];
+      } else if (spec.functionName === "sliceSearch") {
+        // The generated program reports the found index in console.log().
+        const line = log.find(x => x.includes("found at index ="));
+        const match = line && line.match(/found at index\s*=\s*(\d+)/);
+        found = match ? [Number(match[1])] : [];
+      } else {
+        found = log.flatMap(line => {
+          const match = line.match(/The searched element - index\s*=\s*(\d+)/);
+          return match ? [Number(match[1])] : [];
+        });
       }
-      return {found: [], steps, log};
-    }
-
-    // 3. Binary search: halves the range on every step.
-    function binarySearch(data, value) {
-      const log = [];
-      let low = 0, high = data.length - 1, steps = 0;
-      while (low <= high) {
-        steps++;
-        const mid = Math.floor((low + high) / 2);
-        const head = `step ${steps}: low=${low}, high=${high}, mid=${mid}, element ${data[mid]}`;
-        if (data[mid] === value) {
-          log.push(head + " = match, stop");
-          return {found: [mid], steps, log};
-        }
-        if (data[mid] < value) { log.push(head + ` < ${value}, low = ${mid + 1}`); low = mid + 1; }
-        else { log.push(head + ` > ${value}, high = ${mid - 1}`); high = mid - 1; }
-      }
-      return {found: [], steps, log};
+      const trace = checked.map((index, i) =>
+        `step ${i + 1}: index ${index}, element ${data[index]}`);
+      return { found, steps: checked.length, log: [...trace, "", "Program output:", ...log] };
     }
 
     const arrayInput = document.getElementById("arrayInput");
@@ -189,7 +203,7 @@
         : `found at indexes ${result.found.join(", ")}`;
     }
 
-    function runAll() {
+    async function runAll() {
       arrayInput.classList.remove("error");
       let data;
       try { data = parseArray(); }
@@ -199,11 +213,14 @@
       }
       const value = Number(valueInput.value);
       const sorted = isSorted(data);
-      const runs = [
-        ["Linear search (whole array)", linearSearchAll(data, value)],
-        ["Linear search (sorted array)", linearSearchSorted(data, value)],
-        ["Binary search", binarySearch(data, value)]
-      ];
+      let runs;
+      try {
+        const algorithms = await loadAlgorithms();
+        runs = algorithms.map(spec => [spec.label, executeAlgorithm(spec, data, value)]);
+      } catch (error) {
+        setMessage(`Experiment could not run: ${error.message}. Open this page through a local web server or GitHub Pages, not file://.`, "bad");
+        return;
+      }
       const rows = document.getElementById("resultRows");
       rows.replaceChildren();
       for (const [name, result] of runs) {
@@ -223,7 +240,7 @@
       const exists = runs[0][1].found.length > 0;
       const binaryFound = runs[2][1].found.length > 0;
       let text = sorted ? "The array is sorted: all algorithms are applicable."
-        : "Warning: the array is NOT sorted. Binary search and sorted linear search may give wrong answers.";
+        : "Warning: the array is NOT sorted. Binary search may give wrong answers.";
       if (!sorted && exists && !binaryFound) text += " Here binary search missed a value that is present!";
       const guess = document.querySelector('input[name="guess"]:checked');
       if (guess) {

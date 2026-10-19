@@ -1,0 +1,64 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "49",
+            "content": "size = data.length"
+        },
+        "40": {
+            "type": "loopend",
+            "one": "48",
+            "content": ""
+        },
+        "41": {
+            "type": "loopbegin",
+            "one": "43",
+            "content": "i = 0; i < size; i++"
+        },
+        "43": {
+            "type": "question",
+            "one": "44",
+            "two": "40",
+            "flag1": 1,
+            "content": "data[i] === value"
+        },
+        "44": {
+            "type": "action",
+            "one": "46",
+            "content": "console.log(\n    'The element value -->',\n    value,\n    'found at index =',\n    i,\n    'Steps =',\n    i + 1\n);"
+        },
+        "46": {
+            "type": "action",
+            "one": "40",
+            "content": "return "
+        },
+        "48": {
+            "type": "action",
+            "one": "1",
+            "content": "console.log(\n    'The element value',\n    value,\n    'is missing. Steps =',\n    size\n);"
+        },
+        "49": {
+            "type": "action",
+            "one": "41",
+            "content": "console.log(\"size = \", size);"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "data,value"
+}

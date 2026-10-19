@@ -12,7 +12,7 @@
         "3": {
             "type": "action",
             "one": "4",
-            "content": "low = 0"
+            "content": "low = 0\nsteps = 0"
         },
         "4": {
             "type": "action",
@@ -21,19 +21,19 @@
         },
         "18": {
             "type": "question",
-            "one": "27",
+            "one": "30",
             "two": "26",
             "flag1": 0,
             "content": "low <= high"
         },
         "19": {
             "type": "action",
-            "one": "20",
+            "one": "28",
             "content": "mid = Math.floor((low + high) / 2)"
         },
         "20": {
             "type": "question",
-            "one": "23",
+            "one": "29",
             "two": "21",
             "flag1": 1,
             "content": "arr[mid] === value"
@@ -68,6 +68,21 @@
             "type": "action",
             "one": "1",
             "content": "return -1"
+        },
+        "28": {
+            "type": "action",
+            "one": "20",
+            "content": "steps++"
+        },
+        "29": {
+            "type": "action",
+            "one": "23",
+            "content": "console.log('Steps =', steps)"
+        },
+        "30": {
+            "type": "action",
+            "one": "27",
+            "content": "console.log('Steps =', steps)"
         }
     },
     "keywords": {

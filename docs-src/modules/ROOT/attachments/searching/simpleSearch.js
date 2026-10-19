@@ -2,19 +2,18 @@ main();
 function main() {
     var data, value;
     data = [
-        12,
+         2,
+        4,
         21,
-        44,
-        76,
-        -4,
-        33,
-        78,
-        -8,
-        8,
-        17
+        34,
+        43,
+        48,
+        51,
+        56,
+        63
     ];
     console.log('input data -->', data);
-    value = 76;
+    value = 77;
     console.log('searching value -->', value);
     searchElement(data, value);
 }

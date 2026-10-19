@@ -27,7 +27,7 @@
         "6": {
             "type": "action",
             "one": "1",
-            "content": "dataSorted(data, value)"
+            "content": "sliceSearch(data, value)"
         }
     }
 }
