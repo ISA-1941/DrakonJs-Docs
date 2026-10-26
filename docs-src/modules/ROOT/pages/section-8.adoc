@@ -160,10 +160,27 @@ Enter a sequence of integer values, construct
 a binary search tree, and observe its structure
 before and after deleting a selected node.
 
-link:{attachmentsdir}/trees/bstTree.js[Open JavaScript code,role=experiment-link]
-
-link:{attachmentsdir}/trees/bstTreeExperiment.html[Run experiment,role=experiment-link]
-
+[.text-center]
+++++
+<div style="text-align: center; margin: 30px 0;">
+  <a href="https://isa-1941.github.io/DrakonJs-Docs/drakonjs-docs/3.1.10/_attachments/trees/bstTreeExperiment.html[Run experiment,role=experiment-link]"
+     target="_blank"
+     rel="noopener noreferrer"
+     style="
+       display: inline-block;
+       padding: 14px 28px;
+       border: 2px solid #4da3ff;
+       border-radius: 6px;
+       background-color: #263746;
+       color: #ffffff;
+       font-size: 18px;
+       font-weight: bold;
+       text-decoration: none;
+     ">
+    Launch Search Experiment
+  </a>
+</div>
+++++
 
 == 8.3. Self-Balancing Binary Trees (AVL Trees)
 
@@ -300,9 +317,30 @@ image::section_8/Fig8_28_mainAVL.svg[width=50%, link=self, window=_blank]
 Enter a sequence of integer values, construct an AVL tree,
 and observe its structure before and after deleting a selected node.
 
-link:{attachmentsdir}/trees/avlTree.js[Open JavaScript code,role=experiment-link]
+More information about the experiment can be found in the App by activating the "Launch Sorting Experiment" button.
 
-link:{attachmentsdir}/trees/avlTreeExperiment.html[Run experiment,role=experiment-link]
+[.text-center]
+++++
+<div style="text-align: center; margin: 30px 0;">
+  <a href="https://isa-1941.github.io/DrakonJs-Docs/drakonjs-docs/3.1.10/_attachments/avlTreeExperiment.html[Run experiment,role=experiment-link]"
+     target="_blank"
+     rel="noopener noreferrer"
+     style="
+       display: inline-block;
+       padding: 14px 28px;
+       border: 2px solid #4da3ff;
+       border-radius: 6px;
+       background-color: #263746;
+       color: #ffffff;
+       font-size: 18px;
+       font-weight: bold;
+       text-decoration: none;
+     ">
+    Launch Search Experiment
+  </a>
+</div>
+++++
+
 
 == 8.4. Red-Black Trees
 
@@ -627,8 +665,29 @@ Table 8.3. Comparison of time and space complexities for tree operations
 
 === Computational Experiment
 
-link:{attachmentsdir}/trees/rbTree.js[Open JavaScript code,role=experiment-link]
+More information about the experiment can be found in the App by activating the "Launch Sorting Experiment" button.
 
+[.text-center]
+++++
+<div style="text-align: center; margin: 30px 0;">
+  <a href="https://isa-1941.github.io/DrakonJs-Docs/drakonjs-docs/3.1.10/_attachments/sorting/Sorting_Experiment_All_Six_Comparison.html"
+     target="_blank"
+     rel="noopener noreferrer"
+     style="
+       display: inline-block;
+       padding: 14px 28px;
+       border: 2px solid #4da3ff;
+       border-radius: 6px;
+       background-color: #263746;
+       color: #ffffff;
+       font-size: 18px;
+       font-weight: bold;
+       text-decoration: none;
+     ">
+    Launch Search Experiment
+  </a>
+</div>
+++++
 link:{attachmentsdir}/trees/rbTreeExperiment.html[Run experiment,role=experiment-link]
 
 == 8.6. Conclusion
