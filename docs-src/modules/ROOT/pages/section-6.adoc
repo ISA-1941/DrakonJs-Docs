@@ -429,8 +429,6 @@ These topics will be explored in future works devoted to large-scale data manage
 
 The user enters an array and a target value, or selects "Random sorted array" / "Random unsorted array".
 
-(В UI/UX описаниях чаще используют The user или Users вместо Student, если речь идет про общий класс пользователей).
-
 Before execution, they can predict whether Binary Search will locate the target.
 
 Clicking "Run all searches" executes all three algorithms against the same dataset.
@@ -438,11 +436,7 @@ Clicking "Run all searches" executes all three algorithms against the same datas
 A results table displays the output and the number of comparisons made by each algorithm, 
 followed by a step-by-step trace (low, mid, high pointers for Binary Search).
 
-If the array is unsorted, a warning is raised. If Binary Search fails to find an existing target due to the lack of sorting, 
-the page explicitly highlights this behavior.
-
-link:{attachmentsdir}/searching/search-experiment.html[Launch Search Experiment,window=_blank,role=experiment-link]
-
+If the array is unsorted, a warning is raised. If Binary Search fails to find an existing target due to the lack of sorting, the page explicitly highlights this behavior.
 
 [.text-center]
 ++++
@@ -461,7 +455,7 @@ link:{attachmentsdir}/searching/search-experiment.html[Launch Search Experiment,
        font-weight: bold;
        text-decoration: none;
      ">
-    Launch Search Experiment
+    Run experiment
   </a>
 </div>
 ++++

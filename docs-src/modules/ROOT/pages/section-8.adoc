@@ -177,7 +177,7 @@ before and after deleting a selected node.
        font-weight: bold;
        text-decoration: none;
      ">
-    Launch Search Experiment
+    Run experiment
   </a>
 </div>
 ++++
@@ -336,7 +336,7 @@ More information about the experiment can be found in the App by activating the 
        font-weight: bold;
        text-decoration: none;
      ">
-    Launch Search Experiment
+    Run experiment
   </a>
 </div>
 ++++
@@ -684,11 +684,11 @@ More information about the experiment can be found in the App by activating the 
        font-weight: bold;
        text-decoration: none;
      ">
-    Launch Search Experiment
+    Run experiment
   </a>
 </div>
 ++++
-link:{attachmentsdir}/trees/rbTreeExperiment.html[Run experiment,role=experiment-link]
+// link:{attachmentsdir}/trees/rbTreeExperiment.html[Run experiment,role=experiment-link]
 
 == 8.6. Conclusion
 

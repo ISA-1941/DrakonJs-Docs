@@ -523,7 +523,7 @@ More information about the experiment can be found in the App by activating the 
        font-weight: bold;
        text-decoration: none;
      ">
-    Launch Search Experiment
+    Run experiment
   </a>
 </div>
 ++++
