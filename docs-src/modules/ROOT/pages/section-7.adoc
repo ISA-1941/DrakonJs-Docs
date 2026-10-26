@@ -506,6 +506,8 @@ followed by a step-by-step trace.
 
 Более подробную информацию о проведении эксперимента можно найти в Приложении, активировав кнопку "Launch Sorting Experiment".
 
+Более подробную информацию о проведении эксперимента можно найти в Приложении, активировав кнопку "Launch Sorting Experiment".
+
 [.text-center]
 ++++
 <div style="text-align: center; margin: 30px 0;">
