@@ -509,7 +509,7 @@ More information about the experiment can be found in the App by activating the 
 [.text-center]
 ++++
 <div style="text-align: center; margin: 30px 0;">
-  <a href="https://isa-1941.github.io/DrakonJs-Docs/drakonjs-docs/3.1.10/_attachments/trees/rbTreeExperiment.html"
+  <a href="https://isa-1941.github.io/DrakonJs-Docs/drakonjs-docs/3.1.10/_attachments/sorting/Sorting_Experiment_All_Six_Comparison.html"
      target="_blank"
      rel="noopener noreferrer"
      style="
