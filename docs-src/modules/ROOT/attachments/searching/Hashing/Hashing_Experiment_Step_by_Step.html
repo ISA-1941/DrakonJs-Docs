@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hash Table — Collision Experiment</title>
+<style>body{font:16px system-ui,Arial;max-width:1000px;margin:32px auto;padding:0 16px;background:#f3f5f9;color:#1b2735}.panel{background:white;border:1px solid #d7dfe8;border-radius:12px;padding:20px;margin:16px 0}.grid{display:grid;grid-template-columns:2fr 1fr;gap:20px}label{display:block;font-weight:bold;margin-bottom:8px}textarea,input{box-sizing:border-box;width:100%;font:inherit;padding:10px;border:1px solid #9baaba;border-radius:6px}textarea{min-height:285px}button{margin-top:14px;padding:10px 16px;border:0;border-radius:6px;background:#1e527c;color:white;cursor:pointer}table{width:100%;border-collapse:collapse}th,td{text-align:left;border-bottom:1px solid #d7dfe8;padding:9px;vertical-align:top}th{background:#edf2f7}.stats{display:flex;flex-wrap:wrap;gap:12px}.stat{background:#edf2f7;padding:12px;border-radius:7px;min-width:125px}.stat strong{display:block;font-size:1.5em}.error{color:#a20f0f}.chain{overflow-wrap:anywhere}@media(max-width:650px){.grid{grid-template-columns:1fr}}</style></head>
+<body><h1>Hash Table — Collision Experiment</h1><p>Investigate collisions using the DRAKONTech-generated functions in <code>hashTable.js</code>. Change the table size while keeping the same records.</p>
+<section class="panel grid"><div><label for="records">Input records: numeric key, name (one per line)</label><textarea id="records">519283, Alice R. Cooper
+746102, Bob M. Bennett
+357908, Carol A. Foster
+821674, David S. Hughes
+430165, Emma L. Reed
+679832, Frank W. Brooks
+213547, Grace E. Simmons
+958301, Henry T. Peterson
+476820, Ivy N. Butler
+392645, Jack K. Barnes
+568079, Kelly P. Ross
+734218, Leo C. Coleman
+807541, Mia G. Richardson
+169834, Noah D. Patterson
+625073, Olivia J. Watson
+941206, Paul V. Steven</textarea></div><div><label for="size">Hash table size</label><input id="size" type="number" value="16" min="1" max="1000"><p>Try <b>8</b>, <b>16</b>, and <b>32</b>.</p><p>Hash function: <code>Math.abs(key) % size</code>.</p><p>Collision handling: separate chaining; new nodes inserted at the front.</p><button id="run">Run Experiment</button> <button id="start">Start Step-by-Step</button> <button id="next" disabled>Next Insertion</button> <button id="reset">Reset</button><p id="status" role="status"></p></div></section>
+<section class="panel" id="stepPanel" hidden><h2>Step-by-Step Insertion</h2><p id="stepInfo" aria-live="polite"></p><p id="stepDetail"></p></section><section class="panel" id="result" hidden><h2>Results</h2><div class="stats" id="stats"></div><table><thead><tr><th>Bucket</th><th>Chain: key → name</th><th>Length</th></tr></thead><tbody id="buckets"></tbody></table><p>Collisions = number of stored keys − occupied buckets. Load factor = stored keys / table size.</p></section>
+<script>
+'use strict';
+async function loadAuthorFunctions(){
+  const response=await fetch('hashTable.js',{cache:'no-store'});
+  if(!response.ok)throw new Error('Cannot load hashTable.js (HTTP '+response.status+').');
+  let source=await response.text();
+  // Do not execute the original demonstration main() or Node-only require().
+  // The experiment uses the author's division hash function, not SHA-256.
+  source=source.replace(/^\s*(?:const|let|var)\s+CryptoJS\s*=\s*require\(['"]crypto-js['"]\)\s*;?/m,'');
+  source=source.replace(/^\s*main\(\s*\)\s*;?/m,'');
+  const api=new Function(source+'\nreturn {createHashTable, hashFunc, hashInsert};')();
+  for(const name of ['createHashTable','hashFunc','hashInsert'])if(typeof api[name]!=='function')throw new Error('Missing '+name+' in hashTable.js');
+  return api;
+}
+function parseRecords(text){
+  const data=[],seen=new Set();
+  for(const [i,line] of text.split(/\r?\n/).entries()){
+    if(!line.trim())continue;
+    const pos=line.indexOf(',');if(pos<0)throw new Error('Line '+(i+1)+': expected key, name.');
+    const keyText=line.slice(0,pos).trim(),value=line.slice(pos+1).trim(),key=Number(keyText);
+    if(!/^-?\d+$/.test(keyText)||!Number.isSafeInteger(key))throw new Error('Line '+(i+1)+': key must be an integer.');
+    if(!value)throw new Error('Line '+(i+1)+': name is missing.');
+    if(seen.has(key))throw new Error('Line '+(i+1)+': duplicate key '+key+'.');
+    seen.add(key);data.push([key,value]);
+  }
+  if(!data.length)throw new Error('Enter at least one record.');
+  return data;
+}
+function addCell(tr,content){const td=document.createElement('td');td.textContent=content;td.className='chain';tr.append(td)}
+
+let session=null;
+
+function readInputs(){
+  const size=Number(document.getElementById('size').value);
+  if(!Number.isInteger(size)||size<1||size>1000)
+    throw new Error('Table size must be between 1 and 1000.');
+  return {size,data:parseRecords(document.getElementById('records').value)};
+}
+function showError(error){
+  const status=document.getElementById('status');
+  status.className='error';
+  status.textContent=error.message+
+    ' Open this page through a web server, not file://, and place hashTable.js beside it.';
+}
+function renderTable(hash,size){
+  const tbody=document.getElementById('buckets');tbody.replaceChildren();
+  let occupied=0,maxChain=0,total=0;
+  for(let i=0;i<size;i++){
+    const chain=[];let node=hash.table[i];const visited=new Set();
+    while(node!=null){
+      if(visited.has(node))throw new Error('Cycle in bucket '+i);
+      visited.add(node);
+      chain.push(node.key+' → '+node.value);
+      node=node.next;
+    }
+    if(chain.length)occupied++;
+    total+=chain.length;
+    maxChain=Math.max(maxChain,chain.length);
+    const tr=document.createElement('tr');
+    addCell(tr,String(i));
+    addCell(tr,chain.join(' | ')||'Empty');
+    addCell(tr,String(chain.length));
+    tbody.append(tr);
+  }
+  const stats=[
+    ['Records',total],['Occupied buckets',occupied],
+    ['Insertion collisions',total-occupied],
+    ['Maximum chain',maxChain],['Load factor',(total/size).toFixed(3)]
+  ];
+  const holder=document.getElementById('stats');holder.replaceChildren();
+  for(const [label,value] of stats){
+    const div=document.createElement('div');div.className='stat';
+    const small=document.createElement('span');small.textContent=label;
+    const strong=document.createElement('strong');strong.textContent=value;
+    div.append(small,strong);holder.append(div);
+  }
+  document.getElementById('result').hidden=false;
+}
+function silentInsert(api,hash,key,value){
+  const oldLog=console.log;
+  try{console.log=()=>{};return api.hashInsert(hash,key,value)}
+  finally{console.log=oldLog}
+}
+function reset(){
+  session=null;
+  document.getElementById('next').disabled=true;
+  document.getElementById('stepPanel').hidden=true;
+  document.getElementById('result').hidden=true;
+  document.getElementById('status').textContent='';
+  document.getElementById('status').className='';
+}
+async function initialize(){
+  const {size,data}=readInputs();
+  const api=await loadAuthorFunctions();
+  return {api,hash:api.createHashTable(size),size,data,index:0};
+}
+async function run(){
+  reset();
+  const status=document.getElementById('status');
+  status.textContent='Running…';
+  try{
+    const s=await initialize();
+    for(const [key,value] of s.data)silentInsert(s.api,s.hash,key,value);
+    renderTable(s.hash,s.size);
+    status.textContent='Experiment completed.';
+  }catch(error){showError(error)}
+}
+async function startSteps(){
+  reset();
+  const status=document.getElementById('status');
+  status.textContent='Preparing step-by-step experiment…';
+  try{
+    session=await initialize();
+    renderTable(session.hash,session.size);
+    document.getElementById('stepPanel').hidden=false;
+    document.getElementById('stepInfo').textContent=
+      'Step 0 of '+session.data.length+': empty hash table.';
+    document.getElementById('stepDetail').textContent=
+      'Press Next Insertion to insert the first record.';
+    document.getElementById('next').disabled=false;
+    status.textContent='Ready for the first insertion.';
+  }catch(error){showError(error)}
+}
+function nextStep(){
+  if(!session||session.index>=session.data.length)return;
+  try{
+    const s=session;
+    const [key,value]=s.data[s.index];
+    const bucket=s.api.hashFunc(key,s.size);
+    // Observe whether the destination bucket is occupied BEFORE insertion.
+    const collision=s.hash.table[bucket]!==null;
+    silentInsert(s.api,s.hash,key,value);
+    s.index++;
+    const details=[];
+    let node=s.hash.table[bucket];
+    while(node!==null){
+      details.push(node.key+' → '+node.value);
+      node=node.next;
+    }
+    document.getElementById('stepInfo').textContent=
+      'Step '+s.index+' of '+s.data.length+
+      ' — '+(collision?'COLLISION':'No collision');
+    document.getElementById('stepDetail').textContent=
+      'Key: '+key+' | Name: '+value+
+      ' | Hash: '+Math.abs(key)+' % '+s.size+' = '+bucket+
+      ' | Bucket '+bucket+': '+details.join(' | ');
+    renderTable(s.hash,s.size);
+    if(s.index===s.data.length){
+      document.getElementById('next').disabled=true;
+      document.getElementById('status').textContent=
+        'All '+s.data.length+' records inserted.';
+    }else{
+      document.getElementById('status').textContent=
+        'Press Next Insertion to continue.';
+    }
+  }catch(error){
+    document.getElementById('next').disabled=true;
+    showError(error);
+  }
+}
+document.getElementById('run').addEventListener('click',run);
+document.getElementById('start').addEventListener('click',startSteps);
+document.getElementById('next').addEventListener('click',nextStep);
+document.getElementById('reset').addEventListener('click',reset);
+</script></body></html>

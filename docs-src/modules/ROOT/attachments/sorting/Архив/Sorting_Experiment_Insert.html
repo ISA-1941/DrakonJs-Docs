@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sorting Algorithms — Comparative Experiment</title>
+<style>
+:root{font:16px system-ui,Arial,sans-serif;color:#203047;background:#f3f6fa}body{max-width:1150px;margin:25px auto;padding:0 16px}h1{font-size:1.7rem}h2{font-size:1.2rem}
+section{background:white;border:1px solid #dce4ed;border-radius:10px;padding:18px;margin:14px 0}label{display:inline-flex;flex-direction:column;gap:5px;margin:6px 14px 6px 0;font-weight:600}
+select,input{font:inherit;padding:8px;border:1px solid #b8c6d7;border-radius:5px;min-width:125px}button{font:inherit;padding:9px 14px;background:#185d9d;color:white;border:0;border-radius:6px;cursor:pointer;margin:8px 7px 5px 0}button:disabled{background:#a4afbd;cursor:default}
+.guide li{margin:7px 0;line-height:1.45}.progressTrack{height:12px;border-radius:12px;background:#e4eaf2;overflow:hidden;margin:10px 0}.progressFill{height:100%;width:0%;background:#2677b8;transition:width .2s}.small{font-size:.89rem;color:#5c6879}.error{color:#b42336}.ok{color:#23633d}table{border-collapse:collapse;width:100%;font-size:.9rem}th,td{border-bottom:1px solid #dce3eb;padding:8px;text-align:right;white-space:nowrap}th:first-child,td:first-child,th:nth-child(2),td:nth-child(2){text-align:left}th{background:#edf3f9} .scroll{overflow:auto}
+#states{font:14px ui-monospace,monospace;white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7fb;padding:12px;border-radius:5px;max-height:200px;overflow:auto}#message{min-height:1.5em} .controls{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+</style></head><body>
+<h1>Sorting Algorithms — Comparative Experiment</h1>
+<p>Explore how input order and array size affect computational work. Results accumulate in the table.</p>
+<section class="guide"><h2>How to Conduct the Experiment</h2>
+<p><strong>Goal:</strong> Discover how input order and array size influence the computational cost of sorting.</p>
+<ol>
+<li>Select <strong>Insertion Sort</strong>. Keep <strong>Random seed = 42</strong> throughout the study.</li>
+<li>Set <strong>N = 100</strong>. Before running, predict: which input order will require the most comparisons?</li>
+<li>Click <strong>Run Sorted + Reverse + Random</strong>. Three rows will appear in the results table.</li>
+<li>Set <strong>N = 200</strong> and click the same button again. <strong>Do not click Clear results</strong> — the earlier rows must remain.</li>
+<li>Select <strong>Nearly sorted</strong>, set <strong>N = 100</strong>, and click <strong>Run experiment</strong>. Repeat with <strong>N = 200</strong>.</li>
+<li>Compare <strong>Comparisons</strong> and <strong>Data movements</strong> at the same N. Then compare N = 100 and 200 using <strong>Growth exponent (p)</strong>. Explain whether your prediction was correct.</li>
+</ol>
+<p><strong>Experiment progress:</strong> <span id="progressText">0 / 8</span></p><div class="progressTrack" aria-hidden="true"><div class="progressFill" id="progressFill"></div></div>
+<p class="small">The 8 required runs are four input types × two array sizes (100 and 200), with seed 42. Progress shows the required results currently in the table. You can also explore other sizes independently.</p>
+<p class="small"><strong>Buttons:</strong> Run experiment = one selected input type; Run Sorted + Reverse + Random = three input types; Clear results = erase all measurements; Previous/Next state = inspect intermediate arrays for N ≤ 30. Running the same combination again updates its row.</p>
+</section>
+<section><h2>Experiment settings</h2>
+<label>Algorithm<select id="algorithm"><option value="insertion">Insertion Sort (Insert.js)</option><option value="selection" disabled>Selection — awaiting author's JS</option><option value="shell" disabled>Shell — awaiting author's JS</option><option value="merge" disabled>Merge — awaiting author's JS</option><option value="quick" disabled>Quick — awaiting author's JS</option><option value="heap" disabled>Heap — awaiting author's JS</option></select></label>
+<label>Array size (N)<input id="size" type="number" min="2" max="10000" value="100"></label>
+<label>Input type<select id="order"><option value="random">Random</option><option value="sorted">Sorted</option><option value="reverse">Reverse sorted</option><option value="nearly">Nearly sorted</option></select></label>
+<label>Random seed<input id="seed" type="number" value="42" step="1"></label>
+<div class="controls"><button id="run">Run experiment</button><button id="run3">Run Sorted + Reverse + Random</button><button id="clear">Clear results</button></div>
+<p class="small">All input types are generated from the same seeded random permutation of 1…N. Nearly sorted: about 1% of random pair exchanges from sorted order. Large quadratic runs may take time. The same seed makes results reproducible.</p>
+<p id="message" role="status"></p></section>
+<section><h2>Comparative results</h2><div class="scroll"><table><thead><tr><th>Algorithm</th><th>Input type</th><th>N</th><th>Comparisons</th><th>Data movements</th><th>Time (ms)</th><th>Growth exponent (p)</th></tr></thead><tbody id="results"><tr><td colspan="7" style="text-align:center">No measurements yet</td></tr></tbody></table></div>
+<p class="small">Movements = assignments to array positions (one adjacent swap = 2 movements). p = log₂(C(N)/C(N/2)), calculated for the same algorithm, input type and seed. Time excludes data generation and source preparation; it is approximate and especially noisy for small arrays.</p>
+</section>
+<section><h2>Last run</h2><p id="summary">Run an experiment to see its results.</p>
+<div class="controls"><button id="prev" disabled>Previous state</button><button id="next" disabled>Next state</button><span id="stepLabel"></span></div><pre id="states">Step-by-step states are available for N ≤ 30.</pre></section>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const results=new Map();let steps=[],step=0,sourceCache=null;
+const orders={random:'Random',sorted:'Sorted',reverse:'Reverse sorted',nearly:'Nearly sorted'};
+function rng(seed){let x=seed>>>0;return ()=>{x=(Math.imul(x,1664525)+1013904223)>>>0;return x/4294967296;};}
+function inputs(n,seed){
+ const rand=rng(seed),base=Array.from({length:n},(_,i)=>i+1);
+ for(let i=n-1;i>0;i--){const j=Math.floor(rand()*(i+1));[base[i],base[j]]=[base[j],base[i]];}
+ const sorted=Array.from({length:n},(_,i)=>i+1),reverse=sorted.slice().reverse(),nearly=sorted.slice();
+ for(let k=0;k<Math.max(1,Math.floor(n*.01));k++){const i=Math.floor(rand()*n),j=Math.floor(rand()*n);[nearly[i],nearly[j]]=[nearly[j],nearly[i]];}
+ return {random:base,sorted,reverse,nearly};
+}
+async function source(){
+ if(sourceCache)return sourceCache;
+ const r=await fetch('Insert.js',{cache:'no-store'});
+ if(!r.ok)throw Error('Cannot load Insert.js (HTTP '+r.status+').');
+ let code=await r.text();
+ code=code.replace(/^\s*main\s*\(\s*\)\s*;?/,'');
+ if(!/function\s+insertSort\s*\(/.test(code))throw Error('insertSort() not found in Insert.js.');
+ // Instrument an in-memory copy. The original Insert.js file is never modified.
+ const comparison='arr[j] < arr[j - 1]';
+ const movement1='arr[j] = arr[j - 1]';
+ const movement2='arr[j - 1] = temp';
+ if(!code.includes(comparison)||!code.includes(movement1)||!code.includes(movement2))
+  throw Error('Insert.js differs from the supplied version; instrumentation needs review.');
+ code=code.replace(comparison,'(__metrics.comparisons++, arr[j] < arr[j - 1])')
+          .replace(movement1,'(__metrics.movements++, arr[j] = arr[j - 1])')
+          .replace(movement2,'(__metrics.movements++, arr[j - 1] = temp)');
+ // Do not spend time on console output for large arrays. Capture only small-array states.
+ const factory=new Function('__metrics','console',code+'\nreturn insertSort;');
+ sourceCache=factory;return factory;
+}
+function setMessage(s,error=false){$('message').textContent=s;$('message').className=error?'error':'ok';}
+function updateProgress(){
+ let count=0;
+ for(const n of [100,200])for(const order of ['sorted','reverse','random','nearly'])
+  if(results.has(['Insertion',order,n,42].join('|')))count++;
+ $('progressText').textContent=count+' / 8'+(count===8?' — Completed!':'');
+ $('progressFill').style.width=(count/8*100)+'%';
+}
+function render(){
+ updateProgress();
+ const rows=[...results.values()].sort((a,b)=>a.alg.localeCompare(b.alg)||a.order.localeCompare(b.order)||a.n-b.n);
+ const body=$('results');body.replaceChildren();
+ if(!rows.length){body.innerHTML='<tr><td colspan="7" style="text-align:center">No measurements yet</td></tr>';return;}
+ for(const r of rows){
+  const half=results.get([r.alg,r.order,r.n/2,r.seed].join('|'));
+  const p=half&&half.c>0&&r.c>0?Math.log2(r.c/half.c):null;
+  const tr=document.createElement('tr');
+  for(const value of [r.alg,orders[r.order],r.n,r.c,r.m,r.ms.toFixed(3),p===null?'—':p.toFixed(3)]){
+   const td=document.createElement('td');td.textContent=value;tr.append(td);
+  }body.append(tr);
+ }
+}
+function draw(){
+ $('prev').disabled=step===0;$('next').disabled=step>=steps.length-1||!steps.length;
+ $('stepLabel').textContent=steps.length?'State '+(step+1)+' / '+steps.length:'';
+ $('states').textContent=steps.length?steps[step].join(', '):'Step-by-step states are available for N ≤ 30.';
+}
+async function measure(order,n,seed,factory){
+ const original=inputs(n,seed)[order],arr=original.slice(),metrics={comparisons:0,movements:0};
+ const localSteps=n<=30?[arr.slice()]:[];
+ const quiet={log:(...args)=>{if(n<=30&&args[0]==='arr = '&&Array.isArray(args[1]))localSteps.push(args[1].slice());}};
+ const sort=factory(metrics,quiet);
+ const start=performance.now();sort(arr);const ms=performance.now()-start;
+ for(let i=1;i<n;i++)if(arr[i-1]>arr[i])throw Error('Sorting failed at index '+i);
+ const rec={alg:'Insertion',order,n,seed,c:metrics.comparisons,m:metrics.movements,ms};
+ results.set([rec.alg,order,n,seed].join('|'),rec);
+ steps=localSteps;step=0;draw();
+ $('summary').textContent=orders[order]+' · N='+n+' · comparisons: '+rec.c.toLocaleString()+' · movements: '+rec.m.toLocaleString()+' · '+ms.toFixed(3)+' ms.';
+ return rec;
+}
+async function run(all){
+ const n=Number($('size').value),seed=Number($('seed').value);
+ if(!Number.isInteger(n)||n<2||n>10000)return setMessage('N must be an integer from 2 to 10000.',true);
+ if(!Number.isSafeInteger(seed))return setMessage('Seed must be a safe integer.',true);
+ if($('algorithm').value!=='insertion')return setMessage('Only the author’s Insert.js is available at present.',true);
+ $('run').disabled=$('run3').disabled=true;setMessage('Running…');
+ try{
+  const factory=await source(),list=all?['sorted','reverse','random']:[$('order').value];
+  for(const type of list){await new Promise(resolve=>setTimeout(resolve,0));await measure(type,n,seed,factory);}
+  render();setMessage('Completed '+list.length+' run(s). '+results.size+' result(s) in the table.');
+ }catch(e){setMessage(e.message+'. Open this HTML through a local HTTP server with Insert.js in the same folder.',true);}
+ finally{$('run').disabled=$('run3').disabled=false;}
+}
+$('run').onclick=()=>run(false);$('run3').onclick=()=>run(true);
+$('clear').onclick=()=>{results.clear();steps=[];render();draw();$('summary').textContent='Run an experiment to see its results.';setMessage('Results cleared.');};
+$('prev').onclick=()=>{if(step>0){step--;draw();}};
+$('next').onclick=()=>{if(step<steps.length-1){step++;draw();}};
+</script></body></html>
