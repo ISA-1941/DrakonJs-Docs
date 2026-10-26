@@ -495,7 +495,16 @@ Space Complexity and Stability Comparison
 Some common sorting algorithms are inherently stable, such as Merge Sort, Insertion Sort, and Bubble Sort. Others, such as Quick Sort, Heap Sort, and Selection Sort, are unstable. However, stability can often be achieved in unstable algorithms by using additional space or modifying the implementation.
 
 
+=== Computational Experiment
 
+The user enters an array and a target value, or selects "Random sorted array" / "Random unsorted array".
+
+Clicking "Run all searches" executes all three algorithms against the same dataset.
+
+A results table displays the output and the number of comparisons made by each algorithm, 
+followed by a step-by-step trace.
+
+Более подробную информацию о проведении эксперимента можно найти в Приложении, активировав кнопку "Launch Sorting Experiment".
 
 [.text-center]
 ++++
