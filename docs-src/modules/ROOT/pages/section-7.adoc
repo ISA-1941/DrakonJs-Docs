@@ -504,9 +504,7 @@ Clicking "Run all searches" executes all three algorithms against the same datas
 A results table displays the output and the number of comparisons made by each algorithm, 
 followed by a step-by-step trace.
 
-Более подробную информацию о проведении эксперимента можно найти в Приложении, активировав кнопку "Launch Sorting Experiment".
-
-Более подробную информацию о проведении эксперимента можно найти в Приложении, активировав кнопку "Launch Sorting Experiment".
+More information about the experiment can be found in the App by activating the "Launch Sorting Experiment" button.
 
 [.text-center]
 ++++
