@@ -49,10 +49,9 @@ The book also considers how to choose a data structure for a particular task, ta
 5. **Test your understanding:** change the input, examine boundary cases, and explain why the algorithm behaves as it does.
 
 Editable DRAKON diagrams and automatically generated JavaScript accompany the book on GitHub, enabling readers to study, modify, and run the implementations.
-
+The book also includes interactive computational experiments in selected sections. Readers can change input data, run algorithms, observe the results, and explore how different cases affect their behavior.
 <!-- Before publication: add the verified direct links to the editable diagrams and generated JavaScript. -->
-
-## Feedback and corrections
+## Feedback and corrections  
 
 This is the first public version of a substantial work. Errors and omissions are possible, and readers' feedback will help improve it.
 
