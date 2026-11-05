@@ -72,7 +72,7 @@
         "18": {
             "type": "action",
             "one": "11",
-            "content": "parts.push(isLeft ? \"z←P\": \"z→P\")\nparts.push(`P:${P.color}`)\nparts.push(\n    `s:${s.color}, ${isLeft ? \"s→P\" : \"s←P\"}`\n)\nparts.push(`:${wrapper.nodes.s_L.color}`)\nparts.push(\n    `s_R:${wrapper.nodes.s_R.color}`\n)"
+            "content": "parts.push(isLeft ? \"z←P\": \"z→P\");\nparts.push(`P:${P.color}`);\nparts.push(\n    `s:${s.color}, ${isLeft ? \"s→P\" : \"s←P\"}`\n);\nparts.push(`s_L:${s.left.color}`);\nparts.push(`s_R:${s.right.color}`);"
         },
         "21": {
             "type": "action",

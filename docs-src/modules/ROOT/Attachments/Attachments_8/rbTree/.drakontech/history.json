@@ -2,7 +2,31 @@
     "history": [
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/describeClusterDelete.drakon",
-            "whenOpened": "2026-09-24T13:52:04.210Z"
+            "whenOpened": "2026-10-28T19:15:52.962Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/main.drakon",
+            "whenOpened": "2026-10-28T19:15:41.030Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/processDeleteCase.drakon",
+            "whenOpened": "2026-10-28T18:38:27.851Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/fixInsert.drakon",
+            "whenOpened": "2026-10-28T18:31:17.710Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/deleteNode.drakon",
+            "whenOpened": "2026-10-28T18:18:40.358Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/rbInsert.drakon",
+            "whenOpened": "2026-10-28T18:13:38.590Z"
+        },
+        {
+            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/handlepropagateDeficiency.drakon",
+            "whenOpened": "2026-10-28T18:13:22.270Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/fixDelete.drakon",
@@ -17,14 +41,6 @@
             "whenOpened": "2026-09-24T11:54:25.105Z"
         },
         {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/main.drakon",
-            "whenOpened": "2026-09-24T08:47:51.359Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/fixInsert.drakon",
-            "whenOpened": "2026-09-24T08:47:40.814Z"
-        },
-        {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/module.drakon",
             "whenOpened": "2026-09-24T08:41:49.700Z"
         },
@@ -35,10 +51,6 @@
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/findNode.drakon",
             "whenOpened": "2026-06-29T12:11:07.588Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/deleteNode.drakon",
-            "whenOpened": "2026-06-29T12:05:01.209Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/findMin.drakon",
@@ -63,14 +75,6 @@
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/rotateLeft.drakon",
             "whenOpened": "2026-05-29T07:08:40.643Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/rbInsert.drakon",
-            "whenOpened": "2026-05-29T07:08:07.408Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/processDeleteCase.drakon",
-            "whenOpened": "2026-05-29T07:07:58.761Z"
         },
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/printTree.drakon",
@@ -99,10 +103,6 @@
         {
             "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/handleRecolorInsert.drakon",
             "whenOpened": "2026-05-29T07:06:45.307Z"
-        },
-        {
-            "path": "/home/sergeyivanov/projects/DrakonJs-Docs/docs-src/modules/ROOT/Attachments/Attachments_8/rbTree/handlepropagateDeficiency.drakon",
-            "whenOpened": "2026-05-29T07:06:41.992Z"
         }
     ]
 }

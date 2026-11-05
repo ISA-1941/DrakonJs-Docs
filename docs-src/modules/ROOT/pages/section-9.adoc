@@ -1060,4 +1060,4 @@ and Dijkstra's shortest-path algorithm.
 </div>
 ++++
 
-link:{attachmentsdir}/graphes/graphConstructorRun.html[Launch Graph Constructor,window=_blank,role=experiment-link]
+

@@ -190,8 +190,8 @@ function describeClusterDelete(tree, node) {
         parts.push(isLeft ? 'z\u2190P' : 'z\u2192P');
         parts.push(`P:${ P.color }`);
         parts.push(`s:${ s.color }, ${ isLeft ? 's\u2192P' : 's\u2190P' }`);
-        parts.push(`:${ wrapper.nodes.s_L.color }`);
-        parts.push(`s_R:${ wrapper.nodes.s_R.color }`);
+        parts.push(`s_L:${ s.left.color }`);
+        parts.push(`s_R:${ s.right.color }`);
     } else {
         wrapper.description = `r:${ node.color }`;
         return wrapper;
@@ -462,7 +462,6 @@ function main() {
         }
     }
     values = Array.from(uniqueValues);
-    values = [];
     values[0] = 8;
     values[1] = 42;
     values[2] = 90;
@@ -472,7 +471,7 @@ function main() {
     }
     console.log('\nTree after inserts !!!:\n');
     printTree(tree, tree.root);
-    deleteNode(tree, values[0]);
+    deleteNode(tree, values[4]);
     console.log('\nTree after delete node  (FIXED):\n');
     printTree(tree, tree.root);
     setTimeout(() => {
