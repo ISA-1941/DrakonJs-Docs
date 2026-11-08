@@ -17,7 +17,7 @@ The central idea is to make the logic of an algorithm visible and connect it dir
 
 ## From a diagram to a working program
 
-DRAKON diagrams are an integral part of the programming process. In DrakonTech, readers can work on an algorithm within its diagram and automatically generate JavaScript from it.
+Every algorithm is presented as a DRAKON-diagram that generates corresponding JavaScript at the click of a button.
 
 **Understand the problem → examine the diagram → modify the algorithm → generate JavaScript → run and test.**
 
