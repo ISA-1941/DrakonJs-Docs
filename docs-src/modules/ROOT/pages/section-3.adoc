@@ -238,7 +238,7 @@ In JavaScript, Maps are collections that store unordered key-value pairs, where 
 Unlike arrays, which use numeric indexes, Maps allow keys of any data type, making them more flexible (Figure 3.3).
 
 [.text-center]
-.Figure 3.3. Map
+.Figure 3.3. Map Structure
 image::section_3/Fig3_3_MapNew.svg[width=75%, link=self, window="_blank"]
 
 In JavaScript, we use the Map object to create a map. The syntax is:
