@@ -2,7 +2,7 @@
 :page-toclevels: 3
 [.text-justify]
 :figure-caption!:
-= Section 3. Implementation of Basic Abstract Data Types in JavaScript
+= Section 3. Implementation of ADTs in JavaScript]
 
 [abstract]
 This section delves into the practical implementation of basic Abstract Data Types (ADTs) within the JavaScript programming language. ADTs, as mathematical models with defined operators, provide a foundation for algorithm development. However, translating these conceptual models into executable code requires representing ADTs using the data types and methods available in JavaScript. We will explore how to bridge the gap between abstract data structures and their concrete JavaScript implementations, demonstrating techniques to effectively utilize JavaScript's features to realize fundamental ADTs. This section will equip readers with the knowledge to translate theoretical ADT concepts into functional JavaScript code, laying the groundwork for more complex data structure and algorithm implementations.
