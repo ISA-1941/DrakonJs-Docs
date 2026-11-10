@@ -31,11 +31,11 @@ The book also considers how to choose a data structure for a particular task, ta
 | --- | --- |
 | 1 | Abstract Data Types |
 | 2 | JavaScript Overview |
-| 4 | DRAKON Visual Language |
 | 3 | Implementation of ADTs in JavaScript |
+| 4 | DRAKON Visual Language |
 | 5 | Complexity Analysis |
 | 6 | Basic Search Algorithms |
-| 7 | Basic Sort Algorithms |
+| 7 | Basic Sorting Algorithms |
 | 8 | Binary Tree Algorithms |
 | 9 | Graphs and Graph Algorithms |
 | 10 | Data Structure Selection |
